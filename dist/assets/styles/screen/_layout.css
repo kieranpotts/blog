@@ -1,0 +1,87 @@
+/**
+ * Theme
+ */
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body > main {
+  flex: 1;
+  margin-bottom: 8rem;
+  margin-top: 4rem;
+  max-width: 75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+@media screen and (min-width: 37.5rem) { /* 600px */
+  body > main {
+    margin-bottom: 12rem;
+    margin-top: 6rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  body > main {
+    margin-bottom: 16rem;
+    margin-top: 8rem;
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+body > main > header {
+  margin-bottom: 8rem;
+}
+
+@media screen and (min-width: 37.5rem) { /* 600px */
+  body > main > header {
+    margin-bottom: 12rem;
+  }
+}
+
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  body > main > header {
+    margin-bottom: 16rem;
+  }
+}
+
+body > main > article:not(:last-child) {
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 37.5rem) { /* 600px */
+  body > main > article:not(:last-child) {
+    margin-bottom: 4rem;
+  }
+}
+
+body > footer {
+  flex: 0;
+  background: var(--color\=footer\|background);
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  text-align: right;
+}
+
+@media screen and (min-width: 37.5rem) { /* 600px */
+  body > footer {
+    padding-bottom: 2rem;
+    padding-top: 2rem;
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  body > footer {
+    padding-left: 6rem;
+    padding-right: 6rem;
+  }
+}

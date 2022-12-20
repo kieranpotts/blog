@@ -1,0 +1,55 @@
+/**
+ * Custom properties
+ */
+
+ :root {
+
+  /* Colours */
+
+  --color\=page\|background: hsl(30, 10%, 98%);
+  --color\=footer\|background: hsl(30, 10%, 98%);
+
+  --color\=text\|default: hsl(0, 0%, 25%);
+  --color\=text\|light: hsl(0, 0%, 50%);
+  --color\=text\|placeholder: hsl(0, 0%, 75%);
+
+  --color\=text\|code\|background: hsl(0, 0%, 90%);
+  --color\=text\|code\|foreground: inherit;
+
+
+  --color\=hyperlink\|default: inherit; /* hsl(200, 100%, 50%) */
+  --color\=hyperlink\|visited: inherit; /* hsl(200, 100%, 50%) */
+  --color\=hyperlink\|hover: inherit; /* hsl(200, 100%, 50%) */
+  --color\=hyperlink\|focus: inherit; /* hsl(200, 100%, 50%) */
+  --color\=hyperlink\|active: inherit; /* var(--color\=text\|default) */
+  --color\=hyperlink\|underline: inherit;
+
+  --color\=text\|selection: hsl(50, 100%, 50%);
+  --color\=outline: hsla(50, 100%, 50%, 0.75);
+
+  --color\=video: var(--color\=text\|default);
+  --color\=border: hsl(30, 10%, 90%);
+  --color\=bullet: hsl(30, 10%, 80%);
+  --color\=hr: hsl(30, 10%, 90%);
+
+  /* Font sizes */
+
+  --font-size\=root: 9px;
+  --font-size\=root\@xs: 10px;
+  --font-size\=root\@sm: 11px;
+  --font-size\=root\@md: 12px;
+  --font-size\=root\@lg: 13px;
+  --font-size\=root\@xl: 13px;
+  --font-size\=root\@xxl: 13px;
+
+  --font-size\=xxl: 3.2rem;
+  --font-size\=xl:  2.4rem;
+  --font-size\=lg:  2rem;
+  --font-size\=md:  1.6rem; /* default */
+  --font-size\=sm:  1.4rem;
+  --font-size\=xs:  1.2rem;
+
+  --font-size\=monospace\|block: 1.2rem;
+  --font-size\=monospace\|inline: 80%;
+
+}
