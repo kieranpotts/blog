@@ -4,10 +4,11 @@
 # ------------------------------------------------------------------------------
 
 # Permanent redirects
-/rebranding-javascript  /blog/rebranding-javascript  301
-/rebranding-rest        /blog/rebranding-rest        301
-/hello-world            /blog/hello-world            301
-/rss                    /feed.rss                    301
+/blog/rebranding-javascript  /rebranding-javascript  301
+/blog/rebranding-rest        /rebranding-rest        301
+/blog/hello-world            /hello-world            301
+/about                       /hello-world            301
+/rss                         /feed.rss               301
 
 # 404s
 /*  /404.html  404
