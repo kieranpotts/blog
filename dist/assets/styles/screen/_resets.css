@@ -319,10 +319,11 @@ a {
 }
 
 *:focus {
-  outline-color: var(--color\=outline);
-  outline-offset: 2px;
+  background: var(--color\=outline\|background);
+  outline-color: var(--color\=outline\|border);
+  /*outline-offset: 3px;*/
   outline-style: solid;
-  outline-width: 2px;
+  outline-width: 7px;
 }
 
 *:focus:active {
