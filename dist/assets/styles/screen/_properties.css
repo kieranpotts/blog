@@ -25,7 +25,8 @@
   --color\=hyperlink\|underline: inherit;
 
   --color\=text\|selection: hsl(50, 100%, 50%);
-  --color\=outline: hsla(50, 100%, 50%, 0.75);
+  --color\=outline\|background: hsla(50, 100%, 50%, 0.5);
+  --color\=outline\|border: hsla(50, 100%, 50%, 0.5);
 
   --color\=video: var(--color\=text\|default);
   --color\=border: hsl(30, 10%, 90%);
