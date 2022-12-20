@@ -1,0 +1,9 @@
+# ------------------------------------------------------------------------------
+# Configuration for Netlify Dev
+# https://github.com/netlify/cli/blob/master/docs/netlify-dev.md
+# ------------------------------------------------------------------------------
+
+[dev]
+  port = 8080         # The port Netlify Dev will run on
+  publish = "dist"    # Path to the static content directory to be served as root
+  autoLaunch = false  # Do NOT automatically load the site in your default browser

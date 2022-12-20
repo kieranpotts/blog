@@ -43,8 +43,7 @@
     "MD041": false,
   },
 
-  // Spell check language: American English, consistent with technical
-  // documentation.
+  // Spell check language. This blog is written in American English.
   "cSpell.language": "en-US",
 
   // File paths to not spell check.
