@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+/*
+TODO: Finalise the print styles.
+*/
+
+/* Set a 1.5cm margin around printed docs. Remove backgrounds, filters, shadows,
+etc. Use the !important keyword to give these properties priority over higher
+specificity selectors used elsewhere. */
+
+@page {
+  margin: 1.5cm;
+}
+
+@media print {
+
+  * {
+    background-color: transparent      !important;
+    background-image: none             !important;
+    color:            hsl(0, 0%, 0%) !important;
+    filter:           none             !important;
+    height:           auto             !important;
+    box-shadow:       none             !important;
+    text-shadow:      none             !important;
+  }
+
+  /* Typography
+
+  Stop headings being printed at the very bottom of pages. Don't split headings,
+  blockquotes, preformatted blocks, tables or images between pages. Avoid having
+  just the first or last line of a paragraph appearing at the bottom or top of a
+  printed page on its own. Enable line wrapping in preformatted blocks. The mark
+  element has no meaning in a printed document, so unset its default styling. */
+
+  html {
+    font-size: 10pt;
+  }
+
+  body {
+    font-family:
+      'Cambria',
+      'Georgia',
+      'Times New Roman',
+      'Times',
+       serif;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    page-break-after: avoid;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  blockquote,
+  img,
+  pre,
+  table {
+    page-break-inside: avoid;
+  }
+
+  p {
+    orphans: 2;
+    widows:  2;
+  }
+
+  pre {
+    white-space: pre-wrap   !important;
+    word-wrap:   break-word !important;
+  }
+
+  mark {
+    background-color: transparent !important;
+    color:            inherit     !important;
+    font-weight:      inherit     !important;
+  }
+
+  /* Allow page breaks within tables. */
+
+  table {
+    page-break-inside: auto
+  }
+
+  tr {
+    page-break-inside: avoid;
+    page-break-after: auto
+  }
+
+  /* Interactive controls and multimedia
+
+  Forms and controls do not have any place in a printed document, and neither do
+  audio, video, etc.  Hide these things.  HTML authors should add the "no-print"
+  class to hide other stuff from printed documents.
+
+  Links can't be clicked from a printed document, so underlines are removed. For
+  external links only, print the URL after the link text.  (The same can also be
+  done for internal links, but this only works if *all* internal links - without
+  exception - are relative to a global base URL.)
+
+  The title attribute for <abbr> and <dfn> elements can also be seen in brackets
+  after the text. */
+
+  form,
+  fieldset,
+  legend,
+  button,
+  label,
+  input,
+  select,
+  textarea,
+  datalist,
+  output,
+  progress {
+    display: none !important;
+  }
+
+  audio,
+  video,
+  nav,
+  embed,
+  object,
+  iframe {
+    display: none !important;
+  }
+
+  a {
+    background:      transparent !important;
+    border:          0           !important;
+    text-decoration: none        !important;
+  }
+
+  /*
+  a::after {
+    content: ' (http://www.example.com/' attr(href) ')' !important;
+  }
+  */
+
+  a[rel="external"]::after {
+    content: ' [' attr(href) ']' !important;
+  }
+
+  abbr[title],
+  dfn[title] {
+    border: 0 !important;
+  }
+
+  abbr[title]::after,
+  dfn[title]::after {
+    content: ' (' attr(title) ')' !important;
+  }
+
+  *.no-print {
+    display: none !important;
+  }
+
+}

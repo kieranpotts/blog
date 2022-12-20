@@ -1,0 +1,217 @@
+/**
+ * Typography
+ */
+
+/** Sans-serif fonts */
+
+body {
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6,
+b, strong, dfn, optgroup {
+  font-weight: 500;
+}
+
+optgroup option {
+  font-weight: 300;
+}
+
+svg text {
+  /* Labels in inline graphics are always bold. */
+  font-weight: 500;
+}
+
+h1 { font-size: var(--font-size\=xxl); }
+h2 { font-size: var(--font-size\=xl); }
+h3 { font-size: var(--font-size\=lg); }
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+}
+
+h1 { letter-spacing: -0.05rem; }
+
+h1:not(:last-child) { margin-bottom: 2rem; }
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  h1:not(:last-child) { margin-bottom: 4rem; }
+}
+
+h2 {
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+@media screen and (min-width: 37.5rem) { /* 600px */
+  h2 {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+  }
+}
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  h2 {
+    margin-top: 8rem;
+  }
+}
+
+h3 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+@media screen and (min-width: 37.5rem) { /* 600px */
+  h3 {
+    margin-top: 4rem;
+  }
+}
+
+p:not(:last-child),
+ul:not(:last-child),
+ol:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+header p { font-weight: 500; }
+
+li {
+  margin-bottom: 1rem;
+  padding-left: 1.5em;
+  position: relative;
+}
+
+li:last-child {
+  margin-bottom: 0;
+}
+
+li::before {
+  color: var(--color\=bullet);
+  content: '\2014'; /* em-dash @see <//unicode-table.com/en/2014/> */
+  font-weight: 500;
+  left: 0;
+  position: absolute;
+}
+
+ol {
+  counter-reset: main-ol-counter;
+  list-style-type: none;
+}
+
+ol li {
+  counter-increment: main-ol-counter;
+}
+
+ol li::before {
+  content: counter(main-ol-counter);
+}
+
+blockquote {
+  border-left: 0.2rem solid var(--color\=border);
+  font-weight: 500;
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  padding-left: 2rem;
+}
+@media screen and (min-width: 37.5rem) { /* 600px */
+  blockquote {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+  }
+}
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  blockquote {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+  }
+}
+
+blockquote p:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+figure {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 37.5rem) { /* 600px */
+  figure {
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+  }
+}
+
+figure img {
+  margin: 0 auto;
+}
+
+figcaption {
+  color: var(--color\=text\|light);
+  font-weight: 500;
+  text-align: center;
+}
+
+figcaption:first-child {
+  margin-bottom: 2rem;
+}
+
+figcaption:last-child {
+  margin-top: 2rem;
+}
+
+hr {
+  margin-top: 4rem;
+  margin-bottom: 4rem;
+}
+@media screen and (min-width: 37.5rem) { /* 600px */
+  hr {
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+  }
+}
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  hr {
+    margin-bottom: 8rem;
+    margin-top: 8rem;
+  }
+}
+
+small {
+  color: var(--color\=text\|light);
+  font-size: 85%;
+  font-weight: 300;
+}
+
+a {
+  color: var(--color\=hyperlink\|default);
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-color: var(--color\=hyperlink\|underline);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+
+a:visited { color: var(--color\=hyperlink\|visited); }
+a:hover { color: var(--color\=hyperlink\|hover); }
+a:focus { color: var(--color\=hyperlink\|focus); }
+a:active { color: var(--color\=hyperlink\|active); /* outline: none; */ }
+
+/** Monospace fonts */
+
+code, kbd, pre, samp, var {
+  font-family: Hack, ui-monospace, SFMono-Regular, Monaco, Menlo, Consolas, Inconsolata, 'Liberation Mono', 'Deja-vu Sans Mono', 'Courier New', monospace;
+  font-weight: 400;
+}
+
+code b, kbd b, pre b, samp b, var b,
+code strong, kbd strong, pre strong, samp strong, var strong {
+  font-weight: 700;
+}
+
+pre {
+  line-height: 1.4;
+}
+
+code {
+  background: var(--color\=text\|code\|background);
+  color: var(--color\=text\|code\|foreground);
+  padding: 0.25rem 0.75rem;
+}

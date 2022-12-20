@@ -1,0 +1,13 @@
+# ------------------------------------------------------------------------------
+# Netlify redirect rules
+# https://docs.netlify.com/routing/redirects/
+# ------------------------------------------------------------------------------
+
+# Permanent redirects
+/rebranding-javascript  /blog/rebranding-javascript  301
+/rebranding-rest        /blog/rebranding-rest        301
+/hello-world            /blog/hello-world            301
+/rss                    /feed.rss                    301
+
+# 404s
+/*  /404.html  404
