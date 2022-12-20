@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "engines": {
+    "node": ">=14.15.0",
+    "yarn": ">=1.22.0"
+  },
+  "type": "module",
+  "dependencies": {},
+  "devDependencies": {
+    "netlify-cli": "^3.7.1"
+  },
+  "scripts": {
+    "dev:serve": "netlify dev",
+    "test": "echo \"Error: no tests specified\" && exit 1"
+  }
+}
