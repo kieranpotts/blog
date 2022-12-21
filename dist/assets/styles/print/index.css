@@ -1,9 +1,5 @@
 @charset "UTF-8";
 
-/*
-TODO: Finalise the print styles.
-*/
-
 /* Set a 1.5cm margin around printed docs. Remove backgrounds, filters, shadows,
 etc. Use the !important keyword to give these properties priority over higher
 specificity selectors used elsewhere. */
@@ -43,6 +39,7 @@ specificity selectors used elsewhere. */
       'Times New Roman',
       'Times',
        serif;
+    line-height: 1.4;
   }
 
   h1,
@@ -136,12 +133,6 @@ specificity selectors used elsewhere. */
     border:          0           !important;
     text-decoration: none        !important;
   }
-
-  /*
-  a::after {
-    content: ' (http://www.example.com/' attr(href) ')' !important;
-  }
-  */
 
   a[rel="external"]::after {
     content: ' [' attr(href) ']' !important;
