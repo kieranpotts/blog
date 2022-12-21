@@ -159,6 +159,18 @@ figcaption:last-child {
   margin-top: 2rem;
 }
 
+table {
+  border-color: var(--color\=border);
+  border-style: solid;
+  border-width: 0.2rem;
+  padding: 0.5rem;
+}
+
+table thead th {
+  border-bottom-width: 0.4rem;
+  font-weight: 500;
+}
+
 hr {
   margin-top: 4rem;
   margin-bottom: 4rem;
