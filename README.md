@@ -1,6 +1,6 @@
 # Thoughts on the crafting of software
 
-This repository holds the source files, and the build and deployment scripts, for my personal blog, ["Thoughts on the crafting of software"](https://kieranpotts.com/).
+This repository holds the source files, build and deployment scripts for my personal blog, ["Thoughts on the crafting of software"](https://kieranpotts.com/).
 
 -----
 

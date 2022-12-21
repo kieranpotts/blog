@@ -65,6 +65,10 @@ h3 {
   }
 }
 
+h2:first-child, h3:first-child {
+  margin-top: 0;
+}
+
 p:not(:last-child),
 ul:not(:last-child),
 ol:not(:last-child) {
@@ -144,7 +148,6 @@ figure img {
 
 figcaption {
   color: var(--color\=text\|light);
-  font-weight: 500;
   text-align: center;
 }
 

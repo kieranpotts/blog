@@ -6,15 +6,15 @@
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
     <title>Thoughts on the crafting of software</title>
-    <description>A blog exploring the open web platform and software engineering.</description>
+    <description>Commentary on methods and tools for developing and maintaining software systems. By Kieran Potts.</description>
     <link>https://kieranpotts.com/</link>
 
     <item>
       <title>Should we rebrand REST?</title>
-      <description>In this blogpost I argue the case for consigning the term "REST API" to history. In its place we should adopt the terms "HTTP API" and "hypermedia API", which better differentiate two distinctive designs for the programmatic interfaces of web services.</description>
+      <description>In this blog post I argue the case for consigning the term REST API to history. In its place we should adopt the terms HTTP API and hypermedia API.</description>
       <link>https://kieranpotts.com/rebranding-rest</link>
       <guid>https://kieranpotts.com/rebranding-rest</guid>
-      <pubDate>Mon, 24 May 2021 07:30:46 GMT</pubDate>
+      <pubDate>Mon, 24 May 2021 07:30:00 GMT</pubDate>
     </item>
 
     <item>
@@ -27,7 +27,7 @@
 
     <item>
       <title>Hello, world</title>
-      <description>This blog will explore the history of software engineering, analyse the current state of the industry, and try to predict its future trajectory.</description>
+      <description>Welcome to my new blog. I will use this space to explore the history of software engineering, analyze the current state of the industry and try to predict its future trajectory.</description>
       <link>https://kieranpotts.com/hello-world</link>
       <guid>https://kieranpotts.com/hello-world</guid>
       <pubDate>Mon, 05 Aug 2019 13:00:00 GMT</pubDate>
