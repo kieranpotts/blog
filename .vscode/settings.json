@@ -60,11 +60,32 @@
   "cSpell.allowCompoundWords": false,
 
   // A list of words to be considered correct spellings.
-  "cSpell.words": [],
+  "cSpell.words": [
+    "decompiler",
+    "hateoas",
+    "rebrand",
+    "rebranded",
+    "rebranding",
+    "runtimes",
+    "superset",
+    "supersets",
+    "unselectable"
+  ],
 
-  // Spellings to always ignore. These are not real words, but appear in domain
-  // names, URL slugs, and other identifiers in source code or comments.
-  "cSpell.ignoreWords": [],
+  // Spellings to always ignore. These are not real words, but are names or
+  // identifiers of some kind: people's names, domain names, URL slugs, etc.
+  "cSpell.ignoreWords": [
+    "accesskey",
+    "bjss",
+    "eich",
+    "hadi",
+    "hariri",
+    "kieran",
+    "kieranpotts",
+    "potts",
+    "tabindex",
+    "voodootikigod"
+  ],
 
   // Spellings always considered incorrect.
   // This is useful for common spelling errors.

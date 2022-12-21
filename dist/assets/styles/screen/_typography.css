@@ -85,8 +85,7 @@ li:last-child {
 
 li::before {
   color: var(--color\=bullet);
-  content: '\2014'; /* em-dash @see <//unicode-table.com/en/2014/> */
-  font-weight: 500;
+  content: '\2014'; /* em-dash (—) <//unicode-table.com/en/2014/> */
   left: 0;
   position: absolute;
 }

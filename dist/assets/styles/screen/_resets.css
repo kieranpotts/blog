@@ -319,11 +319,10 @@ a {
 }
 
 *:focus {
-  background: var(--color\=outline\|background);
-  outline-color: var(--color\=outline\|border);
-  /*outline-offset: 3px;*/
+  outline-color: var(--color\=outline);
+  outline-offset: 3px;
   outline-style: solid;
-  outline-width: 7px;
+  outline-width: 2px;
 }
 
 *:focus:active {
@@ -400,7 +399,7 @@ textarea {
 
 input[type="checkbox"],
 input[type="radio"] {
-  border-sizing: border-box;
+  box-sizing: border-box;
   display: inline-block;
   padding: 0;
   vertical-align: baseline;
