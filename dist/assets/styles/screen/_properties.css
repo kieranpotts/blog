@@ -4,7 +4,7 @@
 
  :root {
 
-  /* Colours */
+  /* Colors */
 
   --color\=page\|background: hsl(30, 10%, 98%);
   --color\=footer\|background: hsl(30, 10%, 98%);
@@ -25,8 +25,7 @@
   --color\=hyperlink\|underline: inherit;
 
   --color\=text\|selection: hsl(50, 100%, 50%);
-  --color\=outline\|background: hsla(50, 100%, 50%, 0.5);
-  --color\=outline\|border: hsla(50, 100%, 50%, 0.5);
+  --color\=outline: var(--color\=text\|default);
 
   --color\=video: var(--color\=text\|default);
   --color\=border: hsl(30, 10%, 90%);

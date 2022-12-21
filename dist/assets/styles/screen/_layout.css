@@ -51,15 +51,6 @@ body > main > header {
   }
 }
 
-body > main > article:not(:last-child) {
-  margin-bottom: 2rem;
-}
-@media screen and (min-width: 37.5rem) { /* 600px */
-  body > main > article:not(:last-child) {
-    margin-bottom: 4rem;
-  }
-}
-
 body > footer {
   flex: 0;
   background: var(--color\=footer\|background);
