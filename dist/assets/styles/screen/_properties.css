@@ -6,32 +6,34 @@
 
   /* Colors */
 
-  --color\=page\|background: hsl(30, 10%, 98%);
-  --color\=footer\|background: hsl(30, 10%, 98%);
+  --color\=page\|background: hsl(30, 10%, 96%);
+  --color\=footer\|background: hsl(30, 10%, 96%);
+  --color\=box: hsl(30, 10%, 98%);
+  --color\=border: hsl(30, 10%, 90%);
+  --color\=border: hsl(30, 10%, 90%);
+  --color\=bullet: hsl(30, 10%, 80%);
 
-  --color\=text\|default: hsl(0, 0%, 25%);
-  --color\=text\|light: hsl(0, 0%, 50%);
-  --color\=text\|placeholder: hsl(0, 0%, 75%);
+  --color\=text\|default: hsl(30, 10%, 25%);
+  --color\=text\|light: hsl(30, 10%, 50%);
+  --color\=text\|placeholder: hsl(30, 10%, 75%);
 
-  --color\=text\|code\|background: hsl(0, 0%, 90%);
+  --color\=text\|pre\|background: hsl(30, 10%, 15%);
+  --color\=text\|pre\|foreground: hsl(30, 10%, 98%);
+
+  --color\=text\|code\|background: hsl(30, 10%, 90%);
   --color\=text\|code\|foreground: inherit;
-
 
   --color\=hyperlink\|default: inherit; /* hsl(200, 100%, 50%) */
   --color\=hyperlink\|visited: inherit; /* hsl(200, 100%, 50%) */
   --color\=hyperlink\|hover: inherit; /* hsl(200, 100%, 50%) */
   --color\=hyperlink\|focus: inherit; /* hsl(200, 100%, 50%) */
   --color\=hyperlink\|active: inherit; /* var(--color\=text\|default) */
-  --color\=hyperlink\|underline: inherit;
+  --color\=hyperlink\|underline: var(--color\=text\|light);
 
   --color\=text\|selection: hsl(50, 100%, 50%);
   --color\=outline: var(--color\=text\|default);
 
   --color\=video: var(--color\=text\|default);
-  --color\=box: hsl(30, 10%, 95%);
-  --color\=border: hsl(30, 10%, 90%);
-  --color\=hr: hsl(30, 10%, 90%);
-  --color\=bullet: hsl(30, 10%, 80%);
 
   /* Font sizes */
 
@@ -50,7 +52,7 @@
   --font-size\=sm:  1.4rem;
   --font-size\=xs:  1.2rem;
 
-  --font-size\=monospace\|block: 1.2rem;
-  --font-size\=monospace\|inline: 80%;
+  --font-size\=monospace\|block: 1.3rem;
+  --font-size\=monospace\|inline: 85%;
 
 }

@@ -68,6 +68,39 @@
 
   <p>Curabitur tempus urna in lacinia laoreet. Suspendisse tempus, turpis vel ullamcorper tempor, metus arcu maximus nulla, et dictum ex ante a lectus. Quisque et tempor neque, vitae condimentum justo. Morbi vitae orci eu orci vehicula sodales ac a nibh. Aenean sit amet scelerisque nibh. Sed interdum blandit neque ac suscipit.</p>
 
+<figure><figcaption>Output of the <code>jq</code> command</figcaption>
+<pre>
+$ jq
+jq - commandline JSON processor [version 1.6]
+
+Usage:    jq [options] <jq filter> [file...]
+    jq [options] --args <jq filter> [strings...]
+    jq [options] --jsonargs <jq filter> [JSON_TEXTS...]
+
+jq is a tool for processing JSON inputs, applying the given filter to
+its JSON text inputs and producing the filter's results as JSON on
+standard output.
+
+The simplest filter is ., which copies jq's input to its output
+unmodified (except for formatting, but note that IEEE754 is used
+for number representation internally, with all that that implies).
+
+For more advanced filters see the jq(1) manpage ("man jq")
+and/or https://stedolan.github.io/jq
+
+Example:
+
+    $ echo '{"foo": 0}' | jq .
+    {
+        "foo": 0
+    }
+
+For a listing of options, use jq --help.
+</pre>
+</figure>
+
+  <p>In quam sapien, pellentesque non tortor in, blandit fringilla purus. Integer vitae dolor gravida, fermentum diam eu, gravida sapien. Nam malesuada, magna non pulvinar faucibus, velit nulla porta massa, in pretium ligula magna non nulla. Cras in turpis a mi rhoncus consequat.</p>
+
   <ul>
 
     <li>Nulla facilisi. Sed tortor odio, mattis eget mauris nec, vehicula tristique ex. Nullam nisl sem, tempor lacinia mi non, vestibulum maximus tortor. Etiam sodales varius lectus, ac porta diam volutpat pharetra.</li>
@@ -91,6 +124,10 @@
   </ol>
 
   <p>Aliquam velit est, scelerisque quis mollis vitae, dapibus sit amet leo. In hac habitasse platea dictumst. Mauris non imperdiet nisl. Vestibulum eget odio orci. Pellentesque quis finibus est, non commodo risus. Donec semper leo quis finibus condimentum. Nullam suscipit accumsan cursus.</p>
+
+  <hr />
+
+  <p>In quam sapien, pellentesque non tortor in, blandit fringilla purus. Integer vitae dolor gravida, fermentum diam eu, gravida sapien. Nam malesuada, magna non pulvinar faucibus, velit nulla porta massa, in pretium ligula magna non nulla. Cras in turpis a mi rhoncus consequat.</p>
 
   <aside>
     <h2 id="related-links">Related links</h2>
