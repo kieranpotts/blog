@@ -42,7 +42,7 @@
 
       <p>Unlike SOAP, GraphQL, OData, and most other web service API solutions, REST is not a protocol or even a standard of any kind. Rather, REST is an architectural style, or a set of lofty design constraints.</p>
 
-      <p>REST was christened by computer scientist Roy Fielding in his <a href="//www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">PhD thesis</a>, published at the turn of the century. But that dissertation is not much studied — which is understandable, as it's intensely scholarly. The target audience was academia rather than trade. Nevertheless, shortly after publication, the terms "REST" and "RESTful" got added to the popular lexicon of the IT industry.</p>
+      <p>REST was christened by computer scientist Roy Fielding in his <a href="//www.ics.uci.edu/~fielding/pubs/dissertation/top.htm" rel="external">PhD thesis</a>, published at the turn of the century. But that dissertation is not much studied — which is understandable, as it's intensely scholarly. The target audience was academia rather than trade. Nevertheless, shortly after publication, the terms "REST" and "RESTful" got added to the popular lexicon of the IT industry.</p>
 
       <p>What happened next was an unfortunate dumbing down of REST from how it had been originally conceptualised. Our industry's penchant for buzzwords, coupled with general ignorance of Fielding's original work, has lead to the definition of REST becoming more and more diluted and distorted with time.</p>
 
@@ -50,7 +50,7 @@
 
       <h2 id="the-rest-constraints">The REST constraints</h2>
 
-      <p>In his dissertation, Fielding defined <a href="//www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm">six constraints</a> for a RESTful system. I'll summarise those constraints using my own words. As you read through the list, try to think of examples of real-world applications that meet all the constraints.</p>
+      <p>In his dissertation, Fielding defined <a href="//www.ics.uci.edu/~fielding/pubs/dissertation/rest_arch_style.htm" rel="external">six constraints</a> for a RESTful system. I'll summarise those constraints using my own words. As you read through the list, try to think of examples of real-world applications that meet all the constraints.</p>
 
       <h3 id="1-client-server-model">1. Client-server model</h3>
 
@@ -153,7 +153,7 @@
         <p>The World Wide Web is arguably the world's largest distributed application. Understanding the key architectural principles underlying the Web can help explain its technical success and may lead to improvements in other distributed applications, particularly those that are amenable to the same or similar methods of interaction.</p>
       </blockquote>
 
-      <p>Fielding is clear: "REST is specifically targetted at distributed information systems". If you read <a href="//www.ics.uci.edu/~fielding/pubs/dissertation/top.htm">Fielding's thesis</a> for yourself, you'll see it is all about the mechanics of webpages, web browsers and web servers — the infrastructure of the World Wide Web, which is a particular implementation of a distributed information system.</p>
+      <p>Fielding is clear: "REST is specifically targetted at distributed information systems". If you read <a href="//www.ics.uci.edu/~fielding/pubs/dissertation/top.htm" rel="external">Fielding's thesis</a> for yourself, you'll see it is all about the mechanics of webpages, web browsers and web servers — the infrastructure of the World Wide Web, which is a particular implementation of a distributed information system.</p>
 
       <h2 id="rest-web-service-apis">REST != web service APIs</h2>
 
@@ -168,7 +168,7 @@
 
       <p>The REST constraints fit particularly awkwardly in the context of the programmatic interfaces to digital services that happen to piggyback on the web. Although Fielding acknowledges that the REST constraints could be retrofitted to web services ("some media types are intended for automated processing"), this was not the substance of his thesis.</p>
 
-      <p>And yet, in the 20+ years since Fielding's dissertation, more and more web service APIs have been documented as "REST APIs". Examples include some of <a href="//docs.microsoft.com/en-us/rest/api/">Microsoft's APIs</a>, some of <a href="//developers.google.com/apis-explorer">Google's</a>, plus the main programmatic interfaces to <a href="//docs.github.com/en/rest">GitHub</a>, <a href="//developer.atlassian.com/cloud/jira/platform/rest/v3/intro/">Atlassian's software suite</a>, <a href="//developer.paypal.com/docs/api/overview/">PayPal</a>, <a href="//stripe.com/docs/api">Stripe</a>, <a href="//www.twilio.com/docs/usage/api">Twilio</a>, <a href="//developer.wordpress.org/rest-api/">WordPress</a>, and hundreds more applications.</p>
+      <p>And yet, in the 20+ years since Fielding's dissertation, more and more web service APIs have been documented as "REST APIs". Examples include some of <a href="//docs.microsoft.com/en-us/rest/api/" rel="external">Microsoft's APIs</a>, some of <a href="//developers.google.com/apis-explorer" rel="external">Google's</a>, plus the main programmatic interfaces to <a href="//docs.github.com/en/rest" rel="external">GitHub</a>, <a href="//developer.atlassian.com/cloud/jira/platform/rest/v3/intro/" rel="external">Atlassian's software suite</a>, <a href="//developer.paypal.com/docs/api/overview/" rel="external">PayPal</a>, <a href="//stripe.com/docs/api" rel="external">Stripe</a>, <a href="//www.twilio.com/docs/usage/api" rel="external">Twilio</a>, <a href="//developer.wordpress.org/rest-api/" rel="external">WordPress</a>, and hundreds more applications.</p>
 
       <p>None of these are RESTful. None of them use hypermedia as the means to driving application state. None of them ship executable code to their clients as a matter of course. And anyway, they're just APIs, not distributed information systems.</p>
 
@@ -176,18 +176,18 @@
 
       <p>Misrepresentation of the REST architecture has spread so far and wide that "REST" has come to be informally understood as a synonym for "HTTP". Or rather, "RESTful" has come to describe any application that uses HTTP as an application protocol — ie making good use of HTTP's native features and messaging semantics — rather than merely as a transport protocol.</p>
 
-      <p>Even the <a href="//en.wikipedia.org/wiki/Representational_state_transfer">Wikipedia entry</a> defines Representational State Transfer as a style of API that uses a "subset of HTTP" and that exhibits a "predefined set of operations". Neither statement is accurate. REST is agnostic about transport protocols (it is not actually constrained to HTTP) and a true hypermedia-driven service would not need its operations to be predefined (because they would be discoverable dynamically at runtime).</p>
+      <p>Even the <a href="//en.wikipedia.org/wiki/Representational_state_transfer" rel="external">Wikipedia entry</a> defines Representational State Transfer as a style of API that uses a "subset of HTTP" and that exhibits a "predefined set of operations". Neither statement is accurate. REST is agnostic about transport protocols (it is not actually constrained to HTTP) and a true hypermedia-driven service would not need its operations to be predefined (because they would be discoverable dynamically at runtime).</p>
 
       <blockquote>
         <p>It's a fucking HTTP API, not REST. There's no Hypermedia.</p>
-        <p>— Hadi Hariri, <a href="//www.youtube.com/watch?v=3wyd6J3yjcs">The Silver Bullet Syndrome</a></p>
+        <p>— Hadi Hariri, <a href="//www.youtube.com/watch?v=3wyd6J3yjcs" rel="external">The Silver Bullet Syndrome</a></p>
       </blockquote>
 
       <p>Most so-called REST APIs are, on closer inspection, merely HTTP APIs. They do nothing more than follow HTTP best practices and conventions. For example, it is the HTTP specification, not the REST constraints, that recommends the use of HTTP verbs such as <code>GET</code>, <code>PUT</code> and <code>POST</code> to imply the type of operation to be performed on a resource. It is not RESTful to use these methods. It is just good use of HTTP's semantics.</p>
 
-      <p>Even the <a href="//www.crummy.com/writing/speaking/2008-QCon/act3.html">Richardson Maturity Model</a>, an informal but widely-quoted classification system for the RESTfulness of APIs, muddies the principles of REST with the semantics of HTTP.</p>
+      <p>Even the <a href="//www.crummy.com/writing/speaking/2008-QCon/act3.html" rel="external">Richardson Maturity Model</a>, an informal but widely-quoted classification system for the RESTfulness of APIs, muddies the principles of REST with the semantics of HTTP.</p>
 
-      <p>In a <a href="//roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven">2008 blogpost</a>, Fielding reprimanded organisations for using the term "REST API" as an alias for "HTTP API" in their technical documentation. He clarified:</p>
+      <p>In a <a href="//roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven" rel="external">2008 blogpost</a>, Fielding reprimanded organisations for using the term "REST API" as an alias for "HTTP API" in their technical documentation. He clarified:</p>
 
       <blockquote>
         <p>... if the engine of application state (and hence the API) is not being driven by hypertext, then it cannot be RESTful and it cannot be a REST API. Period.</p>
@@ -197,7 +197,7 @@
 
       <p>For a web service to be anything close to truly RESTful, the payloads of its response messages to clients could not be composed from any old arbitrary data objects. The payloads must be something more like HTML: a hypermedia format that defines how the encoded representations should be processed by the client, and which incorporates all the hypermedia controls that the client would need to perform further operations. But, of course, whereas HTML is primarily a document format for human consumption, hypermedia APIs would need an equivalent media type for automated consumption by other computer programs.</p>
 
-      <p>Over the last decade or so, there have been some valiant attempts to develop just such a media type. The most promising candidates in this field are <a href="//json-ld.org/">JSON-LD</a> plus <a href="//www.hydra-cg.com/">Hydra</a>. I will write about these and other emerging solutions for hypermedia APIs in greater detail in a future blogpost.</p>
+      <p>Over the last decade or so, there have been some valiant attempts to develop just such a media type. The most promising candidates in this field are <a href="//json-ld.org/" rel="external">JSON-LD</a> plus <a href="//www.hydra-cg.com/" rel="external">Hydra</a>. I will write about these and other emerging solutions for hypermedia APIs in greater detail in a future blogpost.</p>
 
       <p>In <em>this</em> blogpost, I'll only summarise how a theoretical hypermedia API would work. I say <em>theoretical</em> because, as of 2021, hypermedia APIs are not yet a reality outside of academic circles.</p>
 
@@ -218,7 +218,7 @@
 
       <h2 id="http-apis-and-hypermedia-apis">"HTTP APIs" and "hypermedia APIs"</h2>
 
-      <p>Please, let's consign the term "REST API" to history. There's just <a href="//stackoverflow.com/questions/671118/what-exactly-is-restful-programming">far too much confusion about what REST means</a> to rescue it.</p>
+      <p>Please, let's consign the term "REST API" to history. There's just <a href="//stackoverflow.com/questions/671118/what-exactly-is-restful-programming" rel="external">far too much confusion about what REST means</a> to rescue it.</p>
 
       <p>While REST works well as a series of metaphors for the foundational architectural principles of the World Wide Web, it doesn't work so well as a design philosophy for individual services that happen to be delivered over that same network.</p>
 
@@ -226,7 +226,7 @@
 
       <p>What we call today "REST APIs" we should reclassify as either "HTTP APIs" or "hypermedia APIs".</p>
 
-      <p><strong>HTTP APIs</strong> are designed around HTTP. These web services closely follow best practices for composition of HTTP request and response messages, as set out in the HTTP specifications. They make good use of HTTP's native features for cache control, content negotiation, and authentication. Their endpoints are more resource-oriented than RPC-style. For their media types, they prefer simple, general-purpose, plain text encoding formats like JSON and XML. They will be versioned and their static interfaces will probably be documented in <a href="//github.com/OAI/OpenAPI-Specification">OpenAPI</a> or other popular IDL conventions. More generally, HTTP APIs err on the side of lightweight solutions, shunning state-of-the-art code generation and other automated tooling. As such they are ideal for delivery of commercial services intended for integration in third party applications.</p>
+      <p><strong>HTTP APIs</strong> are designed around HTTP. These web services closely follow best practices for composition of HTTP request and response messages, as set out in the HTTP specifications. They make good use of HTTP's native features for cache control, content negotiation, and authentication. Their endpoints are more resource-oriented than RPC-style. For their media types, they prefer simple, general-purpose, plain text encoding formats like JSON and XML. They will be versioned and their static interfaces will probably be documented in <a href="//github.com/OAI/OpenAPI-Specification" rel="external">OpenAPI</a> or other popular IDL conventions. More generally, HTTP APIs err on the side of lightweight solutions, shunning state-of-the-art code generation and other automated tooling. As such they are ideal for delivery of commercial services intended for integration in third party applications.</p>
 
       <p>Importantly, HTTP APIs use HTTP not merely as a data transport mechanism, but as a full-blown application protocol. They will make extensive use of HTTP's native features and messaging semantics. This is what sets apart HTTP APIs from SOAP, OData, GraphQL, gRPC and countless other web service protocols that happen to use HTTP for transport but otherwise largely hide HTTP details from API consumers.</p>
 
@@ -234,7 +234,7 @@
 
       <p>A hypermedia API may also be an HTTP API, but that's not a requirement.</p>
 
-      <p>As of 2021, while some <a href="//generic.hypermedia.app/#/">buggy demo apps</a> exist, the development of true hypermedia-driven smart clients remains a purely academic endeavour. This stuff is right at the leading edge of the development of web standards. If realised, hypermedia APIs will not replace existing API design conventions, but rather they will make possible entirely new categories of data services that don't exist today. Watch this space.</p>
+      <p>As of 2021, while some <a href="//generic.hypermedia.app/#/" rel="external">buggy demo apps</a> exist, the development of true hypermedia-driven smart clients remains a purely academic endeavour. This stuff is right at the leading edge of the development of web standards. If realised, hypermedia APIs will not replace existing API design conventions, but rather they will make possible entirely new categories of data services that don't exist today. Watch this space.</p>
 
       <p>As for <strong>REST</strong>, this should be treated as a pretty niche concept within the field of computer science. Its intended use cases are very narrow indeed.</p>
 
@@ -250,9 +250,9 @@
       <h2 id="related-links">Related links</h2>
 
       <ul>
-        <li><a href="//news.ycombinator.com/item?id=27286590">Hacker News discussion</a></li>
-        <li><a href="//anchor.fm/blog-cast/episodes/Ep3-Kieran-Potts-Should-we-rebrand-REST-e12g3bi">Listen to a reading</a> of this blogpost on Blog Cast</li>
-        <li>InfoQ China <a href="//www.infoq.cn/article/XvBXPx8YXTySt3TFMvdi">republished this blogpost in Chinese</a></li>
+        <li><a href="//news.ycombinator.com/item?id=27286590" rel="external">Hacker News discussion</a></li>
+        <li><a href="//anchor.fm/blog-cast/episodes/Ep3-Kieran-Potts-Should-we-rebrand-REST-e12g3bi" rel="external">Listen to a reading</a> of this blogpost on Blog Cast</li>
+        <li>InfoQ China <a href="//www.infoq.cn/article/XvBXPx8YXTySt3TFMvdi" rel="external">republished this blogpost in Chinese</a></li>
       </ul>
 
     </main>
