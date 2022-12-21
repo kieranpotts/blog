@@ -28,9 +28,10 @@
   --color\=outline: var(--color\=text\|default);
 
   --color\=video: var(--color\=text\|default);
+  --color\=box: hsl(30, 10%, 95%);
   --color\=border: hsl(30, 10%, 90%);
-  --color\=bullet: hsl(30, 10%, 80%);
   --color\=hr: hsl(30, 10%, 90%);
+  --color\=bullet: hsl(30, 10%, 80%);
 
   /* Font sizes */
 

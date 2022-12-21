@@ -51,6 +51,34 @@ body > main > header {
   }
 }
 
+body > main > aside {
+  background: var(--color\=box);
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+  margin-left: -2rem;
+  padding: 2rem;
+}
+@media screen and (min-width: 37.5rem) { /* 600px */
+  body > main > aside {
+    margin-top: 6rem;
+    margin-bottom: 6rem;
+    margin-left: -4rem;
+    padding: 2rem 2rem 2rem 4rem;
+  }
+}
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  body > main > aside {
+    margin-top: 8rem;
+    margin-bottom: 8rem;
+    margin-left: -8rem;
+    padding: 4rem 2rem 4rem 8rem;
+  }
+}
+
+body > main > aside:last-child {
+  margin-bottom: 0;
+}
+
 body > footer {
   flex: 0;
   background: var(--color\=footer\|background);

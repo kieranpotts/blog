@@ -40,7 +40,7 @@
 
       <p>REST stands for REpresentational State Transfer. A system that implements the REST architectural style is said to be "RESTful".</p>
 
-      <p>Unlike SOAP, GraphQL, OData, and most other web service API solutions, REST is not a protocol or even a standard of any kind. Rather, REST is an architectural style, or a set of lofty design constraints.</p>
+      <p>Unlike SOAP, GraphQL, OData and most other web service API solutions, REST is not a protocol or even a standard of any kind. Rather, REST is an architectural style, or a set of lofty design constraints.</p>
 
       <p>REST was christened by computer scientist Roy Fielding in his <a href="//www.ics.uci.edu/~fielding/pubs/dissertation/top.htm" rel="external">PhD thesis</a>, published at the turn of the century. But that dissertation is not much studied – which is understandable, as it's intensely scholarly. The target audience was academia rather than trade. Nevertheless, shortly after publication, the terms "REST" and "RESTful" got added to the popular lexicon of the IT industry.</p>
 
@@ -54,7 +54,7 @@
 
       <h3 id="1-client-server-model">1. Client-server model</h3>
 
-      <p>The foundation architecture for a RESTful system is the client-server model. Clients run in separate processes from servers, and there must be a sufficient degree of logical separation such that clients are not concerned with business logic and data storage, and servers are not concerned with the user interface or user state.</p>
+      <p>The foundation architecture for a RESTful system is the client-server model. Clients run in separate processes from servers and there must be a sufficient degree of logical separation such that clients are not concerned with business logic and data storage, and servers are not concerned with the user interface or user state.</p>
 
       <p>This logical and physical separation of concerns makes client applications more portable across multiple software platforms, and server applications become simpler. It also means that servers and clients can be developed, maintained and even fully replaced independently of one another, as long as the programmatic interfaces between the two remain stable.</p>
 
@@ -226,7 +226,7 @@
 
       <p>What we call today "REST APIs" we should reclassify as either "HTTP APIs" or "hypermedia APIs".</p>
 
-      <p><strong>HTTP APIs</strong> are designed around HTTP. These web services closely follow best practices for composition of HTTP request and response messages, as set out in the HTTP specifications. They make good use of HTTP's native features for cache control, content negotiation, and authentication. Their endpoints are more resource-oriented than RPC-style. For their media types, they prefer simple, general-purpose, plain text encoding formats like JSON and XML. They will be versioned and their static interfaces will probably be documented in <a href="//github.com/OAI/OpenAPI-Specification" rel="external">OpenAPI</a> or other popular IDL conventions. More generally, HTTP APIs err on the side of lightweight solutions, shunning state-of-the-art code generation and other automated tooling. As such they are ideal for delivery of commercial services intended for integration in third party applications.</p>
+      <p><strong>HTTP APIs</strong> are designed around HTTP. These web services closely follow best practices for composition of HTTP request and response messages, as set out in the HTTP specifications. They make good use of HTTP's native features for cache control, content negotiation and authentication. Their endpoints are more resource-oriented than RPC-style. For their media types, they prefer simple, general-purpose, plain text encoding formats like JSON and XML. They will typically be versioned and their static interfaces will probably be documented in <a href="//github.com/OAI/OpenAPI-Specification" rel="external">OpenAPI</a> or other popular IDL conventions. More generally, HTTP APIs err on the side of lightweight solutions, shunning state-of-the-art code generation and other automated tooling. As such they are ideal for delivery of commercial services intended for integration in third party applications.</p>
 
       <p>Importantly, HTTP APIs use HTTP not merely as a data transport mechanism, but as a full-blown application protocol. They will make extensive use of HTTP's native features and messaging semantics. This is what sets apart HTTP APIs from SOAP, OData, GraphQL, gRPC and countless other web service protocols that happen to use HTTP for transport but otherwise largely hide HTTP details from API consumers.</p>
 
@@ -245,15 +245,14 @@
 
       <p>So, we should not abandon the term "REST" altogether, but as an adjective for "API" it just doesn't make a whole lot of sense. Even in the context of the ongoing efforts to realize truly RESTful APIs, "hypermedia" is a better, more expressive classification.</p>
 
-      <hr />
-
-      <h2 id="related-links">Related links</h2>
-
-      <ul>
-        <li><a href="//news.ycombinator.com/item?id=27286590" rel="external">Hacker News discussion</a></li>
-        <li><a href="//anchor.fm/blog-cast/episodes/Ep3-Kieran-Potts-Should-we-rebrand-REST-e12g3bi" rel="external">Listen to a reading</a> of this blog post on Blog Cast</li>
-        <li>InfoQ China <a href="//www.infoq.cn/article/XvBXPx8YXTySt3TFMvdi" rel="external">republished this blog post in Chinese</a></li>
-      </ul>
+      <aside>
+        <h2 id="related-links">Related links</h2>
+        <ul>
+          <li><a href="//news.ycombinator.com/item?id=27286590" rel="external">Hacker News discussion</a></li>
+          <li><a href="//anchor.fm/blog-cast/episodes/Ep3-Kieran-Potts-Should-we-rebrand-REST-e12g3bi" rel="external">Listen to a reading</a> of this article on Blog Cast</li>
+          <li>InfoQ China <a href="//www.infoq.cn/article/XvBXPx8YXTySt3TFMvdi" rel="external">republished this article in Chinese</a></li>
+        </ul>
+      </aside>
 
     </main>
     <footer>
