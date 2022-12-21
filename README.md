@@ -1,6 +1,6 @@
 # Thoughts on the crafting of software
 
-This repository holds the source files, build and deployment scripts for my personal blog, ["Thoughts on the crafting of software"](https://kieranpotts.com/).
+This repository holds the source files, build and deployment scripts for my personal blog.
 
 ## Documentation
 
@@ -50,7 +50,7 @@ This repository has two mainline branches:
 
 New blog posts are created in `feature/**` side branches, which are squash-merged into `dev` when ready for publication. Other changes may be committed directly to the `dev` branch.
 
-Updates to the `stable` branch in the reference repository are automatically deployed via Netlify. THerefore, to deploy the latest changes in the `dev` branch, simply rebase `stable` on `dev` and push those changes into the upstream repository.
+Updates to the `stable` branch in the reference repository are automatically deployed via Netlify. Therefore, to deploy the latest changes in the `dev` branch, simply rebase `stable` on `dev` and push those changes into the upstream repository. It takes just a few seconds for the changes to go live.
 
 ```txt
 git switch stable
@@ -60,5 +60,4 @@ git push
 
 -----
 
-Copyright © 2019-2022 Kieran Potts \
-[CC BY-SA 4.0 license](./LICENSE.txt)
+© Kieran Potts –[CC BY-SA 4.0](./LICENSE.txt)
