@@ -60,4 +60,4 @@ git push
 
 -----
 
-© Kieran Potts –[CC BY-SA 4.0](./LICENSE.txt)
+© Kieran Potts – [CC BY-SA 4.0](./LICENSE.txt)
