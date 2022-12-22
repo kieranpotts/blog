@@ -255,7 +255,7 @@ address {
 
 ::selection {
   background: var(--color\=text\|selection);
-  color: inherit;
+  color: var(--color\=text\|default);
   text-shadow: none;
 }
 
