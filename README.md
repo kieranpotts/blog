@@ -48,7 +48,7 @@ This repository has two mainline branches:
 - `dev`
 - `stable`
 
-New blog posts are created in `feature/**` side branches, which are squash-merged into `dev` when ready for publication. Other changes may be committed directly to the `dev` branch.
+New blog posts are created in `blogpost/**` side branches, which are squash-merged into `dev` when ready for publication. Other changes may be committed directly to the `dev` branch.
 
 Updates to the `stable` branch in the reference repository are automatically deployed via Netlify. Therefore, to deploy the latest changes in the `dev` branch, simply rebase `stable` on `dev` and push those changes into the upstream repository. It takes just a few seconds for the changes to go live.
 
