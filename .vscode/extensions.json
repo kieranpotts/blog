@@ -1,10 +1,10 @@
 {
   "recommendations": [
 
-    // EditorConfig – .editorconfig file support.
+    // EditorConfig — .editorconfig file support.
     "editorconfig.editorconfig",
 
-    // Live Preview – Hosts a local server in your workspace from where you can preview webpages.
+    // Live Preview — Hosts a local server in your workspace from where you can preview webpages.
     "ms-vscode.live-server",
 
   ]
