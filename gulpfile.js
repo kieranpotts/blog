@@ -41,7 +41,7 @@ https://docs.asciidoctor.org/asciidoctor.js/latest/
 https://github.com/asciidoctor/gulp-asciidoctor/blob/main/docs/modules/ROOT/pages/index.adoc
 */
 gulp.task('adoc', () => {
-  return gulp.src(`${src_dir}/contents/[^_]*.adoc`, { base: `${src_dir}/contents` })
+  return gulp.src(`${src_dir}/[^_]*.adoc`, { base: `${src_dir}` })
     .pipe(asciidoctor({
       safe: 'safe',
       doctype: 'article',
@@ -61,10 +61,10 @@ Copy these files verbatim.
 */
 gulp.task('verbatim', () => {
   return gulp.src([
-    `${src_dir}/contents/_headers`,
-    `${src_dir}/contents/_redirects`,
-    `${src_dir}/contents/favicon.ico`,
-    `${src_dir}/contents/robots.txt`,
+    `${src_dir}/_headers`,
+    `${src_dir}/_redirects`,
+    `${src_dir}/favicon.ico`,
+    `${src_dir}/robots.txt`,
   ])
   .pipe(gulp.dest(dist_dir))
 })
@@ -73,7 +73,7 @@ gulp.task('verbatim', () => {
 Copy the contents of the `_` ("includes") directory.
 */
 gulp.task('includes', () => {
-  return gulp.src(`${src_dir}/contents/_/**/*`, { base: `${src_dir}/contents/_` })
+  return gulp.src(`${src_dir}/_/**/*`, { base: `${src_dir}/_` })
   .pipe(gulp.dest(`${dist_dir}/_`))
 })
 
@@ -114,8 +114,8 @@ gulp.task('build', gulp.series(
 Watch certain files and rerun specific bits of the build pipeline in response.
 */
 gulp.task('watch', (done) => {
-  gulp.watch(`${src_dir}/contents/*.adoc`, gulp.series('adoc'))
-  gulp.watch(`${src_dir}/contents/_/**/*`, gulp.series('includes'))
+  gulp.watch(`${src_dir}/*.adoc`, gulp.series('adoc'))
+  gulp.watch(`${src_dir}/_/**/*`, gulp.series('includes'))
   done()
 })
 
