@@ -1,8 +1,8 @@
-/**
- * Resets
- */
+/*
+Resets
+*/
 
- * {
+* {
   margin: 0;
   padding: 0;
 }
@@ -169,14 +169,10 @@ code {
 }
 
 pre {
-  white-space: pre;
+  white-space: pre-wrap;
   word-wrap: normal;
   overflow: hidden;
   overflow-x: auto;
-}
-
-pre code {
-  white-space: pre;
 }
 
 abbr,

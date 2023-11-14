@@ -1,0 +1,70 @@
+/*
+Layout
+*/
+
+body {
+  padding-bottom: 8rem;
+  padding-top: 4rem;
+}
+
+@media screen and (min-width: 37.5rem) { /* 600px */
+  body {
+    padding-bottom: 12rem;
+    padding-top: 6rem;
+  }
+}
+
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  body {
+    padding-bottom: 16rem;
+    padding-top: 8rem;
+  }
+}
+
+#header,
+#content,
+#footnotes,
+#footer {
+  margin: 0 auto;
+  max-width: 75rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  position: relative;
+}
+
+
+@media screen and (min-width: 37.5rem) { /* 600px */
+  #header,
+  #content,
+  #footnotes,
+  #footer {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  #header,
+  #content,
+  #footnotes,
+  #footer {
+    padding-left: 8rem;
+    padding-right: 8rem;
+  }
+}
+
+#header {
+  margin-bottom: 8rem;
+}
+
+@media screen and (min-width: 37.5rem) { /* 600px */
+  #header {
+    margin-bottom: 12rem;
+  }
+}
+
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  #header {
+    margin-bottom: 16rem;
+  }
+}

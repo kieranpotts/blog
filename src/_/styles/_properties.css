@@ -1,13 +1,12 @@
-/**
- * Custom properties
- */
+/*
+Custom properties
+*/
 
- :root {
+:root {
 
   /* Colors */
 
-  --color\=page\|background: hsl(30, 10%, 96%);
-  --color\=footer\|background: hsl(30, 10%, 96%);
+  --color\=page\|background: hsl(30, 10%, 98%);
   --color\=box: hsl(30, 10%, 98%);
   --color\=border: hsl(30, 10%, 90%);
   --color\=border: hsl(30, 10%, 90%);
@@ -23,11 +22,11 @@
   --color\=text\|code\|background: hsl(30, 10%, 90%);
   --color\=text\|code\|foreground: inherit;
 
-  --color\=hyperlink\|default: inherit; /* hsl(200, 100%, 50%) */
-  --color\=hyperlink\|visited: inherit; /* hsl(200, 100%, 50%) */
-  --color\=hyperlink\|hover: inherit; /* hsl(200, 100%, 50%) */
-  --color\=hyperlink\|focus: inherit; /* hsl(200, 100%, 50%) */
-  --color\=hyperlink\|active: inherit; /* var(--color\=text\|default) */
+  --color\=hyperlink\|default: hsl(200, 100%, 50%);
+  --color\=hyperlink\|visited: hsl(200, 100%, 50%);
+  --color\=hyperlink\|hover: hsl(200, 100%, 50%);
+  --color\=hyperlink\|focus: hsl(200, 100%, 50%);
+  --color\=hyperlink\|active: var(--color\=text\|default);
   --color\=hyperlink\|underline: var(--color\=text\|light);
 
   --color\=text\|selection: hsl(50, 100%, 50%);

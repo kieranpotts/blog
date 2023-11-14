@@ -1,5 +1,4 @@
 = Should we rebrand REST?
-Kieran Potts
 :description: What's wrong with the term "REST API", and what should we use instead?
 :revdate: 2021-05-24
 :toc: preamble

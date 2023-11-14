@@ -1,5 +1,4 @@
 = Should we rebrand JavaScript?
-Kieran Potts
 :description: Should we rebrand JavaScript? And if we did, what would we call it?
 :revdate: 2019-10-14
 :nofooter:

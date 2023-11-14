@@ -1,4 +1,4 @@
-= Passing thoughts on the crafting of software
+= Thoughts on the crafting of software
 :toc:
 :toc-placement: preamble
 

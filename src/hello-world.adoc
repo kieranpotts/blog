@@ -1,5 +1,4 @@
 = Hello, world
-Kieran Potts
 :description: Welcome to my new blog, an exploration of the state of the software industry.
 :revdate: 2019-08-05
 :nofooter:
