@@ -10,7 +10,6 @@
 /blog/rebranding-javascript  /rebranding-javascript  301
 /blog/rebranding-rest        /rebranding-rest        301
 /contact                     /                       301
-/rss                         /feed.rss               301
 
 # Show 404 for unmatching routes
 /*                           /404.html               404

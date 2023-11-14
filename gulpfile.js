@@ -64,7 +64,6 @@ gulp.task('verbatim', () => {
     `${src_dir}/contents/_headers`,
     `${src_dir}/contents/_redirects`,
     `${src_dir}/contents/favicon.ico`,
-    `${src_dir}/contents/feed.rss`,
     `${src_dir}/contents/robots.txt`,
   ])
   .pipe(gulp.dest(dist_dir))
