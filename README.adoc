@@ -10,7 +10,7 @@ This repository holds the source files, build and deployment scripts for my blog
 
 To set up a local development environment for this project, the following software must installed locally:
 
-* Node ≥ v18.12.0 ≤ v19
+* Node ≥ v18.14.0 ≤ v19
 * NPM ≥ v9.8.0 ≤ v10
 
 https://github.com/nvm-sh/nvm[NVM for Unix] or https://github.com/coreybutler/nvm-windows[NVM for Windows] makes it easier to switch between different versions of Node for different projects. NVM for Windows does https://github.com/coreybutler/nvm-windows/issues/388[not support the `.nvmrc` file], so Windows users must specify the version number on the command line.
