@@ -43,7 +43,10 @@ https://github.com/asciidoctor/gulp-asciidoctor/blob/main/docs/modules/ROOT/page
 gulp.task('adoc', () => {
   return gulp.src(`${src_dir}/contents/[^_]*.adoc`, { base: `${src_dir}/contents` })
     .pipe(asciidoctor({
-      standalone: true
+      safe: 'safe',
+      doctype: 'article',
+      standalone: true,
+      attributes: ['nofooter']
     }))
     .pipe(gulp.dest(dist_dir))
 })
