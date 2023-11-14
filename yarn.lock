@@ -1337,11 +1337,6 @@
   dependencies:
     "@types/node" "*"
 
-"@types/expect@^1.20.4":
-  version "1.20.4"
-  resolved "https://registry.npmjs.org/@types/expect/-/expect-1.20.4.tgz"
-  integrity sha512-Q5Vn3yjTDyCMV50TB6VRIbQNxSE4OmZR86VSbGaNpfUolm0iePBB4KdEEHmxoY5sT2+2DIvXW0rvMDP2nHZ4Mg==
-
 "@types/express-serve-static-core@^4.17.18":
   version "4.17.28"
   resolved "https://registry.npmjs.org/@types/express-serve-static-core/-/express-serve-static-core-4.17.28.tgz"
@@ -1437,14 +1432,6 @@
   integrity sha512-nCkHGI4w7ZgAdNkrEu0bv+4xNV/XDqW+DydknebMOQwkpDGx8G+HTlj7R7ABI8i8nKxVw0wtKPi1D+lPOkh4YQ==
   dependencies:
     "@types/mime" "^1"
-    "@types/node" "*"
-
-"@types/vinyl@^2.0.9":
-  version "2.0.10"
-  resolved "https://registry.npmjs.org/@types/vinyl/-/vinyl-2.0.10.tgz"
-  integrity sha512-DqN5BjCrmjAtZ1apqzcq2vk2PSW0m1nFfjIafBFkAyddmHxuw3ZAK3omLiSdpuu81+8h07i6U4DtaE38Xsf2xQ==
-  dependencies:
-    "@types/expect" "^1.20.4"
     "@types/node" "*"
 
 "@types/yargs-parser@*":
@@ -2587,11 +2574,6 @@ chalk@^5.0.0, chalk@^5.0.1, chalk@^5.2.0, chalk@5.2.0:
   resolved "https://registry.npmjs.org/chalk/-/chalk-5.2.0.tgz"
   integrity sha512-ree3Gqw/nazQAPuJJEy+avdl7QfZMcUvmHIKgEZkGL+xOBzRvup5Hxo6LHuMceSxOabuJLJm5Yp/92R9eMmMvA==
 
-chalk@^5.3.0:
-  version "5.3.0"
-  resolved "https://registry.npmjs.org/chalk/-/chalk-5.3.0.tgz"
-  integrity sha512-dLitG79d+GV1Nb/VYcCDFivJeK1hiukt9QjRNVOsUtTy1rR1YJsmpGGTZ3qJos+uw7WmWF4wUwBd9jxjocFC2w==
-
 chalk@4.1.2:
   version "4.1.2"
   resolved "https://registry.npmjs.org/chalk/-/chalk-4.1.2.tgz"
@@ -3219,22 +3201,6 @@ cron-parser@^4.1.0, cron-parser@4.8.1:
   dependencies:
     luxon "^3.2.1"
 
-cross-env@^7.0.3:
-  version "7.0.3"
-  resolved "https://registry.npmjs.org/cross-env/-/cross-env-7.0.3.tgz"
-  integrity sha512-+/HKd6EgcQCJGh2PSjZuUitQBQynKor4wrFbRg4DtAgS1aWO+gU52xpH7M9ScGgXSYmAVS9bIJ8EzuaGw0oNAw==
-  dependencies:
-    cross-spawn "^7.0.1"
-
-cross-spawn@^7.0.1:
-  version "7.0.3"
-  resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
-  integrity sha512-iRDPJKUPVEND7dHPO8rkbOnPpyDygcDFtWjpeWNCgy8WP2rXcxXL8TskReQl6OrB2G7+UJrags1q15Fudc7G6w==
-  dependencies:
-    path-key "^3.1.0"
-    shebang-command "^2.0.0"
-    which "^2.0.1"
-
 cross-spawn@^7.0.3:
   version "7.0.3"
   resolved "https://registry.npmjs.org/cross-spawn/-/cross-spawn-7.0.3.tgz"
@@ -3707,11 +3673,6 @@ easy-extender@^2.3.4:
   integrity sha512-8cAwm6md1YTiPpOvDULYJL4ZS6WfM5/cTeVVh4JsvyYZAoqlRVUpHL9Gr5Fy7HA6xcSZicUia3DeAgO3Us8E+Q==
   dependencies:
     lodash "^4.17.10"
-
-easy-transform-stream@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.npmjs.org/easy-transform-stream/-/easy-transform-stream-1.0.1.tgz"
-  integrity sha512-ktkaa6XR7COAR3oj02CF3IOgz2m1hCaY3SfzvKT4Svt2MhHw9XCt+ncJNWfe2TGz31iqzNGZ8spdKQflj+Rlog==
 
 eazy-logger@^4.0.1:
   version "4.0.1"
@@ -5098,15 +5059,6 @@ graceful-fs@^4.2.11:
   resolved "https://registry.npmjs.org/graceful-fs/-/graceful-fs-4.2.11.tgz"
   integrity sha512-RbJ5/jmFcNNCcDV5o9eTnBLJ/HszWV0P73bc+Ff4nS/rJj+YaS6IGyiOL0VoBYX+l1Wrl3k63h/KrH+nhJ0XvQ==
 
-gulp-append-prepend@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.npmjs.org/gulp-append-prepend/-/gulp-append-prepend-1.0.9.tgz"
-  integrity sha512-IUHAd9NHNpQWj0dA8GTEkgUlrgEhTZVe5T6AuEAAMlMSIMdxDZlCQj7zSKDL69nMJpsvgtgosAG4+n6zlhv27Q==
-  dependencies:
-    plugin-error "^1.0.1"
-    read-file "^0.2.0"
-    through2 "^2.0.1"
-
 gulp-cli@^2.2.0:
   version "2.3.0"
   resolved "https://registry.npmjs.org/gulp-cli/-/gulp-cli-2.3.0.tgz"
@@ -5131,24 +5083,7 @@ gulp-cli@^2.2.0:
     v8flags "^3.2.0"
     yargs "^7.1.0"
 
-gulp-plugin-extras@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.npmjs.org/gulp-plugin-extras/-/gulp-plugin-extras-0.2.2.tgz"
-  integrity sha512-0gssXzTNrrOocYBWN4qOZqd03cz3bxhjxVUPZV9iJdBR0ZZbwMQO/OT8hZChYoc9GjKaA5meaqDr6CjkmKA7BA==
-  dependencies:
-    "@types/vinyl" "^2.0.9"
-    chalk "^5.3.0"
-    easy-transform-stream "^1.0.1"
-
-gulp-template@^6.0.0:
-  version "6.0.0"
-  resolved "https://registry.npmjs.org/gulp-template/-/gulp-template-6.0.0.tgz"
-  integrity sha512-loCcRFB4I3fPKfOjB3/nXJsuZMpCzg1STw6xen2Z2S+mSS8Wjwftn9E2d7+8xrFa2cqstysdnkNhe9MUmYM5jQ==
-  dependencies:
-    gulp-plugin-extras "^0.2.2"
-    lodash "^4.17.21"
-
-gulp@^4.0.2, gulp@>=4:
+gulp@^4.0.2:
   version "4.0.2"
   resolved "https://registry.npmjs.org/gulp/-/gulp-4.0.2.tgz"
   integrity sha512-dvEs27SCZt2ibF29xYgmnwwCYZxdxhQ/+LFWlbAW8y7jt68L/65402Lz3+CKy0Ov4rOs+NERmDq7YlZaDqUIfA==
@@ -6363,7 +6298,12 @@ lodash.transform@^4.6.0:
   resolved "https://registry.npmjs.org/lodash.transform/-/lodash.transform-4.6.0.tgz"
   integrity sha1-EjBkIvYzJK7YSD0/ODMrX2cFR6A=
 
-lodash@^4.17.10, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.21, lodash@4.17.21:
+lodash@^4.17.10, lodash@^4.17.14:
+  version "4.17.21"
+  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
+
+lodash@^4.17.12, lodash@^4.17.15, lodash@^4.17.21, lodash@4.17.21:
   version "4.17.21"
   resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.21.tgz"
   integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
@@ -8207,11 +8147,6 @@ react-is@^17.0.1:
   resolved "https://registry.npmjs.org/react-is/-/react-is-17.0.2.tgz"
   integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
 
-read-file@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.npmjs.org/read-file/-/read-file-0.2.0.tgz"
-  integrity sha512-na/zgd5KplGlR+io+ygXQMIoDfX/Y0bNS5+P2TOXOTk5plquOVd0snudCd30hZJAsnVK2rxuxUP2z0CN+Aw1lQ==
-
 read-pkg-up@^1.0.1:
   version "1.0.1"
   resolved "https://registry.npmjs.org/read-pkg-up/-/read-pkg-up-1.0.1.tgz"
@@ -8280,15 +8215,6 @@ readable-stream@^4.0.0:
     events "^3.3.0"
     process "^0.11.10"
     string_decoder "^1.3.0"
-
-readable-stream@3:
-  version "3.6.2"
-  resolved "https://registry.npmjs.org/readable-stream/-/readable-stream-3.6.2.tgz"
-  integrity sha512-9u/sniCrY3D5WdsERHzHE4G2YCXqoG5FTHUiCC4SIbr6XcLZBY05ya9EKjYek9O5xOAwjGq+1JdGBAS7Q9ScoA==
-  dependencies:
-    inherits "^2.0.3"
-    string_decoder "^1.1.1"
-    util-deprecate "^1.0.1"
 
 readable-web-to-node-stream@^3.0.2:
   version "3.0.2"
@@ -9533,14 +9459,6 @@ through2@^2.0.0, through2@~2.0.0:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
 
-through2@^2.0.1:
-  version "2.0.5"
-  resolved "https://registry.npmjs.org/through2/-/through2-2.0.5.tgz"
-  integrity sha512-/mrRod8xqpA+IHSLyGCQ2s8SPHiCDEeQJSep1jqLYeEUClOFG2Qsh+4FU6G9VeqpZnGW/Su8LQGc4YKni5rYSQ==
-  dependencies:
-    readable-stream "~2.3.6"
-    xtend "~4.0.1"
-
 through2@^2.0.3:
   version "2.0.5"
   resolved "https://registry.npmjs.org/through2/-/through2-2.0.5.tgz"
@@ -9548,13 +9466,6 @@ through2@^2.0.3:
   dependencies:
     readable-stream "~2.3.6"
     xtend "~4.0.1"
-
-through2@^4.0.2:
-  version "4.0.2"
-  resolved "https://registry.npmjs.org/through2/-/through2-4.0.2.tgz"
-  integrity sha512-iOqSav00cVxEEICeD7TjLB1sueEL+81Wpzp2bY17uZjZN0pWZPuo4suZ/61VujxmqSGFfgOcNuTZ85QJwNZQpw==
-  dependencies:
-    readable-stream "3"
 
 time-stamp@^1.0.0:
   version "1.1.0"
@@ -10044,7 +9955,12 @@ use@^3.1.0:
   resolved "https://registry.npmjs.org/use/-/use-3.1.1.tgz"
   integrity sha512-cwESVXlO3url9YWlFW/TA9cshCEhtu7IKJ/p5soJ/gGpj7vbvFrAY/eIioQ6Dw23KjZhYgiIo8HOs1nQ2vr/oQ==
 
-util-deprecate@^1.0.1, util-deprecate@~1.0.1:
+util-deprecate@^1.0.1:
+  version "1.0.2"
+  resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
+  integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
+
+util-deprecate@~1.0.1:
   version "1.0.2"
   resolved "https://registry.npmjs.org/util-deprecate/-/util-deprecate-1.0.2.tgz"
   integrity sha512-EPD5q1uXyFxJpCrLnCc1nHnq3gOa6DZBocAIiI2TaSCA7VCJ1UJDMagCzIkXNsUYfD1daK//LTEQ8xiIbrHtcw==

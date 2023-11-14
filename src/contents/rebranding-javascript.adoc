@@ -59,9 +59,9 @@ Finally, ECMAScript's yearly release cycle and versioning convention is hugely c
 
 What do you think?
 
-''''
-== Related links
-
+.Related links
+****
 * link:https://www.reddit.com/r/javascript/comments/di4sut/should_we_rebrand_javascript/[Reddit discussion]
 * The JS Party podcast devoted link:https://changelog.com/jsparty/101[episode 101] to this idea
 * Separately, a similar question posed on Twitter became a link:https://mobile.twitter.com/runhappylife/status/1278360272231641088[rather lively thread] in early July 2020
+****

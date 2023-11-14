@@ -1,32 +1,25 @@
-/* HOST DEPENDENCIES */
+/*
+Host dependencies.
+*/
 import path from 'node:path'
 
-/* VENDOR DEPENDENCIES: GENERAL */
-import browserSync from 'browser-sync'
-import { deleteAsync } from 'del'
-import through from 'through2'
-
-/* VENDOR DEPENDENCIES: GULP */
+/*
+Gulp packages.
+*/
 import gulp from 'gulp'
 import asciidoctor from '@asciidoctor/gulp-asciidoctor'
-import gap from 'gulp-append-prepend'
-import template from 'gulp-template'
 
-import config from './config.json' assert { type: 'json' }
+/*
+Other vendor dependencies.
+*/
+import browserSync from 'browser-sync'
+import { deleteAsync } from 'del'
 
+/*
+Basic configuration.
+*/
 const src_dir = 'src'
 const dist_dir = 'dist'
-
-// const baseUrl = () => {
-//   if (process.env.NODE_ENV === 'development') {
-//     return 'http://localhost:8080'
-//   }
-
-//   const scheme = config.https ? 'https' : 'http'
-//   return `${scheme}://kieranpotts.com`
-// }
-
-// const base_url = baseUrl()
 
 /*
 Delete the contents of the `dist` directory without actually
@@ -42,33 +35,22 @@ gulp.task('clean', async (done) => {
   done()
 })
 
-/* Transform AsciiDoc files to custom templates. */
-// let slug = '/...'
+/*
+Transform AsciiDoc files to custom templates using AsciiDoctor.js.
+https://docs.asciidoctor.org/asciidoctor.js/latest/
+https://github.com/asciidoctor/gulp-asciidoctor/blob/main/docs/modules/ROOT/pages/index.adoc
+*/
 gulp.task('adoc', () => {
-  return gulp.src(`${src_dir}/contents/*.adoc`, { base: `${src_dir}/contents` })
+  return gulp.src(`${src_dir}/contents/[^_]*.adoc`, { base: `${src_dir}/contents` })
     .pipe(asciidoctor({
       standalone: true
     }))
-    // .pipe(gap.prependFile(`${src_dir}/templates/header.html`))
-    // .pipe(gap.appendFile(`${src_dir}/templates/footer.html`))
-    // .pipe(through.obj((file, enc, cb) => {
-    //   const file_path = path.relative(path.join(file.cwd, file.base), file.path)
-    //   slug = (`/${file_path}`)
-    //     .slice(0, -5) // Remove ".adoc"
-    //     .replace('\\', '/') // Change Windows path backslashes to URL forward slashes
-    //     .replace(/\/index$/, '') || '/' // Remove "index" from end, if final URL empty set to "/"
-    //   cb(null, file)
-    // }))
-    // .pipe(template({
-    //   base_url,
-    //   slug,
-    //   title: config.title,
-    //   description: config.description
-    // }))
     .pipe(gulp.dest(dist_dir))
 })
 
-/* Copy these files verbatim. */
+/*
+Copy these files verbatim.
+*/
 gulp.task('verbatim', () => {
   return gulp.src([
     `${src_dir}/contents/_headers`,
@@ -80,28 +62,13 @@ gulp.task('verbatim', () => {
   .pipe(gulp.dest(dist_dir))
 })
 
-/* Copy the contents of the `_` ("includes") directory. */
+/*
+Copy the contents of the `_` ("includes") directory.
+*/
 gulp.task('includes', () => {
   return gulp.src(`${src_dir}/contents/_/**/*`, { base: `${src_dir}/contents/_` })
   .pipe(gulp.dest(`${dist_dir}/_`))
 })
-
-/*
-@deprecated
-Use PostCSS to transform the CSS files.
-https://www.npmjs.com/package/gulp-postcss
-*/
-// gulp.task('css', (done) => {
-//   const plugins = [
-//     postcssImport(),
-//     autoprefixer(), // Will use .browserslistrc file
-//     cssnano()
-//   ]
-//   gulp.src(`${src_dir}/styles/[^_]*.css`)
-//     .pipe(postcss(plugins))
-//     .pipe(gulp.dest(`${build_dir}/assets/styles/`))
-//   done()
-// })
 
 /*
 Dev server with live-reload.
@@ -126,7 +93,9 @@ gulp.task('browser-sync', (done) => {
   done()
 })
 
-/* Build pipeline. */
+/*
+Build pipeline.
+*/
 gulp.task('build', gulp.series(
   'clean',
   'includes',
@@ -134,11 +103,16 @@ gulp.task('build', gulp.series(
   'verbatim',
 ))
 
+/*
+Watch certain files and rerun specific bits of the build pipeline in response.
+*/
 gulp.task('watch', (done) => {
   gulp.watch(`${src_dir}/contents/*.adoc`, gulp.series('adoc'))
   gulp.watch(`${src_dir}/contents/_/**/*`, gulp.series('includes'))
   done()
 })
 
-/* Start development server. */
+/*
+Start development server.
+*/
 gulp.task('start', gulp.series('build', 'browser-sync', 'watch'))

@@ -208,9 +208,9 @@ REST is intended for long-lived network-based applications that span multiple or
 
 So, we should not abandon the term "REST" altogether, but as an adjective for "API" it just doesn't make a whole lot of sense. Even in the context of the ongoing efforts to realize truly RESTful APIs, "hypermedia" is a better, more expressive classification.
 
-''''
-== Related links
-
+.Related links
+****
 * link:https://news.ycombinator.com/item?id=27286590[Hacker News discussion]
 * link:https://anchor.fm/blog-cast/episodes/Ep3-Kieran-Potts-Should-we-rebrand-REST-e12g3bi[Listen to a reading] of this article on Blog Cast
 * InfoQ China link:https://www.infoq.cn/article/XvBXPx8YXTySt3TFMvdi[republished this article in Chinese]
+****
