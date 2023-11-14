@@ -1,16 +1,25 @@
 {
   "private": true,
   "engines": {
-    "node": ">=14.15.0",
-    "yarn": ">=1.22.0"
+    "node": "^18.12.0",
+    "npm": "^9.8.0"
   },
   "type": "module",
-  "dependencies": {},
   "devDependencies": {
-    "netlify-cli": "^3.7.1"
+    "@asciidoctor/gulp-asciidoctor": "^2.2.5",
+    "browser-sync": "^2.29.3",
+    "cross-env": "^7.0.3",
+    "del": "^7.1.0",
+    "gulp": "^4.0.2",
+    "gulp-append-prepend": "^1.0.9",
+    "gulp-template": "^6.0.0",
+    "netlify-cli": "^17.2.2",
+    "through2": "^4.0.2"
   },
   "scripts": {
-    "dev:serve": "netlify dev",
+    "dev:start": "cross-env NODE_ENV=development gulp start",
+    "prod:build": "cross-env NODE_ENV=development gulp build",
+    "prod:serve": "netlify dev",
     "test": "echo \"Error: no tests specified\" && exit 1"
   }
 }

@@ -1,0 +1,99 @@
+= Passing thoughts on the crafting of software
+:toc:
+:toc-placement: preamble
+
+This repository holds the source files, build and deployment scripts for my blog, https://kieranpotts.com/[kieranpotts.com].
+
+== Documentation
+
+=== Requirements
+
+To set up a local development environment for this project, the following software must installed locally:
+
+* Node ≥ v18.12.0 ≤ v19
+* NPM ≥ v9.8.0 ≤ v10
+
+https://github.com/nvm-sh/nvm[NVM for Unix] or https://github.com/coreybutler/nvm-windows[NVM for Windows] makes it easier to switch between different versions of Node for different projects. NVM for Windows does https://github.com/coreybutler/nvm-windows/issues/388[not support the `.nvmrc` file], so Windows users must specify the version number on the command line.
+
+[source,shell]
+----
+nvm use
+----
+
+[source,shell]
+----
+nvm use 14.15.0
+----
+
+=== Dependencies
+
+This project has only development dependencies, which are defined in the repository-level `package.json` file.
+
+To install the development dependencies, run:
+
+[source,shell]
+----
+npm install
+----
+
+=== Run-scripts
+
+The following run-scripts are available. Use `npm run [command]`, eg `npm run dev:start`.
+
+* `dev:start` runs a clean development build, starts the development server, and sets up watchers, so changes to _some_ source files are automatically rebuilt and reloaded into the web server. The development server runs from `localhost:8080`. There's also an interface to BrowserSync, the dev server, from `localhost:8081`. Type `Ctrl`+`C` to stop the server.
+
+- `prod:build` produces a clean, production-ready build in the `dist` directory. The artifacts produced by this command are intended to be shipped to production.
+
+* `prod:serve` statically serves the contents of the built `dist` directory using a server that closely approximates the production environment, for example by enabling Netlify redirects and custom headers. Live reload is *not* enabled for this server, since this environment is intended to closely approximate the production environment. Use this to manually verify the output of `prod:build` before releasing the changes to production systems. The website is served from `localhost:8080`. Type `Ctrl`+`C` to stop the server.
+
+=== Git workflow
+
+The following Git-based workflows is used to automate development and deployment.
+
+This repository has two mainline branches:
+
+* `dev`
+* `release`
+
+Optionally, new blog posts MAY be created in `feature/*` side branches, which are squash-merged into `dev` when ready for publication. Most changes can be committed directly to the `dev` branch.
+
+The commit history of these two branches are entirely independent of one another. The two branches are not relatives, ie they do not share a common ancestor commit. Commits in `dev` are never merged into `release`, and vice versa.
+
+The `dev` branch captures changes to source files and configuration, while the `release` branch captures separate artifacts that are built — using `npm run prod:build` — from the source files and which are released to production systems.
+
+Git worktrees keep the source files and built artifacts in different branches, and checked out into different directories within the project root. Follow the below steps to recreate the worktrees on your computer. These steps will need to be repeated on each client system to which the reference repository is cloned, and whenever you delete the `dist` directory on your local filesystem.
+
+1.  Clone this repository. This will checkout the `dev` branch, which is the default.
+
+    git clone git@github.com:kieranpotts/blog.git
+
+2.  Change into the repository's top-level directory and create a new sub-directory called `dist`. (If this directory already exists, delete and recreate it.)
+
+    cd website
+    mkdir dist
+
+3.  Checkout the `release` branch into the directory `dist`.
+
+    git worktree add -f dist release
+
+4.  From the repository's root-level directory, Git will report that the current checked-out branch is `dev`. The contents of the `dist` directory are excluded from source control, via the `.gitignore` configuration, and cannot therefore be checked in to `dev`.
+
+    git status
+
+5.  Change into the `dist` directory. Git will now report that you're in the `release` branch.
+
+    cd dist
+    git status
+
+The contents of the `dist` directory, which are committed to the `release` branch, are not meant to be created or modified directly. Instead, the distributable artifacts are built from source code using automation tooling. Use `npm run prod: build` to build a new production-grade distribution.
+
+Netlify is used to host this website, for its ease of configuration and support for features such as URL redirects. Changes added to the `release` branch will be published automatically to Netlify after a minute or so. Thus, to update the blog, it is simply a matter of introducing new commits to the `release` branch and pushing those changes into the upstream repository.
+
+Each commit in `release` represents a new production release. Commit messages are prefixed by release numbers. Git tags are NOT used to tag releases.
+
+    cd dist
+    git commit -a -m "v[major].[minor].[patch] Short summary of changes"
+    git push
+
+''''
+© Kieran Potts — link:./LICENSE.txt[CC BY-SA 4.0]

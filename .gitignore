@@ -10,4 +10,8 @@
 # software stacks here: https://github.com/github/gitignore
 # ==============================================================================
 
+dist
 node_modules
+
+# Local Netlify folder
+.netlify

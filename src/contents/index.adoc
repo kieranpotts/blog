@@ -1,0 +1,18 @@
+= Passing thoughts on the crafting of software
+
+Commentary on methods and tools for developing and maintaining software systems. By Kieran Potts.
+
+* link:./rebranding-rest[Should we rebrand REST]
+* link:./rebranding-javascript[Should we rebrand JavaScript?]
+* link:./hello-world[Hello, world]
+
+About me
+****
+I started my career in the early 2000s as a technology journalist. As traditional media was challenged by new media, I moved into online journalism and later started my own consultancy practice, providing web development and digital content production services.
+
+My technical skills matured in lockstep with the advancement of the World Wide Web and the JavaScript ecosystem. Today, I'm a self-taught software developer specializing in "single-page" applications and enterprise software for companies like Specsavers.
+
+This blog is a commentary on emerging technology and trends across the whole IT industry, but with a focus on my area of domain expertise: the web platform.
+
+I live in the South West of the UK.
+****

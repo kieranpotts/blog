@@ -5,7 +5,7 @@
   xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"
   xmlns:media="http://search.yahoo.com/mrss/">
   <channel>
-    <title>Thoughts on the crafting of software</title>
+    <title>Passing thoughts on the crafting of software</title>
     <description>Commentary on methods and tools for developing and maintaining software systems. By Kieran Potts.</description>
     <link>https://kieranpotts.com/</link>
 
