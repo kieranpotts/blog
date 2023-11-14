@@ -51,6 +51,7 @@ gulp.task('adoc', () => {
         'nofooter',
         'stylesheet=./_/styles/index.css',
         'linkcss',
+        'favicon',
       ]
     }))
     .pipe(gulp.dest(dist_dir))
