@@ -48,52 +48,20 @@ The following run-scripts are available. Use `npm run [command]`, eg `npm run de
 
 === Git workflow
 
-The following Git-based workflows is used to automate development and deployment.
-
 This repository has two mainline branches:
 
-* `dev`
-* `release`
+- `dev`
+- `stable`
 
-Optionally, new blog posts MAY be created in `feature/*` side branches, which are squash-merged into `dev` when ready for publication. Most changes can be committed directly to the `dev` branch.
+Optionally, new blog posts may be created in `feature/*` side branches, which are squash-merged into `dev` when ready for publication. Other changes can be committed directly to the `dev` branch.
 
-The commit history of these two branches are entirely independent of one another. The two branches are not relatives, ie they do not share a common ancestor commit. Commits in `dev` are never merged into `release`, and vice versa.
+Updates to the `stable` branch in the reference repository are automatically deployed via Netlify. Therefore, to deploy the latest changes in the `dev` branch, simply rebase `stable` on `dev` and push those changes into the upstream repository. It takes just a few seconds for the changes to go live.
 
-The `dev` branch captures changes to source files and configuration, while the `release` branch captures separate artifacts that are built — using `npm run prod:build` — from the source files and which are released to production systems.
-
-Git worktrees keep the source files and built artifacts in different branches, and checked out into different directories within the project root. Follow the below steps to recreate the worktrees on your computer. These steps will need to be repeated on each client system to which the reference repository is cloned, and whenever you delete the `dist` directory on your local filesystem.
-
-1.  Clone this repository. This will checkout the `dev` branch, which is the default.
-
-    git clone git@github.com:kieranpotts/blog.git
-
-2.  Change into the repository's top-level directory and create a new sub-directory called `dist`. (If this directory already exists, delete and recreate it.)
-
-    cd website
-    mkdir dist
-
-3.  Checkout the `release` branch into the directory `dist`.
-
-    git worktree add -f dist release
-
-4.  From the repository's root-level directory, Git will report that the current checked-out branch is `dev`. The contents of the `dist` directory are excluded from source control, via the `.gitignore` configuration, and cannot therefore be checked in to `dev`.
-
-    git status
-
-5.  Change into the `dist` directory. Git will now report that you're in the `release` branch.
-
-    cd dist
-    git status
-
-The contents of the `dist` directory, which are committed to the `release` branch, are not meant to be created or modified directly. Instead, the distributable artifacts are built from source code using automation tooling. Use `npm run prod: build` to build a new production-grade distribution.
-
-Netlify is used to host this website, for its ease of configuration and support for features such as URL redirects. Changes added to the `release` branch will be published automatically to Netlify after a minute or so. Thus, to update the blog, it is simply a matter of introducing new commits to the `release` branch and pushing those changes into the upstream repository.
-
-Each commit in `release` represents a new production release. Commit messages are prefixed by release numbers. Git tags are NOT used to tag releases.
-
-    cd dist
-    git commit -a -m "v[major].[minor].[patch] Short summary of changes"
-    git push
+```txt
+git switch stable
+git rebase dev
+git push
+```
 
 ''''
 © Kieran Potts — link:./LICENSE.txt[CC BY-SA 4.0]
