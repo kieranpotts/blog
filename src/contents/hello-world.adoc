@@ -1,8 +1,10 @@
 = Hello, world
+Kieran Potts
+:description: Welcome to my new blog, an exploration of the state of the software industry.
+:revdate: 2019-08-05
+:nofooter:
 
-Welcome to my new blog. I will use this space to explore the history of software engineering, analyze the current state of the industry and try to predict its future trajectory.
-
-Published 5 August 2019, last updated 21 December 2022
+*Welcome to my new blog. I will use this space to explore the history of software engineering, analyze the current state of the industry and try to predict its future trajectory.*
 
 It's a good time to be a software engineer. This is software's golden age.
 

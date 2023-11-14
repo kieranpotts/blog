@@ -1,8 +1,12 @@
 = Should we rebrand REST?
+Kieran Potts
+:description: What's wrong with the term "REST API", and what should we use instead?
+:revdate: 2021-05-24
+:toc: preamble
+:toclevels: 2
+:nofooter:
 
-In this blog post I argue the case for consigning the term "REST API" to history. In its place we should adopt the terms "HTTP API" and "hypermedia API", which better differentiate two distinctive designs for the programmatic interfaces of web services.
-
-Published 24 May 2021
+*In this blog post I argue the case for consigning the term "REST API" to history. In its place we should adopt the terms "HTTP API" and "hypermedia API", which better differentiate two distinctive designs for the programmatic interfaces of web services.*
 
 Imagine you've been tasked with the problem of designing the API for a new web service.
 
