@@ -19,7 +19,7 @@ Yet for all the promise of agile development cycles and lean business models, ou
 
 Runaway projects — the ones that _completely_ spiral out of control — are not at all exceptional.
 
-The software crisis has been sustained for link:https://homepages.cs.ncl.ac.uk/brian.randell/NATO/NATOReports/index.html[50 years] now. The primary function of the software industry is to improve productivity by assisting the automation of human activities and business processes. How can it be that the very same industry is riddled with such inefficiency and folly?
+The software crisis has been sustained for link:http://homepages.cs.ncl.ac.uk/brian.randell/NATO/NATOReports/index.html[50 years] now. The primary function of the software industry is to improve productivity by assisting the automation of human activities and business processes. How can it be that the very same industry is riddled with such inefficiency and folly?
 
 Developer burnout is a very real and widespread problem, too. This modern phenomenon is particularly troubling. Too often software developers are treated like exchangeable pinions on an assembly line. Software engineering ought to be regarded as a modern learned profession.
 
