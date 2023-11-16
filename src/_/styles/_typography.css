@@ -34,35 +34,31 @@ h1, h2, h3, h4, h5, h6 {
 
 h1 { letter-spacing: -0.05rem; }
 
-h1:not(:last-child) { margin-bottom: 2rem; }
+h1:not(:last-child) { margin-bottom: calc(var(--spacing) / 4); }
 @media screen and (min-width: 62.5rem) { /* 1000px */
-  h1:not(:last-child) { margin-bottom: 4rem; }
+  h1:not(:last-child) { margin-bottom: calc(var(--spacing) / 2); }
 }
 
 h2 {
-  margin-top: 4rem;
-  margin-bottom: 2rem;
+  margin-top: var(--spacing);
+  margin-bottom: calc(var(--spacing) / 2);
 }
 @media screen and (min-width: 37.5rem) { /* 600px */
   h2 {
-    margin-top: 6rem;
-    margin-bottom: 4rem;
+    margin-top: var(--spacing\@sm);
+    margin-bottom: var(--spacing);
   }
 }
 @media screen and (min-width: 62.5rem) { /* 1000px */
   h2 {
-    margin-top: 8rem;
+    margin-top: var(--spacing\@lg);
+    margin-bottom: var(--spacing);
   }
 }
 
 h3 {
-  margin-top: 2rem;
-  margin-bottom: 1rem;
-}
-@media screen and (min-width: 37.5rem) { /* 600px */
-  h3 {
-    margin-top: 4rem;
-  }
+  margin-top: var(--spacing);
+  margin-bottom: calc(var(--spacing) / 2);
 }
 
 h2:first-child, h3:first-child {
@@ -72,14 +68,14 @@ h2:first-child, h3:first-child {
 p:not(:last-child),
 ul:not(:last-child),
 ol:not(:last-child) {
-  margin-bottom: 2rem;
+  margin-bottom: calc(var(--spacing) / 2);
 }
 
 header p:first-of-type { font-weight: 500; }
 
 li {
-  margin-bottom: 1rem;
-  padding-left: 1.5em;
+  margin-bottom: calc(var(--spacing) / 4);
+  padding-left: 1em;
   position: relative;
 }
 
@@ -89,7 +85,7 @@ li:last-child {
 
 li::before {
   color: var(--color\=bullet);
-  content: '\2014'; /* em-dash (—) <//unicode-table.com/en/2014/> */
+  content: '\25aa'; /* em-dash */
   left: 0;
   position: absolute;
 }
@@ -108,37 +104,37 @@ ol li::before {
 }
 
 blockquote {
-  border-left: 0.2rem solid var(--color\=border);
-  font-weight: 500;
-  margin-bottom: 4rem;
-  margin-top: 4rem;
-  padding-left: 2rem;
+  margin-bottom: var(--spacing);
+  margin-top: var(--spacing);
+  padding-left: calc(var(--spacing) / 2);
+  padding-right: calc(var(--spacing) / 2);
 }
 @media screen and (min-width: 37.5rem) { /* 600px */
   blockquote {
-    margin-top: 6rem;
-    margin-bottom: 6rem;
-  }
-}
-@media screen and (min-width: 62.5rem) { /* 1000px */
-  blockquote {
-    margin-top: 8rem;
-    margin-bottom: 8rem;
+    padding-left: var(--spacing);
+    padding-right: var(--spacing);
   }
 }
 
 blockquote p:not(:last-child) {
-  margin-bottom: 1rem;
+  font-style: italic;
+  margin-bottom: calc(var(--spacing) / 4);
 }
 
 figure {
-  margin-bottom: 2rem;
-  margin-top: 2rem;
+  margin-bottom: var(--spacing);
+  margin-top: var(--spacing);
 }
 @media screen and (min-width: 37.5rem) { /* 600px */
   figure {
-    margin-bottom: 4rem;
-    margin-top: 4rem;
+    margin-bottom: var(--spacing\@sm);
+    margin-top: var(--spacing\@sm);
+  }
+}
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  figure {
+    margin-top: var(--spacing\@lg);
+    margin-bottom: var(--spacing\@lg);
   }
 }
 
@@ -147,64 +143,49 @@ figure img {
 }
 
 figcaption {
-  color: var(--color\=text\|light);
   text-align: center;
 }
 
 figcaption:first-child {
-  margin-bottom: 2rem;
+  margin-bottom: calc(var(--spacing) / 2);
 }
 
 figcaption:last-child {
-  margin-top: 2rem;
+  margin-top: calc(var(--spacing) / 2);
 }
 
 table {
-  background: var(--color\=box);
   border-color: var(--color\=border);
   border-style: solid;
-  border-width: 0.2rem;
+  border-width: 1px;
   padding: 0.5rem;
 }
 
 table thead th {
-  border-bottom-width: 0.4rem;
+  border-bottom-width: 2px;
   font-weight: 500;
 }
 
 pre {
   background: var(--color\=text\|pre\|background);
   color: var(--color\=text\|pre\|foreground);
-  margin-left: -2rem;
-  padding: 2rem;
-}
-@media screen and (min-width: 37.5rem) { /* 600px */
-  pre {
-    margin-left: -4rem;
-    padding: 2rem 2rem 2rem 4rem;
-  }
-}
-@media screen and (min-width: 62.5rem) { /* 1000px */
-  pre {
-    margin-left: -8rem;
-    padding: 4rem 2rem 4rem 8rem;
-  }
+  padding: calc(var(--spacing) / 2);
 }
 
 hr {
-  margin-top: 4rem;
-  margin-bottom: 4rem;
+  margin-top: var(--spacing);
+  margin-bottom: var(--spacing);
 }
 @media screen and (min-width: 37.5rem) { /* 600px */
   hr {
-    margin-bottom: 6rem;
-    margin-top: 6rem;
+    margin-bottom: var(--spacing\@sm);
+    margin-top: var(--spacing\@sm);
   }
 }
 @media screen and (min-width: 62.5rem) { /* 1000px */
   hr {
-    margin-bottom: 8rem;
-    margin-top: 8rem;
+    margin-bottom: var(--spacing\@lg);
+    margin-top: var(--spacing\@lg);
   }
 }
 
@@ -246,5 +227,5 @@ pre {
 code {
   background: var(--color\=text\|code\|background);
   color: var(--color\=text\|code\|foreground);
-  padding: 0.25rem 0.75rem;
+  padding: 0.25em 0.75em;
 }

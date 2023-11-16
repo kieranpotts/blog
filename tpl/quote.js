@@ -3,7 +3,7 @@ module.exports = ({ node }) => {
   let html = ''
 
   html += '<blockquote>'
-  html += node.getContent()
+  html += `<p>${node.getContent()}</p>`
   html += `<p>— ${attr.attribution}</p>`
   html += '</blockquote>'
 

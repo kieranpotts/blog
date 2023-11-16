@@ -6,28 +6,27 @@ Custom properties
 
   /* Colors */
 
-  --color\=page\|background: hsl(30, 10%, 98%);
-  --color\=box: hsl(30, 10%, 98%);
-  --color\=border: hsl(30, 10%, 90%);
-  --color\=border: hsl(30, 10%, 90%);
-  --color\=bullet: hsl(30, 10%, 80%);
+  --color\=page\|background: hsl(0, 0%, 100%);
 
-  --color\=text\|default: hsl(30, 10%, 25%);
-  --color\=text\|light: hsl(30, 10%, 50%);
-  --color\=text\|placeholder: hsl(30, 10%, 75%);
+  --color\=text\|default: hsl(0, 0%, 25%);
+  --color\=text\|light: hsl(0, 0%, 50%);
+  --color\=text\|placeholder: hsl(0, 0%, 75%);
 
-  --color\=text\|pre\|background: hsl(30, 10%, 15%);
-  --color\=text\|pre\|foreground: hsl(30, 10%, 98%);
+  --color\=border: hsl(0, 0%, 25%);
+  --color\=bullet: hsl(0, 0%, 25%);
 
-  --color\=text\|code\|background: hsl(30, 10%, 90%);
+  --color\=text\|pre\|background: hsl(0, 0%, 25%);
+  --color\=text\|pre\|foreground: hsl(0, 0%, 100%);
+
+  --color\=text\|code\|background: hsl(0, 0%, 94%);
   --color\=text\|code\|foreground: inherit;
 
-  --color\=hyperlink\|default: hsl(200, 100%, 50%);
-  --color\=hyperlink\|visited: hsl(200, 100%, 50%);
-  --color\=hyperlink\|hover: hsl(200, 100%, 50%);
-  --color\=hyperlink\|focus: hsl(200, 100%, 50%);
-  --color\=hyperlink\|active: var(--color\=text\|default);
-  --color\=hyperlink\|underline: var(--color\=text\|light);
+  --color\=hyperlink\|default: inherit;
+  --color\=hyperlink\|visited: inherit;
+  --color\=hyperlink\|hover: inherit;
+  --color\=hyperlink\|focus: inherit;
+  --color\=hyperlink\|active: inherit;
+  --color\=hyperlink\|underline: inherit;
 
   --color\=text\|selection: hsl(50, 100%, 50%);
   --color\=outline: var(--color\=text\|default);
@@ -37,21 +36,27 @@ Custom properties
   /* Font sizes */
 
   --font-size\=root: 9px;
-  --font-size\=root\@xs: 10px;
-  --font-size\=root\@sm: 11px;
-  --font-size\=root\@md: 12px;
-  --font-size\=root\@lg: 13px;
-  --font-size\=root\@xl: 13px;
-  --font-size\=root\@xxl: 13px;
+  --font-size\=root\@xs: 9px;   /* 400px */
+  --font-size\=root\@sm: 10px;  /* 600px */
+  --font-size\=root\@md: 10px;  /* 800px */
+  --font-size\=root\@lg: 11px;  /* 1000px */
+  --font-size\=root\@xl: 11px;  /* 1200px */
+  --font-size\=root\@xxl: 11px; /* 1400px */
 
-  --font-size\=xxl: 3.2rem;
-  --font-size\=xl:  2.4rem;
-  --font-size\=lg:  2rem;
+  --font-size\=xxl: 3rem;
+  --font-size\=xl:  2.2rem;
+  --font-size\=lg:  1.6rem;
   --font-size\=md:  1.6rem; /* default */
   --font-size\=sm:  1.4rem;
   --font-size\=xs:  1.2rem;
 
   --font-size\=monospace\|block: 1.3rem;
   --font-size\=monospace\|inline: 85%;
+
+  /* Spacing */
+
+  --spacing: 4rem;
+  --spacing\@sm: 6rem;
+  --spacing\@lg: 8rem;
 
 }
