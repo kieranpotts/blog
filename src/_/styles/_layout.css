@@ -21,6 +21,25 @@ body {
   }
 }
 
+aside {
+  margin-bottom: 4rem;
+  margin-top: 4rem;
+}
+
+@media screen and (min-width: 37.5rem) { /* 600px */
+  aside {
+    margin-bottom: 6rem;
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (min-width: 62.5rem) { /* 1000px */
+  aside {
+    margin-bottom: 8rem;
+    margin-top: 8rem;
+  }
+}
+
 #header,
 #content,
 #footnotes,
@@ -67,4 +86,8 @@ body {
   #header {
     margin-bottom: 16rem;
   }
+}
+
+#header .details {
+  color: var(--color\=text\|light);
 }

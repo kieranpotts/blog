@@ -3,8 +3,6 @@ Kieran Potts
 :description: Commentary on methods and tools for developing and maintaining software systems.
 :nofooter:
 
-*Commentary on methods and tools for developing and maintaining software systems.*
-
-* link:./rebranding-rest[Should we rebrand REST]
+* link:./rebranding-rest[Should we rebrand REST?]
 * link:./rebranding-javascript[Should we rebrand JavaScript?]
 * link:./hello-world[Hello, world]

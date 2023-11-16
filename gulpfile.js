@@ -46,7 +46,8 @@ gulp.task('adoc', () => {
       safe: 'safe',
       doctype: 'article',
       standalone: true,
-      // https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-ref/
+      template_dirs: 'tpl',
+      /* https://docs.asciidoctor.org/asciidoc/latest/attributes/document-attributes-ref/ */
       attributes: [
         'nofooter',
         'stylesheet=./_/styles/index.css',

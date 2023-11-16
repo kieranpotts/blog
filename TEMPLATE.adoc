@@ -1,0 +1,120 @@
+= Asciidoc template
+:toc:
+:toc-placement!:
+:toclevels: 2
+
+This template documents a subset of https://asciidoc.org/[AsciiDoc] that is safe to use with this web site's theme.
+
+toc::[]
+
+== Tables of contents
+
+Tables of contents are not supported by our style sheet and MUST NOT be used at this time
+
+== Headings
+
+Atx-style headings SHOULD be used throughout, including for the document title. Setext-style headings (which are underlined) SHOULD NOT be used.
+
+A single empty line SHOULD be included before and after every heading.
+
+== Paragraphs and lists
+
+Paragraphs and lists MUST be delimited by a single empty line. Individual items within a list MAY be separated by a single empty line.
+
+Use asterisks, not hyphens, for bullets.
+
+Numbered lists SHOULD be written using the following notation:
+
+1. Protons
+2. Electrons
+3. Neutrons
+
+The following inline styles MAY be used:
+
+* _emphasis_ (rendered as italics)
+* *strong emphasis* (rendered in bold)
+* `inline literal` (used for inline code, keyboard input, etc)
+
+== Internal links
+
+Internal links MUST be relative the current document, and the file extension SHOULD be excluded (Netlify is configured to use "pretty URLs").
+
+[source,asciidoc]
+----
+* link:./rebranding-rest[Should we rebrand REST?]
+----
+
+AsciiDoc's https://docs.asciidoctor.org/asciidoc/latest/macros/link-macro/[link macro] MUST be used to generate links from relative URLs. This is not necessary for absolute URLs with the HTTP(s) schema, which are auto-linked.
+
+[source,asciidoc]
+----
+https://github.com/kieranpotts/blog[Code repository]
+----
+
+== Images
+
+Use the following syntax for block-level images:
+
+[source,asciidoc]
+----
+image::./_/media/images/my_filename.png[]
+----
+
+The following syntax adds a caption, alternative text, and a rendered width in pixels. The image is hyperlinked.
+
+[source,asciidoc]
+----
+.This is the visible caption
+image::./_/media/images/js.png[Alternative text,400,400,link=https://example.com/]
+----
+
+== Quotes
+
+Use the following syntax for block-level quotes:
+
+[source]
+----
+[quote,Captain James T. Kirk,Star Trek IV: The Voyage Home]
+Everybody remember where we parked.
+----
+
+Output:
+
+[quote,Captain James T. Kirk,Star Trek IV: The Voyage Home]
+Everybody remember where we parked.
+
+== Comments
+
+Comment blocks MAY be used to include TODOs.
+
+[source,asciidoc]
+----
+////
+Hidden comment block.
+////
+----
+
+////
+Hidden comment block.
+////
+
+== Related links
+
+The following syntax MAY be used to add a list of related links to the bottom of a document:
+
+[source,asciidoc]
+----
+.Related links
+****
+* link:https://example.com/[Link 1]
+* link:https://example.com/[Link 2]
+* link:https://example.com/[Link 3]
+****
+----
+
+== References
+
+* https://gist.github.com/dcode/0cfbf2699a1fe9b46ff04c41721dda74[GitHub Flavored Asciidoc (GFA)]
+* https://gist.github.com/powerman/d56b2675dfed38deb298[Asciidoc cheatsheet for GitHub] (out-of-date)
+* https://docs.asciidoctor.org/[AsciiDoctor Docs]
+* https://github.com/asciidoctor/asciidoctor.org/blob/main/docs/asciidoc-recommended-practices.adoc[AsciiDoc recommended practices]

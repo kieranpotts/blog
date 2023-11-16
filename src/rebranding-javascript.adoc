@@ -20,7 +20,7 @@ There's no doubt there are problems with JavaScript's branding:
 * And famously, JavaScript is unrelated to Java. This has confused the hell out of non-technical managers and recruiters for decades.
 
 .An unofficial, community-made logo for JavaScript
-image::./_/media/images/js.png[A yellow square with the letters JS in black in the bottom-right corner,400,400]
+image::./_/media/images/js.png[A yellow square with the letters JS in black in the bottom-right corner,400,400,link=https://github.com/voodootikigod/logo.js]
 
 But for me, the big problem with the name JavaScript is its fuzzy scope. If a computer program is documented as having been written in JavaScript, that does not tell me everything I need to know to run the program. I do not know:
 
