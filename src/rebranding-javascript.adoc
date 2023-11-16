@@ -1,6 +1,6 @@
 = Should we rebrand JavaScript?
+Kieran Potts, 14 October 2019
 :description: Should we rebrand JavaScript? And if we did, what would we call it?
-:revdate: 2019-10-14
 :nofooter:
 
 *There are several problems with the JavaScript name. Is it time to rebrand JavaScript? If so, what should we call it?*
@@ -9,7 +9,7 @@ An interesting question was asked recently in LinkedIn's JavaScript group: does 
 
 There's no doubt there are problems with JavaScript's branding:
 
-* The official specification for the language is actually called ECMAScript — a somewhat clumsy bit of branding on the part of the standards organization that oversees the language's specification, Ecma International.
+* The official specification for the language is actually called ECMAScript – a somewhat clumsy bit of branding on the part of the standards organization that oversees the language's specification, Ecma International.
 
 * link:https://developer.mozilla.org/en-US/docs/Web/JavaScript[The JavaScript reference section] on the Mozilla Developer Network (MDN) describes a subset of ECMAScript. Every documented feature is implemented in at least one mainstream web browser, and therefore this is regarded as the main manual for the "living" implementation of JavaScript. The problem is the word "JavaScript" is also widely used to refer to different ECMAScript supersets, notably link:https://developer.mozilla.org/en-US/docs/Web/API[web APIs] and link:https://nodejs.org/api/[Node APIs].
 
@@ -26,7 +26,7 @@ But for me, the big problem with the name JavaScript is its fuzzy scope. If a co
 
 * The minimum version of ECMAScript with which the program is compatible, or at least what JavaScript engines or runtime environments the program supports.
 
-* What host APIs — language extensions added by the runtime environment — the program depends on. Is the program intended to run "client-side" (in a web browser), "server-side" (in the Node.js runtime environment), or is it universal?
+* What host APIs – language extensions added by the runtime environment – the program depends on. Is the program intended to run "client-side" (in a web browser), "server-side" (in the Node.js runtime environment), or is it universal?
 
 The confusion is demonstrated by the difficulty of consuming third party libraries. Browse GitHub for open source JavaScript packages that solve a particular problem, and for each solution you must dig deep into the README or the `package.json` file to discover if that particular JavaScript package is compatible with your own JavaScript application. (The problem is made worse by the current period of transition between module systems: from community-derived conventions such as CommonJS, AMD and UMD, towards ECMAScript's standard module notation.)
 
@@ -36,7 +36,7 @@ Rebranding JavaScript might help to clear up all this confusion.
 
 If we did rebrand JavaScript, what would we call it?
 
-JavaScript has already had lots of names. Brendan Eich — who designed and implemented the first version of the language — had used the codename "Mocha" to refer to his project, but the marketing boffins at Netscape called it LiveScript when it was first shipped in an early beta of the Navigator 2.0 browser, before settling on the name JavaScript for the final public release at the end of 1995 — apparently in an attempt to piggyback on the popularity of Java, an entirely unrelated language.
+JavaScript has already had lots of names. Brendan Eich – who designed and implemented the first version of the language – had used the codename "Mocha" to refer to his project, but the marketing boffins at Netscape called it LiveScript when it was first shipped in an early beta of the Navigator 2.0 browser, before settling on the name JavaScript for the final public release at the end of 1995 – apparently in an attempt to piggyback on the popularity of Java, an entirely unrelated language.
 
 Alternative implementations of the language were called JScript (Microsoft's version for its Internet Explorer browser) and ActionScript (Adobe's version). And various dialects of JavaScript that have enjoyed their time in the sun over the years include CoffeeScript and, today, TypeScript.
 

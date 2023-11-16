@@ -4,7 +4,7 @@ module.exports = ({ node }) => {
 
   html += '<blockquote>'
   html += `<p>${node.getContent()}</p>`
-  html += `<p>— ${attr.attribution}</p>`
+  html += `<p>– ${attr.attribution}</p>`
   html += '</blockquote>'
 
   return html

@@ -1,6 +1,6 @@
 = Hello, world
+Kieran Potts, 5 August 2019
 :description: Welcome to my new blog, an exploration of the state of the software industry.
-:revdate: 2019-08-05
 :nofooter:
 
 *Welcome to my new blog. I will use this space to explore the history of software engineering, analyze the current state of the industry and try to predict its future trajectory.*
@@ -17,7 +17,7 @@ With the aid of open source tooling and cheap computing capacity, we have automa
 
 Yet for all the promise of agile development cycles and lean business models, our industry is notorious for its stubborn ineptitude to deliver completed products on time, on budget and to spec.
 
-Runaway projects — the ones that _completely_ spiral out of control — are not at all exceptional.
+Runaway projects – the ones that _completely_ spiral out of control – are not at all exceptional.
 
 The software crisis has been sustained for link:http://homepages.cs.ncl.ac.uk/brian.randell/NATO/NATOReports/index.html[50 years] now. The primary function of the software industry is to improve productivity by assisting the automation of human activities and business processes. How can it be that the very same industry is riddled with such inefficiency and folly?
 
@@ -33,7 +33,7 @@ I will use this space to scrutinize the history of software manufacture, investi
 
 I'm a self-taught software engineer based near Bristol, UK.
 
-I started my career in the early 2000s as a technology journalist. As traditional media was challenged by new media, I moved into online journalism and later started my own consultancy practice, providing website development and digital content production services. Working as an independent consultant for more than a decade I gained extensive experience working for all sorts of organizations — big and small, old and new, public and private — and developing technical solutions for a whole jumble of problem domains.
+I started my career in the early 2000s as a technology journalist. As traditional media was challenged by new media, I moved into online journalism and later started my own consultancy practice, providing website development and digital content production services. Working as an independent consultant for more than a decade I gained extensive experience working for all sorts of organizations – big and small, old and new, public and private – and developing technical solutions for a whole jumble of problem domains.
 
 My technical skills matured in lockstep with the advancement of link:https://developer.mozilla.org/en-US/[the web platform] and the JavaScript language. Incrementally, I turned my hobby of computer programming into a career in software engineering.
 
