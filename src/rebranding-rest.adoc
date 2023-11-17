@@ -110,11 +110,11 @@ When you look again at the REST constraints, knowing the context in which they w
 
 3. HTTP provides semantics to describe the *cache-ability* of a server's resources, and persisting application state on the client-side is intrinsic to how web browsers work.
 
-4. The URI standard maps directly to REST's notion of *resources* with unique *identifiers*. Resources are *represented* by media types, which are declared using HTTP's `Content-Type` header, thus making HTTP messages *self-descriptive*. The HyperText Markup Language (HTML) is a hypermedia type designed specifically for the web. With its embedded *hypermedia controls* – links and forms – that are used to *drive application state changes*, HTML meets all the other requirements of REST's *uniform interface*.
+4. The URI standard maps directly to REST's notion of *resources* with unique identifiers. Resources are represented by media types, which are declared using HTTP's `Content-Type` header, thus making HTTP messages self-descriptive. The HyperText Markup Language (HTML) is a hypermedia content type designed specifically for the web. With its embedded hypermedia controls (links and forms) that are used to drive application state changes, HTML meets all the other requirements of REST's *uniform interface*.
 
 5. The *layering* of server-side web infrastructure – API Gateways backed by service-oriented "microservice" architecture; Content Delivery Networks and other load balancing solutions; and so on – is all pretty standard stuff nowadays.
 
-6. And the optional constraint of *code-on-demand* prescribes what today we call progressive enhancement: the discretionary extension of static HTML documents with JavaScript programs that are downloaded and executed on the client device.
+6. And the optional constraint of *code-on-demand* prescribes what today we call progressive enhancement – the discretionary extension of static HTML documents with JavaScript programs that are downloaded and executed on the client device.
 
 Even the weird name – Representational State Transfer – starts to make sense, too:
 
@@ -126,7 +126,7 @@ Fielding's intention in writing his thesis was to distill down the World Wide We
 [quote,Roy Fielding]
 The World Wide Web is arguably the world's largest distributed application. Understanding the key architectural principles underlying the Web can help explain its technical success and may lead to improvements in other distributed applications, particularly those that are amenable to the same or similar methods of interaction.
 
-Fielding is clear: "REST is specifically targeted at distributed information systems". If you read link:https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm[Fielding's thesis] for yourself, you'll see it is all about the mechanics of webpages, web browsers and web servers – the infrastructure of the World Wide Web, which is a particular implementation of a distributed information system.
+Fielding is clear: "REST is specifically targeted at distributed information systems". If you read link:https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm[Fielding's thesis] for yourself, you'll see it is all about the mechanics of web pages, web browsers and web servers – the infrastructure of the World Wide Web, which is a particular implementation of a distributed information system.
 
 == REST != web service APIs
 
@@ -141,7 +141,7 @@ The REST constraints fit particularly awkwardly in the context of the programmat
 
 And yet, in the 20+ years since Fielding's dissertation, more and more web service APIs have been documented as "REST APIs". Examples include some of link:https://docs.microsoft.com/en-us/rest/api/[Microsoft's APIs], some of link:https://developers.google.com/apis-explorer[Google's], plus the main programmatic interfaces to link:https://docs.github.com/en/rest[GitHub], link:https://developer.atlassian.com/cloud/jira/platform/rest/v3/intro/[Atlassian's software suite], link:https://developer.paypal.com/docs/api/overview/[PayPal], link:https://stripe.com/docs/api[Stripe], link:https://www.twilio.com/docs/usage/api[Twilio], link:https://developer.wordpress.org/rest-api/[WordPress], and hundreds more applications.
 
-None of these are RESTful. None of them use hypermedia as the means to driving application state. None of them ship executable code to their clients as a matter of course. And anyway, they're just APIs, not distributed information systems.
+None of these are RESTful. None of them use hypermedia as the means to driving their application state. None of them ship executable code to their clients as a matter of course. And anyway, they're just APIs, not distributed information systems.
 
 As is the case with many buzzwords, the definition of REST has gotten more and more eroded with time.
 
@@ -165,11 +165,11 @@ In a link:https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
 
 For a web service to be anything close to truly RESTful, the payloads of its response messages to clients could not be composed from any old arbitrary data objects. The payloads must be something more like HTML: a hypermedia format that defines how the encoded representations should be processed by the client, and which incorporates all the hypermedia controls that the client would need to perform further operations. But, of course, whereas HTML is primarily a document format for human consumption, hypermedia APIs would need an equivalent media type for automated consumption by other computer programs.
 
-Over the last decade or so, there have been some valiant attempts to develop just such a media type. The most promising candidates in this field are link:https://json-ld.org/[JSON-LD] plus link:https://www.hydra-cg.com/[Hydra]. I will write about these and other emerging solutions for hypermedia APIs in greater detail in a future blog post.
+Over the last decade or so, there have been some valiant attempts to develop just such a media type. The most promising candidates in this field are link:https://json-ld.org/[JSON-LD] plus link:https://www.hydra-cg.com/[Hydra]. I may write about these and other emerging solutions for hypermedia APIs in greater detail in a future blog post.
 
 In _this_ blog post, I'll only summarize how a theoretical hypermedia API would work. I say _theoretical_ because, as of 2021, hypermedia APIs are not yet a reality outside of academic circles.
 
-The hypermedia APIs of the future would be consumed by automated agents in much the same way that humans today interact with websites. People discover all the available resources and functions of a website by visiting its homepage and clicking through the links and filling out the forms, following instructions provided in the webpages themselves. So too automated agents would discover and interact with all the available resources and operations of a web service by visiting the root URL of its API and following the links and controls described in the server's response messages.
+The hypermedia APIs of the future would be consumed by automated agents in much the same way that humans today interact with web sites. People discover all the available resources and functions of a web site by visiting its home page and clicking through the links and filling out the forms, following instructions provided in the web pages themselves. So too automated agents would discover and interact with all the available resources and operations of a web service by visiting the root URL of its API and following the links and controls described in the server's response messages.
 
 This principle is called "following your nose". It is achieved by supplying all necessary documentation to interact with the site or service "in-band", ie encoded within a server's response messages.
 
@@ -188,7 +188,7 @@ Please, let's consign the term "REST API" to history. There's just link:https://
 
 While REST works well as a series of metaphors for the foundational architectural principles of the World Wide Web, it doesn't work so well as a design philosophy for individual services that happen to be delivered over that same network.
 
-We don't talk about RESTful websites, do we? Then why should we talk about RESTful APIs?
+We don't talk about RESTful web sites, do we? Then why should we talk about RESTful APIs?
 
 What we call today "REST APIs" we should reclassify as either "HTTP APIs" or "hypermedia APIs".
 

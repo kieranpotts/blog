@@ -1,5 +1,9 @@
 {
 
+  // Spell check language. For consistency with our technical documentation,
+  // we write in American English.
+  "cSpell.language": "en-US",
+
   // Render vertical guidelines at 80, 100 120 columns.
   "editor.rulers": [
     80,

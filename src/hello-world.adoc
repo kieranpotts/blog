@@ -33,7 +33,7 @@ I will use this space to scrutinize the history of software manufacture, investi
 
 I'm a self-taught software engineer based near Bristol, UK.
 
-I started my career in the early 2000s as a technology journalist. As traditional media was challenged by new media, I moved into online journalism and later started my own consultancy practice, providing website development and digital content production services. Working as an independent consultant for more than a decade I gained extensive experience working for all sorts of organizations – big and small, old and new, public and private – and developing technical solutions for a whole jumble of problem domains.
+I started my career in the early 2000s as a technology journalist. As traditional media was challenged by new media, I moved into online journalism and later started my own consultancy practice, providing web site development and digital content production services. Working as an independent consultant for more than a decade I gained extensive experience working for all sorts of organizations – big and small, old and new, public and private – and developing technical solutions for a whole jumble of problem domains.
 
 My technical skills matured in lockstep with the advancement of link:https://developer.mozilla.org/en-US/[the web platform] and the JavaScript language. Incrementally, I turned my hobby of computer programming into a career in software engineering.
 
