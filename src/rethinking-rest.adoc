@@ -1,4 +1,4 @@
-= Should we rebrand REST?
+= Should we rethink REST?
 Kieran Potts, 24 May 2021
 :description: What's wrong with the term "REST API", and what should we use instead?
 :nofooter:

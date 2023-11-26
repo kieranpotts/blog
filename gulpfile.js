@@ -1,30 +1,17 @@
-/*
-Host dependencies.
-*/
-import path from 'node:path'
-
-/*
-Gulp packages.
-*/
+/* Gulp packages. */
 import gulp from 'gulp'
 import asciidoctor from '@asciidoctor/gulp-asciidoctor'
 
-/*
-Other vendor dependencies.
-*/
+/* Other vendor dependencies. */
 import browserSync from 'browser-sync'
 import { deleteAsync } from 'del'
 
-/*
-Basic configuration.
-*/
+/* Basic configuration. */
 const src_dir = 'src'
 const dist_dir = 'dist'
 
-/*
-Delete the contents of the `dist` directory without actually
-deleting the `dist` directory itself.
-*/
+/* Delete the contents of the `dist` directory without actually
+deleting the `dist` directory itself. */
 gulp.task('clean', async (done) => {
   await deleteAsync(
     `${dist_dir}/**/*`,
@@ -35,11 +22,9 @@ gulp.task('clean', async (done) => {
   done()
 })
 
-/*
-Transform AsciiDoc files to custom templates using AsciiDoctor.js.
+/* Transform AsciiDoc files to custom templates using AsciiDoctor.js.
 https://docs.asciidoctor.org/asciidoctor.js/latest/
-https://github.com/asciidoctor/gulp-asciidoctor/blob/main/docs/modules/ROOT/pages/index.adoc
-*/
+https://github.com/asciidoctor/gulp-asciidoctor/blob/main/docs/modules/ROOT/pages/index.adoc */
 gulp.task('adoc', () => {
   return gulp.src(`${src_dir}/[^_]*.adoc`, { base: `${src_dir}` })
     .pipe(asciidoctor({
@@ -58,9 +43,7 @@ gulp.task('adoc', () => {
     .pipe(gulp.dest(dist_dir))
 })
 
-/*
-Copy these files verbatim.
-*/
+/* Copy these files verbatim. */
 gulp.task('verbatim', () => {
   return gulp.src([
     `${src_dir}/_headers`,
@@ -71,19 +54,15 @@ gulp.task('verbatim', () => {
   .pipe(gulp.dest(dist_dir))
 })
 
-/*
-Copy the contents of the `_` ("includes") directory.
-*/
+/* Copy the contents of the `_` ("includes") directory. */
 gulp.task('includes', () => {
   return gulp.src(`${src_dir}/_/**/*`, { base: `${src_dir}/_` })
   .pipe(gulp.dest(`${dist_dir}/_`))
 })
 
-/*
-Dev server with live-reload.
+/* Dev server with live-reload.
 https://browsersync.io/
-https://browsersync.io/docs/options/
-*/
+https://browsersync.io/docs/options/ */
 gulp.task('browser-sync', (done) => {
   browserSync({
     open: false,
@@ -102,9 +81,7 @@ gulp.task('browser-sync', (done) => {
   done()
 })
 
-/*
-Build pipeline.
-*/
+/* Build pipeline. */
 gulp.task('build', gulp.series(
   'clean',
   'includes',
@@ -112,16 +89,12 @@ gulp.task('build', gulp.series(
   'verbatim',
 ))
 
-/*
-Watch certain files and rerun specific bits of the build pipeline in response.
-*/
+/* Watch certain files and rerun specific bits of the build pipeline in response. */
 gulp.task('watch', (done) => {
   gulp.watch(`${src_dir}/*.adoc`, gulp.series('adoc'))
   gulp.watch(`${src_dir}/_/**/*`, gulp.series('includes'))
   done()
 })
 
-/*
-Start development server.
-*/
+/* Start development server. */
 gulp.task('start', gulp.series('build', 'browser-sync', 'watch'))

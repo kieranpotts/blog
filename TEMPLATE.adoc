@@ -41,7 +41,7 @@ Internal links MUST be relative the current document, and the file extension SHO
 
 [source,asciidoc]
 ----
-* link:./rebranding-rest[Should we rebrand REST?]
+* link:./page-slug[Page title]
 ----
 
 AsciiDoc's https://docs.asciidoctor.org/asciidoc/latest/macros/link-macro/[link macro] MUST be used to generate links from relative URLs. This is not necessary for absolute URLs with the HTTP(s) schema, which are auto-linked.
