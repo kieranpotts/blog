@@ -48,21 +48,7 @@ The following run-scripts are available. Use `npm run [command]`, eg `npm run de
 
 === Git workflow
 
-This repository has two mainline branches:
-
-- `dev`
-- `stable`
-
-Optionally, new blog posts may be created in `feature/*` side branches, which are squash-merged into `dev` when ready for publication. Other changes can be committed directly to the `dev` branch.
-
-Updates to the `stable` branch in the reference repository are automatically deployed via Netlify. Therefore, to deploy the latest changes in the `dev` branch, simply rebase `stable` on `dev` and push those changes into the upstream repository. It takes just a few seconds for the changes to go live.
-
-[source,shell]
-----
-git switch stable
-git rebase dev
-git push
-----
+This repository has only a single branch, `dev`. Updates to the this branch in the upstream reference repository are automatically deployed via Netlify.
 
 ''''
 © Kieran Potts — link:./LICENSE.txt[CC BY-SA 4.0]
