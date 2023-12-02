@@ -3,6 +3,10 @@ Thoughts on the crafting of software
 :description: Commentary on methods and tools for developing and maintaining software systems.
 :nofooter:
 
+////
+link:./timetravel[What advise would you give your younger self?]
+////
+
 link:./rethinking-rest[Rethinking REST]
 
 link:./rebranding-javascript[Should we rebrand JavaScript?]

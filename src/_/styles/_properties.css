@@ -33,15 +33,20 @@ Custom properties
 
   --color\=video: var(--color\=text\|default);
 
+  /* Fonts */
+
+  --font-family\=default: 'Noto Serif', ui-serif, serif;
+  --font-family\=monospace: Hack, ui-monospace, monospace;
+
   /* Font sizes */
 
-  --font-size\=root: 9px;
-  --font-size\=root\@xs: 9px;   /* 400px */
-  --font-size\=root\@sm: 10px;  /* 600px */
-  --font-size\=root\@md: 10px;  /* 800px */
-  --font-size\=root\@lg: 11px;  /* 1000px */
-  --font-size\=root\@xl: 11px;  /* 1200px */
-  --font-size\=root\@xxl: 11px; /* 1400px */
+  --font-size\=root: 10px;
+  --font-size\=root\@xs: 10px;   /* 400px */
+  --font-size\=root\@sm: 11px;  /* 600px */
+  --font-size\=root\@md: 11px;  /* 800px */
+  --font-size\=root\@lg: 12px;  /* 1000px */
+  --font-size\=root\@xl: 12px;  /* 1200px */
+  --font-size\=root\@xxl: 12px; /* 1400px */
 
   --font-size\=xxl: 3rem;
   --font-size\=xl:  2.2rem;
