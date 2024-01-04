@@ -7,6 +7,8 @@ Thoughts on the crafting of software
 link:./timetravel[What advise would you give your younger self?]
 ////
 
+link:./software-attributes[Mental models: software attributes]
+
 link:./rethinking-rest[Rethinking REST]
 
 link:./rebranding-javascript[Should we rebrand JavaScript?]
