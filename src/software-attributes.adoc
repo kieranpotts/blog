@@ -46,6 +46,8 @@ Quality is a much more subjective matter. It is not a binary property, like corr
 
 Different principles of good software design may need to be traded off against one another. And anyway, what is "good" design is a matter of opinion. Computer programmers on the same team will often have differing opinions on what the optimal design for their particular system should be.
 
+For these reasons, these quality attributes of software are not easily measurable and verifiable. Metrics such as cyclometric complexity can alert us to code smells, but those should always be evaluated via more qualitative assessments of the code.
+
 == Alternative models
 
 There are other ways of thinking about the various attributes of a software system.
@@ -70,9 +72,9 @@ Consider security. A system may have an NFR that sensitive data be encrypted in 
 
 The boundary between quality and operational constraints can be a little fuzzy. One way to think about the division is between runtime qualities and static qualities. Qualities that are observable at runtime, like performance and accessibility, should be treated as operational constraints and specified as NFRs. Qualities that are embedded in the static structure of the code and configuration of the system, such as testability and scalability, should be the sole responsibility of the technical people.
 
-An alternative guiding principle is that if a design choice is relevant to the owner or users of a system, it should be included in the system's specification. For example, I would specify any solutions implemented to mitigate the risks of denial of service attacks, since such solutions will show up in the system's behavior. Rate limiting, for example, has an impact on users.
+An alternative guiding principle is that if a design choice is relevant to the owner or users of a system, it should be included in the system's specification. For example, I would specify any solutions implemented to mitigate the risks of denial of service attacks, since such solutions will show up in the system's behavior. Rate limiting, for example, has an impact on users. NFRs such as operability and supportability are somewhat nebulous, but they are relevant to both the owner and users of a system, so they should be specified.
 
-If in doubt, specify acceptance criteria!
+If in doubt, specify non-functional requirements, even if the acceptance criteria are somewhat generic!
 
 == Benefits of this model
 
