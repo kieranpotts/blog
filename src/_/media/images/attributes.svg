@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="563px" height="162px" viewBox="0 0 563 162">
+  <defs>
+    <style>
+      * {
+        font-family: monospace;
+      }
+      text {
+        fill: hsl(0, 0%, 25%);
+      }
+      rect {
+        stroke: hsl(0, 0%, 50%);
+      }
+      path {
+        stroke: hsl(0, 0%, 75%);
+      }
+    </style>
+  </defs>
+
+  <rect x="161" y="1" width="160" height="80" rx="7" ry="7" fill="none" stroke-width="1"/>
+  <text x="241" y="46" font-size="16px" text-anchor="middle" font-weight="bold">Operations</text>
+
+  <rect x="361" y="1" width="160" height="80" rx="7" ry="7" fill="none" stroke-width="1"/>
+  <text x="441" y="46" font-size="16px" text-anchor="middle" font-weight="bold">Constraints</text>
+
+  <rect x="161" y="121" width="360" height="40" rx="7" ry="7" fill="none" stroke-width="1"/>
+  <text x="341" y="146" font-size="16px" text-anchor="middle" font-weight="bold">Quality</text>
+
+  <path d="M 1 101 L 561 101" fill="none" stroke-width="2" stroke-miterlimit="10" stroke-dasharray="6 6"/>
+  <text x="119" y="46" font-size="16px" font-weight="normal" text-anchor="end">Features</text>
+  <text x="119" y="146" font-size="16px" font-weight="normal" text-anchor="end">Design</text>
+</svg>

@@ -1,0 +1,85 @@
+= Mental models: software attributes
+Kieran Potts, 4 January 2024
+:description: xxxxxxxxxxxxxxxxxx
+:nofooter:
+
+*This is the first in a series of blog posts covering mental models for software development. These are representations of various concerns of the software development process, which I have found to be helpful in thinking about the work I do.*
+
+This first post describes the mental model I use for thinking about the different attributes of a software system, both its features and its qualities.
+
+When I think about this, I have an image in my head that looks something like this:
+
+.A mental model for the attributes of a software system
+image::./_/media/images/attributes.svg[][This diagram represents the concerns of software development. There is a single horizontal line with the label "Features" above the line and "Design" below the line. There are two boxes above the line, labelled "Operations" and "Constraints". Below the line is a single box labelled "Quality".]
+
+== Primary concerns
+
+When we're developing a software system, we're concerned about two aspects of it:
+
+* The *correctness* of the system.
+* The level of *quality* to which it is engineered.
+
+I'll deal with each of these in turn.
+
+== Correctness
+
+In this mental model, *correctness* is a measure of whether a system is fit for purpose. A system is said to be correct if it meets both the functional and non-functional requirements of the organization that owns it and the people that use it.
+
+* Functional requirements (FRs) define the *operations* of the system, ie _what_ it does.
+* Non-functional requirements (NFRs) define the *constraints* within which the system must operate, ie _how_ well it does it.
+
+For example, a functional requirement may be that a system allows users to search for a product  by its stock keeping unit (SKU) code, and a non-functional requirement may be that it returns search results in less than one second while supporting up to 1000 concurrent searches.
+
+The combination of operations (defined as FRs) and constraints (defined as NFRs) make up the *features* of the software system.
+
+Features – everything above the line – are of concern to the organization that owns the software system and/or the people who use it. Features are defined in a system's requirements specification, preferably in the form of measurable acceptance criteria.
+
+A software solution either meets its acceptance criteria or it doesn't. It is either correct or it is not.
+
+== Quality
+
+In this mental model, *quality* refers to the internal design of the system. How well a software solution is made determines how easily it can be changed, debugged, tested, deployed, and so on.
+
+While the features of a software system are important to the business people, its internal quality attributes – everything below the line – are primarily of concern to the people who develop, maintain and operate it, the technical people.
+
+Quality is a much more subjective matter. It is not a binary property, like correctness. A software system can be engineered to a higher or lower quality, but it is never possible to say whether the design is "correct" or "incorrect".
+
+Indeed, quality attributes may be traded off against one another. For example, a system may be optimized for security and reliability, but some design decisions made within those constraints may have come at the expense of some measures of performance.
+
+== Alternative models
+
+There are other ways of thinking about the various attributes of a software system.
+
+The concept of "features" is understood in different ways. Some people think of features as meaning the functions or operations of the system, what it does, distinct from NFRs such as performance, security and reliability.
+
+But I prefer to think of features as being all the externally-facing attributes, anything that is meaningful to a system's owners and users. Those stakeholders care about what the system does, but they also care about how well it does it – how reliable and available it is, how secure their data is in the system, how easy it is to use, and so on.
+
+People care about features.
+
+The concept of "quality" is even more nebulous. It is not unusual for people to think of quality as a single attribute, a binary property determined by whether the software works or not. In practice, the quality of a software system is determined by many factors, and different stakeholders will have different perspectives on this.
+
+Personally, I have found it useful to think about software quality as a fairly narrowly-scoped set of attributes that are primarily of concern to the developers and operators of the system. These internal quality attributes are determined by the way the code is written and organized, the way data is structured and distributed, and how the system is deployed and operated in production.
+
+Supporting artifacts such as technical documentation and automated test scripts also contribute to the ease with which a software solution can be further developed and maintained and operated over the long term.
+
+== Quality attributes versus NFRs
+
+In my mind, non-functional requirements are distinct from quality attributes. But some attributes span both categories.
+
+Consider security. A system may have an NFR that sensitive data be encrypted in transit. The categories of data deemed to be sensitive would be agreed with the business, normally. But it should not be necessary to have an NFR covering the validation and sanitizing of user input. It's just good coding standards to protect all software systems from SQL injection and other common attack vectors.
+
+The boundary between quality and operational constraints can be a little fuzzy. As a general rule, if a design choice is relevant to the owner or users of a system, it should be included in the system's specification. For example, I would specify any solutions implemented to mitigate the risks of denial of service attacks, since such solutions will show up in the system's behavior. Rate limiting, for example, has an impact on users.
+
+If in doubt, specify acceptance criteria.
+
+== Benefits of this model
+
+In my opinion, the best thing about this mental model is that the division of responsibilities between the business people and the technical people is clear. The feature attributes above the line are the concern of the business people, while the quality attributes below the line should be the responsibility of the technical people.
+
+The quality attributes provide the foundation on which the features are built. If a system is designed to a high quality, it will be relatively easy to change the system's features, compared to systems designed to a lower quality.
+
+For example, it will be easier to implement security protocols in a system designed with a clear layering of concerns, such that UI code is decoupled from business logic, and business logic is decoupled from data access, and so on. Different security protocols can be easily implemented in the relevant layers of the system. Ditto for performance optimizations.
+
+And,, of course, it is always easier to extend or make changes to specific areas of functionality if a system's design makes rational use of modularity of encapsulation.
+
+So, ultimately, the internal quality attributes of a software system _do_ have a direct impact on its external features, especially over the long term.
