@@ -26,11 +26,11 @@ I'll deal with each of these in turn.
 In this mental model, *correctness* is a measure of whether a system is fit for purpose. A system is said to be correct if it meets both the functional and non-functional requirements of the organization that owns it and the people that use it.
 
 * Functional requirements (FRs) define the *operations* of the system, ie _what_ it does.
-* Non-functional requirements (NFRs) define the *constraints* within which the system must operate, ie _how_ well it does it.
+* Non-functional requirements (NFRs) define the *constraints* within which the system must operate, ie _how_ well it works.
 
 For example, a functional requirement may be that a system allows users to search for a product  by its stock keeping unit (SKU) code, and a non-functional requirement may be that it returns search results in less than one second while supporting up to 1000 concurrent searches.
 
-The combination of operations (defined as FRs) and constraints (defined as NFRs) make up the *features* of the software system.
+The combination of operations (defined as FRs) and their constraints (defined as NFRs) make up the *features* of the software system.
 
 Features – everything above the line – are of concern to the organization that owns the software system and/or the people who use it. Features are defined in a system's requirements specification, preferably in the form of measurable acceptance criteria.
 
@@ -68,19 +68,24 @@ Supporting artifacts such as technical documentation and automated test scripts 
 
 In my mind, non-functional requirements are distinct from quality attributes. But some attributes span both categories.
 
-Consider security. A system may have an NFR that sensitive data be encrypted in transit. The categories of data deemed to be sensitive would be agreed with the business, normally. But it should not be necessary to have an NFR covering the validation and sanitizing of user input. It's just good coding standards to protect all software systems from SQL injection and other common attack vectors.
+Consider security. A system may have an NFR that sensitive data be encrypted in transit. The categories of data deemed to be sensitive would be agreed with the owner, normally. But it should not be necessary to have an NFR covering the validation and sanitizing of user input. It's just good coding standards to protect software services from SQL injection and other common attack vectors.
 
-The boundary between quality and operational constraints can be a little fuzzy. One way to think about the division is between runtime qualities and static qualities. Qualities that are observable at runtime, like performance and accessibility, should be treated as operational constraints and specified as NFRs. Qualities that are embedded in the static structure of the code and configuration of the system, such as testability and scalability, should be the sole responsibility of the technical people.
+The boundary between quality and operational constraints can be a little fuzzy. One way to think about the partition is between runtime qualities and static qualities. Qualities that are observable at runtime, like performance and accessibility, should be treated as operational constraints and specified as NFRs. Qualities that are embedded in the static structure of the code and configuration of the system, such as testability and scalability, should be the sole responsibility of the technical people.
 
-An alternative guiding principle is that if a design choice is relevant to the owner or users of a system, it should be included in the system's specification. For example, I would specify any solutions implemented to mitigate the risks of denial of service attacks, since such solutions will show up in the system's behavior. Rate limiting, for example, has an impact on users. NFRs such as operability and supportability are somewhat nebulous, but they are relevant to both the owner and users of a system, so they should be specified.
+An alternative guiding principle is that if a design choice is relevant to the owner or users of a system, it should be included in the system's specification. For example, I would specify any solutions implemented to mitigate the risks of denial of service attacks, since such solutions will show up in the system's behavior. Rate limiting, for example, has an impact on users.
 
-If in doubt, specify non-functional requirements, even if the acceptance criteria are somewhat generic!
+NFRs such as operability and supportability are somewhat nebulous, but since they are relevant to both the owner and users of a system, they should be specified.
+
+If in doubt, specify quality requirements, even if the acceptance criteria are somewhat generic!
 
 == Benefits of this model
 
 In my opinion, the best thing about this mental model is that the division of responsibilities between the business people and the technical people is clear. The feature attributes above the line are the concern of the business people. The quality attributes below the line are the responsibility of the technical people.
 
-Quality attributes provide the foundation on which features are built. If a system is designed to a high quality, it will be relatively easy to change the system's features, compared to systems designed to a lower quality.
+.A mental model for the attributes of a software system
+image::./_/media/images/attributes.svg[][This is the same diagram as above. There is a single horizontal line with the label "Features" above the line and "Design" below the line. There are two boxes above the line, labelled "Operations" and "Constraints". Below the line is a single box labelled "Quality".]
+
+This mental map shows the quality attributes as providing the foundation on which features are built. If a system is designed to a high quality, it will be relatively easy to change the system's features, compared to systems designed to a lower quality.
 
 For example, it will be easier to implement security protocols in a system designed with a clear layering of concerns, such that UI code is decoupled from business logic, and business logic is decoupled from data access, and so on. Different security protocols can be easily implemented in the relevant layers of the system. Ditto for performance optimizations.
 
