@@ -12,6 +12,8 @@ When I think about this, I have an image in my head that looks something like th
 .A mental model for the attributes of a software system
 image::./_/media/images/attributes.svg[][This diagram represents the concerns of software development. There is a single horizontal line with the label "Features" above the line and "Design" below the line. There are two boxes above the line, labelled "Operations" and "Constraints". Below the line is a single box labelled "Quality".]
 
+Let me explain.
+
 == Primary concerns
 
 When we're developing a software system, we're concerned about two aspects of it:
@@ -44,9 +46,9 @@ While the features of a software system are important to the business people, it
 
 Quality is a much more subjective matter. It is not a binary property, like correctness. A software system can be made to a higher or lower quality, but it is never possible to say whether the design is "correct" or "incorrect".
 
-Different principles of good software design may need to be traded off against one another. And anyway, what is "good" design is a matter of opinion. Computer programmers on the same team will often have differing opinions on what the optimal design for their particular system should be.
+Different principles of good software design may need to be traded off against one another. And anyway, what is "good" design is a matter of opinion. Computer programmers on the same team will often have differing opinions on what the optimal design for their solution should be.
 
-For these reasons, the quality attributes of software are not easily measurable and verifiable. Metrics such as cyclometric complexity can alert us to code smells, but those should always be evaluated via more qualitative assessments of the code.
+For these reasons, the quality attributes of software are not easily measurable. Metrics such as cyclometric complexity can alert us to code smells, but those are not the same things as anti-patterns. Code smells should always be evaluated via more qualitative assessments of the code.
 
 == Alternative models
 
@@ -74,7 +76,7 @@ The boundary between internally-facing quality attributes and externally-facing 
 
 An alternative guiding principle is that if a design choice is relevant to the owner or users of a system, it should be included in the system's specification. For example, I would specify any solutions implemented to mitigate the risks of denial of service attacks, since such solutions will show up in the system's behavior. Rate limiting, for example, has an impact on users.
 
-NFRs such as operability and supportability are somewhat nebulous, but since they are relevant to both the owner and users of a system, they should be specified.
+Objectives such as operability and supportability are somewhat fuzzy, but since they are relevant to both the owner and users of a system, they should be specified, even if only in vague terms.
 
 If in doubt, specify quality requirements, even if the acceptance criteria are somewhat generic!
 
@@ -96,4 +98,6 @@ And, of course, it is always easier to extend or make changes to specific areas 
 
 Choices made in the design of a system will have an impact on the features it can support. For example, non-functional requirements may be traded off against one another. A system's design may be optimized for security and reliability, but some design decisions made within those constraints may have come at the expense of some measures of performance.
 
-So, ultimately, the internal quality attributes of a software system _do_ have a direct impact on its external features, especially over the long term. It is right that technical people have the autonomy to make design choices on behalf of the software owner, as only they have the expertise to do so. In the end, though, the software owner will also care that the invisible internal qualities of the system are good. Success of the software solution will depend on it.
+So, ultimately, the internal quality attributes of a software system _do_ have a direct impact on its external features, especially over the long term.
+
+It is right that technical people have the autonomy to make design choices on behalf of the software owner, as only they have the expertise to do so. In the end, though, the software owner will also care that the invisible internal qualities of the system are good. Success of the software solution will depend on it.
