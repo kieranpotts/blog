@@ -48,7 +48,7 @@ The following run-scripts are available. Use `npm run [command]`, eg `npm run de
 
 === Git workflow
 
-This repository has only a single branch, `dev`. Updates to the this branch in the upstream reference repository are automatically deployed via Netlify.
+This repository has only a single branch, `main`. Updates to the this branch in the upstream reference repository are automatically deployed to production on Netlify.
 
 ''''
 © Kieran Potts — link:./LICENSE.txt[CC BY-SA 4.0]
