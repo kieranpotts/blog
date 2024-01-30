@@ -1,0 +1,13 @@
+= The agile-waterfall spectrum
+
+This is the second in a series of blog posts on mental models for software development.
+
+////
+
+== Conclusion
+
+The waterfall model is not a problem. It is a perfectly good methodology for developing some categories of software. It is only a problem when the expectations are that the initial plan will be 100% correct, and it will never be necessary to correct the path.
+
+You can do waterfall, but if you do so you must still build agility into your architecture, to support changes in the plan as you go along.
+
+////
