@@ -1,0 +1,5 @@
+= Should we focus on "adding value"?
+
+This idea, that we prioritize the things that add the most value, comes from The Agile Manifesto.
+
+Actually, our job is to balance the short and long term: incremental build versus iterative design.
