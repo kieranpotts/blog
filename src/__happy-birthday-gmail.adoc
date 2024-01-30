@@ -1,0 +1,14 @@
+= Happy 20th birthday, Gmail!
+
+////
+
+* https://effectivetypescript.com/2023/09/27/closure-compiler/
+* https://en.wikipedia.org/wiki/Gmail#cite_note-134
+
+The "ajax" technique was made possible by the development of the `XMLHttpRequest` API, initially a proprietary API implemented by Microsoft in Internet Explorer 5 in 1999 for use by Outlook Web Access (which later became Microsoft Exchange Server). This API was subsequently standardized by the W3C.
+
+Also, Google Maps, released a year later in 2005, took the "ajax" design pattern to the next level, and was a huge inspiration for the creation of jQuery.
+
+The term AJAX was publicly used on 18 February 2005 by Jesse James Garrett in an article titled https://web.archive.org/web/20150910072359/http://adaptivepath.org/ideas/ajax-new-approach-web-applications/[Ajax: A New Approach to Web Applications], based on techniques used on Google pages.
+
+////
