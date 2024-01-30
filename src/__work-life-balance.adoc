@@ -1,0 +1,5 @@
+= On work/life balance
+
+Work/life balance is *essential* to successful software delivery. That's because the work is predominantly a _thought_ process.
+
+The brain needs time to process and incubate ideas. It's not a mechanical process. It's not a factory or production line. It's barely a process at all.
