@@ -1,0 +1,74 @@
+= Scrum !== Agile
+
+////
+
+
+Need to define both Scrum and Agile, and in doing so I will show that the two are not well aligned.
+
+- Agile is not really a methodology but rather a fairly fluffy set of principles about the "culture and values" that are typically found in successful software houses.
+- Scrum was originally designed as a business wrapper for XP -- a _genuine_ agile delivery framework -- as a way of making XP more palatible to non-technical business.
+
+I will accept that Scrum supports an iterative and incremental development process, but this is not synonymous with agile (though the two concepts are very complementary).
+
+"Agile" is really a spectrum. Some organizations, team and projects can be more agile than others. So, I don't want to say that Scrum is _not_ agile. I do want to say that Scrum is not _very_ agile. Here's why:
+
+- Scrum is process-oriented.
+- Scrum is horribly inefficient.
+- Scrum is rigid.
+
+Scrum is too often used as a way of bringing a production-line system to software development, and filling the line with cheap labour.
+
+There are many risks with Scrum. One of them is the incentives to drop quality to hit the deadline of the sprint, which means refactoring work ends up in the backlog as "TechDebt"... in effect, the project managers get control of the quality, they manage this just like they do any other feature. But this ought to be a decision for developers, who are really the only ones with the skills and knowledge to make this call. (You can see the use of timeboxing/sprints as a mechanism to implement remote-control programming.)
+
+Burnout: two-weekly sprints can seem exhausting.
+
+The big tech companies run their software projects very different -- Scrum is [curiously absent](https://blog.pragmaticengineer.com/project-management-at-big-tech/).
+
+No one owns a trademark for use of the word "agile" in the context of software development methodolgies, so it is perfectly legitimate for an organization -- selling certification and courses -- to label the better ways of working they offer as being "agile".
+
+In summary, I don't highly rate Scrum, but I accept it is probably the least-worst option available for developing software in the context of organizations that do not understand software development (eg enterprise applications).
+
+----
+
+TODO: Scrum MAY be useful in some organizations and development environments. Case study of a project when we moved from Scrum to Scrumban, abandoning the fortnightly development cycle. But this opened the opportunity for the "delivery managers" to throw more tickets onto the board, and more people too... and the project soon descended into chaos. So Scrum can be beneficial for developers in that it creates a series of constraints for the business / project managers to operate within, and this creates something of a shield to developers, enforcing many good practices such as short ticket lifespans, and other benefits such as pinch-points when everything is in main.
+
+
+==========================
+
+
+Need to define both Scrum and Agile, and in doing so I will show that the two are not well aligned.
+
+- Agile is not really a methodology but rather a fairly fluffy set of principles about the "culture and values" that are typically found in successful software houses.
+
+- Scrum was originally designed as a business wrapper for XP -- a _genuine_ agile delivery framework -- as a way of making XP more palatible to non-technical business.
+
+I will accept that Scrum supports an iterative and incremental development process, but this is not synonymous with agile (though the two concepts are very complementary).
+
+"Agile" is really a spectrum. Some organizations, team and projects can be more agile than others. So, I don't want to say that Scrum is _not_ agile. I do want to say that Scrum is not _very_ agile. Here's why:
+
+- Scrum is process-oriented.
+- Scrum is horribly inefficient.
+- Scrum is rigid.
+
+Scrum is too often used as a way of bringing a production-line system to software development, and filling the line with cheap labour.
+
+There are many risks with Scrum. One of them is the incentives to drop quality to hit the deadline of the sprint, which means refactoring work ends up in the backlog as "TechDebt"... in effect, the project managers get control of the quality, they manage this just like they do any other feature. But this ought to be a decision for developers, who are really the only ones with the skills and knowledge to make this call. (You can see the use of timeboxing/sprints as a mechanism to implement remote-control programming.)
+
+Burnout: two-weekly sprints can seem exhausting.
+
+The big tech companies run their software projects very different -- Scrum is [curiously absent](https://blog.pragmaticengineer.com/project-management-at-big-tech/).
+
+No one owns a trademark for use of the word "agile" in the context of software development methodolgies, so it is perfectly legitimate for an organization -- selling certification and courses -- to label the better ways of working they offer as being "agile".
+
+In summary, I don't highly rate Scrum, but I accept it is probably the least-worst option available for developing software in the context of organizations that do not understand software development (eg enterprise applications).
+
+----
+
+TODO: Scrum MAY be useful in some organizations and development environments. Case study of a project when we moved from Scrum to Scrumban, abandoning the fortnightly development cycle. But this opened the opportunity for the "delivery managers" to throw more tickets onto the board, and more people too... and the project soon descended into chaos. So Scrum can be beneficial for developers in that it creates a series of constraints for the business / project managers to operate within, and this creates something of a shield to developers, enforcing many good practices such as short ticket lifespans, and other benefits such as pinch-points when everything is in main.
+
+////
+
+.Related links
+****
+* https://www.youtube.com/watch?v=bdSzvnccLQk[Scrum does not equal agile], Aino Corry, the Continuous Delivery channel on YouTube (2023)
+****
