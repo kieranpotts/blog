@@ -1,0 +1,20 @@
+= Complexity
+
+I've come to think of software development as a perpetual struggle against complexity.
+
+Complexity: we should not only be fighting against the complexity of our software systems, but also the complexity of our processes and our tools.
+
+Cognitive load and complexity → kill productivity!
+
+Complexity is everywhere. It's in our code, in our processes, in our tools, in our organizations. It's everywhere. And it's killing our productivity.
+
+////
+https://renegadeotter.com/2023/09/10/death-by-a-thousand-microservices.html?
+////
+
+.Related links
+****
+* link:http://web.archive.org/web/20221209212653/http://www.cs.unc.edu/techreports/86-020.pdf[No silver bullet] (PDF), Fred Brooks (1986) — This widely-cited paper, sub-titled "essence and accident in software engineering", argues that there is no single innovation that will bring about significant improvements in productivity in software development, or in the reliability or simplicity of software systems themselves.
+* link:https://softwarecrisis.baldurbjarnason.com/[Out of the software crisis], Baldur Bjarnason (20XX)
+* link:https://moss.cs.iit.edu/cs100/papers/out-of-the-tar-pit.pdf[Out of the tar pit] (PDF), Moseley and Marks (2006) — This paper makes the case that managing complexity is the greatest difficulty in the development of large-scale software systems. The first part of this paper is an insightful review of how different programming paradigms (object-oriented programming, functional programming, relational algebra) try to solve the sprawl of accidental complexity in large-scale computer systems. The second part of the paper proposes a new approach to software development that focuses on the management of complexity.
+****
