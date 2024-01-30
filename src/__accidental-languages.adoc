@@ -1,0 +1,12 @@
+= Accidental languages
+
+Why do bad languages become so popular? Bad design _works_ because users have more flexibility to bend the technology to their own use cases.
+
+Examples:
+
+* PHP was supposed to just be a template language
+* JS was designed in 10 days
+* Markdown = informal spec
+* JSON: minimal, informal spec, later standardized, not really intended as a configuration file format
+* INI files: no standards
+* CSV: recent RFC, but nothing follows it
