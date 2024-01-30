@@ -1,0 +1,5 @@
+= The brink
+
+Software development in perpetually teetering on a knife edge between success and failure.
+
+Just small things are enough to tip the balance.
