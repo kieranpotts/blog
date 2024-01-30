@@ -1,0 +1,425 @@
+= Five questions for reverse interviews
+
+*When you're looking for a new job, how do you evaluate potential employers? Here are five questions to ask in job interviews for software development roles.*
+
+Working in the software industry can be a somewhat _varied_ experience!
+
+Working at a software house tends to feel very different to working for an in-house team or a consultancy serving a non-IT business domain. And working at a small startup tends to feel very different to working at a large global firm. Abd even within each of these sub-sectors, the culture and ways of working can vary enormously.
+
+Extrinsic factors like salary and benefits, the tech stack and the problem space, and the location of the office and the quality of the work environment, will be early filters for your jobs funnel. But what will matter more to you in the long term is the culture of the organization – what it is like to work there day-to-day. Intrinsic factors like purpose, autonomy and mastery will determine how long you stay.
+
+Juniors shouldn't be overly picky. All experience is good. Even if you land in a sweaty dev shop, at least you'll learn how _not_ to make software! But as you progress through your career, the quality of the work will become more important to you.
+
+Unless you have inside knowledge of an organization – recommendations from a current or former employee, for example – then you will need to ask questions in your job interviews to dig into this.
+
+I've recently been through a round of tech interviews and I came up with five "reverse interview" questions. I designed these to reveal important red and green flags and to help me assess the _quality_ of the job at a more subjective level.
+
+You _should_ be brave and ask straight questions in your interviews. Don't be afraid to probe. Good employers will look on this favorably, appreciating your honesty and openness. Bad employers will be defensive, even offended.
+
+Here are my top five questions to ask in interviews for software development roles.
+
+== 1. Describe the design of your software?
+
+////
+Looking for a conceptual model that is aligned with the business domain.
+
+What's the architecture, from a conceptual perspective?
+////
+
+== 2. Describe the life cycle process of a change?
+
+ie describe how a change is planned and implemented.
+
+This is a leading question that will guide your approach to the remaining questions.
+
+Related and follow-up questions:
+
+* *How are requirements gathered, specified, planned and estimated?* Looking for the business to define high-level acceptance criteria, not to design the solution via user stories. ACs vs user stories.
+
+* How is work prioritized and planned?
+
+* How is technical debt and refactoring prioritized against feature delivery?
+
+* Are tests created and evolved at the same time as the code?
+
+* What does "agile" look like, eg kanban vs sprints / timeboxing.
+
+////
+Looking for a process that is iterative and incremental, and that is driven by the needs of the users and other stakeholders.
+////
+
+////
+== 3. How do you plan and prioritize work?
+
+What we're particularly interested in here is the strategies in place for balancing the immediate requirements of the business against the long-term health of the software and the delivery team.
+
+Looking for:
+* Separation of the product backlog from the sprint backlog.
+* How is technical debt prioritized against feature delivery
+* How to you estimate work?
+
+Follow-up questions:
+
+* How would you handle a situation where a developer gave a high-level estimate for delivery of a new feature but as they were working on it they learnt the optimal solution was more complex than they anticipated and completion was going to take 2x longer than they originally estimated?
+
+////
+
+== 3. What is your test-and-release strategy?
+
+This is a bit cheeky – it's two questions in one!
+
+Related and follow-up questions:
+
+* How do you define "good" and "done"?
+* How to you define "good"? Quality assurance. Test automation.
+* How do you define "done"? Definition of done. Definition of ready.
+* What's the time lag between a change being marked as "done" and it hitting produciton?
+* What is your release cadence?
+
+== 4. How do you measure and monitor progress and performance?
+
+////
+KPIs
+Looking for team evaluation, not individual evaluation
+Looking for value added
+Balanced against sustainability of the delivery over the long term
+
+Do you measure progress against estimates?
+////
+
+Follow-up questions:
+
+* *Tell me about someone at this organization, who was in my job role or a similar one, who did really well here? What did they do to succeed here?* Listen for rewarding fire-fighting and long hours, people who would "bend over backwards" or who "did whatever it took to meet deadlines".
+
+* How do you evaluate individual contributors versus the whole team?
+
+* How do you ensure delivery is sustainable, keep costs low?
+
+* Give me an example of someone in a role like mine who did really well here. What did they do to be successful at this organization?
+
+* How would you deal with an individual contributor who shipped a bug to production?
+
+== 5. Why do you think work-life balance is important?
+
+In a nutshell, you want me – and your development team as a whole – to make software that meets your requirements and serves your users well, and you want me to do that as cheaply as I possibly can.
+
+I can do that, but to do so a prerequisite for me is to have a healthy work-life balance. And to be clear, a healthy work-life balance is not only about hours worked versus no-worked, but it's really more about the work culture, the ways of working, for teams and individuals contributors to have a high degree of autonomy over how they work, and to have the space to refine the craft they love.
+
+Do you agree with that statement? And if so, why do you think work-life balance is so critical?
+
+What we're looking for here is an organization – or at least an IT division within the organisation – that understands the essence of software development at a fundamental level.
+
+What we do is not code, but think.
+
+Follow-up questions:
+
+* How to you ensure a low-stress, low-noise, low-friction working environment?
+
+* What do you do to support collaborative working, and alo what do you do to support solo, autonomous working?
+
+* *What is your policy on working hours?* – If there is minimal flexibility in the hours people are expected to work, this suggests a command-and-control management style.
+
+* *How do you support teams to work asynchronously?* Communication styles and tools (eg Slack vs email). This can suggest command-and-control management style, and low levels of autonomy. If investment is made in this, this supports good work-life balance and therefore sustainable working. eg flexible working is really only effective for the business if the business has invested in the tools and methods needed to support asynchronous working.
+
+////
+
+Related questions:
+
+How do you promote learning?
+
+One of the biggest predictors for success for a team is the degree to which the people feel safe to express their ideas and contribute.
+
+According to the DORA metrics, *psychological safety* is one of the key factors for success in software delivery. What this means is that individual contributors need a safe space in which to take risks and make mistakes, without fear of recriminations.
+
+Ours is a discipline primarily focused on learning. Whatever the business or consumer sector that we're working for, I think it is a universal truth that developing the software is a process of continuous learning.
+
+I don't mean we as individual contributors are always learning and growing, though of course that is true. What I mean is, we make software to solve problems, and the process of finding solutions to those problems is one of discovery and experimentation, and adjusting your approach and design based on learning, eg through regular feedback on the evolving solutions from users and other stakeholders.
+
+Indeed, on a greenfield project, you may start building not even knowing what it is you're building – what the software will do exactly, in the end.
+
+These are the _real_skills – not deep knowledge of any particular language or technology – but the skills that allow us to learn new things.
+
+////
+
+== Other questions
+
+Don't forget the basics. Reverse interviews are also a great opportunity to ask about the basics:
+
+* What are the biggest challenges facing your team or delivery right now?
+
+* *What are your policies on working hours and overtime?* – Remember to dig into to overtime is compensated and whether this is optional or mandatory. What time to people sign off Slack? Do people work on weekends?
+
+* Remote and hybrid working, asynchronous working
+
+* *How are your products/services differentiated from those of your competitors?* – Be sure to understand _what_ the organization does beforehand, but this question should reveal more insight than you can glean from the web site and other public information sources.
+
+* The organization's business model and financial footing. *What's your turnover and profit? How has this changed year-on-year?* Even if it's a private company, they should at least be able to tell you the turnover, which can be estimated from the public company accounts anyway. There may be genuine commercial reasons to not disclose some sensitive financial data, but it is perfectly reasonable for a employees to have some degree of transparency into the financial health of the organization they work for.
+
+* *Of your company values, which ones do you and your team live by, and how?* – This is a great question. Many organizations publish "values" but they are not always embedded in every decision and action the organization takes. This question will help you to assess whether the organization is genuinely guided by its core values. ... It's easy to make up values like "great place to work", what you want to know is how this is implemented in practice. Real values are not just superficial, but rather they frame every decision make at every level of the company.
+
+* *What does agile mean to you? What does this look like?*
+
+* *How are pay reviews handled? How is pay adjusted for inflation? How are promotions handled?* – This is a great question to ask, because it will reveal the degree to which the organization values its employees. If pay reviews are handled in a fair and transparent way, then this is a good sign. If pay reviews are handled in a secretive way, then this is a red flag. It should not "vary from person to person", of course that's true, but pay reviews and promotions should be carried out within a framework that is fair and transparent. You should understand the _process_ by which that happens.
+
+== Early red flags
+
+Red flags can emerge early, from the job spec itself, before you've even had contact with the organization. Consider carefully the wording, emphasis and tone of the job spec.
+
+* Look for phrases "fast-paced" and "no two days the same". These may be code for "chaotic" and "no time to do things properly". Phrases like "quality-focused" and "learning-oriented" are code for "we care about doing things properly".
+
+* Limited opportunities for remote and asynchronous working. This is a red flag, especially in the post-Covid era. It can be a sign of low levels of trust between the business owners and the employees, or that the organization is not good at managing people or falls back on command-and-control.
+
+Red flags can turn up in green companies, and vice versa. So consider the whole picture.
+
+////
+
+First: check the wording of the job spec. Red flags include phrases like "fast-paced" and "no two days the same". These are code for "chaotic" and "no time to do things properly".
+
+"Drive to meet time, cost and quality targets." !!! - Can fix one or two of these things, but not all of them.
+
+"We're a family"!!
+
+----
+
+Red flags - you're really looking for a *combination* of red flags. One red flag on its own is not necessarily a problem. But if you see a combination of red flags, then that's a sign that the organization is not a good place to work.
+
+* Vague answers about work-life balance.
+* Long hours are a badge of honour.
+* Suspiciously high salary for the title (eg "senior developer" but with a salary that is higher than the market rate for a senior developer, it probably means you won't be treated like a senior developer - probably means they will try to justify the stress with extra money). ... Don't be fooled by this, don't say to yourself "it's just a stepping stone"...
+
+----
+
+****
+Junior developers, still progressing through their career, may well be more motivated by extrinsic factors like salary and benefits. But as you progress through your career, you will find that intrinsic factors become more important.
+****
+
+We are looking for factors like:
+
+* Autonomy: do you get a good degree of autonomy in your work?
+* Mastery: is there a culture of excellence?
+* Purpose: do you like the aims and goals of the company?
+
+So, when being interviewed, it is important that you ask the interviewers questions that allow you to work out whether the organization is a good fit for you.
+
+In this post, I will share with you some of the questions that I ask when being interviewed.
+
+Treat interviews as a two-way process.
+
+Here are five questions to ask the interviewee. These cover high-level areas of concern: technology, delivery process model (how change in the software is managed) and the ways of working the tools used to automate aspects of the delivery process, design (how solutions are design) and testing (how solutions are verified), and the culture of the organization and how the organization is structured - the quality of the office/work environment.
+
+🚩 Red Flags in a company:
+
+• Micromanaged teams
+• Long onboarding process (or, conversely, no formal onboarding at all)
+• They treat you as resources
+• Job description lists only frameworks
+• Fixed schedules and no opportunities for remote work
+• Negative or toxic vibes from the interviewers, or they just sound exhausted / fed up
+• lots of turnover
+• unmaintainable legacy software
+• poor development environments
+• they use buzzwords, often incorrectly
+• hidden expectations (eg overtime, NFRs)
+
+More red flags:
+
+* No time for refactoring
+* No time for learning
+* No time for mentoring
+* No time for pair programming
+* No time for TDD
+* No time for test automation
+* No time for CI/CD
+* No time for documentation
+* No time for code reviews
+* No time for retrospectives
+* No time for 1:1s
+* No time for planning
+* No time for refinement
+* No time for estimation
+
+Other red flags include being overpaid for the role, lots of holiday time (or "unlimited" holiday), and inflated job titles.
+
+* The company uses the word "family" or similar vocabulary to refer to their employees. "Teams" are fine, but "family" is a red flag. It's a way of getting you to work longer hours for less pay, because you're "part of the family" and you don't want to let the family down.
+
+* The interview process has too many stages. How many is too many will depend on the business domain and the nature of the work. But if there are more than three stages, then that's probably a red flag. It's a sign that the organization is not very good at making decisions, and their recruitment system is broken.
+
+* They promise higher salary "later".
+
+* If the interviewer gets offended or defensive about a legitimate question you have. Your career affects your life, so you have the right to ask difficult questions.
+
+* Weird power dynamics. If the interview is disrespectful, intentionally trying to throw you off or intimidate you, you are getting a glimpse into the future! These are early signs of the culture there, and it may be toxic.
+
+* The bait and switch: you applied for a specific role at a specific salary, now they are telling you that the role has changed and the salary is lower. This is a sign that they are not honest and transparent.
+
+* Disengaged interviewers. If the interviewer seems distracted, keeps checking their phone, or doesn't remember your answers... you deserve their full attention!
+
+* If they put pressure on you to accept the offer quickly. This is a sign that they are desperate to fill the role... which is a sign they are not well staffed or projects have gone off coarse and panic has set in.
+
+* They ask for free work. Take home tests are okay, but any contributions you make to actual projects should be paid.
+
+✅ Green Flags in company:
+
+• Strong culture of quality, tech debt is managed
+• Pair programming, or robust QA, is valued
+• Self-organizing and cross-functional teams
+• Extreme Programming practices on default
+• Provides room for mentoring and personal growth
+• Offers flexible worktime and promotes work-life balance - which are the foundation for developing good software
+• Shift left as much as possible
+• Feedback
+
+Green flags like flexibility and work-life balance are not just perks; they're essential for sustained job satisfaction and productivity.
+
+TODO: Explain that we are mainly assessing the *quality* of the software systems - as this has the most impact on the developer experience… avoiding burnout, working sustainably and therefore have the potential to be able to make a long-term career at the organization.
+
+1. Requirements analysis and specification
+
+* How are functional requirements specified?
+* How are non-functional requirements specified?
+
+2. Design
+
+* Describe the architecture of the system
+* What is the process for designing new features?
+* What is the relative emphasis on iterative design versus incremental build?
+* How is time for refactoring and technical debt management factored into the process?
+
+3. Work culture and ways of working
+
+This is probably the most important consideration. This will determine whether you will enjoy working at the organization, and ultimately this will be the factor that determines how long you stay.
+
+* IT department structure
+** Team size
+** Team boundaries (loosely coupled)
+* Practices: dailies, retrospectives, refinement, planning and estimation, 1:1s
+* Async vs sync working
+* Communication tools (eg Slack vs email)
+* Working hours and flexibility
+* Hybrid working?
+* Degree of autonomy
+* Quality of the working environment, eg open plan vs private offices, breakout spaces, natural light, temperature, ergonomic furniture, quality of the equipment (eg monitors, chairs, desks, etc).
+* Principles such as psychological safety, blameless postmortems, etc. that guide how you work
+* Volume of meetings
+* Focus / context switching
+
+TODO: Cross-functional teams, but should not be siloed. EVERYONE should "shift left" and work across the whole life cycle. It means that testers help to define acceptance criteria, and developers help to define the scope of individual stories.
+
+4. Artifacts and automation
+
+* Test coverage
+* Documentation
+** Release process
+** Deployment process
+** Build process
+** Test process
+* Decision logs
+* SRS
+* Infrastructure config
+* Architectural designs
+* Domain modeling
+* Roadmaps
+* Release notes
+* Code review process
+* Source control system and workflow
+* Issue trackers
+* Logs
+* Quality gates
+* Static analysis
+* Runtime analysis
+* CI/CD systems
+* Monitoring
+
+5. Other questions
+
+* Performance/pay review, pay bands, etc.
+* Learning facilitation
+* What needs improving the most?
+* How is delivery measured?
+* What does the business value the most in software delivery?
+* Time-and-materials billing or fixed-price-fixed-specification? If the latter, what's the process by which projects get costed?
+* Collective-code ownership / code review?
+* Requirement to learn new languages and tech: on who's dime/time, eg allowance for online courses? Oreilly included?
+* IT provision
+* Working hours, core/flexible hours, overtime (compensation) - "How many hours are you contracted for, and how many do people work in practice?" Look out for answers like "we don't really have fixed work hours, we just allow you to work as you need to, to get the job done"... this usually means long hours and no overtime compensation, with delivery dates set by the business owners rather than the delivery team.
+* How to measure individual and team performance?
+
+== Other questions
+
+* Do you do pair programming? — Consider the response. It's not necessarily a red flag if they don't. But if they dismiss this out-of-hand, then perhaps that's a signal that they see pair programming as a waste of resources — you'll only get half the work done in the same time, rather than better quality. This is an indicator of a feature factory / professional software house. On the other hand, if they say they tried it and give reasonable reasons why it didn't work for them, then maybe this is not a red flag. It's not a green flag either, but not all organizations do pair programming and indeed it is not always an optimal practice.
+
+* How do you supporting learning? (You're not just looking for time and budgets to attend conferences and take online courses, but also a culture where learning-on-the-job is valued and encouraged. Do they expect you to know everything already, or are they hiring for your potential to learn and help you to achieve that potential?) Will I have a coach or mentor?
+
+* Is the office a nice place to work?
+
+Also: trust your gut. If you don't get a good vibe from the people interviewing you, then ask yourself if you really want to work with them. Even if the interviewer is not going to be your line manager, they are still a representative of the organization and, since organizations do tend to attract and retain similar types of people, there is a good chance that the interviewer is fairly representative of the types of people at the organization.
+
+Do you think you'll be able to learn from them? Do you think you'll be able to work with them, and have fun doing so?
+
+* Do any of your people speak at conferences?
+
+* Do you contribute to open source projects?
+
+* Do you have an engineering blog?
+
+For autonomy, you're looking for signals that the engineering teams can make their own choices. Example questions in this category include:
+
+* Is your culture one of individual or collective responsibility?
+
+* How do you set objectives and targets? (Looking for team-level measures, not individual ones.)
+
+* Who has responsibility for the design, test and quality of code?
+
+* If a new feature needs the code to be reshaped, who decides? - If the PO or architects, be suspicious of top-down, remote-control programming.
+
+* What was the last big SW failure and how did you deal with it?
+
+Also looking for signals of a highly siloed, disconnected organization. Looking for teams to make their own choices, but also for collaboration between teams.
+
+Purpose:
+
+* What are the goals of your organization?
+
+* If you achieve your goals, what will it look like?
+
+Delivery method:
+
+* How do you manage change in the software?
+
+* What determines releasability?
+
+* Who makes decisions on design?
+
+* How often do you release?
+
+* How do you define requirements? (Should be written from a user's perspective. Or just a descrption of tasks or changes to be made? If the latter, be suspicious of a feature factory, where the goal is to churn out features rather than have an impact on users.)
+
+* How do you communicate design ideas? How to you choose between different design options?
+
+* How many bugs do you have? If you find a problem in a piece of code in production, what steps are taken?
+
+* How long will it take to get a working dev environment up-and-running?
+
+* What's your test strategy? How do you test for a release? What level of automation vs manual?
+
+* Views on branching-and-merging strategies?
+
+----
+
+== Conclusion
+
+Evaluate potential employers in a methodological fashion. But once you've gathered the data, trust your gut.
+
+Also, things remote working and flexible working are not always possible. For example, there may be legitimate reasons why remote working is not possible, such as the nature of the work, or the nature of the organization (eg high security).
+
+Gather data - Glassdoor, TrustPilot, Companies House... – but then trust your gut.
+
+Wait at least 24 hours before accepting an offer. If they pressure you to accept quickly, that's a red flag.
+
+////
+
+.Related links
+****
+* https://www.youtube.com/watch?v=2Afk9KVEgpE[20 questions to ask your next employer], Dave Farley (2022)
+* https://www.youtube.com/watch?v=cNbWmjGNZD8[Can you see the red flags of a toxic tech company?], Jayme Edwards (2024)
+****
