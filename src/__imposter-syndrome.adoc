@@ -1,0 +1,9 @@
+= Imposter syndrome
+
+Oscar Wilde talked about the "continent of the unknown"… this applies to IT too, and even to specialist subdomains within that field. Even just the web platform - it is impossible to keep up with everything that is going on. This is why imposter syndrome is a very real thing in our industry, because the more you learn the more you realize how much you don't know.
+
+But actually there comes a point in your career when you realize you are just hearing the same old ideas over and over, repackaged and reformulated and applied in a different context. There is very little that is genuinely new in IT.
+
+This is why I think it is important to study the history of our field, to understand the context in which ideas were developed, and to understand the motivations behind them. This is why I think it is important to read books, and not just blogs and tweets.
+
+Go back in time and read about the history of software development.
