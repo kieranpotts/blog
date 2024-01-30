@@ -1,0 +1,387 @@
+= The history of modularity in JavaScript
+
+<main>
+
+  <header>
+    <h1>A short history of modularity in JavaScript</h1>
+    <p>TODO: The history of modularity in JS is interesting in the evolution of a language as its design changed from low-level scripting language to high-level programming language.</p>
+    <p><small>Kieran Potts – <time datetime="YYYY-MM-DD">DD MMM YYYY</time> (updated <time datetime="YYYY-MM-DD">DD MMM YYYY</time>)</small></p>
+  </header>
+
+  <p>The secret to building and maintaining large-scale computer programs is to compose them from lots of small autonomous software components, and to design and organize those components in such a way that they can be each developed, tested and maintained — and perhaps even compiled and deployed — independently of other components.</p>
+
+  <p>The baseline design pattern for a software component is a <em>module</em>. The concept of a "module" varies a little from one computer language to another, but they tend to be synonymous with files. One file is one module, which may export one or more software components (values, functions, classes, etc). This definition is relevant for ECMAScript dialects. In JavaScript, a module is represented by a single JavaScript file that exports some functionality and/or data, and which optionally imports other modules. In JavaScript, packages and applications are composed from one or more modules.</p>
+
+  <p>TODO: Distinguish "modules" from "scripts" in JS.</p>
+
+  <p>Modules are the baseline units we use to organize the overall structure of computer programs. When we create modules, we do two things. We organize our code into small units of code, each unit with well-defined responsibilities and boundaries for its behaviors. And we specify the relationships between the modules.</p>
+
+  <p>Most modern programming languages have some kind of native module system that developers use to encapsulate the individual components of their programs and to define the relationships between them. But, for a long time, JavaScript did not have a native construct for modules. Web developers were left to invent their own <i>ad hoc</i> solutions to achieve modularity in their frontend JavaScript code.</p>
+
+  <h2 id="ad-hoc-module-patterns"><i>Ad hoc</i> module patterns</h2>
+
+  <p>A number of design patterns were adopted to achieve modularity in JavaScript programs, before the language had a native module system. All of them made some sort of use of <strong>closures</strong>, ie using immediately-invoked function expressions (IIFEs) to encapsulate a module's logic, and inputting to the function some reference to its surrounding scope (its lexical environment), to which the module's exports could be attached.</p>
+
+  <p>In the following example, the module exports a function named <code>fooBar</code> to the global scope. The module's internal data and logic is kept private, scoped to the closure.</p>
+
+<figure><figcaption>Basic xxx module pattern</figcaption>
+<pre>
+(function(exports) {
+  'use strict'
+
+  var privateData
+
+  function fooBar () {
+    // ...
+  }
+
+  exports.fooBar = fooBar
+
+})(this)
+</pre>
+</figure>
+
+  <p>A popular variation on this design was what became known as the "revealing module" pattern. In this pattern, all the variables and functions of a module are declared within the private scope of the module's closure, and the closure returns a single anonymous object, the properties of which reference certain bits of internal functionality and data that is intended to be revealed publicly.</p>
+
+<figure><figcaption>The revealing module pattern</figcaption>
+<pre>
+var Counter = (function () {
+  var _privateCounter = 0
+
+  function _privateFn() {
+    _privateCounter++
+  }
+
+  function increment() {
+    _privateFn();
+  }
+
+  function getCount(){
+    return _privateCounter;
+  }
+
+  return {
+    increment: increment,
+    count: getCount
+  }
+
+})
+
+// Usage
+var counter = new Counter()
+counter.increment()
+counter.increment()
+count.count() // → 2
+</pre>
+</figure>
+
+  <p>Attaching all the public functions and data of a module to a single export object was a common design convention in the early <i>ad hoc</i> module systems. The aim was to reduce pollution of the global namespace. Because only a single object is exported, only one reference to that object needed to be added to the global scope. Thus, a single global variable served as a namespace for all of a module's exports.</p>
+
+  <p>jQuery, for example, hitched all its functionality to a variable called <code>jQuery</code> — and its well-known alias, the dollar variable, </code>$</code> — which was all that got added to the global </code>window</code> scope.</p>
+
+<figure><figcaption>Pseudo code representing how jQuery achieved modularity</figcaption>
+<pre>
+(function(exports) {
+
+  function jQuery (selector, context) {
+    // Initialization logic.
+  }
+
+  jQuery.prototype.toArray = function () {
+    return slice.call( this )
+  }
+
+  // The rest of jQuery's public API is attached to
+  // `jQuery.prototype` here.
+
+  exports.jQuery = jQuery
+  exports.$ = jQuery // Alias
+
+})(window)
+</pre>
+</figure>
+
+  <p>An extension of this idea was to use nested objects as a stand-in for namespace paths. This is how the <a href="//yui.github.io/yui2/" rel="external">YUI 2</a> library did things:</p>
+
+<figure><figcaption>…</figcaption>
+<pre>
+YAHOO.util.Event.addListener(/*...*/)
+</pre>
+</figure>
+
+  <h2 id="module-loading-patterns">Module loading patterns</h2>
+
+  <p>Closure-based module patterns did a good job of hiding internal module logic and data, but on their own they do not offer a solution to package management or module loading. Indeed, the normal workflow in the early years of web application development was simply to concatenate all of an application's client-side modules into a single distributable script at build-time.</p>
+
+  <p>There were, however, some noble attempts to implement dynamic, asynchronous module loading in client-side web applications. The most common workaround was to use <code>XMLHttpRequest</code> to fetch additional modules from the server on demand. The asynchronous nature of "ajax" requests meant modules could be loaded at runtime without blocking the rendering of webpages.</p>
+
+  <p>Some of the earliest, crudest solutions to this problem included <a href="//web.archive.org/web/20091215181259/http://modulesjs.com/" rel="external">modules.js</a>, which used XHR to fetch the contents of JavaScript files by their URL, the <code>eval()</code> function to parse and execute the fetched scripts, and <code>with</code> blocks to maintain each module's scope.</p>
+
+  <p>This design was soon improved, and the JavaScript community converged on <a href="//github.com/amdjs/amdjs-api" rel="external">Asynchronous Module Definition (AMD)</a>. AMD was a community-born specification for an API to dynamically load dependencies into any JavaScript file — and to do so asynchronously, if desired. AMD was designed in such as way that modules were never loaded more than once, that they were injected in the right order, and that implementations did not depend on dangerous operations like <code>eval()</code>.</p>
+
+  <p>The best known implementations of AMD were the libraries <a href="//requirejs.org/" rel="external">RequireJS</a> and <a href="//dojotoolkit.org/reference-guide/1.7/dojo/require.html" rel="external">Dojo Toolkit</a>'s <code>require()</code> function from v1.7 onwards.</p>
+
+<figure><figcaption>…</figcaption>
+<pre>
+require(["dojo/ready", "dojo/fx"], function(ready, fx) {
+  ready(function() {
+    // ...
+  })
+})
+</pre>
+</figure>
+
+  <p>AMD was particularly well suited for web browser environments, where synchronous loading of modules is often undesirable, for performance and other reasons. But AMD was not without its disadvantages. It had a pretty convoluted API — a design necessity, to circumvent the need to use the dangerous <code>eval()</code> operation — and lacked interoperability with existing module solutions. Nevertheless, for a time it was a popular solution for managing the ever-growing complexity of frontend web applications.</p>
+
+  <h2 id="commonjs">CommonJS</h2>
+
+  <p>The early <i>ad hoc</i> module patterns helped to manage the growing prevalence of JavaScript on the frontend of web applications, but they were not adequate for writing JavaScript programs to run on the server-side. The absence of language-level module systems and package management systems, as well as the lack of a standard library for interfacing with external systems such as filesystems, was holding back the JavaScript language from being useful in other runtime environments.</p>
+
+  <p>In January 2009, software engineer Kevin Dangoor <a href="//www.blueskyonmars.com/2009/01/29/what-server-side-javascript-needs/" rel="external">wrote a blog post</a> inviting others to join him in a community project to define some standard interfaces for the JavaScript language that would make it more usable in other runtime environments.</p>
+
+  <p>This grassroots standardization effort was named CommonJS (originally ServerJS). Hundreds of people collaborated on standards for package management, binary strings and buffers, character set encoding, a filesystem interface, system process arguments, socket streams, a web server gateway interface, and even a unit testing framework — basically, everything the JavaScript ecosystem needed to become useful on the server-side and elsewhere — beyond the web browser.</p>
+
+  <p>Many of the ideas developed by the CommonJS community were influential in the official standardization efforts of both ECMAScript and web browser APIs. But by far the biggest influence the group had was in how we write modular JavaScript today.</p>
+
+  <p>Within months of the CommonJS group forming, its members had started to converge on a specification for a new module system.</p>
+
+  <p><a href="//wiki.commonjs.org/wiki/Modules" rel="external">CommonJS Modules</a> was an excellent design. It was easy to update existing <i>ad hoc</i> JavaScript modules to the CommonJS format. It was relatively easy to write compilers to transpile CommonJS modules to standard ES5-compatible syntax for use in web browsers, for instance, and sure enough there was soon a proliferation of build tools like Browserify that made it easy to for application developers to adopt the CommonJS module format to organize their code.</p>
+
+  <p>Critically, JavaScript application developers did not need to concern themselves with <em>how</em> the module system worked. They needed only to learn how to write CommonJS modules (which was pretty straightforward).</p>
+
+  <p>CommonJS, though not an official JavaScript standard, was JavaScript's first "proper" module system, in the sense that its implementation details were hidden.</p>
+
+  <p>In the same year that CommonJS Modules were defined — 2009 — Ryan Dahl was working on the first release of Node (aka Node.js), a server-side JavaScript runtime environment built on Google's V8 JavaScript engine (which itself was originally developed for the Chrome web browser). Out-of-the-box, Node supported a subset of the CommonJS module specification. Over the following years, as Node became prolific, it's implementation of CommonJS modules became the <i>de facto</i> module standard for JavaScript programs – both server-side and client-side.</p>
+
+<figure><figcaption>…</figcaption>
+<pre>
+…
+</pre>
+</figure>
+
+  <p>…</p>
+
+  <p>…</p>
+
+  <p>…</p>
+
+  <p>…</p>
+
+<figure><figcaption>…</figcaption>
+<pre>
+…
+</pre>
+</figure>
+
+  <p>…</p>
+
+  <p>…</p>
+
+<figure><figcaption>…</figcaption>
+<pre>
+…
+</pre>
+</figure>
+
+  <p>…</p>
+
+  <p>…</p>
+
+  <p>…</p>
+
+  <p>…</p>
+
+<figure><figcaption>…</figcaption>
+<pre>
+…
+</pre>
+</figure>
+
+  <p>…</p>
+
+  <p>…</p>
+
+<figure><figcaption>…</figcaption>
+<pre>
+…
+</pre>
+</figure>
+
+  <p>…</p>
+
+  <p>…</p>
+
+  <p>…</p>
+
+  <p>…</p>
+
+<figure><figcaption>…</figcaption>
+<pre>
+…
+</pre>
+</figure>
+
+  <p>…</p>
+
+  <p>…</p>
+
+<figure><figcaption>…</figcaption>
+<pre>
+…
+</pre>
+</figure>
+
+  <p>…</p>
+
+  <p>…</p>
+
+<!--
+================================================================================
+TODO
+> It did not take long for there to be several compliant implementations of CommonJS module loaders, and hundreds of compatible modules that developers could easily `require()` into their JavaScript programs.
+> When the Node runtime environment came into being, the JavaScript language itself did not have a standard system for creating interoperable modules. So Node adopted the CommonJS system, a userland solution that added the non-standard `module.exports` and `require()` APIs to the JavaScript language. Thanks to the popularity of Node, CommonJS became the _de facto_ standard for JavaScript modules, for a time.
+Since CommonJS module loaders could be written for servers as well as browsers — and indeed for any other runtime environment, such as desktop applications — it meant that JavaScript programs composed of CommonJS-compliant modules could be interoperable with all these different JavaScript runtime environments. This was the start of JavaScript truly breaking free from web browsers, and growing into the ubiquitous cross-platform general-purpose programming language it is today.
+And with transcompilers like [Babel](//babeljs.io/), client-side applications could be written in CommonJS modules, too — you could target runtime environments like web browsers that did not support CommonJS modules natively. ... Front-end developers could write their apps in CJS modules, and then bundle them into single scripts using tools such as Browserify and Webpack, for use in web browsers.
+In effect, the [CommonJS](//www.commonjs.org/) APIs `require()` and `module.exports`, and its alias `exports`, became extensions to the official JavaScript language.
+```js
+const foo = require('./foo')
+const bar = function () {
+  // ...
+}
+const baz = function () {
+  // ...
+}
+module.exports = {
+  bar: bar,
+  baz: baz
+}
+```
+### UMD
+> Other popular solutions included RequireJS, which used an alternative userland module systems called AMD, distinguished by its `define()` function and asynchronous loading. And there was also UMD, which seeks to harmonise all the myriad module systems (the "U" stands for "universal").
+### ECMAScript modules
+TODO: Correctly, "modules" now refers to standard ES modules, while "scripts" refers to any JavaScript that exists externally to an ES module, eg a CommonJS file or a script that exists in the global namespaces. Ideally, there will only ever be a small amount of scripting, eg perhaps some initialisation code for an application.
+> Around the mid-2010s, the JavaScript module ecosystem was a total mess. There was AMD, UMD, CommonJS, SystemJS, and an emerging native standard that eventually became ES Modules in ES6/ES2015.
+> Thankfully, it is no longer such a headache to write modular JavaScript. Today, best practice is to write the source code for JavaScript libraries and applications in the standard ECMAScript module format. If necessary, build tools can be introduced to transcompile the source for compatibility with certain target host environments. For example, ES6 code can be transformed backwards to ES5 for compatibility with older web browsers.
+ES2015 (aka ES6) was a major upgrade to JavaScript. Among many great features, it brought a native module system to JavaScript for the first time. Finally, we had a standard system for sharing JavaScript files (modules) on a language level!
+The design of ES modules were greatly influenced by the various _ad hoc_ module solutions that preceded the standard, but in particular CommonJS. ESM was designed specifically to support easy conversion from CJS, and likewise easy transcompilation back to CJS.
+In 2015, ECMAScript 6 was published, adding syntax for language-level modules. It means JavaScript gives us a standard notation for importing and exporting modules. Modules are defined using a variety of `import` and `export` statements.
+```js
+import { foo } from './foo.js'
+const bar = function () {
+  // ...
+}
+const baz = function () {
+  // ...
+}
+export { bar, baz }
+```
+Initially, ESM modules were static and top-level only, which meant you couldn't do conditional loading, like this:
+```js
+if (baz) {
+  import { quz } from 'quz'
+}
+```
+> The advantage is that standard modules are statically analyzable. It meant that a new breed of bundling tools — Rollup, and later Webpack 2 — could analyse the files to be bundled and do optimisations such as tree-shaking, removing unused code from bundles.
+### Dynamic ES module loading
+> Dynamically imported modules are on a standardization path and are already supported natively by some web browsers. Meanwhile, SystemJS is a JavaScript library that enables the dynamic import of ES modules.
+-----
+When importing all modules on the top of a file, all modules get loaded before the rest of the file. In some cases, we only need to import a module based on a certain condition. With a dynamic import, we can import modules on demand.
+```js
+import('module').then((module) => {
+  module.default()
+  module.namedExport()
+})
+```
+Or with `async`/`await`:
+```js
+(async () => {
+  const module = await import('module')
+  module.default()
+  module.namedExport()
+})()
+```
+In the following example, the module only gets loaded, if the user clicks on the button.
+```js
+button.addEventListener('click', async () => {
+  const module = await import('./math.js')
+  module.add(1, 2)
+  module.multiply(3, 2)
+})
+```
+By dynamically importing modules, we can reduce the page load time. We only have to load, parse, and compile the code that the user really needs, when the user needs it.
+Besides being able to import modules on-demand, the `import()` function can receive an expression. It allows us to pass template literals, in order to dynamically load modules based on a given value.
+In the above example, the date.js module only gets imported if the user clicks on the Click to load dates button. The date.js module imports the third-party moment module, which only gets imported when the date.js module gets loaded. If the user didn't need to show the dates, we can avoid loading this third-party library altogether.
+Each image gets loaded after the user clicks on the Click to load image button. The images are local .png files, which get loaded based on the value of num that we pass to the string.
+```js
+const res = await import(`../assets/dog${num}.png`)
+```
+This way, we're not dependent on hard-coded module paths. It adds flexibility to the way you can import modules based on user input, data received from an external source, the result of a function, and so on.
+- **📦 [SystemJS](//github.com/systemjs/systemjs)** \
+  Allows for dynamic loading of ES-compliant modules in browsers. Also allows for dynamic module loading in older browsers that do not natively support standard ES modules, by wrapping ES modules in a userland module system called [System.register](//github.com/systemjs/systemjs/blob/main/docs/system-register.md) - ie SystemJS can be used as a polyfill for native ES modules (statically and/or dynamically loaded) in web browsers. Example:
+  ```js
+  // Static loading:
+  import myModule from 'my-module'
+  myModule.doSomething()
+  // Dynamic runtime loading:
+  System.import('my-module').then((myModule) {
+    myModule.doSomething()
+  })
+  ```
+-----
+ECMAScript 2015 modules: one of the biggest advanced in JavaScript development. Aside from the native dependency loading being great on its own, the syntax is far cleaner than RequireJS/AMD/etc.
+ES6 modules allow us to write reusable, maintainable, modular code, and in a more functional style.
+The JavaScript landscape is changing quickly, and along with it th way we work with dependencies....
+Modern JS allows us to chunk our code into separate files, and to easily integrate third party components without embedding them directly in our applications' source.
+Writing your JS code in modules helps with organisation, maintenance, testing and dependency management.
+The separation allows us to pull in various components only when we need them.
+This has dramatically changed the overall approach to JS application development. As time goes on, we are seeing fewer large frameworks that do everything under the sun, while seeing more small modules that do one thing and do it well. Example: many of us learned jQuery; it included methods for doing absolutely everything from CSS manipulation to "ajax" calls. Now, many of us are migrating to libraries like React where often we need to pull in additional packages to perform tasks like routing and HTTP requests.
+-----
+Avoid creating global variables. All userland code should be encapsulated within module or function scope. At the very least, wrap global code in a self-invoking anonymous function, like this:
+```js
+!(function() {
+  // ...
+}())
+```
+This way, not code outside of the function can get to and mutate any variables declared inside the function (even `var` declarations).
+-----
+## Module systems in Node
+When Node was first released by Ryan Dahl in 2009, JavaScript did not have a native module system. So Node adopted [CommonJS Modules](//wiki.commonjs.org/wiki/Modules) (aka CJS), a crowd-sourced specification for implementing a module system on top of the standard JavaScript language.
+Over the subsequent few years, [Ecma International](//www.ecma-international.org/), the main organisation overseeing standardisation of the JavaScript language, designed a native module system for the language. The first iteration of ECMAScript Modules (aka ES Modules, ESM, or just JavaScript modules) was standardised in ECMAScript 6th edition, which was finalised in 2015.
+It took a few more years for Node to be upgraded to support the standardised ESM module system, alongside the non-standard CJS format, which needed to be maintained for backwards-compatibility. Node's implementation of ES modules was not marked as "stable" until its [v12.22 release](//github.com/nodejs/node/releases/tag/v12.22.0) on 30 March 2021.
+But it means that today we can easily run JavaScript applications written in ES module notation directly in Node, without needing to introduce a build step or to use a runtime transcompiler like [esm](//www.npmjs.com/package/esm).
+------
+In Node, ESM files can `import` CJS files. The opposite is also true. CommonJS components can import ES modules. But because ES modules are loaded asynchronously, CJS modules must use Node's `import()` function — rather than the usual `require() function, which is a synchronous operation — to include ES modules.
+### Toggling interpreters
+So modern versions of Node (since vXX) support both legacy CJS and current ES module systems. However, CJS remains Node's default module system (for now). Without any custom configuration, all `.js` file will be interpreted by Node as CommonJS modules.
+To have Node toggle on its ESM interpreter instead, we must tell Node to handle the files as ES modules.
+> Because of the differences in how ESM and CommonJS work, Node.js runs them differently by default. This results in the runtime needing an indicator about which way you want to run your code - as ESM or as CommonJS.
+There are several ways to do this.
+> There's three different ways that this indicator could be expressed: explicitly, implicitly, and using conditional exports.
+#### Explicit toggle
+The easiest solution is to change the file extension from `.js` to `.mjs`. Node will always interpret `*.mjs` files as ES modules. If these files contain `require()` or `module.exports`, the interpreter will fail, because `require` and `modules` would not be defined within the scope of the module.
+Happily, the `.*mjs` extension is also supported in modern web browsers (as long as the files are served with the correct `Content-Type: text/javascript` header). But TypeScript and a number of development tools still do not recognise the `*.mjs` file extension, and some of them may never do.
+#### Implicit toggle
+The second option is to change the default module type for the package. This is done by adding a `type` parameter with the value `"module"` in the component's `package.json` manifest.
+```json
+{ "type": "module" }
+```
+> The `type` field applies not only to a package's entry points, but to all `.js` files within the package — ie files referenced by `import`, `import()` and `require()` expressions.
+With this in place, Node will parse all `.js` files within the package as ES rather than CommonJS modules. You can still mix-and-match the two module systems, however. You can use the `.cjs` file extension to have the CommonJS parser run on certain files. (Basically the `.mjs` and `.cjs` file extensions override the default module system for a package.) This is extremely useful for incrementally converting packages from CJS to ESM.
+Generally, this is the better option:
+- `.js` files are those with standardised module notation (ESM), while the proprietary `.cjs` file extension represents JavaScript files extended with Node's proprietary module resolution system (and therefore they are not "standard" JavaScript).
+- It minimises file changes. A single configuration line in `package.json` is used to toggle the interpreter.
+- It makes migrating a codebase from CJS to ESM easier.
+Note, `package.json` files with the `type` toggle can also be distributed throughout a codebase on a directory-by-directory basis.
+================================================================================
+-->
+
+  <aside>
+    <h2 id="related-links">Related links</h2>
+    <ul>
+      <li><a href="//arstechnica.com/information-technology/2009/12/commonjs-effort-sets-javascript-on-path-for-world-domination/" rel="external">CommonJS effort sets JavaScript on path for world domination</a>, Ars Technica (2009) – Coverage of <a href="//www.jsconf.eu/2009/2009.html" rel="external">JSConf.eu 2009</a>, where several CommonJS compliant module systems were presented for the first time, and where Ryan Dahl received a standing ovation for the <a href="//www.youtube.com/watch?v=EeYvFl7li9E&list=PL37ZVnwpeshGNXb77ObNUbvax-VQ_DWJe" rel="external">first presentation</a> of his server-side JavaScript runtime environment, Node.js. This conference represents a historical turning point in the evolution of the JavaScript ecosystem.</li>
+      <li><a href="//example.com/" rel="external">Duis laoreet elit ante</li>
+      <li><a href="//example.com/" rel="external">Morbi quis porta risus</a></li>
+    </ul>
+  </aside>
+
+</main>
