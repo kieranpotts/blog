@@ -1,0 +1,40 @@
+= Thoughts on technical leadership
+
+See also thoughts on soft skills.
+
+NOT about micro-management or command and control (aka remote control programming), or trying to do everything yourself. If you do this, you will become the bottleneck and your team will not grow.
+
+Technical leadership is primarily about equipping people to make decisions for themselves, and amplifying the performance of the team - much like the captain of a sports team, you take part, but you are primarily there to orchestrate all the other players toward a common goal.
+
+Basic human need: to feel important, to feel like you matter. This is a fundamental need that we all have. If you can help people feel important, you will be a great leader.
+
+Empathy is the most important skill for a leader. You need to be able to put yourself in the shoes of the people you are leading. You need to understand what they are going through, and what they need. This is about seeing things from alternative perspectives.
+
+The role of tech lead is very fuzzy. It changes significantly from one company to another, and from one team to another in the same organization.
+
+The tech leads tends to be the go-between the business and the technicians. Sometimes this role is separate, eg product owner.
+
+Primarily about removing barriers to progress. eg focus.
+
+Tech leads tend to be *communication hubs*, facilitating communication between different people and teams, and different disciplines
+
+From an organizational perspective, the tech lead is the person who is responsible for the technical output of the team. They are the person who is ultimately responsible for the quality of the code that is produced. Your job is to ensure the team delivers what the business needs, and to do so efficiently.
+
+Psychological safety: an environment that allows mistakes, but to do safely. It is a learning process.
+
+Impose opinions and constraints versus delegating decisions or reaching decisions through consensus. The former can more efficient (at least in the short term), but the latter is more empowering and tends to produce better outcomes in the long term. But the reality is that the balance between these two is very subjective and the appropriate emphasis varies from one situation to another.
+
+Hold strong opinions lightly! Be willing to change your mind. Don't assume you're correct. This is why consensus-based decisions are more preferable.
+
+Be a role model for behavior.
+
+The team is the primary unit of delivery, not the individual.
+
+Don't wait for fixed review cycle to give feedback. Give feedback as soon as possible. This is more effective and more efficient. "Continuos improvement".
+
+Difficult conversation: prase in public, critique in private.
+
+Code and guide the team on specific skills.
+
+Set the technical direction and standards.
+
