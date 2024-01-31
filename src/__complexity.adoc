@@ -9,6 +9,11 @@ Cognitive load and complexity → kill productivity!
 Complexity is everywhere. It's in our code, in our processes, in our tools, in our organizations. It's everywhere. And it's killing our productivity.
 
 ////
+Two types of complexity: essential and accidental.
+Need to balance the two. The more essential complexity, the lower the accidental complexity needs to be.
+////
+
+////
 https://renegadeotter.com/2023/09/10/death-by-a-thousand-microservices.html?
 ////
 

@@ -1,0 +1,537 @@
+= Requests for Comments and Decision Logs
+Kieran Potts, 31 January 2024
+:description: xxxxxxxxxxxx
+:nofooter:
+
+*In this blog post I will look at a Requests for Comments (RFC) process can generate an immutable log of past technical decisions.*
+
+////
+One of the hardest things to track during the life of a software project is the motivation behind certain decisions. A new person onboarding to a project may be baffled, infuriated, or indeed delighted by some past decision, without understanding the rationale or the consequences, the person can either blindly accept the decision or blindly change it:
+
+* Blindly accept the decision: if the decision is still valid, this will be okay. But the context in which the original decision was made may well have changed enough to justify the choice being revisited.
+
+* Blindly changing the decision: this is okay if the decision needs to be reversed, but without understanding the motivation, the value brought by the decision could be lost, eg the decision supports an NFR that has not been tested yet).
+
+Without context, teams can be afraid to change things, eg to iterate the design of the system, and such static non-evolving systems may collapse under their own weight.
+////
+
+Request for Comments (RFCs) is an industry standard method for involving the widest range of stakeholders in technical decisions. The RFC format https://www.nytimes.com/2009/04/07/opinion/07crocker.html[originated all the way back in 1969] in the ARPANET project and it remains in use today by the https://www.ietf.org/standards/rfcs/[Internet Engineering Task Force] and other standards organizations in the computer technology domain.
+
+////
+RFCs – aka design documents – are a common industry practice. They turn ideas into words.
+
+RFCs are written proposals that seek feedback and encourage discussion about technical decisions, their trade-offs and implications.
+////
+
+More recently, the RFC format has been adopted by major open source software projects, including https://github.com/reactjs/rfcs[React], https://github.com/vuejs/rfcs[Vue], https://github.com/emberjs/rfcs[Ember], https://github.com/yarnpkg/rfcs[Yarn], https://github.com/eslint/rfcs[ESLint] and https://github.com/rust-lang/rfcs[Rust]. In this space, RFCs are primarily used to discuss major design changes to core software components.
+
+But I have used RFCs successfully in commercial, closed source software projects. And I propose that RFCs can be extended to cover all types of technical decision, including but not limited to choices of:
+
+* languages, frameworks and libraries;
+* design patterns and coding conventions;
+* development tools and other automation infrastructure;
+* change management procedures including issue tracking and triage;
+* and development life cycle processes including branching-and-merging strategies and testing and release plans.
+
+////
+You SHOULD write an RFC if:
+
+* You are building something from scratch, even if it is just a new endpoint in a long-established API. Definitely if its a new application or library, or a major new software component intended for reuse.
+
+* The word "rewrite" has crossed your mind.
+
+* The design will impact more than one system... or multiple developers.
+
+* The design defines a contract between clients or systems.
+
+* You're adding a new dependency.
+
+* You're adding or replacing language or tools to the stack.
+
+* The work involves changes that will significantly affect stakeholders or project contributors.
+
+* Major architectural decisions.
+
+* Major new features, where it is beneficial to do "big design up front" to reduce potential wasteful development or rework.
+
+* Simple changes that are expected to have significant downstream impacts.
+
+* Changes that could affect guarantees of level of support, eg removing support for a target platform.
+
+* Changes that could affect mission alignment, eg by changing properties of the security model.
+
+* The work is substantial and you want to get early feedback (before you start coding) on your approach. (If you have already started coding, consider opening a draft PR against the code repo instead).
+
+Consider how new RFCs are communicated. This could be as simple as adding a channel in your ChatOps tool.
+////
+
+RFC documents are useful artifacts in their own right, but they are made more valuable still if the output of the RFC process is an _immutable_ ledger of major technical decisions – a Decision Log. The decision log become a permanent record of all architecturally-significant design choices – aka key design decisions or KDDs.
+
+I propose that the RFC process can be used to discuss, and decision logs used to record, choices that impact _how_ a system is made.
+
+Some decisions will be broad (eg "we elected to implemented a loosely-coupled monolith for MVP") while others will be more granular (eg "we have decided to use this particular ORM for database abstraction").
+
+Not everything needs to go through the RFC process. Bug fixes and functional and non-functional changes – including improvements to documentation and test coverage – can be reviewed and implemented via the normal pull/merge request workflow, and tracked via an issue/bug tracker. However, substantive functional changes, especially those that change the interface to a system or substantially change its internal behavior, these things SHOULD be put through a more rigorous process of deliberation and design. Changes that would benefit from a formal RFC pre-approval process include, but are not limited to:
+
+* A new feature that introduces a whole new API.
+* A new feature that extends the surface area of an existing API.
+* The removal of features or the deprecation of APIs that have already been shipped.
+
+////
+Architecturally-significant decisions include those that change the structure, non-functional characteristics, dependencies, interfaces, or construction techniques.
+////
+
+Changes that would _not_ typically require an RFC include:
+
+* Refactoring of source code without changes in external APIs or internal behaviors.
+* Addition or removal of notices and warnings.
+* Changes that strictly improved the quality attributes of the software (eg performance, security, portability, etc).
+
+////
+When I was ramping up the TimeTrack project, the main business stakeholder, who I was working closely with, had a _lot_ of ideas, and it was clear to me that we needed a formal process to capture, refine and prioritize those ideas, so we focused our limited development resources on the business requirements that added the most value.
+
+I decided to introduce an RFC-style process (RFC = Request for Comments). For this, we used a Git repository (all the business stakeholders were confident using this technology) and I created a simple template for drafting new business proposals and submitting those through the Pull Request system, which we used to gather feedback from all the project's stakeholders (all the business and technical stakeholders). The original idea may be refined over time, based on the feedback.
+
+The goal was to develop ideas to a sufficient amount of detail that we could make high-level estimates of the cost of implementation of each idea, and then judge the value of each idea (for the business and its customers) against the cost. This would also be balanced against the _constraints_ of the project, for example available resources and time. The RFC document would also record _alternatives_ to the proposal, and the pros and cons of each alternative.
+
+The business stakeholders would then decide which proposals to "approve" or "reject". The "approved" proposals fed the product backlog, and prioritized based on the cost-benefit analysis. Whatever the outcome of a proposal, whether it was approved or rejected, it would be merged via the PR system and become an immutable record in the Decision Log. This means we could revisit old ideas later if we wanted to, and past decisions could be changed simply by creating a new proposal and adding a new entry to the log which superseded the old one.
+
+I have used similar processes on other projects, but in other cases I have used RFCs/Decision Logs primarily for making technical decisions, rather than as a funnel for business requirements into the project. For example, on the Specsavers project, I championed a centralized technical decision log system (this time implemented in Confluence, a knowledge-base system) where anyone across multiple technical teams could propose changes to:
+
+* languages, frameworks, libraries;
+* design patterns and coding standards;
+* development tools and other automation infrastructure;
+* change management procedures including issue tracking and triage;
+* and even development life cycle processes including branching-and-merging strategies, and test-and-release plans.
+
+Decision Logs compliment Retrospectives and allow ideas to be gathered and analyzed in a more asynchronous fashion. There are multiple advantages, including:
+
+* Future developers will be able to refer to the decision log to understand the context in which past decisions were made. Technical decisions that were rejected in the past for sound reasons are less likely to be revisited again, saving time.
+* They facilitate technical standardization efforts, and help to share knowledge across distributed teams.
+* It's a more inclusive process, where everyone can contribute ideas, not just the most vocal people. People feel more involved in decision making, and more empowered to steer the technical direction of the project (not so "top-down").
+* It's a more transparent process, so everyone can see how decisions were made and why. They can also provide technical insight for the business and non-technical stakeholders.
+
+I think Decision Logs are incredibly valuable and are often overlooked in software projects.
+////
+
+== Advantages
+
+////
+The ultimate aim of the RFC process is to make better technical decisions.
+////
+
+A structured and systematic approach to technical decision-making discourages impulsive reactions to technical problems and encourages long-term solutions to be found. This is particularly important for architecturally-significant requirements that will be hard to implement and/or costly to change later.
+
+Decision Logs are a permanent record of technically-significant decisions, knowledge of which would otherwise risk being gradually lost as the original technicians roll off a project and new ones onboard. Future developers and maintainers of a software system will be able to make better decisions if they understand the reasons _why_ decisions were made in the past. It is possible, from a system's code and configuration, to reverse engineer the languages, frameworks, design patterns and databases in use. But these things do not tell you _why_ those choices were made.
+
+Decision Logs therefore fill this important, but often overlooked, niche in a project's documentation. Other forms of documentation – especially in-band materials such as READMEs, code comments, automated tests and executable specifications – tend to capture the "here and now" of the software system but not the "how we got here".
+
+Other benefits include:
+
+* Getting buy-in from all stakeholders.
+* They can facilitate technical standardization efforts.
+* They can help to share knowledge across distributed teams.
+* They provide technical insight for the business and non-technical stakeholders.
+* They reinforce the increment-and-learn feedback loop, helping teams to continuously improve their process.
+
+////
+Other advantages include:
+
+* Support autonomy.
+
+* They can help to share knowledge across distributed teams.
+
+* Support asynchronous work and decision making.
+
+* Individual contributors can be given concrete feedback on performance...
+
+* Include input from many technical stakeholders without the process becoming design-by-committee.
+
+* Allow business domain experts to have input into decisions, even when they're not directly involved in the development of the solution.
+
+* Manage risks associated with decisions.
+
+* Enable individual contributors to make decisions for systems they're responsible for.
+
+* Easier to manage distributed teams and to align cross-team decisions and standards.
+
+* Non-technical stakeholders, eg project managers, feel more engaged (less "why was I not consulted about...?").
+
+* The RFC process also can be used to generate useful metrics related to the "technical health" of a project. For example, a low participation rate (number of active participants relative to team size) may be an indication of potential problems lurking in the background.
+
+* It is an important learning mechanism. Making technical decisions that materialize into software, and experiencing the consequences of these decisions, is an important way to learn how to build software.
+
+* RFCs increase visibility of who is making decisions.
+
+* It can help to identify trust issues, where contributors are prevented from contributing to the decision-making process - ineffective collaboration.
+
+* RFCs allow us to create space for team members who wouldn't normally take the lead in technical decisions. Leads SHOULD encourage less dominant contributors to author RFCs - empowering people to take the lead, without needing a load, dominant personality.
+
+* *Inclusiveness* is important for effective team dynamics and collaboration. RFCs can help to create a culture of inclusiveness, where everyone feels like they have a voice and can contribute to the project. This is also done through an environment of psychological safety, where people feel safe to speak up and share their ideas.
+
+* RFCs are more beneficial for larger teams and projects. Although programming is an individual pursuit, software development is a social exercise. When we work as teams, every line of code we write is a decision we make on behalf of the team (or at least our future selves). Just like code reviews are a way to get feedback on code choices you've made on behalf of the group, so RFCs serve the same purpose - but for bigger technical decisions.
+
+* RFCs can also be useful on solo software projects. I can't remember what I decided two years ago!
+
+So, RFCs really support the wider engineering process - they become a cornerstone of the design process.
+////
+
+////
+Writing things down, and sharing that with others, creates accountability. And it leads to thorough decisions.
+////
+
+////
+Increased confidence: you can be more confident in changing decisions if you understand the motivation for them and the context in which the decisions were made. If the context has changes then the decision can at least be revisited.
+
+Improved planning and estimating of work.
+////
+
+////
+The type of information pushed to people in an organization shapes the culture considerably. Having an organization that pushes business plans to everyone, and inviting everyone to comment, sets a tone of trust and responsibility.
+////
+
+////
+RFCs support continuous improvement. They compliment retrospectives, and have the added benefit that the decision making process can be undertaken in a more asynchronous fashion.
+////
+
+////
+The objective is to have a permanent log of the reasons _why_ the system ended up being constructed the way it is. Future developers need to be able to understand the _context_ in which past decisions were made. What were the main constraints – eg time, budget, expertise, or quality attributes such as security and performance – that shaped the overall design of the system?
+
+It is useful also to keep permanent records of why some solutions were outright rejected for development, so future developers don't waste time revisiting the same options.
+
+You can make better decisions when you understand a project's history.
+////
+
+////
+RFCs force clarity. It is hard to write an RFC unless you're sure what problem you're trying to solve, and why. They encourage the authors to think through the problem and to articulate the pros and cons of their proposed solution.
+
+Having a written design allows other engineers to review those decisions. Reviewers may have opinions on whether the problem needs solving at all, or whether alternative, simpler approaches might work just as well (or even better). They may notice risks in the solution, flaws in the design, or edge cases that no-one has thought about.
+////
+
+////
+A formal, centralized and offline/asynchronous decision-making process is particularly beneficial in large-scale projects, composed of multiple teams, which may themselves be composed of remote individual contributors.
+////
+
+////
+RFCs is also an *inclusive* process. It is a great way to generate a sense of involvement in a project then including everyone in technical decision making. Individuals feel like they have an impact at work.
+////
+
+////
+RFCs work particularly well in organizations where decision making is collaborative and bottom-up, rather than top-down, adn where psychological safety is built-in to the culture. They are less effective in organizations where decision making is top-down and autocratic, and where psychological safety is not a priority.
+////
+
+== The decision-making process
+
+The technical decision-making process SHOULD be initialized with a proposal being put forward for comments (a "request for comments"). The final outcomes of the technical decision-making process SHOULD be recorded in Decision Logs and other artifacts such as Technical Documentation, as appropriate.
+
+To explain it another way, entries on a Decision Log are the artifacts produced from a formal decision making process that is initiated by a Request for Comments and finalized through technical decision-making meetings.
+
+A single centralized Decision Log system SHOULD be used to track the status of RFCs throughout their life cycle, from "proposed" via "accepted" or "rejected" to "implemented" and perhaps ultimately to "deprecated" or "superseded".
+
+Thus, technical decisions follow a life cycle. It is RECOMMENDED to use a single centralized system to manage the changing state of discrete technical decisions throughout their whole life cycle. Just as a centralized Task Tracker system SHOULD be used to manage the life cycle of all changes made to a software system, so a centralized Decision Log system SHOULD be used to manage the full life cycle of technical decisions.
+
+////
+One decision document describes one significant decision for a project, something that will have an impact on how the project runs thereafter, and changing the context in which future decisions will be made.
+////
+
+There SHOULD be exactly one entity in the Decision Log representing a single discrete technical decision. It is RECOMMENDED to use a taxonomy, similar to the following, to represent the changing status of each decision over time:
+
+* Draft
+* Proposed
+* Accepted
+* Rejected
+* Pending/Approved
+* Implemented/Current
+* Deprecated
+* Superseded
+
+The act of submitting a new proposal in the Decision Log system SHOULD initiate a Request for Comments on the proposal. In the RFC process, the proposal is negotiated with the project's key stakeholders. All technical stakeholders, regardless of level of expertise and experience, SHOULD be allowed to contribute to this process. Software development is, above all, a collaborative learning process and therefore, as much as practically possible, all individual contributors SHOULD be involved in architectural and other high-level technical decision-making.
+
+////
+RFCs should remain open for a minimum period of time, so everyone who wants to participate will have an opportunity to do do. The bigger the change, or the bigger its potential impact, the longer the RFC should remain open.
+////
+
+Throughout the RFC process, the original proposal MAY change, perhaps significantly. When the proposal is finalized, the original proposal document SHOULD be updated to describe the settled solution, the design rationale for it, and the relative pros and cons of all the alternative solutions that were considered.
+
+The outcome of the RFC process SHOULD be for a final proposal to be either accepted or rejected, and recorded as such in the Decision Log.
+
+Formal decision-making meetings MAY be required to resolve technically-significant problems and choices. It is important that consensus is built among all stakeholders, but ultimately technical choices should be decided by technical leads in a "benevolent dictator" role.
+
+////
+Where possible, decisions SHOULD be made with consensus from all the project's technical contributors (or at least the project's maintainers, in the case of a publicly-developed open-source system). If consensus cannot be achieved, a final decision MUST be made by an appointed "benevolent dictator", who should be someone with responsibility for overseeing the design of the software system, eg an architect or engineering lead.
+
+Resolution = a formal expression of opinion or intention made, usually after voting, by a formal organization, a legislature, a club, or other group.: Compare concurrent resolution, joint resolution.
+
+the act of resolving or determining upon an action, course of action, method, procedure, etc.
+////
+
+////
+Some ways to make a decision include gathering and sharing information, brainstorming, weighing out pros and cons, and problem-solving. The goal is unanimous agreement about a decision, and once your team gets there, you’ll need to create a plan to act on it.
+////
+
+////
+Benevolent dictator / head-surgeon...
+
+Some techniques for collective decision-making in software development are:
+
+- The Delphi technique: A method that involves collecting anonymous feedback from experts, summarizing it, and repeating the process until a consensus is reached1.
+- The devil’s advocate technique: A method that involves appointing someone to challenge the group’s assumptions and opinions, and stimulate critical thinking2.
+- The nominal group technique: A method that involves generating ideas individually, ranking them, discussing them, and voting for the best one1.
+- The SWOT analysis technique: A method that involves identifying the strengths, weaknesses, opportunities, and threats of each alternative
+////
+
+////
+Decision meetings, aka architecture review:
+
+Design decisions are formal meetings in which the decision backlog is reviewed by the senior engineers (or architects, engineering leads, etc). Objectives:
+
+* Review RFCs in-depth ("deep dive")
+* Prioritize decisions
+* Notice overlaps and incompatible initiatives.
+
+Other stakeholders may be present and can cast a vote. The aim is to find rough consensus in a decision. Broadly, we're looking for general agreement, but it doesn't have to be anonymous, and we don't have to know all the answers/risks up-front. A decision could be to simple "explore the idea further".
+
+Reviewing each other's work makes us write stronger designs and learn from each other.
+////
+
+When a proposal is accepted, it SHOULD be queued for implementation ("pending"). Tasks MAY be created in the issue tracking system, to track the implementation in the normal way. The proposal SHOULD be updated to cross-reference those tasks.
+
+Once a proposal reaches the accepted or rejected state, the contents of the proposal document SHOULD be treated as immutable. Only the status of the document MAY change thereafter. This constraint ensures that records of all past decisions are persisted indefinitely, even those that are no longer relevant. It is particularly useful to keep permanent records of why some technical decisions were rejected up front, or subsequently changed or even fully reverted, so future developers do not waste effort revisiting the same ideas and options.
+
+Therefore, to change past decisions, new decisions MUST be added to the log that extend or supersede the existing log entries. This means that Decision Logs, unlike other forms of documentation, SHOULD NOT be treated as living documents. Instead they SHOULD be treated as append-only stacks of immutable records in which the order is significant. The chronology can be made obvious by using an incremental numbering system, for example.
+
+////
+The immutable state of decision documents means they do not need to be kept up-to-date. Individual decision documents can therefore be small and concise, or long and details, as necessary to record each particular decision. Since changing a decision simply involves adding new documents to the log, rather than needing to maintain a (potentially long) history of existing documents, the decision log is more likely to be maintained well, and therefore to reflect a good degree of accuracy in the technical evolution of the software system.
+////
+
+== Format
+
+Decision Logs MAY be implemented in databases or software systems like wikis. But it is RECOMMENDED they be implemented in version control systems, preferably in the same repositories as, or repositories adjacent to, the source code and configuration of the software system under development.
+
+As with all other artifacts that support the development and maintenance of software systems, Decision Logs are best kept as close as possible to the "source of truth" of the software system, ie the source code and configuration encapsulated in the trunk of a centralized repository. Artifacts that are disconnected from the software tend to be less well maintained, becoming stale as the software system evolves over time.
+
+Whatever the format, each discrete decision SHOULD be recorded as a single entity in the storage system. If a Decision Log is implemented in the file system of a source control repository, then a single decision SHOULD be represented by a single file committed to that repository.
+
+////
+I recommend implementing RFCs/Decision Logs in a code repository, and use the normal branch-and-merge and pull/merge request process to implement changes.
+
+One potential objection to keeping the decision log under version control is that it makes them less accessible to non-technical stakeholders. However, the decision log is more likely to be maintained if it fits into the existing developer tools and workflows (eg the PR system can be used for RFCs). Writing log entries in a plain text format like Markdown can allow the documents to be easily transformed to other formats and exported for other stakeholders to consume in other ways.
+////
+
+////
+The PR system is good because it clearly signals that, once a PR is merged, then the RFC process is shut down for that decision.
+////
+
+////
+Whatever the media, RFC systems and the decision log artifacts should be as centralized as possible. We want to avoid different teams implementing different solutions to the same problem, or to similar or overlapping problems, but the solutions don't work together (ie the solutions solve local problems but don't fit together in the broader architectural picture).
+
+So, DLs should be cross-team concerns, requiring cross-team collaboration on design and standardization.
+////
+
+////
+Major technical decisions include choices of software frameworks and libraries, adoption of architectural styles and design patterns, and preference of coding standards. Each discrete decision is documented in a single Markdown file, with files ordered chronologically.
+
+----
+.
+├─ YYYYMMDD-git-for-version-control.md
+├─ YYYYMMDD-express-for-http-abstraction.md
+└─ YYYYMMDD-react-for-gui-components.md
+----
+////
+
+////
+Before work is undertaken to add, remove or change a major feature of Nirvarnia, an RFC (in the form of a Markdown file) is merged into this RFC repository. At that point the RFC is said to be active and work may begin to implement the changes, with the goal of eventual inclusion in a future release.
+
+The steps to get to that point are:
+
+1. Fork this repository. Clone your forked repository to your local machine.
+2. In your local clone of this repository, copy `TEMPLATE.md` to `proposals/feature-name.md`. The filename should be a concise but descriptive title for the proposed feature, formatted as a URL path slug (lower case ASCII letters and numbers, hyphen-delimited words).
+3. Fill in the RFC template.
+4. Commit your changes and push them to your forked repository.
+5. Submit a request to have your RFC pulled from your forked repository to this upstream repository.
+6. Wait for feedback from the project maintainers and other contributors. After discussion, if the project maintainers decide to approve your proposal, they will merge your RFC into this repository, closing the pull request.
+7. Thereafter, the project maintainers may introduce changes to your RFC, which now exists as a file in the `proposals` directory of this repository. We strive to present each RFC in a manner that will reflect the eventual design of the feature. But the subsequent development process itself is collaborative and the design may change. If it does, the project maintainers will be responsible for updating the feature specification to reflect its emergent design.
+8. When the project maintainers have finished editing the feature proposal specification, they will move the RFC file to the `accepted` directory.
+9. Next, the project maintainers will open an issue in the tracker attached to the most relevant repository. This issue will be used to track the implementation of the feature. One or more developers will be assigned to the issue, and it is they who will be responsible for implementing the required changes. The original author of the RFC is not obliged to implement the feature.
+10. When the changes are complete and merged into the main line tracks of the relevant code repository, travelling towards imminent release, the project maintainers will move the feature specification to the `implemented` directory in this repository.
+////
+
+////
+Once a proposed solution is implemented in code, the _details_ of the corresponding decision log should be treated as immutable. However, the _status_ of individual entries in the decision log can change over time, from *proposed*, via *accepted* and *implemented* (or *rejected*), and maybe eventually to *superseded* or *rejected*.
+
+Thus, past decisions can be changed, or reverted entirely, by adding new decisions to the log.
+
+Developers can propose new or alternative solutions by creating new decision log documents, and then negotiating their proposal with the rest of the team via the normal pull/merge request workflow.
+////
+
+Each entry in a Decision Log SHOULD include the following information:
+
+* *Context*: Future developers will benefit from understanding the context in which past decisions were made. Decision Logs provide a picture of the objectives and constraints — eg time, budget, expertise, or non-functional requirements such as security and performance — that shaped the overall design of a system. This is particularly useful to new developers, onboarding to a legacy project for the first time.
+
+////
+Context: This section describes the forces at play, including technological, political, social... These forces may be in tension, and should be called out as such. The language in this section SHOULD be value-neutral, ie it sets out the facts.
+////
+
+* *Decision*: Details of the final agreed solution.
+
+////
+Decision: This section describes the agreed response to the forces. This SHOULD be written in full sentences in the active voice: "We will...".
+////
+
+* *Status*: Link to related decisions and tasks, eg if deprecated or superseded, create cross-references to those decisions.
+
+* *Alternatives*: What alternative solutions were considered, and why these were ultimately rejected.
+
+* *Consequences*: The trade-offs (costs versus benefits) of the decision, as they were understood at the time the decision was finalized.
+
+////
+Consequences: This section describes the resulting context after applying the decision. All consequences SHOULD be recorded here, which may be a mix of positive, negative and neutral, or unknown outcomes. All of them will affect the project in some way in the future.
+////
+
+////
+Decision documents can be short or long, and an arbitrary cap on length should not be set. Some decisions require more detail, others less so. But as a general rule, the more compact and scannable a document, the more likely it is to be read and understood.
+
+It is RECOMMENDED to use a lightweight text markup format such as Markdown, AsciiDoc or Textile.
+////
+
+////
+Optional section:
+
+* *Approver(s)*: Design documents should name approvers who will, ultimately, sign off the design. Although comments and feedback should be solicited from as many stakeholders as possible, by naming approvers it is clear where the final "go" decision lies.
+////
+
+
+[source,markdown]
+----
+# Document title, eg "Git for version control"
+
+- Contributors: Name (email), Name (email), ...
+- Created: YYYY-MM-DD
+- Last updated: YYYY-MM-DD
+
+## Status
+
+PROPOSED | ACCEPTED | REJECTED | IMPLEMENTED | SUPERSEDED | DEPRECATED
+
+## Context
+
+Describe the primary constraints within which this decision was made. For example, was time of the essence, or were security and performance – or other such quality attributes – paramount?
+
+## Decision
+
+Describe the proposed solution.
+
+## Alternatives
+
+What other solutions were considered?
+
+## Consequences
+
+What are the consequences of this decision? For example, does this "quick fix" introduce technical debt that will require refactoring in the future?
+----
+
+The whole document should be short and written as a conversation with a future developer. This requires a good writing style, with full sentences organized into paragraphs.
+
+== Best practices
+
+////
+Low-risk RFCs can be delegated - so no needing to micromanage or dictate how all problems are solved. This is a great way to empower people to take the lead on projects.
+
+If the risk to the business was high, eg large rewrites/refactoring, or the addition of a tool to the stack... then the RFC should be reviewed by the leads. It might be rejected, or it could be cautiously approved, or it could be approved with a set of conditions, which might include learning opportunities.
+
+Technical spikes may be scheduled before a formal decision is made, to reveal more risks and unknowns.
+
+Big, risky, costly decisions – eg choosing a language that doesn't exist in the stack yet, or a tool that is not yet in the delivery pipeline – should have much up-front design, perhap even with spikes/prototypes done ahead.
+
+Visibility of how people manage the technical direction, allowing leads/managers to focus at the higher-level of managing costs and risks. So: get involved in technical decisions at the right level, delegating or diving deep as appropriate for the problem at hand.
+
+The RFC process works best when technical decisions are made within a framework. The teams need a *technical strategy* that defines the overall direction of the project, and the principles that guide the decision-making process. You need a set of *guiding principles* that guide decisions and help us to make appropriate trade-offs. For example, a principle might be to err on the side of *evergreen technology* over *bleeding edge* technology.
+
+Proposals shouldn't be seen as a request for permission but rather understood as "here's the direction we want to go, and are missing something". So even draft proposals should be collaborative documents, put forward by a whole team or a group of its members. There may be one official "champion" for a proposal, but there should always be multiple collaborators, and the team owns the final decision collectively, even if individual contributors disagree.
+
+Consider pairing less experienced folk with senior engineers as "backers", so they can provide early feedback and refinement, and to minimize surprises.
+
+Proposals do not need to be perfect. They are a starting point for discussion, and they will evolve over time. The goal is to get to a point where the team can make a decision, and then move forward with confidence.
+
+Commenting is the entire purpose of RFCs, but good practices should be followed here too. Comments work best when everyone understands they are lending their perspective rather than making arguments.
+
+Comments may be further discussed in meetings, especially where more content is needed and the design is important / critical / costly.
+
+Tech Leads should moderate the more controversial / risky proposals, and reduce their blast radius.
+
+People should be comfortable using archived documents as the foundations for new ones, and expanding on them with brief extensions.
+
+Technical proposals usually have product and business implications. Consider inviting people from other functions to provide cross-functional collaboration. Engineers learn to communicate in terms of business impact, while the rest of the organization gets to access technical decision-making (at least in read-only mode).
+
+The RFC process should be as lightweight as possible.
+
+You may wish to categorize RFCs/decisions by severity or impact. For example, user-facing changes may require a stricter approval process than purely internal architectural design matters.
+
+The RFC process SHOULD be restricted to decisions that have potential far-reaching consequences, and that project stakeholders may have an interest in. Day-to-day project activity should be handled through issues and pull requests. The RFC process does not replace this. All changes in code and configuration should still be tracked elsewhere. The RFC process may initialize new tasks, and conversely bugs and features logged in the issue tracker may trigger new RFCs to help resolve them.
+
+It's important that all the stakeholder who are impacted by a decision have a say in that decision. So changes to the design of the code base should be reviewed by the people (the developers) who will work with the code. Changes to development tools and infrastructure may also need input from the business, as they may have an impact on the cost of development and maintenance of the software.
+
+RFCS should be a formalized process to reach consensus and communicate decisions on major changes to software projects. All projects must have key stakeholders that are required to review all RFCs, and ultimately to accept, reject or postpone them.
+
+All proposals and final design documents should be stored in a single centralized repo. It should be treated as an append-only stack of immutable entries.
+
+Project labels may be used by maintainers to prioritize decisions. These can be customized to suit their preferred workflow.
+
+New RFCs are submitted via the PR system, and discussion happens in the comment thread.
+
+Rejected RFCs may still be merged. PRs may be closed without merging, but this should be done only to handle duplicates or for lower-level concerns that can be tracked through the normal issue tracking system.
+
+Proposals should begin as drafts. The maintainers can choose their own workflow here. For example, they may choose the `proposal/*` branch to make changes to it themselves.
+
+The RFC process can be lightweight or more heavyweight, as appropriate for the project.
+////
+
+== Tools
+
+////
+Choice of tooling is important to submit and manage comments, eg Google Docs allows direct edits.
+
+May also require taxonomies and full-text searches as the log gets bigger.
+
+Other things to consider:
+
+* Archiving
+* Full-text search
+* Taxonomies
+* Notifications
+* Formatting and rich-text support.
+* Voting
+* Commenting (threaded, moderation)
+* Access management (roles and permissions, read-only, etc)
+* Editing features (eg versioning and rollback)
+* Life cycle management
+* Cross-document links
+////
+
+== Conclusion
+
+How we _manage change_ in our software systems is one of the most important aspects of software development.
+
+The RFC process is a simple but effective way to manage change in a systematic and transparent way. It is a way to involve the widest range of stakeholders in technical decisions, and to generate an immutable log of past technical decisions.
+
+RFCs can be a foundational tool for change management processes.
+
+My view is that the real value of RFCs is that they deliberately add friction to the development process, but just the right amount of friction. Instead of going ahead with building, we are required to first think and _write_ about what we'll build. This has a time and place. It is appropriate for technically-significant decisions. It is not appropriate for implementation of new or changed features that fit snuggly into the existing system design.
+
+RFCs may be more appropriate for newly forming teams, and especially those balanced towards less experienced members. The lack of experience can be counter-balanced with collaborative decision-making.
+
+.Related links
+****
+* https://www.rfc-editor.org/rfc-index.html[Index of IETF RFCs] — Every IETF proposal since 1969.
+****
+
+.Further reading
+****
+* https://medium.com/juans-and-zeroes/a-thorough-team-guide-to-rfcs-8aa14f8e757c[A thorough team guide to RFCs] — Juan Pablo Buriticá (2023)
+* https://engineering.squarespace.com/blog/2019/the-power-of-yes-if[The power of "yes, if": iterating our RFC process] — Tanya Reilly, Squarespace Engineering blog (2019)
+* https://www.youtube.com/watch?v=rwfXkSjFhzc[Communicating and documenting architectural decisions (video)] — David Ayers (2019)
+* https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions[Docmenting architecture decisions] — Michael Nygard (2011)
+* https://resources.sei.cmu.edu/library/asset-view.cfm?assetID=30386[Documenting software architectures: views and beyond] — Clements _et al_ (2010)
+* https://github.blog/2020-08-13-why-write-adrs/[Why write ADRs?] — Eli Perkins, GitHub Blog (2020)
+* https://www.thoughtworks.com/radar/techniques/lightweight-architecture-decision-records[Lightweight Architecture Decision Records], Thoughtworks Technology Radar
+****
