@@ -422,5 +422,7 @@ Wait at least 24 hours before accepting an offer. If they pressure you to accept
 ****
 * https://leaddev.com/personal-development/31-smart-questions-ask-software-engineering-interview[31 smart questions to ask in a software engineering interview], Harry Guinness, LeadDev (2024)
 * https://www.youtube.com/watch?v=2Afk9KVEgpE[20 questions to ask your next employer], Dave Farley (2022)
+* https://www.youtube.com/watch?v=osnOY5zgdMI[Software developer interview advice], Dave Farley (2021)
+* https://www.youtube.com/watch?v=yFHZEGgH7Ds[The best and worst places to work for developers], Dave Farley (2021)
 * https://www.youtube.com/watch?v=cNbWmjGNZD8[Can you see the red flags of a toxic tech company?], Jayme Edwards (2024)
 ****
