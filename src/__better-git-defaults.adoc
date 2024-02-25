@@ -652,6 +652,7 @@ It is worth investing some time in this…
 * https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration[Pro Git: Customizing Git - Git configuration]
 * https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases[Pro Git: Git basics - Git aliases]
 * https://git.wiki.kernel.org/index.php/Aliases[Git Wiki: Aliases]
+* https://jvns.ca/blog/2024/02/16/popular-git-config-options/[Popular Git config options], Julia Evans (2024)
 
 The sources of some of the code examples included in this blog post are linked from my _dotfiles repository_.
 ****
