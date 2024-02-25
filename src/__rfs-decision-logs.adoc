@@ -6,6 +6,36 @@ Kieran Potts, 31 January 2024
 *In this blog post I will look at a Requests for Comments (RFC) process can generate an immutable log of past technical decisions.*
 
 ////
+In the world of agile, decisions that dictate how software architecture evolves are being made all the time. Furthermore, in an age of microservices — or even serverless nano services — these decisions may be distributed across autonomous teams, with perhaps only a little oversight from an architect responsible for the overall system design and vision.
+
+And with engineers onboarding, and others leaving, projects all the time, it's easy to lose the _context_ of why past decisions were made.
+
+Of course, there will endure artifacts such as architecture diagrams and key design decision (KDD) documents. However, these tent to provide a point-in-time snapshot and, being disconnected from the software, don't tend to be maintained alongside the evolving system. And, as with READMEs and other such in-band materials, documentation tends to capture the here-and-now, but not the "how we got here".
+
+Understanding what languages, databases, frameworks and design patterns are in use, and how the business domain is modelled, are crucial to being confident to change a system in any meaningful way. But equally important to understand is: why?
+
+What we need is a means of recording decisions in a concise format that captures individual decisions, and the context around them.
+
+We have chosen to adopt a "decision log" system, which is based on the concept of architectural decision records (ADRs).
+
+The idea is simple. Essentially, each time any decision is made of architectural important, a new entry is added to the decision log. This is simply a plain text file, committed to the same source control repository as the software system that is the subject of the decision.
+
+Decisions can be broad ("we elected to implement a loosely-coupled monolith because...") or more granular ("we have decided to use this ORM for DB abstraction because..."). The important point is that decisions, once logged, are treated as immutable documents. The overall log is append-only: new entries can be added to the end of the chronology.
+
+To aid this, documents should be numbered sequentially.
+
+We don't have a fixed template for decision logs, but each decision document should contain the following information:
+
+- **Status**: Describes the stage in the decision's lifecycle. This is the only section of a decision document that can be updated over time. The status of a decision could be pending, accepted, rejected, deprecated, superseded, etc.
+
+- **Context**: The context around the decision. What are the objectives, and what are the constraints that informed this decision? This can be a technical context, but it can also be a business/political context.
+
+- **Decision**: What is the agreed solution? And what alternatives were considered, but ultimately rejected? It is useful also to keep permanent records of why some solutions were outright rejected for development, so future developers don't waste time revisiting the same options.
+
+- **Consequences**: There will be trade-offs with any decision. These should be understood and documented.
+////
+
+////
 One of the hardest things to track during the life of a software project is the motivation behind certain decisions. A new person onboarding to a project may be baffled, infuriated, or indeed delighted by some past decision, without understanding the rationale or the consequences, the person can either blindly accept the decision or blindly change it:
 
 * Blindly accept the decision: if the decision is still valid, this will be okay. But the context in which the original decision was made may well have changed enough to justify the choice being revisited.
@@ -238,12 +268,10 @@ There SHOULD be exactly one entity in the Decision Log representing a single dis
 
 * Draft
 * Proposed
-* Accepted
 * Rejected
 * Pending/Approved
 * Implemented/Current
-* Deprecated
-* Superseded
+* Deprecated (including Superseded)
 
 The act of submitting a new proposal in the Decision Log system SHOULD initiate a Request for Comments on the proposal. In the RFC process, the proposal is negotiated with the project's key stakeholders. All technical stakeholders, regardless of level of expertise and experience, SHOULD be allowed to contribute to this process. Software development is, above all, a collaborative learning process and therefore, as much as practically possible, all individual contributors SHOULD be involved in architectural and other high-level technical decision-making.
 
