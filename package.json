@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "engines": {
+    "node": "^20.9.0",
+    "npm": "^10.1.0"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@asciidoctor/gulp-asciidoctor": "^2.2.5",
+    "browser-sync": "^2.29.3",
+    "del": "^7.1.0",
+    "gulp": "^4.0.2",
+    "netlify-cli": "^17.2.2"
+  },
+  "scripts": {
+    "dev:start": "gulp start",
+    "prod:build": "gulp build",
+    "prod:serve": "netlify dev",
+    "test": "echo \"Error: no tests specified\" && exit 1"
+  }
+}
