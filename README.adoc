@@ -1,1 +1,4 @@
-= Blog
+
+''''
+
+Copyright © 2020-present Kieran Potts, link:./LICENSE.txt[CC BY-SA 4.0]
