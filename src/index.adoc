@@ -3,3 +3,4 @@ Kieran Potts
 :description: Commentary on methods and tools for developing and maintaining \
   software systems.
 :nofooter:
+* link:./hello-world[Hello, world]
