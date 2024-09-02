@@ -3,6 +3,8 @@ Kieran Potts
 :description: Commentary on methods and tools for developing and maintaining \
   software systems.
 :nofooter:
+
+* link:./30-years-of-cybercafes[30 years of cybercafés]
 * link:./rfcs[Requests for comments]
 * link:./gmail-is-20[Gmail is 20]
 * link:./software-attributes[Software attributes]
