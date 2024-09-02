@@ -3,6 +3,7 @@ Kieran Potts
 :description: Commentary on methods and tools for developing and maintaining \
   software systems.
 :nofooter:
+* link:./gmail-is-20[Gmail is 20]
 * link:./software-attributes[Software attributes]
 * link:./rethinking-rest[Rethinking REST]
 * link:./rebranding-javascript[Should we rebrand JavaScript?]
