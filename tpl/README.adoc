@@ -1,0 +1,12 @@
+= Asciidoctor.js template converters
+
+https://docs.asciidoctor.org/asciidoctor.js/latest/extend/converter/template-converter/
+
+These functions override Asciidoctor.js's default template converters, the
+production code for which can be browsed here:
+
+https://www.npmjs.com/package/@asciidoctor/core?activeTab=code
+
+Browse to `dist/node/asciidoctor.js` and find the `$convert_[type]` functions,
+eg. `$convert_ulist`. The production code is compiled from source code written
+in Ruby.
