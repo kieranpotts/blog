@@ -3,6 +3,8 @@
 # https://docs.netlify.com/routing/redirects/
 # ==============================================================================
 
+/blog                        /                       301
+/contact                     /                       301
 
 # Show 404 for unmatching routes.
 /*                           /404.html               404
