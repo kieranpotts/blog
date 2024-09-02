@@ -1,0 +1,205 @@
+= Software attributes
+Kieran Potts, 4 January 2024
+:description: A mental model for thinking about the different attributes of a \
+software system: it's functional and non-functional requirements, and it's \
+quality.
+:nofooter:
+
+:desc-attributes: This diagram represents the concerns of software development. There is a single horizontal line with the label 'Features' above the line and 'Design' below the line. There are two boxes above the line, labelled 'Operations' and 'Constraints'. Below the line is a single box labelled 'Quality'.
+
+This posts describes a mental model I use for thinking about the different
+attributes of a software system, both its features and its qualities.
+
+When I think about the requirements of a software system, I have an image in my
+head that looks something like this:
+
+----
+┌────────────────┐  ┌─────────────────┐
+│   Operations   │  │   Constraints   │   ← Features
+└────────────────┘  └─────────────────┘
+┌─────────────────────────────────────┐
+│               Quality               │   ← Design
+└─────────────────────────────────────┘
+----
+
+Let me explain.
+
+== Primary concerns
+
+When we're developing a software system, we're concerned about two aspects of it:
+
+* The *correctness* of the system.
+* The level of *quality* to which it is made.
+
+I'll deal with each of these in turn.
+
+== Correctness
+
+In this mental model, *correctness* is a measure of whether a system is fit for
+purpose. A system is said to be correct if it meets both the functional and
+non-functional requirements of the organization that owns it and the people that
+use it.
+
+* Functional requirements (FRs) define the *operations* of the system, ie. _what_
+it does.
+* Non-functional requirements (NFRs) define the *constraints* within which the
+system must operate, ie. _how_ well it works.
+
+For example, a functional requirement may be that a system allows users to
+search for a product  by its stock keeping unit (SKU) code, and a non-functional
+requirement may be that it returns search results in less than one second while
+supporting up to 1000 concurrent searches.
+
+The combination of operations (defined as FRs) and their constraints (defined as
+ NFRs) make up the *features* of the software system.
+
+Features – everything on the top row in the diagram – are of concern to the
+organization that owns the software system and/or the people who use it.
+Features are defined in a system's requirements specification, preferably in the
+form of measurable acceptance criteria.
+
+A software solution either meets its acceptance criteria or it doesn't. It is
+either correct or incorrect.
+
+== Quality
+
+In this mental model, *quality* refers to the internal design of the system.
+How well a software solution is made determines how easily it can be changed,
+debugged, tested, deployed, and so on.
+
+While the features of a software system are important to the business people,
+its internal quality attributes – the bottom row in the diagram – are primarily
+of concern to the people who develop, maintain, and operate it – the technical
+people.
+
+Quality is a much more subjective matter. It is not a binary property, like
+correctness. A software system can be made to a higher or lower quality, but it
+is never possible to say whether the design is "correct" or "incorrect".
+
+Different principles of good software design may need to be traded off against
+one another. And anyway, what is "good" design is a matter of opinion. Computer
+programmers on the same team will often have differing opinions on what the
+optimal design for their solution should be.
+
+For these reasons, the quality attributes of software are not easily measurable.
+Metrics such as cyclometric complexity can alert us to code smells, but those
+are not the same things as anti-patterns. Code smells should always be evaluated
+via more qualitative assessments of the code.
+
+== Alternative models
+
+There are other ways to think about the various attributes of a software system.
+
+The concept of "features" is understood in different ways. Commonly, features
+are understood to mean the functions of the system, what it does, distinct from
+NFRs for performance, security, reliability, and so on.
+
+But I prefer to think of features as being the fusion of _all_ the
+externally-facing attributes, anything that is meaningful to a system's users.
+The users care about what the system does, but they also
+care about how well it does it – how reliable and available it is, how secure
+their data is in the system, and how easy it is to use.
+
+People care about features.
+
+The concept of "quality" is even more nebulous. It is not unusual for people to
+think of quality as a single attribute, a binary property determined by whether
+the software works or not. In practice, the quality of a software system is
+determined by many factors, and different stakeholders will have different
+perspectives on which factors are important.
+
+Personally, I have found it useful to think about software quality as a fairly
+narrowly-scoped subset of attributes that are primarily of concern to the
+developers and operators of the system, separate from the things the users
+care about. These internal qualities are formed from the way the code is
+written and organized, the way data is structured and distributed, and how the
+system is deployed and operated in production.
+
+Supporting artifacts such as technical documentation and automated test scripts
+also contribute to the ease with which a software solution can be developed and
+operated over the long term. These materials contribute to the quality of the
+solution, even if they are not directly part of the software's code and
+configuration.
+
+== Quality attributes versus NFRs
+
+In my mind, non-functional requirements are distinct from quality attributes.
+But some software attributes span both categories.
+
+Consider security. A system may have an NFR that sensitive data be encrypted in
+transit. The categories of data deemed to be sensitive would, normally, be
+agreed with the product owner. But it should not be necessary to have NFRs covering
+the validation and sanitizing of user input. It's just good coding standards to
+protect software services from SQL injection and other common attack vectors.
+
+This example demonstrates that the boundary between internally-facing quality
+attributes and externally-facing operational constraints can be a little fuzzy.
+One way to think about the partition is between runtime qualities and static
+qualities. Qualities that are observable at runtime, like performance and
+accessibility, should – aa a general rule – be treated as operational constraints
+and specified as NFRs. Qualities that are embedded in the static structure of
+the code and configuration of a system, such as testability and scalability,
+should be the sole responsibility of the technical people.
+
+An alternative guiding principle is that if a design choice is relevant to the
+owner or users of a system, it should be included in the system's specification.
+For example, I would specify any solutions implemented to mitigate the risks of
+denial of service attacks, since such solutions will show up in the system's
+behavior. Rate limiting, for example, has an impact on users.
+
+Some objectives such as operability and supportability are difficult to specify
+in measurable ways. But if they are relevant to users and non-technical
+stakeholders, such objectives should be specified, even if only in vague terms.
+
+If in doubt, specify quality requirements, even if the acceptance criteria are
+somewhat generic!
+
+== Benefits of this model
+
+In my opinion, the best thing about this mental model is that the division of
+responsibilities between the business people and the technical people is clear:
+
+* The feature attributes at the top are the concern of the business people.
+* The design attributes at the bottom are the responsibility of the technical
+people.
+
+----
+┌────────────────┐  ┌─────────────────┐
+│   Operations   │  │   Constraints   │   ← Features
+└────────────────┘  └─────────────────┘
+┌─────────────────────────────────────┐
+│               Quality               │   ← Design
+└─────────────────────────────────────┘
+----
+
+This mental map shows the design attributes as providing the foundation on which
+features are built. If a system is designed to a high quality, it will be
+relatively easy to change the system's features, compared to systems designed
+to a lower quality.
+
+For example, it will be easier to implement security protocols in a system
+designed with a clear layering of concerns, such that UI code is decoupled from
+business logic, and business logic is decoupled from data access, and so on.
+Different security protocols can be easily implemented in the relevant layers of
+the system. Ditto for performance optimizations.
+
+And, of course, it is always easier to extend or make changes to specific areas
+of functionality if a system's design makes rational use of modularity and
+encapsulation.
+
+Choices made in the design of a system will have an impact on the features it
+can support. For example, non-functional requirements may be traded off against
+one another. A system's design may be optimized for security and reliability,
+but some design decisions made within those constraints may have come at the
+expense of some measures of performance.
+
+So, ultimately, the internal quality attributes of a software system _do_ have
+a direct impact on its external features, especially over the long term.
+
+I am strongly of the opinion that good outcomes from software projects depend
+on technical people being given sufficient autonomy to make design choices on
+behalf of the software's owners and users. Only the technical people have the
+expertise do make these choices. This mental model can be used to help explain
+to non-technical stakeholders why this is so important. Because, in the end,
+those foundational design choices _do_ determine what features are deliverable
+on top.
