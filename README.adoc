@@ -1,4 +1,4 @@
-= Blog 🔒 image:https://api.netlify.com/api/v1/badges/1e156eb1-fec5-465d-9084-59ebebb21e96/deploy-status[Netlify Status]
+= Blog image:https://api.netlify.com/api/v1/badges/1e156eb1-fec5-465d-9084-59ebebb21e96/deploy-status[Netlify Status]
 :toc:
 :toc-placement: preamble
 
