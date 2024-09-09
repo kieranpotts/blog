@@ -2,6 +2,7 @@
 Kieran Potts, 24 May 2021
 :description: What's wrong with the term "REST API", and what should we use \
   instead?
+:docinfo: shared
 :nofooter:
 
 :link-thesis:          https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm

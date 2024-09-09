@@ -1,6 +1,7 @@
 = Should we rebrand JavaScript?
 Kieran Potts, 14 October 2019
 :description: Should we rebrand JavaScript? And if we did, what would we call it?
+:docinfo: shared
 :nofooter:
 
 :link-mdn:          https://developer.mozilla.org/en-US/docs/Web/JavaScript

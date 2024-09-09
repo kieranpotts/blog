@@ -1,7 +1,8 @@
 = Hello, world
 Kieran Potts, 5 August 2019
 :description: Welcome to my new blog, an exploration of the state of the \
-software industry.
+  software industry.
+:docinfo: shared
 :nofooter:
 
 :link-nato-report:  http://homepages.cs.ncl.ac.uk/brian.randell/NATO/NATOReports/index.html

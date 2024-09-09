@@ -3,6 +3,7 @@ Kieran Potts, 10 April 2024
 :description: Requests for Comments (RFCs) are strikingly underused in \
   commercial software delivery. Here's why you should encourage your team to \
   take up this mighty tool.
+:docinfo: shared
 :nofooter:
 
 :link-nytimes:          https://www.nytimes.com/2009/04/07/opinion/07crocker.html

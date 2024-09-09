@@ -1,8 +1,9 @@
-= Software attributes
+= Mental models: software attributes
 Kieran Potts, 4 January 2024
 :description: A mental model for thinking about the different attributes of a \
-software system: it's functional and non-functional requirements, and it's \
-quality.
+  software system: it's functional and non-functional requirements, and it's \
+  quality.
+:docinfo: shared
 :nofooter:
 
 :desc-attributes: This diagram represents the concerns of software development. There is a single horizontal line with the label 'Features' above the line and 'Design' below the line. There are two boxes above the line, labelled 'Operations' and 'Constraints'. Below the line is a single box labelled 'Quality'.
