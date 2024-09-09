@@ -1,6 +1,7 @@
 = Gmail is 20
 Kieran Potts, 1 April 2024
 :description: Gmail marks the start of the era of web applications. Here's why.
+:docinfo: shared
 :nofooter:
 
 :link-ajax:       https://web.archive.org/web/20050222032831/http://www.adaptivepath.com/publications/essays/archives/000385.php

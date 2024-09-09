@@ -1,4 +1,5 @@
 = Not found
+:docinfo: shared
 :nofooter:
 
 Sorry, the content you're looking for has been deleted or moved elsewhere, or it never

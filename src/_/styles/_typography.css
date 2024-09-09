@@ -188,7 +188,8 @@ hr {
   }
 }
 
-small {
+small,
+.small {
   color: var(--color\=text\|light);
 }
 

@@ -2,6 +2,7 @@
 Kieran Potts, 1 September 2024
 :description: Cyberia, thought to be the world's first commercially successful \
   internet café, opened in London on 1 September 1994.
+:docinfo: shared
 :nofooter:
 
 :link-history-hour:   https://www.bbc.co.uk/sounds/play/w3ct4w6c

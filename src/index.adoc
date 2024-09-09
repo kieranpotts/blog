@@ -1,13 +1,34 @@
-= Making software – some thoughts
+= Making software, some thoughts
 Kieran Potts
 :description: Commentary on methods and tools for developing and maintaining \
   software systems.
+:docinfo: shared
 :nofooter:
 
-* link:./30-years-of-cybercafes[30 years of cybercafés]
-* link:./rfcs[Requests for comments]
-* link:./gmail-is-20[Gmail is 20]
-* link:./software-attributes[Software attributes]
-* link:./rethinking-rest[Rethinking REST]
-* link:./rebranding-javascript[Should we rebrand JavaScript?]
-* link:./hello-world[Hello, world]
+I'm a UK-based software developer and former technology journalist. I
+occasionally write about methods and tools for developing and maintaining
+software systems. You can subscribe to updates via link:/feeds/rss.xml[RSS],
+link:/feeds/atom.xml[Atom], or
+link:/feeds/feed.json[JSON Feed], or follow me on
+link:https://www.linkedin.com/in/kieranpotts/[LinkedIn].
+
+* link:./30-years-of-cybercafes[30 years of cybercafés] +
+  [.small]#1 September 2024#
+
+* link:./rfcs[Requests for comments] +
+  [.small]#10 April 2024#
+
+* link:./gmail-is-20[Gmail is 20] +
+  [.small]#1 April 2024#
+
+* link:./software-attributes[Mental models: software attributes] +
+  [.small]#4 January 2024#
+
+* link:./rethinking-rest[Rethinking REST] +
+  [.small]#24 May 2021#
+
+* link:./rebranding-javascript[Should we rebrand JavaScript?] +
+  [.small]#14 October 2019#
+
+* link:./hello-world[Hello, world] +
+  [.small]#5 August 2019#
