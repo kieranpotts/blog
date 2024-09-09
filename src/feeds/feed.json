@@ -14,49 +14,49 @@
       "id": "https://kieranpotts.com/30-years-of-cybercafes",
       "url": "https://kieranpotts.com/30-years-of-cybercafes",
       "title": "30 years of cybercafés",
-      "content": "Cyberia, thought to be the world's first commercially successful internet café, opened in London on 1 September 1994.",
+      "content_text": "Cyberia, thought to be the world's first commercially successful internet café, opened in London on 1 September 1994.",
       "date_published": "2024-09-01T00:00:00Z"
     },
     {
       "id": "https://kieranpotts.com/rfcs",
       "url": "https://kieranpotts.com/rfcs",
       "title": "Requests for comments",
-      "content": "Requests for Comments (RFCs) are strikingly underused in commercial software delivery. Here's why you should encourage your team to take up this mighty tool.",
+      "content_text": "Requests for Comments (RFCs) are strikingly underused in commercial software delivery. Here's why you should encourage your team to take up this mighty tool.",
       "date_published": "2024-04-10T00:00:00Z"
     },
     {
       "id": "https://kieranpotts.com/gmail-is-20",
       "url": "https://kieranpotts.com/gmail-is-20",
       "title": "Gmail is 20",
-      "content": "Gmail marks the start of the era of web applications. Here's why.",
+      "content_text": "Gmail marks the start of the era of web applications. Here's why.",
       "date_published": "2024-04-01T00:00:00Z"
     },
     {
       "id": "https://kieranpotts.com/software-attributes",
       "url": "https://kieranpotts.com/software-attributes",
       "title": "Mental models: software attributes",
-      "content": "A mental model for thinking about the different attributes of a software system: it's functional and non-functional requirements, and it's quality.",
+      "content_text": "A mental model for thinking about the different attributes of a software system: it's functional and non-functional requirements, and it's quality.",
       "date_published": "2024-01-04T00:00:00Z"
     },
     {
       "id": "https://kieranpotts.com/rethinking-rest",
       "url": "https://kieranpotts.com/rethinking-rest",
       "title": "Rethinking REST",
-      "content": "What's wrong with the term 'REST API', and what should we use instead?",
+      "content_text": "What's wrong with the term 'REST API', and what should we use instead?",
       "date_published": "2021-05-24T00:00:00Z"
     },
     {
       "id": "https://kieranpotts.com/rebranding-javascript",
       "url": "https://kieranpotts.com/rebranding-javascript",
       "title": "Should we rebrand JavaScript?",
-      "content": "Should we rebrand JavaScript? And if we did, what would we call it?",
+      "content_text": "Should we rebrand JavaScript? And if we did, what would we call it?",
       "date_published": "2019-10-14T00:00:00Z"
     },
     {
       "id": "https://kieranpotts.com/hello-world",
       "url": "https://kieranpotts.com/hello-world",
       "title": "Hello, world",
-      "content": "Welcome to my new blog, an exploration of the state of the software industry.",
+      "content_text": "Welcome to my new blog, an exploration of the state of the software industry.",
       "date_published": "2019-08-05T00:00:00Z"
     }
 
