@@ -1,0 +1,12 @@
+= Continuous adaptation
+
+Software development is broadly two activities:
+
+* Implementing functional and non-functional requirements in software
+
+* Getting better at how we do that.
+
+We talk about "continuous improvement", but really we need to focus on
+constantly adapting our processes and our tools to changing circumstances:
+the changing needs of the business, changing requirements, changing
+technologies, changing teams…
