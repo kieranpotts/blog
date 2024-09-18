@@ -42,6 +42,15 @@ Cognitive dissonance: when something is popular, its definition becomes
 diluted and it becomes a buzzword. Martin Fowler called this semantic
 diffusion.
 
+''''
+
+I think all of us want to do the right thing and do good work to the latest
+standards. The way we often do that is by looking to the people who we perceive
+to be setting the industry's standards (eg. Netflix and microservices). Because
+we all have too much to do and we have too much cognitive load, and perhaps
+because we're a bit lazy or non-confident in our own abilities, we just copy what
+others do.
+
 ////
 
 .Related links
