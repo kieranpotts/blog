@@ -1,0 +1,24 @@
+= Tactical versus strategic processes
+
+////
+
+Thoughts on the difference between tactical and strategic processes.
+
+Tactical processes are those that are focused on the short term. They are the
+processes that are used to get things done on a day-to-day basis, or to
+hit the sprint goal.
+
+Strategic processes are those that are focused on the long term. They are the
+processes that are used to set the direction of the organization, or to
+determine the long-term goals of the organization.
+
+Example: do the architects solve technical problems (tactical) or do they set
+out principles and constraints within which the team can operate (strategic)?
+
+The shape of a software system will be determined by the relative emphasis
+on tactical versus strategic design.
+
+A system may be technically excellent, but if the strategic design is poor
+it will likely end up being expensive to maintain and evolve.
+
+////
