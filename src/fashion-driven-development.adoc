@@ -1,0 +1,45 @@
+= Fashion-driven development
+
+////
+
+Time and time again we see this sort of superficial, thoughtless adoption of
+new technologies and processes.
+
+The software industry is particularly prone to this sort of fashion-led
+development. We see it in the adoption of new programming languages, new
+frameworks, new methodologies, and new tools. We see it in the adoption of
+microservices, serverless, and containers. We see it in the adoption of
+agile, Scrum, and DevOps.
+
+It feels like working in the fashion industry. Maybe this is a perfectly
+human thing to do. Maybe it's a way of signaling that we are up-to-date
+and relevant. Maybe it's a way of signaling that we are smart and capable.
+
+But it's also a way of avoiding the hard work of thinking for ourselves.
+It's a way of avoiding the hard work of understanding the problem and
+coming up with a solution that is appropriate for that problem.
+
+''''
+
+Software is so driven by trends. It is so fashion-driven. It was always thus,
+but perhaps this has become more acute in the modern era of social media and
+ideas that spread so fast.
+
+IT folk like to think of themselves as super rational and we see things in
+terms of logic and reason, and abstract concepts. But we are just as
+susceptible to the whims of fashion as anyone else. The reality is that the
+IT industry – software, specifically – is wildly fashion-driven.
+
+Cognitive dissonance: when something is popular, its definition becomes
+diluted and it becomes a buzzword. Martin Fowler called this semantic
+diffusion.
+
+////
+
+.Related links
+****
+
+* https://softwarecrisis.dev/letters/tech-is-a-pop-culture/[Tech companies are irrational pop cultures],
+  Baldur Bjarnason, Out of the Software Crisis, 2023
+
+****
