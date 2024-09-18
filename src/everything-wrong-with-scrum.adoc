@@ -1,0 +1,39 @@
+= Everything wrong with Scrum
+
+
+
+== What Scrum misses
+
+=== High-performing tams
+
+////
+
+Scrum has nothing to say about high-performing teams, which is all about
+developing good habits that help the teams to work together effectively and
+to achieve long-term goals.
+
+Scrum's incentive structures are short-term.
+
+And developers, like everyone, are very good at following incentive structures.
+And if the incentive structure is to deliver features as quickly as possible,
+then that's what we will do.
+
+Communication is difficult, problem solving is difficult - these things are
+seen as overheads and distractions from churning out code. But these are the
+things that make high-performing teams over the long-term, and increase the
+chances of successful software delivery.
+
+Perhaps we've reinforced the stereotype that developers are introverted and
+like to work alone on their own coding challenges, wearing hoodies and
+headphones. But this is not the reality of software development in the
+commercial world. Software _engineering_ is fundamentally a social activity.
+
+So forming high-performing teams is all about team work, which is all about the
+dynamics of the team and the soft skills of individuals within the team.
+
+Scrum has nothing to say about this. Scrum is only a process model, and way
+of organizing work into units of time. And many of the ideas in Scrum are
+good ideas in this regard. But its not enough. This is not the essence of
+software development.
+
+////
