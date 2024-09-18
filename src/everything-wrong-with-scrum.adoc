@@ -10,7 +10,20 @@
 
 ////
 
-== What Scrum misses
+== What Scrum gets wrong
+
+////
+
+The only universal truth ever said about software development is that there
+are no silver bullets.
+
+Scrum, too, is not a silver bullet. Even it were a good fit for your team,
+Scrum would need to be augmented with other methods and tools to be successful.
+
+Nevertheless, Scrum creates conditions that makes some of those other
+requisites more difficult to achieve.
+
+////
 
 === Continuous refactoring
 
@@ -94,4 +107,144 @@ messy system. It can make sense to do some big-design up front in vertical slice
 for example designing your data model and subdomains. This work should not be
 iterative, because it _is_ difficult/expensive to change later on.
 
-////s
+////
+
+=== The human side of enterprise
+
+For me, the biggest drawback of Scrum is that it is from the command-and-control
+school of project management. Software development thrives under self-organized
+teams.
+
+The Human Side of Enterprise by Douglas McGregor, originally published in 1960,
+is widely regarded as classic book on organizational management. In this book,
+McGregor describes two types of management styles: Theory X and Theory Y.
+Theory X is the traditional command-and-control style of management. Theory Y is
+the more modern, self-organized style of management.
+
+This is not new. This division of management styles has been around for a long
+as industry has existed. Here's just one example::
+
+In the 1920s, across the United States, labour relations were rough. There had
+been tens of thousands of strikes across the country in the preceding decades.
+Strikes in oil, construction, steel, coal. Some ended peacefully, but many did
+not. Business owners hired strike breakers – often, armed thugs – to try to
+break the strikes. There were many violent confrontations, shootings and
+arbitrary mass arrests.
+
+The underlying issue was one of fairness.
+
+The Pullman strike was a nationwide railroad strike in the United States in the
+summer of 1894. Up until that year, George S Pullman was revered in high circles
+across America for building one of the nations largest corporations, The Pullman
+Company, which dominated the market for luxury railroad cars. It made Pullman
+one of the wealthiest men in the United States.
+
+Pullman had also created an entire city for his employees. On 4,000 acres of
+land a few miles south of Chicago. His publicists said he'd done this out of
+benevolence, but in reality it was all designed to keep control over his
+workforce. The town was a model of paternalism. Pullman owned everything in the
+town, including the houses, the stores, the churches, the schools and parks, and
+the utilities. No one could own properties in Pullman town, they could only
+rent them, and there was only one landlord: Pullman. And food could only be
+bought at Pullman stores, and water and gas from Pullman's company – all at
+high markups. No newspapers were allowed, nor public speeches. When Pullman
+didn't like the theology of the local church, he had it closed down.
+
+In 1893, an economic panic began to spread across the country. There were runs
+on banks, and industrial production fell significantly. Since there was less
+traffic on the railways, Pullman's own sales began to suffer. George Pullman
+realized he had to make some savings. Instead of cutting profits, he cut wages –
+by a third – but keep rents and food prices the same. Thus, it was the workers,
+not the business owners, who took the financial hit.
+
+Pullman didn't need the goodwill of his employees, because he controlled every
+aspect of their lives.
+
+But for the workers this was, finally, a step too far. The factory hands went
+on strike, and the nationwide Railway Union got on their side. All rail traffic
+out of Chicago stopped. Within a few days, over 100,000 rail workers nationwide
+stopped work as well. It was the largest strike ever to have happened in the
+United States. And in this era, before lorries and airplanes, the railway
+strikes almost closed down the country's economy.
+
+A couple of decades later, Paul Starretts remembered the impact of the Pullman
+strike, and the consequences of harsh labor practices. He founded his
+construction company with his brothers with the view that his workers would be
+treated fairly, not as slaves.
+
+In 1928, Starrett was awarded the contract to build the Empire State Building.
+If everything went according to plan, this will be the tallest building in the
+world. But he had just 13 months to deliver a project that would normally take
+three to four years. He was concerned about the tight schedule and the high risk
+of industrial action. There were big loans to be paid off, and penalty clauses
+for late delivery. It was a lot of pressure.
+
+Still decades later from the Pullman strike, the steel, coal and construction
+industries were rough places to work. The solution was to squash unions and
+squeeze the workers, keeping them poor.
+
+But Starrett took a different approach. He decided to introduce what was called
+efficiency wages. The idea is that if you pay more and treat your workers better,
+then you'll get better and more motivated staff, and better outcomes. If he was
+going to get this project delivered on time, he _needed_ motivated staff.
+
+There would be at least one restaurant inside the structure as it was getting
+started, and subsidized food stalls every few floors higher up. Starretts hired
+dedicated safety staff to keep safety barriers up-to-date. And when the wind
+was too strong, everyone could take the day off – on full pay.
+
+And full pay was twice what it was at other construction sites around New York
+at that time.
+
+On Starrett's building site, it _did_ pay to put in an honest day's work.
+Reciprocity, the idea at the heart of efficiency wages, began to flourish.
+Everyone was with Starrett, not against him.
+
+The first positive result was simple efficiency. When foremen didn't fudge their
+numbers - hiring 90 people, claiming for 100, and pocketing the difference for
+themselves – you had more workers on site. And when inventory didn't get pilfered
+and stayed on site, no one was waiting around for the tools and materials they
+needed. Even better, was the creativity. If you hate your boss, you're going to
+be sullen and resentful. But if you know you're trusted and treated with respect...
+
+On other construction sites, bricks were stacked in wheelbarrows and then pushed
+along wobbly wooden gangplanks to where they were needed. Workers on Starrett's
+site came up with a creative solution. They suggested building a miniature
+railway line to feed bricks into the building, and then smaller railways on
+higher floors. This innovation sped up construction considerably.
+
+Building sites also tended to have high turnover rates of workers. As a result,
+they incurred hefty retraining costs. Not on Starrett's site – not on those
+wages, and not with the respect they felt from their employers.
+
+At its peak, the Starrett's building was rising four floors each week, and 500
+trucks were arriving at the site with materials each day.
+
+The Empire State Building was completed in 13 months, and it was the tallest
+building in the world, despite fierce competition from the Chrysler Building,
+which was also under construction at the same time. The unprecedented speed
+of construction was due to the efficiency wages, and the respect and trust
+that Starrett had for his workers. This was something that Pullman's resentful
+workers would never have pushed to succeed at. The good wages and conditions,
+mixed with sensible auditing and oversight, had created a virtuous circle of
+energetic work teams, less cheating, far greater innovation and ability to
+adapt to changing conditions.
+
+Source: David Bodanis' excellent book The Art of Fairness: The Power of Decency
+in a World Turned Mean.
+
+////
+
+The human side of enterprise is more important now than ever before. The
+developed world's knowledge-driven, service-led economies are increasingly
+dependent on the creativity and innovation of their workforces, rather than
+the brute force of their manufacturing capabilities.
+
+Scrum, in my view, is Theory X. It is a command-and-control style of management.
+It is designed to be implemented by managers, and imposed on teams. It is not
+truly agile in the sense that the teams do not have the autonomy to deviate
+from the defined process.
+
+Scrum is at odds with modern management styles and practices.
+
+////
