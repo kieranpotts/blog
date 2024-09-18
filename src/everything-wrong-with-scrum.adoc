@@ -2,7 +2,49 @@
 
 
 
+== What Scrum gets right
+
+////
+
+* Building regular customer feedback into the process (sprint review).
+
+////
+
 == What Scrum misses
+
+=== Continuous refactoring
+
+////
+
+Scrum tends to be product-driven. For example, continuous refactoring is not
+rewarded, because it doesn't immediately deliver value to the customer.
+Instead, technical concerns such as refactoring and maintenance need to compete
+with feature development for time and resources.
+
+////
+
+=== Built-in quality
+
+////
+
+People have this perception that agile is all about cutting corners to get
+things done quickly - but this was never the intention of the authors of the
+agile manifesto. The intention was to deliver high-quality software at a
+_sustainable pace_ over the long term, not as quickly as possible in the short
+term. This requires investing in the _quality_ of the product as much as the
+quantity of its features.
+
+Scrum doesn't have anything to say about built-in quality. It's all about
+delivering features as quickly as possible. But if we don't have built-in
+quality, then we will end up with a system that is difficult to maintain and
+evolve.
+
+This is a false economy, because it will slow us down in the long run.
+
+Lean Engineering and Extreme Programming have a lot to say about built-in
+quality, but these practices are not part of Scrum.
+
+////
 
 === High-performing tams
 
@@ -37,3 +79,19 @@ good ideas in this regard. But its not enough. This is not the essence of
 software development.
 
 ////
+
+=== Waterfall process
+
+////
+
+Big design up front
+UAT
+
+We do need some waterfall-esque processes from time-to-time.
+
+If we did everything in thin vertical slices, we could end up with a pretty
+messy system. It can make sense to do some big-design up front in vertical slices,
+for example designing your data model and subdomains. This work should not be
+iterative, because it _is_ difficult/expensive to change later on.
+
+////s
