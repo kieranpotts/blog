@@ -21,4 +21,14 @@ on tactical versus strategic design.
 A system may be technically excellent, but if the strategic design is poor
 it will likely end up being expensive to maintain and evolve.
 
+''''
+
+Processes need to differ between strategic and tactical work. For example, the
+modern Scrum model is probably perfectly adequate (if not optimal) for most
+tactical work in many software projects, but it is surely sub-optimal for more
+strategic work. Scrum is a tactical process, not a strategic one. It is
+designed to optimize short-term software delivery rather than to optimize the
+long-term sustainability of the software and the process. By definition: short
+sprints of 2-4 weeks have that specific goal.
+
 ////
