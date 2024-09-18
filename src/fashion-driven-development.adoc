@@ -25,6 +25,14 @@ Software is so driven by trends. It is so fashion-driven. It was always thus,
 but perhaps this has become more acute in the modern era of social media and
 ideas that spread so fast.
 
+Software development ought to be problem-driven, not fashion-driven. We
+should be looking at the problem we are trying to solve, and then coming up
+with a solution that is appropriate for that problem. And we should be looking
+at the constraints we are working under, and then coming up with a solution that
+is appropriate for those constraints. Not all organizations have the need, or
+the resources, to develop distributed systems that are capable of growing to
+Netflix-scale.
+
 IT folk like to think of themselves as super rational and we see things in
 terms of logic and reason, and abstract concepts. But we are just as
 susceptible to the whims of fashion as anyone else. The reality is that the
