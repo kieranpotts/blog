@@ -32,5 +32,8 @@ or follow me on link:https://www.linkedin.com/in/kieranpotts/[LinkedIn].
 * link:./rebranding-javascript[Should we rebrand JavaScript?] +
   [.small]#14 October 2019#
 
+* link:./centos-vs-ubuntu[CentOS vs Ubuntu] +
+  [.small]#9 September 2017 (republished)#
+
 * link:./hello-world[Hello, world] +
   [.small]#5 August 2019#

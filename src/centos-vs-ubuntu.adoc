@@ -1,0 +1,135 @@
+= CentOS vs Ubuntu
+Kieran Potts, 9 September 2017, republished from Medium.com
+:description: CentOS and Ubuntu dominate Linux web servers. Which is best?
+:docinfo: shared
+:nofooter:
+
+image::./_/media/images/centos-ubuntu.webp[CentOS and Ubuntu logos]
+
+There are hundreds, maybe thousands, of flavors of Linux (“distributions”). But
+on servers only two dominate: CentOS and Ubuntu. So, which is better for serving
+websites and web apps?
+
+== Summary
+
+* CentOS is based on Red Hat Linux Enterprise, Ubuntu is based on Debian.
+
+* CentOS uses `.rpm` packages and the `yum` package manager, while Ubuntu uses
+  `.deb` packages and the `apt` package manager.
+
+* Ubuntu is more frequently updated than CentOS, so you get the latest package
+  updates sooner.
+
+* CentOS offers the longest support period, up to 10 years.
+
+* Ubuntu has better documentation and a more active community, but there's good
+  commercial support available for CentOS.
+
+* CentOS supports cPanel, Ubuntu doesn't. Apart from that, Ubuntu is considered
+  easier to use for non-sysadmins.
+
+== Origins
+
+CentOS and Ubuntu have their origins in entirely different Linux distros. Ubuntu
+is based on the venerable Debian distribution, while CentOS – which stands for
+Community ENTerprise Operating System – is basically a free version of Red Hat
+Enterprise Linux (RHEL), a commercial product. The CentOS team is a volunteer
+group that rebuilds publicly available RHEL sources. Nowadays, CentOS is
+officially supported by Red Hat, too.
+
+The main difference in terms of the user experience is found in their package
+management systems. CentOS uses RPM packages installed via the `yum` package
+manager, while Ubuntu uses DEB packages managed by `apt`. The package managers
+offer much the same functionality, but their commands are entirely different.
+If you have experience of other Debian-based distros, you will likely feel more
+at home with Ubuntu's package management system. Likewise, if you have
+experience of RHEL, you will feel right at home with CentOS.
+
+Users of the Ubuntu desktop OS will naturally be drawn to the Ubuntu brand. But
+GUI and CLI environments are very different beasts. There are no productivity
+gains to be had from choosing a headless version of a familiar desktop distro.
+
+== Community
+
+Ubuntu has a large, active community. Thousands of users from all of the world
+hangout in various online forums and groups and dole out expert advice for free.
+There are lots of tutorials, videos, courses, books and more, both free and
+commercial, for Ubuntu.
+
+CentOS, though free, is considered a commercial product and so has a less active
+community and a much smaller volume of free support material. On the other hand,
+there is good commercial support available for CentOS. You can more readily find
+SysAdmin and DevOps engineers with expert knowledge of CentOS.
+
+== Release cycle
+
+Like RHEL, CentOS is very conservative in terms of upgrade cycles. CentOS has
+far less frequent updates, and tends to focus on security patches and
+maintaining stability and consistency for long periods of time. By comparison,
+Ubuntu tends to ship with much fresher packages, and updates tend to land in the
+Ubuntu repos before they turn up in CentOS. Ubuntu also offers a much more
+diverse and extensive range of packages, and has excellent support for cloud and
+container deployments.
+
+As well as longer release cycles, CentOS also provides much longer
+long-term-support (LTS). Ubuntu releases an LTS edition every two years and the
+support lasts for five years. The gaps between CentOS LTS editions are even
+longer, but so is the lifespan of the support: up to 10 years. CentOS 6 was
+first released in 2010 and will continue to be supported up to 2020.
+
+== Security
+
+Due to its less frequent updates and the longer support periods, CentOS is
+considered to be more stable and secure. Updates are tested for longer periods
+of time prior to their distribution. Buggy releases of applications are less
+likely to get added to the official CentOS package repositories.
+
+Also, CentOS makes use of the SELinux framework for hardening the security
+layer.
+
+A well-known philosophical difference between CentOS and Ubuntu is that Ubuntu
+disables the root account, such that no administrator knows the root password
+(which is randomly generated). Root privileges are granted exclusively through
+the `sudo` command. Of course, root access can be manually disabled on CentOS,
+but on Ubuntu this is the default configuration. This may be an attractive
+feature in organizations where systems are managed by devs rather than ops.
+
+== Server GUIs
+
+Most web server GUIs – including https://www.interworx.com/[InterWorx] and the
+most popular one, https://cpanel.net/[cPanel] – support only RHEL and its
+derivatives, such as CentOS. For this reason, CentOS is preferred over Ubuntu by
+web hosting companies and web design agencies.
+
+== Performance
+
+Overall, Ubuntu is a lot heavier than CentOS, being shipped with a much more
+extensive suite of features. That said, there is little discernible difference
+in performance between CentOS and Ubuntu. The speed of your web server will be
+determined by its configuration and the underlying hardware.
+
+== Conclusion
+
+In general, choose CentOS for commercial products, Ubuntu for personal websites
+and pet projects. In practice, you may have more specific and nuanced
+requirements that will dictate the optimum distribution.
+
+The main consideration is the trade-off between consistency and stability on
+the one hand, and getting easy access to the very latest software updates on
+the other. Choose CentOS if you want to keep your server infrastructure stable
+for as long as possible and if security takes precedence over all other
+considerations. If you need or crave the latest bells and whistles, you still
+have the option of installing things manually from source.
+
+For this reason alone, the default choice should be CentOS. But Ubuntu is
+increasingly popular, especially for servers that are provisioned for specific
+applications, as opposed to generic web hosting services.
+
+It is good to have experience of both CentOS and Ubuntu, so you have a feeling
+for how they differ in terms of user experience. You can install them in a local
+VM, or get a cheap VPS from https://www.linode.com/[Linode],
+https://www.digitalocean.com/[DigitalOcean] or https://www.vultr.com/[Vultr].
+But in the long term it is better to become a master of one distribution.
+Ubuntu and CentOS, and other distributions, put things in different places and
+handle some subsystems in different ways. There are enough differences to
+frequently trip you up if you regularly flip from one distro to the other.
