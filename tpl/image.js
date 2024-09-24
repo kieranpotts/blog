@@ -15,7 +15,9 @@ module.exports = ({ node }) => {
   if (attrs["link"]) {
     html += "</a>";
   }
-  html += `<figcaption>${node.getTitle()}</figcaption>`;
+  if (node.getTitle()) {
+    html += `<figcaption>${node.getTitle()}</figcaption>`;
+  }
   html += "</figure>";
 
   return html;
