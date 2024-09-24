@@ -57,6 +57,14 @@
       <description>Should we rebrand JavaScript? And if we did, what would we call it?</description>
     </item>
     <item>
+      <title>CentOS vs Ubuntu</title>
+      <link>https://kieranpotts.com/centos-vs-ubuntu</link>
+      <pubDate>Sat, 9 Sep 2017 00:00:00 +0000</pubDate>
+      <dc:creator>Kieran Potts</dc:creator>
+      <guid>https://kieranpotts.com/centos-vs-ubuntu</guid>
+      <description>CentOS and Ubuntu dominate Linux web servers. Which is best?</description>
+    </item>
+    <item>
       <title>Hello, world</title>
       <link>https://kieranpotts.com/hello-world</link>
       <pubDate>Mon, 5 Aug 2019 00:00:00 +0000</pubDate>
