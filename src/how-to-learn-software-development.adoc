@@ -42,3 +42,18 @@ way you must become proficient at testing, debugging and version control. These
 tools will become part of your everyday workflow. Like every tools, it is up to
 us as an industry to decide when and how best to use new tools. For gen-AI,
 best practices have not yet emerged...
+
+... It may well be that AI and ML will make it less necessary for us to
+understand the details of coding, in the same way that in the past a hierarchy
+of compilers have made it less necessary for us to understand assemblers. But
+you still need to understand how to code, in the same way you still need to
+understand arithmetic, even if you use a calculator instead of paper and pen.
+
+In the short term: take some courses on prompt engineering!
+
+Potentially our work will be increasingly focused on designing programs that
+specify requirements, which will be compiled directly into code, rather than
+writing the code itself. We'll be more focused on requirements and specifications,
+and validation and verification of the auto-generated code.
+
+TODO: GenAI + higher-level declarative and visual programming languages.
