@@ -1,0 +1,105 @@
+= Accidental languages
+
+Why do bad languages become so popular?
+
+Bad design _works_ because users have more flexibility to bend the technology to their own use cases.
+
+Examples:
+
+* PHP was supposed to just be a template language
+* JS was designed in 10 days
+* Markdown = informal spec
+* JSON: minimal, informal spec, later standardized, not really intended as a configuration file format
+* INI files: no standards
+* CSV: recent RFC, but nothing follows it
+
+== PHP
+
+In his talk reminiscing about https://www.youtube.com/watch?v=nmD1Q4FsXCc[25 years of PHP],
+Rasmus Lerdorf explains how PHP came about. It began with the launch of the Mosaic
+web browser. When Lerdorf saw this, he realized the world was going to change. So
+he started writing web applications. His initial approach was to generate HTML
+from C code – CGI scripts written in C with HTML inside the C program. This was
+not a nice developer experience; what Lerdorf wanted was for his HTML to look like
+HTML, so the business logic was separated from the front-end UI templating.
+
+Lerdorf wrote a "C API for the web", basically an HTML templating engine in C,
+so you could write HTML with dynamic content like this:
+
+.1994-1995
+[source,phtml]
+----
+<html><head><title>Form Example</title></head>
+<body><h1>Form Example</h1>
+<form action="form.phtml" method="POST">
+Name: <input type="text" name="name" >
+Age: <input type="text" name="age" >
+<br><input type="submit">
+</form>
+<?if($name):?>
+Hi <?echo $name?>, you are <?echo $age?> years old
+<?endif?>
+</body></html>
+----
+
+Lerdorf found that whenever he would write a new web application there would be
+a whole load of boilerplate code that would be replicated between applications.
+So he took all of that boilerplate – things like parsing cookies, parsing post
+data, sending cookies, and communicating with the Apache web server – and so he
+abstracted all that away into a very simple stack-based C API for the web.
+
+So if you wanted to add another tag to your templating system, so you could do
+it like this:
+
+.Cosign example
+[source,c]
+----
+void Cos(void) {
+    Stack *s;
+    char temp(64);
+
+    s = Pop();
+    if(!s) {
+        Error("Stack error in cos");
+        return;
+    }
+    sprintf(temp, "%f", cos(s->douval));
+    Push(temp,DNUMBER);
+}
+----
+
+... and then you could use your `Cos` function in your HTML templates:
+
+[source,html]
+----
+<html><head><title>Cos Example</title></head>
+<body><h1>Cos Example</h1>
+<?echo Cos($input)?>
+</body></html>
+----
+
+Lerdorf imagined that people, like him, would write their business logic in a
+strictly typed, compiled language like C or C++, and then surface that logic
+within the Lerdorf's templating system.
+
+But this is not how people started using it. Nobody wanted to write C code, they
+just wanted to use the templating system. People would complain about things they
+could not do in the templating system.
+
+PHP started its life as a templating system, and a very restricted one at that.
+The idea was you were supposed to write your business logic separately, and
+"expose it" to the templating system. Lerdorf hadn't imagined that people would
+try to write their logic _in_ PHP, alongside their HTML code.
+
+This was partly economics, too. The web was growing very fast and there were not
+enough C developers in the world to meet that demand. PHP inadvertently offered
+a solution, an easy way to write simple server-side business logic. The PHP code
+was executed by the Apache server (via the mod_php module), so it was very
+efficient and tightly integrated to the HTTP request-response cycle.
+
+PHP has received a lot of criticism over the years, but in fairness most of it
+stems from the early design constraints – it was never intended to evolve into
+a full-flow multi-paradigm programming language that it is today.
+
+PHP played no small part in making web design and development accessible to the
+general public, and so opening up the web platform beyond the IT realm.
