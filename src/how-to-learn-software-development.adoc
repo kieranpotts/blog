@@ -1,0 +1,44 @@
+= How to learn software development
+
+== Beware the robots
+
+As reported in the https://cacm.acm.org/news/the-impact-of-ai-on-computer-science-education/[Communications of the ACM],
+in the fall of 2023 Eric Klopfer conducted an experiment in his undergraduate
+computer science class at MIT. He divided the class into three groups and gave
+each group the same programming challenge in the Fortran language – which none
+of the students knew.
+
+One group was allowed to use ChatGPT to help them solve the problem, another
+group was allowed to use Meta's Llama, and a third was banned from using any
+generate AI tool but they were allowed to use Google.
+
+The outcome? Well, the ChatGPT-assisted group solved the problem quickest, and
+the Google-assisted group was slowest. But subsequently the students were tested
+on how well they remembered their solution. The ChatGPT-assisted group
+"remembered nothing", apparently, while everyone in the Google-assisted group
+were able to explain their solution in detail.
+
+What does this tell us?
+
+Software development is a process of learning through cycles of experimentation.
+The general process is to break down tasks into smaller increments that each
+take you a step closer to the solution, and you evaluate and adjust your approach
+each step of the way. Struggling is part of the learning experience.
+
+When you're given the answer, you're not struggling, and therefore you're not
+learning.
+
+My recommendation, therefore, is to be judicious in how you use LLMs to aid your
+development, especially while you are learning. Use them to help you write code
+_once you know_ what code you want to write. That's a different thing to using
+LLM's to solve problems on behalf.
+
+Contrary to popular belief, genAI is not going to make computer science jobs
+obsolete. But the nature of those jobs will change – as they always have done –
+as we continuously invent new tools to help us write code and verify our work.
+
+You _do_ need to become proficient at using code generation tools, in the same
+way you must become proficient at testing, debugging and version control. These
+tools will become part of your everyday workflow. Like every tools, it is up to
+us as an industry to decide when and how best to use new tools. For gen-AI,
+best practices have not yet emerged...
