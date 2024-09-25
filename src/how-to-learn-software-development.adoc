@@ -104,6 +104,13 @@ each step of the way. Struggling is part of the learning experience.
 When you're given the answer, you're not struggling, and therefore you're not
 learning.
 
+It's the same for courses and tutorials. You want to look for the good ones that
+set coding challenges, and give you a reference solution at the end to compare
+against your own solution. Avoid step-by-step tutorials that just walk you
+through incremental code changes; these can help you to learn the API of whatever
+tool, framework or language you're learning, but you're not really refining your
+software development capability.
+
 My recommendation, therefore, is to be judicious in how you use LLMs to aid your
 development, especially while you are learning. Use them to help you write code
 _once you know_ what code you want to write. That's a different thing to using
