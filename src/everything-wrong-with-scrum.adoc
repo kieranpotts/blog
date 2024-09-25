@@ -9,8 +9,72 @@ chance. But I just can't get on with it. At best it's a benign business wrapper
 for _true_ agile delivery, a necessary bureaucratic overhead to soothe the
 nerves of the business people. At worst, it's a straightjacket that stifles
 creativity and innovation, and turns the lovely craft of software engineering
-into a soulless production line of mediocre products. Here's my definitive
-list of everything wrong with Scrum.
+into a soulless production line of mediocre products. For me, Scrum is now a
+red flag in companies. Here's my definitive list of everything wrong with Scrum.
+
+.Agile values
+****
+1. Individuals and interactions over processes and tools
+2. Working software over comprehensive documentation
+3. Customer collaboration over contract negotiation
+4. Responding to change over following a plan
+****
+
+.Half-arsed agile values
+****
+1.  Individuals and interactions over processes and tools… and we have mandatory
+    processes and  tools to control how those individuals (we prefer the term
+    "resources" interact)
+
+2.  Working software over comprehensive documentation… as long as that software
+    is comprehensively documented
+
+3.  Customer collaboration over contract negotiation… within the boundaries of
+    strict contracts, of course, and subject to rigorous change control
+
+4.  Responding to change over following a plan… provided a detailed plan is in
+    place to respond to the change, and it is followed precisely
+****
+
+////
+
+TODO: Dot these 12 agile principles throughout the text where they are relevant:
+
+1.  Our highest priority is to satisfy the customer through early and continuous
+    delivery of valuable software.
+
+2.  Welcome changing requirements, even late in development. Agile processes
+    harness change for the customer's competitive advantage.
+
+3.  Deliver working software frequently, from a couple of weeks to a couple of
+    months, with a preference to the shorter timescale.
+
+4.  Business people and developers must work together daily throughout the
+    project.
+
+5.  Build projects around motivated individuals. Give them the environment and
+    support they need, and trust them to get the job done.
+
+6.  The most efficient and effective method of conveying information to and
+    within a development team is face-to-face conversation.
+
+7.  Working software is the primary measure of progress.
+
+8.  Agile processes promote sustainable development. The sponsors, developers,
+    and users should be able to maintain a constant pace indefinitely.
+
+9.  Continuous attention to technical excellence and good design enhances
+    agility.
+
+10. Simplicity--the art of maximizing the amount of work not done--is essential.
+
+11. The best architectures, requirements, and designs emerge from
+    self-organizing teams.
+
+12. At regular intervals, the team reflects on how to become more effective,
+    then tunes and adjusts its behavior accordingly.
+
+////
 
 I started my career not in software development but technology journalism. I
 wrote about the latest gadgets and home entertainment systems, digital cameras
@@ -69,6 +133,23 @@ But this is not what the authors of the Agile Manifesto intended. "Agile"
 was never trademarked so anyone can use it to describe anything they like, and
 the Scrum authors – xxx – did exactly that.
 
+Signatories of the agile manifesto, including Dave Thomas and Ron Jeffries, have been critical
+of so-called agile frameworks like Scrum, and have distanced themselves from
+the term "agile" as a result.footnote:[Agile is Dead, Dave Thomas (20xx)] The
+idea of the agile manifesto was to create a set of principles and values to
+help work with a high degree of agility, rather than dictating an exact process
+to follow.
+
+[quote, Jn Jeffries]
+____
+As I look back on… the decade since the Manifesto, I see more and more people
+wanting to fly the Agile banner without living the Agile values and principles.
+____
+
+
+By definition then, any process framework like Scrum, that prescribes a set of
+practices and rules to work to, is not agile - be definition.
+
 Scrum !== Agile
 
 Scrum – and other so-called agile frameworks like SAFe – through
@@ -89,6 +170,142 @@ more common in smaller organizations. I have more experience with Scrum than
 SAFe, so that is the focus of this article. But it is worth mentioning that
 SAFe, like Scrum, is unpopular among the small group of people who started
 the agile software development movement.
+
+Tellingly, Scrum is rarely used in software houses. It is popular in
+consultancies and non-IT businesses that do a bit of bespoke of IT to automate
+aspects of their business processes. In my view... Scrum is the result of the
+ways of working of other business domains seeping into the software development
+domain.
+
+== Scrum !== Agile
+
+////
+
+Need to define both Scrum and Agile, and in doing so I will show that the two
+are not well aligned.
+
+* Agile is not really a methodology but rather a fairly fluffy set of principles
+  about the "culture and values" that are typically found in successful software
+  houses.
+
+* Scrum was originally designed as a business wrapper for XP -- a genuine agile
+  delivery framework -- as a way of making XP more palatible to non-technical
+  business.
+
+I will accept that Scrum supports an iterative and incremental development
+process, but this is not synonymous with agile (though the two concepts are
+very complementary).
+
+"Agile" is really a spectrum. Some organizations, team and projects can be more
+agile than others. So, I don't want to say that Scrum is not agile. I do want
+to say that Scrum is not very agile. Here's why:
+
+* Scrum is process-oriented.
+* Scrum is horribly inefficient.
+* Scrum is rigid.
+
+Scrum is too often used as a way of bringing a production-line system to
+software development, and filling the line with cheap labour.
+
+There are many risks with Scrum. One of them is the incentives to drop quality
+to hit the deadline of the sprint, which means refactoring work ends up in the
+backlog as "TechDebt"... in effect, the project managers get control of the
+quality, they manage this just like they do any other feature. But this ought
+to be a decision for developers, who are really the only ones with the skills
+and knowledge to make this call. (You can see the use of timeboxing/sprints as
+a mechanism to implement remote-control programming.)
+
+Burnout: two-weekly sprints can seem exhausting.
+
+The big tech companies run their software projects very different -- Scrum is
+ link:https://blog.pragmaticengineer.com/project-management-at-big-tech/[curiously absent].
+
+''''
+
+No one owns a trademark for use of the word "agile" in the context of software
+development methodolgies, so it is perfectly legitimate for an organization --
+selling certification and courses -- to label the better ways of working they
+offer as being "agile".
+
+In summary, I don't highly rate Scrum, but I accept it is probably the
+least-worst option available for developing software in the context of
+organizations that do not understand software development (eg enterprise
+applications).
+
+''''
+
+TODO: Scrum MAY be useful in some organizations and development environments.
+Case study of a project when we moved from Scrum to Scrumban, abandoning the
+fortnightly development cycle. But this opened the opportunity for the
+"delivery managers" to throw more tickets onto the board, and more people too...
+and the project soon descended into chaos. So Scrum can be beneficial for
+developers in that it creates a series of constraints for the business /
+project managers to operate within, and this creates something of a shield
+to developers, enforcing many good practices such as short ticket lifespans,
+and other benefits such as pinch-points when everything is in main.
+
+''''
+
+Need to define both Scrum and Agile, and in doing so I will show that the two
+are not well aligned.
+
+* Agile is not really a methodology but rather a fairly fluffy set of principles
+about the "culture and values" that are typically found in successful software
+houses.
+
+* Scrum was originally designed as a business wrapper for XP -- a genuine agile
+delivery framework -- as a way of making XP more palatible to non-technical
+business.
+
+''''
+
+[quote, Steve McConnell, Code Complete]
+____
+In software, people tell you do buy into certain software-development methods
+to the exclusion of other methods. That's unfortunate because if you buy into
+any single methodology 100 percent, you'll see the whole world in terms of that
+methodology. In some instances, you'll miss opportunities to use other methods
+[that are] better suited to your current problem.
+____
+
+My view: Scrum itself is not necessarily a major problem, if it is followed
+correctly as per the Scrum guides. But the dogma around it _is_ a problem. It
+is not always going to be the optimal development model.
+
+The only universal truism that has ever been said about software development is
+that there are no silver bullets (Fred Brooks, 19xx). Scrum, too, is not a
+silver bullet to solving all the difficulties of software development. In
+particular, Scrum needs to be augmented with other practices, such as those
+from XP, to be effective. Test-driven development and pair programming, for
+example, are good software development practices that are not part of Scrum.
+
+Scrum is a good way of getting a team to work together, but it is not a good
+way of getting a team to deliver high-quality software. Scrum should be thought
+of as a project management wrapper around software development, not as a
+software development methodology in itself.
+
+We should treat methods and tools as a crafts person would: know the right tool
+for the job and know how to use it correctly. Don't look for silver bullets –
+methods or tools that will work in every context. There are none.
+
+''''
+
+Scrum is optimized for non-technical project managers and scrum masters, not for
+software developers.
+
+Like everything, Scrum makes trade-offs. It's not all bad, but you should be
+aware of what those trade-offs are. In short, you're trading some efficiency for
+an illusion of predictability.
+
+And done well, Scrum can provide a nice gentle rhythm to work - ebbs and flow,
+busy and quiet periods. But there's a fine balance between this and it feeling
+like a perpetual hamster wheel. 2 week increments are probably too short.
+3-4 weeks strikes a better balance.
+
+Probably the worst thing about Scrum is the context-switching: having to refine
+stuff for the next sprint before you've finished the current one.
+
+////
 
 == What Scrum gets right
 
@@ -143,6 +360,17 @@ with experience working in one publishing house will feel right at home when
 they move to another. At least Scrum has given us something close to an
 industry standard process.
 
+My view is that Scrum is mostly harmless, as long as it is not used as a way of
+remote controlling the quality of the software system… I'm skeptical of the
+almost biblical approach taken to Scrum… We have to be careful about "strict
+Scrum", which is using sprints as soft deadlines for feature delivery. … I
+think the focus on quality and simplicity is often forgotten about in some
+so-called "agile" methodologies like Scrum, which are process-heavy rather than
+process-light, and which enforce checks and constraints on delivery to emphasize
+"velocity" of feature delivery. Quality tends to be sacrificed as a consequence,
+and therefore "agility" deteriorates over time as the software becomes more
+complex and difficult to maintain.
+
 ////
 
 == What Scrum gets wrong
@@ -171,6 +399,19 @@ prescribes a lot of rules and roles.
 You want high-performing teams that trust each other and collaborate well
 together to solve problems, without getting bogged down in process and red
 tape.
+
+Communication over processes and tools. When something goes wrong, the instinct
+of organizations is to put in more processes to prevent that thing from happening
+again. But this is a false economy. The more processes you put in place...
+
+Better to facilitate communication between people, and to trust them to do their
+jobs, which is to collaborate on solving problems. This is an agile principle,
+but more than that it is the very essence of software development.
+
+I actually think the daily stand-up meeting is a good idea, as long as it is
+used to _facilitate_ communication, rather than to _control_ it.
+
+
 
 === Sprints (aka timeboxes)
 
@@ -310,6 +551,24 @@ Scrum is horribly inefficient. It offers higher predictability to the business,
 but the trade-off is reduced efficiency due to all the overhead of planning,
 estimation, and meetings.
 
+By contrast, _lean_ processes – which go hand-in-hand with agile, but the two
+are distinct concepts – are all about reducing waste and increasing efficiency.
+But reducing waste requires some budget to be allocated to automation etc.
+For example, investing in test automation can reduce the amount of manual
+testing that needs to be done, and increasing throughput overall.
+
+Agile is not meant to be anarchy. It is okay to have a plan, it's just that it
+should be a _lightweight_ plan, and it should be _flexible_. True agility means
+being flexible enough to be able to respond quickly to change requirements, and
+other things outside of our control. But it doesn't mean we shouldn't have broad
+product roadmaps, release plans, and so on. They key is they are _lightweight_
+and _continuously evolving_. Agile means to accept changes to your plans.
+
+.Agile value #4
+****
+Responding to change over following a plan
+****
+
 === High-performing tams
 
 ////
@@ -344,7 +603,60 @@ software development.
 
 ////
 
-=== Waterfall process
+=== Water-scrum-fall
+
+image::./_/media/images/water-scrum-fall.png[]
+
+What tends to happen is Scrum is applied only to the construction phase –
+book-ended by lots of analysis up-front, and pre-release testing at the end –
+rather than applying agile ways of working to the whole software development
+life cycle. Its an iterative build process within a stepwise waterfall process.
+
+The waterfall process is not so much a methodology as a _natural_ way of
+organizing work: plan exactly what it is you want to do, do a design for how to
+implement it, work out how long it will take and how much it will all cost,
+do the implementation, integrate all the implemented parts together, test it,
+make some adjustments, and ship it.
+
+The way that corporate budgeting works is that you need to work out the
+cost-benefit analysis of a project before you start, which means making
+estimates of the cost as well as the potential revenues. In my experience,
+most organizations – large and small – but most of their up-front effort in
+estimating costs, which in turn requires specing-out a complete solution
+from the start.
+
+But research Douglas Hubbardfootnote:[https://www.cio.com/article/274975/it-organization-the-it-measurement-inversion.html]
+discovered that the up-front cost of developing a new product actually has very
+little impact on that product's eventual return on investment (what you actually
+care about). Rather, one of the most important factors determining the ROI on
+an IT investment is whether the target users will actually use it. And that is
+the thing we don't normally spend a lot of time finding out at the start of a
+software project.
+
+> Focus on value, not cost.
+
+Gather information to justify the value, rather than estimate the cost.
+Create feedback loops to validate assumptions.
+Enable an experimental approach to product development.
+
+Validate requirements through rapid feedback. Users don't always know what they
+want (though sometimes this is possible to ascertain, for example by analysis of
+usage data of a legacy system you're going to replace). Otherwise, requirements
+are really hypotheses: we hypothesize that a <user type> will want to do <task>
+in order to achieve <goal>. The role of the development team is to evaluate
+these hypotheses, and to iterate on them until they are validated, or to
+discard them if they are not.
+
+Can also use experiments (eg a/b testing, beta channels, proofs-of-concept). You
+don't always need to build out the whole feature (and risk the sunk cost
+fallacy).
+
+We can use tools like Impact Mapping (designed by Gojko Adzic), which is
+essentially to work backwards from a particular outcome we want to achieve.
+
+Personally, I don't think this is necessarily a bad approach... you want to
+do some big up-front design, for example, to make sure you can evolve and change
+the system...
 
 ////
 
@@ -359,6 +671,12 @@ for example designing your data model and subdomains. This work should not be
 iterative, because it _is_ difficult/expensive to change later on.
 
 ////
+
+... but you do need to be wary of the pitfalls of the water-scrum-fall approach.
+The key thing is achieving tight feedback loops - lots of them. Feedback loops
+from other developers, the product manager or business stakeholders, and
+(critically) the customers. This means getting working software into the hands
+of end users as soon as possible.
 
 === The human side of enterprise
 
@@ -628,23 +946,55 @@ continuous improvement, learning and adaptation. Agility is literally that, it's
 about changing your approach as you go. This is how science works, its how
 engineering works, and this is how successful businesses work too.
 
+A truly agile approach is about setting goals in measurable terms, and then
+taking an iterative, experimental approach to achieving those goals. Nothing
+is prescribed from the start. There are some tools and methods that are widely
+regarded as best practices but which may or may not be useful in your particular
+context.
+
+The incremental approach applies not only to product development, but also to
+how we improve our business processes.
+
+By contrast, Scrum is a ready-made, off-the-shelf process.
+
 The heart of agility is the ability to change course, to make mistakes in a safe
 environment, to learn from those mistakes, and to adapt your approach based on
 what you have learned. This is the essence of the scientific method, and it
 is the essence of agile software development.
+
+////
+
+You _can_ be agile without following any documented process – Scrum, Crystal,
+DSDM, ASD, Lean, Kanban, XP, AUP – but just rolling your own.
+////
 
 ''''
 
 .Related links
 ****
 
+* xxxx[Agile is dead],
+  Dave Thomas (20xx)
+
+* https://ronjeffries.com/xprog/articles/beyond-agile-new-principles/[Beyond agile: new principles?],
+  Ron Jeffries (2010)
+
 * https://martinfowler.com/bliki/FlaccidScrum.html[Flaccid Scrum],
   Martin Fowler (2009)
 
-* https://david-theil.medium.com/good-scrum-master-bad-scrum-master-215f2e985a95[Good Scrum Master, Bad Scrum Master],
-  David Theil (2021)
+* https://www.youtube.com/watch?v=bdSzvnccLQk[Scrum does not equal agile],
+  Aino Corry (2023)
+
+* https://www.youtube.com/watch?v=KJ5u_Kui1sU[How agile failed software developers and why Scrum is a bad idea],
+  Gregory Witek (2021)
+
+* https://www.youtube.com/watch?v=2zYxWEZ0gYg[Why scaling agile doesn't work],
+  Jez Humble (2015)
 
 * https://www.youtube.com/watch?v=X4-Y9oUlpkE&list=WL&index=10[Is SAFe really safe?],
   Dave Farley (2023)
+
+* https://david-theil.medium.com/good-scrum-master-bad-scrum-master-215f2e985a95[Good Scrum Master, Bad Scrum Master],
+  David Theil (2021)
 
 ****
