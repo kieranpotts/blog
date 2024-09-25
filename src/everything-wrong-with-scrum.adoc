@@ -156,6 +156,8 @@ Scrum – and other so-called agile frameworks like SAFe – through
 https://martinfowler.com/bliki/SemanticDiffusion.html[semantic diffusion],
 have really harmed the agile movement's reputation.
 
+It's turned into tools and bad processes.
+
 And Scrum is barely even an "agile framework".
 
 > Scrum characterizes what agile development has become: a overly bureaucratic,
@@ -176,6 +178,10 @@ consultancies and non-IT businesses that do a bit of bespoke of IT to automate
 aspects of their business processes. In my view... Scrum is the result of the
 ways of working of other business domains seeping into the software development
 domain.
+
+Scrum is said to be an attempt to codify the agile principles into a set of
+actionable practices. I don't agree. XP gives you the actionable practices.
+Scrum adds extra stuff that project managers like.
 
 == Scrum !== Agile
 
@@ -568,6 +574,25 @@ and _continuously evolving_. Agile means to accept changes to your plans.
 ****
 Responding to change over following a plan
 ****
+
+=== Velocity culture / hustle culture
+
+> By now, we all (should) know that agile is not about being faster. It's about
+delivering value sooner and in a constant manner and being able to react and
+change course earlier.
+
+A _sustainable_ pace is more important than a fast one in the short-term.
+
+The term "sprints" is an unfortunate choice of terminology for the concept
+of timeboxes by the Scrum authors. It reinforces the idea that Scrum is about
+optimizing for throughput (it's not; it's about creating an illusion of
+predictability). "Burndown" charts, generating value, etc.
+
+The worst excesses of velocity culture -> burnout. And you lose the best, most
+experienced people first (they never get to the burnout stage because they
+have prior experience).
+
+Feature factories
 
 === High-performing tams
 
@@ -966,6 +991,79 @@ is the essence of agile software development.
 
 You _can_ be agile without following any documented process – Scrum, Crystal,
 DSDM, ASD, Lean, Kanban, XP, AUP – but just rolling your own.
+
+''''
+
+Conclusion: the *management* of software engieering has failed to catch-up with
+modern agile practices, and all of the innovation in our tools and methods, eg
+CI/CD.
+
+Although Scrum claims to be a *framework*, it enforces too much and makes the
+whole process rigid. Stand-ups, sprint reviews, grooming, etc. - these things
+can be useful in some contexts, but a true framework would allow you to pick
+and choose what works for you (in practice, most Scrum teams do just that).
+
+Lots of outdated concepts in Scrum.
+
+Enforced by Jira - the ultimate bloatware! (Jira is a project management tool,
+not a dev tool - it's for gathering data, analyzing it, and sending it higher).
+
+In fairness, Scrum is reasonably lightweight. By comparison, so-called agile
+frameworks like Less and SAFe are absolute abominations of the agile principles.
+This graphic depicting SAFe 6.0 tells you everything you need to know:
+
+[DIAGRAM]
+People over processes [roll on floor]
+
+Perhaps the underlying issue is that software development as an industry has
+grown so fast that there are not enough project management people who have
+prior technical experience. There is no doubt in my mind that successful
+software delivery requires project oversight by people who understand the
+inherent complexity of software development.
+
+The best PMs tend to be those who have worked their way up from the shop floor
+as it were. They have the battlescars having worked in development or operations,
+deliverying highly complex systems and - critically - having worked on a project
+for a sufficient amount of time to appreciate the true implications for their
+design decisions.
+
+Hustle culture - feels like you're just a cog... and people doing our kind of
+work are generally pretty damn clever and shouldn't be treated like they're
+just doing clerical work.
+
+Perhaps the only worse "agile implementation" is kanban, which is basically
+never-ending torture. At least Scrum provides some kind of sense of pace.
+
+Scrum is a wrapper to put around XP to make it more palatable to mangement -
+that's all Scrum was when it started out - ie to people who don't understand
+software development. Now it's a certification industry!
+
+A glimmer of hope: perhaps the ubiquity of Scrum is a product of the
+move-fast-and-break-things hustle culture of the era of low interest rate
+technology startups. But we're now moving into a new era of higher borrowing
+costs and therefore more focus on efficiency and productivity. Perhaps the
+culture of software development will change as a result. Those of use who
+actually love our career and actually care about delivering products that
+genuinely improve things, take pride in what we do... maybe our time is coming?
+
+This ought to be an _incredible_ industry to work in. This is the IT century.
+The incredible challenge of reimagining the world through automated tools.
+The joy of co-creation with other people.
+
+''''
+
+RUP: do all your design up-front, right down to the classes and functions and
+the algorithms they will implement. But the advantage of this approach -- high
+cost up-front -- is that you can quite accurately predict the cost of the
+implementation. The problem is that also gives you a false sense of certainty,
+because the requirements are rarely fixed.
+
+Mental model of building a house: if you spec the whole thing up front, then
+you can plan and predict everything (with a little contingency).
+
+The response to things not going well is to do more planning!
+
+
 ////
 
 ''''
@@ -985,6 +1083,9 @@ DSDM, ASD, Lean, Kanban, XP, AUP – but just rolling your own.
 * https://www.youtube.com/watch?v=bdSzvnccLQk[Scrum does not equal agile],
   Aino Corry (2023)
 
+* https://www.youtube.com/watch?v=hxXmTnb3mFU[Agile and Scrum don't work],
+  Allen Holub in discussion with Dave Farley, clip from The Engineering Room podcast (2022)
+
 * https://www.youtube.com/watch?v=KJ5u_Kui1sU[How agile failed software developers and why Scrum is a bad idea],
   Gregory Witek (2021)
 
@@ -996,5 +1097,8 @@ DSDM, ASD, Lean, Kanban, XP, AUP – but just rolling your own.
 
 * https://david-theil.medium.com/good-scrum-master-bad-scrum-master-215f2e985a95[Good Scrum Master, Bad Scrum Master],
   David Theil (2021)
+
+* https://www.youtube.com/watch?v=fTaOdbUbFmI[Scrum: an honest ad 😂],
+  Null Labs (2024)
 
 ****
