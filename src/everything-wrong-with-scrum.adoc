@@ -140,7 +140,7 @@ idea of the agile manifesto was to create a set of principles and values to
 help work with a high degree of agility, rather than dictating an exact process
 to follow.
 
-[quote, Jn Jeffries]
+[quote, Ron Jeffries]
 ____
 As I look back on… the decade since the Manifesto, I see more and more people
 wanting to fly the Agile banner without living the Agile values and principles.
@@ -152,9 +152,100 @@ practices and rules to work to, is not agile - be definition.
 
 Scrum !== Agile
 
+The "agile" term has suffered from identity theft. It no longer means,
+colloquially, what the original manifesto authors had intended it to mean.
+
 Scrum – and other so-called agile frameworks like SAFe – through
 https://martinfowler.com/bliki/SemanticDiffusion.html[semantic diffusion],
 have really harmed the agile movement's reputation.
+
+****
+Linguistic drift / word pollution:
+
+Words carry both a formal meaning and an emotional undertone that is accrued
+over years. The formal meaning shifts over time, but the accrued emotional
+resonance doesn't shift as fast. People use the word to gain its emotional
+resonance, a good example being the word "literally" which used to mean
+"exactly, with no exaggeration" but has come to mean "figurately" (or literally
+but in an ironic sense),
+eg. "your face is literally going to fall off". The definitions of words
+_stretch_ over time. This word corruption is what has happened to "agile"
+over the last two decades.
+****
+
+In fairness, "Scrum" has suffered from the same problem. Ken Schwaber foresaw
+this and created The Scrum Guide as a means of trying to preserve a definitive
+definition of Scrum... but it hasn't work. Today, Scrum has come to means
+"lots of little waterfalls" where developers commit to a near-term deadline to
+deliver an agreed specification. But this is not part the official Scrum
+methodology (what doesn't get completed in a sprint just gets returned to the
+backlog).
+
+> We are *being told* better ways of developing software by non-technical
+managers and coaches. We are no longer discovering our own improved ways of
+working.
+
+It's all about project management now, with tools like Jira being front-and-centre
+for managing progress against commitments. The focus is on predictability rather
+than engineering quality.
+
+Working software is no longer the main measure of progress. It has shifted to
+things like story points and velocity, pixel perfect mocks, and metrics. Devs
+seen as shop floor workers in feature factories. ... Devs don't get involved
+in any of the process until the acceptance criteria is finalized, or the
+high-res UI mockups are provided, ("definition of ready" - a checklist of
+things that have to happen before we can start the work - that's a type of
+contract with the customer, rather than collaboration! eg need all the dependencies
+understood up-front so we can estimate the work.) What happened to devs working
+directly with customers???
+
+Responding to change over following a plan: in fairness, this isn't too bad,
+because even Scrum allows you to change direction every 2-4 weeks. But there
+are still sprint "commitments" and product "roadmaps"... so lots of planning
+overhead. Roadmaps look suspiciously like a project plan in the form of a
+Gantt chart. Perhaps better to have a mission, north star, or a set of goals.
+
+Scrum/Agile has become a checklist of tools and processes, rather than a set
+of values or a "way of thinking" about software delivery (the mushy stuff of
+culture and values).
+
+Worse: agile become a religion or dogma.
+
+"Twice the work in half the time" - Jeff Sutherlands infamous book, the title
+of which just screwed up the definition of agile forever. Agile came to mean
+getting shit done as quickly as possible.
+
+Agile has also become an excuse for self-imposed chaos, or lack of process. You
+have to commit to functional delivery but also provide ad hoc customer support,
+fix bugs on the fly, operate the software in production, and plan ahead for the
+next sprint... but "it's okay, we're agile". It's an excuse for having not
+good management and efficient, well-designed processes.
+
+And agile has become a product that is sold: frameworks, coaching, certifications.
+The product-isation of agile has really hurt the movement... it's come to be
+something you can quickly apply to a team, rather than us coming to value
+real expertise and experience (10,000 hours!).
+
+Ceremonial garb / agile theatre... you have the appearance of being agile but
+you're really working under a very bureaucratic process.
+
+We need to get back to agile being about: developers being given a problem to
+solve, and then being left alone to work on it. A human-centric system, not
+a process-oriented, tool-driven one.
+
+////
+So... should we have another word to replace "agile", which perhaps is centred
+around the original definition?
+
+We've probably lost the battle, lost the brand.
+
+I try to avoid using the term agile at all.
+
+I will use terms like "iteratively and incrementally".
+
+Agile -- in its original meaning -- is almost like an ethical code, and our
+industry really needs that... desperately lacking ethical/professional standards.
+////
 
 It's turned into tools and bad processes.
 
@@ -1088,6 +1179,9 @@ The response to things not going well is to do more planning!
 
 * https://www.youtube.com/watch?v=KJ5u_Kui1sU[How agile failed software developers and why Scrum is a bad idea],
   Gregory Witek (2021)
+
+* https://www.youtube.com/watch?v=Oy_WeaiAvkg[The pain of post-agile software development],
+  Ben Thorp (2024)
 
 * https://www.youtube.com/watch?v=2zYxWEZ0gYg[Why scaling agile doesn't work],
   Jez Humble (2015)
