@@ -508,8 +508,6 @@ but more than that it is the very essence of software development.
 I actually think the daily stand-up meeting is a good idea, as long as it is
 used to _facilitate_ communication, rather than to _control_ it.
 
-
-
 === Sprints (aka timeboxes)
 
 Emphasizes short-term delivery over long-term sustainability.
@@ -939,6 +937,13 @@ and other process models are similar in this regard.
 
 == Conclusion
 
+////
+
+Scrum is not an agile process, it is a _feature factory_ process. A feature
+factory we might define as... [see https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2]
+
+////
+
 I don't know why the software industry is so obsessed with process optimization.
 I would love to see some proper scientific research on this. I can only
 hypothesize. Maybe its because the cost of developing software is so high;
@@ -1170,6 +1175,9 @@ The response to things not going well is to do more planning!
 
 * https://martinfowler.com/bliki/FlaccidScrum.html[Flaccid Scrum],
   Martin Fowler (2009)
+
+* https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2[12 signs you're in a feature factory],
+  John Cutler (2016)
 
 * https://www.youtube.com/watch?v=bdSzvnccLQk[Scrum does not equal agile],
   Aino Corry (2023)
