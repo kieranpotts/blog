@@ -1,0 +1,29 @@
+= Where did our jobs go?
+
+Some would have you believe that computer programmer jobs will soon be obsolete,
+going the way of the gaslighter, wheelwright, scrivener, and switchboard operator.
+
+////
+
+A https://web.archive.org/web/20240122174055/https://futuretech-site.s3.us-east-2.amazonaws.com/2024-01-18+Beyond_AI_Exposure.pdf[recent paper]
+by MIT's Computer Science and Artificial Intelligence Laboratory (CSAIL) found
+that it might take longer to automate human jobs in computer vision –
+a field of computer science that focuses on enabling computers to identify
+objects in images and video – than previously thought. The study found that
+on about 23% of the wages of current jobs in this field could realistically be
+automated away using AI, even allowing for further maturity of AI systems.
+
+////
+
+''''
+
+.Related link
+****
+
+* https://www.economist.com/business/2024/09/29/ai-and-globalisation-are-shaking-up-software-developers-world[AI and globalization are shaking up software developers' world],
+The Economist (2024)
+
+* https://www.cio.com/article/3540579/devs-gaining-little-if-anything-from-ai-coding-assistants.html[Devs gain little (if anything) from AI coding assistants],
+CIO (2024)
+
+****
