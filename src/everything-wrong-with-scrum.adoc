@@ -12,6 +12,8 @@ creativity and innovation, and turns the lovely craft of software engineering
 into a soulless production line of mediocre products. For me, Scrum is now a
 red flag in companies. Here's my definitive list of everything wrong with Scrum.
 
+I've been meaning to get this off my chest for some time! ...
+
 .Agile values
 ****
 1. Individuals and interactions over processes and tools
@@ -160,7 +162,13 @@ https://martinfowler.com/bliki/SemanticDiffusion.html[semantic diffusion],
 have really harmed the agile movement's reputation.
 
 ****
-Linguistic drift / word pollution:
+Linguistic drift / word pollution - where a word that has a very specific
+meaning becomes diluted over time. The word "agile" has been diluted to the
+point where it is almost meaningless. This is a common phenomenon in language
+in general - but we're particularly bad at it in the tech industry. Martin
+Fowler called it semantic diffusion.
+
+Scrum itself is susceptible to this.
 
 Words carry both a formal meaning and an emotional undertone that is accrued
 over years. The formal meaning shifts over time, but the accrued emotional
@@ -640,6 +648,125 @@ those with the other meetings that are necessary for any organization to
 function – whether it be a software organization or not – it really starts to
 add up.
 
+////
+
+Scrum, done well and efficiently, should actually _reduce_ meetings. The only
+meetings that are prescribed by Scrum are:
+
+* Daily scrum
+* Sprint planning
+* Sprint review
+* Sprint retrospective
+
+That's it!
+
+Meeting culture is not really a Scrum issue. And maybe its not an issue at all.
+Ultimately, software development requires a high degree of collaboration, and
+that requires communication. Meetings are a form of communication.
+
+The extra meetings that tend to get augment with Scrum, but which are not
+prescribed by Scrum, are:
+
+- Backlog refinement
+- Epic sync
+- 3 amigos
+- Architecture review board meetings
+- And the meetings to prepare for meetings, like sprint review/demo prep
+
+And I actually quite like the daily stand-up meeting. I rather prefer them when
+they're less formal... more of a watercooler chat than a status update.
+
+I think "meeting culture" is a necessary extension to Scrum because Scrum
+itself is an incomplete process model. Scrum is a project management framework,
+not a software development methodology. Architectural decisions, collaboration
+on requirements, and other things that are necessary for software development -
+and all our extra meetings are basically filling these gaps in Scrum.
+
+Backlog refinement is one of the worst. It's often considered an ongoing
+activity, so you're always in a state of preparing for the next sprint while
+you are meant to be focused on the current one. Planning poker etc. have all
+been added into Scrum.
+
+But in theory, if Scrum is done well, in theory it should reduce _ad hoc_
+meetings over the course of a sprint.
+
+////
+
+=== Agile theatre
+
+Scrum is often accused of bering a way of creating the appearance of agility,
+rather than actually being agile. This is what Martin Fowler calls "ceremonial
+garb".
+
+The word "ceremony" does not appear in The Scrum Guide. The "events" in the
+guide are not intended to be ceremony (ie. an occasion with little utility).
+Rather, those events are intended to be working sessions.
+
+Things like the daily scrum turn into rituals when people just follow a
+script/pattern (done, doing, blockers?) rather than actually using it as a
+means of communication.
+
+Earlier Scrum guides did talk about the three questions – what did I do
+yesterday? what am I doing today? what blockers do I have? – but the later
+Scrum Guide have removed all this completely. The latest guide says the
+morning scrum (not a "stand-up") is just for the developers, and it is where
+they adjust the backlog as necessary, adjusting the up-coming planned work.
+It's a quick huddle to plan the day.
+
+=== Scrum Masters
+
+Scrum Masters are often seen as the "process police", or at best a facilitator
+role.
+
+But this comes from poor implementations of this role as it is described in
+The Scrum Guide. It was never supposed to be a job title, but rather just a role
+that one or more developers within the team would take on. In fact, in the latest
+Scrum Guide from 2020, they even took out the word "role".
+
+People who are accountable for the process SHOULD also be doing other things,
+like contributing to development.
+
+[quote, The Scrum Guide 2020]
+____
+The Scrum Master is a true leader accountable for the team's effectiveness.
+____
+
+So the Scrum Master role is a leadership role.
+
+=== Definition of Ready
+
+A checklist of things that need to be in place before development can begin.
+
+But Scrum does not have a Definition of Ready! Scrum has got blamed for this,
+becoming a cascade of mini waterfalls. But it was never actually part of the
+framework to begin with.
+
+The only thing that Scrum has to say about this idea of readiness is that a
+backlog item, or a user story, is "ready" when it can be completed within a
+single sprint. All the additional pre-planning that we add is in hope to reduce
+the amount of discovery that we do in the scope of the development work itself.
+
+But Scrum accounts for the fact that discovery will happen during the sprint.
+It is based on this idea of empiricism, and inspection and adaptation, where
+we do something and then we see what happened, because we're discovering
+things about the world as we go.
+
+=== Product Owner
+
+The industry has turned this word "Product Owner" to mean what used to be
+called a "Business Analyst" - ie. just a requirements person. And the
+Product Onwer has maybe one team, and then there is a Product Manager who
+has more strategic oversight over the whole product.
+
+But in the Scrum Guide, the Product _Owner_ is literally the owner of the
+product (or a representative of them).
+
+In Scrum, there is not meant to be a hierarchy on the "product" side. Again,
+this idea of the "product" discipline has suffered from linguistic drift.
+
+In fact, in Scrum, the Product Owner is not necessarily the person who writes
+the user stories - that could be delegated to the Scrum team itself.
+
 === Overhead
 
 Scrum is horribly inefficient. It offers higher predictability to the business,
@@ -666,6 +793,71 @@ Responding to change over following a plan
 
 === Velocity culture / hustle culture
 
+////
+
+In fairness, story points are NOT part of The Scrum Guide. Velocity metrics
+and story points are NOT Scrum, rather they are supplemental practices that
+have been added on top of Scrum by project managers.
+
+Now, older versions of The Scrum Guide did talk about where work needed to be
+"summed", and this perhaps drove this behavior of assigning numerical values
+to work items so we could add it up and see what our throughput capacity is
+projected to be in the next increment. In fairness, the new Scrum guides have
+done away with this reference, which now says:
+
+[quote, The Scrum Guide 20XX]
+____
+Various practices exist to forecast progress, like burn-downs, burn-ups, or
+cumulative flows. While proven useful, these do not replace the importance of
+empiricism.
+____
+
+ie. The Scrum Guides acknowledges that in complex projects, what will happen
+is largely unknown. The guides mentions things like burn-down charts as being
+_potentially_ useful in some contexts, but it does not prescribe any of that.
+
+Instead, Scrum says that the sprint itself provides points at which progress
+can be inspected. Scrum's take on predictability is this:
+
+[quote, The Scrum Guide 20XX]
+____
+Sprints enable predictability by ensuring inspection and adaptation of progress
+toward a product goal.
+____
+
+The point is that Scrum creates a convenient _framework_ into which project
+managers can shoehorn these things, and turn agile practices into a feature
+factory. Scrum creates fertile ground for micro-management. It sort of enables
+micro-management, it makes it easier. But Scrum itself has something to say on
+this:
+
+[quote, The Scrum Guide 20XX]
+____
+Teams are structured and empowered by the organization to manage their own work.
+____
+
+So in Scrum teams are meant to be self-managing, no micro-managed. It is in
+practice that we struggle with this - and this is why Scrum gets augments by
+practices like story points, backlog refinement, and so on. This is perhaps
+a result of software development being undertaken in the context of an
+increasingly varied range of business domains, and so we have non-IT business
+stakeholders who see IT as a delivery unit within the organization, and that
+is why the obsession with delivery of points etc.
+
+So although Scrum does not directly promote hustle culture, it does create
+the conditions in which it can thrive.
+
+''''
+
+What "success" is in Scrum is often meeting the sprint goal. But actually the
+sprint goal is meant to be detached somewhat from the _number_ of items we
+say we're going to complete.
+
+Scrum is poorly understood as a self-managing team framework. It does not really
+provide guidance on how a team should be self-managing.
+
+////
+
 > By now, we all (should) know that agile is not about being faster. It's about
 delivering value sooner and in a constant manner and being able to react and
 change course earlier.
@@ -682,6 +874,40 @@ experienced people first (they never get to the burnout stage because they
 have prior experience).
 
 Feature factories
+
+=== Sprints are obsolete
+
+This is another common criticism of Scrum: that sprints are obsolete. The idea
+of a sprint is that you have a fixed amount of time to deliver a fixed amount
+of work. But with modern continuous integration and continuous delivery practices,
+this is seen as being somewhat archaic.
+
+We can release way more often than every 2 weeks.
+
+Back in 2011-ish, The Scrum Guide did talk about release planning, but since it
+has detached itself from release cadence. In other words, the sprint does _not_
+have to map to the release cadence.
+
+[quote, The Scrum Guide 20XX]
+____
+Multiple increments may be delivered within a sprint.
+____
+
+So, you can release as often as you want during a sprint.
+
+A related  misconception is that the sprint review meeting is a demo to the
+stakeholders, so they can approve what is going to be released. But actually
+the review could be an accumulation of different increments that have already
+been released.
+
+The sprint review is actually a collaborative working session with the
+stakeholders, the main aim being to determine what should be prioritized next.
+
+[quote, The Scrum Guide 20XX]
+____
+Avoid limiting it [the sprint review] to a presentation. Attendees collaborate
+on what to do next.
+____
 
 === High-performing tams
 
@@ -942,6 +1168,19 @@ and other process models are similar in this regard.
 Scrum is not an agile process, it is a _feature factory_ process. A feature
 factory we might define as... [see https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2]
 
+''''
+
+In fairness, the industry has blamed Scrum for lots of things - and some of
+that is justified. But Scrum has morphed and mutated into something else that
+is quite distinct from The Scrum Guide.
+
+But does that matter?
+
+Scrum lost! We're not going to take back the meaning of Scrum.
+
+The _agile industrial complex_ has turned Scrum into a tool for micro-managing
+the delivery – the factory-style delivery – of software development teams.
+
 ////
 
 I don't know why the software industry is so obsessed with process optimization.
@@ -1173,8 +1412,14 @@ The response to things not going well is to do more planning!
 * https://ronjeffries.com/xprog/articles/beyond-agile-new-principles/[Beyond agile: new principles?],
   Ron Jeffries (2010)
 
+* https://ronjeffries.com/articles/016-09ff/defense/[Dark Scrum],
+  Ron Jeffries (2016)
+
 * https://martinfowler.com/bliki/FlaccidScrum.html[Flaccid Scrum],
   Martin Fowler (2009)
+
+* https://martinfowler.com/articles/agile-aus-2018.html[The State of Agile Software in 2018],
+  Martin Fowler (2018)
 
 * https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2[12 signs you're in a feature factory],
   John Cutler (2016)
