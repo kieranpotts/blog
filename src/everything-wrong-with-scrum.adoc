@@ -849,6 +849,25 @@ the conditions in which it can thrive.
 
 ''''
 
+And there is a strong case to be made that Scrum came from the same place that
+many of these other bad practices did.
+
+> I'm sat in front of my copy of "Agile Project Management with Scrum" (2004)
+authored by Ken Schwaber, co creator of SCRUM.
+Before page 25, he has already shown an example spread sheet of a backlog with
+work assigned numerical values, he's talked positively about burn-down charts
+too. This is right around the point that the "scrum master" role is introduced,
+in some detail, explaining that it is not a role of authority. He literally
+explains that any authority that the scrum master has, comes from their
+responsibility to remove impediments.
+
+It seems to me that, also the 2020 Scrum Guide is really pretty good, they've
+been trying to get back to the original intent of Scrum, which was to be a
+lightweight framework for organizing work into timeboxed increments... perhaps
+in response to criticism from just about every signatory of The Agile Manifesto.
+
+''''
+
 What "success" is in Scrum is often meeting the sprint goal. But actually the
 sprint goal is meant to be detached somewhat from the _number_ of items we
 say we're going to complete.
@@ -1398,6 +1417,24 @@ you can plan and predict everything (with a little contingency).
 
 The response to things not going well is to do more planning!
 
+''''
+
+> i worked on a team that truly embodied the scrum / agile mindset, and it was
+the best 2 years of my professional life. The work itself we were doing, not
+quite enjoyable, but the team spirit was the most enjoyable I ever had,...
+The Scrum Master was a lifelong team sport player, and wherever he went, he is
+the captain, because of his innate leadership skill, and he brought those to his
+scrum mastering, and people were empowered, they were there for each other,
+people truly enjoyed each other company.
+
+> I've experienced the magic as well.  Looking back I don't even really
+attribute it to Scrum or Agile, but to leaders who understood the 'why' of the
+frameworks and principles, and who actively worked against bureaucracy and too
+much process.  So many leaders/companies apply process without ever even asking
+if it's making things better.  It provides what they really want, which is (the
+illusion of) control.  Understandable too.  But the real ones know how to give
+trust and provide just enough scaffolding around the teams to provide structure
+and transparency.
 
 ////
 
