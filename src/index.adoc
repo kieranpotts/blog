@@ -14,6 +14,9 @@ link:/feeds/atom.xml[Atom], or
 link:/feeds/feed.json[JSON Feed],
 or follow me on link:https://www.linkedin.com/in/kieranpotts/[LinkedIn].
 
+* link:./essential-versus-accidental-complexity[Mental models: essential versus accidental complexity] +
+  [.small]#7 December 2024#
+
 * link:./30-years-of-cybercafes[30 years of cybercafés] +
   [.small]#1 September 2024#
 
