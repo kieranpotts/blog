@@ -1,7 +1,6 @@
 = Hello, world
 Kieran Potts, 5 August 2019
-:description: Welcome to my new blog, an exploration of the state of the \
-  software industry.
+:description: Welcome to my new blog, an exploration of the state of the software industry.
 :docinfo: shared
 :nofooter:
 
@@ -10,86 +9,44 @@ Kieran Potts, 5 August 2019
 :link-bjss:         https://www.bjss.com/
 :link-specsavers:   https://www.specsavers.co.uk/
 
-Welcome to my new blog. I will use this space to explore the history of
-software engineering, analyze the current state of the industry, and try to
-predict its future trajectory.
+Welcome to my new blog. I will use this space to explore the history of software engineering, analyze the current state of the industry, and try to predict its future trajectory.
 
 It's a good time to be a software engineer. This is software's golden age.
 
-Software, and the global computer networks via which it is distributed, is now
-critical infrastructure, essential to the normal functioning of whole economies
-and societies.
+Software, and the global computer networks via which it is distributed, is now critical infrastructure, essential to the normal functioning of whole economies and societies.
 
-In the consumer space, there is easy access to a never-ending treasure trove of
-exotic digital goods and services, some of which have reached awesome levels of
-sophistication in their user experience.
+In the consumer space, there is easy access to a never-ending treasure trove of exotic digital goods and services, some of which have reached awesome levels of sophistication in their user experience.
 
-The methods and tools we use to make software are better than ever, too. We have
-an extraordinary choice of languages, platforms, and methodologies at our
-disposal. And the most superior technologies tend to be given away
-entirely for free. It is now the norm for software firms to invest substantial
-resources in the invention of new and improved tools that facilitate the
-manufacture of software… then promptly waive all their rights to the
-intellectual property!
+The methods and tools we use to make software are better than ever, too. We have an extraordinary choice of languages, platforms, and methodologies at our disposal. And the most superior technologies tend to be given away entirely for free. It is now the norm for software firms to invest substantial resources in the invention of new and improved tools that facilitate the manufacture of software… then promptly waive all their rights to the intellectual property!
 
-With the aid of open source tooling and cheap computing capacity, we have
-automated away many aspects of our jobs. This means we can deliver more and
-more, faster and faster.
+With the aid of open source tooling and cheap computing capacity, we have automated away many aspects of our jobs. This means we can deliver more and more, faster and faster.
 
-Yet for all the promise of agile development cycles and lean business models,
-our industry is notorious for its stubborn ineptitude to deliver completed
-products on time, on budget, and to spec.
+Yet for all the promise of agile development cycles and lean business models, our industry is notorious for its stubborn ineptitude to deliver completed products on time, on budget, and to spec.
 
-Runaway projects – the ones that _completely_ spiral out of control – are not at
-all exceptional.
+Runaway projects – the ones that _completely_ spiral out of control – are not at all exceptional.
 
-The software crisis has been sustained for {link-nato-report}[50 years] now. The
-primary function of the software industry is to improve productivity by
-assisting the automation of human activities and business processes. How can it
-be that the very same industry is riddled with such inefficiency and folly?
+The software crisis has been sustained for {link-nato-report}[50 years] now. The primary function of the software industry is to improve productivity by assisting the automation of human activities and business processes. How can it be that the very same industry is riddled with such inefficiency and folly?
 
-Developer burnout is a very real and widespread problem, too. This modern
-phenomenon is particularly troubling. Too often software developers are treated
-like exchangeable pinions on an assembly line. Software engineering ought to be
-regarded as a modern learned profession.
+Developer burnout is a very real and widespread problem, too. This modern phenomenon is particularly troubling. Too often software developers are treated like exchangeable pinions on an assembly line. Software engineering ought to be regarded as a modern learned profession.
 
 The evidence cannot be denied: we're still not very good at making software.
 
 This is the core subject of my blog.
 
-I will use this space to scrutinize the history of software manufacture,
-investigate the current state of the industry, and try to predict its future
-trajectory. And I'll make some suggestions for practical steps we can all take
-to do things better.
+I will use this space to scrutinize the history of software manufacture, investigate the current state of the industry, and try to predict its future trajectory. And I'll make some suggestions for practical steps we can all take to do things better.
 
 == About me
 
 I'm a self-taught software engineer based near Bristol, UK.
 
-I started my career in the early 2000s as a technology journalist. As
-traditional media was challenged by new media, I moved into online journalism
-and later started my own consultancy practice, providing web site development
-and digital content production services to small and medium businesses.
+I started my career in the early 2000s as a technology journalist. As traditional media was challenged by new media, I moved into online journalism and later started my own consultancy practice, providing web site development and digital content production services to small and medium businesses.
 
-Working as an independent consultant for more than a decade I gained extensive
-experience working for all sorts of organizations – big and small, old and new,
-public and private – and developing technical solutions for a whole jumble of
-problem domains.
+Working as an independent consultant for more than a decade I gained extensive experience working for all sorts of organizations – big and small, old and new, public and private – and developing technical solutions for a whole jumble of problem domains.
 
-My technical skills matured in lockstep with the advancement of
-{link-web-platform}[the web platform] and the JavaScript language. Incrementally,
-I turned my hobby of computer programming into a career in software engineering.
+My technical skills matured in lockstep with the advancement of {link-web-platform}[the web platform] and the JavaScript language. Incrementally, I turned my hobby of computer programming into a career in software engineering.
 
-Today, though I continue to work close to the code, increasingly I find myself
-engaged in software design and architecture, project delivery, and the
-management of technical teams.
+Today, though I continue to work close to the code, increasingly I find myself engaged in software design and architecture, project delivery, and the management of technical teams.
 
-I'm a big advocate of domain-driven design, immutable data modelling, and
-test-driven iterative and incremental processes supported by continuous
-integration and automated delivery toolchains. These methods and tools I've
-found to be advantageous in almost every software project in which I've been
-involved.
+I'm a big advocate of domain-driven design, immutable data modelling, and test-driven iterative and incremental processes supported by continuous integration and automated delivery toolchains. These methods and tools I've found to be advantageous in almost every software project in which I've been involved.
 
-I've amassed a lot of experience and expertise… and a lot of strong opinions!
-Now I want to share my thoughts with you. I hope to bring some original thought
-to our industry's conversations.
+I've amassed a lot of experience and expertise… and a lot of strong opinions! Now I want to share my thoughts with you. I hope to bring some original thought to our industry's conversations.

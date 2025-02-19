@@ -2,5 +2,4 @@
 :docinfo: shared
 :nofooter:
 
-Sorry, the content you're looking for has been deleted or moved elsewhere, or it never
-existed in the first place.
+Sorry, the content you're looking for has been deleted or moved elsewhere, or it never existed in the first place.

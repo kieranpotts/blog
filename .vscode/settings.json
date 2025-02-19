@@ -2,7 +2,6 @@
 
   /* Vertical guidelines for line wrapping. */
   "editor.rulers": [
-    80,
     100,
   ],
 

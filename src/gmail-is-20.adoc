@@ -12,151 +12,59 @@ Kieran Potts, 1 April 2024
 :link-devcom:     https://web.archive.org/web/20181213120242/https://www.developer.com/design/article.php/3526681
 :link-myownemail: https://www.disobey.com/ghostsites/2005/08/memories-of-myownemailcom.html
 
-Gmail was launched 20 years ago today. Early adopters will remember the 1GB of
-free storage, the fast search, and the years-long invite-only beta. For web
-developers, in retrospect we can see the launch of Gmail as a watershed moment
-in the history of our craft. It marked the start of the era of modern web
-applications as we know them today.
+Gmail was launched 20 years ago today. Early adopters will remember the 1GB of free storage, the fast search, and the years-long invite-only beta. For web developers, in retrospect we can see the launch of Gmail as a watershed moment in the history of our craft. It marked the start of the era of modern web applications as we know them today.
 
-In the late 1990s and early 2000s, I spent a lot of time away from home,
-studying and traveling. I signed up to Hotmail when I was backpacking around
-Canada in early 1998, so I could send my parents instant updates on my
-whereabouts. This was my first email address that was not coupled to our home
-Internet service provider.
+In the late 1990s and early 2000s, I spent a lot of time away from home, studying and traveling. I signed up to Hotmail when I was backpacking around Canada in early 1998, so I could send my parents instant updates on my whereabouts. This was my first email address that was not coupled to our home Internet service provider.
 
-Then, sometime around 1999, I signed up with MyOwnEmail.com, a niche webmail
-service that intriguingly offered "personalized email addresses". As well as
-picking a username, you could choose from over 200 domain names. So, for a
-while, my personal email address was "\kieran@cornerpub.com".
+Then, sometime around 1999, I signed up with MyOwnEmail.com, a niche webmail service that intriguingly offered "personalized email addresses". As well as picking a username, you could choose from over 200 domain names. So, for a while, my personal email address was "\kieran@cornerpub.com".
 
-Like Hotmail and Yahoo Mail (formerly RocketMail), the two dominant webmail
-services at the time, MyOwnEmail was slow and clunky, it had limited storage
-(you had to keep deleting old messages to make room for new ones), and it was
-riddled with spam.
+Like Hotmail and Yahoo Mail (formerly RocketMail), the two dominant webmail services at the time, MyOwnEmail was slow and clunky, it had limited storage (you had to keep deleting old messages to make room for new ones), and it was riddled with spam.
 
 Then along came Gmail.
 
-Announced on 1 April 2004 via an {link-google}[offbeat press release], Google's
-webmail service proved to be no April Fools' joke.
+Announced on 1 April 2004 via an {link-google}[offbeat press release], Google's webmail service proved to be no April Fools' joke.
 
 == Gmail's architecture
 
-Gmail was a technological marvel. It was the first mainstream web application
-that used only native web technologies (HTTP, HTML, CSS, JavaScript, and bitmap
-graphics) to deliver levels of functionality and user experience not
-previously thought possible in web browsers – not without the help of
-extensions, anyway.
+Gmail was a technological marvel. It was the first mainstream web application that used only native web technologies (HTTP, HTML, CSS, JavaScript, and bitmap graphics) to deliver levels of functionality and user experience not previously thought possible in web browsers – not without the help of extensions, anyway.
 
-Gmail made extensive use of JavaScript, running in the browser, to mimic the
-behavior of desktop email clients. Rather than users needing to refresh the page
-to update their inbox, new mail just sort of _appeared!_ And when you clicked to
-open a message, it was spontaneous – no waiting for it to load!
+Gmail made extensive use of JavaScript, running in the browser, to mimic the behavior of desktop email clients. Rather than users needing to refresh the page to update their inbox, new mail just sort of _appeared!_ And when you clicked to open a message, it was spontaneous – no waiting for it to load!
 
-Gmail was not the first web site to achieve this. That was probably Oddpost, a
-paid-for webmail service that had pioneered this technique two years earlier.
-But for many web users at that time, it was Gmail that was their first
-experience of a desktop-like application UI running within their browser – what
-today we would call a single-page application.
+Gmail was not the first web site to achieve this. That was probably Oddpost, a paid-for webmail service that had pioneered this technique two years earlier. But for many web users at that time, it was Gmail that was their first experience of a desktop-like application UI running within their browser – what today we would call a single-page application.
 
-Oddpost was acquired by Yahoo in 2004, just a few months after the launch of
-Gmail. Sometime after, Yahoo Mail was switched over to use Oddpost's UI. But by
-then Gmail had caught the imagination of the web community. In online forums,
-early adopters shared their stories about the great user experience, the
-integrated search, the gigabyte of free storage, and the effective spam
-filtering.
+Oddpost was acquired by Yahoo in 2004, just a few months after the launch of Gmail. Sometime after, Yahoo Mail was switched over to use Oddpost's UI. But by then Gmail had caught the imagination of the web community. In online forums, early adopters shared their stories about the great user experience, the integrated search, the gigabyte of free storage, and the effective spam filtering.
 
-But Google's masterstroke was making the service available by invitation only.
-This created a sense of exclusivity and desirability around Gmail, accentuating
-the buzz.
+But Google's masterstroke was making the service available by invitation only. This created a sense of exclusivity and desirability around Gmail, accentuating the buzz.
 
-It was Gmail, not Yahoo Mail, that was widely regarded as the principal
-innovator in the webmail space. But more than that, Gmail sealed the direction
-of the web's evolution as an application software runtime environment.
+It was Gmail, not Yahoo Mail, that was widely regarded as the principal innovator in the webmail space. But more than that, Gmail sealed the direction of the web's evolution as an application software runtime environment.
 
 == Gmail's impact on the web platform
 
-In 2004, the World Wide Web was still predominantly a network of interconnected
-static text documents, some of which were peppered with images and simple
-animations, and a rudimentary level of interactivity through forms and basic
-client-side scripting to enable "dynamic HTML". What Gmail proved is that we
-could use those same primitive technologies and, with a bit of ingenuity and
-more than a few hacks and workarounds, build rich user experiences not
-dissimilar to desktop applications.
+In 2004, the World Wide Web was still predominantly a network of interconnected static text documents, some of which were peppered with images and simple animations, and a rudimentary level of interactivity through forms and basic client-side scripting to enable "dynamic HTML". What Gmail proved is that we could use those same primitive technologies and, with a bit of ingenuity and more than a few hacks and workarounds, build rich user experiences not dissimilar to desktop applications.
 
-Up to then, effort to deliver "rich Internet applications" had focused on
-overlaying other technologies, via browser plugins, to extend the capabilities
-of the web platform. Unlike the open technologies of the web, these extensions
-consisted of proprietary software that users had to download and install on
-their computer. There was of course Macromedia Flash MX (later named Adobe
-Flash), but also Java applets and Microsoft Silverlight were competing in this
-space.
+Up to then, effort to deliver "rich Internet applications" had focused on overlaying other technologies, via browser plugins, to extend the capabilities of the web platform. Unlike the open technologies of the web, these extensions consisted of proprietary software that users had to download and install on their computer. There was of course Macromedia Flash MX (later named Adobe Flash), but also Java applets and Microsoft Silverlight were competing in this space.
 
-The alternative approach, popularized by Gmail, became known as "ajax". This
-term was coined by Jesse Garrett, co-founder of San Francisco technology
-consultancy Adaptive Path, in a {link-ajax}[2005 blog post]. The name was
-shorthand for "Asynchronous JavaScript + XML", and it captured the idea of using
-client-side JavaScript to make asynchronous HTTP requests to fetch new data
-from the server – which commonly was returned in the XML format at that time –
-and to use that data to dynamically redraw parts of the user interface.
+The alternative approach, popularized by Gmail, became known as "ajax". This term was coined by Jesse Garrett, co-founder of San Francisco technology consultancy Adaptive Path, in a {link-ajax}[2005 blog post]. The name was shorthand for "Asynchronous JavaScript + XML", and it captured the idea of using client-side JavaScript to make asynchronous HTTP requests to fetch new data from the server – which commonly was returned in the XML format at that time – and to use that data to dynamically redraw parts of the user interface.
 
-Google invested heavily in the ajax approach to web application architecture.
-Google Calendar and – most impressively of all – Google Maps further tested the
-boundaries of what was possible using only the then-nascent capabilities of web
-browsers.
+Google invested heavily in the ajax approach to web application architecture. Google Calendar and – most impressively of all – Google Maps further tested the boundaries of what was possible using only the then-nascent capabilities of web browsers.
 
-Google Web Toolkit, an application development framework for making
-web front-ends using Java, was publicly released in 2006 and underpinned many of
-Google's subsequent ajax-style web applications. jQuery was released around the
-same time and it became the go-to library for to wider web development community
-to solve the same problem.
+Google Web Toolkit, an application development framework for making web front-ends using Java, was publicly released in 2006 and underpinned many of Google's subsequent ajax-style web applications. jQuery was released around the same time and it became the go-to library for to wider web development community to solve the same problem.
 
-Gmail showed the technology industry what was possible with the web platform.
-Perhaps more importantly, it set new user expectations about what good user
-experience looked like in the web browser.
+Gmail showed the technology industry what was possible with the web platform. Perhaps more importantly, it set new user expectations about what good user experience looked like in the web browser.
 
-Around this time, a rift opened up between stakeholders in web standardization
-efforts. Microsoft was pushing its Extensible Application Markup Language (XAML)
-and Silverlight, while the World Wide Web Consortium (W3C) was working on XHTML
-2.0 and XForms – efforts to make HTML a stricter markup format and thus more
-extensible and interoperable with other XML-based data formats. Meanwhile,
-Apple, Mozilla and Opera broke away and formed the Web Hypertext Application
-Technology Working Group (WHATWG) to develop an alternative evolution of the
-existing HTML standard. This focused on maintaining backwards compatibility
-while extending the language to offer many of the capabilities of Flash and
-Silverlight, such as the ability to play audio and video directly through the
-web browser.
+Around this time, a rift opened up between stakeholders in web standardization efforts. Microsoft was pushing its Extensible Application Markup Language (XAML) and Silverlight, while the World Wide Web Consortium (W3C) was working on XHTML 2.0 and XForms – efforts to make HTML a stricter markup format and thus more extensible and interoperable with other XML-based data formats. Meanwhile, Apple, Mozilla and Opera broke away and formed the Web Hypertext Application Technology Working Group (WHATWG) to develop an alternative evolution of the existing HTML standard. This focused on maintaining backwards compatibility while extending the language to offer many of the capabilities of Flash and Silverlight, such as the ability to play audio and video directly through the web browser.
 
-To cut a long story short – the politics of all this is not relevant to the
-subject of this blog post – the WHATWG's approach ultimately won. In 2009, the
-W3C abandoned XHTML and adopted the WHATWG's extended HTML standard – what
-became known as HTML5. The industry had gotten behind the idea of building upon
-existing open web standards to deliver the rich, interactive experiences that
-users had come to expect from Gmail and other early web apps.
+To cut a long story short – the politics of all this is not relevant to the subject of this blog post – the WHATWG's approach ultimately won. In 2009, the W3C abandoned XHTML and adopted the WHATWG's extended HTML standard – what became known as HTML5. The industry had gotten behind the idea of building upon existing open web standards to deliver the rich, interactive experiences that users had come to expect from Gmail and other early web apps.
 
-The web platform thus evolved from a document delivery system to an application
-software runtime environment. Think about that. Today, we tend to talk about web
-applications rather than web pages. It's a paradigm shift in how we think about
-delivering services over the web. That shift is symbolized by the launch of
-Gmail 20 years ago.
+The web platform thus evolved from a document delivery system to an application software runtime environment. Think about that. Today, we tend to talk about web applications rather than web pages. It's a paradigm shift in how we think about delivering services over the web. That shift is symbolized by the launch of Gmail 20 years ago.
 
 == Conclusion
 
-The launch of Gmail represents a watershed moment in the evolution of the web
-platform. It demonstrated what was possible using only the native capabilities
-of web browsers, and it's commercial success played no small part in steering the
-industry to doubling down on standardization of open (non-proprietary) web
-technologies.
+The launch of Gmail represents a watershed moment in the evolution of the web platform. It demonstrated what was possible using only the native capabilities of web browsers, and it's commercial success played no small part in steering the industry to doubling down on standardization of open (non-proprietary) web technologies.
 
-Gmail was one of the first of a new breed of software applications that have
-since become the norm. This was perhaps the first large-scale
-software-as-a-service product: delivered over the network, accessible from
-anywhere, backed by flexible cloud storage, and available under an ad-supported
-"freemium" software licensing model.
-
-Gmail encapsulated all the key concepts of cloud computing into a consumer
-product that ran in the web browser but behaved like a regular software
-application. Despite all the innovation in the web space since, at a fundamental
-level we're still developing web applications like this today.
+Gmail was one of the first of a new breed of software applications that have since become the norm. This was perhaps the first large-scale software-as-a-service product: delivered over the network, accessible from anywhere, backed by flexible cloud storage, and available under an ad-supported"freemium" software licensing model.
+ 
+Gmail encapsulated all the key concepts of cloud computing into a consumer product that ran in the web browser but behaved like a regular software application. Despite all the innovation in the web space since, at a fundamental level we're still developing web applications like this today.
 
 This is the Gmail era.
 

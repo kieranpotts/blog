@@ -1,7 +1,6 @@
 = Rethinking REST
 Kieran Potts, 24 May 2021
-:description: What's wrong with the term "REST API", and what should we use \
-  instead?
+:description: What's wrong with the term "REST API", and what should we use instead?
 :docinfo: shared
 :nofooter:
 
@@ -27,503 +26,221 @@ Kieran Potts, 24 May 2021
 :link-blogcast:        https://anchor.fm/blog-cast/episodes/Ep3-Kieran-Potts-Should-we-rebrand-REST-e12g3bi
 :link-infoq-china:     https://www.infoq.cn/article/XvBXPx8YXTySt3TFMvdi
 
-In this blog post I argue the case for consigning the term "REST API" to
-history. In its place we should adopt the terms "HTTP API" and "hypermedia API",
-which better differentiate two distinctive designs for the programmatic
-interfaces of web services.
+In this blog post I argue the case for consigning the term "REST API" to history. In its place we should adopt the terms "HTTP API" and "hypermedia API", which better differentiate two distinctive designs for the programmatic interfaces of web services.
 
-Imagine you've been tasked with the problem of designing the API for a new web
-service.
+Imagine you've been tasked with the problem of designing the API for a new web service.
 
 Where would you start?
 
-At a high level, you'll want to consider which general style of API (REST, RPC,
-graph, etc.) will be the best-fit for your application's business domain. You'll
-want to settle on a transport protocol (which will probably be HTTP but you
-might consider WebSocket, or both). And you'll need to choose between a medley
-of generic serialization standards (JSON and XML lead the field here) or you
-might opt for a specialist messaging protocol with plain text (SOAP, OData,
-GraphQL) or binary message encoding (Thrift, Avro, Protocol Buffers).
+At a high level, you'll want to consider which general style of API (REST, RPC, graph, etc.) will be the best-fit for your application's business domain. You'll want to settle on a transport protocol (which will probably be HTTP but you might consider WebSocket, or both). And you'll need to choose between a medley of generic serialization standards (JSON and XML lead the field here) or you might opt for a specialist messaging protocol with plain text (SOAP, OData, GraphQL) or binary message encoding (Thrift, Avro, Protocol Buffers).
 
-All that before you even start to think about modelling your application's
-business domain.
+All that before you even start to think about modelling your application's business domain.
 
 But your first thought will surely be: _"Hey, let's do REST!"_
 
-REST is just the coolest thing in web service API design right now, isn't it? In
-recent years, whenever organizations have wanted to publish new public web
-services, they've customarily turned to REST as the go-to architectural style
-for their APIs, shunning alternative approaches like SOAP or various RPC
-conventions.
+REST is just the coolest thing in web service API design right now, isn't it? In recent years, whenever organizations have wanted to publish new public web services, they've customarily turned to REST as the go-to architectural style for their APIs, shunning alternative approaches like SOAP or various RPC conventions.
 
 So, what is REST?
 
-It's worth asking that question. Because, despite being so revered, REST is
-widely and wildly misunderstood and misrepresented.
+It's worth asking that question. Because, despite being so revered, REST is widely and wildly misunderstood and misrepresented.
 
 == What is REST?
 
-REST stands for REpresentational State Transfer. A system that implements the
-REST architectural style is said to be "RESTful".
+REST stands for REpresentational State Transfer. A system that implements the REST architectural style is said to be "RESTful".
 
-Unlike SOAP, GraphQL, OData and most other web service API solutions, REST is
-not a protocol or even a standard of any kind. Rather, REST is an architectural
-style, or a set of lofty design constraints.
+Unlike SOAP, GraphQL, OData and most other web service API solutions, REST is not a protocol or even a standard of any kind. Rather, REST is an architectural style, or a set of lofty design constraints.
 
-REST was christened by computer scientist Roy Fielding in his
-{link-thesis}[PhD thesis], published at the turn of the century. But that
-dissertation is not much studied – which is understandable, as it's intensely
-scholarly. The target audience was academia rather than trade. Nevertheless,
-shortly after publication, the terms "REST" and "RESTful" got added to the
-popular lexicon of the IT industry.
+REST was christened by computer scientist Roy Fielding in his {link-thesis}[PhD thesis], published at the turn of the century. But that dissertation is not much studied – which is understandable, as it's intensely scholarly. The target audience was academia rather than trade. Nevertheless, shortly after publication, the terms "REST" and "RESTful" got added to the popular lexicon of the IT industry.
 
-What happened next was an unfortunate dumbing down of REST from how it had been
-originally conceptualized. Our industry's penchant for buzzwords, coupled with
-general ignorance of Fielding's original work, has lead to the definition of
-REST becoming more and more diluted and distorted with time.
+What happened next was an unfortunate dumbing down of REST from how it had been originally conceptualized. Our industry's penchant for buzzwords, coupled with general ignorance of Fielding's original work, has lead to the definition of REST becoming more and more diluted and distorted with time.
 
-In researching for this article, I've gone back to the authority on this matter
-and examined Fielding's original thesis and subsequent writings on REST.
+In researching for this article, I've gone back to the authority on this matter and examined Fielding's original thesis and subsequent writings on REST.
 
 == The REST constraints
 
-In his dissertation, Fielding defined {link-six-constraints}[six constraints]
-for a RESTful system. I'll summarize those constraints using my own words. As
-you read through the list, try to think of examples of real-world applications
-that meet all the constraints.
+In his dissertation, Fielding defined {link-six-constraints}[six constraints] for a RESTful system. I'll summarize those constraints using my own words. As you read through the list, try to think of examples of real-world applications that meet all the constraints.
 
 === 1. Client-server model
 
-The foundation architecture for a RESTful system is the client-server model.
-Clients run in separate processes from servers and there must be a sufficient
-degree of logical separation such that clients are not concerned with business
-logic and data storage, and servers are not concerned with the user interface or
-its state.
+The foundation architecture for a RESTful system is the client-server model. Clients run in separate processes from servers and there must be a sufficient degree of logical separation such that clients are not concerned with business logic and data storage, and servers are not concerned with the user interface or its state.
 
-This logical and physical separation of concerns makes client applications more
-portable across multiple software platforms, and server applications become
-simpler. It also means that servers and clients can be developed, maintained and
-even fully replaced independently of one another, as long as the programmatic
-interfaces between the two remain stable.
+This logical and physical separation of concerns makes client applications more portable across multiple software platforms, and server applications become simpler. It also means that servers and clients can be developed, maintained and even fully replaced independently of one another, as long as the programmatic interfaces between the two remain stable.
 
 === 2. Statelessness
 
-The second constraint of REST is that all interactions between client and server
-must be stateless.
+The second constraint of REST is that all interactions between client and server must be stateless.
 
-This means that all the application state (aka. session state or extrinsic state)
-necessary for a server to handle a client's request is contained within the
-request itself. Thus the server never needs to persist the state of any client
-beyond a single request-response lifecycle. This leaves the server responsible
-only for persisting resource state (aka. intrinsic state) – the stuff that needs
-to be synced across all clients.
+This means that all the application state (aka. session state or extrinsic state) necessary for a server to handle a client's request is contained within the request itself. Thus the server never needs to persist the state of any client beyond a single request-response life cycle. This leaves the server responsible only for persisting resource state (aka. intrinsic state) – the stuff that needs to be synced across all clients.
 
-Stateless systems are hugely scalable. That's because servers have less data to
-store, they can more quickly free-up resources after fulfilling a client
-request, and they have more scope to process requests in parallel.
+Stateless systems are hugely scalable. That's because servers have less data to store, they can more quickly free-up resources after fulfilling a client request, and they have more scope to process requests in parallel.
 
-Furthermore, monitoring is easier (because you don't need a chronological
-history of requests to reproduce a client's state) and reliability can be
-improved (because there are more options to design a system for recovery from
-failures when that system is stateless).
+Furthermore, monitoring is easier (because you don't need a chronological history of requests to reproduce a client's state) and reliability can be improved (because there are more options to design a system for recovery from failures when that system is stateless).
 
-And client applications can be designed to optimize state transitions (for
-example by anticipating future user interactions and prefetching resources
-accordingly) and they can expose controls for users to directly manipulate their
-state – the quintessential example being the ubiquitous "back button" in web
-browsers, which runs a sort of "undo" operation on previous state transitions.
+And client applications can be designed to optimize state transitions (for example by anticipating future user interactions and prefetching resources accordingly) and they can expose controls for users to directly manipulate their state – the quintessential example being the ubiquitous "back button" in web browsers, which runs a sort of "undo" operation on previous state transitions.
 
 === 3. Cache-ability
 
-Another advantage of a stateless client-server architecture is that response
-messages become more generic and so more of those messages can be shared among
-multiple clients, so increasing the potential for server-side caching of
-responses. Specialist intermediary servers can be introduced to handle response
-caching, keeping this cross-cutting concern separate from the business logic on
-the end server.
+Another advantage of a stateless client-server architecture is that response messages become more generic and so more of those messages can be shared among multiple clients, so increasing the potential for server-side caching of responses. Specialist intermediary servers can be introduced to handle response caching, keeping this cross-cutting concern separate from the business logic on the end server.
 
-Furthermore, the REST style encourages servers to indicate to clients whether
-resources can be locally cached, too. Clients are encouraged to store and reuse
-cache-able responses wherever practical, and they are discouraged from using
-stale and invalid data. Client-side caching of the server's resources reduces the
-overall volume of client-server traffic, further improving the scalability of
-the server and the performance of the client.
+Furthermore, the REST style encourages servers to indicate to clients whether resources can be locally cached, too. Clients are encouraged to store and reuse cache-able responses wherever practical, and they are discouraged from using stale and invalid data. Client-side caching of the server's resources reduces the overall volume of client-server traffic, further improving the scalability of the server and the performance of the client.
 
 === 4. Uniform interface
 
-The REST architectural style requires client and server to communicate through a
-consistent interface, which should be as generic as possible. The prerequisites
-for achieving a "uniform interface" are the following design constraints:
+The REST architectural style requires client and server to communicate through a consistent interface, which should be as generic as possible. The prerequisites for achieving a "uniform interface" are the following design constraints:
 
-* *Resource-based APIs*: The main abstraction of information in REST is a
-resource. Any information that can be named can be a resource. A resource might
-be a virtual object such as a digital document or image, or a data structure
-representing attributes of a real-world thing such as a person or location.
-Whatever their nature, all resources must be identifiable using a universal
-system of unique identifiers.
+* *Resource-based APIs*: The main abstraction of information in REST is a resource. Any information that can be named can be a resource. A resource might be a virtual object such as a digital document or image, or a data structure representing attributes of a real-world thing such as a person or location. Whatever their nature, all resources must be identifiable using a universal system of unique identifiers.
 
-* *Resource manipulation through representations*: Clients should not need
-direct access to resources in their native format in order to be able to make
-changes to them. REST allows clients to create, manipulate, and even delete
-resources by using partial _representations_ of those resources. For example,
-a data entity persisted in a server-side database will be encoded within
-client-server messages in a different format to the original.
+* *Resource manipulation through representations*: Clients should not need direct access to resources in their native format in order to be able to make changes to them. REST allows clients to create, manipulate, and even delete resources by using partial _representations_ of those resources. For example, a data entity persisted in a server-side database will be encoded within client-server messages in a different format to the original.
 
-* *Self-descriptive messages*: Request and response messages must contain all
-the information needed to decode them. A payload's media type will determine
-which parser to invoke, of course. But, in the context of a server's response
-messages to its clients, the chosen media type must also provide sufficient
-metadata to fully describe the structure and semantics of all the encoded
-resource representations. The client should need only to understand the media
-type – and not the nature of the encoded resources – in order to gather _all_
-the information required to process the server's supplied data, just as the
-server had intended.
+* *Self-descriptive messages*: Request and response messages must contain all the information needed to decode them. A payload's media type will determine which parser to invoke, of course. But, in the context of a server's response messages to its clients, the chosen media type must also provide sufficient metadata to fully describe the structure and semantics of all the encoded resource representations. The client should need only to understand the media type – and not the nature of the encoded resources – in order to gather _all_ the information required to process the server's supplied data, just as the server had intended.
 
-* *Hypermedia as the engine of application state (HATEOAS)*: Not only should a
-server's response media types be fully self-describing of the data they encode,
-they should also embed instructions for clients to perform further operations
-on that data and its related data. This category of meta data is called control
-data. This is a key constraint of REST. RESTful servers must respond to a client
-request with an update to that client's state plus details of all the further
-operations now available to the client, give the client's new state and access
-permissions. To do this, RESTful servers encode their response messages in a
-hypermedia format – a media type that incorporates hypermedia controls, such as
-links and forms. Clients choose their next actions from the given list of
-available hypermedia controls. Thus, although clients persist their own
-application state, it is the server that drives all changes to that downstream
-state. This design has the effect of further decoupling clients from servers,
-since client applications require no hard-coded knowledge of their servers'
-available resources and operations.
+* *Hypermedia as the engine of application state (HATEOAS)*: Not only should a server's response media types be fully self-describing of the data they encode, they should also embed instructions for clients to perform further operations on that data and its related data. This category of meta data is called control data. This is a key constraint of REST. RESTful servers must respond to a client request with an update to that client's state plus details of all the further operations now available to the client, give the client's new state and access permissions. To do this, RESTful servers encode their response messages in a hypermedia format – a media type that incorporates hypermedia controls, such as links and forms. Clients choose their next actions from the given list of available hypermedia controls. Thus, although clients persist their own application state, it is the server that drives all changes to that downstream state. This design has the effect of further decoupling clients from servers, since client applications require no hard-coded knowledge of their servers' available resources and operations.
 
 === 5. Layered system
 
-In terms of the practicalities of provisioning infrastructure, REST prescribes a
-layered solution. A RESTful system should be able to accommodate the
-introduction of intermediary servers, to expand scale when needed. For example,
-intermediary servers may be used to enable load balancing or to provide shared
-caches. Intermediary servers can act as proxies for the back-end servers, and
-gateway servers can compose responses by gathering data from multiple specialist
-back-end services. Yet other layers can be introduced to focus on cross-cutting
-concerns such as the implementation of security policies and logging.
+In terms of the practicalities of provisioning infrastructure, REST prescribes a layered solution. A RESTful system should be able to accommodate the introduction of intermediary servers, to expand scale when needed. For example, intermediary servers may be used to enable load balancing or to provide shared caches. Intermediary servers can act as proxies for the back-end servers, and gateway servers can compose responses by gathering data from multiple specialist back-end services. Yet other layers can be introduced to focus on cross-cutting concerns such as the implementation of security policies and logging.
 
-The stateless nature of REST's client-server model makes it possible to scale
-server-side infrastructure both horizontally and vertically. But to maintain
-such complex, multi-layered server-side systems, the replacement or addition of
-new layers should not necessitate updates to the code or configuration of either
-the back-end servers or the clients. It follows that clients must not be able to
-tell whether they are connected directly to a back-end server or an intermediary.
+The stateless nature of REST's client-server model makes it possible to scale server-side infrastructure both horizontally and vertically. But to maintain such complex, multi-layered server-side systems, the replacement or addition of new layers should not necessitate updates to the code or configuration of either the back-end servers or the clients. It follows that clients must not be able to tell whether they are connected directly to a back-end server or an intermediary.
 
 === 6. Code-on-demand
 
-The final constraint of the REST architectural style is an optional one. Servers
-_may_ dynamically extend or customize the functionality of their clients by
-transferring additional program code to them at runtime, which the clients can
-then execute.
+The final constraint of the REST architectural style is an optional one. Servers _may_ dynamically extend or customize the functionality of their clients by transferring additional program code to them at runtime, which the clients can then execute.
 
-The idea is that, if new features can be downloaded to clients _after_
-deployment of those clients, the system as a whole becomes more rapidly
-extensible.
+The idea is that, if new features can be downloaded to clients _after_ deployment of those clients, the system as a whole becomes more rapidly extensible.
 
 == REST is for distributed information systems
 
-Can you think of an example of a software application that fits all these
-constraints – including the code-on-demand concept?
+Can you think of an example of a software application that fits all these constraints – including the code-on-demand concept?
 
 Indeed, there is such a system. And you will surely have heard of it.
 
 It is called the World Wide Web.
 
-Today, we tend to think of the web as an application _platform_. But of course
-the World Wide Web is itself an application – a _distributed_ application, but
-an application nonetheless. What Fielding was describing in his thesis were the
-constraints that had been applied to the architectural design of that
-application.
+Today, we tend to think of the web as an application _platform_. But of course the World Wide Web is itself an application – a _distributed_ application, but an application nonetheless. What Fielding was describing in his thesis were the constraints that had been applied to the architectural design of that application.
 
-Fielding's thesis was a kind of retrospective on the design decisions that led
-to the World Wide Web – a distributed hypermedia-driven information retrieval
-system – becoming the runaway success it was.
+Fielding's thesis was a kind of retrospective on the design decisions that led to the World Wide Web – a distributed hypermedia-driven information retrieval system – becoming the runaway success it was.
 
-Actually, correctly speaking, the REST constraints were formulated by Fielding
-over several years leading up to the publication of his eventual thesis. Over
-this period, Fielding was involved in the nascent specification of core web
-standards, notably HTTP/1.0 and HTTP/1.1, and the Uniform Resource Identifiers
-(URI) standard, as well as contributing to the founding of the Apache HTTP
-Server software. The REST principles were iteratively fine-tuned in parallel to
-these projects, and were explicitly intended to provide a framework for the
-"design, definition and deployment" of the overall architecture of the World
-Wide Web ecosystem. The REST constraints were considered necessary to "meet the
-needs of an Internet-scale distributed hypermedia system".
+Actually, correctly speaking, the REST constraints were formulated by Fielding over several years leading up to the publication of his eventual thesis. Over this period, Fielding was involved in the nascent specification of core web standards, notably HTTP/1.0 and HTTP/1.1, and the Uniform Resource Identifiers (URI) standard, as well as contributing to the founding of the Apache HTTP Server software. The REST principles were iteratively fine-tuned in parallel to these projects, and were explicitly intended to provide a framework for the "design, definition and deployment" of the overall architecture of the World Wide Web ecosystem. The REST constraints were considered necessary to "meet the needs of an Internet-scale distributed hypermedia system".
 
 [quote,Roy Fielding]
-The motivation for developing REST was to create an architectural model for how
-the Web should work, such that it could serve as the guiding framework for the
-Web protocol standards. […] The work was done as part of the Internet
-Engineering Taskforce (IETF) and World Wide Web Consortium (W3C) efforts to
-define the architectural standards for the Web: HTTP, URI, and HTML.
+The motivation for developing REST was to create an architectural model for how the Web should work, such that it could serve as the guiding framework for the Web protocol standards. […] The work was done as part of the Internet Engineering Taskforce (IETF) and World Wide Web Consortium (W3C) efforts to define the architectural standards for the Web: HTTP, URI, and HTML.
 
-REST did indeed influence some specific features of the web platform. For
-example, the REST constraint of cache-ability of resources led directly to the
-addition of the `Cache-Control`, `Age`, `Etag` and `Vary` header fields in
-HTTP/1.1. REST even informed the use of the word "resource" in the URI standard.
+REST did indeed influence some specific features of the web platform. For example, the REST constraint of cache-ability of resources led directly to the addition of the `Cache-Control`, `Age`, `Etag` and `Vary` header fields in HTTP/1.1. REST even informed the use of the word "resource" in the URI standard.
 
-When you look again at the REST constraints, knowing the context in which they
-were formulated, it all seems so obvious now:
+When you look again at the REST constraints, knowing the context in which they were formulated, it all seems so obvious now:
 
-1. The web is an implementation of the *client-server model* for distributed
-applications.
+1. The web is an implementation of the *client-server model* for distributed applications.
 
 2. The web's primary transport protocol, HTTP, is inherently *stateless*.
 
-3. HTTP provides semantics to describe the *cache-ability* of a server's
-resources, and persisting application state on the client-side is intrinsic to
-how web browsers work.
+3. HTTP provides semantics to describe the *cache-ability* of a server's resources, and persisting application state on the client-side is intrinsic to how web browsers work.
 
-4. The URI standard maps directly to REST's notion of *resources* with unique
-identifiers. Resources are represented by media types, which are declared using
-HTTP's `Content-Type` header, thus making HTTP messages self-descriptive. The
-HyperText Markup Language (HTML) is a hypermedia content type designed
-specifically for the web. With its embedded hypermedia controls (links and
-forms) that are used to drive application state changes, HTML meets all the
-other requirements of REST's *uniform interface*.
+4. The URI standard maps directly to REST's notion of *resources* with unique identifiers. Resources are represented by media types, which are declared using HTTP's `Content-Type` header, thus making HTTP messages self-descriptive. The HyperText Markup Language (HTML) is a hypermedia content type designed specifically for the web. With its embedded hypermedia controls (links and forms) that are used to drive application state changes, HTML meets all the other requirements of REST's *uniform interface*.
 
-5. The *layering* of server-side web infrastructure – API Gateways backed by
-service-oriented "microservice" architecture; Content Delivery Networks and
-other load balancing solutions; and so on – is all pretty standard stuff
-nowadays.
+5. The *layering* of server-side web infrastructure – API Gateways backed by service-oriented "microservice" architecture; Content Delivery Networks and other load balancing solutions; and so on – is all pretty standard stuff nowadays.
 
-6. And the optional constraint of *code-on-demand* prescribes what today we call
-progressive enhancement – the discretionary extension of static HTML documents
-with JavaScript programs that are downloaded and executed on the client device.
+6. And the optional constraint of *code-on-demand* prescribes what today we call progressive enhancement – the discretionary extension of static HTML documents with JavaScript programs that are downloaded and executed on the client device.
 
-Even the weird name – Representational State Transfer – starts to make sense,
-too:
+Even the weird name – Representational State Transfer – starts to make sense, too:
 
 [quote,Roy Fielding]
-The name "Representational State Transfer" is intended to evoke an image of how
-a well-designed Web application behaves: a network of web pages (a virtual
-state-machine), where the user progresses through the application by selecting
-links (state transitions), resulting in the next page (representing the next
-state of the application) being transferred to the user and rendered for their
-use case.
+The name "Representational State Transfer" is intended to evoke an image of how a well-designed Web application behaves: a network of web pages (a virtual state-machine), where the user progresses through the application by selecting links (state transitions), resulting in the next page (representing the next state of the application) being transferred to the user and rendered for their use case.
 
-Fielding's intention in writing his thesis was to distill down the World Wide
-Web to a "core set of principles, properties and constraints" that get to the
-very "essence of its behavior as a network-based application". The idea was
-those constraints could thenceforth be applied to the development of other
-network-based software applications in the future.
+Fielding's intention in writing his thesis was to distill down the World Wide Web to a "core set of principles, properties and constraints" that get to the very "essence of its behavior as a network-based application". The idea was those constraints could thenceforth be applied to the development of other network-based software applications in the future.
 
 [quote,Roy Fielding]
-The World Wide Web is arguably the world's largest distributed application.
-Understanding the key architectural principles underlying the Web can help
-explain its technical success and may lead to improvements in other distributed
-applications, particularly those that are amenable to the same or similar
-methods of interaction.
+The World Wide Web is arguably the world's largest distributed application. Understanding the key architectural principles underlying the Web can help explain its technical success and may lead to improvements in other distributed applications, particularly those that are amenable to the same or similar methods of interaction.
 
-Fielding is clear: "REST is specifically targeted at distributed information
-systems". If you read {link-thesis}[Fielding's thesis] for yourself, you'll see
-it is all about the mechanics of web pages, web browsers, and web servers – the
-infrastructure of the World Wide Web, which is a particular implementation of a
-distributed information system.
+Fielding is clear: "REST is specifically targeted at distributed information systems". If you read {link-thesis}[Fielding's thesis] for yourself, you'll see it is all about the mechanics of web pages, web browsers, and web servers – the infrastructure of the World Wide Web, which is a particular implementation of a distributed information system.
 
 == REST != web service APIs
 
-Here's the thing: if an app or service is delivered over a RESTful, distributed
-information system such as the World Wide Web, that does not automatically make
-that dependent application RESTful, too.
+Here's the thing: if an app or service is delivered over a RESTful, distributed information system such as the World Wide Web, that does not automatically make that dependent application RESTful, too.
 
-The World Wide Web is a network system on which other apps and services run. The
-_platform_ is RESTful. But most of the individual sites, apps and services that
-are delivered over the web are not themselves RESTful.
+The World Wide Web is a network system on which other apps and services run. The _platform_ is RESTful. But most of the individual sites, apps and services that are delivered over the web are not themselves RESTful.
 
 [quote,Roy Fielding]
-REST is not intended to capture all possible uses of the Web protocol standards.
-There are applications of HTTP and URI that do not match the application model
-of a distributed hypermedia system.
+REST is not intended to capture all possible uses of the Web protocol standards. There are applications of HTTP and URI that do not match the application model of a distributed hypermedia system.
 
-The REST constraints fit particularly awkwardly in the context of the
-programmatic interfaces to digital services that happen to piggyback on the web.
-Although Fielding acknowledges that the REST constraints could be retrofitted
-to web services ("some media types are intended for automated processing"), this
-was not the substance of his thesis.
+The REST constraints fit particularly awkwardly in the context of the programmatic interfaces to digital services that happen to piggyback on the web. Although Fielding acknowledges that the REST constraints could be retrofitted to web services ("some media types are intended for automated processing"), this was not the substance of his thesis.
 
-And yet, in the 20+ years since Fielding's dissertation, more and more web
-service APIs have been documented as "REST APIs". Examples include some of
-{link-microsoft-rest}[Microsoft's APIs], some of {link-google-rest}[Google's],
-plus the main programmatic interfaces to {link-github-rest}[GitHub],
-{link-atlassian-rest}[Atlassian's software suite], {link-paypal-rest}[PayPal],
-{link-stripe-rest}[Stripe], {link-twilio-rest}[Twilio],
-{link-wordpress-rest}[WordPress], and hundreds more.
+And yet, in the 20+ years since Fielding's dissertation, more and more web service APIs have been documented as "REST APIs". Examples include some of {link-microsoft-rest}[Microsoft's APIs], some of {link-google-rest}[Google's], plus the main programmatic interfaces to {link-github-rest}[GitHub], {link-atlassian-rest}[Atlassian's software suite], {link-paypal-rest}[PayPal], {link-stripe-rest}[Stripe], {link-twilio-rest}[Twilio], {link-wordpress-rest}[WordPress], and hundreds more.
 
-None of these are RESTful. None of them use hypermedia as the means to driving
-their application state. None of them ship executable code to their clients as a
-matter of course. And anyway, they're just APIs, not distributed information
-systems.
+None of these are RESTful. None of them use hypermedia as the means to driving their application state. None of them ship executable code to their clients as a matter of course. And anyway, they're just APIs, not distributed information systems.
 
-As is the case with many buzzwords, the definition of REST has gotten more and
-more eroded with time.
+As is the case with many buzzwords, the definition of REST has gotten more and more eroded with time.
 
-Misrepresentation of the REST architecture has spread so far and wide that
-"REST" has come to be informally understood as a synonym for "HTTP". Or rather,
-"RESTful" has come to describe any application that uses HTTP as an application
-protocol – ie. making good use of HTTP's native features and messaging semantics
-– rather than merely as a transport protocol.
+Misrepresentation of the REST architecture has spread so far and wide that "REST" has come to be informally understood as a synonym for "HTTP". Or rather, "RESTful" has come to describe any application that uses HTTP as an application protocol – ie. making good use of HTTP's native features and messaging semantics – rather than merely as a transport protocol.
 
-Even the {link-wikipedia-rest}[Wikipedia entry] defines Representational State
-Transfer as a style of API that uses a "subset of HTTP" and that exhibits a
-"predefined set of operations". Neither statement is accurate. REST is agnostic
-about transport protocols (it is not actually constrained to HTTP) and a true
-hypermedia-driven service would not need its operations to be predefined
-(because they would be discoverable dynamically at runtime).
+Even the {link-wikipedia-rest}[Wikipedia entry] defines Representational State Transfer as a style of API that uses a "subset of HTTP" and that exhibits a "predefined set of operations". Neither statement is accurate. REST is agnostic about transport protocols (it is not actually constrained to HTTP) and a true hypermedia-driven service would not need its operations to be predefined (because they would be discoverable dynamically at runtime).
 
 [quote,Hadi Hariri,The Silver Bullet Syndrome]
 It's a fucking HTTP API, not REST. There's no Hypermedia.
 
-Most so-called REST APIs are, on closer inspection, merely HTTP APIs. They do
-nothing more than follow HTTP best practices and conventions. For example, it is
-the HTTP specification, not the REST constraints, that recommends the use of
-HTTP verbs such as `GET`, `PUT` and `POST` to imply the type of operation to be
-performed on a resource. It is not RESTful to use these methods. It is just
-good use of HTTP's semantics.
+Most so-called REST APIs are, on closer inspection, merely HTTP APIs. They do nothing more than follow HTTP best practices and conventions. For example, it is the HTTP specification, not the REST constraints, that recommends the use of HTTP verbs such as `GET`, `PUT` and `POST` to imply the type of operation to be performed on a resource. It is not RESTful to use these methods. It is just good use of HTTP's semantics.
 
-Even the {link-crummy}[Richardson Maturity Model], an informal but widely-quoted
-classification system for the RESTfulness of APIs, muddies the principles of
-REST with the semantics of HTTP.
+Even the {link-crummy}[Richardson Maturity Model], an informal but widely-quoted classification system for the RESTfulness of APIs, muddies the principles of REST with the semantics of HTTP.
 
-In a {link-fielding-2008}[2008 blog post], Fielding reprimanded organizations
-for using the term "REST API" as an alias for "HTTP API" in their technical
-documentation. He clarified:
+In a {link-fielding-2008}[2008 blog post], Fielding reprimanded organizations for using the term "REST API" as an alias for "HTTP API" in their technical documentation. He clarified:
 
 [quote,Roy Fielding]
-… if the engine of application state (and hence the API) is not being driven
-by hypertext, then it cannot be RESTful and it cannot be a REST API. Period.
+… if the engine of application state (and hence the API) is not being driven by hypertext, then it cannot be RESTful and it cannot be a REST API. Period.
 
 == Hello, hypermedia APIs
 
-For a web service to be anything close to truly RESTful, the payloads of its
-response messages to clients could not be composed from any old arbitrary data
-objects. The payloads must be something more like HTML: a hypermedia format that
-defines how the encoded representations should be processed by the client, and
-which incorporates all the hypermedia controls that the client would need to
-perform further operations. But, of course, whereas HTML is primarily a document
-format for human consumption, hypermedia APIs would need an equivalent media
-type for automated consumption by other computer programs.
+For a web service to be anything close to truly RESTful, the payloads of its response messages to clients could not be composed from any old arbitrary data objects. The payloads must be something more like HTML: a hypermedia format that defines how the encoded representations should be processed by the client, and which incorporates all the hypermedia controls that the client would need to perform further operations. But, of course, whereas HTML is primarily a document format for human consumption, hypermedia APIs would need an equivalent media type for automated consumption by other computer programs.
 
-Over the last decade or so, there have been some valiant attempts to develop
-just such a media type. The most promising candidates in this field are
-{link-json-ld}[JSON-LD] plus {link-hydra}[Hydra].
+Over the last decade or so, there have been some valiant attempts to develop just such a media type. The most promising candidates in this field are {link-json-ld}[JSON-LD] plus {link-hydra}[Hydra].
 
-I will try to summarize how a theoretical hypermedia API would work. I say
-_theoretical_ because, as of 2021, hypermedia APIs are not yet a reality outside
-of academic circles.
+I will try to summarize how a theoretical hypermedia API would work. I say _theoretical_ because, as of 2021, hypermedia APIs are not yet a reality outside of academic circles.
 
-The hypermedia APIs of the future would be consumed by automated agents in much
-the same way that humans today interact with web sites. People discover all the
-available resources and functions of a web site by visiting its home page and
-clicking through the links and filling out the forms, following instructions
-provided in the web pages themselves. So too automated agents would discover and
-interact with all the available resources and operations of a web service by
-visiting the root URL of its API and following the links and controls described
-in the server's response messages.
+The hypermedia APIs of the future would be consumed by automated agents in much the same way that humans today interact with web sites. People discover all the available resources and functions of a web site by visiting its home page and clicking through the links and filling out the forms, following instructions provided in the web pages themselves. So too automated agents would discover and interact with all the available resources and operations of a web service by visiting the root URL of its API and following the links and controls described in the server's response messages.
 
-This principle is called "following your nose". It is achieved by supplying
-"in-band" all the necessary documentation to interact with the site or service.
-The instructions to use a hypermedia API would be encoded within its response
-messages.
+This principle is called "following your nose". It is achieved by supplying "in-band" all the necessary documentation to interact with the site or service. The instructions to use a hypermedia API would be encoded within its response messages.
 
 [quote,Roy Fielding]
-A REST API should be entered with no prior knowledge beyond the initial URI
-(bookmark) and set of standardized media types that are appropriate for the
-intended audience… From that point on, all application state transitions must be
-driven by client selection of server-provided choices that are present in the
-received representations…
+A REST API should be entered with no prior knowledge beyond the initial URI (bookmark) and set of standardized media types that are appropriate for the intended audience… From that point on, all application state transitions must be driven by client selection of server-provided choices that are present in the received representations…
 
-The realization of such APIs could have immense implications for how we program
-client applications. Client applications would not need to be hard-coded with
-any domain-specific knowledge of the server-side APIs they interact with.
-Instead, they would discover all the available resources and operations
-dynamically, at runtime. A client application developed for one hypermedia API
-could be easily forked and modified for another hypermedia-driven web service.
-And "smart clients", which are capable of consuming _any_ hypermedia API with a
-common grammar, could become a reality.
+The realization of such APIs could have immense implications for how we program client applications. Client applications would not need to be hard-coded with any domain-specific knowledge of the server-side APIs they interact with. Instead, they would discover all the available resources and operations dynamically, at runtime. A client application developed for one hypermedia API could be easily forked and modified for another hypermedia-driven web service. And "smart clients", which are capable of consuming _any_ hypermedia API with a common grammar, could become a reality.
 
-Since the client applications will not be written to a static interface, the
-APIs themselves will be free to change shape dynamically, responding to user
-input, algorithms, and even artificial intelligence. And it would be easier to
-incrementally evolve an API's design, with fewer problems associated with
-breaking changes and versioning.
+Since the client applications will not be written to a static interface, the APIs themselves will be free to change shape dynamically, responding to user input, algorithms, and even artificial intelligence. And it would be easier to incrementally evolve an API's design, with fewer problems associated with breaking changes and versioning.
 
-Exciting stuff. But, for now, the development of hypermedia APIs remains a niche
-academic specialty and there's a lot more work to do to bring these solutions
-to the mainstream.
+Exciting stuff. But, for now, the development of hypermedia APIs remains a niche academic specialty and there's a lot more work to do to bring these solutions to the mainstream.
 
 == "HTTP APIs" and "hypermedia APIs"
 
-Please, let's consign the term "REST API" to history. There's just
-{link-stackoverflow}[far too much confusion about what REST means] to rescue it.
+Please, let's consign the term "REST API" to history. There's just {link-stackoverflow}[far too much confusion about what REST means] to rescue it.
 
-While REST works well as a series of metaphors for the foundational
-architectural principles of the World Wide Web, it doesn't work so well as a
-design philosophy for individual services that happen to be delivered over that
-same network.
+While REST works well as a series of metaphors for the foundational architectural principles of the World Wide Web, it doesn't work so well as a design philosophy for individual services that happen to be delivered over that same network.
 
-We don't talk about RESTful web sites, do we? Then why should we talk about
-RESTful APIs?
+We don't talk about RESTful web sites, do we? Then why should we talk about RESTful APIs?
 
-What we call today "REST APIs" we should reclassify as either "HTTP APIs" or
-"hypermedia APIs".
+What we call today "REST APIs" we should reclassify as either "HTTP APIs" or "hypermedia APIs".
 
-*HTTP APIs* are designed around HTTP. These web services closely follow best
-practices for composition of HTTP request and response messages, as set out in
-the HTTP specifications. They make good use of HTTP's native features for cache
-control, content negotiation, and authentication. Their endpoints are more
-resource-oriented than RPC-style. For their media types, they prefer simple,
-general-purpose, plain text encoding formats like JSON and XML. They will
-typically be versioned and their static interfaces will probably be documented
-in {link-openapi}[OpenAPI] or other popular IDL conventions. More generally,
-HTTP APIs err on the side of lightweight solutions, shunning state-of-the-art
-code generation and other automated tooling. As such they are ideal for delivery
-of commercial services intended for integration in third party applications.
+*HTTP APIs* are designed around HTTP. These web services closely follow best practices for composition of HTTP request and response messages, as set out in the HTTP specifications. They make good use of HTTP's native features for cache control, content negotiation, and authentication. Their endpoints are more resource-oriented than RPC-style. For their media types, they prefer simple, general-purpose, plain text encoding formats like JSON and XML. They will typically be versioned and their static interfaces will probably be documented in {link-openapi}[OpenAPI] or other popular IDL conventions. More generally, HTTP APIs err on the side of lightweight solutions, shunning state-of-the-art code generation and other automated tooling. As such they are ideal for delivery of commercial services intended for integration in third party applications.
 
-Importantly, HTTP APIs use HTTP not merely as a data transport mechanism, but
-as a full-blown application protocol. They will make extensive use of HTTP's
-native features and messaging semantics. This is what sets apart HTTP APIs from
-SOAP, OData, GraphQL, gRPC and countless other web service protocols that happen
-to use HTTP for transport but otherwise largely hide HTTP details from API
-consumers.
+Importantly, HTTP APIs use HTTP not merely as a data transport mechanism, but as a full-blown application protocol. They will make extensive use of HTTP's native features and messaging semantics. This is what sets apart HTTP APIs from SOAP, OData, GraphQL, gRPC and countless other web service protocols that happen to use HTTP for transport but otherwise largely hide HTTP details from API consumers.
 
-*Hypermedia APIs* are a newly-emerging category of web services that incorporate
-a linked data model and borrow from established vocabularies to describe all
-their resources and operations. (They may devise domain-specific ontologies but
-only to fill-in the gaps in the preeminent general-purpose vocabularies.) Since
-their interfaces would be fully defined in-band, they would not need
-conventional static API documentation. The very best of these APIs would be
-consumed by a new class of "smart client" application that are not coded to any
-static client-server contract and behave a bit like web browsers.
+*Hypermedia APIs* are a newly-emerging category of web services that incorporate a linked data model and borrow from established vocabularies to describe all their resources and operations. (They may devise domain-specific ontologies but only to fill-in the gaps in the preeminent general-purpose vocabularies.) Since their interfaces would be fully defined in-band, they would not need conventional static API documentation. The very best of these APIs would be consumed by a new class of "smart client" application that are not coded to any static client-server contract and behave a bit like web browsers.
 
 A hypermedia API may also be an HTTP API, but that's not a requirement.
 
-As of 2021, while some {link-hypermedia-app}[buggy demo apps] exist, the
-development of true hypermedia-driven smart clients remains a purely academic
-endeavour. This stuff is right at the leading edge of the development of web
-standards. If realized, hypermedia APIs will not replace existing API design
-conventions, but rather they will make possible entirely new categories of data
-services that don't exist today. Watch this space.
+As of 2021, while some {link-hypermedia-app}[buggy demo apps] exist, the development of true hypermedia-driven smart clients remains a purely academic endeavour. This stuff is right at the leading edge of the development of web standards. If realized, hypermedia APIs will not replace existing API design conventions, but rather they will make possible entirely new categories of data services that don't exist today. Watch this space.
 
-As for *REST*, this should be treated as a pretty niche concept within the field
-of computer science. Its intended use cases are very narrow indeed.
+As for *REST*, this should be treated as a pretty niche concept within the field of computer science. Its intended use cases are very narrow indeed.
 
 [quote,Roy Fielding]
-REST is intended for long-lived network-based applications that span multiple
-organizations.
+REST is intended for long-lived network-based applications that span multiple organizations.
 
-So, we should not abandon the term "REST" altogether, but as an adjective for
-"API" it just doesn't make a whole lot of sense. Even in the context of the
-ongoing efforts to realize truly RESTful APIs, "hypermedia" is a better, more
-expressive classification.
+So, we should not abandon the term "REST" altogether, but as an adjective for "API" it just doesn't make a whole lot of sense. Even in the context of the ongoing efforts to realize truly RESTful APIs, "hypermedia" is a better, more expressive classification.
 
 .Related links
 ****
+
 * {link-hacker-news}[Hacker News discussion.]
+
 * {link-blogcast}[Listen to a reading] of this article on Blog Cast.
+
 * InfoQ China {link-infoq-china}[republished this article in Chinese].
+
 ****

@@ -2,26 +2,19 @@
 :toc:
 :toc-placement: preamble
 
-This repository holds the source files, build and deployment scripts for my
-blog, https://kieranpotts.com/[kieranpotts.com].
+This repository holds the source files, build and deployment scripts for my blog, https://kieranpotts.com/[kieranpotts.com].
 
 == Documentation
 
 === Requirements
 
-To set up a local development environment for this project, the following
-software must installed locally:
+To set up a local development environment for this project, the following software must installed locally:
 
 * Node ^v20.9.0
 * NPM ^v10.1.0
 
-https://github.com/nvm-sh/nvm[NVM for Unix] or
-https://github.com/coreybutler/nvm-windows[NVM for Windows] makes it easier
-to switch between different versions of Node for different projects.
-NVM for Windows does
-https://github.com/coreybutler/nvm-windows/issues/388[not support]
-the `.nvmrc` file, so Windows users must specify the version number on the
-command line.
+https://github.com/nvm-sh/nvm[NVM for Unix] or https://github.com/coreybutler/nvm-windows[NVM for Windows] makes it easier to switch between different versions of Node for different projects.
+NVM for Windows does https://github.com/coreybutler/nvm-windows/issues/388[not support] the `.nvmrc` file, so Windows users must specify the version number on the command line.
 
 [source,shell]
 ----
@@ -35,8 +28,7 @@ nvm use 20.9.0
 
 === Dependencies
 
-This project has only development dependencies, which are defined in the
-repository-level `package.json` file.
+This project has only development dependencies, which are defined in the repository-level `package.json` file.
 
 To install the development dependencies, run:
 
@@ -47,35 +39,19 @@ npm install
 
 === Run-scripts
 
-The following run-scripts are available. Use `npm run [command]`, eg.
-`npm run dev:start`.
+The following run-scripts are available. Use `npm run [command]`, eg. `npm run dev:start`.
 
-* `dev:start` runs a clean development build, starts the development server,
-and sets up watchers, so subsequent changes to _some_ source files are
-automatically rebuilt and reloaded into the web server. The development
-server runs from `localhost:8080`. There's also an interface to BrowserSync,
-the dev server, from `localhost:8081`. Type `Ctrl`+`C` to stop the server.
+* `dev:start` runs a clean development build, starts the development server, and sets up watchers, so subsequent changes to _some_ source files are automatically rebuilt and reloaded into the web server. The development server runs from `localhost:8080`. There's also an interface to BrowserSync, the dev server, from `localhost:8081`. Type `Ctrl`+`C` to stop the server.
 
-* `prod:build` produces a clean, production-ready build in the `dist` directory.
-The artifacts produced by this command are intended to be shipped to production.
+* `prod:build` produces a clean, production-ready build in the `dist` directory. The artifacts produced by this command are intended to be shipped to production.
 
-* `prod:serve` statically serves the contents of the built `dist` directory
-using a server that closely approximates the production environment, for
-example by enabling Netlify redirects and custom headers. Live reload is
-*not* enabled for this server, since this environment is intended to closely
-approximate the production environment. Use this to manually verify the output
-of `prod:build` before releasing the changes to production systems. The server
-runs on `localhost:8080`. Type `Ctrl`+`C` to stop the server.
+* `prod:serve` statically serves the contents of the built `dist` directory using a server that closely approximates the production environment, for example by enabling Netlify redirects and custom headers. Live reload is *not* enabled for this server, since this environment is intended to closely approximate the production environment. Use this to manually verify the output of `prod:build` before releasing the changes to production systems. The server runs on `localhost:8080`. Type `Ctrl`+`C` to stop the server.
 
 === Git workflow
 
-This repository has only a single branch, `dev`. Updates to the this branch
-in the upstream reference repository are automatically deployed to production
-on Netlify.
+This repository has only a single branch, `dev`. Updates to the this branch in the upstream reference repository are automatically deployed to production on Netlify.
 
-`*.adoc` files in the `src` repository that are prefixed with at
-least one underscore character will NOT be deployed to production. This is
-useful for drafts and other content that is not ready for publication.
+`*.adoc` files in the `src` repository that are prefixed with at least one underscore character will NOT be deployed to production. This is useful for drafts and other content that is not ready for publication.
 
 ''''
 

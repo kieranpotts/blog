@@ -1,8 +1,6 @@
 = Requests for comments
 Kieran Potts, 10 April 2024
-:description: Requests for Comments (RFCs) are strikingly underused in \
-  commercial software delivery. Here's why you should encourage your team to \
-  take up this mighty tool.
+:description: Requests for Comments (RFCs) are strikingly underused in commercial software delivery. Here's why you should encourage your team to take up this mighty tool.
 :docinfo: shared
 :nofooter:
 
@@ -28,124 +26,49 @@ Kieran Potts, 10 April 2024
 :link-clements:         https://resources.sei.cmu.edu/library/asset-view.cfm?assetID=30386
 :link-rfc-editor:       https://www.rfc-editor.org/rfc-index.html
 
-Requests for Comments (RFCs) are a strikingly underrated method. They are
-somewhat popular in free and open source software projects, but much less so in
-commercial, closed source ones. Yet they are equally valuable in both. RFCs have
-many, _many_ benefits, and practically no costs. Here's how to encourage your
-team to take up this mighty tool.
+Requests for Comments (RFCs) are a strikingly underrated method. They are somewhat popular in free and open source software projects, but much less so in commercial, closed source ones. Yet they are equally valuable in both. RFCs have many, _many_ benefits, and practically no costs. Here's how to encourage your team to take up this mighty tool.
 
-The RFC format {link-nytimes}[originated in 1969] in the ARPANET project, the
-forerunner of the Internet. RFCs remain in use to this day, primarily at the
-{link-ietf-rfcs}[Internet Engineering Task Force] and other IT standardization
-organizations. In this domain RFCs are used principally to facilitate technical
-standardization efforts and to document industry best practices.
+The RFC format {link-nytimes}[originated in 1969] in the ARPANET project, the forerunner of the Internet. RFCs remain in use to this day, primarily at the {link-ietf-rfcs}[Internet Engineering Task Force] and other IT standardization organizations. In this domain RFCs are used principally to facilitate technical standardization efforts and to document industry best practices.
 
-The RFC format is also conspicuous in open source. It has been adopted by some
-prominent projects such as {link-rust-rfcs}[Rust], {link-react-rfcs}[React],
-{link-vue-rfcs}[Vue], {link-yarn-rfcs}[Yarn] and {link-eslint-rfcs}[ESLint]. In
-this domain RFCs are used principally to evolve the design of core software
-components.
+The RFC format is also conspicuous in open source. It has been adopted by some prominent projects such as {link-rust-rfcs}[Rust], {link-react-rfcs}[React], {link-vue-rfcs}[Vue], {link-yarn-rfcs}[Yarn] and {link-eslint-rfcs}[ESLint]. In this domain RFCs are used principally to evolve the design of core software components.
 
-From my personal experience, RFCs seem to be much less used within commercial,
-closed source software projects – at least in enterprise application software,
-the scope of my work experience. This is a pity. I contend that RFCs are
-incredibly valuable in commercial software development, too.
+From my personal experience, RFCs seem to be much less used within commercial, closed source software projects – at least in enterprise application software, the scope of my work experience. This is a pity. I contend that RFCs are incredibly valuable in commercial software development, too.
 
 == Advantages
 
 The ultimate aim of RFCs is to make better technical decisions.
 
-This is achieved by opening up decision making to the widest possible range of
-stakeholders, so absorbing more ideas and points-of-view, while at the same time
-applying strong governance to decision making.
+This is achieved by opening up decision making to the widest possible range of stakeholders, so absorbing more ideas and points-of-view, while at the same time applying strong governance to decision making.
 
-The RFC process encourages clarity of thought. The act of putting an idea into
-writing requires the author to clearly articulate the problem and their proposed
-solution, to think through the pros and cons, and to weight up all the other
-ways the problem could be solved.
+The RFC process encourages clarity of thought. The act of putting an idea into writing requires the author to clearly articulate the problem and their proposed solution, to think through the pros and cons, and to weight up all the other ways the problem could be solved.
 
-The RFC process discourages impulsive decisions and it channels thinking in the
-direction of long-term solutions. These constraints are particularly important
-for architecturally significant decisions, or anything that will be costly or
-risky to implement in the first place, or to change after the fact.
+The RFC process discourages impulsive decisions and it channels thinking in the direction of long-term solutions. These constraints are particularly important for architecturally significant decisions, or anything that will be costly or risky to implement in the first place, or to change after the fact.
 
-RFCs make the decision making process more transparent. Everyone can see how
-decisions were made and why. They are a useful means by which non-technical
-stakeholders can gain technical insights into a project, and within delivery
-teams they help to foster collaborative, inclusive work cultures. They promote
-consensus-based decision making and they empower everyone to make an impact at
-work – not only the most vocal people. They reinforce psychological safety, too.
-Ideas may be put forward by individuals, but the team is collectively
-accountable for the final agreed decisions. {link-dora}[Research shows] that
-these conditions are the necessary foundations for the formation of
-high-performing teams.
+RFCs make the decision making process more transparent. Everyone can see how decisions were made and why. They are a useful means by which non-technical stakeholders can gain technical insights into a project, and within delivery teams they help to foster collaborative, inclusive work cultures. They promote consensus-based decision making and they empower everyone to make an impact at work – not only the most vocal people. They reinforce psychological safety, too. Ideas may be put forward by individuals, but the team is collectively accountable for the final agreed decisions. {link-dora}[Research shows] that these conditions are the necessary foundations for the formation of high-performing teams.
 
-The output from the RFC life cycle is a decision document or design document.
-These documents are valuable artifacts in their own right, but more valuable
-still is a chronologically ordered collection of them. This serves as a ledger
-of major decisions taken over the lifetime of a project – a decision log.
+The output from the RFC life cycle is a decision document or design document. These documents are valuable artifacts in their own right, but more valuable still is a chronologically ordered collection of them. This serves as a ledger of major decisions taken over the lifetime of a project – a decision log.
 
-While program code, automated test scripts, architectural diagrams, and other
-forms of documentation record _what_ a system does and _how_ it does it (the
-"here and now"), these artifacts do not tell you _why_ a system is made the way
-it is (the "how we got here"). A decision log fills this gap. This knowledge
-would otherwise risk being lost as the original decision makers gradually
-offboard from the project.
+While program code, automated test scripts, architectural diagrams, and other forms of documentation record _what_ a system does and _how_ it does it (the "here and now"), these artifacts do not tell you _why_ a system is made the way it is (the "how we got here"). A decision log fills this gap. This knowledge would otherwise risk being lost as the original decision makers gradually offboard from the project.
 
-Recording today's decisions for posterity will mean better decisions can be made
-in the future. Or, to look at it another way, we could make better decisions now
-if we understood the context in which past decisions were made. What were the
-main constraints – eg. time, budget, expertise, or quality requirements such as
-security and performance – that shaped the current design of the system? What
-was the rationale for previous technical decisions, and were the consequences
-fully understood at the time?
+Recording today's decisions for posterity will mean better decisions can be made in the future. Or, to look at it another way, we could make better decisions now if we understood the context in which past decisions were made. What were the main constraints – eg. time, budget, expertise, or quality requirements such as security and performance – that shaped the current design of the system? What was the rationale for previous technical decisions, and were the consequences fully understood at the time?
 
-When we understand a project's history, we can reevaluate relevant decisions
-taken in the past when the situation changes. Clearly, it is useful to keep
-permanent records of why some technical decisions were rejected up front, or
-subsequently changed or even fully reverted. Future developers won't waste time
-revisiting the same options. Equally valuable is to understand the motivation
-for choosing a particular solution over alternative designs, so we don't naively
-change an implementation and lose the value sought through the original design.
+When we understand a project's history, we can reevaluate relevant decisions taken in the past when the situation changes. Clearly, it is useful to keep permanent records of why some technical decisions were rejected up front, or subsequently changed or even fully reverted. Future developers won't waste time revisiting the same options. Equally valuable is to understand the motivation for choosing a particular solution over alternative designs, so we don't naively change an implementation and lose the value sought through the original design.
 
-Decision logs give us confidence to refactor code and to continuously improve
-our development and operations processes. The more detailed the record of past
-decisions, the greater the confidence teams will have to change them.
+Decision logs give us confidence to refactor code and to continuously improve our development and operations processes. The more detailed the record of past decisions, the greater the confidence teams will have to change them.
 
-RFCs, and the decision records they produce, have many other benefits. For
-example, RFCs give visibility to the wider contributions of individual team
-members – beyond fixes, stories, commits, and releases – providing more data
-points for analysis in personal performance reviews. And they can be used to
-generate useful metrics related to the wider {link-spotify}[technical health] of
-teams and projects. For example, a low RFC participation rate may indicate
-problems with engagement and trust.
+RFCs, and the decision records they produce, have many other benefits. For example, RFCs give visibility to the wider contributions of individual team members – beyond fixes, stories, commits, and releases – providing more data points for analysis in personal performance reviews. And they can be used to generate useful metrics related to the wider {link-spotify}[technical health] of teams and projects. For example, a low RFC participation rate may indicate problems with engagement and trust.
 
-RFCs scale wonderfully well. Indeed, the larger the project, the more useful
-they become. They can be used to facilitate technical standardization and to
-help share knowledge between teams. And they support asynchronous ways of
-working, which becomes more necessary as communication overhead grows. RFCs will
-become more useful still as IT workforces get more geographically distributed
-and flexible working schedules become more widely supported.
+RFCs scale wonderfully well. Indeed, the larger the project, the more useful they become. They can be used to facilitate technical standardization and to help share knowledge between teams. And they support asynchronous ways of working, which becomes more necessary as communication overhead grows. RFCs will become more useful still as IT workforces get more geographically distributed and flexible working schedules become more widely supported.
 
-But don't rule out having an RFC system for your solo pet project, either.
-Speaking for myself, rarely can I recall the minutia of detail why I took a
-particular decision years ago!
+But don't rule out having an RFC system for your solo pet project, either. Speaking for myself, rarely can I recall the minutia of detail why I took a particular decision years ago!
 
 == Scope
 
-RFCs are most commonly used to record critical choices made in the _design_ of
-an IT system. In this regard, RFCs are conceptually equivalent to key design
-decisions (KDDs) and architectural decision records (ADRs).
+RFCs are most commonly used to record critical choices made in the _design_ of an IT system. In this regard, RFCs are conceptually equivalent to key design decisions (KDDs) and architectural decision records (ADRs).
 
-As a technical design process, RFCs augment wider change management practices.
-They work particularly well when they are linked with task tracking systems.
-While task trackers – aka. issue trackers – are used to manage the life cycle of
-discrete changes made to an IT system, RFCs are used to manage the life cycle
-of technical decisions made within that wider change management process.
+As a technical design process, RFCs augment wider change management practices. They work particularly well when they are linked with task tracking systems. While task trackers – aka. issue trackers – are used to manage the life cycle of discrete changes made to an IT system, RFCs are used to manage the life cycle of technical decisions made within that wider change management process.
 
-But there is no limit to the possible scope of RFCs. There is no reason why they
-can't be used to support any kind of technical decision, anything that impacts
-how a system is made, such as:
+But there is no limit to the possible scope of RFCs. There is no reason why they can't be used to support any kind of technical decision, anything that impacts how a system is made, such as:
 
 * Adoption of design patterns and coding conventions.
 * Choices of languages, frameworks and libraries.
@@ -153,132 +76,57 @@ how a system is made, such as:
 * Policies such as branching-and-merging strategies and test-and-release plans.
 * Project management practices and ways of working.
 
-The scope of RFCs could be anything that would benefit from collective decision
-making, or where it would be beneficial to reach agreement on a solution to a
-problem as far "left" as possible in the development life cycle. Anything that
-will have a significant impact on how an IT system is made, or that will be of
-interest to more than one group of stakeholders, or that will change the context
-in which future decisions will be made, is a candidate for an RFC.
+The scope of RFCs could be anything that would benefit from collective decision making, or where it would be beneficial to reach agreement on a solution to a problem as far "left" as possible in the development life cycle. Anything that will have a significant impact on how an IT system is made, or that will be of interest to more than one group of stakeholders, or that will change the context in which future decisions will be made, is a candidate for an RFC.
 
-Large IT functions will benefit from a centralized RFC system for standardizing
-tools and methods, and for reaching agreement on how to implement changes that
-will impact multiple work streams. Meanwhile, individual teams may have their
-own internal RFC systems for making decisions over which they have autonomy.
+Large IT functions will benefit from a centralized RFC system for standardizing tools and methods, and for reaching agreement on how to implement changes that will impact multiple work streams. Meanwhile, individual teams may have their own internal RFC systems for making decisions over which they have autonomy.
 
-Each proposal put forward for comments should be scoped to a single technical
-decision. But the breadth of impact may be broad or narrow, and the range of
-stakeholders involved should be proportional to that impact. Refactoring the
-internal structure of a discrete module should require input from just a few
-technical people. Replacing a language in the technology stack or adding a major
-new tool to the delivery pipeline should require broad consensus from many more
-people. And proposals that could affect service level agreements or mission
-alignment would need to be elevated to product owners or other business
-stakeholders.
+Each proposal put forward for comments should be scoped to a single technical decision. But the breadth of impact may be broad or narrow, and the range of stakeholders involved should be proportional to that impact. Refactoring the internal structure of a discrete module should require input from just a few technical people. Replacing a language in the technology stack or adding a major new tool to the delivery pipeline should require broad consensus from many more people. And proposals that could affect service level agreements or mission alignment would need to be elevated to product owners or other business stakeholders.
 
-The widest possible scope for RFCs would be to use them to evaluate feature
-proposals. This certainly makes sense in the context of software libraries and
-other software components where the users are other software developers. This is
-why RFCs are popular in open source projects. But I have successfully used RFCs
-to evaluate feature proposals in enterprise application software, too. I have
-found RFCs to be particularly useful in business contexts where ideas are
-plentiful but resources are scarce. (We've all been there, right?)
+The widest possible scope for RFCs would be to use them to evaluate feature proposals. This certainly makes sense in the context of software libraries and other software components where the users are other software developers. This is why RFCs are popular in open source projects. But I have successfully used RFCs to evaluate feature proposals in enterprise application software, too. I have found RFCs to be particularly useful in business contexts where ideas are plentiful but resources are scarce. (We've all been there, right?)
 
-At this scope, RFCs are no longer purely a development tool, but they become
-incorporated into wider business change management processes. RFCs can be used
-to support analysis work, providing a formal process to capture, refine, and
-prioritize product ideas, and making it easier for technical stakeholders to
-shift even further left than the design and planning phases. The RFC process is
-a good one to follow when the business wants to understand the technical
-feasibility of a product idea and to have an estimation of the costs of its
-implementation. Thus, RFCs can be used to feed the product backlog and to
-prioritize tickets based on cost-benefit analysis.
+At this scope, RFCs are no longer purely a development tool, but they become incorporated into wider business change management processes. RFCs can be used to support analysis work, providing a formal process to capture, refine, and prioritize product ideas, and making it easier for technical stakeholders to shift even further left than the design and planning phases. The RFC process is a good one to follow when the business wants to understand the technical feasibility of a product idea and to have an estimation of the costs of its implementation. Thus, RFCs can be used to feed the product backlog and to prioritize tickets based on cost-benefit analysis.
 
-In summary, RFCs do not need to be constrained to _design_ decisions. They can
-be used to support any kind of technical decision, and even to support business
-planning, too.
+In summary, RFCs do not need to be constrained to _design_ decisions. They can be used to support any kind of technical decision, and even to support business planning, too.
 
 == Process
 
-In this section I propose a simple and lightweight RFC process that you can use
-as a starter kit for introducing RFCs to your project. First I'll describe the
-process at a conceptual level. Then I'll propose a concrete implementation based
-around the most ubiquitous development tool of them all – Git.
+In this section I propose a simple and lightweight RFC process that you can use as a starter kit for introducing RFCs to your project. First I'll describe the process at a conceptual level. Then I'll propose a concrete implementation based around the most ubiquitous development tool of them all – Git.
 
-A good RFC process will steer each technical decision through a series of
-distinct life cycle phases. As a starting point, I suggest the following phases:
+A good RFC process will steer each technical decision through a series of distinct life cycle phases. As a starting point, I suggest the following phases:
 
-* *Draft*: A preliminary version of a proposal, put forward for early feedback.
-This step is optional.
+* *Draft*: A preliminary version of a proposal, put forward for early feedback. This step is optional.
 
 * *Proposed*: A proposal that is being negotiated with the relevant stakeholders.
 
-* *Accepted*: A proposal that has been approved and is currently pending
-implementation.
+* *Accepted*: A proposal that has been approved and is currently pending implementation.
 
 * *Rejected*: A proposal that has been rejected and will not be taken forward.
 
-* *Implemented*: A proposal that has been implemented and is currently in effect
-in production systems.
+* *Implemented*: A proposal that has been implemented and is currently in effect in production systems.
 
-* *Deprecated*: A legacy proposal that was previously accepted and implemented
-but has since been superseded by more recent changes and is no longer in effect.
+* *Deprecated*: A legacy proposal that was previously accepted and implemented but has since been superseded by more recent changes and is no longer in effect.
 
-The RFC process is initialized by a proposal being put forward for comments –
-literally, a request for comments. Proposals are negotiated with the relevant
-stakeholders. During this phase, the original proposal may change, perhaps
-significantly, in response to stakeholder feedback. Once a solution is agreed,
-the proposal is updated to describe the settled solution, the design rationale
-for it, and the relative pros and cons of any alternative solutions that were
-considered.
+The RFC process is initialized by a proposal being put forward for comments – literally, a request for comments. Proposals are negotiated with the relevant stakeholders. During this phase, the original proposal may change, perhaps significantly, in response to stakeholder feedback. Once a solution is agreed, the proposal is updated to describe the settled solution, the design rationale for it, and the relative pros and cons of any alternative solutions that were considered.
 
-The outcome of the RFC process is for the finalized proposal to be either
-accepted or rejected.
+The outcome of the RFC process is for the finalized proposal to be either accepted or rejected.
 
-When a proposal is accepted, it is queued for implementation. Tasks may be
-created in the relevant project management tools to track the implementation.
-(You might introduce an additional "pending" phase here, to indicate an accepted
-proposal that has been transferred to the product backlog.)
+When a proposal is accepted, it is queued for implementation. Tasks may be created in the relevant project management tools to track the implementation. (You might introduce an additional "pending" phase here, to indicate an accepted proposal that has been transferred to the product backlog.)
 
-Thereafter, the contents of the original RFC documents are treated as immutable.
-Therefore, to change past decisions, new RFCs will need to be introduced that
-extend or supersede prior ones. Previously-approved RFCs that are no longer in
-effect, having been superseded by newer ones, are marked as deprecated.
+Thereafter, the contents of the original RFC documents are treated as immutable. Therefore, to change past decisions, new RFCs will need to be introduced that extend or supersede prior ones. Previously-approved RFCs that are no longer in effect, having been superseded by newer ones, are marked as deprecated.
 
-Records of all past decisions – even those that are no longer in effect or were
-rejected in the first place – are persisted indefinitely and so provide an
-accurate reflection of the technical evolution of the project. This also makes
-it easier to maintain the decision log over time. The immutable state of past
-decision documents means they do not need to be kept up-to-date. Only new
-proposals are editable, and in time these will be relatively few compared to the
-total number of prior decisions.
+Records of all past decisions – even those that are no longer in effect or were rejected in the first place – are persisted indefinitely and so provide an accurate reflection of the technical evolution of the project. This also makes it easier to maintain the decision log over time. The immutable state of past decision documents means they do not need to be kept up-to-date. Only new proposals are editable, and in time these will be relatively few compared to the total number of prior decisions.
 
 == Format
 
-RFCs should be centralized and may be implemented in databases or software
-systems like wikis. But I recommend starting with a code repository with an
-integrated code review / merge request tool. These tools will be already
-familiar to the development teams. This will reduce the learning curve,
-encourage adoption, and it will keep the log of technical decisions close to the
-relevant code and configuration.
+RFCs should be centralized and may be implemented in databases or software systems like wikis. But I recommend starting with a code repository with an integrated code review / merge request tool. These tools will be already familiar to the development teams. This will reduce the learning curve, encourage adoption, and it will keep the log of technical decisions close to the relevant code and configuration.
 
-I've created a *{link-template-rfcs}[template RFC repository in
-GitHub]*, which you can fork to get started. That repository's README has a
-step-by-step guide to the RFC process, but I'll summarize it here:
+I've created a *{link-template-rfcs}[template RFC repository in GitHub]*, which you can fork to get started. That repository's README has a step-by-step guide to the RFC process, but I'll summarize it here:
 
-When someone wants to propose an idea, they will create a branch in the RFC
-repository, write their idea in a text document, and commit it to the upstream
-repository. A request for comments is initialized by opening a pull request. The
-pull request can be commented on by the relevant stakeholders. Alternatively,
-linked chat systems can be used to undertake the design discussions. Through the
-PR system the proposal is peer reviewed and iterated upon, exactly the same way
-that code changes are reviewed.
+When someone wants to propose an idea, they will create a branch in the RFC repository, write their idea in a text document, and commit it to the upstream repository. A request for comments is initialized by opening a pull request. The pull request can be commented on by the relevant stakeholders. Alternatively, linked chat systems can be used to undertake the design discussions. Through the PR system the proposal is peer reviewed and iterated upon, exactly the same way that code changes are reviewed.
 
-Ultimately, whether the proposal is accepted or rejected, the RFC document will
-be merged into the main branch. With the PR closed, the RFC process is shut down
-for that particular proposal.
+Ultimately, whether the proposal is accepted or rejected, the RFC document will be merged into the main branch. With the PR closed, the RFC process is shut down for that particular proposal.
 
-At an early stage of a greenfield project, the filesystem of the main branch of
-the RFC repository might look something like this:
+At an early stage of a greenfield project, the filesystem of the main branch of the RFC repository might look something like this:
 
 ----
 .
@@ -292,9 +140,7 @@ the RFC repository might look something like this:
 └─ README.md
 ----
 
-Side branches would capture proposals. There should be one proposal per branch.
-Thus, the contents of a branch named `proposal/express-for-http-abstraction`
-might looks like this:
+Side branches would capture proposals. There should be one proposal per branch. Thus, the contents of a branch named `proposal/express-for-http-abstraction` might looks like this:
 
 ----
 .
@@ -309,10 +155,7 @@ might looks like this:
 └─ README.md
 ----
 
-Once a proposal is merged into the main branch, it should be given a unique
-identifier. By convention, this is an auto-incrementing integer. This is
-recommended because the order in which proposals get added to the main branch
-is significant:
+Once a proposal is merged into the main branch, it should be given a unique identifier. By convention, this is an auto-incrementing integer. This is recommended because the order in which proposals get added to the main branch is significant:
 
 ----
 .
@@ -327,199 +170,83 @@ is significant:
 └─ README.md
 ----
 
-A template should be included for new proposals. I recommend keeping it simple
-to start. Use a lightweight text markup format such as Markdown, AsciiDoc or
-Textile, and request that the following key information be captured:
+A template should be included for new proposals. I recommend keeping it simple to start. Use a lightweight text markup format such as Markdown, AsciiDoc or Textile, and request that the following key information be captured:
 
-* *Context*: The forces at play – the functional and non-functional
-requirements, and constraints such as time, budget and expertise – that shaped
-the proposed solution.
+* *Context*: The forces at play – the functional and non-functional requirements, and constraints such as time, budget and expertise – that shaped the proposed solution.
 
-* **Solution**: This section may evolve over the course of an RFC's life cycle.
-Ultimately, the final agreed or rejected solution should be captured, and also
-the final implemented solution if the design further evolved during
-construction.
+* *Solution*: This section may evolve over the course of an RFC's life cycle. Ultimately, the final agreed or rejected solution should be captured, and also the final implemented solution if the design further evolved during construction.
 
-* *Alternatives*: The relative pros and cons of any alternative solutions that
-were considered by the RFC author or by contributors during design discussions.
+* *Alternatives*: The relative pros and cons of any alternative solutions that were considered by the RFC author or by contributors during design discussions.
 
-* *Consequences*: What are the trade-offs (the costs versus the benefits) of
-the proposed solution, as they were understood at the time? This should cover
-both positive and negative consequences, and "known unknown" outcomes.
+* *Consequences*: What are the trade-offs (the costs versus the benefits) of the proposed solution, as they were understood at the time? This should cover both positive and negative consequences, and "known unknown" outcomes.
 
 *{link-proposal-tpl}[Here's an example template.]*
 
-I recommended starting with a lightweight RFC system like this, then iterating
-on its design as you learn more about what works and what doesn't work within
-the context of your organization. The RFC process can be made more lightweight
-or more heavyweight, as appropriate for the business domain of the software
-under development. It should also be adjusted as appropriate for the experience
-level of the team members.
+I recommended starting with a lightweight RFC system like this, then iterating on its design as you learn more about what works and what doesn't work within the context of your organization. The RFC process can be made more lightweight or more heavyweight, as appropriate for the business domain of the software under development. It should also be adjusted as appropriate for the experience level of the team members.
 
-Of course, the RFC system is a great tool for managing the evolution of the
-RFC system itself!
+Of course, the RFC system is a great tool for managing the evolution of the RFC system itself!
 
-Over time, you may find it necessary to introduce features such as taxonomies
-and full-text searches. Other features to consider include integrations with
-chatops and notification systems, fine-grained access controls, and document
-versioning. Tools can be introduced to automate recurring steps of the RFC
-process – the Rust project has its very own https://rfcbot.rs/[rfcbot] – but it
-is recommended to keep it manual to start, then automate once the process has
-settled into a regular pattern.
+Over time, you may find it necessary to introduce features such as taxonomies and full-text searches. Other features to consider include integrations with chatops and notification systems, fine-grained access controls, and document versioning. Tools can be introduced to automate recurring steps of the RFC process – the Rust project has its very own https://rfcbot.rs/[rfcbot] – but it is recommended to keep it manual to start, then automate once the process has settled into a regular pattern.
 
-One potential downside of using a version control system for RFCs is that the
-technical decision making process will be less accessible to non-technical
-stakeholders. It may be beneficial to have separate RFC-like systems for
-higher-level business-oriented decisions and lower-level technical decisions.
+One potential downside of using a version control system for RFCs is that the technical decision making process will be less accessible to non-technical stakeholders. It may be beneficial to have separate RFC-like systems for higher-level business-oriented decisions and lower-level technical decisions.
 
 == Best practices
 
-////
+Whatever format and tools you choose to implement your RFC system, here are some universal best practices to optimize the process:
 
-TODO:
+There should be one main document per proposal, and each proposal should be scoped to a single technical decision. RFCs work best when they are kept short, but an arbitrary cap on length should not be set. Some decisions will naturally require more details. RFC documents can be augmented with diagrams and tables, and linked to mockups and prototypes, as appropriate.
 
-There may be one official "champion" for a proposal, but there should always be multiple collaborators, and the team owns the final decision collectively, even if individual contributors disagree.
+Technical writing is an important skill that contributors will need to learn to engage in the RFC process. RFC documents should be written in a conversational tone, as though talking through an idea to a new developer who has no prior knowledge of the system under development. Proposals should be written in full sentences organized into paragraphs, and with a consistent information architecture (ie. the same headings in the same order).
 
-Consider pairing less experienced folk with senior engineers as "backers", so they can provide early feedback and refinement, and to minimize surprises.
+Where RFCs are used as a technical design process, they should be tightly coupled with the project's task tracking system. For example, where the implementation of a user story requires substantive revisions to either the external interfaces or the internal construction techniques of a software component, or to its dependencies, it can be beneficial to put the changes through a more rigorous and structured design process _before_ the changes are introduced in code and configuration. Breaking out the work to an RFC is an excellent method for that. Shifting left the design review means that multiple possible designs can be considered, pre-implementation. By contrast, only one option can be considered in code review, post-implementation.
 
-Proposals do not need to be perfect. They are a starting point for discussion, and they will evolve over time. The goal is to get to a point where the team can make a decision, and then move forward with confidence.
+Code review is easier too. The reviewer should already expect a certain design for an implementation, so they're only checking it meets the functional and non-functional requirements, and not also whether it's the optimal design.
 
-Commenting is the entire purpose of RFCs, but good practices should be followed here too. Comments work best when everyone understands they are lending their perspective rather than making arguments.
+RFCs should record conceptual choices as well concrete details. "We elected to implement a loosely-coupled monolith because…" describes the rationale for one aspect of a system's conceptual architecture. "We decided to use the Hibernate ORM for DB abstraction because…" describes the rationale for a concrete implementation of a specific component of that system. In the grand scheme of a software project, the first example has the farthest reaching consequences.
 
-Comments may be further discussed in meetings, especially where more content is needed and the design is important / critical / costly.
+The RFC process is about slowing down development so that good decisions are made earlier. The trick is to add _just enough_ friction. How much friction is appropriate will vary. Low-risk and low-cost decisions can be quickly resolved, perhaps through delegation to individual contributors. High-risk or high-cost decisions, which will be more expensive to change later in the development life cycle, should have more up-front design and planning, perhaps even with spikes or prototypes done as part of the RFC process.
 
-Tech Leads should moderate the more controversial / risky proposals, and reduce their blast radius.
+As a general rule, the greater the potential impact of the proposal, the longer the RFC should be open for comments and the more stakeholders should be involved in the decision.
 
-People should be comfortable using archived documents as the foundations for new ones, and expanding on them with brief extensions.
+But all RFCs, whatever their scope, should be open to comments from the widest possible range of stakeholders. Junior developers should be encouraged to engage in major architectural decisions, while architects and senior developers should watch over more granular, lower-level details. This encourages more points of view, maximizing the input of knowledge into decisions. It helps to disperse knowledge more widely, reducing silos. And it builds a culture of collaboration, inclusivity and transparency, helping teams to grow into effective, cohesive units, and nurturing tomorrow's technology leaders.
 
-Technical proposals usually have product and business implications. Consider inviting people from other functions to provide cross-functional collaboration.
+Technical decisions should be taken by technical people and business decisions by business people. But there can be unexpected benefits to getting cross-domain input into decisions. Technical people learn to communicate their ideas in terms of business value, and non-technical people get useful insights into technical details and an appreciation of the true costs of delivering the business objectives. And from time to time I've found the most insightful comments on technical proposals have come from non-technical people. And I've seen junior developers propose far simpler, but equally effective, alternatives to solutions proposed by seasoned architects.
 
-////
+Perspective is as important as expertise. It's not unusual for obvious risks and flaws in a design to be spotted only by the people furthest from the problem. 
 
+Psychological safety is key to the success of the RFC process. Everyone should be encouraged to put forward ideas, safe in the understanding that the team will collectively own any final decision and individuals will not be blamed for unexpected negative consequences. A culture of psychological safety permits teams to take risks and to learn from mistakes.
 
-Whatever format and tools you choose to implement your RFC system, here are
-some universal best practices to optimize the process:
+If decisions are to be made by consensus, then there needs to be a framework in place for reaching consensus. Who has a vote over which types of decision, and who gets the casting vote in deadlock situations? When and how should decisions be elevated to higher authorities? The decision making framework should be set out in the context of a wider technical strategy and guiding principles that inform the direction of the project.
 
-There should be one main document per proposal, and each proposal should be
-scoped to a single technical decision. RFCs work best when they are kept short,
-but an arbitrary cap on length should not be set. Some decisions will naturally
-require more details. RFC documents can be augmented with diagrams and tables,
-and linked to mockups and prototypes, as appropriate.
-
-Technical writing is an important skill that contributors will need to learn to
-engage in the RFC process. RFC documents should be written in a conversational
-tone, as though talking through an idea to a new developer who has no prior
-knowledge of the system under development. Proposals should be written in full
-sentences organized into paragraphs, and with a consistent information
-architecture (ie. the same headings in the same order).
-
-Where RFCs are used as a technical design process, they should be tightly
-coupled with the project's task tracking system. For example, where the
-implementation of a user story requires substantive revisions to either
-the external interfaces or the internal construction techniques of a
-software component, or to its dependencies, it can be beneficial to put the
-changes through a more rigorous and structured design process _before_ the
-changes are introduced in code and configuration. Breaking out the work to an
-RFC is an excellent method for that. Shifting left the design review means that
-multiple possible designs can be considered, pre-implementation. By contrast,
-only one option can be considered in code review, post-implementation.
-
-Code review is easier too. The reviewer should already expect a certain design
-for an implementation, so they're only checking it meets the functional and
-non-functional requirements, and not also whether it's the optimal design.
-
-RFCs should record conceptual choices as well concrete details. "We elected to
-implement a loosely-coupled monolith because…" describes the rationale for one
-aspect of a system's conceptual architecture. "We decided to use the Hibernate
-ORM for DB abstraction because…" describes the rationale for a concrete
-implementation of a specific component of that system. In the grand scheme of a
-software project, the first example has the farthest reaching consequences.
-
-The RFC process is about slowing down development so that good decisions are
-made earlier. The trick is to add _just enough_ friction. How much friction is
-appropriate will vary. Low-risk and low-cost decisions can be quickly resolved,
-perhaps through delegation to individual contributors. High-risk or high-cost
-decisions, which will be more expensive to change later in the development life
-cycle, should have more up-front design and planning, perhaps even with spikes
-or prototypes done as part of the RFC process.
-
-As a general rule, the greater the potential impact of the proposal, the longer
-the RFC should be open for comments and the more stakeholders should be involved
-in the decision.
-
-But all RFCs, whatever their scope, should be open to comments from the widest
-possible range of stakeholders. Junior developers should be encouraged to engage
-in major architectural decisions, while architects and senior developers should
-watch over more granular, lower-level details. This encourages more points of
-view, maximizing the input of knowledge into decisions. It helps to disperse
-knowledge more widely, reducing silos. And it builds a culture of collaboration,
-inclusivity and transparency, helping teams to grow into effective, cohesive
-units, and nurturing tomorrow's technology leaders.
-
-Technical decisions should be taken by technical people and business decisions
-by business people. But there can be unexpected benefits to getting cross-domain
-input into decisions. Technical people learn to communicate their ideas in terms
-of business value, and non-technical people get useful insights into technical
-details and an appreciation of the true costs of delivering the business
-objectives. And from time to time I've found the most insightful comments on
-technical proposals have come from non-technical people. And I've seen junior
-developers propose far simpler, but equally effective, alternatives to solutions
-proposed by seasoned architects.
-
-Perspective is as important as expertise. It's not unusual for obvious risks and
-flaws in a design to be spotted only by the people furthest from the problem.
-
-Psychological safety is key to the success of the RFC process. Everyone should
-be encouraged to put forward ideas, safe in the understanding that the team will
-collectively own any final decision and individuals will not be blamed for
-unexpected negative consequences. A culture of psychological safety permits
-teams to take risks and to learn from mistakes.
-
-If decisions are to be made by consensus, then there needs to be a framework in
-place for reaching consensus. Who has a vote over which types of decision, and
-who gets the casting vote in deadlock situations? When and how should decisions
-be elevated to higher authorities? The decision making framework should be set
-out in the context of a wider technical strategy and guiding principles that
-inform the direction of the project.
-
-RFCs require a strong governance model. RFCs are all about consensus-based
-decision making, but decisions will need to be taken by an authority in
-situations where consensus cannot be found. The design authority would normally
-be a technical lead or architect, and in the context of a bottom-up decision
-making environment they would ideally operate in a
-{link-dictator}[benevolent dictator] capacity.
+RFCs require a strong governance model. RFCs are all about consensus-based decision making, but decisions will need to be taken by an authority in situations where consensus cannot be found. The design authority would normally be a technical lead or architect, and in the context of a bottom-up decision making environment they would ideally operate in a {link-dictator}[benevolent dictator] capacity.
 
 == Conclusion
 
-I think Requests for Comments – and their counterpart, decision logs – are
-enormously valuable but often overlooked in software development practices.
+I think Requests for Comments – and their counterpart, decision logs – are enormously valuable but often overlooked in software development practices.
 
-The RFC process is a simple but effective way to make technical decisions in a
-structured and transparent way. But RFCs have far bigger impacts than just the
-decisions themselves. They help to share knowledge, disseminate expertise, and
-foster inclusive and psychologically-safe work cultures. These are essential
-foundations for high-performing development teams.
+The RFC process is a simple but effective way to make technical decisions in a structured and transparent way. But RFCs have far bigger impacts than just the decisions themselves. They help to share knowledge, disseminate expertise, and foster inclusive and psychologically-safe work cultures. These are essential foundations for high-performing development teams.
 
-Famously, there are {link-silver-bullets}[no silver bullets] in software
-development, and RFCs are no exception. They will not work in every organization.
-Introducing RFCs to a development process will work only in settings with an
-already-established culture of trust, autonomy, and responsibility. And the
-benefits of consensus-based decision making need to be carefully balanced
-against the risks. Beware of falling into the trap of design-by-committee. An
-over-engineered RFC process can be unnecessarily slow and bureaucratic, and not
-actually produce better outcomes.
+Famously, there are {link-silver-bullets}[no silver bullets] in software development, and RFCs are no exception. They will not work in every organization. Introducing RFCs to a development process will work only in settings with an already-established culture of trust, autonomy, and responsibility. And the benefits of consensus-based decision making need to be carefully balanced against the risks. Beware of falling into the trap of design-by-committee. An over-engineered RFC process can be unnecessarily slow and bureaucratic, and not actually produce better outcomes.
 
-Like software systems themselves, the processes we use to develop and maintain
-them also require thoughtful design.
+Like software systems themselves, the processes we use to develop and maintain them also require thoughtful design.
 
 .Related links
 ****
+
 * {link-juans-and-zeroes}[A thorough team guide to RFCs] — Juan Pablo Buriticá (2023)
+
 * {link-reilly}[The power of "yes, if": iterating our RFC process] — Tanya Reilly, Squarespace Engineering blog (2019)
+
 * {link-ayers}[Communicating and documenting architectural decisions (video)] — David Ayers, LeadDev (2019)
+
 * {link-nygard}[Documenting architecture decisions] — Michael Nygard (2011)
+
 * {link-perkins}[Why write ADRs?] — Eli Perkins, GitHub Blog (2020)
+
 * {link-thoughtworks}[Lightweight architecture decision records], Thoughtworks Technology Radar (2016)
+
 * {link-clements}[Documenting software architectures: views and beyond] — Clements _et al_ (2010)
+
 * {link-rfc-editor}[RFC Editor: RFC Index] — Every IETF RFC since 1969.
+
 ****

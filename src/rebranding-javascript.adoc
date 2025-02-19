@@ -15,8 +15,7 @@ Kieran Potts, 14 October 2019
 
 :desc-logo: A yellow square with the letters JS in black in the bottom-right corner
 
-There are several problems with the JavaScript name. Is it time to rebrand
-JavaScript? If so, what should we call it?
+There are several problems with the JavaScript name. Is it time to rebrand JavaScript? If so, what should we call it?
 
 An interesting question was asked recently in LinkedIn's JavaScript group:
 
@@ -27,51 +26,26 @@ The question really got me thinking.
 
 There's no doubt there are problems with JavaScript's branding:
 
-* The official specification for the language is actually called ECMAScript – a
-rather jarring and clumsy bit of branding by the standards organization that
-oversees the language's specification, Ecma International.
+* The official specification for the language is actually called ECMAScript – a rather jarring and clumsy bit of branding by the standards organization that oversees the language's specification, Ecma International.
 
-* {link-mdn}[The JavaScript reference section] on the Mozilla Developer Network
-(MDN) describes a subset of ECMAScript. Every documented feature is implemented
-in at least one mainstream web browser, and therefore this is regarded as the
-main manual for the "living" implementation of JavaScript. The problem is the
-word "JavaScript" is also widely used to refer to different ECMAScript supersets,
-notably {link-web-apis}[web APIs] and {link-node-apis}[Node APIs].
+* {link-mdn}[The JavaScript reference section] on the Mozilla Developer Network (MDN) describes a subset of ECMAScript. Every documented feature is implemented in at least one mainstream web browser, and therefore this is regarded as the main manual for the "living" implementation of JavaScript. The problem is the word "JavaScript" is also widely used to refer to different ECMAScript supersets, notably {link-web-apis}[web APIs] and {link-node-apis}[Node APIs].
 
-* JavaScript is a trademark of Oracle Corporation, which doesn't fit comfortably
-with the language's position as a central component of the web platform, which
-is meant to be built entirely from open technologies and standards.
+* JavaScript is a trademark of Oracle Corporation, which doesn't fit comfortably with the language's position as a central component of the web platform, which is meant to be built entirely from open technologies and standards.
 
-* There isn't even an official logo for JavaScript, let alone a cute mascot like
-Go's gopher or PHP's elephant.
+* There isn't even an official logo for JavaScript, let alone a cute mascot like Go's gopher or PHP's elephant.
 
-* And famously, JavaScript is unrelated to Java. This has confused the hell out
-of non-technical managers and recruiters for decades.
+* And famously, JavaScript is unrelated to Java. This has confused the hell out of non-technical managers and recruiters for decades.
 
 .An unofficial, community-made logo for JavaScript
 image::./_/media/images/js.png["{desc-logo}",200,200,link={link-logojs}]
 
-But for me, the big problem with the name JavaScript is its fuzzy scope. If a
-computer program is documented as having been written in JavaScript, that does
-not tell me everything I need to know to run the program. I do not know:
+But for me, the big problem with the name JavaScript is its fuzzy scope. If a computer program is documented as having been written in JavaScript, that does not tell me everything I need to know to run the program. I do not know:
 
-* The minimum version of ECMAScript with which the program is compatible, or
-(alternatively) what JavaScript engines or runtime environments the program
-supports.
+* The minimum version of ECMAScript with which the program is compatible, or (alternatively) what JavaScript engines or runtime environments the program supports.
 
-* What host APIs – language extensions added by the runtime environment – the
-program depends on. Is the program intended to run "client-side" (in a web
-browser), "server-side" (in Node.js or another runtime environment), or is it
-universal?
+* What host APIs – language extensions added by the runtime environment – the program depends on. Is the program intended to run "client-side" (in a web browser), "server-side" (in Node.js or another runtime environment), or is it universal?
 
-The confusion is demonstrated by the difficulty of consuming third party
-libraries. Browse GitHub for open source JavaScript packages that solve a
-particular problem, and for each solution you must dig deep into the README or
-the `package.json` file to discover if that particular JavaScript package is
-compatible with your own JavaScript application. (The problem is made worse by
-the current period of transition between module systems: from community-derived
-conventions such as CommonJS, AMD and UMD, towards ECMAScript's standard
-module notation.)
+The confusion is demonstrated by the difficulty of consuming third party libraries. Browse GitHub for open source JavaScript packages that solve a particular problem, and for each solution you must dig deep into the README or the `package.json` file to discover if that particular JavaScript package is compatible with your own JavaScript application. (The problem is made worse by the current period of transition between module systems: from community-derived conventions such as CommonJS, AMD and UMD, towards ECMAScript's standard module notation.)
 
 Rebranding JavaScript might help to clear up all this confusion.
 
@@ -79,57 +53,37 @@ Rebranding JavaScript might help to clear up all this confusion.
 
 If we did rebrand JavaScript, what would we call it?
 
-JavaScript has already had lots of names. Brendan Eich – who designed and
-implemented the first version of the language – had used the codename "Mocha"
-to refer to his project, but the marketing boffins at Netscape called it
-LiveScript when it was first shipped in an early beta of the Navigator 2.0
-browser, before settling on the name JavaScript for the final public release at
-the end of 1995 – apparently in an attempt to piggyback on the popularity of
-Java, an entirely unrelated language.
+JavaScript has already had lots of names. Brendan Eich – who designed and implemented the first version of the language – had used the codename "Mocha" to refer to his project, but the marketing boffins at Netscape called it LiveScript when it was first shipped in an early beta of the Navigator 2.0 browser, before settling on the name JavaScript for the final public release atthe end of 1995 – apparently in an attempt to piggyback on the popularity of Java, an entirely unrelated language.
 
-Alternative implementations of the language were called JScript (Microsoft's
-version for its Internet Explorer browser) and ActionScript (Adobe's version).
-And various dialects of JavaScript that have enjoyed their time in the sun over
-the years include CoffeeScript and, today, TypeScript.
+Alternative implementations of the language were called JScript (Microsoft's version for its Internet Explorer browser) and ActionScript (Adobe's version). And various dialects of JavaScript that have enjoyed their time in the sun over the years include CoffeeScript and, today, TypeScript.
 
-I think Eich was on the right track all along. *Mocha* is a great name. In the
-software space, this name conflicts only with the {link-mocha}[Mocha test
-framework] for Node.js and a legacy decompiler for Java.
+I think Eich was on the right track all along. *Mocha* is a great name. In the software space, this name conflicts only with the {link-mocha}[Mocha test framework] for Node.js and a legacy decompiler for Java.
 
 But my personal preference is to rename JavaScript to, simply, *JS*.
 
-Most people refer to JavaScript by its acronym, anyway. It matches the official
-file extension. And we could turn that ubiquitous black-on-yellow community
-logo into the official emblem and not have to remake all our merchandise.
+Most people refer to JavaScript by its acronym, anyway. It matches the official file extension. And we could turn that ubiquitous black-on-yellow community logo into the official emblem and not have to remake all our merchandise.
 
-Over time, the origins of the JS name would be largely forgotten, in the same
-way most PHP developers couldn't tell you what PHP stands for.
+Over time, the origins of the JS name would be largely forgotten, in the same way most PHP developers couldn't tell you what PHP stands for.
 
 == Flavors and versions
 
-What would be better still is to come up with a standard convention to refer
-to the extended APIs made available to JS programs by particular runtime
-environments for the purpose of communication with the host system.
+What would be better still is to come up with a standard convention to refer to the extended APIs made available to JS programs by particular runtime environments for the purpose of communication with the host system.
 
-For example, if today's ECMAScript becomes JS, then something like *WebJS* could
-become the official name for the JS superset that is supported in web browsers,
-as specified by the World Wide Web Consortium.
+For example, if today's ECMAScript becomes JS, then something like *WebJS* could become the official name for the JS superset that is supported in web browsers, as specified by the World Wide Web Consortium.
 
-And perhaps there could be a *ServerJS* standard that specifies additional APIs
-that are expected to be provided by server-side JavaScript runtimes such as
-Node.js.
+And perhaps there could be a *ServerJS* standard that specifies additional APIs that are expected to be provided by server-side JavaScript runtimes such as Node.js.
 
-Finally, ECMAScript's yearly release cycle and versioning convention is hugely
-convenient, and this should be extended to all flavours of the newly rebranded
-JS. Thus, *WebJS 2020* would refer to a snapshot of ECMAScript plus all the web
-APIs that are standardized as of the year 2020.
+Finally, ECMAScript's yearly release cycle and versioning convention is hugely convenient, and this should be extended to all flavours of the newly rebranded JS. Thus, *WebJS 2020* would refer to a snapshot of ECMAScript plus all the web APIs that are standardized as of the year 2020.
 
 What do you think? {link-reddit}[Discuss on Reddit.]
 
 .Related links
 ****
+
 * The JS Party podcast devoted {link-jsparty}[episode 101] to exploring
 this idea.
+
 * Separately, a similar question posed on Twitter became a
 {link-runhappylife}[rather lively thread] in early July 2020.
+
 ****
