@@ -7,7 +7,7 @@ Kieran Potts
 
 I'm a UK-based software developer and former technology journalist. I occasionally write about methods and tools for developing and maintaining software systems. You can subscribe to updates via
 link:https://mailchi.mp/2c60bdf9f429/91h5vui7v9[email], link:/feeds/rss.xml[RSS],
-link:/feeds/atom.xml[Atom], or link:/feeds/feed.json[JSON Feed], or follow me on https://bsky.app/profile/kieranpotts.com[BlueSky] or https://www.linkedin.com/in/kieranpotts/[LinkedIn].
+link:/feeds/atom.xml[Atom], or link:/feeds/feed.json[JSON Feed], or follow me on https://bsky.app/profile/kieranpotts.com[Bluesky] or https://www.linkedin.com/in/kieranpotts/[LinkedIn].
 
 * link:./essential-versus-accidental-complexity[Mental models: essential versus accidental complexity] +
   [.small]#7 December 2024#
