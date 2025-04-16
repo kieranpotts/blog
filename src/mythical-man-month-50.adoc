@@ -1,6 +1,6 @@
 = The Mythical Man-Month at 50
 Kieran Potts, 18 April 2025
-:description: Fred Brooks's classic book The Mythical Man-Month was published 50 years ago. It was hugely influentual on the then-nascent discipline of software development. How does it stand up today?
+:description: Fred Brooks's classic book The Mythical Man-Month was published 50 years ago. It was hugely influential on the then-nascent discipline of software development. How does it stand up today?
 :docinfo: shared
 :nofooter:
 
@@ -20,30 +20,113 @@ Of all Brooks's analogies, it is that large-scale software development is like "
 
 "Large and small, massive and wiry, team after team has become entangled in the tar," Brooks writes. "No one thing seems to cause the difficulty — any particular paw can be pulled away. But the accumulation of simultaneous and interacting factors brings slower and slower motion."
 
-Throughout the book, the author draws on his own experiences, notably as the manager of IBM's ambitious OS/360 project during the initial design phase from 1964 to 1965. At the peak of the project, more than 1,000 people were working on OS/360. This was one of the biggest software projects ever attempted at the time. But the project was not "wholly successful", as Brooks himself acknolwedges in his book. OS/360 was delivered "late, it [used] more memory than planned, the costs were several times the estimate, and [the first version] did not perform very well".
+Throughout the book, the author draws on his own experiences, notably as the manager overseeing the initial design of IBM's ambitious OS/360 project. At the peak of the project, more than 1,000 people were working on OS/360. This was one of the biggest software projects ever attempted at the time. But the project was not "wholly successful", as Brooks himself acknowledges in his book. OS/360 was delivered "late, it [used] more memory than planned, the costs were several times the estimate, and [the first version] did not perform very well".
 
-Learning from OS/360, Brooks suggests that large-scale commercial software projects have costs that are orders-of-magnitude greater than the norm for two main reasons. First, that designing, building, integrating, and then testing so many individual components to compose a single coherent system is a far greater challenge than building all those components as standalone units. Second, that shrinkwrapping software (ie. making a software system commercially available as a product) requires additional complexity to make it usable by lots of people for lots of purposes, in "many operating environments, for many sets of data". Such a program requires far more extensive tests and documentation than bespoke, single-purpose software. Moreover, since general-purpose programs tend to be used as components within wider programming systems, they are required to have well-defined interfaces for their input and output, and to operate under more constrained computing resources (such as memory and storage space). These additional performance constraints demand greater design effort.
+Learning from OS/360, Brooks says that large-scale commercial software projects have costs that are orders-of-magnitude greater than the norm, and he suggests there are two main reasons for this. First, that designing, building, integrating, and then testing so many individual components to compose a single coherent system is a far greater challenge than building all those components as standalone units. Second, that shrink-wrapping software (ie. making a software system commercially available as a product) requires additional complexity to make it usable by lots of people for lots of purposes — in "many operating environments, for many sets of data". Such a program requires far more extensive tests and documentation than bespoke, single-purpose software. Moreover, since general-purpose programs tend to be used as components within wider systems, they are required to have well-defined interfaces for their input and output, and to operate under more constrained computing resources (such as memory and storage space). These additional performance constraints demand greater design effort.
 
-Brooks estimates that the overhead of designing the interfaces between all the components, coordinating their integration, and the incremental system testing, adds a multiplier of about three to the cost of building the components individually. And the productization of general-purpose software adds another cost factor of three. So, all told, a large-scale commercial software product costs about nine times the effort involved in building all the components separately for private use — which tends to be the basis for our estimates.
+Brooks estimates that the overhead of designing the interfaces between all the components, coordinating their integration, and the incremental system testing, adds a multiplier of about three to the cost of building the components individually. And the productization of software adds another cost factor of three. So, all told, a large-scale, general-purpose, commercial software product costs about nine times the effort involved in building all the same components separately for private use — which tends to be the basis for our estimates.
 
-Large-scale software development is inherently hard. The reality of writing commercial computer programs for a living is that, as with any creative activity, there are many "dreary hours of tedious, painstaking labor" — cycles of testing and debugging of the assembled product, often involving analysis of code written by other people who have likely already moved on to other projects.
+The essence of Brook's argument is that large-scale software development is inherently hard. The reality of writing commercial computer programs for a living is that, as with any creative activity, there are many "dreary hours of tedious, painstaking labor" — cycles of testing and debugging of the assembled product, often involving analysis of code written by other people, who have likely moved on to other projects already.
 
-Nothing is new, eh? Despite 50 years of immense technological advances — in computer hardware, in programming languages and runtime environments, and in tools and automation that support software development — the challenges of large-scale software development remain largely the same as they were at the founding of our trade.
+Nothing is new, eh? Despite 50 years of immense technological advances — in computer hardware, in programming languages and runtime environments, and in tools and automation that support every aspect of software delivery — the challenges of large-scale software development remain largely the same as they were at the founding of our trade.
 
-Will we ever free ourselves from the tar pit? Maybe. But the software we make todays tends to be more complex than ever, not less so. Throughout the history of computing, advances in technology have created opportunities for ever more ambitious software. The resources and tools at our disposal are as powerful as ever, but the IT systems we make today tend also to be hugely complex in both their functions and their performance requirements.
+Will we ever free ourselves from the tar pit? Maybe. But the software we make tends to be ever more complex, not less so. Throughout the history of computing, advances in technology have created opportunities for ever more ambitious software. The resources and tools at our disposal are as powerful as ever, but the productivity gains afforded by these tools are offset by the fact that the software we make today tends to be hugely complex in both its functions and performance requirements.
 
-The distributed nature of much of today's software makes the application of engineering principles to its development more critical than ever.
+// The distributed nature of much of today's software makes the application of engineering principles to its development more critical than ever.
 
+// Some of the challenges today are different from what they were in the time of OS/360. We are no longer physically constrained by computing resources — these are abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software.
 
+// I've come to think of software development as a perpetual battle against complexity. This, in my opinion, is the core skill of the craft of computing programming: to extract simple models from complex domains.
 
+// ....
 
 == Conceptual integrity
 
 _The Mythical Man-Month_ is really a collection of standalone essays rather than a cohesive thesis on the challenges of large-scale software development. Nevertheless, there are some key themes that run throughout the book. One is that commercial software development is harder than solo programming because of the *division of labor*. The other main theme is that the *conceptual integrity* of a system is critical to its success.
 
-// TODO: Part of our common lexicon today.
+Brooks's notion of conceptual integrity is, I think, the most important principle of software architecture. It has become part of our industry's lexicon, though today you are more likely to hear terms like "cohesion" and "design consistency".
+
+[quote, Fred Brooks]
+____
+I will contend that conceptual integrity is _the_ most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of ideas, than to have one that contains many good but independent and uncoordinated ideas.
+____
+
+// TODO: Define conceptual integrity
+
+
+// TODO: Why is conceptual integrity important?
+
+[quote, Fred Brooks]
+____
+Ease of use, then, dictates unity of design — conceptual integrity.
+____
+
+Unfortunately, maintaining conceptual integrity is notoriously difficult as a software system grows in size and scope. To explain why, Brooks draws a parallel with European cathedrals, most of which "show differences in plan or architectural style between parts built in different generations by different builders". In software, Brooks notes, conceptual disunity arises not from the passage of time — hundreds of years separating phases of functional extension — but from the decomposition of the design into "many tasks done by many men".
+
+The necessity to have a *division of labour* in large-scale software projects makes it hard to maintain the conceptual integrity of the overall system design.
+
+
+
+
 
 ////
+
+
+== Conceptual integrity
+
+// TODO
+
+// The _ratio_ of function to conceptual complexity is the ultimate test of system design. This ratio is a measure of ease of use.
+
+
+
+Brooks uses a number of examples of computer programming environments to argue that _ease of use_ is derived from a balance being struck between two factors: function and simplicity. "Neither function alone nor simplicity alone defines a good design." A useful system is one that is both rich in functionality and is straightforward to use.  Every part of the system, Brooks argues, should reflect a consistent set of design philosophies and the same balance of competing forces.
+
+Thus, to achieve ease of use, "the design must proceed from one mind, or from a very small number of agreeing resonated minds" to maintain the necessary conceptual integrity.
+
+Brooks suggests that the concept of the surgical team, and the division of labour between architecture and implementation, are techniques that help to maintain conceptual integrity of large-scale software systems.
+
+"The separation of architectural effort from implementation is a very powerful way of getting conceptual integrity on very large projects." Here, Brooks defines the _architecture_ as "the complete and detailed specification of the user interface". The _implementation_ is everything else. Today, we would define architecture more broadly, to include the overall design of the system, including the data model, the interfaces between components, the deployment infrastructure, and so on. Brooks's definition of "architecture" in 1975 we would term "user experience" today. Thus, the distinction between _design_ and _implementation_ is a much murkier one in 2025 than it was in 1975, reflective of the nature of the software systems we build today. Nevertheless, the broad principle remains sound: that one or two key people should oversee the overall design and technical strategy.
+
+// Discipline is good for art. The external provision of an architecture enhances, not cramps, the creative style of an implementing group.
+
+// A conceptually integrated system is faster to build and to test.
+
+The trade-off is that architects become something of an aristocracy, and demographic ideals that help to form cohesive teams are sacrificed. "Are not the architects a new aristocracy, an intellectual elite, set up to tell the poor dumb implementers what to do?" Brooks asks. "Won't one get a better product by getting the good ideas from all the team, following a demographic philosophy…?"
+
+Brooks argues that there must be a balance between demographic and autocratic approaches to software design. Everyone should be able to contribute ideas to the design, but ultimately there must be a single authority who makes the final decisions. Brooks also makes the point that implementation — the raw coding — is also a form of creative work, just one that operates at a different level of abstraction to the architecture. While the architect has the most influence over the ease of use of the product, the implementers will have the most influence over its performance.
+
+Brooks says implementers tend to have these three objections to a small architectural team having all the responsibility for the external specifications (ie. the design):
+
+* The specifications will be too rich in function and will not reflect practical cost considerations. Brooks addresses this in the next chapter.
+
+* The architects will get all the creative fun and shut out the inventiveness of the implementers. Brooks counteracts: "The opportunity to be creative and inventive in implementation is not significantly diminished by working within a given external specification."
+
+* The many implementers will have to sit idly by while the specifications come through the narrow funnel that is the architecture team. Brooks argues that this can be resolved easily through timing and phasing. Unlike in the construction industry, in which builders tend not be to be hired until the architectural designs are finalized, the pace is quicker in computing and specification and building therefore tend to overlap. Implementers can start to implement as soon as he has relatively vague assumptions about the requirements; code is easier to change than bricks and mortar and steel. Some time must be spent up-front communicating with the architects, too.
+
+Brooks says that, besides conceptual integrity, the horizontal division of labour between architecture and implementation also significantly improves communication flows within teams.
+
+// Much of software architecture, implementation, and realization can proceed in parallel.
+
+
+
+
+----------------
+
+
+Bottom-up design is an approach to *link:./system-design.adoc[system design]* that emphasizes building systems from small, primitive components, gradually integrating lots of small parts to compose the complete solution. It is sometimes used as a synonym for [evolutionary design], which is a similar concept.
+
+Bottom-up design contrasts with *link:./top-down-design.adoc[top-down design]*, which instead emphasizes up-front planning and design through [decomposition] of the problem space into lots of subsystems.
+
+Bottom-up design is often desirable in situations where there are limited resources (such as time or people) or where the requirements are unclear or unstable. The emphasis is on reusing generic components to compose custom solutions with minimal bespoke code. The base components are linked together to form larger subsystems, which are in turn connected to form the complete system.
+
+The main benefit of bottom-up design is [reusability] of existing code. The main downside of bottom-up design is that is can be overly organic, leading to a tangle of elements and subsystems with no overall structure and limited consistency. Development of large-scale systems especially requires some degree of top-down design to maintain [conceptual integrity]. In practice, most modern software design practices combine elements of both top-down and bottom-up design.
+
+
+
+----------------
+
+
 
 == The mythical man-month
 
@@ -190,58 +273,6 @@ The "entire system also must have conceptual integrity, and that requires a syst
 
 // TODO: Bottom-up approach has become prevalent.
 
-== Conceptual integrity
-
-// TODO
-
-In the fourth chapter, titled "Aristocracy, Democracy, and System Design", Brooks expands on the principle of conceptual integrity.
-
-[quote, Fred Brooks]
-____
-I will contend that conceptual integrity is _the_ most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of ideas, than to have one that contains many good but independent and uncoordinated ideas.
-____
-
-// The _ratio_ of function to conceptual complexity is the ultimate test of system design. This ratio is a measure of ease of use.
-
-But conceptual integrity is hard to archive. Brooks draws a parallel with European cathedrals, most of which "show differences in plan or architectural style between parts built in different generations by different builders". In software, Brooks notes, conceptual disunity arises not from the passage of time — hundreds of years separating phases of functional extension — but into the separation of the design into "many tasks done by many men".
-
-Thus, the necessity to *divide labour* in large-scale projects makes it hard to maintain a conceptual integrity of the overall system.
-
-How can we resolve this? Brooks asks: "How does on keep the architects from drifting off into the blue with unimplementable or costly specifications?" And: "How does one ensure that every trifling detail of an architectural specification gets communicated to the implementer, properly understood by him, and accurately incorporated into the product?" These questions are as pertinent in 2025 as they were in 1975.
-
-Brooks uses a number of examples of computer programming environments to argue that _ease of use_ is derived from a balance being struck between two factors: function and simplicity. "Neither function alone nor simplicity alone defines a good design." A useful system is one that is both rich in functionality and is straightforward to use.  Every part of the system, Brooks argues, should reflect a consistent set of design philosophies and the same balance of competing forces.
-
-[quote, Fred Broks]
-____
-Ease of use, then, dictates unity of design — conceptual integrity.
-____
-
-Thus, to achieve ease of use, "the design must proceed from one mind, or from a very small number of agreeing resonated minds" to maintain the necessary conceptual integrity.
-
-Brooks suggests that the concept of the surgical team, and the division of labour between architecture and implementation, are techniques that help to maintain conceptual integrity of large-scale software systems.
-
-"The separation of architectural effort from implementation is a very powerful way of getting conceptual integrity on very large projects." Here, Brooks defines the _architecture_ as "the complete and detailed specification of the user interface". The _implementation_ is everything else. Today, we would define architecture more broadly, to include the overall design of the system, including the data model, the interfaces between components, the deployment infrastructure, and so on. Brooks's definition of "architecture" in 1975 we would term "user experience" today. Thus, the distinction between _design_ and _implementation_ is a much murkier one in 2025 than it was in 1975, reflective of the nature of the software systems we build today. Nevertheless, the broad principle remains sound: that one or two key people should oversee the overall design and technical strategy.
-
-// Discipline is good for art. The external provision of an architecture enhances, not cramps, the creative style of an implementing group.
-
-// A conceptually integrated system is faster to build and to test.
-
-The trade-off is that architects become something of an aristocracy, and demographic ideals that help to form cohesive teams are sacrificed. "Are not the architects a new aristocracy, an intellectual elite, set up to tell the poor dumb implementers what to do?" Brooks asks. "Won't one get a better product by getting the good ideas from all the team, following a demographic philosophy…?"
-
-Brooks argues that there must be a balance between demographic and autocratic approaches to software design. Everyone should be able to contribute ideas to the design, but ultimately there must be a single authority who makes the final decisions. Brooks also makes the point that implementation — the raw coding — is also a form of creative work, just one that operates at a different level of abstraction to the architecture. While the architect has the most influence over the ease of use of the product, the implementers will have the most influence over its performance.
-
-Brooks says implementers tend to have these three objections to a small architectural team having all the responsibility for the external specifications (ie. the design):
-
-* The specifications will be too rich in function and will not reflect practical cost considerations. Brooks addresses this in the next chapter.
-
-* The architects will get all the creative fun and shut out the inventiveness of the implementers. Brooks counteracts: "The opportunity to be creative and inventive in implementation is not significantly diminished by working within a given external specification."
-
-* The many implementers will have to sit idly by while the specifications come through the narrow funnel that is the architecture team. Brooks argues that this can be resolved easily through timing and phasing. Unlike in the construction industry, in which builders tend not be to be hired until the architectural designs are finalized, the pace is quicker in computing and specification and building therefore tend to overlap. Implementers can start to implement as soon as he has relatively vague assumptions about the requirements; code is easier to change than bricks and mortar and steel. Some time must be spent up-front communicating with the architects, too.
-
-Brooks says that, besides conceptual integrity, the horizontal division of labour between architecture and implementation also significantly improves communication flows within teams.
-
-// Much of software architecture, implementation, and realization can proceed in parallel.
-
 == The second-system effect
 
 The fifth chapter is titled "The second-system effect". Brooks argues that the first system that a programmer designs and builds is often the best, because it is simple and elegant. The second system, however, tends to be over-engineered and bloated with features. Brooks calls this the "second-system effect".
@@ -267,6 +298,8 @@ Brooks suggests that "each little function" be assigned a value: "capability _x_
 == Passing the word
 
 Chapter six is titled "Passing the word". Brooks argues that the most important thing in software development is communication.
+
+// How can we resolve this? Brooks asks: "How does on keep the architects from drifting off into the blue with unimplementable or costly specifications?" And: "How does one ensure that every trifling detail of an architectural specification gets communicated to the implementer, properly understood by him, and accurately incorporated into the product?" These questions are as pertinent in 2025 as they were in 1975.
 
 "How can a group of 10 architects maintain the conceptual integrity of a system which 1000 men are building?" To answer this question, Brooks draws on a communication system worked out for the System/360 design effort — this was a hardware project, but he argues the techniques are equally applicable to software projects.
 
