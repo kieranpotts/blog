@@ -1,34 +1,49 @@
 = The Mythical Man-Month at 50
 Kieran Potts, 18 April 2025
-:description: TODO.
+:description: Fred Brooks's classic book The Mythical Man-Month was published 50 years ago. It was hugely influentual on the then-nascent discipline of software development. How does it stand up today?
 :docinfo: shared
 :nofooter:
 
-Fred Brooks's classic book _The Mythical Man-Month_ was published in 1975 — 50 years ago this year. This book was hugely influential on the discipline of software development, shaping many of the principles that underpin our ways of working to this day. I got myself a copy of both the original 1975 edition and the 20th anniversary (1995) edition, and read them both cover-to-cover. In this blog post I review which of Brooks's ideas have stood up particularly well, and which have not.
+Fred Brooks's classic book _The Mythical Man-Month_ was published in 1975 — 50 years ago. The book was one of the first published analyses of the challenges of large-scale software development (an emerging field in 1975) and it was hugely influential on early practitioners of our craft. Brooks introduced many ideas and principles that still underpin our ways of working today.
 
-_The Mythical Man-Month_ was one of the first analyses of the unique challenges of large-scale software development — a field that in 1975 was in its infancy. The book is a collection of essays rather than a cohesive thesis, but there are some key threads that run throughout: that managing large software projects is hard due to the inevitable *division of labor*, and that preserving the architect's vision of a system — its *conceptual integrity* — is critical to its success.
+But which ideas have stood the test of time, and which have not?
 
-// TODO: _The Mythical Man-Month_ is one of the most important and influential books on the economics of commercial software development. It is the source of many principles and analogies — like conceptual integrity and the tar pit — that are still part of our industry's lexicon to this day.
-
-Brooks draws on his own experiences, notably as the manager of IBM's OS/360 project during its initial design phase from 1964 to 1965. Brooks acknowledges that the OS/360 project "cannot be called wholly successful" and that the product "was late, it took more memory than planned, the costs were several times the estimate, and it did not perform very well until several releases after the first".
-
-// This book is a rich source of ideas, idioms, analogies, metaphors...
+I got myself a copy of the original 1975 edition and the extended 20th anniversary (1995) edition. Here are my thoughts.
 
 == The tar pit
 
-The first chapter introduces the oft-cited analogy of the process of large-scale software development being like "the mortal struggles of great beasts in the tar pits". This is represented in the drawing on the cover of both editions of the book.
+_The Mythical Man-Month_ is rich in idioms, analogies, and metaphors that help to communicate the unique economic, organizational, and sociological challenges associated with the development of large-scale software systems.
+
+Of all Brooks's analogies, it is that large-scale software development is like "the mortal struggles of great beasts in the tar pits" that is the most colorful.
+
+// TODO: Reproduce cover image.
 
 "Large and small, massive and wiry, team after team has become entangled in the tar," Brooks writes. "No one thing seems to cause the difficulty — any particular paw can be pulled away. But the accumulation of simultaneous and interacting factors brings slower and slower motion."
 
-In this opening chapter, Brooks attempts to explain why large-scale commercial software development has proven to be so hard. His central thesis is that there is inherently more complexity in developing a _programming product_ rather than a mere computer _program_. A programming product "must be written in a generalized fashion" such that is "is usable in many operating environments, for many sets of data". Such a program requires far more extensive tests and documentation that specialized, single-purpose programs. Moreover, general-purpose programs tend to become components in wider _programming systems_, which means such component programs must have well-defined interfaces for their input and output, and must operate under more constrained computing resources (memory, etc.).
+Throughout the book, the author draws on his own experiences, notably as the manager of IBM's ambitious OS/360 project during the initial design phase from 1964 to 1965. At the peak of the project, more than 1,000 people were working on OS/360. This was one of the biggest software projects ever attempted at the time. But the project was not "wholly successful", as Brooks himself acknolwedges in his book. OS/360 was delivered "late, it [used] more memory than planned, the costs were several times the estimate, and [the first version] did not perform very well".
 
-When implementing a commercial software product, the sheer joy computer programming — of making things that are useful to other people, an innately human desire — is overshadowed by the requirement for the product to "perform perfectly". "Human beings are not accustomed to being perfect, and few areas of human activity demand it."
+Learning from OS/360, Brooks suggests that large-scale commercial software projects have costs that are orders-of-magnitude greater than the norm for two main reasons. First, that designing, building, integrating, and then testing so many individual components to compose a single coherent system is a far greater challenge than building all those components as standalone units. Second, that shrinkwrapping software (ie. making a software system commercially available as a product) requires additional complexity to make it usable by lots of people for lots of purposes, in "many operating environments, for many sets of data". Such a program requires far more extensive tests and documentation than bespoke, single-purpose software. Moreover, since general-purpose programs tend to be used as components within wider programming systems, they are required to have well-defined interfaces for their input and output, and to operate under more constrained computing resources (such as memory and storage space). These additional performance constraints demand greater design effort.
 
-The reality of writing computer programs for a living, Brooks writes, is that a great deal of time is spent reverse engineering other people's code, and testing and debugging the assembled product. "With any creative activity come dreary hours of tedious, painstaking labor, and programming is no exception."
+Brooks estimates that the overhead of designing the interfaces between all the components, coordinating their integration, and the incremental system testing, adds a multiplier of about three to the cost of building the components individually. And the productization of general-purpose software adds another cost factor of three. So, all told, a large-scale commercial software product costs about nine times the effort involved in building all the components separately for private use — which tends to be the basis for our estimates.
 
-"As a rule of thumb," Brooks concludes, "I estimate that a programming product costs at least three times as much as a debugged program with the same function." It is why, Brooks argues, that are many accounts of two programmers working in a garage to build "an important program that surpasses the best efforts of large teams". (It seems the cliché of the garage startup has deep roots.)
+Large-scale software development is inherently hard. The reality of writing commercial computer programs for a living is that, as with any creative activity, there are many "dreary hours of tedious, painstaking labor" — cycles of testing and debugging of the assembled product, often involving analysis of code written by other people who have likely already moved on to other projects.
 
-// A programming systems product takes about nine times as much effort as the component programs written separately for private use. I estimate that productizing imposes a (cost) factor of three; and that designing, integrating, and testing components into a coherent system imposes a factor of three.
+Nothing is new, eh? Despite 50 years of immense technological advances — in computer hardware, in programming languages and runtime environments, and in tools and automation that support software development — the challenges of large-scale software development remain largely the same as they were at the founding of our trade.
+
+Will we ever free ourselves from the tar pit? Maybe. But the software we make todays tends to be more complex than ever, not less so. Throughout the history of computing, advances in technology have created opportunities for ever more ambitious software. The resources and tools at our disposal are as powerful as ever, but the IT systems we make today tend also to be hugely complex in both their functions and their performance requirements.
+
+The distributed nature of much of today's software makes the application of engineering principles to its development more critical than ever.
+
+
+
+
+== Conceptual integrity
+
+_The Mythical Man-Month_ is really a collection of standalone essays rather than a cohesive thesis on the challenges of large-scale software development. Nevertheless, there are some key themes that run throughout the book. One is that commercial software development is harder than solo programming because of the *division of labor*. The other main theme is that the *conceptual integrity* of a system is critical to its success.
+
+// TODO: Part of our common lexicon today.
+
+////
 
 == The mythical man-month
 
@@ -133,6 +148,8 @@ Brooks quotes research by Sackman, Grant and Erickson that very good professiona
 // TODO: Conclusion - the analogy of the surgical team is not well remembered, but the principles are widely understood. This principle manifests in job roles like "technical lead" and "solution architect"…
 
 An underlying thesis of the book is that "the brute-force approach is costly, slow, inefficient, and produces systems that are not conceptually integrated", ie. the preference is for small surgical teams  of "first-class people" rather than hundreds of mediocre programmers.
+
+// It is why, Brooks concludes, there are many accounts of two programmers working in a garage to build "an important program that surpasses the best efforts of large teams". The cliché of the garage startup has deep roots.
 
 Most qualified software development managers would agree that the ideal approach to software development is to have a small, sharp team, "which by common consensus shouldn't exceed 10 people", over hundreds of average programmers. ... For efficiency, and conceptual integrity.
 
@@ -600,3 +617,6 @@ Self-documenting programming techniques find their greatest use and power in hig
 ____
 The tar pit of software engineering will continue to be sticky for a long time to come… software system's are perhaps the most intricate and complex of man's handiworks. The management of this complex craft will demand our best use of new languages and systems, our best adaptation of proven engineering management methods, liberal doses of common sense, and a God-given humility to recognize our fallibility and limitations.
 ____
+
+////
+
