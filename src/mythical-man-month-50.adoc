@@ -70,7 +70,7 @@ Brooks is making the argument that software development, like all creative endea
 
 Perhaps, then, the enduring problem of scheduling is not that we don't seem to have gotten much better at estimating, but rather that large parts of our industry continues to operate on the wrong assumption that software delivery can be successfully planned in meticulous detail. Or perhaps this is the assumption that people in other business domains make – the people who commission us to make software for them.
 
-// TODO: We also tend to estimate based on programming effort, but the bottlenecks tend to be in other phased of the software development life cycle.
+// TODO: We also tend to estimate based on programming effort, but the bottlenecks tend to be in other phased of the software development lifecycle.
 
 === 2. Progress is not always directly correlated with effort
 
@@ -113,7 +113,7 @@ Instead, we should reschedule the work with the original team members, unaugment
 
 Based on his own experience, Brooks says that about half of the schedule of software projects is taken up with rounds of testing and debugging.
 
-Of course, the industry has almost universally adopted iterative and incremental development practices, in which discrete components of an overall system are delivered in a complete software development life cycle, which is repeated over and over until all of the components of the system are complete. Throughout this process, system tests are continuously run and extended to verify the correctness of the overall system.
+Of course, the industry has almost universally adopted iterative and incremental development practices, in which discrete components of an overall system are delivered in a complete software development lifecycle, which is repeated over and over until all of the components of the system are complete. Throughout this process, system tests are continuously run and extended to verify the correctness of the overall system.
 
 By keeping testing and coding activities close together, we have (in theory) become better at estimating the work involved in a complete increment – both coding and testing, not just the coding part.
 
