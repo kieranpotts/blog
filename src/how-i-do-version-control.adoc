@@ -1,0 +1,60 @@
+= How I do version control
+Kieran Potts, DD MMM YYYY
+:description: Git supports many different branching-and-merging strategies. This is my approach.
+:docinfo: shared
+:nofooter:
+
+:link-gitflow: https://nvie.com/posts/a-successful-git-branching-model/
+:link-gitlabflow: https://about.gitlab.com/topics/version-control/what-is-gitlab-flow/
+:link-githubflow: https://scottchacon.com/2011/08/31/github-flow.html
+:link-simpleflow: https://www.atlassian.com/git/articles/simple-git-workflow-is-simple
+
+Git is the _de facto_ industry standard for version control. As a decentralized source code management (SCM) system with a lightweight branching-and-merging model, Git is wonderfully unopinionated about how it is used. This means there are endless ways to organize repositories, to manage branches, to handle merges, and to log revisions. Responsibility falls on software developers to choose strategies for all these things. We get to tailor the version control workflow for the requirements and constraints of each software project.
+
+There are lots of different ways you can manage the flow of changes through source control. {link-gitflow}[GitFlow], {link-gitlabflow}[GitLab Flow], {link-github-flow}[GitHub Flow] and Atlassian's {link-simpleflow}[Simple Git Workflow] are just a few of the possibilities for the core branching-and-merging strategy. On top of this, you need to think about commit message conventions, versioning standards, releasing strategies, and how automation tools – perhaps running in continuous integration servers – will plug in to source control events.
+
+My own preferred branching-and-merging strategy has been iterated over several years. I've tested and refined it in the context of a variety of software projects. This is how I do source control.
+
+== Design constraints
+
+My Git workflow has morphed in shape over time, but it started to settle into a consistent design once I applied a set of constraints to it. This is what I wanted to achieve:
+
+* *Parallel development*: One of the primary use cases for version control is to support multiple parallel work streams on the same codebase. It shouldn't need saying, but a source control workflow must accommodate a high degree of parallel development. But parallel development should not be entirely unbounded, either. A well-designed source control workflow should introduce just enough friction to avoid some of the risks associated with parallel development, such as the costs of merge conflicts.
+
+* *Low risk*: Merge conflicts can be time-consuming to resolve and they increase the likelihood of bugs and regressions reaching production. The distributed nature of Git, which gives us the flexibility to check out and make different changes to the same files at the same time, places the responsibility on development teams to reduce the occurrence of merge conflicts. This requires careful planning of the sequencing of changes and their subsequent integration.
+
+* *Keep it simple*: Software projects are more likely to be successful if the development process is robust. And robustness is achieved by keeping the process simple and intuitive. Good workflows can be repeated over and over again with low likelihood of error. Contributors should need to know only a small subset of `git` CLI commands, and they should need to perform only a small number of manual operations.
+
+* *Support continuous integration*: I wanted my workflow to support continuous integration, which means integrating all work-in-progress into shared mainline tracks at regular intervals – perhaps as frequently as multiple times a day per developer. This means that side branches should be short-lived, or not exist at all. Continuous integration has many, many benefits, one of which is to further reduce the occurrence of time-sucking merge conflicts between parallel development streams.
+
+* *Support continuous delivery*: I wanted my workflow to have a single mainline track that will always be stable and _immediately_ deployable to production or production-like environments (such as staging servers or canary channels). The latest stable revision should be deployable without even needing to wait for builds to complete or tests to pass. This constraint means that production services can be rebuilt as quickly as possible. For example, you can quickly roll back a production release in response to an incident.
+
+* *Support continuous deployment*: Shipping updates to production regularly, in small incremental improvements rather than "big bang" updates, makes deployments easier and reduces the risks of regressions reaching production. Furthermore, when incidents do (inevitably) occur in production, it will be easier to identify the root cause of the problem because the last release's diff is always small. Continuous deployment is not appropriate for every software product, but a good source control workflow should be able to scale to handle it where required.
+
+* *Fast rollback*: Continuous deployment also requires fast reproducibility of _prior_ versions. If an incident occurs in production after a release, you want to be able to rollback to the last known good version _as quickly as possible_ and with a high degree of confidence that the rollback will work. So, there needs to be guarantees that prior versions will remain stable, that they can be rebuilt with identical dependencies and so on. A goal of my source control workflow is to be able to recreate a system, or any prior version of it, at any time.
+
+* *Fast feedback*: Besides continuous integration, delivery, and deployment, a source control workflow should support a high degree of automation throughout the development and operations processes. The objective is to use automation to get fast feedback on the quality of the evolving software. For example, static and runtime tests may be run on ever commit, rather than be delayed until the point of integration.
+
+* *Quality gates*: Out-of-the-box, the source control workflow should be lightweight and as frictionless as possible. But the trick to optimizing development velocity is to build in _just enough_ friction to maintain stability in the evolving software. After all, development velocity decreases if the quality of the system is allowed to incrementally deteriorate. So, an important objective of my source control workflow is to maximize the utility of Git's lightweight branching and merging operations, but to allow quality gates to by added, as appropriate for each project.
+
+* *Automate all the things*: It should also be easy to automate other recurring tasks such as the generation of release notes and changelogs, the bumping of version numbers, the management of secrets and feature flags, and so on. Automation is a key enabler of our ability to deliver software quickly and safely. It reduces the risk of human error and allows us to focus on the problem-solving and creative aspects of our work, and less on the mundane bits. Automation increases productivity and makes development work more enjoyable and rewarding. To optimize the potential for automation, sufficient metadata needs to be embedded in commit objects, branches, and tags.
+
+* *Provenance*: This is an important constraint for me. I want to be able to trace every feature in a production system back to the business requirement, bug report, or incident that initiated the relevant code changes. This can be achieved by coupling source control to a project's issue tracking system. I wanted to enforce in my workflow a strict two-way binding between tasks in the issue tracker and changes in the code repository. I want to be able to query Git for all changes related to a particular issue, and to query the issue tracking system for all requirements related to particular changes logged in Git.
+
+* *Clean history*: I wanted the output from `git log` MUST produce a clean and meaningful changelog, with clearly signposted release points. The log output should be both human-readable and machine-parsable, so changelogs can be auto-generated in other presentation formats such as web pages. A code repository's changelog is an important artifact in its own right. A clean codebase helps to understand the current state of a system, but this is only a snapshot in time. A clean commit log gives us a deep understanding of a system's changing state, and so helps us to understand the context in which the current code exists.
+
+* *Scalable*: Finally, I wanted a Git workflow that could be scaled from personal hobby projects to large-scale enterprise applications. The idea is that a baseline workflow – which requires just a single branch – can be incrementally extended with opt-in features and procedures, as necessary to scale a project.
+
+Not all of these objectives can be met exclusively through design of the source control workflow. For example, achieving continuous integration and delivery, and especially continuous deployment, has implications for the design of the software system under source control itself. It will certainly be necessary to integrate into the software some kind of feature flag system, for example.
+
+== Git configuration
+
+== Issue tracking
+
+== Task categories
+
+.Related links
+****
+* https://www.conventionalcommits.org/[Conventional Commits] — A widely-adopted standard for writing commit messages, from which changelogs can be auto-generated.
+* https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines[Angular's commit message guidelines] — The basis for Conventional Commits.
+****
