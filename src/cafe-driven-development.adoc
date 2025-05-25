@@ -1,0 +1,4 @@
+= Cafe-driven development
+
+// TODO: Research why *environment* is so important to software development.
+
