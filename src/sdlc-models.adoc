@@ -1,0 +1,141 @@
+= Mental models: SDLC models
+
+= Incremental vs. iterative
+
+This idea, that we prioritize the things that add the most value, comes from
+The Agile Manifesto.
+
+Perhaps we should not be focusing on "adding quality" as much as we should be
+on "maintaining quality".
+
+Our job is to balance the short and long term: incremental build versus
+iterative design.
+
+== Waterfall
+
+Discuss the Royce and Benington papers, which is where the idea of the "waterfall" model originated (though neither paper use this term).
+
+In reality, “waterfall” has never really existed. It’s become something of a straw man for selling agile certificates.
+
+“Iterative and incremental” and "waterfall" are really opposite ends on a spectrum of approaches to delivery of software systems. Iterative and incremental development may be bookended by "big up-front design" and “big bang” release, for example. But the reality is that all projects are iterative and incremental to some degree. That is the natural state of software engineering.
+
+References:
+- http://www.bawiki.com/wiki/Waterfall.html
+- https://habr.com/en/articles/546406/ >>> See the links at the bottom of this article
+
+''''
+
+What we now call "waterfall" has never been a formally-documented SDLC
+process model. The name is believed to have originated from [a 1970 paper](http://www-scf.usc.edu/~csci201/lectures/Lecture11/royce1970.pdf) by Winston W Royce, "Managing the
+development of large software systems". The paper never uses the term
+waterfall, but it probably originated from a description of the
+following figure, variations of which feature prominently in the text.
+
+Other names for the waterfall model include the cascade model, phased
+development, and specification-driven development. The basic premise of
+this model is that development progresses through a rigid sequence of
+steps – the classic software development life cycle – culminating in the
+release of a product that is expected to meet the customer’s needs as
+defined in the specification from the start.
+
+The strength of this model lies in its simplicity and the fact it
+matches how other engineering disciplines – like civil engineering –
+build things. The disadvantages are well understood. They include but
+are not limited to:
+
+-   Need for "big specification", which is not realistic in complex
+    problem domains
+
+-   Inefficient resource usage
+
+-   No results until the end; long feedback loop
+
+-   Progressively more costly; risk of cascading bugs
+
+-   Inflexible; doesn’t allow for changing requirements
+
+The truth is that this model of software development has never existed –
+not since the very earliest years of software development, anyway.
+
+A 1956 presentation by Herbert D Benington –
+[republished in 1983](https://dl.acm.org/doi/10.1109/MAHC.1983.10102) in the IEEE Annals of the History
+of Computing – is one of the earliest recorded descriptions of a process
+model used to develop a large, complex software system. In this paper,
+the author describes the techniques and process used to create computer
+programs for the Semi-Automatic Ground Environment (SAGE) system, a
+xxxxxxx. The system is described as having been built in successive
+stages: operation plan, operational specifications, coding
+specifications, coding, parameter testing, assembly testing, shakedown,
+system evaluation.
+
+\[DIAGRAM\]
+
+It is clear from the text that this process was a necessary constraint
+of the limited capabilities of the technology of that era. At that time,
+when both hardware and software systems were nascent, it was expensive
+to change computer program code once it has been written. Slow
+code-compile-debug cycles meant that development progress was glacial.
+For this reason, the process emphasized fixing the specification from
+the start, as best you could.
+
+The author identified the need to be able to change a computer program
+iteratively during development, and the paper concludes with the
+following aspiration:
+
+> If the newest very-high-speed, large-memory computers are to be fully
+> utilized, we must develop
+> automatic programming procedures so that they allow cheap production
+> of highly reliable, **easily**
+> **revised**, well-documented system programs.
+
+Even Royce’s 1970 paper debunks the waterfall model as "risky and
+invites failure". The whole paper is dedicated to advocating the need
+for *iterations* of waterfalls, in which each iteration would adapt the
+outcomes of the preceding one.
+
+\[DIAGRAM\]
+
+So, the "waterfall" process model has never really been a thing. It’s
+never been advocated by software developers, and it has never been in
+fashion. Ironically, this model is actually more viable today with our
+modern tooling, but the model is widely misunderstood and "waterfall"
+has become something of a straw-man to promote agile agendas.
+
+------------------------------------------------------------------------
+
+Some of the concepts we think of waterfall are not all that bad. For
+example, it can be hugely beneficial to have some level of detail to a
+high-level feature roadmap, and to do some degree of "big design up
+front" or even early prototyping – and most so-called agile
+practictioners will intuitively undertake these things for big, complex
+projects. … Nevertheless, elements of waterfall are still in widespread
+use today, though with modifications and augmented with modern practices
+such as continuous integration.
+
+////
+
+The waterfall model is not a problem. It is a perfectly good methodology for developing some categories of software. It is only a problem when the expectations are that the initial plan will be 100% correct, and it will never be necessary to correct the path.
+
+You can do waterfall, but if you do so you must still build agility into your architecture, to support changes in the plan as you go along.
+
+////
+
+## Reference resources
+
+- [Production of large computer programs](https://dl.acm.org/doi/10.1109/MAHC.1983.10102) by Herbert
+    D Benington – Published in the IEEE Annals of the History of
+    Computing in 1983, this text is adapted from a presentation given by
+    Benington in 1956 in which the author described the techniques and
+    process used to create the computer programs required for the
+    Semi-Automatic Ground Environment (SAGE) system.
+
+- [Managing the development of large software systems](http://www-scf.usc.edu/~csci201/lectures/Lecture11/royce1970.pdf)
+    by Winston R Royce – The paper from which the "waterfall" label is
+    believed to have originated, although the text never uses this word
+    and the paper debunks this process model.
+
+-   <a href="http://www.bawiki.com/wiki/Waterfall.html" rel="nofollow">The
+    myth of the ‘waterfall’ SDLC</a> by David Olson – A comprehensive
+    review of the original source materials for the "waterfall" method,
+    including the Benington and Royce papers.
+
