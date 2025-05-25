@@ -1,0 +1,4 @@
+= The joy of plain text
+
+* https://sive.rs/plaintext
+* https://news.ycombinator.com/item?id=30521545
