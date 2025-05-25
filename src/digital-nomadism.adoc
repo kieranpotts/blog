@@ -1,0 +1,9 @@
+= Digital nomadism
+
+Programmers change jobs on a regular basis
+
+With numerous projects to explore out there, software developers are known to change jobs every 2-3 years. From the point of view of programmers, facts are in favor of not staying in one position for more than a few years, because usually that implies no significant salary raises or using the same skills they already have, whereas trying a variety of projects and company types can help both their tech experience and salary reach new levels. For employers, this tendency means that the initiative of implementing more challenging tasks and KPI reviews for salary raises are the best options.
+
+Software developers often become digital nomads
+
+One of the most enjoyable and interesting facts about development is the freedom it offers. More than 60% of developers are already fully remote and, according to the State of Remote Engineering Report by Terminal (https://terminal.io/state-of-remote-engineering), working remotely is an upward trend with 75% of developers preferring this option. That’s why software engineers qualify for becoming digital nomads. Moreover, such countries as Portugal, Thailand, Bali, Mexico, Croatia and Estonia have already become digital nomad hubs. As a result, employees should consider fully remote tech teams to give professionals the freedom they crave.
