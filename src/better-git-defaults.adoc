@@ -1,0 +1,658 @@
+= Better Git defaults
+
+TODO: Git is an incredibly powerful tool, but its API is surprisingly low-level…
+
+////
+
+Rant time: You've heard it before, git is powerful, but what good is that power when everything is so damn hard to do? Interactive rebasing requires you to edit a goddamn TODO file in your editor? Are you kidding me? To stage part of a file you need to use a command line program to step through each hunk and if a hunk can't be split down any further but contains code you don't want to stage, you have to edit an arcane patch file by hand? Are you KIDDING me?! Sometimes you get asked to stash your changes when switching branches only to realise that after you switch and unstash that there weren't even any conflicts and it would have been fine to just checkout the branch directly? YOU HAVE GOT TO BE KIDDING ME!
+
+Git is a surprisingly low-level API, and it is well-known for not being confusing. For example, the terminology is inconsistent. Git's "index" is invariably referred to as the staging area or cache. And "tracking" means different things (local files are tracked by a Git repository, and local branches track upstream ones, and so on).
+
+There are lots of commands to remember to get the most out of Git... and their APIs are not always easy-to-remember. Think of all the options you can pass to `git diff` for example.
+
+So it can be really useful to design your own aliases which better model how your own mental map and workflow of Git's commands.
+
+////
+
+Here's my default Git configuration, which allows me to work faster and with more confidence.
+
+Warning: as with all abstraction levels, you should understand what is going on under-the-hood… You should be familiar with concepts such as linear histories, fast-forward merges, rebases, and so on.
+
+TODO: Explain where the user-level configuration file is, and also that project-level configurations are possible, too. We're going to start with the user-level config - these are intended to be good baseline defaults that will be suitable for most projects. But they are specific to how individual people use Git - we all have our own personal subset of Git's extensive API... and our user-level config should be optimized for that.
+
+////
+
+TODO: Aliases are a very powerful feature of Git, but not widely known or used.
+
+TODO: The examples here are correct for Git v2.29 and should be compatible with all Unix-like systems including Git Bash for Windows.
+
+TODO: Git's documentation is pretty terrible, and to really make the most of some of the advanced features, you really need to dig deep into the docs and do some experimentation... This is an investment of time, but a worthwhile one. It is most likely that Git – or a version control system very much like it – will be the devtool you will use the most often throughout your whole career.
+
+----
+
+There are two ways to create aliases for Git commands:
+
+- Git aliases
+- Shell aliases
+
+## Git aliases
+
+Git itself provides functionality for creating custom Git commands. [Git aliases](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases) are a way of mapping custom commands to built-in commands and arguments.
+
+Aliases may be defined on a per-repository basis, but it will probably be more useful to define your aliases globally via your user-level `~/.gitconfig` file. Example:
+
+```txt
+[alias]
+  wip = for-each-ref --sort='authordate:iso8601' --format=' %(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+```
+
+You can also define aliases via the command line:
+
+```sh
+$ git config --global alias.co checkout
+$ git config --global alias.br branch
+```
+
+This is a good technique for adding Git commands that you think should exist. Example:
+
+```sh
+$ git config --global alias.unstage 'reset HEAD --'
+```
+
+This makes the following two commands equivalent:
+
+```sh
+$ git unstage fileA
+$ git reset HEAD -- fileA
+```
+
+More examples can be found in the [Git documentation](https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases).
+
+## Shell aliases
+
+An alternative approach is to define aliases for Git commands within your shell environment. For Bash, for example, you would define these in your `.bashrc` or `.profile` files, using the following syntax:
+
+```txt
+alias alias_name="command_to_run"
+
+```
+
+Example:
+
+```txt
+# Add `git log` alias that produces a clean, colorful commit and branching history.
+# Can be combined with other `git log` options, eg. `git-log -n 5` to output only the
+# previous 5 commits in the current branch's history.
+# Source: https://stackoverflow.com/a/13542327
+alias glog="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+
+The advantage of this approach is that you do not overload the `git` command with new user-defined subcommands, but instead your define your own top-level commands. Here are some other examples:
+
+```txt
+alias gdf="git diff"
+alias gcm="git commit -m"
+alias gco="git checkout"
+alias gsw="git switch"
+```
+
+////
+
+== Git attributes
+
+TODO
+
+== Git configs
+
+TODO
+
+== Git aliases
+
+Git aliases are an incredibly powerful tool for customizing Git at the command line. We all tend to have a unique personal subset of Git commands that we use most often, and aliases are a great way of abstracting those common commands. I have accumulated over 50 personal Git aliases over several years. I will introduce you to some that I use the most often. You can find the rest in my personal dotfiles.
+
+Aliases can be manually added to the <code>[alias]</code> section of your <code>~/.gitconfig</code>. You can use the command line to add simple aliases, but I find it much easier to maintain my gitconfig in a text editor – especially as I like to maintain inline comments about what each alias does.
+
+Rather than copying-and-pasting my aliases, I recommend you edit them and refine them for your specific needs. We all use Git differently, and your alises should reflect how you like to manage changes.
+
+  # Source: https://stackoverflow.com/a/64418367
+  git config --global alias.rmalias '!f() { git config --global --unset "alias.$1"; };
+
+////
+
+I try to limit how many aliases I have in general. I also consider length and complexity and how often I may use them. If I don't use an alias commonly in my daily workflow, I will consider not having it. I also may have specific aliases I used to experiment and learn with. I also think about how dependent I become of them because they are not always available on remote servers.
+
+Find Git commands you use often in your daily workflow. Make simple Git aliases to remove repetitive typing of commands you use. Experiment and build functions combining shell commands and Git commands that may take parameters from the command-line to learn with. You may even write a program to update, pull, push, or create branches.
+
+----
+
+An alias is simply a way to add a shorthand for a common Git command or set of Git commands. Some are quite simple. For example, here’s a common one:
+
+git config --global alias.co checkout
+
+This sets co as an alias for checkout. If you open up your .gitconfig file, you can see this in a section named alias.
+
+[alias]
+co = checkout
+
+With this alias, you can checkout a branch by using git co some-branch instead of git checkout some-branch
+
+////
+
+=== Basic aliases
+
+Simple aliases are easy to define... Without any special syntax, all you need to do is map a unused Git command name to a built-in command and arguments. The following example sets up an alias for a simplified log output. With this alias in place, running `git changelog` in any of your local Git repositories will do the same thing as running `git log --oneline`. It returns a minimal list of commit ids and commit messages.
+
+----
+changelog = log --oneline
+----
+
+Basic aliases…
+
+=== Shell snippets
+
+If you need to do more advanced things or pipe multiple Git commands together, you can start a shell process.
+
+TODO: chaining git commands together
+
+----
+amend = ! git add --all && git commit --amend --no-edit --no-verify
+----
+
+Everything after the `!` is actually executed in a shell. This syntax not only allows you to chain Git commands together, but you also get shell syntax like pipes (`|`) and utilities like `grep`. And we can use parameters and expansions. A whole new world of possibilities opens up!
+
+TODO: The space between the `!` and the start of the command is not required, but I like to include it for better readability.
+
+It is not uncommon for developers to write custom shell scripts to automate the more advanced aspects of their Git workflows. POSIX-compliant scripts give us the `alias` xxxxx, which can be a great way to create simple commands… EXAMPLE..
+
+… but for a more portable solution, we can integrate shell snippets directly in our Git aliases.
+
+Commands that are prefixed with `!` are treated by Git as shell snippets. Git supports minimal POSIX-compliant shell scripts.
+
+For simple scripts, which do not parse any parameters or set any variables, the command can simply be written after the `!`. Example:
+
+----
+hello = ! echo "hello"
+----
+
+For readability, I add a space between the `!` and the subsequent command, but this is not required.
+
+////
+
+Actually it is still possible to use parameters with this syntax. You can reference parameters using standard shell notation. But the problem here is that Git will _also_ append parameters to the command. Example:
+
+echo = ! echo $1 && echo
+
+Usage:
+
+git echo 'hello'
+
+The output will be:
+
+```
+hello
+hello
+```
+
+This makes sense for simple aliases that map directly to Git commands, eg.:
+
+all = add --all
+
+Now, `git all` is a new command that stages all working changes, including new as-yet-untracked files. And this command will take the full gammot of parameters that are supported by Git's built-in `add` command, allowing the user to customize the behavior of the alias on a case-by-case basis.
+
+But, when we mapping aliases to _inline_ shell scripts, we need to be careful about how we manage parameters. (This is not an issue for external scripts.)
+
+There are a few tricks we can do. Consider the following example:
+
+```
+[alias] chs = !git checkout $1 && git status && :
+```
+
+The `&& :` bit on the end is a neat trick to effectively disable parameters that Git will automatically append to the command. && means if the previous command turns 0 (success), then run the command after &&. ':', the colon, is a shell builtin command, which does nothing beyond expanding arguments and performing redirections and return the status 0. (Source: https://stackoverflow.com/a/25915221)
+
+My preferred option is to append the command with `#`, which will turn any appended parameters into comments. For this to work, the whole executable command needs to be encapsulated in double quotes, thus making the `#` part of the command (else it is parsed as an end-of-line comment within the content of the `.gitconfig` file).
+
+```
+[alias] chs = "!git checkout $1 && git status #"
+```
+
+So, when you're dealing with parameters, it's best to use one of the following two options...
+
+////
+
+For more complex commands – ones that parse parameters, set variables, use conditionals, etc. – there are several possible coding conventions. One option is to use `sh -c` to interpret a subsequent string with Git's shell interpreter.
+
+----
+hello = ! sh -c 'echo "hello $1"' -
+----
+
+Since version 1.5.3, Git has taken arguments passed to aliases and appended them to the commands they map to. So, with this alias in place, running `git hello "world"` will print "hello world". The final dash is so that arguments start with `$1`, not with `$0`. It is recommended to include this wherever you use `sh -c` to create paramterized aliases. A quirk of how `sh -c` works is that the first non-option argument maps to `$0` not `$1`. Adding the hyphen makes that the first argument (`$0`), so the first user-supplied argument becomes `$1`, consistent with parameters passed to functions.
+
+////
+
+TODO: Some people prefer to write a double hyphen `--` for the zero-indexed parameter. Its more familiar and is less likely to mean stdin at some point.
+
+The trailing dash is also important; it could be any shell word, the point is that something must be there because the shell will use it to initialize its $0 parameter (which usually has a default value, so it is useless for the conditional expansion itself).
+
+----
+
+The `sc -c` option resolves the problem of spurious arguments - Git will still append them to the command, but `sh -c` will only expand the parameters explicitly written in the executable script.
+
+However, `sc -c` creates yet another subshell, which seems unnecessary as the command is already being executed in a subshell.
+
+////
+
+My preferred convention is to encapsulate the executable commands in an arbitrary function – which by convention is named `f` – which is then immediately invoked. The whole script needs to be encapsulated in double quotes – that's because the semi-colon character (`;`) is part of the syntax of Git's configuration files, and therefore these need to be quoted when they're part of a value. Encapsulating the whole command in quotes also tells Git this is the whole command and no additional command-line options should be passed to it, thus parameters are controlled. Example:
+
+----
+hello = "! f() { echo \"hello $1\"; }; f"
+----
+
+////
+TODO: Note the need to escape enclosed double-quotes. This can get messy in complex scripts…
+////
+
+You can think of these functions as anonymous functions that get defined and then immediately invoked each time you call your alias.
+
+This syntax also allows long scripts to be written over multiple lines, using `/` as the EOL delimiter. You'll see examples of this below.
+
+Using a wrapping functions helps to limit side effects by scoping parameters and variables to the function. And using this syntax we have access to command line variables and shell expansions:
+
+////
+
+
+In the examples above, the alias starts with ! allowing you to run shell commands then the function is defined with f() { . . . };. After the definition, the function is immediately called with the last f. You can substitute "f" with whatever you prefer. The naming convention is "f" meaning "function".
+
+NOTE: for portability, I a using POSIX-compliant syntax:
+
+One of the potential disadvantages of using the immediately-invoked function style is that the command will be executed in the user's default shell, which could be anything. At least when we use `sh -c` we are somewhat controlling the interpreter used. It is all the more reason to write POSIX-compliant code within the function, for optimum portability and reuse.
+
+////
+
+* `"$1"` is expanded to the first parameter passed to the command (squiggly brackets are optional)
+* `"$2"` is expanded to the second parameter, and so on…
+* `"$*"` is expanded to…
+* `"$@"` is expanded to all the parameters, separated by spaces
+* `"${@:3}"` is expanded to all the parameters from the third onwards (squiggly brackets are required)
+* `"${@:3:4}"` is expanded to four arguments starting at the third, equivalent to `"$3 $4 $5 $6"`
+* `$#` is expanded to the total number of arguments, and we can use arithmetic like `$(($#-2))` to get the number of the third-last parameter, and `"${@:$(($#-2)):1}"` to print the value of the third-last parameter parameter only, or `"${@:$(($#-2))}"` to expand all parameters from the third-last onwards, or `"${@:1:$(($#-2))}"` to expand all parameters from the first to the third-last
+
+////
+
+NOTE: Parameters SHOULD be quoted since the expanded variables could contain spaces, and we want to keep those as they were inputted (as a single shell token).
+
+----
+
+The following will work for you.
+
+    @ is for array of arguments.
+    : means at
+    $# is the length of the array of arguments.
+
+So the result is the last element:
+
+${@:$#}
+
+////
+
+Note, all of the above are POSIX-compliant parameter expansions. Bash and other shells will give you additional syntax like `"${@: -2}"` (expanding the last two parameters) but I prefer to try to keep my Git aliases as portable as possible. I may have a different shell environment between my home and work systems, for example.
+
+Conditional parameter expansions are also possible. Consider the following example:
+
+////
+
+Here it is as an “inline” shell script:
+
+```
+git config --global alias.sync '!sh -c '\''git commit --amend --date=today ${1+-m} "${1---reuse-message=HEAD}" && git rebase master'\'' -'
+```
+
+This is an alias to amend the last commit.
+
+You can use -m to feed git commit your new message or use the -C HEAD/--reuse-message=HEAD option to have it use the existing message and author (it would also reuse the author timestamp, but you are resetting that with --date=…). Using any of these options will prevent Git from opening an editor for your commit message.
+
+The core of this small script is the pair of conditional parameter expansions:
+
+${1+-m} "${1---reuse-message=HEAD}"
+
+When you call it with an extra parameter (i.e. your replacement log message), these expand to two shell words: -m "<your new log message>". When you do not supply the extra parameter, they expand to just a single word: "--reuse-message=HEAD".
+
+But this is all getting rather complicated for an inline script...!
+
+////
+
+Alternatively, the script can be in a separate file. This can be incredibly convenient for mapping aliases to complex scripts – which are pretty difficult to write directly in `.gitconfig` files due to the need to escape certain characters and line breaks – but you forfeit some ease of portability.
+
+////
+
+When your aliases start getting more complex, it's probably easiest just to create a separate script for them. If you add a file 'git-sync' to your path, it will be automatically called when you do 'git sync'.
+
+So, if you created that file with something along the lines of:
+
+```
+#!/bin/sh
+
+if [ -z "$1" ]; then
+  git commit --amend --date=today --no-edit|--reuse-message=HEAD
+else
+  git commit --amend --date=today -m "$1"
+fi
+
+git rebase master
+```
+
+---
+
+My preference, however, is to link to all scripts directly from .gitconfig - it means this file provides a single point of reference for all aliases that are enabled on my system.
+
+---
+
+This has the benefit that it's much more legible because it's on multiple lines. Plus I like being able to call bash with -x and set -e. You can probably do this whole thing as an alias, but it would be super ugly and difficult to maintain.
+
+```
+#!/bin/bash -x
+set -e
+
+#by naming this git-m and putting it in your PATH, git will be able to run it when you type "git m ..."
+
+if [ "$#" -ne 2 ]
+then
+  echo "Wrong number of arguments. Should be 2, was $#";
+  exit 1;
+fi
+
+git checkout $1;
+git merge --ff-only $2;
+git branch -d $2;
+```
+
+////
+
+----
+hello = ! sh hello.sh
+----
+
+////
+
+Git provides a mechanism for parsing and finding files in your $PATH that may contain commands or functions. It is common to have a bin directory in your home directory on Linux and Unix types systems. This example is going to assume you have a bin directory in your home directory and it is in your $PATH.
+
+Git will use files found with the naming convention of git-example and run the code in these files using the alias example. Git removes the git- part. These files also need to have the executable bit set.
+
+Example git file and directory: ~/bin/git-example
+
+This example file will contain your shell commands and Git commands and you can pass parameters to them from the command-line like any other shell program.
+
+Example file contents:
+
+#!/bin/sh
+
+echo "This is the value passed as a parameter: ${1}"
+
+Then you can run this alias script with git example testvalue and it will print out This is the value passed as a parameter: testvalue.
+
+All the normal shell parameters rules apply like $1, $2, $@ etc. You can create very complex functions, scripts, or any combination of Git commands as well.
+
+In my examples I am using Linux/Unix type operating systems. I also use Bash as an example and may use Bash and shell interchangeably just for reference.
+
+////
+
+It is worth knowing there are a few behavioral differences between Git aliases that map directly to Git commands, and Git aliases that map to shell scripts:
+
+* Git commands are executed at the current working directory. Shell scripts are executed at the repository's root directory. HOW TO FIX THIS?
+* TODO: more
+
+////
+
+Because commands are executed at the root of repository you may use `${GIT_PREFIX}` variable when referring to the file names in commands
+
+    Be careful, ! will run at the root of the repository, so using relative paths when calling your alias will not give the results you might expect. – Drealmer Aug 8 '13 at 16:28 »
+
+GIT_PREFIX being set by git to the subdirectory you're in, you can circumvent this by first changing the directory :
+
+    git config --global alias.ls '! cd "${GIT_PREFIX:-.}" && ls -al'
+
+----
+
+Note that shell commands will be executed from the top-level directory of a repository, which may not necessarily be the current directory. GIT_PREFIX is set as returned by running git rev-parse --show-prefix from the original current directory
+
+----
+
+Summary: most people use Git aliases for two purpose:
+
+- Create shortcuts for the most-often typed commands (checkout, pull, push...)
+
+- Create abstractions to automate recurring, complex Git workflows
+
+In general, I use my `~/.gitconfig` file to manage the first group of aliases. These tend to map directly to Git commands with default parameters. For the second, I maintain `git-**` files that are included in my system PATH. I can therefore execute these directly (`git-[aliasname]`) or as a custom subcommand of `git` (`git [aliasname]`).
+
+////
+
+=== Shortcuts for common operations
+
+TODO: commit, push, pull, sync, etc.
+
+****
+I'm currently working on a large scale software project in which we have linters statically analyze the entire codebase on every commit, plugged in via Git hooks. The problem is the codebase has grown so large, and the linting rules are so extensive, that commit operations now extend to several minutes in duration. I confess I have disabled the linter by adding the `--no-verify` flag to all `git commit` commands within my personal aliases. I run the built-in `git commit` directly when I'm ready to check-in my work to the shared repository, but otherwise I use my speedier aliases to capture work-in-progress.
+****
+
+----
+# `git sync`
+#
+# Sync the local and tracked upstream branches by combining `pull` and `push`.
+#
+# The behavior of this alias is equivalent to VSCode's branch syncing
+# operation, and it is equivalent to chaining the `git down &&  git up`
+# operations. By using the rebasing strategy on `pull`, it maintains a
+# linear commit history even if there is divergent work between the local
+# and upstream branches.
+#
+# `git pull --rebase` will fail if the local branch does not yet track an
+# upstream branch. So this command is run only if tracking is already
+# established for the branch. If it is, the existing tracking is maintained –
+# this supports the local and tracked upstream branches having different names.
+#
+# If tracking is not yet established for the local branch, only a `push` is
+# done. The local branch is pushed to a branch of the same name in the
+# "origin" remote, and tracking is established for next time.
+#
+sync = "! f() { \
+  upstreamBranch=$(git upstream); \
+  if [ ! -z "$upstreamBranch" ]; then \
+    git pull --rebase; \
+    git push --follow-tags; \
+  else \
+    git push --set-upstream origin HEAD --follow-tags; \
+  fi; \
+}; f"
+
+# Simpler implementation:
+; sync = ! git pull --rebase && git push --set-upstream origin HEAD --follow-tags
+
+# Alternative implementation, capturing the error code 128 that Git uses for
+# fatal application errors, which happens when `git pull` is run before branch
+# tracking is established.
+#
+# See: https://www.git-scm.com/docs/api-error-handling
+#
+; sync = "! f() { \
+;   git upstream; \
+;   retval=$?; \
+;   if [ $retval -ne 128 ]; then \
+;     git pull --rebase; \
+;   fi; \
+;   git push --set-upstream origin HEAD --follow-tags; \
+; }; f"
+----
+
+=== Logging
+
+I have a few different aliases that output logs with custom formatting and data.
+
+The `git log` command has many other possible configurations. There's also `git shortlog`, `git reflog` and `git rev-list`, which return different data from the Git repository. You should read the Git docs and develop logging aliases that work best for your needs. For more ideas, check out https://www.durdn.com/blog/2012/11/22/must-have-git-aliases-advanced-examples/[Nicola Paolucci's blog post].
+
+=== Undo and fixup workflows
+
+TODO: These are more advanced, and you really need to know what you're doing.
+
+////
+https://github.blog/2015-06-08-how-to-undo-almost-anything-with-git/
+////
+
+****
+Some of these commands will _change history_ and therefore must be approached with caution. You SHOULD NOT try to `git sync` after a `git amend` operation, for example, because the amend operation would have resulted in a different history of commits between your local branch and the upstream one it tracks. In fact, you will need to `git up-force` your amended local history into the upstream branch to keep the two synchronized. This workflow is suitable for temporary feature branches authored by one person, but tends not to be suitable for contributing directly to the history of shared mainline tracks.
+
+TODO: It is recommend you experiment with these aliases in a dummy repository, before using them in commercial projects.
+****
+
+`git amend` is an alias I use to quickly extend the last commit with all new changes in the working tree. Everything in the working tree is added to the staging index, the a `git commit --amend` operations add the staged contents to the previous commit. This operation replaces the previous commit with a new one with a new hash. The message of the original commit is maintained (`--no-edit`), only its contents are changed.
+
+----
+amend = ! git add --all && git commit --amend --no-edit
+----
+
+TODO: `git fixup` achieves the same end result, only it does it with better feedback. I have iterated the design of this alias over time, but this is my current version:
+
+----
+fixup = "! f() { local REV=$(git rev-parse ${1:-HEAD}) && git add --all && git commit --fixup=${REV} ${@:2} && git rebase --interactive --autosquash ${REV}~1; }; f"
+----
+
+This create a "fixup!" commit from the staging index plus working tree, and immediately rebases to squash that commit into the previous one. Because the rebase operation is run in `--interactive` mode, at this point an editing buffer is opened which allows me to review the actions the rebasing operation will perform on the relevant commits, before it happens. Because my alias added the `--autosquash` option to the `rebase` command, Git has helpfully pre-selected "fixup" as the operation to be performed against the "fixup!" commit. Auto-squashing based on hints in commit messages is a built-in Git feature and is well-documented here…
+
+----
+pick 55fef48 feature: better git defaults
+fixup 8808c51 fixup! feature: better git defaults
+----
+
+There's nothing to do here, except exit the editor which will trigger the rebase operation.
+
+The end result of the `git fixup` operation is identical to a `git amend` operation. But, `git fixup` is more flexible. I can use it not only to amend the previous commit with new changes, but also to make changes to a commit that exists even earlier in the history.
+
+.`git fixup` usage examples
+[cols="1,1"]
+|===
+|Command |Description
+
+|`git fixup`
+|Fixup the last commit
+
+|`git fixup HEAD`
+|Same as `git fixup`.
+
+|`git fixup HEAD^`
+|Fixup the last-but-one commit.
+
+|`git fixup [sha]`
+|Fixup any previous commit referenced by its hash.
+
+|`-z`
+|If the length of string is zero.
+
+|`git fixup :/foo`
+|Fixup the most recent commit where the messages contains "foo".
+|===
+
+Finally, any additional parameters that I pass to `git fixup` will get forwarded to the `git commit` command. If I do this, I MUST specify the target commit in the first parameter. For example, to disable anything plugged in to commit operations via Git hooks I can pass the Git's `--no-verify` flag.
+
+----
+git fixup HEAD --no-verify
+----
+
+The purpose of `git amend` and `git fixup` is to fix mistakes made in earlier commits. But often I just want to record the messy history of a feature branch, which I know I will squash cleanly into a mainline branch once the work is complete. For this purpose, I have `git wip`.
+
+----
+wip = "! f() { \
+  git add --all && git commit --message \"${1:-WIP}${1+ - WIP}\"; \
+}; f"
+----
+
+This stages and commits all working changes. If an unset or empty commit message is provided, "WIP" is used as a fallback. If, however, I _do_ provide a commit message, then " - WIP" will get appended to my custom message. The idea is that all my "WIP" commits I will fixup manually at a later time, either through an interactive rebase of the current feature branch, or when the feature branch is squashed into a mainline track.
+
+My `git wip` alias is deliberately simple. I don't want to over-automate this. This is for messier workflows, perhaps where I am experimenting with different solutions to a problem, and where some changes captured in "WIP" commits will be kept while others will ultimately be discarded.
+
+Those are the main operations I use for what I call "fixup workflows" – any process where the history of a temporary side branch is treated as mutable. There are many possibilities here. Something you may like to consider is separating the commit operations from the rebase operations. As an example, your version of `git wip` might add WIP commits whose messages are prefixed with "fixup!". Then a subsequent `git fixup [base-sha]` operation would handle the rebase that reapplies all those temporary commits. A very simple implementation would looks something like:
+
+----
+wip = ! git add --all && git commit --fixup
+fixup = rebase --interactive --autosquash
+----
+
+Another thing to consider: if `git wip` is predominantly for backup purposes, you may consider extending it with a `git push` operation to use the upstream repository as an external backup drive.
+
+=== A few more useful aliases
+
+Finally, it it useful to have an alias to list all your aliases! I use `git aliases` for this purpose. The following command returns a list of all Git configs that begin with "alias.". This list is piped through `sed` which is used to remove the "alias." prefix.
+
+----
+aliases = ! git config --get-regexp ^alias\\. | sed -e s/^alias\\.// -e s/\\ /\\ =\\ /
+----
+
+The output is a list of alias names and the commands they map to, outputted in the order in which they are defined in your `.gitconfig` file.
+
+----
+aliases = ! git config --get-regexp ^alias\. | sed -e s/^alias\.// -e s/\ /\ =\ /
+amend = ! git add --all && git commit --amend --no-edit
+br = ! f() { git branch $1 && git checkout $1 && git push --set-upstream origin HEAD; }; f
+b = br
+branches = for-each-ref --sort='authordate:iso8601' --format='%(color:green)%(authordate:relative)%09%(color:white)%(refname:short)' refs/heads
+…
+----
+
+=== Aliasing `git`
+
+TODO: You'll need to do this in your shell.
+
+== Project-level configs
+
+Add further aliases to aid project-specific workflows. For example, if builds in a CI system are triggered by committing/merging to a specific branch, you might want to add a alias to handle that recurring project-specific operations. EXAMPLE…
+
+Another thing I like to do is have shortcuts to create the different types of branches that a particular project supports, eg. features versus bug fixes versus refactoring…
+
+== Best practices
+
+////
+
+Just because you can automate something does not mean you should.
+
+As with the software you make, you should weigh up the benefits against the costs and risks of every abstraction you add. In particular, think twice about automating the most destructive and least predictable operations.
+
+Users must have confidence in abstractions before using them. Engineers SHOULD be familiar with the underlying mechanics of Git’s operations before adopting abstractions.
+
+////
+
+Here are some good practices for maintaining custom Git configurations: (RFC xxxxxx)
+
+* Aliases SHOULD NOT make assumptions about other Git configs. Therefore, required options such as `--autosquash` MUST be included in alias commands where it is needed, even if that is made the default via other Git settings. Keeping to the principle means that Git aliases and Git configs can be changed independently of one another.
+
+* Aliases SHOULD NOT be dependent upon other aliases. This means that alias commands SHOULD use only built-in Git commands and SHOULD NOT use other aliases. This means individual aliases can be changed without side-effects for other aliases – you won't know that those dependent aliases are broken until you next use them.
+
+* For clarity, where possible write long-form options (eg. `--all`) instead of their short-form equivalents (eg. `-A`).
+
+* Use short names for a small subset of aliases that you use most frequently, such as `cm` for committing. Use longer, more descriptive names for aliases that you use less frequency – you should be able to make a good guess about what these aliases do from their name alone.
+
+////
+
+Project-specific configurations can be put in the repository's `.git/config` file. This will override your user-level defaults. Be sure to keep a backup - this configuration file is unique to each repository instance and will not, therefore, be automatically shared with other project contributors.
+
+////
+
+Finally, be wary of over-automating. In particular, avoid automating potentially destructive operations such as deleting all instances of a branch, both upstream and downstream. If you do these things, build-in some kind of failsafe, such as the ability to undo the operation, or at least an interactive prompt to confirm the operation. Weigh up the benefits against the risks of every abstraction.
+
+You must have confidence in abstractions before using them. This means being familiar with the underlying mechanics of the Git version control system.
+
+== Closing thoughts
+
+There is so much more you can do to bend Git to your will. This article just touches the surface with what's possible through customized Git configs. And https://git-scm.com/book/en/v2/Customizing-Git-Git-Attributes[Git attributes] and https://git-scm.com/book/en/v2/Customizing-Git-Git-Hooks[Git hooks] provide even more possibilities to modify and extend Git's out-of-the-box functionality, but are beyond the scope of this article. You can pretty much customize every aspect if Git, right down to the colors used in its CLI output.
+
+Also, Git ships with GUI tools, including diff and mergetools… these are out of scope of this article.
+
+It is worth investing some time in this…
+
+.Related links
+****
+* https://git-scm.com/docs/git-config[Git reference documentation: git-config]
+* https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration[Pro Git: Customizing Git - Git configuration]
+* https://git-scm.com/book/en/v2/Git-Basics-Git-Aliases[Pro Git: Git basics - Git aliases]
+* https://git.wiki.kernel.org/index.php/Aliases[Git Wiki: Aliases]
+* https://jvns.ca/blog/2024/02/16/popular-git-config-options/[Popular Git config options], Julia Evans (2024)
+
+The sources of some of the code examples included in this blog post are linked from my _dotfiles repository_.
+****
