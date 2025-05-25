@@ -1,0 +1,645 @@
+= Reverse interviews
+Kieran Potts, DD MMM 2025
+:description: When you're looking for a new job, how do you evaluate potential employers? Here are _____ questions to ask in job interviews for software development roles.
+:docinfo: shared
+:nofooter:
+
+Let's be honest. Working in the software industry can be a somewhat _varied_ experience!
+
+Working at a software house tends to feel very different to working for an in-house team or a consultancy serving a non-IT business domain. And working at a small startup tends to feel very different to working at a large global firm. And even within each of these sub-sectors, the culture and ways of working vary enormously.
+
+Tech recruitment is broken – that's another blog post for another day – xxxx
+
+*Extrinsic factors* like salary and benefits, the tech stack and the problem space, and the location of the office and the quality of the work environment, will be early filters for your jobs funnel. But what will matter more to you in the long term will be the culture and value of the organization. What will it be like to work there day-to-day? *Intrinsic factors* like purpose, autonomy, and mastery will determine how long you stay.
+
+////
+
+TODO: Two different types of organizations:
+
+* Project-oriented. Tasks, estimations.
+* User-oriented. _True_ agile principles.
+
+// TODO: You can do a lot of initial filtering using Glassdoor, and your own network of contacts. Don't be afraid to reach out to prior employees using LinkedIn! Red flags can emerge early, from the job spec itself, before you've even had contact with the organization. Consider carefully the wording, emphasis and tone of the job spec. Look for phrases "fast-paced" and "no two days the same". These may be code for "chaotic" and "no time to do things properly". Phrases like "quality-focused" and "learning-oriented" are code for "we care about doing things properly". Checking off a laundry list of _commercial_ experience with specific languages, frameworks and libraries.
+
+// Also in the interview stage: Checklist Q&A style format, eg. explain how you would protect against SQL injection. (In fairness, you SHOULD know this, but you probably haven't thought about it for years, because this sort of low-level cross-cutting security concerns are usually abstracted away by whatever library you're using to interface with your database systems. In the environment of an interview... testing knowledge, rather than your ability to solve problems and discover answers.) ......... Job description lists only frameworks
+
+// "Drive to meet time, cost and quality targets." !!! - Can fix one or two of these things, but not all of them.
+
+// Suspiciously high salary for the title (eg. "senior developer" but with a salary that is higher than the market rate for a senior developer, it probably means you won't be treated like a senior developer - probably means they will try to justify the stress with extra money). ... Don't be fooled by this, don't say to yourself "it's just a stepping stone"...
+
+// Negative or toxic vibes from the interviewers, or they just sound exhausted / fed up
+
+// they use buzzwords, often incorrectly
+
+// Other red flags include being overpaid for the role, lots of holiday time (or "unlimited" holiday), and inflated job titles.
+
+// "We're a family." No. You are not my family. ... The company uses the word "family" or similar vocabulary to refer to their employees. "Teams" are fine, but "family" is a red flag. It's a way of getting you to work longer hours for less pay, because you're "part of the family" and you don't want to let the family down.
+
+// If you get weird vibes from the interviewers, something is amiss.
+
+// Red flags can turn up in green companies, and vice versa. So consider the whole picture.
+
+Juniors shouldn't be overly picky. All experience is good. Even if you land in a sweaty dev shop, at least you'll learn how _not_ to make software! But as you progress through your career, the quality of the work will become more important to you.
+
+// Junior developers, still progressing through their career, may well be more motivated by extrinsic factors like salary and benefits. But as you progress through your career, you will find that intrinsic factors become more important.
+
+Unless you have inside knowledge of an organization – recommendations from a current or former employee, for example – then you will need to ask questions in your job interviews to dig into this.
+
+I've recently been through a round of tech interviews and I came up with ______ "reverse interview" questions. I designed these to reveal important red and green flags and to help me assess the _quality_ of a job at a more subjective level.
+
+You _should_ be brave and ask straight questions in your interviews. Don't be afraid to probe. Good employers will look on this favorably, appreciating your honesty and openness. Bad employers will be defensive, even offended.
+
+// So, when being interviewed, it is important that you ask the interviewers questions that allow you to work out whether the organization is a good fit for you. Treat interviews as a two-way process. If there is no time in the main interview cycle to ask these questions, request a "reverse interview" at the end once you have a job offer. This shows diligence...
+
+Here are my top _____ questions to ask in interviews for software development roles.
+
+// Here are five questions to ask the interviewee. These cover high-level areas of concern: technology, delivery process model (how change in the software is managed) and the ways of working the tools used to automate aspects of the delivery process, design (how solutions are design) and testing (how solutions are verified), and the culture of the organization and how the organization is structured - the quality of the office/work environment.
+
+// In this post, I will share with you some of the questions that I ask when being interviewed.
+
+// All of these questions should be treated as leading questions that will guide your approach and prompt you to explore different tangents.
+
+// Red flags - you're really looking for a *combination* of red flags. One red flag on its own is not necessarily a problem. But if you see a combination of red flags, then that's a sign that the organization is not a good place to work.
+
+// Tech recruitment is broken – that's a whole other blog post for another day – but be wary of multi-stage interview processes. Two or three stages is acceptable. Four or five or more? ... The interview process has too many stages. How many is too many will depend on the business domain and the nature of the work. But if there are more than three stages, then that's probably a red flag. It's a sign that the organization is not very good at making decisions, and their recruitment system is broken.
+
+// * They promise higher salary "later".
+
+// * If the interviewer gets offended or defensive about a legitimate question you have. Your career affects your life, so you have the right to ask difficult questions.
+
+// * Weird power dynamics. If the interview is disrespectful, intentionally trying to throw you off or intimidate you, you are getting a glimpse into the future! These are early signs of the culture there, and it may be toxic.
+
+// * The bait and switch: you applied for a specific role at a specific salary, now they are telling you that the role has changed and the salary is lower. This is a sign that they are not honest and transparent.
+
+// * Disengaged interviewers. If the interviewer seems distracted, keeps checking their phone, or doesn't remember your answers... you deserve their full attention!
+
+// * If they put pressure on you to accept the offer quickly. This is a sign that they are desperate to fill the role... which is a sign they are not well staffed or projects have gone off coarse and panic has set in.
+
+// * They ask for free work. Take home tests are okay, but any contributions you make to actual projects should be paid.
+
+Do some background checks on other developers at the company. Find them on LinkedIn and then look at their GitHub and social media profiles. Do any of them speak at conferences, contribute to conferences, or have their own blogs? Does the company itself have a development blog, or any other public-facing development artifacts like open source projects, technical standards, and so on?
+
+Pro tip: reach out to former employees, and ask why they left and what they liked and disliked about the company. Don't do this with current employees. It's risky (for them) and pride will get in the way of them giving genuinely honest insights.
+
+
+Full on-site = red flag (do they truly understand software)
+
+Avoid a laundry list of requirements - suggests tactical recruitment 
+
+
+----
+
+If an interviewer asks:
+
+"Do you work well under pressure?"
+
+Ask them:
+
+"What does high pressure look like in this role? And how is that pressure built?
+
+It's going to be one of three things;
+
+1) You are in the wrong interview and somehow walked into an interview for a Nursing position, or to be a Firefighter. Walk away slowly and apologise.
+2) The pressure is fabricated through urgency as a result of poor management and psychological danger of saying 'no'.
+3) The role deals with constant production incidents, putting out constant fires, high staff turnover and you are going to need to find a way of making that better.
+
+They might not say directly which one of these it is. There answer will tell you everything you need to know.
+
+
+// 🚩✅
+
+////
+
+== 1. The basics
+
+////
+
+Don't forget the basics. Reverse interviews are also a great opportunity to make sure you've got a full understanding of the basics:
+
+* IT provision – type of computer, monitors, ergonomics.
+* Core hours, flexible hours, office hours, overtime policy. (Check how overtime is compensated.)
+* Remote and hybrid working policy.
+* Holiday allowance.
+* Sick leave, and maternity and paternity policies.
+* Health insurance and wellness benefits.
+* Pension schema and contributions.
+* Other benefits such as budgets or time for learning.
+
+Is the office a nice place to work? Are there secluded break-out spaces where you can go to _think_?
+
+Working hours, core/flexible hours, overtime (compensation) - "How many hours are you contracted for, and how many do people work in practice?" Look out for answers like "we don't really have fixed work hours, we just allow you to work as you need to, to get the job done"... this usually means long hours and no overtime compensation, with delivery dates set by the business owners rather than the delivery team.
+
+*How are pay reviews handled? How is pay adjusted for inflation? How are promotions handled?* – This is a great question to ask, because it will reveal the degree to which the organization values its employees. If pay reviews are handled in a fair and transparent way, then this is a good sign. If pay reviews are handled in a secretive way, then this is a red flag. It should not "vary from person to person", of course that's true, but pay reviews and promotions should be carried out within a framework that is fair and transparent. You should understand the _process_ by which that happens.
+
+Be wary of job postings or interview discussions that promise rapid career advancement, unrealistic salary expectations, or exaggerated job perks without providing concrete details. If the role seems too good to be true or the interviewer makes grand promises without substantiating them, it's essential to proceed with caution and seek clarification on expectations and deliverables.
+
+////
+
+////
+
+* *What does success look like in this role?*
+
+* *What are the biggest challenges currently facing the team?*
+
+=== Career advancement
+
+* *How does the company support professional growth and development?*
+
+* *When do performance and pay reviews come around? What's the process? DO you have pay bands, or other forms of pay transparency?*
+
+* *What is the policy on internal hiring and promotions?*
+
+* *What are your key performance indicators?*
+
+* *How to you monitor and measure the performance of individual staff?*
+
+* *How do you evaluate individual contributors versus the whole team?*
+
+* *How to measure _quality_*?
+
+* *Do you measure progress against estimates?*
+
+* *Tell me about someone at this organization, who was in my job role or a similar one, who did really well here? What did they do to succeed here?* / *Give me an example of someone in a role like mine who did really well here. What did they do to be successful at this organization?*
+
+* *How do you promote learning?* Requirement to learn new languages and tech: on who's dime/time, eg. allowance for online courses? O'Reilly included? ... *How do you supporting learning?* (You're not just looking for time and budgets to attend conferences and take online courses, but also a culture where learning-on-the-job is valued and encouraged. Do they expect you to know everything already, or are they hiring for your potential to learn and help you to achieve that potential?) Will I have a coach or mentor?
+
+Looking for a mix of individual and team evaluation, but with a slight emphasis on the team.
+
+Looking for value added, not just "doing whatever it takes to meet deadlines".
+
+Listen for rewarding fire-fighting and long hours, people who would "bend over backwards" or who "did whatever it took to meet deadlines".
+
+Red flag: long hours are a badge of honour.
+
+Take the initiative to ask specific questions about job responsibilities, company culture, career progression and expectations. One of the easiest ways to do this is ask questions like “what would success look like in this position”, or “what would you expect from the role in 6 months, 12 months and beyond”. If the interviewer's responses are vague, politely request clarification.
+
+Ask questions about the turnover of staff. *What is the average tenure of a developer at your company?* – If the average tenure is low, then this is a red flag. A consistently high turnover rate may signal underlying issues with managerial styles, workplace culture, job satisfaction or broken tech. ... Average tenure in tech roles these days is 18 months (yes really) but some teams really buck this trend, and they’ll be good reasons for it that they will happily discuss.
+
+////
+
+== 2. Product
+
+////
+
+* *How are your products/services differentiated from those of your competitors?* – Be sure to understand _what_ the organization does beforehand, but this question should reveal more insight than you can glean from the web site and other public information sources.
+
+* The organization's business model and financial footing. *What's your turnover and profit? How has this changed year-on-year?* Even if it's a private company, they should at least be able to tell you the turnover, which can be estimated from the public company accounts anyway. There may be genuine commercial reasons to not disclose some sensitive financial data, but it is perfectly reasonable for a employees to have some degree of transparency into the financial health of the organization they work for.
+
+The more nefarious ones though are bait and switch type deals where you may be sold a dream only to find you end up being transferred internally or working on something completely different (usually read: legacy) than you expected. Ask questions like: *If I started tomorrow, what would I be working on?* It is not always possible for organizations to answer these questions. You may be being hired into a "talent pool", which will be the case in many established consultancies. But at the very least you should expect the hiring people to be honest and say "we don't know yet".
+
+* *What are the goals of the organization? If you achieve your goals, what will it look like?*
+
+Additional questions for startups:
+
+* *What problem are you trying to solve?*
+* *Have you achieved product/market fit yet, or do you continue to experiment and pivot?*
+* *How to you measure the value that new features give users?*
+* *What's your revenue? What are the trends here?*
+
+If there is business is not yet generating revenue:
+
+* *How is the business funded?*
+* *How much runway do you have?*
+
+For startups, a company with very little runway and no product-market fit is likely to have a challenging culture.
+
+Does the company's spending look justified given the maturity of the product?
+
+Avoid: solutions looking for a problem.
+
+Finally, ask directly:
+
+* *Do you plan to sell the company?*
+
+A company built solely to be sold is likely to have a very different culture to one that is built to last. The former is likely to be more focused on short-term gains, and more likely to make short-term tactical decisions over long-term strategic ones. There are unlikely to be good opportunities for career progression, or investment in the long-term health of the software.
+
+////
+
+== 3. Requirements
+
+////
+
+The next group of questions interrogate how the organization manages changes through their life cycle phases, from requirements gathering via constructions and testing to deployment and release.
+
+* *Where do functional requirements come from?*
+
+* *How are requirements specified?*
+
+* *How are cross-functional requirements, such as performance and security, specified?*
+
+* *How do you verify requirements?*
+
+* How do you define requirements? (Should be written from a user's perspective. Or just a descrption of tasks or changes to be made? If the latter, be suspicious of a feature factory, where the goal is to churn out features rather than have an impact on users.)
+
+ACs vs user stories: Looking for the business to define high-level acceptance criteria, not to design the solution via user stories.
+
+Looking for _feedback loops_: continuous evaluation of the evolving software.
+
+Looking for requirements that are driven by the needs of users.
+
+////
+
+== 4. Design
+
+////
+
+* *Could you describe the high-level architecture of the system from a conceptual perspective?*
+
+// The answer to this question should be pretty insightful. Systems are destined to mirror the structure of the organizations that built them. So, if they describe a tightly-coupled, distributed monolith, then it is likely that the organization is highly-centralized with a top-down management style.
+
+* *Would you say the system has maintained a good level of conceptual integrity over time, even if the conceptual architecture has evolved?*
+
+* *If there was one thing about how the software is designed and made that you could change, what would it be?*
+
+* *Who makes decisions on design?*
+
+* How do you communicate design ideas? How to you choose between different design options?
+
+If the architecture has good conceptual integrity, the development teams should be able to describe it without discussing the implementation details. You expect them to be able to say something like:
+
+[quote]
+____
+An API gateway serves web and mobile clients. The gateway routes requests to a small number of large domain services. Each domain services manages its own data persistence, and services share data primarily using asynchronous messages. The domain services are supported by a large number of stateless microservices, which they communicate with synchronously via RPC-like calls.
+____
+
+This description makes no mention of the technology stack, the programming languages and application frameworks, or even the type of infrastructure on which the service-side production systems run.
+
+A positive sign would be if the architecture is described in terms of the business domain, rather than the technology stack. This suggests that the architecture is driven by the needs of the business, rather than the whims of the developers.
+
+Red flag: unmaintainable legacy software!
+
+////
+
+== 5. Estimates
+
+////
+
+// Time-and-materials billing or fixed-price-fixed-specification? If the latter, what's the process by which projects get costed?
+
+* *How do you estimate work?*
+
+* *_When_ do you do estimates? For example, will you do t-shirt sizes based on requirements, and time estimates after a prototype, proof-of-concept, or some initial work on the implementation?*
+
+* *What do you do if the estimates do not align with the organization's targets?*
+
+* *What happens if stuff is delivered later than estimated? * / *How would you handle a situation where a developer gave a high-level estimate for delivery of a new feature but as they were working on it they learnt the optimal solution was more complex than they anticipated and completion was going to take 2x longer than they originally estimated?*
+
+What we're looking for here is a signal whether the company prefers predictability or efficiency. If they want software to be delivered in a predictable fashion – stuff gets done when we estimate it will be done – then that is going to require a heavyweight process, with lots of up-front design and resource planning. On the other hand, if the business is willing to optimize for efficiency, then that will require a more lightweight process, and development teams can instead focus on good, modern agile practices.
+
+If the company front-loads design and planning, then probe into how they go about that, too. Big-design-up-front can be a successful approach to software development, but it can also be a sign of a command-and-control management style, and a lack of trust in the development team. Find out if there are genuinely good reasons, grounded in software development principles, for this approach.
+
+The only guaranteed way to deliver software predictably is to do less of it. If the business wants to deliver software predictably, then it will need to prioritize ruthlessly, and to focus on delivering the most valuable features first. Red flags include answers that involve adding more people (eg. "we'll look to see if we can reassigning people from other teams") and spending more time trying to justify the estimates.
+
+Looking for organizations that understand the distinction between an _estimate_, a _target_, and a _commitment_.
+
+Looking for an understanding that estimates get more accurate the further into the SDLC you are. Estimates, if required, should be regularly re-evaluated throughout this process. Thus you only get to a commitment once the _design_ is understood, not just the requirements.
+
+////
+
+== 6. Prioritization and planning
+
+////
+
+* *How do you plan and prioritize work?*
+
+* *Who is responsible for deciding the sequencing of work, and who works on what?* / *Who decides what to build, and when?*
+
+* *Are you requirements stable or volatile, in general?*
+
+* *What do you do to manage the volatility of requirements?*
+
+* *How do you manage change requests (ie. scope creep)?*
+
+* *How is technical debt and refactoring prioritized against feature delivery?* / *What is the relative emphasis on iterative design versus incremental build?* / *How is time for refactoring and technical debt management factored into the process?*
+
+* *How do you ensure delivery is sustainable, keep costs low?*
+
+* Wider question: *How do you manage change in software?* Open-ended questions like this can help to reveal what the organization thinks are the most important aspects of software delivery.
+
+What we're particularly interested in here is the strategies in place for balancing the immediate requirements of the business against the long-term health of the software and the delivery team.
+
+And we're looking for emphasis on good planning and design, rather than a relentless focus on coding - strategic, long-term thinking, rather than tactical, short-term fixes.
+
+Looking for a separation of the product backlog from the sprint backlog.
+
+Looking for a balance between delivering value to users and maintaining the long-term health of the software.
+
+We do two types of work:
+
+* We develop the functional and non-functional requirements of the business and operate the software in production.
+
+* We invest in improving the quality of the software, and improving our ways of working, tools and automation (for both development and operations)
+
+How do you find the right balance between these two things?
+
+Product owners SHOULD NOT have full control over work prioritization.
+
+You are trying to understand if they view engineering as a cost center (aka a higher chance you'll be miserable there!) or not.
+
+🚩 Micromanaged teams
+🚩 Fixed deadlines
+
+////
+
+== 7. Construction
+
+////
+
+* How long will it take to get a working dev environment up-and-running?
+
+* *When is a task "ready" for development?*
+
+* *Do you refactor as you go along?*
+
+* *What's your approach to code review?* Collective code ownership.
+
+* *Do you pair or mob? If so, under what circumstances would you do this?*
+
+* *How long do feature branches (or other temporary branches) stay open for?*
+
+* *Is anyone allowed to commit directly to the mainline tracks?*
+
+////
+
+== 8. Testing
+
+////
+
+* *What's your test coverage?*
+
+* *Do your automated tests evolve at the same time as the code?*
+
+* *What levels of automated testing do you have, and which are the most valuable for this particular solution: unit, integration, or system?*
+
+* *What do your acceptance tests look like? How are they linked to the software requirements specifications?*
+
+* *What other types of testing do you do? Penetration testing? Load testing? Usability testing?*
+
+* *How much manual testing do you need to do before each release?*
+
+* *Do you do test-driven development?*
+
+* *How to you define "good" and "done"?*
+
+* *_When_ do you do testing?* Shift left as much as possible.
+
+* What's your test strategy? How do you test for a release? What level of automation vs manual?
+
+"Good" is about testing and wider quality assurance. "Done" is about the software being ready for release.
+
+////
+
+== 9. Deployment and release
+
+////
+
+*Deployment* is the process of installing, configuring, and enabling a software application or system in a specific environment (e.g., development, testing, staging, or production). *Release* is the process of making the deployed software available to end-users or customers.
+
+Deployment is more technical and focused on getting the software operational in a specific environment, while release is business-oriented and concerned with delivering the software to users. Deployment can happen frequently (especially in continuous integration/continuous deployment (CI/CD) pipelines), whereas releases are typically less frequent and more planned.
+
+* *What's your release cadence?*
+
+* *What's the cycle time – the time between a change being "done" and getting released to production systems?*
+
+* *Do you ship incomplete features to production systems, eg. using feature flags?*
+
+* *What are the steps you need to take to prepare a release?*
+
+* *What determines releasability?*
+
+* *How often do you release?*
+
+* *How many bugs do you have? If you find a problem in a piece of code in production, what steps are taken?*
+
+* Related: branching-and-merging strategies?
+
+DORA: How often do you ship to production, and how often are there problems with the release?
+
+✅ High levels of automation.
+
+////
+
+== 10. Operations and maintenance
+
+////
+
+Operations in the widest sense: production, but also development environments.
+
+* *How are production services operated?*
+
+* *First-line support?*
+
+* *Out-of-hours support?*
+
+* *How quickly do you recover from production incidents, generally?*
+
+* *Monitoring and observability*
+
+* *How are incidents managed?*
+
+* *What keeps you up at night?*
+
+* *What do your development environments look like?*
+
+Red flag: poor development environments. Lots of inter-dependencies. Not isolated. Not containerized.
+
+////
+
+== 11. Teams and ways of working
+
+////
+
+Opening question: *What is the team's dynamic and work style?*
+
+*What is your onboarding process?* Start an exploration of the team structure and ways of working by asking about the onboarding process. No formal onboarding process is a red flag. So too is an overly long onboarding process, which suggests high levels of bureaucracy.
+
+* *What does a typical workday look like?*
+
+* *Describe your software development methodology?*
+
+* *Levels of autonomy.*
+
+* *What common practices or "ceremonies" do you do, things like stand-ups and retrospectives?*
+
+* *What happens if you do not complete the work you committed to in a sprint?*
+
+* *Have you ever had a project that took 2-4 times longer than originally planned? What happened? What did you learn from this?*
+
+* *Retrospectives*.
+
+* *Can you tell me a little about the team I'll be working with?*
+
+* *What happens if a bug is shipped to production, or a release causes an incident?*
+
+* *How do you approach post-mortems?*
+
+* *How do you ensure that development is done at a sustainable pace?*
+
+* *How do you communicate?*
+
+* *How can I contribute ideas to improve the ways of working?*
+
+* *How do you balance collaboration with the need for deep focus?* Trying to distinguish "collaboration" (in all its forms) from the specifics of proper "teamwork". Collaboration can be "being on hand to answer queries from the team at a moment's notice". This is very different from having extended periods of focus for team members to work together to solve a specific problem.
+
+* *What are your pain points?* / *What are the biggest challenges facing your team or delivery right now?* / *What needs improving the most?*
+
+* *How is progress reported to the business?*
+
+* *What is your policy on working hours?* – If there is minimal flexibility in the hours people are expected to work, this suggests a command-and-control management style.
+
+* *What time to people sign off Slack? Are people sometimes expected to work evenings and weekends?*
+
+* *How is delivery measured?*
+
+* *Do you do pair programming?* — Consider the response. It's not necessarily a red flag if they don't. But if they dismiss this out-of-hand, then perhaps that's a signal that they see pair programming as a waste of resources — you'll only get half the work done in the same time, rather than better quality. This is an indicator of a feature factory / professional software house. On the other hand, if they say they tried it and give reasonable reasons why it didn't work for them, then maybe this is not a red flag. It's not a green flag either, but not all organizations do pair programming and indeed it is not always an optimal practice.
+
+* *How do you support teams to work asynchronously?* Communication styles and tools (eg. Slack vs email). This can suggest command-and-control management style, and low levels of autonomy. If investment is made in this, this supports good work-life balance and therefore sustainable working. eg. flexible working is really only effective for the business if the business has invested in the tools and methods needed to support asynchronous working.
+
+Looking for a process that is iterative and incremental, and that is driven by the needs of the users and other stakeholders.
+
+Communication mechanisms include synchronous and asynchronous channels. Looking for good use of documentation, RFCs, etc. to reduce unnecessary communication overhead.
+
+Limited opportunities for remote and asynchronous working. This is a red flag, especially in the post-Covid era. It can be a sign of low levels of trust between the business owners and the employees, or that the organization is not good at managing people or falls back on command-and-control. However, there may be legitimate reasons for on-site work. But if they say its to support "collaboration", then drill down into the typical activities that you would typically be doing on in-office days. If its all meetings, that can be done perfectly effectively, in most cases, remotely. Pair programming and design... sure, that sort of stuff is really nice, sometimes, to be physically sat in the same space.
+
+If you're not really sure what the job entails, or if the interviewers are hazy about the tech stack or are hesitant to give you details about career progression opportunities. Sometimes, this is a case of snap hiring, where the business has panicked because someone has left and their just trying to fill the vacancy as soon as possible. This is a red flag for many reasons. It suggests the business is under-resourced, if individuals are so critical. And it suggests poor enterprise resource planning.
+
+Want to uncover hidden job expectations.
+
+TODO: Cross-functional teams, but should not be siloed. EVERYONE should "shift left" and work across the whole life cycle. It means that testers help to define acceptance criteria, and developers help to define the scope of individual stories.
+
+For autonomy, you're looking for signals that the engineering teams can make their own choices. Example questions in this category include:
+
+* Is your culture one of individual or collective responsibility?
+* How do you set objectives and targets? (Looking for team-level measures, not individual ones.)
+* Who has responsibility for the design, test and quality of code?
+* If a new feature needs the code to be reshaped, who decides? - If the PO or architects, be suspicious of top-down, remote-control programming.
+* What was the last big SW failure and how did you deal with it?
+
+Also looking for signals of a highly siloed, disconnected organization. Looking for teams to make their own choices, but also for collaboration between teams.
+
+////
+
+== 12. Leadership, and culture and values
+
+////
+
+This is probably the most important consideration. This will determine whether you will enjoy working at the organization, and ultimately this will be the factor that determines how long you stay.
+
+* IT department structure
+** Team size
+** Team boundaries (loosely coupled)
+* Practices: dailies, retrospectives, refinement, planning and estimation, 1:1s
+* Async vs sync working
+* Communication tools (eg. Slack vs email)
+* Working hours and flexibility
+* Hybrid working?
+* Degree of autonomy
+* Quality of the working environment, eg. open plan vs private offices, breakout spaces, natural light, temperature, ergonomic furniture, quality of the equipment (eg. monitors, chairs, desks, etc).
+* Principles such as psychological safety, blameless postmortems, etc. that guide how you work
+* Volume of meetings
+* Focus / context switching
+
+* *How would you describe the leadership style here?*
+
+This is the reverse interview equivalent of the classic interview "What do you look for in a boss?"
+
+* *What are the company values?* / *What does the organization value the most from software delivery?*
+
+* *Of your company values, which ones do you and your team live by, and how?* – This is a great question. Many organizations publish "values" but they are not always embedded in every decision and action the organization takes. This question will help you to assess whether the organization is genuinely guided by its core values. ... It's easy to make up values like "great place to work", what you want to know is how this is implemented in practice. Real values are not just superficial, but rather they frame every decision make at every level of the company.
+
+* *How do you benefit from ensuring a good work-life balance for staff?*
+
+* *How to you ensure a low-stress, low-noise, low-friction working environment?*
+
+* *In the last 12 months, how many IT people have left the company? What is this as a percentage of the total IT staff at the start of the year?*
+
+Looking for: continuous learning, blameless culture (psychological safety), investment in quality, collaboration, interactions with domain experts, knowledge sharing (no silos).
+
+We are looking for factors like:
+
+* Autonomy: do you get a good degree of autonomy in your work?
+* Mastery: is there a culture of excellence?
+* Purpose: do you like the aims and goals of the company?
+
+Looking for _good_ busy: not lots of meetings, interruptions, and context switching.
+
+Misconception that lots of noisy communication is collaboration. It's not. It's just noise. Collaboration is about working together to solve problems productivity.
+
+In a nutshell, you want me – and your development team as a whole – to make software that meets your requirements and serves your users well, and you want me to do that as cheaply as I possibly can. can do that, but to do so a prerequisite for me is to have a healthy work-life balance. And to be clear, a healthy work-life balance is not only about hours worked versus no-worked, but it's really more about the work culture, the ways of working, for teams and individuals contributors to have a high degree of autonomy over how they work, and to have the space to refine the craft they love.
+
+Vague answers about work-life balance is a bad sign.
+
+What we're looking for here is an organization – or at least an IT division within the organization – that understands the essence of software development at a fundamental level.
+
+What we do is, not code, but think.
+
+One of the biggest predictors for success for a team is the degree to which the people feel safe to express their ideas and contribute. According to the DORA metrics, *psychological safety* is one of the key factors for success in software delivery. What this means is that individual contributors need a safe space in which to take risks and make mistakes, without fear of recriminations.
+
+Ours is a discipline primarily focused on learning. Whatever the business or consumer sector that we're working for, I think it is a universal truth that developing the software is a process of continuous learning.
+
+I don't mean we as individual contributors are always learning and growing, though of course that is true. What I mean is, we make software to solve problems, and the process of finding solutions to those problems is one of discovery and experimentation, and adjusting your approach and design based on learning, eg through regular feedback on the evolving solutions from users and other stakeholders.
+
+Indeed, on a greenfield project, you may start building not even knowing what it is you're building – what the software will do exactly, in the end.
+
+These are the _real_skills – not deep knowledge of any particular language or technology – but the skills that allow us to learn new things.
+
+Lack of alignment on values: Mission, vision and values goes much further than pool tables and bean bags, but not every company will be working on green tech or world peace and it’s your responsibly, really, to make sure the business values align with your own. Sometimes this might mean a bit of introspection on your part, but warning signs could include If the interviewer struggles to articulate the company's core values or if there is a disconnect between what they say vs their public perception. (NOTE: I'm not convinced about all this "tech fo good" stuff – what's the alternative, "tech for bad"?, and like "green tech" this is just a rough business domain and doesn't tell you anything about the company values.)
+
+Also do you own background checks. Its not what you know but usually who you know. The tech industry is a small world, especially if you operate in a particular niche you’ll usually get to know the movers and shakers but also those with a bad rep. Use your network to your advantage. Do you know anyone who has interviewed there before or do your friends or family know much about the business or the line manager? You’ll be really surprised who knows who! ... Again you can find a lot from sites like Glassdoor but if possible, network with current or former employees to gather honest insights about their experiences. Pay attention to consistent themes or patterns in their feedback. If you are confident enough you could ask the interviewer about any concerns raised by previous employees or ask about the businesses efforts to address them.  (NOTE: I have found Glassdoor reviews to be a very good barometer, but you're looking for general patterns in the reviews, individual reviews don't tell you much. Be wary of companies that have lots of 5 star reviews and lots of 1 star reviews. Most companies are -  by definition – average and should have a lot of 3 and 4 star reviews - those are likely to be the most honest about the pros and cons.)
+
+✅ Green Flags in company:
+
+• Strong culture of quality, tech debt is managed
+• Pair programming, or robust QA, is valued
+• Self-organizing and cross-functional teams
+• Extreme Programming practices on default
+• Provides room for mentoring and personal growth
+• Offers flexible worktime and promotes work-life balance - which are the foundation for developing good software
+• Shift left as much as possible
+
+Green flags like flexibility and work-life balance are not just perks; they're essential for sustained job satisfaction and productivity.
+
+TODO: Explain that we are mainly assessing the *quality* of the software systems - as this has the most impact on the developer experience… avoiding burnout, working sustainably and therefore have the potential to be able to make a long-term career at the organization.
+
+////
+
+== Making a decision
+
+////
+
+If you have reservations, but are willing to roll the dice by accepting the offer, be honest and provide feedback on what your reservations for taking the job are.
+
+Gather all the data, then go with your gut! The few times in my career I've ignored by gut, it's been a disaster. Trust your gut. If you don't get a good vibe from the people interviewing you, then ask yourself if you really want to work with them. Even if the interviewer is not going to be your line manager, they are still a representative of the organization and, since organizations do tend to attract and retain similar types of people, there is a good chance that the interviewer is fairly representative of the types of people at the organization.
+
+Do you think you'll be able to learn from them? Do you think you'll be able to work with them, and have fun doing so?
+
+Evaluate potential employers in a methodological fashion. But once you've gathered the data, trust your gut.
+
+Also, things like remote working and flexible working are not always possible. For example, there may be legitimate reasons why remote working is not possible, such as the nature of the work, or the nature of the organization (eg. high security).
+
+Gather data - Glassdoor, TrustPilot, Companies House... – but then trust your gut.
+
+Wait at least 24 hours before accepting an offer. If they pressure you to accept quickly, that's a red flag.
+
+// TODO: Make sure we've covered most of the concepts from the Capability Maturity Model: https://en.wikipedia.org/wiki/Capability_Maturity_Model
+
+////
+
+.Related links
+****
+* https://posthog.com/founders/what-to-ask-in-interviews[The really important job interview questions engineers should ask (but don't)], James Hawkins, PostHog (2022) — Additional questions to ask when applying for roles at early-stage startups.
+
+* https://leaddev.com/personal-development/31-smart-questions-ask-software-engineering-interview[31 smart questions to ask in a software engineering interview], Harry Guinness, LeadDev (2024)
+
+* https://www.youtube.com/watch?v=2Afk9KVEgpE[20 questions to ask your next employer], Dave Farley (2022)
+
+* https://www.youtube.com/watch?v=osnOY5zgdMI[Software developer interview advice], Dave Farley (2021)
+
+* https://www.youtube.com/watch?v=yFHZEGgH7Ds[The best and worst places to work for developers], Dave Farley (2021)
+
+* https://www.youtube.com/watch?v=odhQ_B_x658[You're hiring policy doesn't work], Allen Holub and Dave Farley (2022)
+
+* https://www.youtube.com/watch?v=cNbWmjGNZD8[Can you see the red flags of a toxic tech company?], Jayme Edwards (2024)
+
+* https://ieeexplore.ieee.org/document/219617[Capability maturity model v1.1], various authors (1993) — The Capability Maturity Model (CMM) was originally developed in 1986 as a tool for assessing the development processes of software consultancies and contractors, with the intention  of objectively determining the capability of software houses to delivery software projects successfully. The CMM has since spawned numerous extensions and alternative "process maturity models", but the underlying principle of categorizing software houses by the maturity of their software development processes is more important than the choice of any particular model. Many of the concepts behind various process maturity models are useful for evaluating potential employers, too.
+****
