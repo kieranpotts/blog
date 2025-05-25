@@ -1,0 +1,45 @@
+= Welcome to the age of virtual working
+
+The age is already upon us - software-as-a-service tools like Slack, Zoom, Jira, GitHub, etc. Even if you're in the office, you're still using these tools to communicate with your team. The pandemic has accelerated this trend, and now many companies are embracing remote work as a permanent option.
+
+The future of work is not hybrid or remote, but virtual reality.
+
+''''
+
+Computer programming - off-site
+Software development - on-site *
+
+* On-site, because it's all about collaboration, and you lose communication signals (eg body language) when you're not in the same room. But what it means to be "on-site" is changing. It's not about being in the same building anymore, and increasingly it won't mean that.
+
+With virtual reality, you can be in the same room as someone on the other side of the world. You can see their body language, and they can see yours. You can collaborate in real-time, and it's as if you're in the same room.
+
+This is likely to be a big change over the next 10 years. With Apple's headset, and Facebook's Oculus, it's going to be a big change. Once these devices are widely available and affordable, many apps will compete for user's attention, and with broadband capacity ever-increasing, you can absolutely imagine that VR headsets will replace current headphones + microphone + webcam... not just in gaming and the consumer space, but also in corporate environments.
+
+What we now call remote working will become virtual reality working. This will be the norm.
+
+There is evidence that organizations are trying to entice (or bully) their staff back to the office after the pandemic. But I believe this will be a temporary reversal of the pandemic trend, and that the long-term trend will be towards virtual reality working.
+
+''''
+
+So the barriers to remote working will decrease in the next decade and beyond.
+
+Modern, open-plan offices are great for software development. They are lousy for computer programming.
+
+Define the difference between the two. Engineering and craft.
+
+Computer programming is a very individual experience.
+
+Richard Bolton.
+
+Or heavy metal.
+
+----
+
+
+There ARE still dinosaur managers who blindly insist people come to the office. There are also WFH zealots who are convinced it's 100% of the solution for 100% of people.
+
+The risk of getting it wrong? Losing top talent.
+
+Should the company dictate the working culture? Or should the team define their needs and the company accommodate them?
+
+Hybrid working is not 2 days in, 3 days out, or whatever. It's about the team defining their needs and the company accommodating them.
