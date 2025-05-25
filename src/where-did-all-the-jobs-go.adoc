@@ -62,6 +62,10 @@ Ironically, the faster we code, the more time we spend waiting for the software 
 
 ''''
 
+GenAI does genuinely speed up coding time. I've been trialing Cursor for a few months. It's expensive, but it's been a massive productivity boost. It changes the dynamics of programming from writing code to managing a system that handles the typing. It's particularly good with popular statically-typed languages like TypeScript and Java (but less so with dynamic languages like Python, and unpopular ones like Objective-C). But the point is: I'm still _designing_ the solution, and I still need to audit the code the generator is generating – mistakes are common.
+
+''''
+
 Gen AI is NOT ground breaking, but rather it is just the latest in a long line of attempts to automate software development. ... And increasingly automation tools do a lot of the work for us. Gen AI just the latest abstraction. ... One of the alarming facts about software engineers is connected with the hype around AI replacing programmers. Contrary to popular belief, it isn’t going to happen anytime soon. Thomas Dohmke, GitHub CEO, believes that not only will AI not take over developers’ jobs, but will actually help them learn in augmented environments, such as Copilot, and assist in coding faster with fewer bugs. Thus, software engineers can shake off the burden of menial work and focus on more complex problems instead.
 
 For example, there’s the increase in popularity of low-code and no-code solutions that some are saying will completely replace the need for software developers, as well as shifts in the software development process. Companies like IBM are no longer hiring huge teams of engineers that focus on one thing, like testing or quality assurance. Startups and tech giants alike are now hiring small and agile teams of full-stack developers.
