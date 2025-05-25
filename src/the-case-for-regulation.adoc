@@ -1,0 +1,47 @@
+= The case for regulating the software industry
+
+== Critical infrastructure
+
+IT systems are now critical infrastructure, on which so much of our economic and social life depends. Yet the software industry is not regulated like other critical infrastructure industries, such as energy or transport. This is a problem.
+
+== Professional standards
+
+It's regrettable that software development has not, as a discipline, before a ubiquitous set of practices - like you see in other professions such as medicine and law. Different jobs have entirely different ways of working and sets of practices and standards.
+
+Software remains unregulated in many domains. Perhaps a lack of regulation is what has lead to a plethora of practices to exist.
+
+== Social responsibility
+
+The technology industry should take more responsibility for the impact it has on people's lives.
+
+So many social problems have arisen from widespread adoption of new technologies. But technology evangelists often downplay the negative consequences of new technologies, and instead focus on the benefits. It would be better, in my view, if we took a more proactive approach to mitigating the negative consequences of new technologies. We should talk less about "disrupting" the status quo and more about how technology can be used to improve our lives, but only if we are careful about how we use it.
+
+== Open source risks
+
+On 29 March 2024 Andres Freund, a software developer at Microsoft, published a blog post about a security vulnerability he had discovered in the open source software that powers the majority of the world's web servers.
+
+He had noticed that SSH, a system to log into another computer over a network, was working about 500 milliseconds slower than normal. On closer inspection, Freund found malicious code had been added to the SSH software, via a dependent library calls XZ Utils, which was used for data compression. The malicious code looked like it had been designed to serve as a master key, allowing the attacker to steal encrypted data or to plant other (even more malicious) code.
+
+XZ Utils is open source software widely installed on Linux operating systems, in this case as a dependency of SSH. Since almost all web servers are Linux based, this was a major security scare. It was really just a stroke of luck that Freund discovered the malware, and raised the alarm to get the malware removed before it caused widespread damage.
+
+How did the malware get there?
+
+> xz Utils is open-source software, meaning that its code is public and can be inspected or modified by anyone. In 2022 Lasse Collin, the developer who maintained it, found that his “unpaid hobby project” was becoming more onerous amid long-term mental-health issues. A developer called Jia Tan, who had created an account the previous year, offered to help. For more than two years he, she or they contributed helpful code on hundreds of occasions, building up trust. In February they smuggled in the malware.
+
+The code changes were done very cleverly so as not to be immediately recognizable as a backdoor. This was a very sophisticated, well planned attack.
+
+> The attack is perhaps the most ambitious “supply-chain” attack—one that exploits not a particular computer or device, but a piece of back-end software or hardware—in recent memory.
+
+Other examples:
+
+* https://www.economist.com/united-states/2020/12/14/hackers-have-vaulted-into-the-heart-of-americas-government
+
+> The attack is perhaps the most ambitious “supply-chain” attack—one that exploits not a particular computer or device, but a piece of back-end software or hardware—in recent memory.
+
+Defenders of open source would argue that the code is open and can be inspected by anyone, so it is more secure. But in practice, very few people actually do inspect the code. And even if they do, it is very difficult to spot a well hidden backdoor.
+
+
+
+## Related links
+
+* [A stealth attack came close to compromising the world's computers](https://www.economist.com/science-and-technology/2024/04/02/a-stealth-attack-came-close-to-compromising-the-worlds-computers), The Economist (2 April 2024)
