@@ -1,0 +1,158 @@
+= How to learn software development
+
+What's the best way to learn software development?
+
+Your options:
+
+* University
+* Bootcamps, workshops, conferences and events
+* Online courses
+* Books
+* Pair programming
+* Apprenticeships
+* Certifications
+
+To start a career in Software Development, you don't need to have a university degree. With more and more alternative paths to learning coding, a computer science degree isn’t necessary to be successful in this sector.
+
+Whether you undertake a coding course, teach yourself or start an apprenticeship, there are many ways to get your foot in the coding career ladder.
+
+Algorithms, data structures, memory allocation, etc... all worth knowing about at a conceptual level, but rarely needed except in some very specialist areas that require low-level programming. Most of the time, we are working in levels of abstraction that provide APIs that do this sort of thing for us.
+
+''''
+
+In college, and in bootcamps and online courses, you will learn computer programming. But computer programming is just one aspect of software development, which is the application of computer programming to produce software systems for use in the real world.
+
+* Contribute to open source projects. This will teach you about managing change in large-scale software systems (which is not something taught in university/college or even most bootcamps and courses.) This is better than working on pet projects, because that will only give you experience with greenfield work. Most jobs in the real world involve at least some maintenance of existing software systems. In the real world, you solve problems in systems consisting of thousands of line of code, not just a few hundred, and many people are making other changes to the same system simultaneously.
+
+* Learn soft skills. In the real world, these are actually more important that technical skills (though few people admit this). Technical skills are relatively easy to improve over time. That comes with experience. But soft skills are much harder to refine, because we are constrained by our neurological hardwiring. Relevant soft skills include:
+
+** teamwork
+** learning mindset
+** organization/time management
+** emotional intelligence/empathy
+** approachability
+** persistence/patience
+** confidence
+
+Everyone in this industry has worked with someone who was technically very good but hard to work with. A "brilliant jerk", if you will. Everyone has a place in the software industry, even the brilliant jerks. These people can make excellent contractors and consultants, for example. But they are toxic in collaborative work environments, and the development of all large-scale software systems require highly-collaborative environments of close-knit, cross-functional teams.
+
+''''
+
+Apprenticeships may be the best bet! The apprentice becomes an assistant to a more senior developer, and learns that way. There are benefits both ways - the senior developer also learns by teaching and having to explain every detail about what they do and how they do it. Mentoring.
+
+''''
+
+Pair programming is also good.
+This is the environment that is closest to the commercial world in which we will eventually operate.
+
+''''
+
+Books are your best mentor. If you read one good programming book every month, roughly ten pages a day, you’ll soon have a firm grasp on the industry and distinguish yourself from nearly every developer around you.
+https://sizovs.net/2019/03/17/the-best-books-all-software-developers-must-read/
+https://mihaiolteanu.me/books.html
+
+''''
+
+== Should we still learn the basics?
+
+Should we still be learning how to do things like decimal to hex conversion?
+
+We hardly ever need to do this sort of thing. We are working in levels of abstraction that provide APIs that do this sort of thing for us.
+
+In the future, we'll be working in ever higher levels of abstraction - that is the natural evolution of software systems.
+
+But is it still useful to understand the fundamentals of computer science?
+
+Graduates are quite ignorant of this stuff.
+
+But the problem is industry-wide. There seems to be a horizon of maybe only a dozen years or so, beyond which developers do not look back. So every so often, we reinvent solutions to problems that have already been solved.
+
+Imagine we were literature majors. You would not spend most of your time writing books. You would spend most of your time reading, and learning, and analysing what previous generations of writers had done, and putting that into the cultural context in which the writing was done.
+
+Why should it be any different for software development?
+
+Why, when we learn software development, do we spend all our time writing computer programs? Should we not read programs instead.
+
+This is actually really important. As computer programmers, a big part of our job is reading other people's code, but we are never taught how to do that. "Here's a hundred thousand lines of code, find the bug." That is easy if you have learnt how to read and analyse code, but few people are actually given any formal training in this area.
+
+It would be incredibly useful for more people to understand the history of software development, and to appreciate the classical cycles of innovation. Rarely is anything every new. All the so called "innovation" that has happened in the web platform over the last two decades is just a repeat of everything that happened in personal computer systems before it. It's just another cycle - a different software platform, but the same cycle of innovation.
+
+== Beware the robots
+
+As reported in the https://cacm.acm.org/news/the-impact-of-ai-on-computer-science-education/[Communications of the ACM],
+in the fall of 2023 Eric Klopfer conducted an experiment in his undergraduate
+computer science class at MIT. He divided the class into three groups and gave
+each group the same programming challenge in the Fortran language – which none
+of the students knew.
+
+One group was allowed to use ChatGPT to help them solve the problem, another
+group was allowed to use Meta's Llama, and a third was banned from using any
+generate AI tool but they were allowed to use Google.
+
+The outcome? Well, the ChatGPT-assisted group solved the problem quickest, and
+the Google-assisted group was slowest. But subsequently the students were tested
+on how well they remembered their solution. The ChatGPT-assisted group
+"remembered nothing", apparently, while everyone in the Google-assisted group
+were able to explain their solution in detail.
+
+What does this tell us?
+
+Software development is a process of learning through cycles of experimentation.
+The general process is to break down tasks into smaller increments that each
+take you a step closer to the solution, and you evaluate and adjust your approach
+each step of the way. Struggling is part of the learning experience.
+
+When you're given the answer, you're not struggling, and therefore you're not
+learning.
+
+It's the same for courses and tutorials. You want to look for the good ones that
+set coding challenges, and give you a reference solution at the end to compare
+against your own solution. Avoid step-by-step tutorials that just walk you
+through incremental code changes; these can help you to learn the API of whatever
+tool, framework or language you're learning, but you're not really refining your
+software development capability.
+
+My recommendation, therefore, is to be judicious in how you use LLMs to aid your
+development, especially while you are learning. Use them to help you write code
+_once you know_ what code you want to write. That's a different thing to using
+LLM's to solve problems on behalf.
+
+Contrary to popular belief, genAI is not going to make computer science jobs
+obsolete. But the nature of those jobs will change – as they always have done –
+as we continuously invent new tools to help us write code and verify our work.
+
+You _do_ need to become proficient at using code generation tools, in the same
+way you must become proficient at testing, debugging and version control. These
+tools will become part of your everyday workflow. Like every tools, it is up to
+us as an industry to decide when and how best to use new tools. For gen-AI,
+best practices have not yet emerged...
+
+... It may well be that AI and ML will make it less necessary for us to
+understand the details of coding, in the same way that in the past a hierarchy
+of compilers have made it less necessary for us to understand assemblers. But
+you still need to understand how to code, in the same way you still need to
+understand arithmetic, even if you use a calculator instead of paper and pen.
+
+In the short term: take some courses on prompt engineering!
+
+Potentially our work will be increasingly focused on designing programs that
+specify requirements, which will be compiled directly into code, rather than
+writing the code itself. We'll be more focused on requirements and specifications,
+and validation and verification of the auto-generated code.
+
+TODO: GenAI + higher-level declarative and visual programming languages.
+
+
+== Miscellaneous notes:
+
+- There are seminal papers and books that people should read, and seminal pieces of code that people should look at, and seminal computer languages that were influential on much that came after them.
+
+- Nothing we are doing nowadays is really new. Functional programming has been around for 50+ years old, OOP is 40+ years old.
+
+- We tend to overly focus on learning the low-level details/APIs of some new language, library, framework or tool. But that's a different thing to really contemplating the process, and really looking at entirely different ways of working and solution designs.
+
+- Also, we should look at some of the research work that has been done in the past by Xerox Park and others, and currently in academic circles.
+
+''''
+
+https://www.mensurdurakovic.com/hard-to-swallow-truths-they-wont-tell-you-about-software-engineer-job/
