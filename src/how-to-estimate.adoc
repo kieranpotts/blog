@@ -1,0 +1,44 @@
+= How to estimate
+
+It's so difficult to estimate costs — software is such an intangible thing.
+
+''''
+
+It is the nature of our work that we are asked to estimate effort and complexity, and probably also time, to complete software engineering tasks.
+
+This is not something we're ever trained to do, and estimating is a specialist discipline in its own right.
+
+True "agile" ways of working rally against this approach to software development. But, in my opinion, this is not realistic in many companies. Organizations need to plan resources and to work out how best to use resources based on cost-value.
+
+Nevertheless, there are prerequisites to being able to estimate:
+
+* The change request must be sufficiently small that you can, with reasonable accuracy, understand all the code and configuration changes that will be required.
+
+* The architecture of the system must be of sufficient quality to be able to confidently change parts of the system without introducing regressions elsewhere.
+
+* Deep familiarity with the system.
+
+* The system must be well supported by tests and other artifacts such as documentation.
+
+* The workflow must be designed to accommodate changes being introduced in isolation from other work being undertaken on the same system at the same time.
+
+* Know what resources will be available to you, especially in terms of BA, dev and test support.
+
+* Have an established working relationship with other collaborators.
+
+* The change request must be stable (no feature creep).
+
+It is NOT possible to provide estimates for all kinds of changes and all kinds of software systems.
+
+Even if estimates are possible, it is still necessary to accommodate for unknowns:
+
+* Dependencies.
+* Merge conflicts.
+* Sickness and holidays.
+* Unknown unknowns
+
+T-shirt sizes and story points are useful tools because they are deliberately vague. If you give time estimates, such as "2 weeks", even if these are qualified as being "high level" or "ballpark" estimates, they infer a degree if precision. This is not good for managing expectations of the business. If I say something might take "about 2 weeks" and I deliver it in 3 weeks, business people will often consider that to be late delivery. In my opinion, this is on-time delivery, The estimate was in the right ballpark.
+
+When I am asked to provide time estimates, I always apply a multiplier. This will always be at least 50%. So, if I think something will take "about 2 weeks", I will say "about 3 weeks". The multiplier will be higher — sometimes order of magnitudes higher, 100%, 200%, etc — if there are more unknowns.
+
+// TODO: The real problem is not estimating delivery, but delivering high quality software that _works_. Software failures are often caused by poor quality software, not poor estimates.
