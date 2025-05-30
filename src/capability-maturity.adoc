@@ -1,0 +1,88 @@
+= A new capability maturity model
+
+// TODO: We're not covering entirely dysfunctional organizations - this is a management and leadership issue, which recurs in all industries and is not specific to software development. We are focusing on the software development process, and how it can be improved through better practices and processes.
+
+== Level 0: xxx
+
+// Coding.
+
+// Developers treated as merely computer programmers ("code monkeys") who follow orders and write code without understanding the bigger picture. They are not empowered to make decisions or adapt their processes.
+
+// Coders translate _detailed descriptions_ of business rules into code. The primary skills is seen to be the ability to "speak" in a particular programming language.
+
+// The solution is predetermined before the tickets land on the developers' desks, and the developers are expected to implement the solution as specified.
+
+// Coders are not expected to understand the business domain, the requirements, or the context of the project. They are simply following instructions and writing code as directed. In turn, programmers working in this context learn to understand that the problem space is not their problem!
+
+// The most dysfunctional organizations require every design decision - including adding new libraries - to be approved by a manager or architect, and they have no autonomy to adapt their processes or practices. Deployments go through multiple sequential, manual quality gates.
+
+// These processes never produce innovative products, or systems that are nice to work on and are cost-efficient to maintain and extend with new functionality. Delivery is unsustainable and the organizations are characterized by high levels of stress and burnout, and high churn of staff.
+
+// There is a high degree of "tailorism" here, in which work is decomposed into areas of speciality. The SDLC is seen as a production line, in which each step is performed by a specialist. This approach doesn't scale to very large, very complex systems, and it doesn't support innovative product design (eg. through experimentation). It also doesn't allow for agility in the product development process - it's much harder to turn the ship in a different direction when you have a rigid process that requires multiple sequential steps and approvals. Lots of contracts between different phases - therefore lots of coordination and overhead (hand-offs) between different teams and specialists.
+
+// Tailorism is a term that comes from the early 20th century, when Frederick Winslow Taylor developed a scientific approach to management that focused on efficiency and productivity. In software development, this approach can lead to a rigid process that stifles creativity and innovation. But you can see the appeal. It means that we can each become very good at our specific specialties, and work together to combine our individual expertise to create high quality, high value products.
+
+// Coders do not build better systems more quickly. Decomposing software development into project-managed coding tasks produces poor quality software inefficiently.
+
+// These companies value only the "tactical tornadoes" (a term defined by John Ousterhout) – the people who can write code quickly, but not necessarily well. They do not value the "strategic thinkers" – the people who can design and architect systems, and think about the long-term implications of their decisions. Tactical tornadoes leave a load of mess behind that slows down delivery in the long run.
+
+== Level 1: xxxx
+
+// Development.
+
+// Developers are more deeply involved in all aspects of the software development process, right through the whole life cycle, including requirements gathering, design, and testing. They are expected to understand the business domain and the context of the project, and they have some autonomy to adapt their processes and practices.
+
+// The solution is not predetermined, and developers are expected to contribute to the design and implementation of the solution. They are empowered to make decisions that best suit the project, and they have the autonomy to adapt their processes and practices as needed.
+
+// You will always get a better solution when you treat software development as more than a translation engine of requirements into code. Technical people make technical decisions, and can therefore make better decisions about the inherent trade-offs in the design of the solution.
+
+// You get innovation, productivity, and quality when you treat software development as a creative process, rather than a production line. You empower people to experiment, to make mistakes (and learn and adapt from those mistakes), and change designs and approaches in ways that could not have been foreseen at an earlier phase of the development process.
+
+// This is a lot more effective in creative, unpredictable processes like software development.
+
+== Level 3: xxxx
+
+The team is empowered to make decisions that best suit the project, and they have the autonomy to adapt their processes and practices as needed.
+
+// Engineering.
+
+////
+
+The defining characteristics of software engineering are:
+
+* Teams are optimized for learning.
+
+  - Work iteratively.
+  - Value fast, high quality feedback.
+  - Treat every change as an experiment.
+  - Work incrementally.
+  - Value empirical learning.
+  - Apply a scientifically rational approach to problem-solving.
+  - Can therefore determine the releasability of the evolving system after _every_ small change.
+  - High confidence in the stability of the system after every change.
+
+* Teams are cross-functional and collaborative.
+
+  - Include all necessary skills and expertise.
+  - Foster a culture of shared ownership and accountability.
+  - Encourage open communication and knowledge sharing.
+  - Emphasize collective problem-solving and decision-making.
+
+These are the true 10x engineers. These are the people who come up with the really clean designs that can be implemented in very small amounts of code. They might write less code per day than other people, but the functionality and stability (and evolvability etc.) that they implement is way higher.
+
+////
+
+== Level 4: Sophisticated
+
+== Level 5: Elite
+
+The delivery model is tailored to the needs of the customer, and with consideration to the context of the project – the skills and experience of the team members, the business domain, the complexity (or ambiguity) of the requirements, the risk profile, the budget and timeline, and so on.
+
+There is nothing "cookie cutter" about the delivery model. It is finely tuned to the project, and continues to evolve as the project progresses and things change. For example, when new team members onboard, the team may need to adapt their processes to accommodate different skills and experiences. Similarly, if the project scope changes or new risks emerge, the team dynamically adjusts their ways of working.
+
+// Interact directly with users - so support, and fix things in real-time.
+
+.Related links
+****
+* https://www.youtube.com/watch?v=fcjBfSiyI0k[Coder vs Developer vs Engineer], Dave Farley (2025)
+****
