@@ -1,0 +1,17 @@
+= A new capability maturity model
+
+== Level 0: xxx
+
+== Level 1: xxxx
+
+== Level 3: xxxx
+
+The team is empowered to make decisions that best suit the project, and they have the autonomy to adapt their processes and practices as needed.
+
+== Level 4: Sophisticated
+
+== Level 5: Elite
+
+The delivery model is tailored to the needs of the customer, and with consideration to the context of the project – the skills and experience of the team members, the business domain, the complexity (or ambiguity) of the requirements, the risk profile, the budget and timeline, and so on.
+
+There is nothing "cookie cutter" about the delivery model. It is finely tuned to the project, and continues to evolve as the project progresses and things change. For example, when new team members onboard, the team may need to adapt their processes to accommodate different skills and experiences. Similarly, if the project scope changes or new risks emerge, the team dynamically adjusts their ways of working.
