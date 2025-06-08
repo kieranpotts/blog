@@ -34,7 +34,7 @@ Hi <?echo $name?>, you are <?echo $age?> years old
 </body></html>
 ----
 
-This design kept separate the business logic and user interface concerns. The HTML code, which declares instructions for the browser to render the user interface, is interspersed with C APIs that handle the dynamic content generation and other business logic on the server-side.
+This design made for a better separation of business logic from user interface concerns. The HTML code, which declares instructions for the browser to render the user interface, is interspersed with C APIs that handle the dynamic content generation and other business logic on the server-side.
 
 PHP started, not as a programming language, but as a templating system for web pages served by the Apache HTTP server.
 
