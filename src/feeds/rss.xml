@@ -9,6 +9,14 @@
     <language>en-GB</language>
 
     <item>
+      <title>PHP is 30</title>
+      <link>https://kieranpotts.com/php-is-30</link>
+      <pubDate>Sun, 8 Jun 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Kieran Potts</dc:creator>
+      <guid>https://kieranpotts.com/php-is-30</guid>
+      <description>PHP version 1.0 was announced on 8 June 1995. It quickly became a popular server-side scripting language for websites. Here's why.</description>
+    </item>
+    <item>
       <title>Mental models: essential versus accidental complexity</title>
       <link>https://kieranpotts.com/essential-versus-accidental-complexity</link>
       <pubDate>Sat, 12 Dec 2024 00:00:00 +0000</pubDate>

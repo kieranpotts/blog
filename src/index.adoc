@@ -9,6 +9,9 @@ I'm a UK-based software developer and former technology journalist. I occasional
 link:https://mailchi.mp/2c60bdf9f429/91h5vui7v9[email], link:/feeds/rss.xml[RSS],
 link:/feeds/atom.xml[Atom], or link:/feeds/feed.json[JSON Feed], or follow me on https://bsky.app/profile/kieranpotts.com[Bluesky] or https://www.linkedin.com/in/kieranpotts/[LinkedIn].
 
+* link:./php-is-30[PHP is 30] +
+  [.small]#8 June 2025#
+
 * link:./essential-versus-accidental-complexity[Mental models: essential versus accidental complexity] +
   [.small]#7 December 2024#
 
