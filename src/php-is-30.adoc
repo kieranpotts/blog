@@ -85,3 +85,8 @@ It is probably fair to claim that PHP was the first major technology that made w
 The impact of PHP has been immense. It has powered much of the web for 30 years. And the ecosystem is still going strong today, with mature tools like https://laravel.com/[Laravel] that compete with the very best of modern application frameworks.
 
 Happy birthday, PHP.
+
+.Related links
+****
+* {https://www.reddit.com/r/PHP/comments/1l6ewx0/php_is_30/}[Reddit thread]
+****
