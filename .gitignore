@@ -10,9 +10,6 @@
 # software stacks here: https://github.com/github/gitignore
 # ==============================================================================
 
-# Drafts.
-__*.*
-
 # Build artifacts.
 dist
 node_modules
