@@ -1,0 +1,35 @@
+= Semantic diffusion
+
+Semantic diffusion is defined by Martin Fowler (?) as...
+
+Examples:
+
+* *Continuous integration* is... It is not just running a build in the cloud.
+
+* *DevOps* is not just Docker and Kubernetes.
+
+* *Unit tests* has come to be synonymous with all kinds of automated tests, including integration and system tests that don't necessarily rely on mocks and stubs to isolate the units-under-test and deliver fast feedback.
+
+* *TDD* is not just about writing automated tests.
+
+* *Refactoring* is not just about rewriting bits of code, it is actually a process of evolving the architectural design of a system over time.
+
+* *REST* and *RESTful* have become so diluted that they are now used to describe any HTTP-based API, even those that do not adhere to the principles of REST. I've written about this extensively before.
+
+* *MVC* is not just any tiered application architecture.
+
+* *OOP* is not just using classes and objects. Using public get/set accessors for private attributes is _not_ encapsulation or data hiding. Public methods should focus on behavior, not the underlying data structure that is supports that behavior. There may be exceptions, of course. Classes used for data transfer objects (DTOs) or value objects (VOs), and even for simple domain modelling in which the domain is primarily about data than behavior... OOP is really about object-oriented _thinking_ and _design_.
+
+* *FP* is not just using reduce/map/filter.
+
+* And perhaps worst of all, *agile* is... It is not scrum.
+
+* *Software engineering* is not a synonym for software development. The term originates from the NATO Software Engineering Conference in 1968, which was a response to the software crisis of the time. Today, it is often used interchangeably with software development, but it encompasses a much broader set of practices and principles.
+
+Perhaps *AI* will go the same way.
+
+Happily, *DDD* does not seem to have suffered from semantic diffusion, perhaps because it hasn't been so widely adopted.
+
+It means we have to keep inventing new terms to describe the original concepts.
+
+Semantic diffusion happens in every domain - medical, electronics, astronomy, etc. But I think what is different about the software field is that you don't need a formal qualification to get your first entry-level job. About 50% of people in our industry (including me) are self-taught. This means that our first exposure to industry lexicon tends to come from blog posts, YouTube videos, and other informal sources.
