@@ -1,0 +1,3 @@
+= The software quality without a name
+
+// https://dreamsongs.com/Files/PatternsOfSoftware.pdf
