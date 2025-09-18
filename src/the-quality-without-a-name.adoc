@@ -42,3 +42,13 @@ _The Timeless Way of Building_ – and other books in Alexander's series, notabl
 Richard P Gabriel, the computer scientist known for his work related to the Lisp programming language, explored Alexander's ideas in the context of software design through a series of articles published in the _Journal of Object-Oriented Programming_. Gabriel later compiled these essays into a book titled _Patterns of Software: Tales from the Software Community_, published in 1996 and now {link-patterns-of-software}[available freely from his website]. (Christopher Alexander wrote the forward to the Gabriel's book.) It's a wonderful anthology of essays, still very much pertinent today, and I encourage you to download and read it.
 
 Gabriel was an early advocate of applying Alexander's concept of "pattern languages" to software design.
+
+
+.Related links
+****
+
+* {link-pattern-language}[PatternLanguage.com] is a member-supported website run by The Center for Environmental Structure, Christopher Alexander's architectural practice.
+
+* {link-patterns-of-software}[Patterns of Software: Tales from thee Software Community], Richard P Gabriel, Oxford University Press, 1996
+
+****
