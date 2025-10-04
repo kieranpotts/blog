@@ -23,17 +23,19 @@ ____
 
 The central premise of the book is that this architectural characteristic need not be left to emerge by accident, because it can be intentionally designed through the use of timeless design patterns that recur throughout history and across cultures.
 
-The quality-without-a-name comes about, not from adherence to any particular architectural style or trend, but from a deep understanding of human needs and the rhythms of life. Buildings and urban spaces feel alive when they are designed to support universal patterns of human experience, rather than being designed for aesthetic fashion or architectural trends.
+The quality-without-a-name comes about, not from adherence to any particular architectural style or trend, but from a deep understanding of human needs and the rhythms of life. Buildings and urban spaces feel alive when they are designed to support universal patterns of human experience, rather than being designed for aesthetic fashion or architectural showcase.
 
 image::./_/media/images/the-timeless-way-of-building.jpg[]
 
-This is the "timeless way of building" of the book's title. It is a natural, organic process that has existed for centuries all over the world. It is based on universal architectural patterns that have emerged independently in different parts of the world and that have been passed down through generations of builders and architects. These patterns are not rigid structures but are flexible guidelines that evolve through use and adaptation. The patterns are deeply rooted in human needs and experiences. In combination, the patterns create spaces that are not only aesthetically beautiful and efficient, but functional and emotionally satisfying too.
+This is the "timeless way of building" referenced in the book’s title. It is a natural, organic process that has shaped architecture across cultures for centuries.
 
-The same patterns are seen in villages, temples, and homes throughout the world and through time. Used together, these timeless patterns produce buildings and urban landscapes that have the quality-without-a-name.
+The timeless way of building draws on universal patterns that emerged independently around the world and were passed down through generations of builders and architects. These patterns appear in villages, temples, and homes across time and geography.
+
+Rather than rigid formulas, these patterns are adaptable frameworks rooted in human needs and lived experience. When the patterns are combined, they give rise to buildings and urban environments that are functional, beautiful, and emotionally resonant. Such spaces are imbued with the elusive quality-without-a-name.
 
 Alexander contrasts the timeless way of building with modern global architectural styles, and industrialized construction methods, which tend to produce buildings that are missing this indescribable quality.
 
-The irony is not lost on me that I was reading this book while holidaying in Dubai, a city characterized by its spectacular mega-projects, the effect of which is a rather soulless, rootless, global urban landscape. Yet even here I found a few places dotted among the glass and steel towers – some heritage buildings and archaeological sites, and quiet corners like [Alserkal Avenue] – that exhibit many of the characteristics of the timeless way of building.
+The irony is not lost on me that I was reading this book while holidaying in Dubai, a city characterized by its spectacular mega-projects, the effect of which is a rather soulless, rootless, global urban landscape. Yet even here I found a few places dotted among the glass and steel towers – some heritage buildings and archaeological sites, and quiet sanctuary's like https://alserkal.online/[Alserkal Avenue] – that exhibit many of the characteristics of the timeless way of building.
 
 .Archaeological site in Jumeirah, Dubai
 image::./_/media/images/jumeirah-archaeological-site.jpg[]
