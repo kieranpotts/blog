@@ -1,6 +1,6 @@
 = The (software) quality without a name
 Kieran Potts, XXXXXXXXX September 2025
-:description: The Timeless Way of Building by Christopher Alexander is a classic text on real-world architecture. In computing, it was influential on the emerging field of object-oriented programming in the 1980s and 1990s. The book still has more to teach us about how we think about software design.
+:description: The Timeless Way of Building by Christopher Alexander is a classic text on real-world architecture. In computing, it was influential in the emerging field of object-oriented programming in the 1980s and 1990s. The book still has much to teach us about how we think about software design.
 :docinfo: shared
 :nofooter:
 
@@ -8,9 +8,11 @@ Kieran Potts, XXXXXXXXX September 2025
 :link-patterns-of-software: https://dreamsongs.com/Files/PatternsOfSoftware.pdf
 :link-wikipedia: https://en.wikipedia.org/wiki/The_Timeless_Way_of_Building
 
-My holiday reading this year was {link-wikipedia}[_The Timeless Way of Building_] by Christopher Alexander. Published in 1979 and now regarded as a classic text on (real world) architecture, the book is a philosophical and practical exploration of the patterns that make buildings and places feel alive, harmonious, and emotionally resonant.
+_The Timeless Way of Building_ by Christopher Alexander is a classic text on real-world architecture. In computing, it was influential in the emerging field of object-oriented programming in the 1980s and 1990s. The book still has much to teach us about how we think about software design.
 
-Alexander calls this the quality-without-a-name. It's that _je ne sais quoi_ that some buildings and urban spaces have, that can't be easily expressed in words – but we know it when we experience it.
+My holiday reading this year was {link-wikipedia}[_The Timeless Way of Building_] by Christopher Alexander. Published in 1979 and now regarded as a classic text in the field of built environment architecture, the book is a philosophical and practical exploration of the patterns that make some buildings and places feel alive, harmonious, and emotionally resonant.
+
+Alexander calls this the quality-without-a-name. It's that _je ne sais quoi_ that some buildings and urban spaces have, that can't be easily expressed in words, but we know it when we experience it.
 
 [quote, Christopher Alexander 1979]
 ____
@@ -21,9 +23,9 @@ The wall runs east to west; the peach tree grows flat against the southern side.
 This quality is the most fundamental quality there is in anything.
 ____
 
-The central premise of the book is that this architectural characteristic need not be left to emerge by accident, because it can be intentionally designed through the use of timeless design patterns that recur throughout history and across cultures.
+The central premise of the book is that this elusive architectural characteristic does not need to be left to emerge by accident, because it can be intentionally designed through the reuse of timeless design patterns that recur throughout history and across cultures.
 
-The quality-without-a-name comes about, not from adherence to any particular architectural style or trend, but from a deep understanding of human needs and the rhythms of life. Buildings and urban spaces feel alive when they are designed to support universal patterns of human experience, rather than being designed for aesthetic fashion or architectural showcase.
+The quality-without-a-name comes about, not from adherence to any particular architectural style or trend, but from a deep understanding of human needs and the rhythms of life. Buildings and urban spaces feel alive when they are designed to support universal patterns of human experience, rather than being designed for — say — aesthetic fashion or architectural showcase.
 
 image::./_/media/images/the-timeless-way-of-building.jpg[]
 
@@ -31,18 +33,18 @@ This is the "timeless way of building" referenced in the book’s title. It is a
 
 The timeless way of building draws on universal patterns that emerged independently around the world and were passed down through generations of builders and architects. These patterns appear in villages, temples, and homes across time and geography.
 
-Rather than rigid formulas, these patterns are adaptable frameworks rooted in human needs and lived experience. When the patterns are combined, they give rise to buildings and urban environments that are functional, beautiful, and emotionally resonant. Such spaces are imbued with the elusive quality-without-a-name.
+Rather than rigid formulas, these patterns are adaptable frameworks rooted in human needs and lived experience. When the patterns are combined, they give rise to buildings and urban environments that are functional, beautiful, and emotionally resonant. Such spaces are imbued with that intangible quality — the quality-without-a-name.
 
 Alexander contrasts the timeless way of building with modern global architectural styles, and industrialized construction methods, which tend to produce buildings that are missing this indescribable quality.
 
-The irony is not lost on me that I was reading this book while holidaying in Dubai, a city characterized by its spectacular mega-projects, the effect of which is a rather soulless, rootless, global urban landscape. Yet even here I found a few places dotted among the glass and steel towers – some heritage buildings and archaeological sites, and quiet sanctuary's like https://alserkal.online/[Alserkal Avenue] – that exhibit many of the characteristics of the timeless way of building.
+The irony is not lost on me that I was reading this book while holidaying in Dubai, a city characterized by its spectacular mega-projects, the effect of which is a rather soulless, rootless, global urban landscape. Yet even here I found a few spots hidden among the glass and steel towers – some heritage buildings and archaeological sites, and peaceful sanctuaries like https://alserkal.online/[Alserkal Avenue] – that exhibited some of the characteristics of the timeless way of building.
 
 .Archaeological site in Jumeirah, Dubai
 image::./_/media/images/jumeirah-archaeological-site.jpg[]
 
-_The Timeless Way of Building_ – and other books in Alexander's series, notably the follow-up _A Pattern Language_ – have been influential in other fields beyond architecture. Alexander's work was influential in the field of software design, particularly through the 1980s and 1990s during the development of object-oriented programming and its associated design patterns.
+_The Timeless Way of Building_ – and other books in Alexander's series, notably the follow-up _A Pattern Language_ – have been influential in other fields beyond architecture. Alexander's work was popular in the field of software design, particularly through the 1980s and 1990s during the development of object-oriented programming and its associated design patterns.
 
-Richard P Gabriel, the computer scientist known for his work related to the Lisp programming language, explored Alexander's ideas in the context of software design through a series of articles published in the _Journal of Object-Oriented Programming_. Gabriel later compiled these essays into a book titled _Patterns of Software: Tales from the Software Community_, published in 1996 and now {link-patterns-of-software}[available freely from his website]. (Christopher Alexander wrote the forward to Gabriel's book.) It's a wonderful anthology of essays, still very much pertinent today, and I encourage you to download and read it.
+Richard P Gabriel, the computer scientist known for his work related to the Lisp programming language, explored Alexander's ideas in the context of software design through a series of articles published in the _Journal of Object-Oriented Programming_. Gabriel later compiled these essays into a book titled _Patterns of Software: Tales from the Software Community_, published in 1996 and now {link-patterns-of-software}[available freely from his website]. Christopher Alexander wrote the forward to Gabriel's book, which is a wonderful anthology of essays, still very much pertinent today, and I encourage you to download and read it.
 
 Gabriel was an early advocate of applying Alexander's concept of "pattern languages" to software design.
 
@@ -50,8 +52,8 @@ Gabriel was an early advocate of applying Alexander's concept of "pattern langua
 .Related links
 ****
 
-* {link-pattern-language}[PatternLanguage.com] is a member-supported website run by The Center for Environmental Structure, Christopher Alexander's architectural practice.
+* {link-pattern-language}[PatternLanguage.com], a member-supported website run by The Center for Environmental Structure, Christopher Alexander's architectural practice
 
-* {link-patterns-of-software}[Patterns of Software: Tales from thee Software Community], Richard P Gabriel, Oxford University Press, 1996
+* {link-patterns-of-software}[Patterns of Software: Tales from the Software Community], Richard P Gabriel, Oxford University Press, 1996
 
 ****
