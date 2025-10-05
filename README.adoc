@@ -13,8 +13,7 @@ To set up a local development environment for this project, the following softwa
 * Node ^v20.9.0
 * NPM ^v10.1.0
 
-https://github.com/nvm-sh/nvm[NVM for Unix] or https://github.com/coreybutler/nvm-windows[NVM for Windows] makes it easier to switch between different versions of Node for different projects.
-NVM for Windows does https://github.com/coreybutler/nvm-windows/issues/388[not support] the `.nvmrc` file, so Windows users must specify the version number on the command line.
+https://github.com/nvm-sh/nvm[NVM for Unix] or https://github.com/coreybutler/nvm-windows[NVM for Windows] makes it easier to switch between different versions of Node for different projects. NVM for Windows does https://github.com/coreybutler/nvm-windows/issues/388[not support] the `.nvmrc` file, so Windows users must specify the version number on the command line.
 
 [source,shell]
 ----
@@ -51,7 +50,7 @@ The following run-scripts are available. Use `npm run [command]`, eg. `npm run d
 
 This repository has only a single branch, `dev`. Updates to the this branch in the upstream reference repository are automatically deployed to production on Netlify.
 
-`*.adoc` files in the `src` repository that are prefixed with at least one underscore character will NOT be deployed to production. This is useful for drafts and other content that is not ready for publication.
+`*.adoc` files in the `src` repository that are prefixed with at least one underscore character will NOT be compiled to HTML and deployed to production. This is useful for drafts and other content that is not ready for publication.
 
 ''''
 
