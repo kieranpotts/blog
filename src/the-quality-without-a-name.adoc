@@ -8,7 +8,7 @@ Kieran Potts, XXXXXXXXX September 2025
 :link-patterns-of-software: https://dreamsongs.com/Files/PatternsOfSoftware.pdf
 :link-wikipedia: https://en.wikipedia.org/wiki/The_Timeless_Way_of_Building
 
-_The Timeless Way of Building_ by Christopher Alexander is a classic text on real-world architecture. In computing, it was influential in the emerging field of object-oriented programming in the 1980s and 1990s. The book still has much to teach us about how we think about software design.
+Christopher Alexander’s _The Timeless Way of Building_ is a classic text in architectural theory, widely admired for its provocative view of urban design. Beyond architecture, its influence reached into the field of computing, shaping the evolution of object-oriented programming during the 1980s and 1990s. Decades later, it continues to offer lessons in how to approach software design, reminding us that the habitability of a codebase is just as importance as its structural elegance.
 
 My holiday reading this year was {link-wikipedia}[_The Timeless Way of Building_] by Christopher Alexander. Published in 1979 and now regarded as a classic text in the field of built environment architecture, the book is a philosophical and practical exploration of the patterns that make some buildings and places feel alive, harmonious, and emotionally resonant.
 
@@ -25,7 +25,7 @@ ____
 
 The central premise of the book is that this elusive architectural characteristic does not need to be left to emerge by accident. It can be intentionally designed through the reuse of timeless design patterns that recur throughout history and across cultures.
 
-The quality-without-a-name comes about, not from adherence to any particular architectural style or trend, but from a deep understanding of human needs and the rhythms of life. Buildings and urban spaces feel alive when they are designed to support universal patterns of human experience, rather than being designed for, say, aesthetic fashion or architectural exhibition.
+The quality-without-a-name comes about, not from adherence to any particular architectural style or trend, but from a deep understanding of human needs and the rhythms of life. Buildings and urban spaces feel alive when they are thoughtfully shaped to support universal patterns of human experience, rather than being designed for the sake of aesthetic fashion or architectural exhibition.
 
 image::./_/media/images/the-timeless-way-of-building.jpg[]
 
@@ -33,51 +33,49 @@ This is the "timeless way of building" referenced in the book’s title. It is a
 
 The timeless way of building draws on universal patterns that have emerged independently around the world and that have been passed down through generations of builders and architects. These patterns appear in villages, temples, and homes across time and geography.
 
-These patterns are adaptable frameworks, rather than rigid formulas, rooted in human needs and lived experience. When the patterns are combined, they give rise to buildings and urban environments that are functional, beautiful, and emotionally satisfying. Such spaces are imbued with that intangible quality — the quality-without-a-name.
+These "living patterns" are rooted in human needs and lived experiences. When the patterns are carefully combined and adjusted to fit the needs of the inhabitants, they give rise to buildings and urban environments that are functional, beautiful, and emotionally satisfying. Such spaces are imbued with that intangible quality — the quality-without-a-name.
 
-Alexander contrasts the timeless way of building with modern architectural styles and industrialized construction methods, which produce buildings that are missing this indescribable quality.
+Alexander contrasts the timeless way of building with modern architectural styles and industrialized construction methods, which tend to produce buildings that are missing this indescribable quality.
 
-The irony is not lost on me that I was reading this book while holidaying in Dubai, a city characterized by its showpiece mega-projects, the effect of which is a rather soulless, rootless, global urban landscape. Yet even here I found a few places hidden among the glass and steel towers – some heritage buildings and human-scale sanctuaries like https://alserkal.online/[Alserkal Avenue] – that exhibit some of the characteristics of the timeless way of building.
+I was reading this wonderful book while holidaying in Dubai, a city characterized by its showpiece mega-projects, the effect of which is a rather soulless, rootless, global urban landscape. Yet even here I found a few places hidden among the glass and steel towers – some heritage buildings and human-scale sanctuaries like https://alserkal.online/[Alserkal Avenue] – that have something of the quality-without-a-name within them.
 
-.Archaeological site in Jumeirah, Dubai
+.Archaeological site in Jumeirah, Downtime Dubai in the distance
 image::./_/media/images/jumeirah-archaeological-site.jpg[]
 
-_The Timeless Way of Building_ – and other books in Alexander's series, notably the follow-up _A Pattern Language_ – have been influential in other fields beyond architecture. Alexander's work was popular in the field of software design, particularly through the 1980s and 1990s during the development of object-oriented programming and its associated design patterns.
+Alexander's work has been influential in other fields beyond architecture.  His design philosophy found popularity in the field of software design in the 1980s and 1990s, during the development of object-oriented programming and its associated design patterns.
 
-Richard P Gabriel, the computer scientist known for his work related to the Lisp programming language, explored Alexander's ideas in the context of software design through a series of articles published in the _Journal of Object-Oriented Programming_. Gabriel later compiled these essays into a book titled _Patterns of Software: Tales from the Software Community_, published in 1996 and now {link-patterns-of-software}[available freely from his website]. Christopher Alexander wrote the forward to Gabriel's book, which is a wonderful anthology of essays, still very much pertinent today, and I encourage you to download and read it.
+Richard P Gabriel, the computer scientist known for his work related to the Lisp programming language, explored Alexander's ideas in the context of software design through a series of articles published in the _Journal of Object-Oriented Programming_. Gabriel later compiled these essays into a book titled _Patterns of Software: Tales from the Software Community_, published in 1996 and now {link-patterns-of-software}[available freely from his website]. Christopher Alexander wrote the forward to Gabriel's book. It is a wonderful anthology of essays, full of ideas that are still pertinent today.
 
 Gabriel was an early advocate of applying Alexander's concept of pattern languages to software design. He argued that software systems, like buildings, can benefit from the use of recurring design patterns that address universal needs in software.
 
-Today, the idea of design patterns is well established in the field of software development. The influential book _Design Patterns: Elements of Reusable Object-Oriented Software_, published in 1994 by the "Gang of Four" (Erich Gamma, Richard Helm, Ralph Johnson, and John Vlissides), provided a shared vocabulary for describing common object-oriented patterns that is still the foundation for how we communicate software design ideas today.
+Today, the idea of design patterns is well established in the field of software development. The influential book _Design Patterns: Elements of Reusable Object-Oriented Software_, published in 1994 by the "Gang of Four", provided us with a shared vocabulary for describing common object-oriented patterns. We all use that vocabulary in our communication of software design ideas.
 
-But there is another idea from Gabriel's essays that I find particularly compelling and relevant to software design, but which has received less attention in the decades since.
+But there is another idea from Gabriel's essays that I find particularly compelling and relevant to software design.
 
 It's the idea of *habitability*.
 
-In software design, habitability is a characteristic of a software system that refers to how comfortably software developers can live and work with the codebase over time, how intuitively they can navigate and understand it, and how confidently they can modify it.
+In software design, habitability is a characteristic of a software system that refers to how comfortably software developers can live and work with the codebase, how intuitively they can navigate and understand it, and how confidently they can modify it.
 
-Gabriel draws the metaphor of habitability from Alexander's architectural philosophy. Just as buildings must be livable for their occupants, so software systems must be habitable for the generations of programmers who analyze, maintain, and extend them.
+Gabriel draws the metaphor of habitability from Alexander's architectural philosophy. Just as buildings must be livable for their generations of occupants, so software systems must be habitable spaces for the generations of programmers who analyze, maintain, and extend them.
 
 [quote, Richard P Gabriel]
 ____
 There is a pleasure in creating well-written, understandable programs. There is a satisfaction in finding a program structure that tames the complexity of an application. We enjoy seeing our algorithms expressed clearly and persuasively. We also profit from our clearly written programs, for they are much more likely to be correct and maintainable than obscure ones.
 ____
 
-You most commonly find the quality of habitability in smaller programs, particularly open source projects maintained by a single developer, else guided by a https://producingoss.com/en/benevolent-dictator.html[benevolent dictator]. Such programs tend to have high conceptual integrity, meaning their design is coherent and consistent throughout. They are well-factored, with good separation of concerns and modularity, enough that individual parts can be understood and modified in isolation of all the other parts. Consistent coding conventions, concise documentation, and comprehensive tests make these software projects accessible to external contributors. Critically, design decisions prioritize ease of understanding and changeability of the code.
+You most commonly find the quality of habitability in smaller programs, particularly open source projects maintained by a single developer, or at least guided by a https://producingoss.com/en/benevolent-dictator.html[benevolent dictator]. Such programs tend to have high conceptual integrity, meaning their design is coherent and consistent throughout. They are well-factored, with good separation of concerns and modularity, enough that individual parts can be understood and modified in isolation of all the other parts. Consistent coding conventions, concise documentation, and comprehensive tests make these software projects accessible to easily external contributors, both expert and novice. Critically, design decisions prioritize ease of understanding and changeability of the code.
 
-The challenge is to maintain habitability in larger, more complex software systems that are developed through peacemeal change by revolving teams of programmers over many years.
+Many of the great free and open source projects are wonderfully habitable spaces for computer programmers. They must be. The success of such software projects depends on programmers being willing to donate their time to them.
 
-Habitability is a very desirable quality in software, because software always changes throughout its lifetime. And often the people who are tasked with changing a software application are not the same people who originally built it.
+The challenge is to maintain habitability in large, complex software systems that are developed through peacemeal change by revolving teams of programmers over many years.
 
-There are all sorts of reasons why a piece of software may need to change after its initial construction. Developers will be tasked with adding new features, removing unused ones, fixing bugs, improving performance, updating dependencies, patching vulnerabilities, migrating data, increasing capacity… and so on, and so on. Most software remains in a perpetual state of continuous development. Software is never finished.
+In software design, requirements are not static. Business priorities shift, technologies advance, vulnerabilities surface, regulations tighten. Users may use applications in suprisingly ways. Even isolated programs depend on changing hardware, operating systems, and runtime environments, demanding ongoing maintenance.
 
-Many of the changing requirements for software are unpredictable. Users will find new ways to use an application that were not anticipated by its original designers. New technologies will emerge that enable new capabilities or render existing ones obsolete. Security vulnerabilities will be discovered. Business priorities will shift. Regulations will require stricter compliance to standards. And, even if a computer program is relatively isolated from the outside world, the IT environment in which it operates – the hardware platform, operating system, and runtime environment – will change nonetheless, triggering unplanned maintenance.
+Software is never truly finished. Developers must continuously adapt it, adding features, removing features, tuning performance, fixing bugs, updating dependencies, patching vulnerabilities, migrating data, and scaling capacity to meet ever-changing requirements.
 
-In all software, requirements are emergent to some degree.
+All this constant, perpetual change makes it hard to maintain a codebase as a habitable space.
 
-It is never possible to design a perfect master plan for a piece of software, because not all its future requirements will be known in advance. A better plan is t design software to be easily changed.
-
-Drawing on examples from Alexander's texts, Gabriel contrasts two different approaches to design: the modern skyscraper and the New England farmhouse:
+Christopher Alexander’s design philosophy offers a way to think about how we can preserve habitability in structures that are always changing. Drawing on examples from Alexander's work, Gabriel contrasts two different approaches to design: the modern skyscraper and the New England farmhouse:
 
 [quote, Richard P Gabriel]
 ____
@@ -86,14 +84,18 @@ A modern skyscraper[…] has a fixed inflexible interior, which is secondary to 
 Contrast this with the New England farmhouse. It starts as a small home with a barn out back. As the family grows and the needs of the farm grow, a back room is added to the house, then a canning room, then a room for grandma; stables are added to the barn, then a wing for milking more cows. Finally the house and barn are connected because it is too difficult to get from the house to the barn in a blizzard. The result is rambling, but each part is well-suited to its needs, each part fits well with the others, and the result is beautiful because it is a living structure with living people inside. The inhabitants are able to modify their environment because each part is built according to familiar patterns of design, use, and construction and because those patterns contain the seeds for piecemeal growth.
 ____
 
-Today, we tend to think of the construction of physical buildings as being one-off projects that are fully designed and planned up-front, then constructed in a single step. But this approach to the built environment is a relatively recent phenomenon. For most of human history, buildings were constructed incrementally, evolving over time to meet the changing needs of their inhabitants.
+Today, we tend to think of the construction of physical buildings as being one-off projects that are fully designed and planned up-front, then constructed in a single step. But this stepwise approach to the built environment is a relatively recent phenomenon. For most of human history, buildings were constructed incrementally, evolving over time to meet the changing needs of their changing inhabitants.
 
 [quote, Christopher Alexander (1975)]
 ____
-[E]ach new building is not a “finished” thing. . . . They are never torn down, never erased; instead they are always embellished, modified, reduced, enlarged, improved. This attitude to the repair of the environment has been commonplace for thousands of years in traditional cultures. We may summarize the point of view behind this attitude in one phrase: piecemeal growth.
+Each new building is not a “finished” thing… They are never torn down, never erased; instead they are always embellished, modified, reduced, enlarged, improved. This attitude to the repair of the environment has been commonplace for thousands of years in traditional cultures. We may summarize the point of view behind this attitude in one phrase: piecemeal growth.
 ____
 
-The development of software has more in common with the traditional way of building than the modern one. The software systems that prove to be the most successful – the ones that have long useful lives — have more in common with a New England farmhouse than a modern skyscraper. They are developed incrementally, through piecemeal growth, by various people who come and go.
+The development of software has more in common with the traditional way of building than the modern one. The software systems that prove to have long and useful lives tend to have more in common with a New England farmhouse than a modern skyscraper. They are developed incrementally, through piecemeal growth, by various people who come and go.
+
+For every incremental change, the design is iterated to accommodate the changing requirements and to maintain conceptual integrity in the overall design. Thus, habitability is maintained through continuous redesign.
+
+
 
 
 .Related links
