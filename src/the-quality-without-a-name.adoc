@@ -8,7 +8,7 @@ Kieran Potts, 5 October 2025
 :link-patterns-of-software: https://dreamsongs.com/Files/PatternsOfSoftware.pdf
 :link-wikipedia: https://en.wikipedia.org/wiki/The_Timeless_Way_of_Building
 
-Christopher Alexander’s _The Timeless Way of Building_ is a classic text in architectural theory. It is widely admired in its industry for its provocative views on urban design. Beyond architecture, its influence reached into the field of computing, and was particularly influential in the object-oriented programming community in the 1980s and 1990s. Decades later, it continues to offer lessons in how to approach software design, reminding us that the habitability of a codebase is just as important as its structural integrity.
+Christopher Alexander's _The Timeless Way of Building_ is a classic text in architectural theory. It is widely admired in its industry for its provocative views on urban design. Beyond architecture of the built environment, it was particularly influential on the object-oriented programming community in the 1980s and 1990s. Decades later, it continues to offer lessons in how to approach software design, reminding us that the habitability of a codebase is just as important as its structural integrity.
 
 My holiday reading this year was {link-wikipedia}[_The Timeless Way of Building_] by Christopher Alexander. Published in 1979 and now regarded as a classic text in the field of built environment architecture, the book is a philosophical and practical exploration of the patterns that make some buildings and places feel alive, harmonious, and emotionally resonant.
 
@@ -29,13 +29,13 @@ The quality-without-a-name comes about, not from adherence to any particular arc
 
 image::./_/media/images/the-timeless-way-of-building.jpg[]
 
-This is the "timeless way of building" referenced in the book’s title. It is a natural, organic process that has shaped architecture across cultures for centuries. It is a methodology that draws on universal patterns that have emerged independently around the world and that have been passed down through generations of builders and architects.
+This is the "timeless way of building" referenced in the book's title. It is a natural, organic process that has shaped architecture across cultures for centuries. It is a methodology that draws on universal patterns that have emerged independently around the world and that have been passed down through generations of builders and architects.
 
 These "living patterns" appear in villages, temples, and homes across time and geography. They are rooted in human needs and lived experiences. When the patterns are carefully combined and adjusted to fit the needs of the inhabitants, they give rise to buildings and urban environments that are functional, beautiful, and emotionally satisfying. Such spaces are imbued with that intangible quality — the quality-without-a-name.
 
 Alexander contrasts the timeless way of building with modern architectural styles and industrialized construction methods, which tend to produce buildings that are missing this indescribable quality.
 
-I was reading this wonderful book while holidaying in Dubai, a city characterized by its showpiece mega-projects, the effect of which is a rather soulless, rootless, global urban landscape. Yet even here I found a few places hidden among the glass and steel towers – some heritage buildings and human-scale sanctuaries like https://alserkal.online/[Alserkal Avenue] – that have something of the quality-without-a-name within them.
+I was reading this wonderful book while holidaying in Dubai, a city characterized by its showpiece mega-projects, the effect of which is a rather soulless, rootless, global urban landscape. Yet even here I found a few places hidden among the glass and steel towers – some https://www.hilton.com/en/hotels/dxbasqq-al-seef-heritage-hotel-dubai/[heritage buildings] and human-scale sanctuaries like https://alserkal.online/[Alserkal Avenue] – that have something of the quality-without-a-name within them.
 
 .Archaeological site in Jumeirah, Downtime Dubai in the distance
 image::./_/media/images/jumeirah-archaeological-site.jpg[]
@@ -46,7 +46,7 @@ Richard P Gabriel, the computer scientist known for his work related to the Lisp
 
 Gabriel was an early advocate of applying Alexander's concept of pattern languages to software design. He argued that software systems, like buildings, can benefit from the use of recurring design patterns that address universal needs in software.
 
-Today, the idea of design patterns is well established in the field of software development. The influential book _Design Patterns: Elements of Reusable Object-Oriented Software_, published in 1994 by the "Gang of Four", provided us with a shared vocabulary for describing common object-oriented patterns — a vocabulary we, all of us, use now to communicate design ideas.
+Today, the idea of design patterns is well established in our field. The influential book _Design Patterns: Elements of Reusable Object-Oriented Software_, published in 1994 by the "Gang of Four", provided us with a shared vocabulary for describing common object-oriented patterns — a vocabulary we, all of us, use now to communicate design ideas.
 
 But there is another idea from Gabriel's essays that I find particularly compelling and relevant to software design.
 
@@ -71,7 +71,7 @@ In software design, requirements are never static. Business priorities shift, te
 
 All this constant, perpetual change makes it hard to maintain a codebase as a habitable space.
 
-Christopher Alexander’s design philosophy offers us a way to think about how we can preserve habitability in long-lived systems that are subject to continuous change and turnover of occupancy. Drawing on examples from Alexander's work, Gabriel contrasts two different approaches to design:
+Christopher Alexander's design philosophy offers us a way to think about how we can preserve habitability in long-lived systems that are subject to continuous change and turnover of occupancy. Drawing on examples from Alexander's work, Gabriel contrasts two different approaches to design:
 
 [quote, Richard P Gabriel]
 ____
@@ -91,11 +91,9 @@ The development of software has more in common with the traditional, timeless wa
 
 How a program looks in the end is not as important as how it can be changed in the future. Good software design is about creating a habitable space for programmers to continuously change a system.
 
-Changeability is the ultimate sophistication in software design.
-
 Alexander's design philosophy aligns with top-down design principles in software architecture. In a top-down design process, you start with a clear understanding of the overall architectural style that you want to achieve, and the architectural patterns that you want to use. With a design framework established, the solution is broken down into a hierarchy of smaller patterns. Additional levels of components, and interactions between them, are added incrementally, until the complete system is fully specified. Top-down design contrasts with a bottom-up approach, in which a system is built from a library of small, primitive components, gradually integrated together until a complete solution emerges, but without an overall design framework to guide the process.
 
-Alexander argues that a good building design mirrors the structure of the problem that the building addresses. This demands that the design process begins with a thorough analysis of the requirements, followed by high-level design of a structure that reflects the functional hierarchy of those requirements. Now, the problem is decomposed into small parts, each having a place within the grand design and each fulfilling a specific function that meets a specific requirement.
+Alexander argues that a good building design mirrors the structure of the problem that the building addresses. This demands that the design process begins with a thorough analysis of the requirements, followed by high-level design of a structure that reflects the functional hierarchy of those requirements. Now, the problem is decomposed into small parts, each having a place within the grand design, and each fulfilling a specific function that meets a specific requirement.
 
 Alexander distinguishes between the "needs of the whole" — the requirements of the overall design — and the "needs of the parts" — the changing requirements of individual components within the overall design.
 
@@ -105,21 +103,26 @@ Gabriel draws a parallel between Alexander's design philosophy and that of Frank
 
 Wright's design philosophy neglects the changing needs of inhabitants. Alexander's design philosophy embraces change.
 
-Central to Alexander's thesis is that, to embrace change, we cannot separate design from construction. The mainstream approach to architecture is for architects to be hired to solve problems for their clients, and they hand off architectural drawing, which offer solutions to those problems, to builders who are tasked with constructing the building to the specified blueprint. The equivalent process in software design iss colloquially known as being "waterfall" or "stepwise".
+Central to Alexander's thesis is that, to embrace change, we cannot separate design from construction. The mainstream approach to architecture is for architects to be hired to solve problems for their clients, and then hand-off architectural drawings, which offer solutions to those problems, to builders who are tasked with constructing the building to the specified blueprint. The equivalent process in software design is colloquially known as being "waterfall" or "stepwise".
 
-One of Alexander's most notable contributions to the field of built environment architecture was to reject the mainstream model that architecture and construction should be separate processes. He advocated user-centered design, in which an architect-builder would collaborate closely with the customer to shape their own environments.
+One of Alexander's most notable contributions to the field of built environment architecture was to reject the mainstream model that architecture and construction should be separate processes. He advocated user-centered design, in which an architect, who is also the builder, would collaborate closely with the customer to help them to shape their own environments.
 
 [quote, Christopher Alexander (1975)]
 ____
-Master plans have two additional unhealthy characteristics. To begin with, the existence of a master plan alienates the users…. After all, the very existence of a master plan means, by definition, that the members of the community can have little impact on the future shape of their community, because most of the important decisions have already been made. In a sense, under a master plan people are living with a frozen future, able to affect only relatively trivial details. When people lose the sense of responsibility for the environment they live in, and realize that there are merely cogs in someone else’s machine, how can they feel any sense of identification with the community, or any sense of purpose there?
+Master plans have two additional unhealthy characteristics. To begin with, the existence of a master plan alienates the users… After all, the very existence of a master plan means, by definition, that the members of the community can have little impact on the future shape of their community, because most of the important decisions have already been made. In a sense, under a master plan people are living with a frozen future, able to affect only relatively trivial details. When people lose the sense of responsibility for the environment they live in, and realize that there are merely cogs in someone else's machine, how can they feel any sense of identification with the community, or any sense of purpose there?
 
 Second, neither the users nor the key decision makers can visualize the actual implications of the master plan.
 ____
 
+On the surface, Christopher Alexander's _Timeless Way of Building_ — and other books in the series — is about a particular approach to the design of the built environment. But Alexander's design philosophy transcends its immediate subject matter and offers profound insights into the nature of design itself.
 
-// // =============================================================================
+Alexander's advocacy of user-centered approaches to design, the prioritization of characteristics like ease of repair and extension, and the use of timeless patterns that are deeply rooted in the universal needs of all humanity, are ideas that are just as applicable to software design as they are to building design.
 
+In translating Alexander's design philosophy into the field of software design, Richard P Gabriel gave us a name for Alexander's quality-without-a-name. Habitability.
 
+Habitability is the ultimate sophistication in software design. It goes beyond changeability. It is a quality that makes a codebase not merely comfortable to change, but welcoming, delightful, and joyous. Software with this transcendent quality is a space in which time passes by unnoticed, where you work late into the night, as engrossed in the art of computer programming as you were the first day you first discovered it.
+
+As in real-world architecture, habitability in software is achieved through user-centered design. The "user" here is not the end user, but the inhabitants of the code — the developers. Habitability is achieved by giving developers the freedom to shape their own working environment, by continuously refactoring the code and the data, by keeping their tools sharp, by choosing their teammates, and by working the ways that best suit them.
 
 .Related links
 ****
