@@ -118,17 +118,19 @@ Master plans have two additional unhealthy characteristics. To begin with, the e
 Second, neither the users nor the key decision makers can visualize the actual implications of the master plan.
 ____
 
+''''
+
 On the surface, Christopher Alexander's _Timeless Way of Building_ — and other books in the series — is about a particular approach to the design of buildings. But Alexander's design philosophy transcends its immediate subject matter and offers profound insights into the nature of design itself.
 
 Alexander's advocacy of user-centered approaches to design, the prioritization of characteristics like ease of repair and extension, and the use of timeless patterns that evolve organically from human needs, are ideas that are just as applicable to software design as they are to building design.
 
-In translating Alexander's design philosophy into the field of software design, Richard P Gabriel gave us a name for Alexander's quality-without-a-name, which emerges only from this timeless way of building. 
+In translating Alexander's design philosophy into the field of software design, Richard P Gabriel gave us a name for Alexander's quality-without-a-name, which emerges only from this timeless way of building.
 
 Habitability.
 
 Habitability is the ultimate sophistication in software design. It goes beyond changeability. It is a quality that makes a codebase not merely comfortable to change, but welcoming, delightful, and joyous. Software with this transcendent quality is a space in which time passes by unnoticed, where you work late into the night, as engrossed in the art of computer programming as you were the day you discovered it, a lifetime ago.
 
-As in real-world architecture, habitability in software is achieved through user-centered design. The "`user`" here is not the end user, but the inhabitants of the code — the developers. Habitability is achieved by giving developers the freedom to shape their own working environment, by continuously refactoring the code and the data, by keeping their tools sharp, by choosing their teammates, and by working the ways that best suit them.
+As in real-world architecture, habitability in software is achieved through user-centered design. The "`user`" here is not the end user, but the inhabitants of the code — the developers. Habitability is achieved by giving developers the freedom to shape their own working environment, by continuously refactoring the code and the data, by keeping their tools sharp, by choosing their teammates, and by working whatever ways that suit them best.
 
 .Related links
 ****
