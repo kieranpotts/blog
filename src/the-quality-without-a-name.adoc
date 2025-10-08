@@ -50,7 +50,7 @@ Today, the idea of design patterns is well established in our field. The influen
 
 But there is another idea from Gabriel's essays that I find particularly compelling and relevant to software design.
 
-It's the idea of *habitability*.
+It's the idea of habitability.
 
 Habitability is a characteristic of a software system that refers to how comfortably software developers can live and work with the codebase, how intuitively they can navigate and understand it, and how confidently they can change it.
 
@@ -63,7 +63,7 @@ ____
 
 You most commonly find the quality of habitability in smaller programs, particularly open source projects written by a single developer or guided by a https://producingoss.com/en/benevolent-dictator.html[benevolent dictator]. Such programs tend to have high conceptual integrity, meaning their design is coherent and consistent throughout. They are well-factored, with good separation of concerns and modularity, enough that individual parts can be understood and modified in isolation of all the other parts. Consistent coding conventions, concise documentation, and comprehensive tests make these software projects easily accessible to external contributors, both expert and novice. Critically, design decisions prioritize ease of understanding and changeability.
 
-Many of https://github.com/search?o=desc&q=stars%3A%3E0&s=stars&type=repositories[the great free and open source software projects] are wonderfully habitable spaces for computer programmers. They must be. The success of these software projects depends on programmers being willing to donate their time to them.
+Many of https://github.com/search?o=desc&q=stars%3A%3E0&s=stars&type=repositories[the great free and open source software projects] are wonderfully habitable spaces for computer programmers. They must be. The success of these kinds of software projects depends on programmers being willing to donate their free time to them.
 
 The challenge is to maintain habitability in large, complex software systems that are developed through peacemeal change by revolving teams of programmers over many years.
 
@@ -93,9 +93,11 @@ Habitability is maintained through continuous redesign.
 
 And yet Alexander does not advocate that architecture be purely evolutionary. On the contrary, his design philosophy is aligned with that we call top-down design in software. In Alexander's view, changeability is an intrinsic quality of buildings, a quality that must be explicitly designed for. Similarly in software design, how a program looks in the end is not as important as how it can be changed in the future. Good software design is about creating a habitable space for programmers to continuously change a system.
 
-In a top-down design process, you start with a clear understanding of the overall architectural style that you want to achieve, and the architectural patterns that you want to use. With a design framework established, the solution is broken down into a hierarchy of smaller patterns. Additional levels of components, and interactions between them, are added incrementally, until the complete system is fully specified. Top-down design contrasts with a bottom-up approach, in which a system is built from a library of small, primitive components, gradually integrated together until a complete solution emerges, but without an overall design framework to guide the process.
+In a top-down design process, you start with a clear understanding of the overall architectural style that you want to achieve, and the architectural patterns that you want to use. With a design framework established, the solution is broken down into a hierarchy of smaller patterns. Additional levels of components, and interactions between them, are added incrementally, until the complete system is fully specified. Top-down design contrasts with a bottom-up approach, in which a system is built from a library of small, primitive components, gradually integrated together until a complete solution emerges, but without an overall design framework to guide the build.
 
 Alexander argues that a good building design mirrors the structure of the problem that the building addresses. This demands that the design process begins with a thorough analysis of the requirements, followed by high-level design of a structure that reflects the functional hierarchy of those requirements. Now, the problem is decomposed into small parts, each having a place within the grand design, and each fulfilling a specific function that meets a specific requirement.
+
+The high-level design of a software system, planned up-front, provides a stable skeleton into which functionality is added and reshaped, incrementally, indefinitely. This aspect of the design also deals with cross-cutting concerns that are difficult to retrofit later. These are the performance requirements of the software: it's security, scalability, availability, consistency… and its changeability.
 
 Alexander distinguishes between the "`needs of the whole`" — the fixed requirements of the overall design — and the "`needs of the parts`" — the changing requirements of individual components within the overall design.
 
@@ -128,7 +130,7 @@ In translating Alexander's design philosophy into the field of software design, 
 
 Habitability is the ultimate sophistication in software design. It goes beyond changeability. It is a quality that makes a codebase not merely comfortable to change, but welcoming, delightful, and joyous. Software with this transcendent quality is a space in which time passes by unnoticed, where you work late into the night, as engrossed in the art of computer programming as you were the day you discovered it, a lifetime ago.
 
-As in real-world architecture, habitability in software is achieved through user-centered design. The "`user`" here is not the end user, but the inhabitants of the code — the developers. Habitability is realized by giving developers the freedom to shape their own working environment, by continuously refactoring the code and the data, by keeping their tools sharp, by choosing their teammates, and by working whatever ways best suit them.
+As in real-world architecture, habitability in software is achieved through user-centered design. The "`user`" here is not the end user, but the inhabitants of the code — the developers. Habitability is realized by giving developers the freedom to shape their own working environment, by continuously refactoring the code and the data, by keeping their tools sharp, by choosing their teammates, and by working whatever ways suit them best.
 
 .Related links
 ****
