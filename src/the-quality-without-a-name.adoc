@@ -12,7 +12,7 @@ Christopher Alexander's _The Timeless Way of Building_ is a classic text in arch
 
 My holiday reading this year was {link-wikipedia}[_The Timeless Way of Building_] by Christopher Alexander. Published in 1979 and now regarded as a classic text in the field of built environment architecture, the book is a philosophical and practical exploration of the patterns that make some buildings and places feel alive, harmonious, and emotionally resonant.
 
-Alexander calls this the quality-without-a-name. It's that _je ne sais quoi_ that some buildings and urban spaces have, that can't be easily expressed in words, but which we know when we experience it.
+Alexander calls this the quality-without-a-name. It's that _je ne sais quoi_ that some buildings and urban spaces have, that can't be easily expressed in words – but we know it when we see it.
 
 [quote, Christopher Alexander 1979]
 ____
@@ -37,10 +37,10 @@ Alexander contrasts the timeless way of building with modern architectural style
 
 I was reading this wonderful book while holidaying in Dubai, a city characterized by its showpiece mega-projects, the effect of which is a rather soulless, rootless, global urban landscape. Yet even here I found a few places hidden among the glass and steel towers – some https://www.hilton.com/en/hotels/dxbasqq-al-seef-heritage-hotel-dubai/[heritage buildings] and human-scale sanctuaries like https://alserkal.online/[Alserkal Avenue] – that have something of the quality-without-a-name within them.
 
-.Archaeological site in Jumeirah, Downtime Dubai in the distance
+.Archaeological site in Jumeirah, Downtown Dubai in the distance
 image::./_/media/images/jumeirah-archaeological-site.jpg[]
 
-Alexander's work has been influential in other fields beyond architecture.  His design philosophy found popularity in the field of software design in the 1980s and 1990s, during the rise of object-oriented programming and its associated design patterns.
+Alexander's work has been influential in fields beyond architecture.  His design philosophy found popularity in the field of software design in the 1980s and 1990s, during the rise of object-oriented programming and its associated design patterns.
 
 Richard P Gabriel, the computer scientist known for his work related to the Lisp programming language, explored Alexander's ideas in the context of software design through a series of articles published in the _Journal of Object-Oriented Programming_. Gabriel later compiled these essays into a book titled _Patterns of Software: Tales from the Software Community_, published in 1996 and now {link-patterns-of-software}[available freely from his website]. Christopher Alexander wrote the forward to Gabriel's book. It is a wonderful anthology of essays, full of ideas that are still pertinent today.
 
@@ -61,7 +61,7 @@ ____
 There is a pleasure in creating well-written, understandable programs. There is a satisfaction in finding a program structure that tames the complexity of an application. We enjoy seeing our algorithms expressed clearly and persuasively. We also profit from our clearly written programs, for they are much more likely to be correct and maintainable than obscure ones.
 ____
 
-You most commonly find the quality of habitability in smaller programs, particularly open source projects written by a single developer or guided by a https://producingoss.com/en/benevolent-dictator.html[benevolent dictator]. Such programs tend to have high conceptual integrity, meaning their design is coherent and consistent throughout. They are well-factored, with good separation of concerns and modularity, enough that individual parts can be understood and modified in isolation of all the other parts. Consistent coding conventions, concise documentation, and comprehensive tests make these software projects easily accessible to external contributors, both expert and novice. Critically, design decisions prioritize ease of understanding and changeability of the code.
+You most commonly find the quality of habitability in smaller programs, particularly open source projects written by a single developer or guided by a https://producingoss.com/en/benevolent-dictator.html[benevolent dictator]. Such programs tend to have high conceptual integrity, meaning their design is coherent and consistent throughout. They are well-factored, with good separation of concerns and modularity, enough that individual parts can be understood and modified in isolation of all the other parts. Consistent coding conventions, concise documentation, and comprehensive tests make these software projects easily accessible to external contributors, both expert and novice. Critically, design decisions prioritize ease of understanding and changeability.
 
 Many of https://github.com/search?o=desc&q=stars%3A%3E0&s=stars&type=repositories[the great free and open source software projects] are wonderfully habitable spaces for computer programmers. They must be. The success of these software projects depends on programmers being willing to donate their time to them.
 
@@ -97,7 +97,7 @@ Alexander's design philosophy aligns with top-down design principles in software
 
 Alexander argues that a good building design mirrors the structure of the problem that the building addresses. This demands that the design process begins with a thorough analysis of the requirements, followed by high-level design of a structure that reflects the functional hierarchy of those requirements. Now, the problem is decomposed into small parts, each having a place within the grand design, and each fulfilling a specific function that meets a specific requirement.
 
-Alexander distinguishes between the "`needs of the whole`" — the requirements of the overall design — and the "`needs of the parts`" — the changing requirements of individual components within the overall design.
+Alexander distinguishes between the "`needs of the whole`" — the fixed requirements of the overall design — and the "`needs of the parts`" — the changing requirements of individual components within the overall design.
 
 If we apply this design philosophy to software, we see that habitability is best preserved when the high-level design of a software system is shaped by the business domain and is kept true to its purpose, while the low-level details within that structure are allowed to evolve in response to changing requirements within the problem space.
 
@@ -130,7 +130,7 @@ Habitability.
 
 Habitability is the ultimate sophistication in software design. It goes beyond changeability. It is a quality that makes a codebase not merely comfortable to change, but welcoming, delightful, and joyous. Software with this transcendent quality is a space in which time passes by unnoticed, where you work late into the night, as engrossed in the art of computer programming as you were the day you discovered it, a lifetime ago.
 
-As in real-world architecture, habitability in software is achieved through user-centered design. The "`user`" here is not the end user, but the inhabitants of the code — the developers. Habitability is achieved by giving developers the freedom to shape their own working environment, by continuously refactoring the code and the data, by keeping their tools sharp, by choosing their teammates, and by working whatever ways that suit them best.
+As in real-world architecture, habitability in software is achieved through user-centered design. The "`user`" here is not the end user, but the inhabitants of the code — the developers. Habitability is achieved by giving developers the freedom to shape their own working environment, by continuously refactoring the code and the data, by keeping their tools sharp, by choosing their teammates, and by working whatever ways suit them best.
 
 .Related links
 ****
