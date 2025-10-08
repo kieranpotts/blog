@@ -97,11 +97,11 @@ In a top-down design process, you start with a clear understanding of the overal
 
 Alexander argues that a good building design mirrors the structure of the problem that the building addresses. This demands that the design process begins with a thorough analysis of the requirements, followed by high-level design of a structure that reflects the functional hierarchy of those requirements. Now, the problem is decomposed into small parts, each having a place within the grand design, and each fulfilling a specific function that meets a specific requirement.
 
-The high-level design of a software system, planned up-front, provides a stable skeleton into which functionality is added and reshaped, incrementally, indefinitely. This aspect of the design also deals with cross-cutting concerns that are difficult to retrofit later. These are the performance requirements of the software: it's security, scalability, availability, consistency… and its changeability.
-
 Alexander distinguishes between the "`needs of the whole`" — the fixed requirements of the overall design — and the "`needs of the parts`" — the changing requirements of individual components within the overall design.
 
 If we apply this design philosophy to software, we see that habitability is best preserved when the high-level design of a software system is shaped by the business domain and is kept true to its purpose, while the low-level details within that structure are allowed to evolve in response to changing requirements within the problem space.
+
+The high-level design of a software system, planned up-front, provides a stable skeleton into which functionality is added and reshaped, incrementally, indefinitely. This aspect of the design also deals with cross-cutting concerns that are difficult to retrofit later. These are the performance requirements of the software: it's security, scalability, availability, consistency… and its changeability.
 
 Gabriel draws a parallel between Alexander's design philosophy and that of Frank Lloyd Wright, the renowned American architect known for his organic architectural designs. Wright's buildings often embody a strong sense of coherence, with every element carefully integrated into a harmonious whole. Like Alexander's buildings, Wright's buildings have a sense of unity with the natural environment and with humanity.
 
