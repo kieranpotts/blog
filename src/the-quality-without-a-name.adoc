@@ -14,7 +14,7 @@ My holiday reading this year was {link-wikipedia}[_The Timeless Way of Building_
 
 Alexander calls this the quality-without-a-name. It's that _je ne sais quoi_ that some buildings and urban spaces have, that can't be easily expressed in words – but we know it when we see it.
 
-[quote, Christopher Alexander 1979]
+[quote, Christopher Alexander (1979)]
 ____
 The first place I think of when I try to tell someone about this quality is a corner of an English country garden where a peach tree grows against a wall.
 
@@ -23,19 +23,19 @@ The wall runs east to west; the peach tree grows flat against the southern side.
 This quality is the most fundamental quality there is in anything.
 ____
 
-The central premise of the book is that this elusive architectural characteristic does not need to be left to emerge by accident. It can be intentionally designed through the reuse of timeless design patterns that recur throughout history and across cultures.
+The central premise of the book is that this elusive architectural characteristic need not be left to emerge by accident, for it can be intentionally designed through the reuse of timeless design patterns that recur throughout history and across cultures.
 
 The quality-without-a-name comes about, not from adherence to any particular architectural style or trend, but from a deep understanding of human needs and the rhythms of life. Buildings and urban spaces feel alive when they are thoughtfully shaped to support universal patterns of human experience, rather than being designed for the sake of aesthetic fashion or architectural exhibition.
 
 image::./_/media/images/the-timeless-way-of-building.jpg[]
 
-This is the "`timeless way of building`" referenced in the book's title. It is a natural, organic process that has shaped architecture across cultures for centuries. It is a methodology that draws on universal patterns that have emerged independently around the world and that have been passed down through generations of builders and architects.
+This is the "`timeless way of building`" referenced in the book's title. It is a natural, organic process that has shaped architecture across cultures for centuries. It is a methodology that draws on universal patterns that have emerged independently around the world and passed down through generations of builders and architects.
 
 These "`living patterns`" appear in villages, temples, and homes across time and geography. They are rooted in human needs and lived experiences. When the patterns are carefully combined and adjusted to fit the needs of the inhabitants, they give rise to buildings and urban environments that are functional, beautiful, and emotionally satisfying. Such spaces are imbued with that intangible quality — the quality-without-a-name.
 
-Alexander contrasts the timeless way of building with modern architectural styles and industrialized construction methods, which tend to produce buildings that are missing this indescribable quality.
+Alexander contrasts the timeless way of building with modern global architectural styles and industrialized construction methods, which tend to produce buildings that are missing this indescribable quality.
 
-I was reading this wonderful book while holidaying in Dubai, a city characterized by its showpiece mega-projects, the effect of which is a rather soulless, rootless, global urban landscape. Yet even here I found a few places hidden among the glass and steel towers – some https://www.hilton.com/en/hotels/dxbasqq-al-seef-heritage-hotel-dubai/[heritage buildings] and human-scale sanctuaries like https://alserkal.online/[Alserkal Avenue] – that have something of the quality-without-a-name within them.
+I was reading this wonderful book while holidaying in Dubai, a city characterized by its showpiece mega-projects, the effect of which is a rather soulless, rootless urban landscape. Yet even here I found a few quiet corners, hidden among the glass and steel towers, some https://www.hilton.com/en/hotels/dxbasqq-al-seef-heritage-hotel-dubai/[heritage buildings] and sanctuaries like https://alserkal.online/[Alserkal Avenue], that exist on a human-scale and have something of the quality-without-a-name within them.
 
 .Archaeological site in Jumeirah, Downtown Dubai in the distance
 image::./_/media/images/jumeirah-archaeological-site.jpg[]
@@ -71,7 +71,7 @@ In software design, requirements are never static. Business priorities shift, te
 
 All this constant, perpetual change makes it hard to maintain a codebase as a habitable space.
 
-Christopher Alexander's book suggests how we might preserve habitability in long-lived systems that are subject to continuous change and turnover of occupancy. Drawing on examples from Alexander's work, Gabriel contrasts two different approaches to design:
+Christopher Alexander's book suggests how we might preserve habitability in long-lived systems that are subject to continuous change and turnover of occupancy. Drawing on examples from Alexander's work, Gabriel contrasts two very different approaches to design:
 
 [quote, Richard P Gabriel]
 ____
@@ -107,7 +107,7 @@ The problem is you cannot easily change a Frank Lloyd Wright building. His rigid
 
 Wright's design philosophy neglects the changing needs of inhabitants. Alexander's design philosophy embraces change.
 
-Central to Alexander's thesis is that, to embrace change, we cannot separate design from construction. The mainstream approach to architecture is for architects to be hired to solve problems for their clients, and then hand-off architectural drawings, which offer solutions to those problems, to builders who are tasked with constructing the building to the specified blueprint. The equivalent process in software design is colloquially known as being "`waterfall`" or "`stepwise`".
+Central to Alexander's thesis is that, in embracing changing requirements, we cannot separate design from construction. The mainstream approach to architecture is for architects to be hired to solve problems for their clients, and then hand-off architectural drawings, which offer solutions to those problems, to builders who are tasked with constructing the building to the specified blueprint. The equivalent process in software design is colloquially known as being "`waterfall`" or "`stepwise`".
 
 Alexander rejected this model. Instead, he advocated a user-centered design in which an architect, who is also the builder, would collaborate closely with the customer to help them shape their own environment.
 
@@ -124,13 +124,11 @@ On the surface, Christopher Alexander's _Timeless Way of Building_ — and other
 
 Alexander's advocacy of user-centered approaches to design, the prioritization of characteristics like ease of repair and extension, and the use of timeless patterns that evolve organically from human needs, are ideas that are just as applicable to software design as they are to building design.
 
-In translating Alexander's design philosophy into the field of software design, Richard P Gabriel gave us a name for Alexander's quality-without-a-name, which emerges only from this timeless way of building.
-
-Habitability.
+In translating Alexander's design philosophy into the field of software design, Richard P Gabriel gave us a name for Alexander's quality-without-a-name, which emerges from this timeless way of building. Habitability.
 
 Habitability is the ultimate sophistication in software design. It goes beyond changeability. It is a quality that makes a codebase not merely comfortable to change, but welcoming, delightful, and joyous. Software with this transcendent quality is a space in which time passes by unnoticed, where you work late into the night, as engrossed in the art of computer programming as you were the day you discovered it, a lifetime ago.
 
-As in real-world architecture, habitability in software is achieved through user-centered design. The "`user`" here is not the end user, but the inhabitants of the code — the developers. Habitability is achieved by giving developers the freedom to shape their own working environment, by continuously refactoring the code and the data, by keeping their tools sharp, by choosing their teammates, and by working whatever ways suit them best.
+As in real-world architecture, habitability in software is achieved through user-centered design. The "`user`" here is not the end user, but the inhabitants of the code — the developers. Habitability is realized by giving developers the freedom to shape their own working environment, by continuously refactoring the code and the data, by keeping their tools sharp, by choosing their teammates, and by working whatever ways best suit them.
 
 .Related links
 ****
