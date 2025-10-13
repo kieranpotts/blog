@@ -1,0 +1,7 @@
+= Agile: What went wrong?
+Kieran Potts, XX XXXX 2025
+:description: Agile is dead. xxxxxxxxxxx
+:docinfo: shared
+:nofooter:
+
+...
