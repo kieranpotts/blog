@@ -14,6 +14,10 @@ Tech recruitment is broken – that's another blog post for another day – xxxx
 
 ////
 
+TODO: Questions to identify Tactical versus strategic companies 
+TODO: Questions to uncover top-down management
+TODO: Questions to discover toxicity
+
 TODO: Two different types of organizations:
 
 * Project-oriented. Tasks, estimations.
