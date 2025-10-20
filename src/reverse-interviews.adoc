@@ -23,6 +23,8 @@ TODO: Two different types of organizations:
 * Project-oriented. Tasks, estimations.
 * User-oriented. _True_ agile principles.
 
+TODO: Trustpilot, Google Maps, etc. as alternative sources to Glassdoor. Crunchbase too.
+
 // TODO: You can do a lot of initial filtering using Glassdoor, and your own network of contacts. Don't be afraid to reach out to prior employees using LinkedIn! Red flags can emerge early, from the job spec itself, before you've even had contact with the organization. Consider carefully the wording, emphasis and tone of the job spec. Look for phrases "fast-paced" and "no two days the same". These may be code for "chaotic" and "no time to do things properly". Phrases like "quality-focused" and "learning-oriented" are code for "we care about doing things properly". Checking off a laundry list of _commercial_ experience with specific languages, frameworks and libraries.
 
 // Also in the interview stage: Checklist Q&A style format, eg. explain how you would protect against SQL injection. (In fairness, you SHOULD know this, but you probably haven't thought about it for years, because this sort of low-level cross-cutting security concerns are usually abstracted away by whatever library you're using to interface with your database systems. In the environment of an interview... testing knowledge, rather than your ability to solve problems and discover answers.) ......... Job description lists only frameworks
