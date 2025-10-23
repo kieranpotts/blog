@@ -54,7 +54,7 @@ So what agility really requires is *courage*. Stand-up to the fear mongers. Use 
 This is the antidote to Scrum Industries, Inc.
 
 
-Cargo culting.
+Cargo culting. Imagine a team using Agile terminology—standups, sprints, retrospectives—but without embracing the core values of collaboration and iteration. That’s cargo culting.
 
 
 Scrum is great for beginners, and for teams composed mostly of juniors, because it tells you exactly what to do - clear step-by-step instructions. Perhaps this is what manifesto for agile development should have done.
