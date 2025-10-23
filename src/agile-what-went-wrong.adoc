@@ -5,3 +5,71 @@ Kieran Potts, XX XXXX 2025
 :nofooter:
 
 ...
+
+
+By the 1990s, software development had become increasingly complex, with larger teams, more stakeholders, and rapidly changing requirements. Traditional waterfall methodologies struggled to keep up with these changes, leading to delays, cost overruns, and dissatisfied customers.
+
+UML and heavy documentation became the norm. The Rational Unified Process (RUP) was widely adopted, emphasizing detailed planning, extensive documentation, and rigorous process adherence.
+
+There was a counter-movement that sought to address these issues. At the same time, a number of people, in different parts of the world and independently of each other where experimenting with alternative development methods. Kent Beck, Ward Cunningham and Ron Jeffries were experimenting with ways of working that would ultimately culminate in Beck's Extreme Programming (XP), which is all about focusing all effort on the most effective strategies and dialling those up to the max Meanwhile, James Highsmith was promoting Adaptive Software Development (ASD), which focused on iterative development and collaboration. And Andrew Hunt and Dave Thomas were advocating for lightweight development practices in their book "The Pragmatic Programmer" – not really a methodology but a set of practical tips and "common sense" best practices for software developers. Alistair Cockburn was promoting Crystal Clear. Scrum, developed by Jeff Sutherland and Ken Schwaber, had been around since the mid-1980s, but was being used more and more by the 1990s.
+
+All of these methods share common themes, such as iterative approaches and high degrees of customer involvement and collaboration. They were all reactions against the heavy, process-driven methodologies that dominated the software industry at the time. All these methods were trying to cut out unnecessary overheads and focus on what really matters: delivering value to customers through working software.
+
+Most of these people attended OOPSLA in Minneapolis in 2000. The idea came up that they should all get together and bemoan the state of the industry. ... In February 2001, a group of 17 software developers met at a ski resort in Snowbird, Utah, to discuss lightweight development methods. They drafted the Agile Manifesto, which outlined four core values and twelve principles aimed at improving software development processes. The core values are:
+
+1. **Individuals and interactions over processes and tools**
+2. **Working software over comprehensive documentation**
+3. **Customer collaboration over contract negotiation**
+4. **Responding to change over following a plan**
+
+The four values, and the extended 12 principles, expressed what the 17 people at Snowbird believed were the most important aspects for successful software projects.
+
+Ward Cunningham and Dave Thomas went home and put up the website. Then they all forgot about it. Dave Thomas says now that was a mistake.
+
+[quote, Dave Thomas (2015)]
+____
+The values have been totally lost behind the implementation.
+____
+
+"Agile" got a capital "A" and started to be used as a noun rather than an adjective. We "do" agile, rather than we build agility into our processes. A whole industry – conferences, certifications – has grown up around the word "Agile". There's whole new lexicon and abstract concepts like velocity, story points, and so on.
+
+People talk of their being a "right" way of doing software.
+
+This is very far away from the spirit of the original manifesto.
+
+
+
+
+
+At the GOTO conference in Amsterdam in 2015, "pragmatic" Dave Thomas gave a keynote titled https://www.youtube.com/watch?v=a-BOSpxYJ9M[Agile is Dead], based on an https://pragdave.me/thoughts/active/2014-03-04-time-to-kill-agile.html[earlier blog post from 2014]. In it, he argued that Agile as a movement has failed, and that the original values of the Agile Manifesto have been lost in the current wave of "Agile" methodologies.
+
+
+
+In any situation where you don't know what's going to happen next, you take a small step forward, see where you are, and adjust your plan forward based on what you've learned.
+
+But as humans, we prefer to just follow rules - follow a familiar, well-trodden path.
+
+So what agility really requires is *courage*. Stand-up to the fear mongers. Use the agile values to create patterns and practices that work in your particular context. Get feedback, refine, repeat...
+
+This is the antidote to Scrum Industries, Inc.
+
+
+Cargo culting.
+
+
+Scrum is great for beginners, and for teams composed mostly of juniors, because it tells you exactly what to do - clear step-by-step instructions. Perhaps this is what manifesto for agile development should have done.
+
+
+TODO: Agile gives an illusion of predictability. This is appealing to business stakeholders - software development is undertaken in contexts that do not understand software development (other business domains).
+
+
+----
+
+Dave Thomas suggests that, because so many people in our field have imposter syndrome, so they just want to be told what to do. And that's what "Agile" methodologies capitalize on. Perhaps it is a natural human thing to search for rules to follow, steps we can repeat over and over again to achieve success.
+
+The problem with the agile manifesto is that it is not a methodology, but rather it's a set of rather fluffy principles and values. It doesn't tell you what to do, it just tells you what you should value. But people want to be told what to do, so they latch onto "Agile" as if it were a methodology, and then try to follow it slavishly.
+
+The core agile values are still incredibly valuable. But the irony is that current "Agile" methodologies often contradict those values. For example, one of the core agile values is "Individuals and interactions over processes and tools". But many "Agile" methodologies are heavily process-driven, with strict rules about how to run stand-ups, sprints, retrospectives, and so on, and the sequencing of tasks follows classic stepwise, waterfall patterns.
+
+----
+
