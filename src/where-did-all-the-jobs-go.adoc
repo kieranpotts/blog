@@ -400,6 +400,22 @@ TODO: AI generated code makes code even more of a commodity than it has already 
 
 ''''
 
+The annual State of DevOps report refocused on AI-assisted software development in 2025. It found that adoption of AI tools has become nearly universal in our industry. 90% of survey respondents sais they use AI in their work, with 80% beleving AI to have increased their productivity. However, 30% sais they have little to no trust in the code produced by AI tools.
+
+This suggests that critical validation skills are perhaps now more important than the ability to structure code.
+
+[quote, State of AI-Assisted Software Development 2025]
+____
+AI's primary role in software development is that of an amplifier. It magnifies the strengths of high performing organizations and the dysfunctions of struggling ones.
+
+The greatest returns on AI investment come not from the tools themselves, but from a strategic focus on the underlying organizational system: the quality of the internal platform, the clarity of workflows, and the alignment of teams. Without this foundation, AI creates localized pockets of productivity that are often lost to downstream chaos.
+____
+
+
+DORA research suggests AI tools can help teams to move faster, increasing throughput (delivery velocity), but at the cost of stability (change failure rate). This trade-off has been observed in previous years, suggesting that we're still learning how to use AI tools effectively.
+
+The value of AI tools is unlocked by the surrounding technical and cultural environment.
+
 ## Related links
 
 * https://www.economist.com/business/2024/09/29/ai-and-globalisation-are-shaking-up-software-developers-world[AI and globalization are shaking up software developers' world],
