@@ -1,14 +1,14 @@
 = The Mythical Man-Month at 50
-Kieran Potts, 18 April 2025
+Kieran Potts, 26 October 2025
 :description: Fred Brooks's classic book The Mythical Man-Month was published 50 years ago. It was hugely influential on the then-nascent discipline of software development. How does it stand up today?
 :docinfo: shared
 :nofooter:
 
-Fred Brooks's classic book _The Mythical Man-Month_ was published in 1975 – 50 years ago. The book was one of the first published analyses of the challenges of large-scale software development (an emerging field in 1975) and it was hugely influential on early practitioners of our craft. Brooks introduced many ideas and principles that still underpin our ways of working today.
+Fred Brooks's classic book _The Mythical Man-Month_ was published in 1975 – 50 years ago. The book was one of the first published analyses of the challenges of large-scale software development – an emerging field in 1975 – and it was hugely influential on early practitioners of our craft.
 
-But which ideas have stood the test of time, and which have not?
+Brooks introduced many ideas and principles that still underpin our ways of working today. But which ideas have stood the test of time, and which have not?
 
-I got myself a copy of the original 1975 edition and the extended 20th anniversary (1995) edition. Here are my study notes and thoughts.
+I got myself a copy of the original 1975 edition and the extended 20th anniversary (1995) edition. Here are my thoughts.
 
 == 1. The tar pit
 
@@ -16,7 +16,7 @@ _The Mythical Man-Month_ is rich in idioms, analogies, and metaphors that help t
 
 Of all Brooks's analogies, it is that large-scale software development is like "the mortal struggles of great beasts in the tar pits" that is the most colorful.
 
-// Several concepts and metaphors introduced in The Mythical Man-Month have persisted in popular software development culture. For example, in chapter one, Brooks uses the metaphor of a *tar pit* to represent the problems associated with building large-scale computer programs. The more you struggle with the problems, the more you get stuck. No one thing seems to be underlying cause of the difficulties, but rather a combination of intractable problems make it difficult to move forward. Some of these factors often could not have been unforeseen.
+Several concepts and metaphors introduced in The Mythical Man-Month have persisted in popular software development culture. For example, in chapter one, Brooks uses the metaphor of a *tar pit* to represent the problems associated with building large-scale computer programs. The more you struggle with the problems, the more you get stuck. No one thing seems to be underlying cause of the difficulties, but rather a combination of intractable problems make it difficult to move forward. Some of these factors often could not have been unforeseen.
 
 // TODO: Reproduce cover image.
 
@@ -24,7 +24,7 @@ Of all Brooks's analogies, it is that large-scale software development is like "
 
 Throughout the book, the author draws on his own experiences, notably as the manager overseeing the initial design of IBM's ambitious OS/360 project. At the peak of the project, more than 1,000 people were working on OS/360. This was one of the biggest software projects ever attempted at the time. But the project was not "wholly successful", as Brooks himself acknowledges in his book. OS/360 was delivered "late, it [used] more memory than planned, the costs were several times the estimate, and [the first version] did not perform very well".
 
-// Brooks has worked on IBM's OS360 project, which was an important product because it introduced several innovative features including device independent I/O and external library management.
+Brooks has worked on IBM's OS360 project, which was an important product because it introduced several innovative features including device independent I/O and external library management.
 
 Learning from OS/360, Brooks says that large-scale commercial software projects have costs that are orders-of-magnitude greater than the norm, and he suggests there are two main reasons for this. First, that designing, building, integrating, and then testing so many individual components to compose a single coherent system is a far greater challenge than building all those components as standalone units. Second, that shrink-wrapping software (ie. making a software system commercially available as a product) requires additional complexity to make it usable by lots of people for lots of purposes – in "many operating environments, for many sets of data". Such a program requires far more extensive tests and documentation than bespoke, single-purpose software. Moreover, since general-purpose programs tend to be used as components within wider systems, they are required to have well-defined interfaces for their input and output, and to operate under more constrained computing resources (such as memory and storage space). These additional performance constraints demand greater design effort.
 
@@ -36,11 +36,11 @@ Nothing is new, eh? Despite 50 years of immense technological advances – in co
 
 Will we ever free ourselves from the tar pit? Maybe. But the software we make tends to be ever more complex, not less so. Throughout the history of computing, advances in technology have created opportunities for ever more ambitious software. The resources and tools at our disposal are as powerful as ever, but the productivity gains afforded by these tools are offset by the fact that the software we make today tends to be hugely complex in both its functions and performance requirements.
 
-// The distributed nature of much of today's software makes the application of engineering principles to its development more critical than ever.
+The distributed nature of much of today's software makes the application of engineering principles to its development more critical than ever.
 
-// Some of the challenges today are different from what they were in the time of OS/360. We are no longer physically constrained by computing resources – these are abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software.
+Some of the challenges today are different from what they were in the time of OS/360. We are no longer physically constrained by computing resources – these are abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software.
 
-// I've come to think of software development as a perpetual battle against complexity. This, in my opinion, is the core skill of the craft of computing programming: to extract simple models from complex domains.
+I've come to think of software development as a perpetual battle against complexity. This, in my opinion, is the core skill of the craft of computing programming: to extract simple models from complex domains.
 
 == 2. The mythical man-month
 
