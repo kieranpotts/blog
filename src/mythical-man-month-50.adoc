@@ -4,682 +4,715 @@ Kieran Potts, 26 October 2025
 :docinfo: shared
 :nofooter:
 
-Fred Brooks's classic book _The Mythical Man-Month_ was published in 1975 – 50 years ago. The book was one of the first published analyses of the challenges of large-scale software development – an emerging field in 1975 – and it was hugely influential on early practitioners of our craft.
+Frederick P Brooks Jr's classic book _The Mythical Man-Month: Essays on Software Engineering_ was published in 1975 – 50 years ago. The book was one of the first published analyses of the challenges of large-scale software development – an emerging field in 1975. It introduced many ideas and principles that were hugely influential on early practitioners of our craft.
 
-Brooks introduced many ideas and principles that still underpin our ways of working today. But which ideas have stood the test of time, and which have not?
+But which ideas have withstood half a century of technological change, and which have not?
 
-I got myself a copy of the original 1975 edition and the extended 20th anniversary (1995) edition. Here are my thoughts.
+I got myself a copy of the original 1975 edition and the extended 20th anniversary (1995) edition, which added two retrospective chapters. Here are my thoughts, chapter by chapter.
 
 == 1. The tar pit
 
-_The Mythical Man-Month_ is rich in idioms, analogies, and metaphors that help to communicate the unique economic, organizational, and sociological challenges associated with the development of large-scale software systems.
+_The Mythical Man-Month_ is really a collection of standalone essays rather than a cohesive thesis on the challenges of large-scale software development. Nevertheless, there are some key themes that run throughout. The most prominent theme is the one introduced in this opening chapter: that the essential craft of software development is the management of complexity.
 
-Of all Brooks's analogies, it is that large-scale software development is like "the mortal struggles of great beasts in the tar pits" that is the most colorful.
+Throughout the book, Brooks draws on his own experiences, notably as the manager overseeing the initial design of IBM's ambitious OS/360 project. At the peak of the project, more than 1,000 people were working on OS/360. This was one of the biggest software projects ever attempted at the time. But, Brooks acknowledges, the project was not "wholly successful". OS/360 was delivered "late, it [used] more memory than planned, the costs were several times the estimate, and [the first version] did not perform very well".
 
-Several concepts and metaphors introduced in The Mythical Man-Month have persisted in popular software development culture. For example, in chapter one, Brooks uses the metaphor of a *tar pit* to represent the problems associated with building large-scale computer programs. The more you struggle with the problems, the more you get stuck. No one thing seems to be underlying cause of the difficulties, but rather a combination of intractable problems make it difficult to move forward. Some of these factors often could not have been unforeseen.
+Brooks offers an explanation for the failures of the OS/360 project. This chapter of the book serves as Brooks's post-mortem analysis.
 
-// TODO: Reproduce cover image.
+Brooks writes that the estimates for OS/360's delivery were based on the construction of individual parts of the system, as if each part were developed as a standalone program for "private use". What they did not account for was (a) the integration costs of all those components, and (b) the "productization" of the system as a whole, ie. preparing it for general use as shrink-wrapped software.
 
-"Large and small, massive and wiry, team after team has become entangled in the tar," Brooks writes. "No one thing seems to cause the difficulty – any particular paw can be pulled away. But the accumulation of simultaneous and interacting factors brings slower and slower motion."
+Brooks estimates that the overhead of designing the interfaces between all the interfaces of all the components, coordinating their integration, and the incremental integration testing, adds a multiplier of about three to the cost of building all the components individually – as if they were standalone libraries.
 
-Throughout the book, the author draws on his own experiences, notably as the manager overseeing the initial design of IBM's ambitious OS/360 project. At the peak of the project, more than 1,000 people were working on OS/360. This was one of the biggest software projects ever attempted at the time. But the project was not "wholly successful", as Brooks himself acknowledges in his book. OS/360 was delivered "late, it [used] more memory than planned, the costs were several times the estimate, and [the first version] did not perform very well".
+And there's another cost factor for the work needed to prepare a completed software system for general use by the general public, rather than for single use by a single organization. Software _products_ have additional performance constraints that require greater design effort. Much extra testing and rework is needed to make software systems run reliably in "many operating environments, for many sets of data". Add in costs for user documentation and packaging, and you have another cost multiplier of about three for "productization" of a software system.
 
-Brooks has worked on IBM's OS360 project, which was an important product because it introduced several innovative features including device independent I/O and external library management.
+All told, large-scale, general-purpose, shrink-wrapped software products cost about nine times the cost of constructing all the individual components of the system in isolation, as though they were standalone programs intended only for private use.
 
-Learning from OS/360, Brooks says that large-scale commercial software projects have costs that are orders-of-magnitude greater than the norm, and he suggests there are two main reasons for this. First, that designing, building, integrating, and then testing so many individual components to compose a single coherent system is a far greater challenge than building all those components as standalone units. Second, that shrink-wrapping software (ie. making a software system commercially available as a product) requires additional complexity to make it usable by lots of people for lots of purposes – in "many operating environments, for many sets of data". Such a program requires far more extensive tests and documentation than bespoke, single-purpose software. Moreover, since general-purpose programs tend to be used as components within wider systems, they are required to have well-defined interfaces for their input and output, and to operate under more constrained computing resources (such as memory and storage space). These additional performance constraints demand greater design effort.
+Brooks reflects that large-scale software development is inherently hard. The reality of developing commercial software for a living, Brooks writes, is that there are many "dreary hours of tedious, painstaking labor", often involving analysis of code written by other people who have moved on to other projects already.
 
-Brooks estimates that the overhead of designing the interfaces between all the components, coordinating their integration, and the incremental system testing, adds a multiplier of about three to the cost of building the components individually. And the productization of software adds another cost factor of three. So, all told, a large-scale, general-purpose, commercial software product costs about nine times the effort involved in building all the same components separately for private use – which tends to be the basis for our estimates.
+50 years later, this all sounds disappointingly familiar.
 
-The essence of Brook's argument is that large-scale software development is inherently hard. The reality of writing commercial computer programs for a living is that, as with any creative activity, there are many "dreary hours of tedious, painstaking labor" – cycles of testing and debugging of the assembled product, often involving analysis of code written by other people, who have likely moved on to other projects already.
+Despite the immense technological advances of the last 50 years – in computer hardware, in programming languages and runtime environments, and in tools and automation that support every aspect of software delivery – the core challenges of large-scale software development remain largely the same as they ever were. Project failures remain commonplace.
 
-Nothing is new, eh? Despite 50 years of immense technological advances – in computer hardware, in programming languages and runtime environments, and in tools and automation that support every aspect of software delivery – the challenges of large-scale software development remain largely the same as they were at the founding of our trade.
+Will we ever free ourselves from the tar pit?
 
-Will we ever free ourselves from the tar pit? Maybe. But the software we make tends to be ever more complex, not less so. Throughout the history of computing, advances in technology have created opportunities for ever more ambitious software. The resources and tools at our disposal are as powerful as ever, but the productivity gains afforded by these tools are offset by the fact that the software we make today tends to be hugely complex in both its functions and performance requirements.
+Unfortunately, I do not believe so.
 
-The distributed nature of much of today's software makes the application of engineering principles to its development more critical than ever.
+Throughout the history of computing, advances in technology have created opportunities for ever more ambitious software. The resources and tools at our disposal are as powerful as they have ever been – think cloud computing, xxxx, xxxxx. But the productivity gains afforded by these tools are offset by the increases in complexity of the software that exists in the world today.
 
-Some of the challenges today are different from what they were in the time of OS/360. We are no longer physically constrained by computing resources – these are abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software.
+Of course, some of the challenges today are different from what they were in the time of OS/360. We are no longer physically constrained by computing resources – these are abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software – xxxxxxxx.
 
-I've come to think of software development as a perpetual battle against complexity. This, in my opinion, is the core skill of the craft of computing programming: to extract simple models from complex domains.
+But the essential craft of software development remains the management of complexity. The core skill of computer programming is the extraction of simple models from complex domains.
+
+// ----------------------------------------------------------
+
+Brooks draws the colorful analogy that large-scale software development is like "the mortal struggles of great beasts in the tar pits". This is represented by the book's cover image, a sketch of Charles Knight's 1925 painting that depicts the great mammoths of the Pleistocene struggling to free themselves from the tar pits of Southern California.
+
+// TODO: Cover photos
+
+"Large and small, massive and wiry, team after team has become entangled in the tar," Brooks writes. His thesis is that it is never one problem, but rather a combination of intractable problems, some unexpected, that make it difficult to move complex projects forward. "No one thing seems to cause the difficulty – any particular paw can be pulled away. But the accumulation of simultaneous and interacting factors brings slower and slower motion."
 
 == 2. The mythical man-month
 
-The eponymous second chapter deals with the immortal issue of software projects being reliably delivered much later than estimated. Brooks offers five explanations:
+The eponymous second chapter deals with the immortal issue of software projects being reliably delivered much later than estimated. Brooks offers five explanations.
+
+1. *Optimism*: xxxx
+
+2. *Progress is not always directly correlated with effort*: xxxxx
+
+3. *Regenerative schedule disaster*: xxxx
+
+4. *Systems testing must be done last*: xxxxx
+
+5. *Gutless estimating*: xxxxx
 
 // In the second chapter, Brooks introduces his main thesis: that poor scheduling estimations are the single biggest factor in software project failures, and once a project is behind schedule you can't solve the problem by adding more people to the project. He uses the term "man-month" to represent one unit of additional manpower (one person working for one month).
 
 === 1. Optimism
 
-Our techniques of estimation are immature and don't tend to allow for contingency for the unexpected.
+// Our techniques of estimation are immature and don't tend to allow for contingency for the unexpected.
 
-Brooks writes: "All programmers are optimists. Perhaps this modern sorcery especially attracts those who believe in happy endings and fairy godmothers… Perhaps it is merely that computers are young, programmers are younger, and the young are always optimists."
+// Brooks writes: "All programmers are optimists. Perhaps this modern sorcery especially attracts those who believe in happy endings and fairy godmothers… Perhaps it is merely that computers are young, programmers are younger, and the young are always optimists."
 
-This hypothesis has not stood the test of time. Sure, the age distribution of software development teams is still, probably, biased toward the younger age groups, due to the huge expansion of the workforce over the intervening decades. But there are plenty of people with decades of experience in the software industry – which was fledgling in 1975 – and yet the tendency toward optimistic estimates remains.
+// This hypothesis has not stood the test of time. Sure, the age distribution of software development teams is still, probably, biased toward the younger age groups, due to the huge expansion of the workforce over the intervening decades. But there are plenty of people with decades of experience in the software industry – which was fledgling in 1975 – and yet the tendency toward optimistic estimates remains.
 
-// TODO: There is still a tendency to predict delivery based on high-level business requirements rather than low-level technical design.
+// // TODO: There is still a tendency to predict delivery based on high-level business requirements rather than low-level technical design.
 
-Brooks states that the "first false assumption that underlies the scheduling of systems programming is that _all will go well_, i.e., that _each task will take only as long as it 'ought' to take_."
+// Brooks states that the "first false assumption that underlies the scheduling of systems programming is that _all will go well_, i.e., that _each task will take only as long as it 'ought' to take_."
 
-"For the human makers of things, the incompleteness and inconsistencies of our ideas become clear only during implementation. Thus it is that writing, experimentation, 'working out' are essential disciplines for the theoretician."
+// "For the human makers of things, the incompleteness and inconsistencies of our ideas become clear only during implementation. Thus it is that writing, experimentation, 'working out' are essential disciplines for the theoretician."
 
-Brooks is making the argument that software development, like all creative endeavors, is an inherently unpredictable process. Many requirements are emergent, and this is unavoidable due to the nature of the work.
+// Brooks is making the argument that software development, like all creative endeavors, is an inherently unpredictable process. Many requirements are emergent, and this is unavoidable due to the nature of the work.
 
-"Computer programming… creates an exceedingly tractable medium. The programmer builds from pure thought-stuff: concepts and very flexible representations thereof. Because the medium is tractable, we expect few difficulties in implementation; hence our pervasive optimism." By comparison, in other creative activities, the medium of execution – pen and paper, wood, silicon, ferrite, and electrical wire – is intractable, so placing physical constraints on our ideas.
+// "Computer programming… creates an exceedingly tractable medium. The programmer builds from pure thought-stuff: concepts and very flexible representations thereof. Because the medium is tractable, we expect few difficulties in implementation; hence our pervasive optimism." By comparison, in other creative activities, the medium of execution – pen and paper, wood, silicon, ferrite, and electrical wire – is intractable, so placing physical constraints on our ideas.
 
-// Because the programmer builds with pure thought-stuff, we expect few difficulties in implementation. And because our ideas themselves have faulty, so we have bugs.
+// // Because the programmer builds with pure thought-stuff, we expect few difficulties in implementation. And because our ideas themselves have faulty, so we have bugs.
 
-Perhaps, then, the enduring problem of scheduling is not that we don't seem to have gotten much better at estimating, but rather that large parts of our industry continues to operate on the wrong assumption that software delivery can be successfully planned in meticulous detail. Or perhaps this is the assumption that people in other business domains make – the people who commission us to make software for them.
+// Perhaps, then, the enduring problem of scheduling is not that we don't seem to have gotten much better at estimating, but rather that large parts of our industry continues to operate on the wrong assumption that software delivery can be successfully planned in meticulous detail. Or perhaps this is the assumption that people in other business domains make – the people who commission us to make software for them.
 
-// TODO: We also tend to estimate based on programming effort, but the bottlenecks tend to be in other phased of the software development lifecycle.
+// // TODO: We also tend to estimate based on programming effort, but the bottlenecks tend to be in other phased of the software development lifecycle.
 
-=== 2. Progress is not always directly correlated with effort
+// === 2. Progress is not always directly correlated with effort
 
-The second explanation that Brooks' offers for our poor scheduling of large-scale projects is that there is a tendency to believe that speed of progress is directly correlated to the amount of resources (the effort) thrown at the problem. Brooks coins the term "man-month" to refer to a delivery unit in which effort (men) and progress (months) are interchangeable.
+// The second explanation that Brooks' offers for our poor scheduling of large-scale projects is that there is a tendency to believe that speed of progress is directly correlated to the amount of resources (the effort) thrown at the problem. Brooks coins the term "man-month" to refer to a delivery unit in which effort (men) and progress (months) are interchangeable.
 
-Brooks explains the fallacy: "Men and months are interchangeable commodities only when a task can be partitioned among many workers _with no communication among them_. This is true of reaping wheat or picking cotton; it is not even approximately true of systems programming."
+// Brooks explains the fallacy: "Men and months are interchangeable commodities only when a task can be partitioned among many workers _with no communication among them_. This is true of reaping wheat or picking cotton; it is not even approximately true of systems programming."
 
-There will be many tasks in a software project that must be done sequentially. In these circumstances, adding more people to the project has not effect on the delivery time. Famously, Brooks uses the analogy of child birth: "The bearing of a chile takes nine months, no matter how many women are assigned." Obviously, you can't deliver a child in one month by employing nine women. The same is true of many aspects of software delivery.
+// There will be many tasks in a software project that must be done sequentially. In these circumstances, adding more people to the project has not effect on the delivery time. Famously, Brooks uses the analogy of child birth: "The bearing of a chile takes nine months, no matter how many women are assigned." Obviously, you can't deliver a child in one month by employing nine women. The same is true of many aspects of software delivery.
 
-Moreover, if partitioned tasks require communication to coordinate the implementation, then "the effort of communication must be added to the amount of work done". That communication is made up of two parts: training and intercommunication. So, you lose manpower while original team members are assigned to onboard the new recruits. Then, once the new team members are contributing, communication within the team necessarily increases to coordinate more moving parts.
+// Moreover, if partitioned tasks require communication to coordinate the implementation, then "the effort of communication must be added to the amount of work done". That communication is made up of two parts: training and intercommunication. So, you lose manpower while original team members are assigned to onboard the new recruits. Then, once the new team members are contributing, communication within the team necessarily increases to coordinate more moving parts.
 
-Thus, even if overall progress can be sped up somewhat, adding more people to a project will at least decreases the productivity of individual team members. In the worse case scenarios, the added effort of communication fully counteracts the increased division of labour, lengthening – rather than shortening – the delivery schedule. The more complex the interrelationships between the component parts of the system under construction, the greater this effect.
+// Thus, even if overall progress can be sped up somewhat, adding more people to a project will at least decreases the productivity of individual team members. In the worse case scenarios, the added effort of communication fully counteracts the increased division of labour, lengthening – rather than shortening – the delivery schedule. The more complex the interrelationships between the component parts of the system under construction, the greater this effect.
 
-// TODO: Replicate diagram from page 19.
+// // TODO: Replicate diagram from page 19.
 
-// Rule of thumb: 1/3 of the schedule is for design, 1/6 for coding, 1/4 for component testing, and 1/4 for system testing.
+// // Rule of thumb: 1/3 of the schedule is for design, 1/6 for coding, 1/4 for component testing, and 1/4 for system testing.
 
-// As a discipline, we lack *estimating data*.
+// // As a discipline, we lack *estimating data*.
 
-=== 3. Regenerative schedule disaster
+// === 3. Regenerative schedule disaster
 
-Progress tends to be poorly monitored. For this reason, it often becomes apparent that schedules have slipped when it's much too late to do anything about it (eg. by decreasing the complexity or scope of the system).
+// Progress tends to be poorly monitored. For this reason, it often becomes apparent that schedules have slipped when it's much too late to do anything about it (eg. by decreasing the complexity or scope of the system).
 
-When schedules slips, the tendency therefore is to add manpower – which makes matters worse, by increasing communication overhead.
+// When schedules slips, the tendency therefore is to add manpower – which makes matters worse, by increasing communication overhead.
 
-[quote, Brooks's Law]
-____
-Adding manpower to a late software project makes it later.
-____
+// [quote, Brooks's Law]
+// ____
+// Adding manpower to a late software project makes it later.
+// ____
 
-Instead, we should reschedule the work with the original team members, unaugmented.
+// Instead, we should reschedule the work with the original team members, unaugmented.
 
-"The maximum number of men depends upon the number of independent subtasks. From these two quantities one can derived schedules using fewer men and more months… One cannot, however, get workable schedules using more men and fewer months."
+// "The maximum number of men depends upon the number of independent subtasks. From these two quantities one can derived schedules using fewer men and more months… One cannot, however, get workable schedules using more men and fewer months."
 
-// Brooks identifies that one of the reasons why adding more people to a late project tends to slow down, rather than speed up, development velocity is that additional people increase the communication overhead within the delivery teams. Additional communication overhead increases the completion time, and this is only partially (not wholly) offset by the additional programming resource.
+// // Brooks identifies that one of the reasons why adding more people to a late project tends to slow down, rather than speed up, development velocity is that additional people increase the communication overhead within the delivery teams. Additional communication overhead increases the completion time, and this is only partially (not wholly) offset by the additional programming resource.
 
-=== 4. Systems testing must be done last
+// === 4. Systems testing must be done last
 
-"No parts of the schedule are so thoroughly affected by sequential constraints as component debugging and system test… Therefore testing is usually the most mis-scheduled part of programming."
+// "No parts of the schedule are so thoroughly affected by sequential constraints as component debugging and system test… Therefore testing is usually the most mis-scheduled part of programming."
 
-Based on his own experience, Brooks says that about half of the schedule of software projects is taken up with rounds of testing and debugging.
+// Based on his own experience, Brooks says that about half of the schedule of software projects is taken up with rounds of testing and debugging.
 
-Of course, the industry has almost universally adopted iterative and incremental development practices, in which discrete components of an overall system are delivered in a complete software development lifecycle, which is repeated over and over until all of the components of the system are complete. Throughout this process, system tests are continuously run and extended to verify the correctness of the overall system.
+// Of course, the industry has almost universally adopted iterative and incremental development practices, in which discrete components of an overall system are delivered in a complete software development lifecycle, which is repeated over and over until all of the components of the system are complete. Throughout this process, system tests are continuously run and extended to verify the correctness of the overall system.
 
-By keeping testing and coding activities close together, we have (in theory) become better at estimating the work involved in a complete increment – both coding and testing, not just the coding part.
+// By keeping testing and coding activities close together, we have (in theory) become better at estimating the work involved in a complete increment – both coding and testing, not just the coding part.
 
-Perhaps one of the trade-offs of this approach is that requirements analysis and refinement also tends to be done as part of these short-duration iterations. And design work tends to blur into the coding effort. Thus we do not have all the information we would normally have to estimate what can be realistically delivered within an iteration at the start of an iteration.
+// Perhaps one of the trade-offs of this approach is that requirements analysis and refinement also tends to be done as part of these short-duration iterations. And design work tends to blur into the coding effort. Thus we do not have all the information we would normally have to estimate what can be realistically delivered within an iteration at the start of an iteration.
 
-We have solved the problem of systems testing needing to be done last, but in doing so we have created other difficulties in estimating delivery schedules.
+// We have solved the problem of systems testing needing to be done last, but in doing so we have created other difficulties in estimating delivery schedules.
 
-=== 5. Gutless estimating
+// === 5. Gutless estimating
 
-// On the reasons for poor estimations, Brooks identifies that coding is often the easiest phase to accurately predict, but effort required to test and debug is often underestimated. At the time the book was written, testing and debugging phases where separate from construction and scheduled only after the first complete build.
+// // On the reasons for poor estimations, Brooks identifies that coding is often the easiest phase to accurately predict, but effort required to test and debug is often underestimated. At the time the book was written, testing and debugging phases where separate from construction and scheduled only after the first complete build.
 
-Brooks says that software project managers often lack the "courteous stubbornness" of a chef who refuses to serve a dish until it is ready!
+// Brooks says that software project managers often lack the "courteous stubbornness" of a chef who refuses to serve a dish until it is ready!
 
-This chapter open with a quote from the menu of a New Orleans restaurant:
+// This chapter open with a quote from the menu of a New Orleans restaurant:
 
-[quote]
-____
-Good cooking takes time. If you are made to wait, it is to serve you better, and to please you.
-____
+// [quote]
+// ____
+// Good cooking takes time. If you are made to wait, it is to serve you better, and to please you.
+// ____
 
-Brooks uses the analogy of cooking an omelette. It typically takes a couple of minutes to cook an omelette. But if, after two minutes, the omelette is not set, the custom has two choices: wait, or eat the omelette raw. The chef has a third choice: turn up the heat. But the effect would be to serve a poor quality product – burnt on the outside, and perhaps still raw in the centre.
+// Brooks uses the analogy of cooking an omelette. It typically takes a couple of minutes to cook an omelette. But if, after two minutes, the omelette is not set, the custom has two choices: wait, or eat the omelette raw. The chef has a third choice: turn up the heat. But the effect would be to serve a poor quality product – burnt on the outside, and perhaps still raw in the centre.
 
-// Good cooking takes time; some tasks cannot be hurried without spoiling the result.
+// // Good cooking takes time; some tasks cannot be hurried without spoiling the result.
 
-In the delivery of commercial software, there is a tendency to make the equivalent decision as the chef. Brooks says that "false scheduling to match the patron's desired data is much more common in our discipline than elsewhere in engineering".
+// In the delivery of commercial software, there is a tendency to make the equivalent decision as the chef. Brooks says that "false scheduling to match the patron's desired data is much more common in our discipline than elsewhere in engineering".
 
-Brooks suggests that the underlying reason for such widespread "gutless estimating" is that we do not have mature models for estimating software work. "It is very difficult," he writes, "to make a vigorous, plausible, and job-risking defense of an estimate that is derived by no quantitative method, supported by little data, and certified chiefly by the hunches of the managers."
+// Brooks suggests that the underlying reason for such widespread "gutless estimating" is that we do not have mature models for estimating software work. "It is very difficult," he writes, "to make a vigorous, plausible, and job-risking defense of an estimate that is derived by no quantitative method, supported by little data, and certified chiefly by the hunches of the managers."
 
-// Adding people to a software project increases the total effort in three ways: the work and disruption of the repartitioning itself; training new people; added intercommunication.
+// // Adding people to a software project increases the total effort in three ways: the work and disruption of the repartitioning itself; training new people; added intercommunication.
 
 == 3. The surgical team
 
-// In the third chapter, Brooks introduces the idea of the *surgical team* as his proposed solution to the problems of large-scale software development in that era of computing. Brooks observes that many program managers believe they are better off have a small number of very skilled programmers on their team, rather than a large number of mediocre ones!
+// // In the third chapter, Brooks introduces the idea of the *surgical team* as his proposed solution to the problems of large-scale software development in that era of computing. Brooks observes that many program managers believe they are better off have a small number of very skilled programmers on their team, rather than a large number of mediocre ones!
 
-// Brooks argues that large-scale projects should be broken down into smaller subsystems, with each subsystem built by one small, independent team. Each team should operate similarly to a surgical team in a hospital. Each team would have a chief programmer, the surgeon, who is in charge of the whole thing. The rest of the team members try to help him complete the project (the surgery).
+// // Brooks argues that large-scale projects should be broken down into smaller subsystems, with each subsystem built by one small, independent team. Each team should operate similarly to a surgical team in a hospital. Each team would have a chief programmer, the surgeon, who is in charge of the whole thing. The rest of the team members try to help him complete the project (the surgery).
 
-// The leaders of the surgical teams also collaborate with each other, to coordinate the work on the subsystems so they can be successfully integrated together to compose a complete solution. Thus, communication overhead throughout the overall project is minimized by having a hierarchy of delivery teams, each working on discrete subsystems of the overall solution.
+// // The leaders of the surgical teams also collaborate with each other, to coordinate the work on the subsystems so they can be successfully integrated together to compose a complete solution. Thus, communication overhead throughout the overall project is minimized by having a hierarchy of delivery teams, each working on discrete subsystems of the overall solution.
 
-// In a surgical team, the whole project is the brainchild of the surgeon. The surgeon is responsible for defining and maintaining the *conceptual integrity* of the solution. By comparison, Brooks writes, in *collaborative teams* everyone is equal and everyone can have input into the direction of the project, even if this sometimes causes chaos.
+// // In a surgical team, the whole project is the brainchild of the surgeon. The surgeon is responsible for defining and maintaining the *conceptual integrity* of the solution. By comparison, Brooks writes, in *collaborative teams* everyone is equal and everyone can have input into the direction of the project, even if this sometimes causes chaos.
 
-Brooks quotes research by Sackman, Grant and Erickson that very good professional programmers are _ten times_ as productive as poor ones (at same training and two-year experience level) – this is the origin of the 10x programmer. The author's data showed no correlation between experience and performance, but Brooks doubts the universality of that finding.
+// Brooks quotes research by Sackman, Grant and Erickson that very good professional programmers are _ten times_ as productive as poor ones (at same training and two-year experience level) – this is the origin of the 10x programmer. The author's data showed no correlation between experience and performance, but Brooks doubts the universality of that finding.
 
-// TODO: Conclusion - the analogy of the surgical team is not well remembered, but the principles are widely understood. This principle manifests in job roles like "technical lead" and "solution architect"…
+// // TODO: Conclusion - the analogy of the surgical team is not well remembered, but the principles are widely understood. This principle manifests in job roles like "technical lead" and "solution architect"…
 
-An underlying thesis of the book is that "the brute-force approach is costly, slow, inefficient, and produces systems that are not conceptually integrated", ie. the preference is for small surgical teams  of "first-class people" rather than hundreds of mediocre programmers.
+// An underlying thesis of the book is that "the brute-force approach is costly, slow, inefficient, and produces systems that are not conceptually integrated", ie. the preference is for small surgical teams  of "first-class people" rather than hundreds of mediocre programmers.
 
-// It is why, Brooks concludes, there are many accounts of two programmers working in a garage to build "an important program that surpasses the best efforts of large teams". The cliché of the garage startup has deep roots.
+// // It is why, Brooks concludes, there are many accounts of two programmers working in a garage to build "an important program that surpasses the best efforts of large teams". The cliché of the garage startup has deep roots.
 
-Most qualified software development managers would agree that the ideal approach to software development is to have a small, sharp team, "which by common consensus shouldn't exceed 10 people", over hundreds of average programmers. ... For efficiency, and conceptual integrity.
+// Most qualified software development managers would agree that the ideal approach to software development is to have a small, sharp team, "which by common consensus shouldn't exceed 10 people", over hundreds of average programmers. ... For efficiency, and conceptual integrity.
 
-But this isn't practical for very large-scale software projects. Brooks notes that the OS/360 project peaked at over 1,000 people working on it concurrently. A smaller 200-man team would have taken 25 years to achieve what was done in just a few years by the larger team. This sort of timescale is just not commercially viable.
+// But this isn't practical for very large-scale software projects. Brooks notes that the OS/360 project peaked at over 1,000 people working on it concurrently. A smaller 200-man team would have taken 25 years to achieve what was done in just a few years by the larger team. This sort of timescale is just not commercially viable.
 
-The problem with the small team ideal is that it is just too small for really big systems. You just go too slowly.
+// The problem with the small team ideal is that it is just too small for really big systems. You just go too slowly.
 
-How can we reconcile the need for considerable manpower, with the desire for efficiency and conceptual integrity?
+// How can we reconcile the need for considerable manpower, with the desire for efficiency and conceptual integrity?
 
-Brooks cites a proposal by Harlan Mills, titled "Chief programmer teams, principles, and procedures" and published in an IBM report in 1971.
+// Brooks cites a proposal by Harlan Mills, titled "Chief programmer teams, principles, and procedures" and published in an IBM report in 1971.
 
-[quote]
-____
-Mills proposes that each segment of a large job be tackled by a team, but that the team be organized like a surgical team rather than a hog-butchering team. That is, instead of each member cutting away on the problem, one does the cutting and the others give him every support that will enhance his effectiveness and productivity.
-____
+// [quote]
+// ____
+// Mills proposes that each segment of a large job be tackled by a team, but that the team be organized like a surgical team rather than a hog-butchering team. That is, instead of each member cutting away on the problem, one does the cutting and the others give him every support that will enhance his effectiveness and productivity.
+// ____
 
-In this delivery model, the *chief programmer* is like the surgeon. "He personally defines the functional and performance specifications, designs the program, codes it, tests it, and writes its documentation". The chief programmer is supported by a *copilot* who's main function is to contribute to discussions on the design and implementation. The copilot often represents his team in discussions with the chief programmer, and he researches and proposes alternative design strategies for the chief's consideration.
+// In this delivery model, the *chief programmer* is like the surgeon. "He personally defines the functional and performance specifications, designs the program, codes it, tests it, and writes its documentation". The chief programmer is supported by a *copilot* who's main function is to contribute to discussions on the design and implementation. The copilot often represents his team in discussions with the chief programmer, and he researches and proposes alternative design strategies for the chief's consideration.
 
-The idea is that "few minds are involved in design and construction, yet many hands are brought to bear".
+// The idea is that "few minds are involved in design and construction, yet many hands are brought to bear".
 
-// Not dissimilar to pair and mob programming...
+// // Not dissimilar to pair and mob programming...
 
-Other roles include: an *administrator* "who handles money, people, space, and machines"; an *editor* who is responsible for generating the documentation; one *secretary* each to support the administrator and the editor; a *program clerk* who is responsible for "maintaining all the technical records of the team in a programming-product library"; a *toolsmith* who implements any special tools needed by the team, such as for "file-editing, text-editing, and interactive debugging"; and a *tester* who is responsible for "testing the hole thing", preparing suitable test cases from the functional specifications, and devising dummy data for day-to-day debugging.
+// Other roles include: an *administrator* "who handles money, people, space, and machines"; an *editor* who is responsible for generating the documentation; one *secretary* each to support the administrator and the editor; a *program clerk* who is responsible for "maintaining all the technical records of the team in a programming-product library"; a *toolsmith* who implements any special tools needed by the team, such as for "file-editing, text-editing, and interactive debugging"; and a *tester* who is responsible for "testing the hole thing", preparing suitable test cases from the functional specifications, and devising dummy data for day-to-day debugging.
 
-Mills also proposed that each team be supported by a *language lawyer* who is an expert in the programming language being used, and who provides consultancy to the team in how best to use the language and avoid its common pitfalls.
+// Mills also proposed that each team be supported by a *language lawyer* who is an expert in the programming language being used, and who provides consultancy to the team in how best to use the language and avoid its common pitfalls.
 
-Today, many of these roles have been automated away or folded into the responsibilities of the computer programmers.
+// Today, many of these roles have been automated away or folded into the responsibilities of the computer programmers.
 
-Brooks notes that in a conventional team "the partners divide the work, and each is responsible for the design and implementation of part of the work". But in the surgical team, "the surgeon and copilot are each cognizant of all of the design and all of the code". Brooks argues that this helps to maintain the conceptual integrity of the overall design. In 1975, this approach also offered a work around to more practical constraints, such as the need to allocate storage space and disk access to each individual contributor.
+// Brooks notes that in a conventional team "the partners divide the work, and each is responsible for the design and implementation of part of the work". But in the surgical team, "the surgeon and copilot are each cognizant of all of the design and all of the code". Brooks argues that this helps to maintain the conceptual integrity of the overall design. In 1975, this approach also offered a work around to more practical constraints, such as the need to allocate storage space and disk access to each individual contributor.
 
-The "lack of division of the problem and the [lack of a] superior-subordinate relationship... make it possible for the surgical team to act _uno animo_".
+// The "lack of division of the problem and the [lack of a] superior-subordinate relationship... make it possible for the surgical team to act _uno animo_".
 
-"Yet the specialization of function of the remainder of the team is the key to its efficiency, for it permits a radically simpler communication pattern among the members." This is perhaps something we have lost. We've tended toward generalization rather than specialization. And yet, any economist would tell you that the path to productivity is via specialization.
+// "Yet the specialization of function of the remainder of the team is the key to its efficiency, for it permits a radically simpler communication pattern among the members." This is perhaps something we have lost. We've tended toward generalization rather than specialization. And yet, any economist would tell you that the path to productivity is via specialization.
 
-Brooks closes this chapter by arguing that it is easier to scale surgical teams because there is less team-to-team communication overhead. You need only to coordinate the work of the chief programmers, who represent a small number of the overall number of programming specialists.
+// Brooks closes this chapter by arguing that it is easier to scale surgical teams because there is less team-to-team communication overhead. You need only to coordinate the work of the chief programmers, who represent a small number of the overall number of programming specialists.
 
-The "entire system also must have conceptual integrity, and that requires a system architect to design it all, from the top down".
+// The "entire system also must have conceptual integrity, and that requires a system architect to design it all, from the top down".
 
-// TODO: Bottom-up approach has become prevalent.
+// // TODO: Bottom-up approach has become prevalent.
 
 == 4. Conceptual integrity
 
-// Brooks defines *conceptual integrity* in chapter four, titled "Aristocracy, Democracy, and System Design". He argues this is probably the most important aspect of large system programming, but one that is often overlooked as programmers have a tendency to focus on the design of individual features rather than the design of the overall system. Brooks argues that large-scale systems should have a consistent design philosophy flow through all subsystems. It is better to have one good idea and carry it through the project, than having several uncoordinated good ideas.
+// // Brooks defines *conceptual integrity* in chapter four, titled "Aristocracy, Democracy, and System Design". He argues this is probably the most important aspect of large system programming, but one that is often overlooked as programmers have a tendency to focus on the design of individual features rather than the design of the overall system. Brooks argues that large-scale systems should have a consistent design philosophy flow through all subsystems. It is better to have one good idea and carry it through the project, than having several uncoordinated good ideas.
 
-// Conceptual integrity can be preserved, Brooks argues, by having one system architect who designs the whole system from top-to-bottom. Brooks argues that the system architect should stick with the design of the system, and not get involved with the implementation. Implementation and design should be treated as two separate phases. A system architect defines the design specifications, while the builders define the implementation specifications. System architecture should be based on user requirements.
+// // Conceptual integrity can be preserved, Brooks argues, by having one system architect who designs the whole system from top-to-bottom. Brooks argues that the system architect should stick with the design of the system, and not get involved with the implementation. Implementation and design should be treated as two separate phases. A system architect defines the design specifications, while the builders define the implementation specifications. System architecture should be based on user requirements.
 
-_The Mythical Man-Month_ is really a collection of standalone essays rather than a cohesive thesis on the challenges of large-scale software development. Nevertheless, there are some key themes that run throughout the book. One is that commercial software development is harder than solo programming because of the *division of labor*. The other main theme is that the *conceptual integrity* of a system is critical to its success.
+// Key themes: One is that commercial software development is harder than solo programming because of the *division of labor*. The other main theme is that the *conceptual integrity* of a system is critical to its success.
 
-Brooks's notion of conceptual integrity is, I think, the most important principle of software architecture. It has become part of our industry's lexicon, though today you are more likely to hear terms like "cohesion" and "design consistency".
+// Brooks's notion of conceptual integrity is, I think, the most important principle of software architecture. It has become part of our industry's lexicon, though today you are more likely to hear terms like "cohesion" and "design consistency".
 
-[quote, Fred Brooks]
-____
-I will contend that conceptual integrity is _the_ most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of ideas, than to have one that contains many good but independent and uncoordinated ideas.
-____
+// [quote, Fred Brooks]
+// ____
+// I will contend that conceptual integrity is _the_ most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of ideas, than to have one that contains many good but independent and uncoordinated ideas.
+// ____
 
-// TODO: Define conceptual integrity
+// // TODO: Define conceptual integrity
 
-////
+// ////
 
-*Conceptual integrity* is a *link:./quality-attributes.adoc[quality attribute]* of a software system. A system with high conceptual integrity is one where all the concepts and their relationships with each other are applied in a consistent way throughout the system. Anywhere you look in the system, you can tell that it is part of an overall design.
+// *Conceptual integrity* is a *link:./quality-attributes.adoc[quality attribute]* of a software system. A system with high conceptual integrity is one where all the concepts and their relationships with each other are applied in a consistent way throughout the system. Anywhere you look in the system, you can tell that it is part of an overall design.
 
-////
+// ////
 
-// TODO: Why is conceptual integrity important?
+// // TODO: Why is conceptual integrity important?
 
-////
+// ////
 
-A software system with high conceptual integrity – or high cohesion – tends to be easy to maintain. We can more confidently change part of a system with a cohesive design because we can draw upon our mental map of the architecture and understand intuitively the full repercussions of making the change.
+// A software system with high conceptual integrity – or high cohesion – tends to be easy to maintain. We can more confidently change part of a system with a cohesive design because we can draw upon our mental map of the architecture and understand intuitively the full repercussions of making the change.
 
-////
+// ////
 
-[quote, Fred Brooks]
-____
-Ease of use, then, dictates unity of design – conceptual integrity.
-____
+// [quote, Fred Brooks]
+// ____
+// Ease of use, then, dictates unity of design – conceptual integrity.
+// ____
 
-Unfortunately, maintaining conceptual integrity is notoriously difficult as a software system grows in size and scope. To explain why, Brooks draws a parallel with European cathedrals, most of which "show differences in plan or architectural style between parts built in different generations by different builders". In software, Brooks notes, conceptual disunity arises not from the passage of time – hundreds of years separating phases of functional extension – but from the decomposition of the design into "many tasks done by many men".
+// Unfortunately, maintaining conceptual integrity is notoriously difficult as a software system grows in size and scope. To explain why, Brooks draws a parallel with European cathedrals, most of which "show differences in plan or architectural style between parts built in different generations by different builders". In software, Brooks notes, conceptual disunity arises not from the passage of time – hundreds of years separating phases of functional extension – but from the decomposition of the design into "many tasks done by many men".
 
-The necessity to have a *division of labour* in large-scale software projects makes it hard to maintain the conceptual integrity of the overall system design.
+// The necessity to have a *division of labour* in large-scale software projects makes it hard to maintain the conceptual integrity of the overall system design.
 
-////
+// ////
 
-== Conceptual integrity
+// == Conceptual integrity
 
-// TODO
+// // TODO
 
-// The _ratio_ of function to conceptual complexity is the ultimate test of system design. This ratio is a measure of ease of use.
+// // The _ratio_ of function to conceptual complexity is the ultimate test of system design. This ratio is a measure of ease of use.
 
-Brooks uses a number of examples of computer programming environments to argue that _ease of use_ is derived from a balance being struck between two factors: function and simplicity. "Neither function alone nor simplicity alone defines a good design." A useful system is one that is both rich in functionality and is straightforward to use.  Every part of the system, Brooks argues, should reflect a consistent set of design philosophies and the same balance of competing forces.
+// Brooks uses a number of examples of computer programming environments to argue that _ease of use_ is derived from a balance being struck between two factors: function and simplicity. "Neither function alone nor simplicity alone defines a good design." A useful system is one that is both rich in functionality and is straightforward to use.  Every part of the system, Brooks argues, should reflect a consistent set of design philosophies and the same balance of competing forces.
 
-Thus, to achieve ease of use, "the design must proceed from one mind, or from a very small number of agreeing resonated minds" to maintain the necessary conceptual integrity.
+// Thus, to achieve ease of use, "the design must proceed from one mind, or from a very small number of agreeing resonated minds" to maintain the necessary conceptual integrity.
 
-Brooks suggests that the concept of the surgical team, and the division of labour between architecture and implementation, are techniques that help to maintain conceptual integrity of large-scale software systems.
+// Brooks suggests that the concept of the surgical team, and the division of labour between architecture and implementation, are techniques that help to maintain conceptual integrity of large-scale software systems.
 
-"The separation of architectural effort from implementation is a very powerful way of getting conceptual integrity on very large projects." Here, Brooks defines the _architecture_ as "the complete and detailed specification of the user interface". The _implementation_ is everything else. Today, we would define architecture more broadly, to include the overall design of the system, including the data model, the interfaces between components, the deployment infrastructure, and so on. Brooks's definition of "architecture" in 1975 we would term "user experience" today. Thus, the distinction between _design_ and _implementation_ is a much murkier one in 2025 than it was in 1975, reflective of the nature of the software systems we build today. Nevertheless, the broad principle remains sound: that one or two key people should oversee the overall design and technical strategy.
+// "The separation of architectural effort from implementation is a very powerful way of getting conceptual integrity on very large projects." Here, Brooks defines the _architecture_ as "the complete and detailed specification of the user interface". The _implementation_ is everything else. Today, we would define architecture more broadly, to include the overall design of the system, including the data model, the interfaces between components, the deployment infrastructure, and so on. Brooks's definition of "architecture" in 1975 we would term "user experience" today. Thus, the distinction between _design_ and _implementation_ is a much murkier one in 2025 than it was in 1975, reflective of the nature of the software systems we build today. Nevertheless, the broad principle remains sound: that one or two key people should oversee the overall design and technical strategy.
 
-// Discipline is good for art. The external provision of an architecture enhances, not cramps, the creative style of an implementing group.
+// // Discipline is good for art. The external provision of an architecture enhances, not cramps, the creative style of an implementing group.
 
-// A conceptually integrated system is faster to build and to test.
+// // A conceptually integrated system is faster to build and to test.
 
-The trade-off is that architects become something of an aristocracy, and demographic ideals that help to form cohesive teams are sacrificed. "Are not the architects a new aristocracy, an intellectual elite, set up to tell the poor dumb implementers what to do?" Brooks asks. "Won't one get a better product by getting the good ideas from all the team, following a demographic philosophy…?"
+// The trade-off is that architects become something of an aristocracy, and demographic ideals that help to form cohesive teams are sacrificed. "Are not the architects a new aristocracy, an intellectual elite, set up to tell the poor dumb implementers what to do?" Brooks asks. "Won't one get a better product by getting the good ideas from all the team, following a demographic philosophy…?"
 
-Brooks argues that there must be a balance between demographic and autocratic approaches to software design. Everyone should be able to contribute ideas to the design, but ultimately there must be a single authority who makes the final decisions. Brooks also makes the point that implementation – the raw coding – is also a form of creative work, just one that operates at a different level of abstraction to the architecture. While the architect has the most influence over the ease of use of the product, the implementers will have the most influence over its performance.
+// Brooks argues that there must be a balance between demographic and autocratic approaches to software design. Everyone should be able to contribute ideas to the design, but ultimately there must be a single authority who makes the final decisions. Brooks also makes the point that implementation – the raw coding – is also a form of creative work, just one that operates at a different level of abstraction to the architecture. While the architect has the most influence over the ease of use of the product, the implementers will have the most influence over its performance.
 
-Brooks says implementers tend to have these three objections to a small architectural team having all the responsibility for the external specifications (ie. the design):
+// Brooks says implementers tend to have these three objections to a small architectural team having all the responsibility for the external specifications (ie. the design):
 
-* The specifications will be too rich in function and will not reflect practical cost considerations. Brooks addresses this in the next chapter.
+// * The specifications will be too rich in function and will not reflect practical cost considerations. Brooks addresses this in the next chapter.
 
-* The architects will get all the creative fun and shut out the inventiveness of the implementers. Brooks counteracts: "The opportunity to be creative and inventive in implementation is not significantly diminished by working within a given external specification."
+// * The architects will get all the creative fun and shut out the inventiveness of the implementers. Brooks counteracts: "The opportunity to be creative and inventive in implementation is not significantly diminished by working within a given external specification."
 
-* The many implementers will have to sit idly by while the specifications come through the narrow funnel that is the architecture team. Brooks argues that this can be resolved easily through timing and phasing. Unlike in the construction industry, in which builders tend not be to be hired until the architectural designs are finalized, the pace is quicker in computing and specification and building therefore tend to overlap. Implementers can start to implement as soon as he has relatively vague assumptions about the requirements; code is easier to change than bricks and mortar and steel. Some time must be spent up-front communicating with the architects, too.
+// * The many implementers will have to sit idly by while the specifications come through the narrow funnel that is the architecture team. Brooks argues that this can be resolved easily through timing and phasing. Unlike in the construction industry, in which builders tend not be to be hired until the architectural designs are finalized, the pace is quicker in computing and specification and building therefore tend to overlap. Implementers can start to implement as soon as he has relatively vague assumptions about the requirements; code is easier to change than bricks and mortar and steel. Some time must be spent up-front communicating with the architects, too.
 
-Brooks says that, besides conceptual integrity, the horizontal division of labour between architecture and implementation also significantly improves communication flows within teams.
+// Brooks says that, besides conceptual integrity, the horizontal division of labour between architecture and implementation also significantly improves communication flows within teams.
 
-// Much of software architecture, implementation, and realization can proceed in parallel.
+// // Much of software architecture, implementation, and realization can proceed in parallel.
 
-----------------
+// ----------------
 
-Bottom-up design is an approach to *link:./system-design.adoc[system design]* that emphasizes building systems from small, primitive components, gradually integrating lots of small parts to compose the complete solution. It is sometimes used as a synonym for [evolutionary design], which is a similar concept.
+// Bottom-up design is an approach to *link:./system-design.adoc[system design]* that emphasizes building systems from small, primitive components, gradually integrating lots of small parts to compose the complete solution. It is sometimes used as a synonym for [evolutionary design], which is a similar concept.
 
-Bottom-up design contrasts with *link:./top-down-design.adoc[top-down design]*, which instead emphasizes up-front planning and design through [decomposition] of the problem space into lots of subsystems.
+// Bottom-up design contrasts with *link:./top-down-design.adoc[top-down design]*, which instead emphasizes up-front planning and design through [decomposition] of the problem space into lots of subsystems.
 
-Bottom-up design is often desirable in situations where there are limited resources (such as time or people) or where the requirements are unclear or unstable. The emphasis is on reusing generic components to compose custom solutions with minimal bespoke code. The base components are linked together to form larger subsystems, which are in turn connected to form the complete system.
+// Bottom-up design is often desirable in situations where there are limited resources (such as time or people) or where the requirements are unclear or unstable. The emphasis is on reusing generic components to compose custom solutions with minimal bespoke code. The base components are linked together to form larger subsystems, which are in turn connected to form the complete system.
 
-The main benefit of bottom-up design is [reusability] of existing code. The main downside of bottom-up design is that is can be overly organic, leading to a tangle of elements and subsystems with no overall structure and limited consistency. Development of large-scale systems especially requires some degree of top-down design to maintain [conceptual integrity]. In practice, most modern software design practices combine elements of both top-down and bottom-up design.
+// The main benefit of bottom-up design is [reusability] of existing code. The main downside of bottom-up design is that is can be overly organic, leading to a tangle of elements and subsystems with no overall structure and limited consistency. Development of large-scale systems especially requires some degree of top-down design to maintain [conceptual integrity]. In practice, most modern software design practices combine elements of both top-down and bottom-up design.
 
-////
+// ////
 
 == 5. The second-system effect
 
-The fifth chapter is titled "The second-system effect". Brooks argues that the first system that a programmer designs and builds is often the best, because it is simple and elegant. The second system, however, tends to be over-engineered and bloated with features. Brooks calls this the "second-system effect".
+// The fifth chapter is titled "The second-system effect". Brooks argues that the first system that a programmer designs and builds is often the best, because it is simple and elegant. The second system, however, tends to be over-engineered and bloated with features. Brooks calls this the "second-system effect".
 
-"The architect has two possible answers when confronted with an estimate that is too high: cut the design or challenge the estimate by suggesting cheaper implementations."
+// "The architect has two possible answers when confronted with an estimate that is too high: cut the design or challenge the estimate by suggesting cheaper implementations."
 
-Brooks calls for "thoroughgoing, careful, and sympathetic communication between architect and builder". The architects should _suggest_, not _dictate_ cheaper implementation strategies. The builder, ultimately, has responsibility for the implementation. This is a two-way conversation. The builder, too, might suggest changes to the architecture – perhaps "some minor feature may have unexpectedly large costs when the implementation is worked out".
+// Brooks calls for "thoroughgoing, careful, and sympathetic communication between architect and builder". The architects should _suggest_, not _dictate_ cheaper implementation strategies. The builder, ultimately, has responsibility for the implementation. This is a two-way conversation. The builder, too, might suggest changes to the architecture – perhaps "some minor feature may have unexpectedly large costs when the implementation is worked out".
 
-// Deal quietly and privately in ideas put forward by a builder. Be ready to forgo credit for suggested improvements. - This all comes under the banner of emotional intelligence and psychological safety...
+// // Deal quietly and privately in ideas put forward by a builder. Be ready to forgo credit for suggested improvements. - This all comes under the banner of emotional intelligence and psychological safety...
 
-// Early and continuous communication can give the architect good cost readings, and the builder confidence in the design, without blurring the clear division of responsibilities.
+// // Early and continuous communication can give the architect good cost readings, and the builder confidence in the design, without blurring the clear division of responsibilities.
 
-Brooks calls architecture an "interactive discipline".
+// Brooks calls architecture an "interactive discipline".
 
-Brooks then talks about the second-system effect. What he is talking about here is the tendency for post-MVP (minimum viable product) systems to be increasingly over-engineered and bloated with features. "The general tendency is to over-design the second system [ie. version 2 of a product], using all the ideas and frills that were cautiously sidetracked on the first one." The result is a "big pile". Brooks gives the example of the IBM 709, an upgrade to the IBM 704. While the 704 was "very successful and clean", the 709's "operation set [was] so rich and profuse that only about half of it was regularly used".
+// Brooks then talks about the second-system effect. What he is talking about here is the tendency for post-MVP (minimum viable product) systems to be increasingly over-engineered and bloated with features. "The general tendency is to over-design the second system [ie. version 2 of a product], using all the ideas and frills that were cautiously sidetracked on the first one." The result is a "big pile". Brooks gives the example of the IBM 709, an upgrade to the IBM 704. While the 704 was "very successful and clean", the 709's "operation set [was] so rich and profuse that only about half of it was regularly used".
 
-"The second-system effect has another manifestation… a tendency to refine techniques whose very existence has been made obsolete…" Brooks gives examples from the OS/360 project, in which some of the innovations had become obsolete by the time they were finessed in OS/360.
+// "The second-system effect has another manifestation… a tendency to refine techniques whose very existence has been made obsolete…" Brooks gives examples from the OS/360 project, in which some of the innovations had become obsolete by the time they were finessed in OS/360.
 
-Brooks suggests that self-discipline is a particularly critical trait for an architect to have in designing the second version of a software product. The architect must "exert extra self-discipline to avoid functional ornamentation and to avoid extrapolation of functions that are obviated by changes in assumptions and purposes".
+// Brooks suggests that self-discipline is a particularly critical trait for an architect to have in designing the second version of a software product. The architect must "exert extra self-discipline to avoid functional ornamentation and to avoid extrapolation of functions that are obviated by changes in assumptions and purposes".
 
-Brooks suggests that "each little function" be assigned a value: "capability _x_ is worth not more than _m_ bytes of memory and _n_ microseconds per invocation". Translating such benchmarks from system programming to application programming requires different metrics, but the principle is a good one, and we don't _cost_ our features like this enough.
+// Brooks suggests that "each little function" be assigned a value: "capability _x_ is worth not more than _m_ bytes of memory and _n_ microseconds per invocation". Translating such benchmarks from system programming to application programming requires different metrics, but the principle is a good one, and we don't _cost_ our features like this enough.
 
 == 6. Passing the word
 
-Chapter six is titled "Passing the word". Brooks argues that the most important thing in software development is communication.
+// Chapter six is titled "Passing the word". Brooks argues that the most important thing in software development is communication.
 
-// How can we resolve this? Brooks asks: "How does on keep the architects from drifting off into the blue with unimplementable or costly specifications?" And: "How does one ensure that every trifling detail of an architectural specification gets communicated to the implementer, properly understood by him, and accurately incorporated into the product?" These questions are as pertinent in 2025 as they were in 1975.
+// // How can we resolve this? Brooks asks: "How does on keep the architects from drifting off into the blue with unimplementable or costly specifications?" And: "How does one ensure that every trifling detail of an architectural specification gets communicated to the implementer, properly understood by him, and accurately incorporated into the product?" These questions are as pertinent in 2025 as they were in 1975.
 
-"How can a group of 10 architects maintain the conceptual integrity of a system which 1000 men are building?" To answer this question, Brooks draws on a communication system worked out for the System/360 design effort – this was a hardware project, but he argues the techniques are equally applicable to software projects.
+// "How can a group of 10 architects maintain the conceptual integrity of a system which 1000 men are building?" To answer this question, Brooks draws on a communication system worked out for the System/360 design effort – this was a hardware project, but he argues the techniques are equally applicable to software projects.
 
-There are multiple communication artifacts that need to be created an maintained:
+// There are multiple communication artifacts that need to be created an maintained:
 
-* *The manual*: This is a written _external_ specification for the system under construction, ie. a user manual. This is the most important artifact products by software architects. "It describes and prescribes every detail of what the user sees" and omit everything that the user does not see – ie. implementation details are excluded and are left to the builders to decide. Feedback from users and implementers helps to refine the design. Changes to the manual are recorded using dated versioning. User manuals might make dull reading, but precision is preferred to liveliness. Manuals should define what is _not_ prescribed as carefully as what _is_ – this is how precision is achieved.
+// * *The manual*: This is a written _external_ specification for the system under construction, ie. a user manual. This is the most important artifact products by software architects. "It describes and prescribes every detail of what the user sees" and omit everything that the user does not see – ie. implementation details are excluded and are left to the builders to decide. Feedback from users and implementers helps to refine the design. Changes to the manual are recorded using dated versioning. User manuals might make dull reading, but precision is preferred to liveliness. Manuals should define what is _not_ prescribed as carefully as what _is_ – this is how precision is achieved.
 
-* *Formal definitions*: Since English, or any other human language, is not naturally _precise_, formal notations should be preferred to define a system's interfaces. Formal notations tend to be both precise and complete. But they lack comprehensibility. Therefore, ultimately you probably want specifications to be formed from a mix of formal notations and descriptions in prose.
+// * *Formal definitions*: Since English, or any other human language, is not naturally _precise_, formal notations should be preferred to define a system's interfaces. Formal notations tend to be both precise and complete. But they lack comprehensibility. Therefore, ultimately you probably want specifications to be formed from a mix of formal notations and descriptions in prose.
 
-// Once needs both a formal definition of a design, for precision, and a prose definition, for comprehensibility. One of the formal and prose definitions must be standard, and the other derivative; either definition can serve in either role.
+// // Once needs both a formal definition of a design, for precision, and a prose definition, for comprehensibility. One of the formal and prose definitions must be standard, and the other derivative; either definition can serve in either role.
 
-Brooks notes that there are many tools available for formal definitions: the Backus-Naur Form (BNF) for language definition, for example.
+// Brooks notes that there are many tools available for formal definitions: the Backus-Naur Form (BNF) for language definition, for example.
 
-"… an implementation can serve as a formal definition. When the first compatible computers were built, this was exactly the technique used. The new machine was to match an existing machine. The manual was vague on some point? 'Ask the machine!' … A programmed simulator… can serve in precisely the same way." Using an implementation as a definition has some advantages, not least all questions can be unambiguously answered by running tests or experiments to determine the behavior. It also answers lots of questions we might have about how the implementation will need to work to meet the required behavior.
+// "… an implementation can serve as a formal definition. When the first compatible computers were built, this was exactly the technique used. The new machine was to match an existing machine. The manual was vague on some point? 'Ask the machine!' … A programmed simulator… can serve in precisely the same way." Using an implementation as a definition has some advantages, not least all questions can be unambiguously answered by running tests or experiments to determine the behavior. It also answers lots of questions we might have about how the implementation will need to work to meet the required behavior.
 
-Proofs of concept / prototypes / mocks.
+// Proofs of concept / prototypes / mocks.
 
-But the trade-off is that there can be some confusions as to which is the source-of-truth for the behavior: the reference implementation or the manual? It is particularly important that simulated implementations be carefully maintained for as long as they act as a standard.
+// But the trade-off is that there can be some confusions as to which is the source-of-truth for the behavior: the reference implementation or the manual? It is particularly important that simulated implementations be carefully maintained for as long as they act as a standard.
 
-// An implementation, including a simulation, can serve as an architectural definition - but has formidable disadvantages.
+// // An implementation, including a simulation, can serve as an architectural definition - but has formidable disadvantages.
 
-* *Direct incorporation*: "A lovely technique for disseminating and enforcing definitions is available for the software system architect… This technique is to design the declaration of the passed parameters or shared storage, and to require the implementations to include that declaration via a compile-time operation". We uses interfaces, available in most modern programming languages, for this purpose. For distributed systems…
+// * *Direct incorporation*: "A lovely technique for disseminating and enforcing definitions is available for the software system architect… This technique is to design the declaration of the passed parameters or shared storage, and to require the implementations to include that declaration via a compile-time operation". We uses interfaces, available in most modern programming languages, for this purpose. For distributed systems…
 
-* *Meetings*: Meetings are necessary. Brooks suggests two levels are useful: a weekly half-day conference of all the architects (decisions from which give quick results and allow work to proceed); and annual supreme court sessions, lasting typically two weeks (in which a built-up backlog of open issues and appeals against prior design decisions are resolved).
+// * *Meetings*: Meetings are necessary. Brooks suggests two levels are useful: a weekly half-day conference of all the architects (decisions from which give quick results and allow work to proceed); and annual supreme court sessions, lasting typically two weeks (in which a built-up backlog of open issues and appeals against prior design decisions are resolved).
 
-* *Multiple implementations*: If the manual and the system disagree, one can be changed (it is usually easier to change the manual). However, if there is divergence in behavior between multiple implementations, this is harder to resolve. Today, we have the concept of a single source-of-truth, usually a reference code repository from which all implementation instances are compiled.
+// * *Multiple implementations*: If the manual and the system disagree, one can be changed (it is usually easier to change the manual). However, if there is divergence in behavior between multiple implementations, this is harder to resolve. Today, we have the concept of a single source-of-truth, usually a reference code repository from which all implementation instances are compiled.
 
-* The *telephone log*: This is maintained by the architects and it records every question and every answer between implementers and the architects. No matter how precise the specification, there will always be clarifications needed, and these must be communicated with everyone. Such mechanisms can be quite informal…
+// * The *telephone log*: This is maintained by the architects and it records every question and every answer between implementers and the architects. No matter how precise the specification, there will always be clarifications needed, and these must be communicated with everyone. Such mechanisms can be quite informal…
 
-* *Product test*: An independent product testing organization checks the system against specifications, and serves as a devil's advocate, pinpointing every conceivable defect and discrepancy. "Every development organization needs such an independent technical auditing group to keep it honest." … "In the last analysis the customer is the independent auditor. In the merciless light of real use, every flaw will show. The product-testing group then is the surrogate customer, specialized for finding flaws." (Brooks calls the product-testing organization the "daily adversary", but also the "best friend", of the project manager.
+// * *Product test*: An independent product testing organization checks the system against specifications, and serves as a devil's advocate, pinpointing every conceivable defect and discrepancy. "Every development organization needs such an independent technical auditing group to keep it honest." … "In the last analysis the customer is the independent auditor. In the merciless light of real use, every flaw will show. The product-testing group then is the surrogate customer, specialized for finding flaws." (Brooks calls the product-testing organization the "daily adversary", but also the "best friend", of the project manager.
 
-Testing, then, is a critical piece of "passing the word" between architect and implementer. The role of the tester, ultimately, is to find "where the design decisions were not properly understood or accurately implemented". This link must operate "early and simultaneously" with design.
+// Testing, then, is a critical piece of "passing the word" between architect and implementer. The role of the tester, ultimately, is to find "where the design decisions were not properly understood or accurately implemented". This link must operate "early and simultaneously" with design.
 
-== 7. Why did the Tower of Babel fail?
+== 7. The Tower of Babel
 
-// Chapter seven is another important chapter in the book. Brooks uses the biblical story of the Tower of Babel as a metaphor for the communication breakdowns that can occur in large software projects. Originally, the people of Babel spoke the same language and they were all united. Babel fell when the people started speaking different languages and could no longer communicate with each other. The Tower of Babel failed not because of technological limitations or a lack of resources, but because of communication problems and the disorganization that resulted from them.
+// // Chapter seven, titled "Why did the Tower of Babel fail?" is another important chapter in the book. Brooks uses the biblical story of the Tower of Babel as a metaphor for the communication breakdowns that can occur in large software projects. Originally, the people of Babel spoke the same language and they were all united. Babel fell when the people started speaking different languages and could no longer communicate with each other. The Tower of Babel failed not because of technological limitations or a lack of resources, but because of communication problems and the disorganization that resulted from them.
 
-// The same thing is the cause of many failures in the delivery of large computer systems, Brooks argues. To improve communication within a large project, Brook suggests keeping a *workbook* for the project. The workbook contains all the documentation relevant to the project, from high-level missions and objectives, via external specifications (what we would now call user acceptance criteria), to internal specifications and design documents. Critically, the workbook must also record the changes made to the project over time. Changes to the contents of the workbook should also be recorded.
+// // The same thing is the cause of many failures in the delivery of large computer systems, Brooks argues. To improve communication within a large project, Brook suggests keeping a *workbook* for the project. The workbook contains all the documentation relevant to the project, from high-level missions and objectives, via external specifications (what we would now call user acceptance criteria), to internal specifications and design documents. Critically, the workbook must also record the changes made to the project over time. Changes to the contents of the workbook should also be recorded.
 
-// As the workbook increases in size, it become more important to impose a strict structure to its contents. Indexing and numbering systems may be used to help people find the information they're looking for.
+// // As the workbook increases in size, it become more important to impose a strict structure to its contents. Indexing and numbering systems may be used to help people find the information they're looking for.
 
-The seventh chapter is titled "Why did the Tower of Babel fall?". Brooks uses the biblical story of the Tower of Babel to illustrate the problems that arise when a large number of people are working on a project without a common language.
+// The seventh chapter is titled "Why did the Tower of Babel fall?". Brooks uses the biblical story of the Tower of Babel to illustrate the problems that arise when a large number of people are working on a project without a common language.
 
-This chapter is all about the importance of communication.
+// This chapter is all about the importance of communication.
 
-The Tower of Babel is a myth from the Book of Genesis that is meant to explain the existence of different languages and cultures around the world. According to the story, a united human race with a common language agree to build a great city with a mighty tower. Noticing humanity's power in unity and through common language, God confounds their speech so that the people can no longer communicate effectively with one another. The people fail to complete the engineering work, and scatter around the Earth, leaving Babel unfinished.
+// The Tower of Babel is a myth from the Book of Genesis that is meant to explain the existence of different languages and cultures around the world. According to the story, a united human race with a common language agree to build a great city with a mighty tower. Noticing humanity's power in unity and through common language, God confounds their speech so that the people can no longer communicate effectively with one another. The people fail to complete the engineering work, and scatter around the Earth, leaving Babel unfinished.
 
-Brooks calls the tower of Babel "the first engineering fiasco" – but not the last. The project failed, not because of lack of manpower, materials, time, or knowledge, but because the collaborators failed to communicate effectively with one another, and therefore they could not efficiently coordinate their individual efforts.
+// Brooks calls the tower of Babel "the first engineering fiasco" – but not the last. The project failed, not because of lack of manpower, materials, time, or knowledge, but because the collaborators failed to communicate effectively with one another, and therefore they could not efficiently coordinate their individual efforts.
 
-[quote, Fred Brooks]
-____
-Communication and its consequent, organization, are critical for success. The techniques of communication and organization demand from the manager much thought and as much experienced competence as the software technology itself.
-____
+// [quote, Fred Brooks]
+// ____
+// Communication and its consequent, organization, are critical for success. The techniques of communication and organization demand from the manager much thought and as much experienced competence as the software technology itself.
+// ____
 
-// Teams should communicate with one another in as many ways as possible.
+// // Teams should communicate with one another in as many ways as possible.
 
-Brooks proposed three techniques for large-scale team communication:
+// Brooks proposed three techniques for large-scale team communication:
 
-* *Informal communication*: eg. a clear definition of intergroup dependencies will help to clarify the lines of communication (in those days, by phone).
+// * *Informal communication*: eg. a clear definition of intergroup dependencies will help to clarify the lines of communication (in those days, by phone).
 
-* Regular project *meetings*, "with one team after another giving technical briefings, are invaluable. Hundreds of minor misunderstandings get smoked out this way."
+// * Regular project *meetings*, "with one team after another giving technical briefings, are invaluable. Hundreds of minor misunderstandings get smoked out this way."
 
-* A project *workbook*, which is a "centralized, up-to-date, and universally accessible repository of all of the project's documentation, including objectives, interface specifications, technical/internal specifications, technical standards, and administrative memoranda. Brooks goes into some length about how the OS/360 project soon ended up with a printed workbook _five inches thick_, with hundreds of pages being reprinted and replaced in a typical day. The project switched to using microfiche, which reduced the costs of maintaining (and constantly reprinting large numbers of copies of) the workbook. Today we'd typically use a wiki system like Confluence at a cost of a few dollars per month per user.
+// * A project *workbook*, which is a "centralized, up-to-date, and universally accessible repository of all of the project's documentation, including objectives, interface specifications, technical/internal specifications, technical standards, and administrative memoranda. Brooks goes into some length about how the OS/360 project soon ended up with a printed workbook _five inches thick_, with hundreds of pages being reprinted and replaced in a typical day. The project switched to using microfiche, which reduced the costs of maintaining (and constantly reprinting large numbers of copies of) the workbook. Today we'd typically use a wiki system like Confluence at a cost of a few dollars per month per user.
 
-// Even in 1975, Brooks noted that a "shared electronic notebook" is a much more effective, cheaper, and simpler mechanism.
+// // Even in 1975, Brooks noted that a "shared electronic notebook" is a much more effective, cheaper, and simpler mechanism.
 
-*Organization*:
+// *Organization*:
 
-The purpose of organization is to reduce the amount of communication and coordination necessary.
+// The purpose of organization is to reduce the amount of communication and coordination necessary.
 
-Organization embodies _division of labor_ and _specialization of function_ is order to obviate communication.
+// Organization embodies _division of labor_ and _specialization of function_ is order to obviate communication.
 
-The conventional organization tree reflects the _authority_ structure principle that no one person can serve two masters. But the _communication_ structure in an organization is actually a network, not a tree-like structure, so all kinds of special organization mechanisms ("dotted lines") have to be devised to overcome the communication deficiencies of the tree-structured organization – staff groups, task forces, committees, etc.
+// The conventional organization tree reflects the _authority_ structure principle that no one person can serve two masters. But the _communication_ structure in an organization is actually a network, not a tree-like structure, so all kinds of special organization mechanisms ("dotted lines") have to be devised to overcome the communication deficiencies of the tree-structured organization – staff groups, task forces, committees, etc.
 
-Within a tree-like hierarchy, each subtree must have the following components to be effective:
+// Within a tree-like hierarchy, each subtree must have the following components to be effective:
 
-* A mission
-* A producer
-* An architect or technical director
-* A schedule
-* A division of labor
-* Interface definitions among the parts
+// * A mission
+// * A producer
+// * An architect or technical director
+// * A schedule
+// * A division of labor
+// * Interface definitions among the parts
 
-There are two key leadership roles:
+// There are two key leadership roles:
 
-* The *producer* (this role would be called the "project manager" or perhaps "product manager" today) is responsible for the overall project and its success. The producer is responsible for the schedule, assembling the team, acquiring resources. Communicates upwards and outwards.
+// * The *producer* (this role would be called the "project manager" or perhaps "product manager" today) is responsible for the overall project and its success. The producer is responsible for the schedule, assembling the team, acquiring resources. Communicates upwards and outwards.
 
-* *The *architect* or *technical director*. Conceives the design of the product, and specifies how it will look from the outside, and also sketches its internal structure. He provides unity and conceptual integrity to the whole design; thus he serves as a limit on system complexity. His communication is chiefly within the teams and is almost completely technical. (Domain knowledge also important - this is not something Brooks covers.)
+// * *The *architect* or *technical director*. Conceives the design of the product, and specifies how it will look from the outside, and also sketches its internal structure. He provides unity and conceptual integrity to the whole design; thus he serves as a limit on system complexity. His communication is chiefly within the teams and is almost completely technical. (Domain knowledge also important - this is not something Brooks covers.)
 
-The functions of the two roles are quite distinct and require different talents. However, depending on the talents of the people involved, these two roles could be fulfilled by one person, or one might be the boss and the other the boss's right-hand man (copilot).
+// The functions of the two roles are quite distinct and require different talents. However, depending on the talents of the people involved, these two roles could be fulfilled by one person, or one might be the boss and the other the boss's right-hand man (copilot).
 
 == 8. Calling the shot
 
-Chapter 8 is all about estimating effort.
+// Chapter 8 is all about estimating effort.
 
-One cannot accurately estimate the total effort or schedule of a programming project by simply estimating the coding time and multiplying by factors for the other parts of the task.
+// One cannot accurately estimate the total effort or schedule of a programming project by simply estimating the coding time and multiplying by factors for the other parts of the task.
 
-Data for building small isolated systems are not applicable to programming systems projects.
+// Data for building small isolated systems are not applicable to programming systems projects.
 
-Programming increases goes as a power of program size. Some published studies show the exponent to be about 1.5.
+// Programming increases goes as a power of program size. Some published studies show the exponent to be about 1.5.
 
-Brooks summarizes data from a variety of sources available at the time: Charles Portman, manager of ICL's software division; Joel Aron, manager of Systems Technology at IBM; John Harr, manager of programming for the Bell Telephone Laboratories' Electronic Switching System; OS/360 data; and others. Various research suggests:
+// Brooks summarizes data from a variety of sources available at the time: Charles Portman, manager of ICL's software division; Joel Aron, manager of Systems Technology at IBM; John Harr, manager of programming for the Bell Telephone Laboratories' Electronic Switching System; OS/360 data; and others. Various research suggests:
 
-* Programmers spend only half their time programming and debugging. The other half is on overhead-type tasks.
+// * Programmers spend only half their time programming and debugging. The other half is on overhead-type tasks.
 
-* Productivity can vary from 1.5 to 10 KLOC (thousand lines of code) per programmer per year. The more interactions between programmers and system parts, the lower the productivity.
+// * Productivity can vary from 1.5 to 10 KLOC (thousand lines of code) per programmer per year. The more interactions between programmers and system parts, the lower the productivity.
 
-* Productivity – as measured in lines of code written – also varies significantly by category of software system, eg. between operating systems and compilers.
+// * Productivity – as measured in lines of code written – also varies significantly by category of software system, eg. between operating systems and compilers.
 
-* Programming productivity can be increased as much as five times when a suitable high-level programming language is used.
+// * Programming productivity can be increased as much as five times when a suitable high-level programming language is used.
 
 == 9. Ten pounds in a five-pound sack
 
-This chapter is all about using hardware resources efficiently.
+// This chapter is all about using hardware resources efficiently.
 
-Much of this is no longer relevant, due to advances in hardware and the reduced constraints under which we must design software to operate. For example, Brooks says that memory consumption limits is a crucial decision, because performance is so closely related to the transient area. But even 20 years later, Brooks acknowledges that this decision has been obsoleted, first by virtal memory and then by cheap real memory. Users now buy enough real memory to hold all the code for all of the major applications they run on their system.
+// Much of this is no longer relevant, due to advances in hardware and the reduced constraints under which we must design software to operate. For example, Brooks says that memory consumption limits is a crucial decision, because performance is so closely related to the transient area. But even 20 years later, Brooks acknowledges that this decision has been obsoleted, first by virtal memory and then by cheap real memory. Users now buy enough real memory to hold all the code for all of the major applications they run on their system.
 
-Aside from the running time, the _memory space_ occupied by a program is a principal cost. This is especially true of operating systems, where much is resident (in memory) all the time.
+// Aside from the running time, the _memory space_ occupied by a program is a principal cost. This is especially true of operating systems, where much is resident (in memory) all the time.
 
-The software builder should set size targets, control size, and devise size-reduction techniques (just as a hardware builder does for components). Size budgets must be explicit not only about resident size but also about the disk accesses occasioned by program fetches.
+// The software builder should set size targets, control size, and devise size-reduction techniques (just as a hardware builder does for components). Size budgets must be explicit not only about resident size but also about the disk accesses occasioned by program fetches.
 
-Size budgets must be tied to function assignments; define exactly what a module must do when you specify how big it is allowed to be.
+// Size budgets must be tied to function assignments; define exactly what a module must do when you specify how big it is allowed to be.
 
-On large teams, subteams tend to suboptimize to meet their own targets rather than think about the total effect on the user. This is a major hazard for achieving good performance in large-scale systems.
+// On large teams, subteams tend to suboptimize to meet their own targets rather than think about the total effect on the user. This is a major hazard for achieving good performance in large-scale systems.
 
-All during implementation, the system architects must maintain constant vigilance to ensure continued system integrity.
+// All during implementation, the system architects must maintain constant vigilance to ensure continued system integrity.
 
-Fostering a total-system, user-oriented attitude may well be the most important function of the programming manager.
+// Fostering a total-system, user-oriented attitude may well be the most important function of the programming manager.
 
-To make good space-time trade-offs, a team needs to be trained in the programming techniques peculiar to a particular language or machine.
+// To make good space-time trade-offs, a team needs to be trained in the programming techniques peculiar to a particular language or machine.
 
-Every project needs a standard library of components.
+// Every project needs a standard library of components.
 
-Finally, on technical innovation, Brooks observes that genuinely lean and fast programs are the result of _strategic breakthroughs_, such as a new algorithm, rather than tactical cleverness. And, since *representation is the essence of programming* (ie. how data is stored), redoing the representation of the data or its storage tables will often yield bigger performance improvements than optimizing the business logic.
+// Finally, on technical innovation, Brooks observes that genuinely lean and fast programs are the result of _strategic breakthroughs_, such as a new algorithm, rather than tactical cleverness. And, since *representation is the essence of programming* (ie. how data is stored), redoing the representation of the data or its storage tables will often yield bigger performance improvements than optimizing the business logic.
 
 == 10. The documentary hypothesis
 
-The hypothesis states that, amid a wash of paper, a small number of documents will become the critical pivots around which every project's management revolves.
+// The hypothesis states that, amid a wash of paper, a small number of documents will become the critical pivots around which every project's management revolves.
 
-For a computer development project, the critical documents are: the objectives, the manual, the schedule and budget, the organization chart and floor plan, and the estimate, forecast, and prices of the machine itself.
+// For a computer development project, the critical documents are: the objectives, the manual, the schedule and budget, the organization chart and floor plan, and the estimate, forecast, and prices of the machine itself.
 
-For a software project, the needs are the same, except for the hardware costs.
+// For a software project, the needs are the same, except for the hardware costs.
 
-Even on a small project, the manager should formalize such a set of documents. Preparing each document focuses thought and crystallizes discussion. The act of writing requires hundreds of mini-decisions – resulting in clear, exact policies, rather than fuzzy ones.
+// Even on a small project, the manager should formalize such a set of documents. Preparing each document focuses thought and crystallizes discussion. The act of writing requires hundreds of mini-decisions – resulting in clear, exact policies, rather than fuzzy ones.
 
-Maintaining each critical document provides a status surveillance and warning mechanism. Each document itself serves as a checklist and a database.
+// Maintaining each critical document provides a status surveillance and warning mechanism. Each document itself serves as a checklist and a database.
 
-The project manager's job, fundamentally, is to keep everyone going in the same direction.
+// The project manager's job, fundamentally, is to keep everyone going in the same direction.
 
-The project manager's chief daily task is communication, not decision-making. The documents communicate the plans and decisions to the whole team.
+// The project manager's chief daily task is communication, not decision-making. The documents communicate the plans and decisions to the whole team.
 
 == 11. Plan to throw one away
 
-// In chapter 11, titled "Plan to Throw One Away", Brooks proposes building *pilot models* or *pilot systems* as an intermediate step between the initial system design and the construction of the final system. The pilot system helps to identify potential problems with the design before the final solution is built. The pilot system should be thrown away and not given to the customer. This is because the pilot model often has bugs in it, which would reduce the customer's confidence in the producer.
+// // In chapter 11, titled "Plan to Throw One Away", Brooks proposes building *pilot models* or *pilot systems* as an intermediate step between the initial system design and the construction of the final system. The pilot system helps to identify potential problems with the design before the final solution is built. The pilot system should be thrown away and not given to the customer. This is because the pilot model often has bugs in it, which would reduce the customer's confidence in the producer.
 
-Chemical engineers have learned not to take a process from the lab bench to the factory in one step, but to build a _pilot plant_ to give experience in scaling quantities up and operating in non-protective environments.
+// Chemical engineers have learned not to take a process from the lab bench to the factory in one step, but to build a _pilot plant_ to give experience in scaling quantities up and operating in non-protective environments.
 
-This intermediate step is equally necessary for programming products, but software engineers do not yet routinely field-test a pilot system before undertaking to deliver the real product. – By 1995, this had become common practice, with "beta" versions. Brooks also advocates the use of "alpha" versions, which are prototypes with limited functionality.
+// This intermediate step is equally necessary for programming products, but software engineers do not yet routinely field-test a pilot system before undertaking to deliver the real product. – By 1995, this had become common practice, with "beta" versions. Brooks also advocates the use of "alpha" versions, which are prototypes with limited functionality.
 
-Brooks says that, for most projects, the first system built is barely usable: too slow, too big, too hard to use, or all three.
+// Brooks says that, for most projects, the first system built is barely usable: too slow, too big, too hard to use, or all three.
 
-The discard-and-redesign can be done in a big bang, or incrementally… but _it is inevitable_.
+// The discard-and-redesign can be done in a big bang, or incrementally… but _it is inevitable_.
 
-Delivering the first system, the throwaway, to users will buy time – but perhaps at the cost of agony for the user, distraction for the builders who now have to support the production v1 while doing the redesign for v2, and potentially earn the product a bad reputation that will be hard to live down.
+// Delivering the first system, the throwaway, to users will buy time – but perhaps at the cost of agony for the user, distraction for the builders who now have to support the production v1 while doing the redesign for v2, and potentially earn the product a bad reputation that will be hard to live down.
 
-Both the actual need, and the user's perceptions of their needs, will change as the solutions are built, tested, and used. The tractability and the invisibility of the software product expose its builders (exceptionally) to perpetual changes in requirements. But anyway, some valid changes in objectives (and in development strategies) are inevitable, so it is better to be prepared for them, than to assume changes will not come.
+// Both the actual need, and the user's perceptions of their needs, will change as the solutions are built, tested, and used. The tractability and the invisibility of the software product expose its builders (exceptionally) to perpetual changes in requirements. But anyway, some valid changes in objectives (and in development strategies) are inevitable, so it is better to be prepared for them, than to assume changes will not come.
 
-The techniques for planning a software product for change – especially structured programming with careful module interface documentation – were well known but not widely practiced in 1975. But by 1995, this principle was much more widely embedded in software development practice.
+// The techniques for planning a software product for change – especially structured programming with careful module interface documentation – were well known but not widely practiced in 1975. But by 1995, this principle was much more widely embedded in software development practice.
 
-Brooks suggests using high-level languages, compile-time operations, and self-documenting techniques, to reduce errors introduced by change. (Automated testing is not mentioned.)
+// Brooks suggests using high-level languages, compile-time operations, and self-documenting techniques, to reduce errors introduced by change. (Automated testing is not mentioned.)
 
-Quantify changes into well-defined numbered versions – by 1995 this was standard practice, and today version control are standard tools.
+// Quantify changes into well-defined numbered versions – by 1995 this was standard practice, and today version control are standard tools.
 
-// TODO: Proofs-of-concept (POCs) meet this principle.
+// // TODO: Proofs-of-concept (POCs) meet this principle.
 
-Brooks writes:
+// Brooks writes:
 
-[quote]
-____
-Plan to throw one away; you will, anyhow.
-____
+// [quote]
+// ____
+// Plan to throw one away; you will, anyhow.
+// ____
 
-Brooks was using the metaphor of letter writing, suggesting that successful software development depends a great deal on trial and error.
+// Brooks was using the metaphor of letter writing, suggesting that successful software development depends a great deal on trial and error.
 
-But it is an economic reality that we must instead rely on careful planning and design.
+// But it is an economic reality that we must instead rely on careful planning and design.
 
-Brooks's advice has not stood up well. It might have been state-of-the-art in 1975, but just a decade or two later major software systems cost as much as some downtown office buildings. We have not treated program code like _drafts_ of text for many, many years.
+// Brooks's advice has not stood up well. It might have been state-of-the-art in 1975, but just a decade or two later major software systems cost as much as some downtown office buildings. We have not treated program code like _drafts_ of text for many, many years.
 
-The focus instead has been on reusing as much existing code as possible, we we have less code to write for each new program.
+// The focus instead has been on reusing as much existing code as possible, we we have less code to write for each new program.
 
-Today, I think everyone in the industry agrees that it is better to plan to build a system incrementally, and to keep the system as you build it. This is the essence of iterative and incremental development, which is the basis for agile ways of working.
+// Today, I think everyone in the industry agrees that it is better to plan to build a system incrementally, and to keep the system as you build it. This is the essence of iterative and incremental development, which is the basis for agile ways of working.
 
-Indeed, in 1987, Fred Brooks admitted that incremental development had emerged as a far better approach than trial and error, and that incremental development had changed his own approach to software development.
+// Indeed, in 1987, Fred Brooks admitted that incremental development had emerged as a far better approach than trial and error, and that incremental development had changed his own approach to software development.
 
-I think today everyone agrees that, for the vast majority of software projects, the principle of "fail fast" is a bad one.
+// I think today everyone agrees that, for the vast majority of software projects, the principle of "fail fast" is a bad one.
 
-We SHOULD avoid trial and error in software development. Don't just start coding without having a plan. Make sure you have all the prerequisites (eg. the definition of ready) in place – which may include designs – before construction begins.
+// We SHOULD avoid trial and error in software development. Don't just start coding without having a plan. Make sure you have all the prerequisites (eg. the definition of ready) in place – which may include designs – before construction begins.
 
-Code is expensive. It only take experience working on a few large programs to learn that you can
-void a lot of stress by planning ahead. Seasoned devs understand this – that our task is to do as little coding as possible!
+// Code is expensive. It only take experience working on a few large programs to learn that you can
+// void a lot of stress by planning ahead. Seasoned devs understand this – that our task is to do as little coding as possible!
 
-Preparation lays the groundwork for success or failure. If you start coding and you realize preparation has not been adequate – eg. you spot gaps in requirements – back up and pause progress until you have more info.
+// Preparation lays the groundwork for success or failure. If you start coding and you realize preparation has not been adequate – eg. you spot gaps in requirements – back up and pause progress until you have more info.
 
-=== Organizational change
+// === Organizational change
 
-Planning for software change is one thing. Planning for organizational change is another.
+// Planning for software change is one thing. Planning for organizational change is another.
 
-Structuring an organization for change is much harder than designing a system for change.
+// Structuring an organization for change is much harder than designing a system for change.
 
-The project boss must work at keeping the managers and the technical people as interchangeable as their talents allow; in particular, one wants to be able to move people easily between technical and managerial roles.
+// The project boss must work at keeping the managers and the technical people as interchangeable as their talents allow; in particular, one wants to be able to move people easily between technical and managerial roles.
 
-Organizing as a surgical team... is the long-run answer to the problem of flexible organization.
+// Organizing as a surgical team... is the long-run answer to the problem of flexible organization.
 
-=== Program maintenance
+// === Program maintenance
 
-Program maintenance consists chiefly of changes that repair design defects, add incremental function, or adapt to changes in the use environment or configuration.
+// Program maintenance consists chiefly of changes that repair design defects, add incremental function, or adapt to changes in the use environment or configuration.
 
-The total lifetime cost of maintaining a widely-used program is typically 40% or more of the cost of developing it.
+// The total lifetime cost of maintaining a widely-used program is typically 40% or more of the cost of developing it.
 
-Maintenance cost is strongly related to the number of users, because the more users there are, the more bugs will be found.
+// Maintenance cost is strongly related to the number of users, because the more users there are, the more bugs will be found.
 
-There's a drop-and-climb curve in bugs discovered per month over a product's life.
+// There's a drop-and-climb curve in bugs discovered per month over a product's life.
 
-Fixing a defect has a substantial (20% - 50%) chance of introducing another. After each fix, one must run the entire bank of test cases previously run against a system to ensure that it has not been damaged in some obscure way (what we now call _regression_).
+// Fixing a defect has a substantial (20% - 50%) chance of introducing another. After each fix, one must run the entire bank of test cases previously run against a system to ensure that it has not been damaged in some obscure way (what we now call _regression_).
 
-Methods of designing programs so as to eliminate, or at least illuminate, side effects can have an immense payoff in maintenance costs. So can methods of implementing designs with fewer people, fewer interfaces, and fewer bugs.
+// Methods of designing programs so as to eliminate, or at least illuminate, side effects can have an immense payoff in maintenance costs. So can methods of implementing designs with fewer people, fewer interfaces, and fewer bugs.
 
-=== System entropy rises over lifetime
+// === System entropy rises over lifetime
 
-Brooks quotes research by Lehman and Belady in which they find that the total number of modules increases linearly with the release number of a large operating system, but that the number of modules affected increases exponentially with the release number.
+// Brooks quotes research by Lehman and Belady in which they find that the total number of modules increases linearly with the release number of a large operating system, but that the number of modules affected increases exponentially with the release number.
 
-All repairs tend to destroy structure, to increase the entropy and disorder of a system. Even the most skillful program maintenance only delays the program's subsidence into unfixable chaos, from which there has to be a ground-up redesign.
+// All repairs tend to destroy structure, to increase the entropy and disorder of a system. Even the most skillful program maintenance only delays the program's subsidence into unfixable chaos, from which there has to be a ground-up redesign.
 
 == 12. Sharp tools
 
-The manager of a project needs to establish a philosophy and set aside resources for the building of common tools, and at the same time recognize the need for personalized tools.
+// The manager of a project needs to establish a philosophy and set aside resources for the building of common tools, and at the same time recognize the need for personalized tools.
 
-The debugging machine, or its software, also needs to be instrumented, so that counts and measurements of all kinds of program parameters can be automatically made.
+// The debugging machine, or its software, also needs to be instrumented, so that counts and measurements of all kinds of program parameters can be automatically made.
 
-The requirement for target machine use has a peculiar growth curve: low activity followed by explosive growth, then a levelling off.
+// The requirement for target machine use has a peculiar growth curve: low activity followed by explosive growth, then a levelling off.
 
-Brooks writes about methods for scheduling teams' access to limited testing machines… this is not relevant any more.
+// Brooks writes about methods for scheduling teams' access to limited testing machines… this is not relevant any more.
 
-System debugging, like astronomy, has always been done chiefly at night.
+// System debugging, like astronomy, has always been done chiefly at night.
 
-The tool that saves the most labor in a programming project is probably a text-editing system.
+// The tool that saves the most labor in a programming project is probably a text-editing system.
 
-Voluminosity in system documentation introduces a new kind of incomprehensibility, but is preferable to severe underdocumentation – which, in my experience, still exists. Rather, documentation tends to be chaotic – think unstructured, poorly maintained Confluence spaces, for example.
+// Voluminosity in system documentation introduces a new kind of incomprehensibility, but is preferable to severe underdocumentation – which, in my experience, still exists. Rather, documentation tends to be chaotic – think unstructured, poorly maintained Confluence spaces, for example.
 
-Brooks encourages the adoption of high-level programming languages, which are now ubiquitous. They improve productivity, introduce fewer bugs, and make debugging easier.
+// Brooks encourages the adoption of high-level programming languages, which are now ubiquitous. They improve productivity, introduce fewer bugs, and make debugging easier.
 
-Brooks notes, as early as 1975, that the classical objections of function, object-code space, and object-code speed have been made obsolete by the advance of language and compiler technology.
+// Brooks notes, as early as 1975, that the classical objections of function, object-code space, and object-code speed have been made obsolete by the advance of language and compiler technology.
 
-Interactive systems will never displace batch systems for some applications. This is still true in 2025, and it probably always will be. Interactive programs and batch processes are two entirely different use cases.
+// Interactive systems will never displace batch systems for some applications. This is still true in 2025, and it probably always will be. Interactive programs and batch processes are two entirely different use cases.
 
 == 13. The whole and the parts
 
-Detailed architectural effort (discussed in earlier chapters) not only improves the *ease of use* of a software product, but also makes it easier to build, and reduces the number of defects.
+// Detailed architectural effort (discussed in earlier chapters) not only improves the *ease of use* of a software product, but also makes it easier to build, and reduces the number of defects.
 
-Many defects concern aspects that were never quite fully specified.
+// Many defects concern aspects that were never quite fully specified.
 
-Brooks suggests that, before any code itself is written, the specification should be handed to an outside testing group to be scrutinized for completeness and clarity. The developers themselves cannot do this.
+// Brooks suggests that, before any code itself is written, the specification should be handed to an outside testing group to be scrutinized for completeness and clarity. The developers themselves cannot do this.
 
-"Wirth's top-down design [by stepwise refinement] is the most important new programming formalization of the [1965-1975] decade." Wirth advocates using as high-level a notation as possible on each step.
+// "Wirth's top-down design [by stepwise refinement] is the most important new programming formalization of the [1965-1975] decade." Wirth advocates using as high-level a notation as possible on each step.
 
-A good top-down design avoids bugs in four ways:
+// A good top-down design avoids bugs in four ways:
 
-1. xxx
-2. xxx
-3. xxx
-4. xxx
+// 1. xxx
+// 2. xxx
+// 3. xxx
+// 4. xxx
 
-Sometimes one has to go back, scrap a high level, and start over.
+// Sometimes one has to go back, scrap a high level, and start over.
 
-*Structured programming* (designing programs whose control structures consist only of a specified set that govern blocks of code, versus miscellaneous branching) is a sound way to avoid bugs and is the right way to think.
+// *Structured programming* (designing programs whose control structures consist only of a specified set that govern blocks of code, versus miscellaneous branching) is a sound way to avoid bugs and is the right way to think.
 
-System debugging is far harder than component debugging. It helps to plan system debugging sessions before starting – ie. have a strategy, a systematic and planned approach.
+// System debugging is far harder than component debugging. It helps to plan system debugging sessions before starting – ie. have a strategy, a systematic and planned approach.
 
-System debugging should begin only after all the components are proven to work. Do not use system testing to try to smoke out interface bugs.
+// System debugging should begin only after all the components are proven to work. Do not use system testing to try to smoke out interface bugs.
 
-Add one component at a time during system debugging.
+// Add one component at a time during system debugging.
 
-It is worthwhile to build lots of debugging scaffolding and test code – this might account for as much as 50% as much of the product being debugged.
+// It is worthwhile to build lots of debugging scaffolding and test code – this might account for as much as 50% as much of the product being debugged.
 
-One must control and document changes and versions, with team members working on *playpen* copied.
+// One must control and document changes and versions, with team members working on *playpen* copied.
 
 == 14. Hatching a catastrophe
 
-// In chapter 14, Brooks suggests the use of [PERT charts] to keep track of critical tasks in a project.
+// // In chapter 14, Brooks suggests the use of [PERT charts] to keep track of critical tasks in a project.
 
-"How does a project get to be a year late?… One day at a time."
+// "How does a project get to be a year late?… One day at a time."
 
-Day-by-day schedule slippage is harder to recognize, harder to prevent, and harder to make up, than calamities.
+// Day-by-day schedule slippage is harder to recognize, harder to prevent, and harder to make up, than calamities.
 
-The first step in controlling a big project on a tight schedule is to _have_ a schedule – made up of milestones and dates for them. Milestones must be concrete, specific, measurable events defined with knife-edge sharpness.
+// The first step in controlling a big project on a tight schedule is to _have_ a schedule – made up of milestones and dates for them. Milestones must be concrete, specific, measurable events defined with knife-edge sharpness.
 
-Chronic schedule slippage is a morale-killer.
+// Chronic schedule slippage is a morale-killer.
 
-_Hustle_ is essnetial for great programming teams, just as for great baseball teams.
+// _Hustle_ is essnetial for great programming teams, just as for great baseball teams.
 
-There is no substitute for a critical-path schedule. The preparation of the critical-path schedule is the most valuable part of its use; this process identifies the dependencies, and estimating the components forces a great deal of very specific planning very early in a project.
+// There is no substitute for a critical-path schedule. The preparation of the critical-path schedule is the most valuable part of its use; this process identifies the dependencies, and estimating the components forces a great deal of very specific planning very early in a project.
 
-Delivery managers need accurate status reports. Accepting status reports without panic or preemption will encourage honest reporting. Status reviews must be shared.
+// Delivery managers need accurate status reports. Accepting status reports without panic or preemption will encourage honest reporting. Status reviews must be shared.
 
 == 15. The other face
 
-// Chapter 15 provides guidance on documenting large programs. The book also summarizes modeling notations that were popular at the time, and he draws comparisons between [top-down] and [bottom-up] approaches to system design.
+// // Chapter 15 provides guidance on documenting large programs. The book also summarizes modeling notations that were popular at the time, and he draws comparisons between [top-down] and [bottom-up] approaches to system design.
 
-This is all about *user documentation* (as opposed to developer documentation).
+// This is all about *user documentation* (as opposed to developer documentation).
 
-The documentation is "the other face" of the product to the user. This is just as important as the product itself.
+// The documentation is "the other face" of the product to the user. This is just as important as the product itself.
 
-Even for the most private of programs, prose documentation is necessary, for memory will fail the user-author.
+// Even for the most private of programs, prose documentation is necessary, for memory will fail the user-author.
 
-But user documentation is rarely done very well. There are many reasons for this, including schedule pressure, but Brooks identifies knowledge of _how_ to document effectively as being a key reason. Technical writing, still in 2025, is a neglected art, and rarely appears listed in job requirements.
+// But user documentation is rarely done very well. There are many reasons for this, including schedule pressure, but Brooks identifies knowledge of _how_ to document effectively as being a key reason. Technical writing, still in 2025, is a neglected art, and rarely appears listed in job requirements.
 
-Most documentation fails in giving too little _overview_. Good documentation will stand way back, then zoom in slowly.
+// Most documentation fails in giving too little _overview_. Good documentation will stand way back, then zoom in slowly.
 
-Critical user documentation should be drafted before the program is built, for it embodies basic planning decisions. It should describe nine things:
+// Critical user documentation should be drafted before the program is built, for it embodies basic planning decisions. It should describe nine things:
 
-1. xxxx
-2. xxxx
-3. xxxx
-4. xxxx
-5. xxxx
-6. xxxx
-7. xxxx
-8. xxxx
-9. xxxx
+// 1. xxxx
+// 2. xxxx
+// 3. xxxx
+// 4. xxxx
+// 5. xxxx
+// 6. xxxx
+// 7. xxxx
+// 8. xxxx
+// 9. xxxx
 
-A program should be shipped with a few test cases, some for valid input data, some for borderline input data, and some for clearly invalid input data – this is for the benefit of end users.
+// A program should be shipped with a few test cases, some for valid input data, some for borderline input data, and some for clearly invalid input data – this is for the benefit of end users.
 
-Developer documentation – documentation for program internals, for the people who must modify the program – should contain five kinds of things:
+// Developer documentation – documentation for program internals, for the people who must modify the program – should contain five kinds of things:
 
-1. xxxx
-2. xxxx
-3. xxxx
-4. xxxx
-5. xxxx
+// 1. xxxx
+// 2. xxxx
+// 3. xxxx
+// 4. xxxx
+// 5. xxxx
 
-The flow chart is the most oversold piece of program documentation. Logic diagrams have been made obsolete by high-level programming language. A flow chart is just a _diagrammed high-level language – so it's redundant.
+// The flow chart is the most oversold piece of program documentation. Logic diagrams have been made obsolete by high-level programming language. A flow chart is just a _diagrammed high-level language – so it's redundant.
 
-To keep documentation maintained, is is crucial that is be incorporated into the source program, rather than be kept as a separate document.
+// To keep documentation maintained, is is crucial that is be incorporated into the source program, rather than be kept as a separate document.
 
-Three notions are key to minimizing the volume of documentation:
+// Three notions are key to minimizing the volume of documentation:
 
-* Use parts of the program that have to be there anyway, such as names and declarations, to carry as much of the documentation as possible.
+// * Use parts of the program that have to be there anyway, such as names and declarations, to carry as much of the documentation as possible.
 
-* Use space and format to show subordination and nesting to improve readability.
+// * Use space and format to show subordination and nesting to improve readability.
 
-* Insert the necessary prose documentation into the program as paragraphs of comments, especially in module headers.
+// * Insert the necessary prose documentation into the program as paragraphs of comments, especially in module headers.
 
-In documentation for use by program modifiers, tell _why_ things are like they are, rather than merely _how_ they are. _Purpose_ is the key to understanding; even high-level language syntax does not at all convey purpose.
+// In documentation for use by program modifiers, tell _why_ things are like they are, rather than merely _how_ they are. _Purpose_ is the key to understanding; even high-level language syntax does not at all convey purpose.
 
-Self-documenting programming techniques find their greatest use and power in high-level languages used with on-line systems, which are the tools one _should_ be using.
+// Self-documenting programming techniques find their greatest use and power in high-level languages used with on-line systems, which are the tools one _should_ be using.
 
 == 16. No silver bullet
 
-== Supplementary chapters in the 20th anniversary edition
+// Title: "No silver bullet - essence and accident"
+
+== 17. "No silver bullet" revisited
+
+(Supplementary chapter in the 20th anniversary edition)
+
+== 18. Propositions of The Mythical Man-Month: true or false?
+
+(Supplementary chapter in the 20th anniversary edition)
 
 == Epilogue
 
 [quote, Fred Brooks]
 ____
-The tar pit of software engineering will continue to be sticky for a long time to come… software system's are perhaps the most intricate and complex of man's handiworks. The management of this complex craft will demand our best use of new languages and systems, our best adaptation of proven engineering management methods, liberal doses of common sense, and a God-given humility to recognize our fallibility and limitations.
+The tar pit of software engineering will continue to be sticky for a long time to come. One can expect the human race to continue attempting systems just within or just beyond our reach; and software system's are perhaps the most intricate and complex of man's handiworks. The management of this complex craft will demand our best use of new languages and systems, our best adaptation of proven engineering management methods, liberal doses of common sense, and a God-given humility to recognize our fallibility and limitations.
 ____
 
+Amen.
+
+''''
+
+== Related reading
+
+* https://curtclifton.net/papers/MoseleyMarks06a.pdf[Out of the Tar Pit] — 2006 paper by Ben Moseley and Peter Marks.
