@@ -73,3 +73,26 @@ The core agile values are still incredibly valuable. But the irony is that curre
 
 ----
 
+Thoughts:
+
+* As an industry, we need to resolve the problem of how to reduce risk for the businesses for whom we build software. It's not sufficient to embrace uncertainty and change. Business operate on budgets and timelines. We need to find ways to manage uncertainty in a way that is acceptable to business stakeholders.
+
+* Many organization proudly declare themselves "Agile", but in practice they are just doing waterfall with extra meetings. Because of this, agile methodologies become discredited. It's not agile that is the problem, it's the way it's being implemented.
+
+* How can we help organizations to truly embrace agility, rather than just going through the motions? Organization want to have the nice things about agile (speed, innovation, adaptability) without the discomfort of uncertainty and change - they want to maintain detailed roadmaps and deadlines.
+
+* Engineering teams start with enthusiasm for agile ways of working, only to find themselves executing predetermined plans with little room for iteration or learning.
+
+* The gap between management expectations and engineering realities grows steadily over time. Management asks for commitment to specific features months in advance. Engineering agrees, hoping to maintain some flexibility. When changes inevitably arise or estimates prove wrong, trust erodes on both sides. Management sees a team that can't deliver on promises. Engineering sees leadership that doesn't understand the realities of software development.
+
+* Each side then retreats into their comfort zones. Management tightens control, demanding more detailed plans and status reports. Engineering becomes defensive, feeling reduced to order-takers rather than problem solvers.
+
+* Resentment builds on both sides. Yet both sides want the same outcome: successful products delivered efficiently. But without genuine understanding and trust, the gap widens.
+
+* Breaking this cycle requires courage from both sides. Leadership needs to truly embrace uncertainty -- and accept that software development is a process of _design_ not _construction_ and empower teams to solve problems.
+
+* But engineering also needs to communicate challenges early and often. I don't think we're very good at doing this.
+
+* Most importantly, both need to acknowledge that real agility isn't about following a methodology; it's about creating an environment where adaptation and learning are valued over rigid adherence to plans.
+
+* When what flows down the organisational hierarchy is orders rather than intent, this divide will never truly heal. Until leaders share the 'why' and trust teams with the 'how', we're just playing agile theatre.
