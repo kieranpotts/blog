@@ -1,18 +1,13 @@
-name: Commit validation (branches)
+name: Commit validation (trunk)
 
 on:
   push:
     branches:
-      - constraint/*
-      - feature/*
-      - fix/*
-      - maintenance/*
-      - refactor/*
-      - release/*
+      - dev
 
 jobs:
   validate-commit-messages:
-    name: Validate commit messages on branches
+    name: Validate commit messages on trunk
     runs-on: ubuntu-latest
 
     steps:
@@ -24,6 +19,4 @@ jobs:
           fetch-depth: 0
 
       - name: Validate new commit messages
-        uses: kieranpotts/actions/validate-new-commit-messages@dev
-        with:
-          trunk: false
+        uses: kieranpotts/actions/validate-commits@dev
