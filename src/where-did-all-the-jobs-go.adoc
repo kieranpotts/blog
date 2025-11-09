@@ -416,6 +416,14 @@ DORA research suggests AI tools can help teams to move faster, increasing throug
 
 The value of AI tools is unlocked by the surrounding technical and cultural environment.
 
+----
+
+TODO: AI is great for yak shaving! ... In computer science, to shave a yak means you start to work on a problem, but to solve it you must first solve another sub-problem. So you start working on that sub-problem, and it emerges it requires you to solve another sub-problem... and you get several levels deep when you realize that the effort involved in solving the deepest problem is not worth doing to solve the original problem. ... Gen AI is fantastic for automating yak shaving - it's really good at solving lots of low-level problems. It's great for automating mundane tasks you have to do while working on a problem, where you know the outcome you want but it's not worth doing all the grunt work to get the job done. - Neal Ford, Thoughtworks Technology Podcast.
+
+== Emerging AI anti-patterns
+
+''''
+
 ## Related links
 
 * https://www.economist.com/business/2024/09/29/ai-and-globalisation-are-shaking-up-software-developers-world[AI and globalization are shaking up software developers' world],
