@@ -4,7 +4,7 @@ Kieran Potts, 28 November 2025
 :docinfo: shared
 :nofooter:
 
-Frederick P Brooks Jr's classic book _The Mythical Man-Month: Essays on Software Engineering_ was published in 1975 – 50 years ago. The book was one of the first published analyses of the challenges of large-scale software development – an emerging field in 1975.
+Frederick P Brooks Jr's classic book _The Mythical Man-Month: Essays on Software Engineering_ was published in 1975 – 50 years ago. The book was one of the first analyses of the challenges of large-scale software development.
 
 _The Mythical Man-Month_ introduced many ideas and principles that were hugely influential on early practitioners of our craft. But which ideas have withstood half a century of technological change, and which have not?
 
@@ -14,21 +14,21 @@ I got myself a copy of the original 1975 edition and the extended 20th anniversa
 
 _The Mythical Man-Month_ is really a collection of standalone essays rather than a cohesive thesis. Nevertheless, there are some key themes that run throughout. The most prominent theme is the one introduced in this opening chapter: that the essential challenge of software development is the management of complexity.
 
-Throughout the book, Brooks draws on his own experiences, notably as the manager who oversaw the initial design of IBM's OS/360 operating system. At the time, OS/360 was one of the biggest, most ambitious, most complex software projects ever attempted. At the peak of the project, more than 1,000 people we working on it.
+Throughout the book, Brooks draws on his own experiences, notably as the manager who oversaw the initial design of IBM's OS/360 operating system. At the time, OS/360 was one of the biggest, most ambitious, most complex software projects ever attempted. At the peak of the project, more than 1,000 people worked on it.
 
 But, Brooks acknowledges, the project was not "wholly successful". The initial release of OS/360, in 1966, was delivered "late, it [used] more memory than planned, the costs were several times the estimate, and [the first version] did not perform very well".
 
 The opening chapter delivers Brooks's sharp post-mortem of the OS/360 project. He concludes that the fundamental reason for the project's difficulties was that the managers had seriously underestimated the overall costs of delivering such a large-scale software system. This happened because the estimates were based solely on the construction of the individual parts of the system. What the managers had not accounted for was: (a) the integration costs of all those components; and (b) the "productization" of the system as a whole.
 
-Brooks estimates that the work of designing the interfaces between all the components of a system, and coordinating their integration and performing incremental integration testing, has the potential to _triple_ the initial cost of coding all the components in isolation. Costs may triple again for all the work that goes into preparing a large-scale software system for distribution as shrink-wrapped software for general use by the public. For the OS/360 project, they had not fully accounted for how much extra rework and testing would be needed to make the system run reliably in "many operating environments, for many sets of data", and for time spent preparing user-facing documentation and other packaging.
+Brooks estimates that the work of designing the interfaces between all the components of a system, coordinating their integration, and incrementally extending integration tests, has the potential to _triple_ the initial cost of coding all the components in isolation. Costs may triple again for all the work that goes into preparing a large-scale software system for distribution as shrink-wrapped software for general use by the public. For the OS/360 project, they had not fully accounted for how much extra rework and testing would be needed to make the system run reliably in "many operating environments, for many sets of data", and for time spent preparing user-facing documentation and other packaging.
 
-In total, building large, general-purpose, shrink-wrapped software products can cost up to nine times more than writing all the code as separate, non-integrated, private libraries. To put it another way, programming effort is a very small amount of the overall cost of delivering a large-scale software system.
+In total, building large, general-purpose, shrink-wrapped software products can cost up to nine times more than writing all the code as separate, non-integrated, private libraries. To put it another way, the writing of code is a very small amount of the overall cost of delivering a large-scale software system.
 
 Brooks reflects that large-scale software development, like OS/360, is inherently hard. The reality of developing commercial software for a living, Brooks writes, is that there are many "dreary hours of tedious, painstaking labor", often involving analysis of code written by other people who have moved on to other projects already."
 
 50 years later, this all sounds depressingly familiar.
 
-Despite the immense technological advances of the last half-century – in computer hardware, in programming languages and runtime environments, and in tools and automation that support every aspect of software delivery – the core challenges of large-scale software development remain largely the same. Project failures remain commonplace.
+Despite the immense technological advances of the last half-century – in computer hardware, in programming languages and runtime environments, and in tools and automation that support every aspect of software delivery – the core challenges of large-scale software development remain much the same. Project failures are still commonplace.
 
 The essential challenge of software development remains the management of complexity. Brooks draws the colorful analogy that large-scale software development is like "the mortal struggles of great beasts in the tar pits". This is represented by the book's cover image, a sketch of Charles Knight's 1925 painting that depicts the great mammoths of the Pleistocene struggling to free themselves from the tar pits of Southern California.
 
@@ -54,14 +54,14 @@ The second explanation that Brooks provides for poor estimation is the assumptio
 
 Brooks's central argument for this is that adding people to a late project _increases total effort_. There's extra effort involved in reorganizing the project delivery plan and managing the larger team. Meanwhile, in-flight work streams are disrupted by the "repartitioning" of work. There follows a permanent increase in intercommunication, required to coordinate the development of dependencies and interfaces, and to coordinate integration testing. There's also more time spent training and onboarding new people.
 
-And some programming tasks cannot be parallelized. Some tasks can only be done sequentially, and so cannot be shared between more programmers. If programmers are already optimally allocated to these tasks, adding more programmers will not speed up completion. To illustrate this point, Brooks offers the suitably colorful analogy of child birth:
+And some programming tasks just cannot be parallelized. Some tasks can only be done sequentially, and so cannot be shared between more programmers. If programmers are already optimally allocated to these tasks, adding more programmers will not speed up their completion. To illustrate this point, Brooks offers the suitably colorful analogy of child bearing:
 
 [quote, Fred Brooks]
 ____
 The bearing of a child takes nine months, no matter how many women are assigned.
 ____
 
-Brooks coins the term "man-month" to represent one unit of additional manpower (one person working for one month). Because adding resources to a project in the form of extra man-months increases overall effort, it does not necessarily correspond to an increase in the speed of progress. And yet, Brooks writes 50 years ago, this was a widely held belief and a common practice – hence the mythical nature of extra man-month resources!
+Brooks coins the term "man-month" to represent one unit of additional manpower (one person working for one month). Because adding resources to a project in the form of extra man-months increases overall effort, it does not necessarily correspond to an increase in the speed of progress. And yet, 50 years ago, Brooks says this was a widely held belief and a common practice – hence the mythical nature of extra man-month resources!
 
 [quote, Fred Brooks]
 ____
@@ -83,19 +83,19 @@ ____
 
 The third explanation that Brooks provides for poor estimation is what he terms "regressive schedule disaster".
 
-Brooks writes that project progress tends to be poorly monitored, so when it becomes apparent that schedules have slipped, it's usually already too late to do anything about it. It might even be too late to implement effective strategies, like decreasing scope or simplifying the design. The only thing left to try is to throw more people at the problem – which makes matters worse.
+Brooks writes that project progress tends to be poorly monitored, so when it becomes apparent that schedules have slipped, it's usually already too late to do anything about it. If it's too late to implement effective strategies, like decreasing scope or simplifying the design, the only thing left to try is to throw more people at the problem – which makes matters worse.
 
-In this situation, Brooks says the only recourse is to reschedule the work with the original team members, "un-augmented" by new recruits. This has the effect of delaying completion of the project, but at least overall costs do not needlessly increase through wasted resources.
+In this situation, Brooks says the only recourse is to reschedule the work with the original team members, "un-augmented" by new recruits. This has the effect of delaying completion of the project, but at least overall costs do not needlessly increase through spend on additional staff who will ultimately be under-utilized.
 
 Better to increase the number of months than then number of men.
 
 === System testing must be done last
 
-The fourth explanation that Brooks' gives for poor estimations is that system testing and debugging must be done last, due to the sequential nature of the work. Consequently, testing "is usually the most mis-scheduled part of programming" and multiple rounds of testing and debugging can take up to half the overall schedule.
+The fourth explanation that Brooks gives for poor estimations is that system testing and debugging must be done last, due to the sequential nature of the work. Consequently, testing "is usually the most mis-scheduled part of programming" and multiple rounds of testing and debugging can end up accounting for as much as half of the overall development schedule.
 
 === Gutless estimating
 
-The fifth and final explanation that Brooks gives for poor estimation of software projects is that we have a tendency to work to schedules dictated by the customer rather than to bravely guess the effort required to deliver a satisfactory product.
+The fifth and final explanation that Brooks gives for poor estimation of software projects is the tendency we have to work to schedules dictated by our customers, rather than being brave and attempting to make a reasonable guess about the real effort that will be required to deliver a satisfactory product.
 
 Brooks uses the analogy of cooking an omelette. It typically takes a couple of minutes to cook an omelette. But if, after two minutes, the omelette is not set, the customer has two choices: wait, or eat the omelette raw. The chef has a third choice: turn up the heat. But the effect would be to serve a poor quality product – burnt on the outside, and perhaps still raw in the centre.
 
@@ -114,31 +114,32 @@ Brooks suggests that the underlying reason for such widespread "gutless estimati
 
 Our industry's immaturity in the science of project estimating and scheduling is, 50 years later, an enduring problem.
 
-Even today, project managers routinely believe that adding more people to a late project can solve schedule slippage. I've seen this myself. It's especially commonplace in consultancies and outsourcing firms, where the software house bills its customers in man-hours and therefore has a commercial incentive to add as many people as possible to their projects. But I've seen it in software houses, too – which should know better.
+Even today, project managers routinely believe that adding more people to a late project can solve schedule slippage. I've seen this myself. It's especially commonplace in consultancies and outsourcing firms, where the software house bills its customers in man-hours and therefore has a commercial incentive to add as many people as possible to their projects. But I've seen it in software houses, too – they should know better.
 
 Brooks is most convincing in his argument that the very notion that the development of software can be accurately estimated is deeply flawed. Software development is an inherently complex and unpredictable activity. In every software project, even those with stable and known requirements, there will always be some requirements that are emergent. Requirements may emerge only through design and construction, or even later still, when working software is finally put into the hands of real users. This is the _nature_ of software development, which is more of a design problem than a construction task.
 
-The misplaced belief that the delivery of complex software can be planned in meticulous detail is still a widely held in 2025.
+The misplaced belief that the delivery of complex software can be planned in meticulous detail is still widely held in 2025.
 
-Of course, some things have improved. In the intervening years, our industry has universally adopted iterative and incremental development practices, in which small chunks of work are delivered at regular intervals with testing and debugging done in parallel to the design and construction. Thus, the correctness of the evolving system is continuously evaluated, rather than waiting until the system is complete. The problem of testing being done last, and thus defects in the design being discovered late, has been solved.
+Of course, some things have improved. In the intervening years, our industry has universally adopted iterative and incremental development practices, in which small chunks of work are delivered at regular intervals with testing and debugging done in parallel to the design and construction. Thus, rather than testing being left until the system is complete, instead the correctness of the evolving system is continuously evaluated throughout the development life cycle. Through continuous integration and testing, we've solved the problem of defects in the design and construction being discovered late. At least this is rarely a cause for project overruns anymore.
 
-I'm not also convinced by Brooks' explanation that poor estimation is a consequence of the relatively young ages of computer programmers. Sure, younger developers lack the necessary experience to do accurate estimates, but in my experience senior developers can be just as guilty of optimism bias. Contingency planning and risk management are still poorly practiced in many software projects today – regardless of who's drawing up the project plans.
+I'm also not convinced by Brooks' explanation that poor estimation is a consequence of the relatively young ages of computer programmers. Sure, younger developers lack the necessary experience to do accurate estimates, but in my experience senior developers can be just as guilty of optimism bias. Contingency planning and risk management are still poorly practiced in many software projects today – regardless of who's drawing up the project plans.
 
 I think there are many other explanations why poor estimates persist. There certainly remains a lack of maturity in the methods and tools we use for estimation. Overuse of proxy measures, such as T-shirt sizes and story points, which do not directly correspond to real-world effort, rather than more quantitative data-driven estimation techniques, is commonplace today. Estimations tend to be done very early in the development lifecycle, too. We tend to make estimates base on high-level requirements – even vague and incomplete ones – rather than based on comprehensive, high-fidelity solution designs. If you want good estimates, you need the solution to be sufficiently flesh-out with enough detail to reveal the true scope and complexity of the problem. This is true of every engineering discipline.
 
-Good estimation is done bottom-up from low-level technical designs, rather than top-down from high-level business requirements. But commercial pressures often force estimates to be done from requirements rather than designs. And gutless estimation, in which product manager produce estimates that align with business expectations rather than technical realities, is still very, very common.
-
-// -------------------------------------------------------------------------------------------------
+Good estimation is done bottom-up from low-level technical designs, rather than top-down from high-level business requirements. But commercial pressures often force estimates to be done from requirements rather than designs. And gutless estimation, in which product managers produce estimates that align with business expectations rather than technical realities, is still all-too common.
 
 == The surgical team
 
-In the third chapter, Brooks introduces the idea of the *surgical team* as his proposed solution to the problems of large-scale software development.
+In the third chapter, Brooks proposed his solution to the problems of large-scale software development. It is the idea of the surgical team.
 
-Brooks observes that many program managers believe they are better off have a small number of very skilled programmers on their team, rather than a large number of mediocre ones.
+This idea came from an observation that some project managers believed they were better off having a small number of very skilled programmers on their team, rather than a large number of mediocre ones. Brooks took this idea and ran with it.
 
-Brooks argues that large-scale projects should be broken down into smaller subsystems, with each subsystem built by one small, independent team. Each team should operate similarly to a surgical team in a hospital. Each team would have a chief programmer, the surgeon, who is in charge of the whole thing. The rest of the team members try to help him complete the project (the surgery).
+He argues that large-scale projects should be broken down into smaller subsystems, with each subsystem built by one small, "sharp" team. Each team should operate similarly to a surgical team in a hospital. Each team would have a chief programmer, the surgeon, who is in charge of the whole thing. The rest of the team members try to help him complete the project (the surgery).
 
-The leaders of the surgical teams also collaborate with each other, to coordinate the work on the subsystems so they can be successfully integrated together to compose a complete solution. Thus, communication overhead throughout the overall project is minimized by having a hierarchy of delivery teams, each working on discrete subsystems of the overall solution.
+The leaders of the surgical teams would also collaborate with each other, to coordinate the integrations between the subsystems for which they were each responsible.
+
+Through this organization structure, communication overhead is minimized by having a hierarchy of delivery teams, each working on discrete subsystems of the overall solution.
+
 
 In a surgical team, the whole project is the brainchild of the surgeon. The surgeon is responsible for defining and maintaining the *conceptual integrity* of the solution. By comparison, Brooks writes, in *collaborative teams* everyone is equal and everyone can have input into the direction of the project, even if this sometimes causes chaos.
 
