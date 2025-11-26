@@ -32,7 +32,7 @@ Despite the immense technological advances of the last half-century – in compu
 
 The essential challenge of software development remains the management of complexity. Brooks draws the colorful analogy that large-scale software development is like "the mortal struggles of great beasts in the tar pits". This is represented by the book's cover image, a sketch of Charles Knight's 1925 painting that depicts the great mammoths of the Pleistocene struggling to free themselves from the tar pits of Southern California.
 
-// TODO: Cover photos
+image::./_/media/images/the-mythical-man-month.jpg[]
 
 "Large and small, massive and wiry, team after team has become entangled in the tar," Brooks writes. His thesis is that it is never one problem, but rather a combination of intractable problems, some unexpected, that make it difficult to move complex projects forward. "No one thing seems to cause the difficulty – any particular paw can be pulled away. But the accumulation of simultaneous and interacting factors brings slower and slower motion."
 
@@ -70,7 +70,8 @@ ____
 
 Thus, once a schedule is proven to be unrealistic, there may not be anything that can be done to put the project back on track. Adding more people to a project _will_ decrease the productivity of individual team members, and there comes a tipping point where this decrease in productivity more than offsets the overall addition of resources – so delivery speed _slows_ despite the extra manpower.
 
-// TODO: Replicate diagram from page 19.
+.Correlation between time and the number of workers for a project with complex interrelationships
+image::./_/media/diagrams/men-versus-months.drawio.png[]
 
 The more complex the interrelationships between the component parts of the system under construction, the greater this effect. Today, we know this as Brooks's Law.
 
@@ -130,82 +131,76 @@ Good estimation is done bottom-up from low-level technical designs, rather than 
 
 == The surgical team
 
-In the third chapter, Brooks proposed his solution to the problems of large-scale software development. It is the idea of the surgical team.
+In the third chapter, Brooks pitches his solution to the problems of large-scale software development: the surgical team.
 
-This idea came from an observation that some project managers believed they were better off having a small number of very skilled programmers on their team, rather than a large number of mediocre ones. Brooks took this idea and ran with it.
+The roots of this idea lie in the observation that having a small number of very skilled programmers on a team often proves to be more effective than having a large number of average ones.
 
-He argues that large-scale projects should be broken down into smaller subsystems, with each subsystem built by one small, "sharp" team. Each team should operate similarly to a surgical team in a hospital. Each team would have a chief programmer, the surgeon, who is in charge of the whole thing. The rest of the team members try to help him complete the project (the surgery).
+Brooks quotes a now-infamous https://dl.acm.org/doi/10.1145/362851.362858[1968 paper] by Sackman _et al_ that postulated that very good programmers can be up to ten times as productive as poor ones.
 
-The leaders of the surgical teams would also collaborate with each other, to coordinate the integrations between the subsystems for which they were each responsible.
+// TODO: Print image from the paper instead.
 
-Through this organization structure, communication overhead is minimized by having a hierarchy of delivery teams, each working on discrete subsystems of the overall solution.
+[quote, Sackman et al, Communications of the ACM January 1968]
+____
+The "horrid" portion of the performance frequency distribution is the long tail at the high level, the positively skewed part which shows that one poor performer can consume as much time as 5, 10, or 20 good ones. Validated techniques to weed out these poor performers could result in vast savings in time, effort, and cost.
+____
 
+This is the origin of the myth of the 10x programmer. At the time, the qualitative analysis provided by this paper reinforced qualitative observations made by Brooks and other project managers that small "sharp" teams are better than large blunt ones.
 
-In a surgical team, the whole project is the brainchild of the surgeon. The surgeon is responsible for defining and maintaining the *conceptual integrity* of the solution. By comparison, Brooks writes, in *collaborative teams* everyone is equal and everyone can have input into the direction of the project, even if this sometimes causes chaos.
+Brooks expands on his earlier point that throwing lots of man-months at a project can actually slow down delivery. He writes, "the brute-force approach is costly, slow, inefficient, and produces systems that are not conceptually integrated."
 
-Brooks quotes research by Sackman, Grant and Erickson that very good professional programmers are _ten times_ as productive as poor ones (at same training and two-year experience level) – this is the origin of the 10x programmer. The author's data showed no correlation between experience and performance, but Brooks doubts the universality of that finding.
+Better for software development teams to be composed of a small number of "first-class" programmers rather than many mediocre ones. It is why, Brooks concludes, there are many accounts of two programmers working in a garage to build "an important program that surpasses the best efforts of large teams". The cliche of the garage startup has deeper roots than I realized!
 
-// TODO: Conclusion - the analogy of the surgical team is not well remembered, but the principles are widely understood. This principle manifests in job roles like "technical lead" and "solution architect"…
+But the problem with small teams is they are too small for really big problems. Brooks notes that there were over 1,000 people working on OS/360 at the peak of that project, and a smaller 200-man team would have taken 25 years to achieve the same result. For large-scale software, the delivery timescales achievable by small teams are just not commercially viable.
 
-An underlying thesis of the book is that "the brute-force approach is costly, slow, inefficient, and produces systems that are not conceptually integrated", ie. the preference is for small surgical teams  of "first-class people" rather than hundreds of mediocre programmers.
+If we want to prioritize development efficiency and the quality of the final product, we should have small teams of highly skilled, experienced practitioners doing the design and construction. But to deliver large systems in a timely manner, we need to have very large teams. How can we reconcile these two constraints?
 
-It is why, Brooks concludes, there are many accounts of two programmers working in a garage to build "an important program that surpasses the best efforts of large teams".
+Brooks draws on a solution first proposed by Harlan Mills in an IBM paper published in 1971.
 
-The cliché of the garage startup has much deeper roots than I realized!
-
-Most qualified software development managers would agree that the ideal approach to software development is to have a small, sharp team, "which by common consensus shouldn't exceed 10 people", over hundreds of average programmers. ... For efficiency, and conceptual integrity.
-
-But this isn't practical for very large-scale software projects. Brooks notes that the OS/360 project peaked at over 1,000 people working on it concurrently. A smaller 200-man team would have taken 25 years to achieve what was done in just a few years by the larger team. This sort of timescale is just not commercially viable.
-
-The problem with the small team ideal is that it is just too small for really big systems. You just go too slowly.
-
-How can we reconcile the need for considerable manpower, with the desire for efficiency and conceptual integrity?
-
-Brooks cites a proposal by Harlan Mills, titled "Chief programmer teams, principles, and procedures" and published in an IBM report in 1971.
-
-[quote]
+[quote, Fred Brooks]
 ____
 Mills proposes that each segment of a large job be tackled by a team, but that the team be organized like a surgical team rather than a hog-butchering team. That is, instead of each member cutting away on the problem, one does the cutting and the others give him every support that will enhance his effectiveness and productivity.
 ____
 
-In this delivery model, the *chief programmer* is like the surgeon. "He personally defines the functional and performance specifications, designs the program, codes it, tests it, and writes its documentation". The chief programmer is supported by a *copilot* who's main function is to contribute to discussions on the design and implementation. The copilot often represents his team in discussions with the chief programmer, and he researches and proposes alternative design strategies for the chief's consideration.
+The idea is there would be, not one giant team, but multiple smaller and independent teams. The overall solution is designed as a series of small subsystems, with each system designed and built by one of the teams.
 
-The idea is that "few minds are involved in design and construction, yet many hands are brought to bear".
+Each team operates similarly to a surgical team in a hospital. Each team has a chief programmer, the surgeon, who is in charge of the whole thing. The rest of the team members try to help him complete the project (the surgery).
 
-// Not dissimilar to pair and mob programming...
+The chief programmer is responsible for defining and maintaining the conceptual integrity of his team's part of the overall solution. "He personally defines the functional and performance specifications, designs the program, codes it, tests it, and writes its documentation". (We'll return to the idea of conceptual integrity in the next chapter.)
 
-Other roles include: an *administrator* "who handles money, people, space, and machines"; an *editor* who is responsible for generating the documentation; one *secretary* each to support the administrator and the editor; a *program clerk* who is responsible for "maintaining all the technical records of the team in a programming-product library"; a *toolsmith* who implements any special tools needed by the team, such as for "file-editing, text-editing, and interactive debugging"; and a *tester* who is responsible for "testing the hole thing", preparing suitable test cases from the functional specifications, and devising dummy data for day-to-day debugging.
+The chief programmer is supported by a copilot who researches design options for the chief programmer to consider, drawing upon the experience and expertise of the rest of the team. The idea is that "few minds are involved in design and construction, yet many hands are brought to bear".
 
-Mills also proposed that each team be supported by a *language lawyer* who is an expert in the programming language being used, and who provides consultancy to the team in how best to use the language and avoid its common pitfalls.
+The chief programmers across all the teams collaborate with each other to coordinate the integrations between the subsystems for which they are each responsible. By structuring an organization as a hierarchy of delivery teams like this, overall communication overhead is minimized. You need only to coordinate the work of the chief programmers, who represent a small portion of the overall number of technicians. Large-scale projects are thus more efficient and more scalable.
 
-Today, many of these roles have been automated away or folded into the responsibilities of the computer programmers.
+Mills named this team structure the https://wiki.c2.com/?ChiefProgrammerTeam[chief programmer team]. Brooks rechristened it the surgical team.
 
-Brooks notes that in a conventional team "the partners divide the work, and each is responsible for the design and implementation of part of the work". But in the surgical team, "the surgeon and copilot are each cognizant of all of the design and all of the code". Brooks argues that this helps to maintain the conceptual integrity of the overall design. In 1975, this approach also offered a work around to more practical constraints, such as the need to allocate storage space and disk access to each individual contributor.
+Although terms like "surgical team", "chief programmer", and "copilot" will be unfamiliar to most software developers today, the underlying principles are well understood. The responsibilities of the chief programmer are today split between the technical lead and solution architect. The concept of having a chief programmer supported by a copilot today manifests itself in the pair programming methodology. And surgical teams are conceptually similar to the process of mob programming.
 
-The "lack of division of the problem and the [lack of a] superior-subordinate relationship... make it possible for the surgical team to act _uno animo_".
+Harlan Mills' work, later popularized by Brooks in _The Mythical Man-Month_, laid the groundwork for the software development best practices of 2025.
 
-"Yet the specialization of function of the remainder of the team is the key to its efficiency, for it permits a radically simpler communication pattern among the members." This is perhaps something we have lost. We've tended toward generalization rather than specialization. And yet, any economist would tell you that the path to productivity is via specialization.
+Of source, some of the details of the original surgical team design are no longer relevant. Besides the chief programmer and copilot, the original surgical teams also had an administrator to "handle money, people, space, and machines"; a technical editor responsible for maintaining documentation; a "program clerk" responsible for "maintaining all the technical records of the team in a programming-product library"; a "toolsmith" who implements any special tools needed by the team, such as for "file-editing, text-editing, and interactive debugging"; a "language lawyer", someone who is an expert in the programming language and operating system, and who provides consultancy to the team in how best to use them; and a tester, responsible for preparing suitable test cases from the functional specifications, and devising dummy data for day-to-day debugging. Oh, and the administrator and editor would each have their own personal secretaries. Different world.
 
-Brooks closes this chapter by arguing that it is easier to scale surgical teams because there is less team-to-team communication overhead. You need only to coordinate the work of the chief programmers, who represent a small number of the overall number of programming specialists.
+Today, most roles of the surgical team have been automated or absorbed into the broad responsibilities of programmers and testers. Every team member now works at the coalface, with no supporting roles. In the old surgical team model, only the chief programmer – or their deputy – actually wrote code, while two or three others handled support duties. But that setup wasn't about improving communication so much as dealing with the practical limits of the time, when costly storage and disk access couldn't be shared by everyone at once. Today there are no such constraints.
 
-The "entire system also must have conceptual integrity, and that requires a system architect to design it all, from the top down".
+As for the idea of 10x engineers, the findings of the original Sackman paper have been debunked by subsequent research. The 1968 study tested programmers on tasks that did not represent real-world programming problems, and it did not account for the impact of collaboration, which we now know to be more important than individual capability. And yet the software industry still has a nauseating habit of glorifying "rockstar" developers and undervaluing teamwork and soft skills.
+
+== Conceptual integrity
+
+// The "entire system also must have conceptual integrity, and that requires a system architect to design it all, from the top down".
 
 // TODO: Bottom-up approach has become prevalent.
 
-== Chapter 4. Conceptual integrity
+// Brooks defines *conceptual integrity* in chapter four, titled "Aristocracy, Democracy, and System Design". He argues this is probably the most important aspect of large system programming, but one that is often overlooked as programmers have a tendency to focus on the design of individual features rather than the design of the overall system. Brooks argues that large-scale systems should have a consistent design philosophy flow through all subsystems. It is better to have one good idea and carry it through the project, than having several uncoordinated good ideas.
 
-Brooks defines *conceptual integrity* in chapter four, titled "Aristocracy, Democracy, and System Design". He argues this is probably the most important aspect of large system programming, but one that is often overlooked as programmers have a tendency to focus on the design of individual features rather than the design of the overall system. Brooks argues that large-scale systems should have a consistent design philosophy flow through all subsystems. It is better to have one good idea and carry it through the project, than having several uncoordinated good ideas.
+// Conceptual integrity can be preserved, Brooks argues, by having one system architect who designs the whole system from top-to-bottom. Brooks argues that the system architect should stick with the design of the system, and not get involved with the implementation. Implementation and design should be treated as two separate phases. A system architect defines the design specifications, while the builders define the implementation specifications. System architecture should be based on user requirements.
 
-Conceptual integrity can be preserved, Brooks argues, by having one system architect who designs the whole system from top-to-bottom. Brooks argues that the system architect should stick with the design of the system, and not get involved with the implementation. Implementation and design should be treated as two separate phases. A system architect defines the design specifications, while the builders define the implementation specifications. System architecture should be based on user requirements.
+// Key themes: One is that commercial software development is harder than solo programming because of the *division of labor*. The other main theme is that the *conceptual integrity* of a system is critical to its success.
 
-Key themes: One is that commercial software development is harder than solo programming because of the *division of labor*. The other main theme is that the *conceptual integrity* of a system is critical to its success.
+// Brooks's notion of conceptual integrity is, I think, the most important principle of software architecture. It has become part of our industry's lexicon, though today you are more likely to hear terms like "cohesion" and "design consistency".
 
-Brooks's notion of conceptual integrity is, I think, the most important principle of software architecture. It has become part of our industry's lexicon, though today you are more likely to hear terms like "cohesion" and "design consistency".
-
-[quote, Fred Brooks]
-____
-I will contend that conceptual integrity is _the_ most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of ideas, than to have one that contains many good but independent and uncoordinated ideas.
-____
+// [quote, Fred Brooks]
+// ____
+// I will contend that conceptual integrity is _the_ most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of ideas, than to have one that contains many good but independent and uncoordinated ideas.
+// ____
 
 // TODO: Define conceptual integrity
 // *Conceptual integrity* is a *link:./quality-attributes.adoc[quality attribute]* of a software system. A system with high conceptual integrity is one where all the concepts and their relationships with each other are applied in a consistent way throughout the system. Anywhere you look in the system, you can tell that it is part of an overall design.
@@ -213,14 +208,14 @@ ____
 // TODO: Why is conceptual integrity important?
 // A software system with high conceptual integrity – or high cohesion – tends to be easy to maintain. We can more confidently change part of a system with a cohesive design because we can draw upon our mental map of the architecture and understand intuitively the full repercussions of making the change.
 
-[quote, Fred Brooks]
-____
-Ease of use, then, dictates unity of design – conceptual integrity.
-____
+// [quote, Fred Brooks]
+// ____
+// Ease of use, then, dictates unity of design – conceptual integrity.
+// ____
 
-Unfortunately, maintaining conceptual integrity is notoriously difficult as a software system grows in size and scope. To explain why, Brooks draws a parallel with European cathedrals, most of which "show differences in plan or architectural style between parts built in different generations by different builders". In software, Brooks notes, conceptual disunity arises not from the passage of time – hundreds of years separating phases of functional extension – but from the decomposition of the design into "many tasks done by many men".
+// Unfortunately, maintaining conceptual integrity is notoriously difficult as a software system grows in size and scope. To explain why, Brooks draws a parallel with European cathedrals, most of which "show differences in plan or architectural style between parts built in different generations by different builders". In software, Brooks notes, conceptual disunity arises not from the passage of time – hundreds of years separating phases of functional extension – but from the decomposition of the design into "many tasks done by many men".
 
-The necessity to have a *division of labour* in large-scale software projects makes it hard to maintain the conceptual integrity of the overall system design.
+// The necessity to have a *division of labour* in large-scale software projects makes it hard to maintain the conceptual integrity of the overall system design.
 
 // == Conceptual integrity
 
@@ -266,9 +261,13 @@ The necessity to have a *division of labour* in large-scale software projects ma
 
 // The main benefit of bottom-up design is [reusability] of existing code. The main downside of bottom-up design is that is can be overly organic, leading to a tangle of elements and subsystems with no overall structure and limited consistency. Development of large-scale systems especially requires some degree of top-down design to maintain [conceptual integrity]. In practice, most modern software design practices combine elements of both top-down and bottom-up design.
 
+'''''
+
+// "Yet the specialization of function of the remainder of the team is the key to its efficiency, for it permits a radically simpler communication pattern among the members." This is perhaps something we have lost. We've tended toward generalization rather than specialization. And yet, any economist would tell you that the path to productivity is via specialization.
+
 // ////
 
-== Chapter 5. The second-system effect
+== The second-system effect
 
 // The fifth chapter is titled "The second-system effect". Brooks argues that the first system that a programmer designs and builds is often the best, because it is simple and elegant. The second system, however, tends to be over-engineered and bloated with features. Brooks calls this the "second-system effect".
 
@@ -290,7 +289,7 @@ The necessity to have a *division of labour* in large-scale software projects ma
 
 // Brooks suggests that "each little function" be assigned a value: "capability _x_ is worth not more than _m_ bytes of memory and _n_ microseconds per invocation". Translating such benchmarks from system programming to application programming requires different metrics, but the principle is a good one, and we don't _cost_ our features like this enough.
 
-== Chapter 6. Passing the word
+== Passing the word
 
 // Chapter six is titled "Passing the word". Brooks argues that the most important thing in software development is communication.
 
@@ -328,7 +327,7 @@ The necessity to have a *division of labour* in large-scale software projects ma
 
 // Testing, then, is a critical piece of "passing the word" between architect and implementer. The role of the tester, ultimately, is to find "where the design decisions were not properly understood or accurately implemented". This link must operate "early and simultaneously" with design.
 
-== Chapter 7. The Tower of Babel
+== The Tower of Babel
 
 // // Chapter seven, titled "Why did the Tower of Babel fail?" is another important chapter in the book. Brooks uses the biblical story of the Tower of Babel as a metaphor for the communication breakdowns that can occur in large software projects. Originally, the people of Babel spoke the same language and they were all united. Babel fell when the people started speaking different languages and could no longer communicate with each other. The Tower of Babel failed not because of technological limitations or a lack of resources, but because of communication problems and the disorganization that resulted from them.
 
@@ -386,23 +385,23 @@ The necessity to have a *division of labour* in large-scale software projects ma
 
 // The functions of the two roles are quite distinct and require different talents. However, depending on the talents of the people involved, these two roles could be fulfilled by one person, or one might be the boss and the other the boss's right-hand man (copilot).
 
-== Chapter 8. Calling the shot
+== Calling the shot
 
 // Chapter 8 is all about estimating effort.
 
-Ratios: In an earlier chapter, Brooks suggests that the cost of a large-scale software project breaks down into about: 1/3 of the schedule is for design, 1/6 for coding, 1/4 for component testing, and 1/4 for system testing.
+// Ratios: In an earlier chapter, Brooks suggests that the cost of a large-scale software project breaks down into about: 1/3 of the schedule is for design, 1/6 for coding, 1/4 for component testing, and 1/4 for system testing.
 
-TODO: Do these ratios hold up?
+// TODO: Do these ratios hold up?
 
 // One cannot accurately estimate the total effort or schedule of a programming project by simply estimating the coding time and multiplying by factors for the other parts of the task.
 
-"The coding is only one-sixth or so of the problem, and errors in its estimate or in the ratios could lead to ridiculous results."
+// "The coding is only one-sixth or so of the problem, and errors in its estimate or in the ratios could lead to ridiculous results."
 
 // Data for building small isolated systems are not applicable to programming systems projects -- ie. to large-scale software projects.
 
-"For a program averaging about 3200 words, for example, Sackman, Erikson, and Grant report an average code-plus debug time of about 178 hours for a single programmers, a figure which would extrapolate to give an annual productivity of 35,800 statements per year. A program half that size took less than one-fourth as long, and extrapolated productivity is almost 80,000 statements per year."
+// "For a program averaging about 3200 words, for example, Sackman, Erikson, and Grant report an average code-plus debug time of about 178 hours for a single programmers, a figure which would extrapolate to give an annual productivity of 35,800 statements per year. A program half that size took less than one-fourth as long, and extrapolated productivity is almost 80,000 statements per year."
 
-The essence of this chapter is that "the linear extrapolation of such sprint figures is meaningless". Brooks gives the analogy that "extrapolation of the times for the hundred-yard dash shows that a man can run a mile in under three minutes".
+// The essence of this chapter is that "the linear extrapolation of such sprint figures is meaningless". Brooks gives the analogy that "extrapolation of the times for the hundred-yard dash shows that a man can run a mile in under three minutes".
 
 // Programming increases goes as a power of program size. Some published studies show the exponent to be about 1.5.
 
@@ -418,7 +417,9 @@ The essence of this chapter is that "the linear extrapolation of such sprint fig
 
 // * Programming productivity can be increased as much as five times when a suitable high-level programming language is used.
 
-== Chapter 9. Ten pounds in a five-pound sack
+== Ten pounds in a five-pound sack
+
+Chapter 9
 
 // This chapter is all about using hardware resources efficiently.
 
@@ -442,21 +443,23 @@ The essence of this chapter is that "the linear extrapolation of such sprint fig
 
 // Finally, on technical innovation, Brooks observes that genuinely lean and fast programs are the result of _strategic breakthroughs_, such as a new algorithm, rather than tactical cleverness. And, since *representation is the essence of programming* (ie. how data is stored), redoing the representation of the data or its storage tables will often yield bigger performance improvements than optimizing the business logic.
 
-TODO: Size is still important in many contexts, eg. client-side web applications, embedded software, and operating systems still.
+// TODO: Size is still important in many contexts, eg. client-side web applications, embedded software, and operating systems still.
 
-**
+// **
 
-*"Representation is the essence of programming."*
+// *"Representation is the essence of programming."*
 
-"Beyond craftsmanship lies invention, and it is here that lean, spare, fast porgrams are born. Almost always these are the result of strategic breakthrough rather than tactical cleverness. ... [eg. a new algorithm]
+// "Beyond craftsmanship lies invention, and it is here that lean, spare, fast porgrams are born. Almost always these are the result of strategic breakthrough rather than tactical cleverness. ... [eg. a new algorithm]
 
-"Much more often, strategic breakthrough will come from redoing the representation of the data or tables. This is where the heart of a program lies. Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won't usually need your flowcharts; they'll be obvious."
+// "Much more often, strategic breakthrough will come from redoing the representation of the data or tables. This is where the heart of a program lies. Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won't usually need your flowcharts; they'll be obvious."
 
-"The programmer at wit's end for lack of space can often do best by disentangling himself from his code, rearing back, and contemplating his data. Representation _is_ tg=he essence of programming."
+// "The programmer at wit's end for lack of space can often do best by disentangling himself from his code, rearing back, and contemplating his data. Representation _is_ tg=he essence of programming."
 
-== Chapter 10. The documentary hypothesis
+== The documentary hypothesis
 
-"The hypothesis: Amid a wash of paper, a small number of documents become the critical pivots around which every project's management revolves. These are the manager's chief personal tools."
+Chapter 10
+
+// "The hypothesis: Amid a wash of paper, a small number of documents become the critical pivots around which every project's management revolves. These are the manager's chief personal tools."
 
 // The hypothesis states that, amid a wash of paper, a small number of documents will become the critical pivots around which every project's management revolves.
 
@@ -472,9 +475,9 @@ TODO: Size is still important in many contexts, eg. client-side web applications
 
 // The project manager's chief daily task is communication (hearing, reporting, teaching, exhorting, counseling, encouraging), not decision-making. The documents communicate the plans and decisions to the whole team.
 
-"The task of the manager is to develop a plan and then to realize it. But only the written plan is precise and communicable. Such a plan consists of documents on what, when, how much, where, and who. This small set of critical documents encapsulates much of the manager's work."
+// "The task of the manager is to develop a plan and then to realize it. But only the written plan is precise and communicable. Such a plan consists of documents on what, when, how much, where, and who. This small set of critical documents encapsulates much of the manager's work."
 
-== Chapter 11. Plan to throw one away
+== Plan to throw one away
 
 // // In chapter 11, titled "Plan to Throw One Away", Brooks proposes building *pilot models* or *pilot systems* as an intermediate step between the initial system design and the construction of the final system. The pilot system helps to identify potential problems with the design before the final solution is built. The pilot system should be thrown away and not given to the customer. This is because the pilot model often has bugs in it, which would reduce the customer's confidence in the producer.
 
@@ -629,7 +632,9 @@ Intriguingly, Brookes writes that "methods of designing programs so as to elimin
 
 ////
 
-== Chapter 12. Sharp tools
+== Sharp tools
+
+Chapter 12
 
 // The manager of a project needs to establish a philosophy and set aside resources for the building of common tools, and at the same time recognize the need for personalized tools.
 
@@ -683,7 +688,9 @@ I like the idea of _precision_ in tooling, especially in debugging.
 
 ////
 
-== Chapter 13. The whole and the parts
+== The whole and the parts
+
+Chapter 13
 
 // Detailed architectural effort (discussed in earlier chapters) not only improves the *ease of use* of a software product, but also makes it easier to build, and reduces the number of defects.
 
@@ -793,7 +800,7 @@ Forms of scaffolding:
 
 ////
 
-== Chapter 14. Hatching a catastrophe
+== Hatching a catastrophe
 
 // // In chapter 14, Brooks suggests the use of [PERT charts] to keep track of critical tasks in a project.
 
@@ -839,7 +846,7 @@ Brooks suggests a dedicated sub-team, calls the Plans and Controls team. He says
 
 ////
 
-== Chapter 15. The other face
+== The other face
 
 // // Chapter 15 provides guidance on documenting large programs. The book also summarizes modeling notations that were popular at the time, and he draws comparisons between [top-down] and [bottom-up] approaches to system design.
 
@@ -936,32 +943,50 @@ He then goes on to explain how this might be achieved in the programs of the 196
 
 ////
 
-== Chapter 16. No silver bullet
+== No silver bullet
+
+Chapter 16
 
 // Title: "No silver bullet - essence and accident"
 
-== Chapter 17. "No silver bullet" revisited
+== "No silver bullet" revisited
 
-(Supplementary chapter in the 20th anniversary edition)
+Chapter 17
 
-== Chapter 18. Propositions of The Mythical Man-Month: true or false?
+// (Supplementary chapter in the 20th anniversary edition)
 
-(Supplementary chapter in the 20th anniversary edition)
+== Propositions of The Mythical Man-Month: true or false?
+
+Chapter 18
+
+// (Supplementary chapter in the 20th anniversary edition)
 
 == Concluding thoughts
 
-Throughout the history of computing, advances in technology have created opportunities for ever more ambitious software. The resources and tools at our disposal are as powerful as they have ever been – think cloud computing, virtualization and containerization, continuous integration and automated deployment pipelines, and AI-assisted coding environments. But the productivity gains afforded by these tools are offset by the increases in complexity of the software that exists in the world today.
+// Modern best practices are deeply rooted - the seeds were formed here, in the 1960s and 1970s, when we started to push the boundaries of what software could do.
 
-Of course, some of the challenges today are different from what they were in the time of OS/360. We are no longer physically constrained by computing resources – these are abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software – for example, real-time systems, embedded systems, and systems with strict performance requirements.
+// It's the book that everyone claims to have read, but few have.
 
-The book closes with this epilogue:
+// Throughout the history of computing, advances in technology have created opportunities for ever more ambitious software. The resources and tools at our disposal are as powerful as they have ever been – think cloud computing, virtualization and containerization, continuous integration and automated deployment pipelines, and AI-assisted coding environments. But the productivity gains afforded by these tools are offset by the increases in complexity of the software that exists in the world today.
 
-[quote, Fred Brooks]
-____
-The tar pit of software engineering will continue to be sticky for a long time to come. One can expect the human race to continue attempting systems just within or just beyond our reach; and software system's are perhaps the most intricate and complex of man's handiworks. The management of this complex craft will demand our best use of new languages and systems, our best adaptation of proven engineering management methods, liberal doses of common sense, and a God-given humility to recognize our fallibility and limitations.
-____
+// Of course, some of the challenges today are different from what they were in the time of OS/360. We are no longer physically constrained by computing resources – these are abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software – for example, real-time systems, embedded systems, and systems with strict performance requirements.
 
-Amen.
+// The book closes with this epilogue:
+
+// [quote, Fred Brooks]
+// ____
+// The tar pit of software engineering will continue to be sticky for a long time to come. One can expect the human race to continue attempting systems just within or just beyond our reach; and software system's are perhaps the most intricate and complex of man's handiworks. The management of this complex craft will demand our best use of new languages and systems, our best adaptation of proven engineering management methods, liberal doses of common sense, and a God-given humility to recognize our fallibility and limitations.
+// ____
+
+// Amen.
+
+////
+
+NOTES
+
+* Rule of thumb: 1/3 of the schedule is for design, 1/6 for coding, 1/4 for component testing, and 1/4 for system testing.
+
+////
 
 ''''
 
