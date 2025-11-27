@@ -1,5 +1,5 @@
 = The Mythical Man-Month at 50
-Kieran Potts, 28 November 2025
+Kieran Potts, 30 November 2025
 :description: Fred Brooks's classic book The Mythical Man-Month was published 50 years ago. It was hugely influential on the then-nascent discipline of software development. How does it stand up today?
 :docinfo: shared
 :nofooter:
