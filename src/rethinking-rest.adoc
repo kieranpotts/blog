@@ -70,7 +70,7 @@ This logical and physical separation of concerns makes client applications more 
 
 The second constraint of REST is that all interactions between client and server must be stateless.
 
-This means that all the application state (aka. session state or extrinsic state) necessary for a server to handle a client's request is contained within the request itself. Thus the server never needs to persist the state of any client beyond a single request-response life cycle. This leaves the server responsible only for persisting resource state (aka. intrinsic state) – the stuff that needs to be synced across all clients.
+This means that all the application state (aka. session state or extrinsic state) necessary for a server to handle a client's request is contained within the request itself. Thus the server never needs to persist the state of any client beyond a single request-response lifecycle. This leaves the server responsible only for persisting resource state (aka. intrinsic state) – the stuff that needs to be synced across all clients.
 
 Stateless systems are hugely scalable. That's because servers have less data to store, they can more quickly free-up resources after fulfilling a client request, and they have more scope to process requests in parallel.
 
