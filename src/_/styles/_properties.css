@@ -40,8 +40,8 @@
   monospace fonts. We must use a true monospace font for preformatted text
   and code blocks. https: //ia.net/topics/in-search-of-the-perfect-writing-font */
 
-  --font-family\=default: 'iA Duo', ui-monospace, monospace;
-  --font-family\=monospace: ui-monospace, monospace;
+  --font-family\=default: 'iA Duo', Inconsolata, ui-monospace, monospace;
+  --font-family\=monospace: Inconsolata, ui-monospace, monospace;
 
   /* Font sizes */
 

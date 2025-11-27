@@ -6,8 +6,24 @@
     <link>https://kieranpotts.com/</link>
     <atom:link href="https://kieranpotts.com/feeds/rss.xml" rel="self" type="application/rss+xml" />
     <description>Kieran Potts is a software developer and former technology journalist. His blog is a commentary on methods and tools for developing and maintaining software systems.</description>
-    <language>en-GB</language>
+    <language>en-US</language>
 
+    <item>
+      <title>The (software) quality without a name</title>
+      <link>https://kieranpotts.com/the-quality-without-a-name</link>
+      <pubDate>Sun, 05 Oct 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Kieran Potts</dc:creator>
+      <guid>https://kieranpotts.com/the-quality-without-a-name</guid>
+      <description>The Timeless Way of Building by Christopher Alexander is a classic text on real-world architecture. In computing, it was influential in the emerging field of object-oriented programming in the late 1970s and 1980s. The book still has much to teach us about how we think about software design.</description>
+    </item>
+    <item>
+      <title>PHP is 30</title>
+      <link>https://kieranpotts.com/php-is-30</link>
+      <pubDate>Sun, 8 Jun 2025 00:00:00 +0000</pubDate>
+      <dc:creator>Kieran Potts</dc:creator>
+      <guid>https://kieranpotts.com/php-is-30</guid>
+      <description>PHP version 1.0 was announced on 8 June 1995. It quickly became a popular server-side scripting language for websites. Here's why.</description>
+    </item>
     <item>
       <title>Mental models: essential versus accidental complexity</title>
       <link>https://kieranpotts.com/essential-versus-accidental-complexity</link>

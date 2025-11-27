@@ -40,33 +40,17 @@
     "editor.wordWrap": "bounded",
     "editor.wordWrapColumn": 100,
   },
-
-  /* Preference for quotes in JS/TS code. */
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-
-  /* Disable auto-formatting and validation for JavaScript/TypeScript. These
-  settings MUST be applied at the workspace level. */
+  
+  /* For JS/TS code, formatting and validation MUST be configured per-repo,
+  AND per-workspace where multiple JS/TS repos are part of a larger project. */
   "javascript.format.enable": false,
   "javascript.validate.enable": false,
   "js/ts.implicitProjectConfig.checkJs": false,
-
-  /*
-  EXTENSION SETTINGS
-  The following settings are applicable for the extensions listed in
-  the extension recommendations in `extensions.json`.
-  */
-
-  /*
-  Asciidoc extension.
-  https://marketplace.visualstudio.com/items?itemName=asciidoctor.asciidoctor-vscode
-  */
-
-  /* Enable Antora support. */
-  "asciidoc.antora.showEnableAntoraPrompt": true,
-
-  /* When previewing Asciidoc files, use VS Code's workbench color theme,
-  rather than the default Asciidoc style. This ensures the colors of the
-  preview are consistent with the enabled VS Code theme. */
-  "asciidoc.preview.useEditorStyle": true,
+  
+  /* Don't allow commits to protected branches. */
+  "git.branchProtectionPrompt": "alwaysPrompt",
+  "git.branchProtection": [
+    // "stable",
+    // "release/*",
+  ],
 }
