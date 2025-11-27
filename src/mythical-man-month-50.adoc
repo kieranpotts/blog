@@ -4,7 +4,7 @@ Kieran Potts, 30 November 2025
 :docinfo: shared
 :nofooter:
 
-Frederick P Brooks Jr's classic book _The Mythical Man-Month: Essays on Software Engineering_ was published in 1975 – 50 years ago. The book was one of the first analyses of the challenges of large-scale software development.
+Frederick P Brooks Jr's classic book _The Mythical Man-Month: Essays on Software Engineering_ was published in 1975 – 50 years ago. The book was one of the first published analyses of the challenges of large-scale software development.
 
 _The Mythical Man-Month_ introduced many ideas and principles that were hugely influential on early practitioners of our craft. But which ideas have withstood half a century of technological change, and which have not?
 
@@ -12,7 +12,7 @@ I got myself a copy of the original 1975 edition and the extended 20th anniversa
 
 == The tar pit
 
-_The Mythical Man-Month_ is really a collection of standalone essays rather than a cohesive thesis. Nevertheless, there are some key themes that run throughout. The most prominent theme is the one introduced in this opening chapter: that the essential challenge of software development is the management of complexity.
+_The Mythical Man-Month_ is more of an anthology of standalone essays rather than a cohesive thesis. Nevertheless, there are some key themes that run throughout. The most prominent theme is the one introduced in this opening chapter: that the essential challenge of software development is the management of complexity.
 
 Throughout the book, Brooks draws on his own experiences, notably as the manager who oversaw the initial design of IBM's OS/360 operating system. At the time, OS/360 was one of the biggest, most ambitious, most complex software projects ever attempted. At the peak of the project, more than 1,000 people worked on it.
 
@@ -115,7 +115,7 @@ Brooks suggests that the underlying reason for such widespread "gutless estimati
 
 Our industry's immaturity in the science of project estimating and scheduling is, 50 years later, an enduring problem.
 
-Even today, project managers routinely believe that adding more people to a late project can solve schedule slippage. I've seen this myself. It's especially commonplace in consultancies and outsourcing firms, where the software house bills its customers in man-hours and therefore has a commercial incentive to add as many people as possible to their projects. But I've seen it in software houses, too – they should know better.
+Even today, managers routinely believe that adding more people to a late project can solve schedule slippage. I've seen this myself. It's especially commonplace in consultancies and outsourcing firms, where the software house bills its customers in man-hours and therefore has a commercial incentive to add as many people as possible to their projects. But I've seen it in software houses, too – they should know better.
 
 Brooks is most convincing in his argument that the very notion that the development of software can be accurately estimated is deeply flawed. Software development is an inherently complex and unpredictable activity. In every software project, even those with stable and known requirements, there will always be some requirements that are emergent. Requirements may emerge only through design and construction, or even later still, when working software is finally put into the hands of real users. This is the _nature_ of software development, which is more of a design problem than a construction task.
 
@@ -127,7 +127,7 @@ I'm also not convinced by Brooks' explanation that poor estimation is a conseque
 
 I think there are many other explanations why poor estimates persist. There certainly remains a lack of maturity in the methods and tools we use for estimation. Overuse of proxy measures, such as T-shirt sizes and story points, which do not directly correspond to real-world effort, rather than more quantitative data-driven estimation techniques, is commonplace today. Estimations tend to be done very early in the development lifecycle, too. We tend to make estimates base on high-level requirements – even vague and incomplete ones – rather than based on comprehensive, high-fidelity solution designs. If you want good estimates, you need the solution to be sufficiently flesh-out with enough detail to reveal the true scope and complexity of the problem. This is true of every engineering discipline.
 
-Good estimation is done bottom-up from low-level technical designs, rather than top-down from high-level business requirements. But commercial pressures often force estimates to be done from requirements rather than designs. And gutless estimation, in which product managers produce estimates that align with business expectations rather than technical realities, is still all-too common.
+Good estimation is done bottom-up from low-level technical designs, rather than top-down from high-level business requirements. But commercial pressures often force estimates to be done from requirements rather than designs. And gutless estimation, in which managers produce estimates that align with business expectations rather than technical realities, is still all-too common.
 
 == The surgical team
 
@@ -184,6 +184,8 @@ Today, most roles of the surgical team have been automated or absorbed into the 
 As for the idea of 10x engineers, the findings of the original Sackman paper have been debunked by subsequent research. The 1968 study tested programmers on tasks that did not represent real-world programming problems, and it did not account for the impact of collaboration, which we now know to be more important than individual capability. And yet the software industry still has a nauseating habit of glorifying "rockstar" developers and undervaluing teamwork and soft skills.
 
 == Conceptual integrity
+
+// The prominent theme throughout the book is the question of how best to manage complexity in software.
 
 // The "entire system also must have conceptual integrity, and that requires a system architect to design it all, from the top down".
 
