@@ -4,6 +4,8 @@ Kieran Potts, 30 November 2025
 :docinfo: shared
 :nofooter:
 
+Fred Brooks's classic book _The Mythical Man-Month_ was published 50 years ago. It was hugely influential on the then-nascent discipline of software development. How does it stand up today?
+
 Frederick P Brooks Jr's classic book _The Mythical Man-Month: Essays on Software Engineering_ was published in 1975 – 50 years ago. The book was one of the first published analyses of the challenges of large-scale software development.
 
 _The Mythical Man-Month_ introduced many ideas and principles that were hugely influential on early practitioners of our craft. But which ideas have withstood half a century of technological change, and which have not?
@@ -18,7 +20,7 @@ Throughout the book, Brooks draws on his own experiences, notably as the manager
 
 But, Brooks acknowledges, the project was not "wholly successful". The initial release of OS/360, in 1966, was delivered "late, it [used] more memory than planned, the costs were several times the estimate, and [the first version] did not perform very well".
 
-The opening chapter delivers Brooks's sharp post-mortem of the OS/360 project. He concludes that the fundamental reason for the project's difficulties was that the managers had seriously underestimated the overall costs of delivering such a large-scale software system. This happened because the estimates were based solely on the construction of the individual parts of the system. What the managers had not accounted for was: (a) the integration costs of all those components; and (b) the "productization" of the system as a whole.
+The opening chapter delivers Brooks's sharp post-mortem of the OS/360 project. He concludes that the fundamental reason for the project's difficulties was that the managers had seriously underestimated the overall costs of delivering such a large-scale software system. This happened because the estimates were based solely on the construction of the individual parts of the system. What the managers had not accounted for was: (a) the integration costs of all those components; and (b) the "productization" of the whole solution.
 
 Brooks estimates that the work of designing the interfaces between all the components of a system, coordinating their integration, and incrementally extending integration tests, has the potential to _triple_ the initial cost of coding all the components in isolation. Costs may triple again for all the work that goes into preparing a large-scale software system for distribution as shrink-wrapped software for general use by the public. For the OS/360 project, they had not fully accounted for how much extra rework and testing would be needed to make the system run reliably in "many operating environments, for many sets of data", and for time spent preparing user-facing documentation and other packaging.
 
@@ -28,7 +30,7 @@ Brooks reflects that large-scale software development, like OS/360, is inherentl
 
 50 years later, this all sounds depressingly familiar.
 
-Despite the immense technological advances of the last half-century – in computer hardware, in programming languages and runtime environments, and in tools and automation that support every aspect of software delivery – the core challenges of large-scale software development remain much the same. Project failures are still commonplace.
+Despite the immense technological advances of the last half-century – in computer hardware, in programming languages and runtime environments, and in tools and automation that support every aspect of software delivery – the core challenges of large-scale software development remain much the same. Cost overruns, and other modes of project failure, are still all-too common.
 
 The essential challenge of software development remains the management of complexity. Brooks draws the colorful analogy that large-scale software development is like "the mortal struggles of great beasts in the tar pits". This is represented by the book's cover image, a sketch of Charles Knight's 1925 painting that depicts the great mammoths of the Pleistocene struggling to free themselves from the tar pits of Southern California.
 
@@ -42,7 +44,7 @@ The eponymous second chapter deals with the perennial issue of software projects
 
 === Optimism
 
-The first explanation the author gives for poor project estimations is a bias toward optimism.
+The first explanation the author gives for poor project estimation is a bias toward optimism.
 
 Brooks writes that "all programmers are optimists" and he hypothesizes that, because the age distribution of programmers in 1975 was skewed toward younger age groups, and because younger people tend to be more optimistic than the population at large, then software project estimates are particularly prone to being wildly optimistic.
 
@@ -71,9 +73,11 @@ ____
 Thus, once a schedule is proven to be unrealistic, there may not be anything that can be done to put the project back on track. Adding more people to a project _will_ decrease the productivity of individual team members, and there comes a tipping point where this decrease in productivity more than offsets the overall addition of resources – so delivery speed _slows_ despite the extra manpower.
 
 .Correlation between time and the number of workers for a project with complex interrelationships
-image::./_/media/diagrams/men-versus-months.drawio.png[]
+image::./_/media/diagrams/men-versus-months.drawio.png["",468]
 
-The more complex the interrelationships between the component parts of the system under construction, the greater this effect. Today, we know this as Brooks's Law.
+Brooks observes that the more complex the interrelationships between the component parts of the system under construction, the greater this effect – hence the management of complexity is identified as the essential challenge of software development.
+
+Today, we know this as Brooks's Law.
 
 [quote, Brooks's Law]
 ____
@@ -88,15 +92,15 @@ Brooks writes that project progress tends to be poorly monitored, so when it bec
 
 In this situation, Brooks says the only recourse is to reschedule the work with the original team members, "un-augmented" by new recruits. This has the effect of delaying completion of the project, but at least overall costs do not needlessly increase through spend on additional staff who will ultimately be under-utilized.
 
-Better to increase the number of months than then number of men.
+Better to increase the number of months than the number of men.
 
 === System testing must be done last
 
-The fourth explanation that Brooks gives for poor estimations is that system testing and debugging must be done last, due to the sequential nature of the work. Consequently, testing "is usually the most mis-scheduled part of programming" and multiple rounds of testing and debugging can end up accounting for as much as half of the overall development schedule.
+The fourth explanation that Brooks gives for poor estimation is that system testing and debugging must be done last, due to the sequential nature of the work. Consequently, testing "is usually the most mis-scheduled part of programming" and multiple rounds of testing and debugging can end up accounting for as much as half of the overall development schedule.
 
 === Gutless estimating
 
-The fifth and final explanation that Brooks gives for poor estimation of software projects is the tendency we have to work to schedules dictated by our customers, rather than being brave and attempting to make a reasonable guess about the real effort that will be required to deliver a satisfactory product.
+The fifth and final explanation that Brooks gives for poor estimation of software projects is the tendency we have to work to schedules dictated by our customers, rather than being brave and attempting to make a reasonable guess about the real effort required to deliver a satisfactory product.
 
 Brooks uses the analogy of cooking an omelette. It typically takes a couple of minutes to cook an omelette. But if, after two minutes, the omelette is not set, the customer has two choices: wait, or eat the omelette raw. The chef has a third choice: turn up the heat. But the effect would be to serve a poor quality product – burnt on the outside, and perhaps still raw in the centre.
 
@@ -105,29 +109,31 @@ ____
 Good cooking takes time. If you are made to wait, it is to serve you better, and to please you.
 ____
 
-In the delivery of commercial software, we have a tendency to take the third option: to turn up the heat and try to deliver products within the schedules desired by the customers. "False scheduling to match the patron's desired date is much more common in our discipline than elsewhere in engineering."
+In the delivery of commercial software, we have a tendency to take the third option: to turn up the heat and try to deliver products within the schedules desired by the customers. "False scheduling to match the patron's desired date is much more common in our discipline than elsewhere in engineering," Brooks observes.
 
 Brooks contends we should instead have the "courteous stubbornness" of a chef who refuses to serve a dish until it is ready. Construction of good software, like cooking, takes time. Some tasks just cannot be hurried without spoiling the result.
 
-Brooks suggests that the underlying reason for such widespread "gutless estimating" throughout our industry is that we do not have mature models for estimating software work. "It is very difficult," he writes, "to make a vigorous, plausible, and job-risking defense of an estimate that is derived by no quantitative method, supported by little data, and certified chiefly by the hunches of the managers."
+Brooks suggests that the underlying reason for such widespread "gutless estimating" in our industry is that we do not have mature models for estimating software work. "It is very difficult," he writes, "to make a vigorous, plausible, and job-risking defense of an estimate that is derived by no quantitative method, supported by little data, and certified chiefly by the hunches of the managers."
 
 ''''
 
 Our industry's immaturity in the science of project estimating and scheduling is, 50 years later, an enduring problem.
 
-Even today, managers routinely believe that adding more people to a late project can solve schedule slippage. I've seen this myself. It's especially commonplace in consultancies and outsourcing firms, where the software house bills its customers in man-hours and therefore has a commercial incentive to add as many people as possible to their projects. But I've seen it in software houses, too – they should know better.
+Even today, managers routinely believe that adding more people to a late project can solve schedule slippage. I've seen this myself. It's especially commonplace in consultancies and outsourcing firms, where the software house bills its customers in man-hours and therefore has a commercial incentive to add as many people as possible to their projects. But I've seen it in software houses, too. They ought to know better.
 
 Brooks is most convincing in his argument that the very notion that the development of software can be accurately estimated is deeply flawed. Software development is an inherently complex and unpredictable activity. In every software project, even those with stable and known requirements, there will always be some requirements that are emergent. Requirements may emerge only through design and construction, or even later still, when working software is finally put into the hands of real users. This is the _nature_ of software development, which is more of a design problem than a construction task.
 
 The misplaced belief that the delivery of complex software can be planned in meticulous detail is still widely held in 2025.
 
-Of course, some things have improved. In the intervening years, our industry has universally adopted iterative and incremental development practices, in which small chunks of work are delivered at regular intervals with testing and debugging done in parallel to the design and construction. Thus, rather than testing being left until the system is complete, instead the correctness of the evolving system is continuously evaluated throughout the development life cycle. Through continuous integration and testing, we've solved the problem of defects in the design and construction being discovered late. At least this is rarely a cause for project overruns anymore.
+Of course, some things have improved. In the intervening years, our industry has universally adopted iterative and incremental development practices, in which small chunks of work are delivered at regular intervals with testing and debugging done in parallel to the design and construction. Thus, rather than testing being left until the system is complete, instead the correctness of the evolving system is continuously evaluated throughout its development life cycle. 
 
-I'm also not convinced by Brooks' explanation that poor estimation is a consequence of the relatively young ages of computer programmers. Sure, younger developers lack the necessary experience to do accurate estimates, but in my experience senior developers can be just as guilty of optimism bias. Contingency planning and risk management are still poorly practiced in many software projects today – regardless of who's drawing up the project plans.
+Through continuous integration and testing, we've solved the problem of defects in the design and construction being discovered late. At least this is rarely a cause for project overruns anymore.
+
+I'm the least convinced by Brooks' explanation that poor estimation is a consequence of the relatively young ages of computer programmers. Sure, younger developers lack the necessary experience to do accurate estimates, but in my experience senior developers can be just as guilty of optimism bias. Contingency planning and risk management are still poorly practiced in many software projects today – regardless of who's drawing up the project plans.
 
 I think there are many other explanations why poor estimates persist. There certainly remains a lack of maturity in the methods and tools we use for estimation. Overuse of proxy measures, such as T-shirt sizes and story points, which do not directly correspond to real-world effort, rather than more quantitative data-driven estimation techniques, is commonplace today. Estimations tend to be done very early in the development lifecycle, too. We tend to make estimates base on high-level requirements – even vague and incomplete ones – rather than based on comprehensive, high-fidelity solution designs. If you want good estimates, you need the solution to be sufficiently flesh-out with enough detail to reveal the true scope and complexity of the problem. This is true of every engineering discipline.
 
-Good estimation is done bottom-up from low-level technical designs, rather than top-down from high-level business requirements. But commercial pressures often force estimates to be done from requirements rather than designs. And gutless estimation, in which managers produce estimates that align with business expectations rather than technical realities, is still all-too common.
+Good estimation is done bottom-up from low-level technical designs, rather than top-down from high-level business requirements. But commercial pressures often force estimates to be done from requirements rather than from designs. And gutless estimation, in which managers produce estimates that align with business expectations rather than technical realities, is still all-too common.
 
 == The surgical team
 
@@ -137,11 +143,9 @@ The roots of this idea lie in the observation that having a small number of very
 
 Brooks quotes a now-infamous https://dl.acm.org/doi/10.1145/362851.362858[1968 paper] by Sackman _et al_ that postulated that very good programmers can be up to ten times as productive as poor ones.
 
-// TODO: Print image from the paper instead.
-
 [quote, Sackman et al, Communications of the ACM January 1968]
 ____
-The "horrid" portion of the performance frequency distribution is the long tail at the high level, the positively skewed part which shows that one poor performer can consume as much time as 5, 10, or 20 good ones. Validated techniques to weed out these poor performers could result in vast savings in time, effort, and cost.
+These studies revealed large individual differences between high and low performers, often by an order of magnitude. It is apparent from the spread of data that very substantial savings can be effected by successfully detecting low performers.
 ____
 
 This is the origin of the myth of the 10x programmer. At the time, the qualitative analysis provided by this paper reinforced qualitative observations made by Brooks and other project managers that small "sharp" teams are better than large blunt ones.
@@ -150,11 +154,11 @@ Brooks expands on his earlier point that throwing lots of man-months at a projec
 
 Better for software development teams to be composed of a small number of "first-class" programmers rather than many mediocre ones. It is why, Brooks concludes, there are many accounts of two programmers working in a garage to build "an important program that surpasses the best efforts of large teams". The cliche of the garage startup has deeper roots than I realized!
 
-But the problem with small teams is they are too small for really big problems. Brooks notes that there were over 1,000 people working on OS/360 at the peak of that project, and a smaller 200-man team would have taken 25 years to achieve the same result. For large-scale software, the delivery timescales achievable by small teams are just not commercially viable.
+But the problem with small teams is they are too small for really big problems. Brooks notes there were over 1,000 people working on OS/360 at the peak of that project, and a smaller 200-man team would have taken 25 years to achieve the same result. For large-scale software, the delivery timescales achievable by small teams are just not commercially viable.
 
-If we want to prioritize development efficiency and the quality of the final product, we should have small teams of highly skilled, experienced practitioners doing the design and construction. But to deliver large systems in a timely manner, we need to have very large teams. How can we reconcile these two constraints?
+If we want to prioritize development efficiency and the quality of the final product, we should have small teams of highly skilled, experienced practitioners doing the design and construction. But to deliver large systems in a timely manner, we need very large teams. How can we reconcile these two constraints?
 
-Brooks draws on a solution first proposed by Harlan Mills in an IBM paper published in 1971.
+Brooks draws on a solution first proposed by Harlan Mills in a 1971 IBM paper.
 
 [quote, Fred Brooks]
 ____
@@ -165,7 +169,7 @@ The idea is there would be, not one giant team, but multiple smaller and indepen
 
 Each team operates similarly to a surgical team in a hospital. Each team has a chief programmer, the surgeon, who is in charge of the whole thing. The rest of the team members try to help him complete the project (the surgery).
 
-The chief programmer is responsible for defining and maintaining the conceptual integrity of his team's part of the overall solution. "He personally defines the functional and performance specifications, designs the program, codes it, tests it, and writes its documentation". (We'll return to the idea of conceptual integrity in the next chapter.)
+The chief programmer is responsible for defining and maintaining the conceptual integrity of his team's part of the overall solution. "He personally defines the functional and performance specifications, designs the program, codes it, tests it, and writes its documentation".
 
 The chief programmer is supported by a copilot who researches design options for the chief programmer to consider, drawing upon the experience and expertise of the rest of the team. The idea is that "few minds are involved in design and construction, yet many hands are brought to bear".
 
@@ -177,43 +181,47 @@ Although terms like "surgical team", "chief programmer", and "copilot" will be u
 
 Harlan Mills' work, later popularized by Brooks in _The Mythical Man-Month_, laid the groundwork for the software development best practices of 2025.
 
-Of source, some of the details of the original surgical team design are no longer relevant. Besides the chief programmer and copilot, the original surgical teams also had an administrator to "handle money, people, space, and machines"; a technical editor responsible for maintaining documentation; a "program clerk" responsible for "maintaining all the technical records of the team in a programming-product library"; a "toolsmith" who implements any special tools needed by the team, such as for "file-editing, text-editing, and interactive debugging"; a "language lawyer", someone who is an expert in the programming language and operating system, and who provides consultancy to the team in how best to use them; and a tester, responsible for preparing suitable test cases from the functional specifications, and devising dummy data for day-to-day debugging. Oh, and the administrator and editor would each have their own personal secretaries. Different world.
+Of source, some of the details of the original surgical team design are no longer relevant. Besides the chief programmer and copilot, the original surgical teams also had an administrator to "handle money, people, space, and machines"; a technical editor responsible for maintaining documentation; a "program clerk" responsible for "maintaining all the technical records of the team in a programming-product library"; a "toolsmith" who implements any special tools needed by the team, such as for "file-editing, text-editing, and interactive debugging"; a "language lawyer", someone who is an expert in the programming language and operating system, and who provides consultancy to the team in how best to use them; and a tester, responsible for preparing suitable test cases from the functional specifications, and devising dummy data for day-to-day debugging. Oh, and the administrator and editor would each have their own personal secretaries. Different world!
 
-Today, most roles of the surgical team have been automated or absorbed into the broad responsibilities of programmers and testers. Every team member now works at the coalface, with no supporting roles. In the old surgical team model, only the chief programmer – or their deputy – actually wrote code, while two or three others handled support duties. But that setup wasn't about improving communication so much as dealing with the practical limits of the time, when costly storage and disk access couldn't be shared by everyone at once. Today there are no such constraints.
+Today, most roles of the surgical team have been automated away or absorbed into the broad responsibilities of programmers and testers. Every team member now works at the coalface, with no supporting roles. In the old surgical team model, only the chief programmer – or their deputy – actually wrote code, while two or three others handled support duties. But that setup wasn't about improving communication so much as dealing with the practical limits of the time, when costly storage and disk access couldn't be shared by everyone at once. Today there are no such constraints.
 
-As for the idea of 10x engineers, the findings of the original Sackman paper have been debunked by subsequent research. The 1968 study tested programmers on tasks that did not represent real-world programming problems, and it did not account for the impact of collaboration, which we now know to be more important than individual capability. And yet the software industry still has a nauseating habit of glorifying "rockstar" developers and undervaluing teamwork and soft skills.
+As for the idea of 10x engineers, the findings of the original Sackman paper have been debunked by subsequent research. The 1968 study tested programmers on tasks that did not represent real-world programming problems. Neither did it account for the impact of collaboration, which we now know to be more important than individual capability. And yet the software industry still has a nauseating habit of glorifying "rockstar" developers and undervaluing teamwork and soft skills. The myth of the 10x engineer is, regrettably, a lasting legacy of the 1970s.
 
 == Conceptual integrity
 
-// The prominent theme throughout the book is the question of how best to manage complexity in software.
+Brooks is perhaps most famous for his invention of the concept of conceptual integrity. It was mentioned in the previous chapter, but only in this fourth chapter is the concept fleshed out.
 
-// The "entire system also must have conceptual integrity, and that requires a system architect to design it all, from the top down".
+The dominant theme throughout _The Mythical Man-Month_ is the question of how best to manage complexity in large-scale software systems. Maintaining conceptual integrity, Brooks argues, is the best way of containing complexity.
+
+Conceptual integrity is a quality of a system that emerges from its high-level design. A system design with high conceptual integrity is one where all the concepts and their relationships with each other are applied in a consistent way throughout. Anywhere you look in the codebase, you can tell it is part of the overall design. A consistent design philosophy flows through all subsystems.
+
+A system with high conceptual integrity tends to be easy to maintain. We can more confidently change parts of such systems, because we can draw upon our mental map of the architecture and understand intuitively the full repercussions of making the changes.
+
+[quote, Fred Brooks]
+____
+Ease of use, then, dictates unity of design – conceptual integrity.
+____
+
+In 2025, conceptual integrity remains part of our industry's lexicon, though today you are more likely to hear phrases like "cohesion" and "design consistency" instead. I think few architects would dispute Brooks's notion that conceptual integrity is one of the most important principles of software design.
+
+[quote, Fred Brooks]
+____
+I will contend that conceptual integrity is _the_ most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of ideas, than to have one that contains many good but independent and uncoordinated ideas.
+____
+
+The difficult is in achieving it. For a system to have high conceptual integrity, Brooks says "the entire system... requires a system architect to design it all, from the top down". This is difficult to do in large-scale software projects because of the division of labour – the implementation is necessarily broken up into lots of small pieces, each designed and constructed independently by different programmers.
+
+
+
 
 // TODO: Bottom-up approach has become prevalent.
-
-// Brooks defines *conceptual integrity* in chapter four, titled "Aristocracy, Democracy, and System Design". He argues this is probably the most important aspect of large system programming, but one that is often overlooked as programmers have a tendency to focus on the design of individual features rather than the design of the overall system. Brooks argues that large-scale systems should have a consistent design philosophy flow through all subsystems. It is better to have one good idea and carry it through the project, than having several uncoordinated good ideas.
-
+// He argues this is probably the most important aspect of large system programming, but one that is often overlooked as programmers have a tendency to focus on the design of individual features rather than the design of the overall system. 
 // Conceptual integrity can be preserved, Brooks argues, by having one system architect who designs the whole system from top-to-bottom. Brooks argues that the system architect should stick with the design of the system, and not get involved with the implementation. Implementation and design should be treated as two separate phases. A system architect defines the design specifications, while the builders define the implementation specifications. System architecture should be based on user requirements.
+
+
 
 // Key themes: One is that commercial software development is harder than solo programming because of the *division of labor*. The other main theme is that the *conceptual integrity* of a system is critical to its success.
 
-// Brooks's notion of conceptual integrity is, I think, the most important principle of software architecture. It has become part of our industry's lexicon, though today you are more likely to hear terms like "cohesion" and "design consistency".
-
-// [quote, Fred Brooks]
-// ____
-// I will contend that conceptual integrity is _the_ most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of ideas, than to have one that contains many good but independent and uncoordinated ideas.
-// ____
-
-// TODO: Define conceptual integrity
-// *Conceptual integrity* is a *link:./quality-attributes.adoc[quality attribute]* of a software system. A system with high conceptual integrity is one where all the concepts and their relationships with each other are applied in a consistent way throughout the system. Anywhere you look in the system, you can tell that it is part of an overall design.
-
-// TODO: Why is conceptual integrity important?
-// A software system with high conceptual integrity – or high cohesion – tends to be easy to maintain. We can more confidently change part of a system with a cohesive design because we can draw upon our mental map of the architecture and understand intuitively the full repercussions of making the change.
-
-// [quote, Fred Brooks]
-// ____
-// Ease of use, then, dictates unity of design – conceptual integrity.
-// ____
 
 // Unfortunately, maintaining conceptual integrity is notoriously difficult as a software system grows in size and scope. To explain why, Brooks draws a parallel with European cathedrals, most of which "show differences in plan or architectural style between parts built in different generations by different builders". In software, Brooks notes, conceptual disunity arises not from the passage of time – hundreds of years separating phases of functional extension – but from the decomposition of the design into "many tasks done by many men".
 
