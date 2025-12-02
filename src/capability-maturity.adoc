@@ -2,6 +2,14 @@
 
 // TODO: We're not covering entirely dysfunctional organizations - this is a management and leadership issue, which recurs in all industries and is not specific to software development. We are focusing on the software development process, and how it can be improved through better practices and processes.
 
+// TODO:
+// Level 0: Sweatshop
+// Level 1: Chaos circus (chaos model = latest requirement is always the most urgent)
+// Level 2: Feature factory / Ticket treadmil / Sprint hamster wheel
+// Level 3: Process palace: Organizations that have implemented comprehensive processes and governance but may be overly rigid, with lots of ceremonies, documentation requirements, and approval gates. They're stable but not yet optimized for speed. Very bureaucratic.
+// Level 4: Delivery machine: Teams that have streamlined their processes, automated effectively, and can consistently ship quality software. They're productive and reliable, but still working somewhat independently from customers rather than in true partnership.
+// Level 5: Value stream / flow state:  The elite level where engineering and customers are tightly coupled. Daily deployments, continuous feedback loops, data-driven decisions, and direct customer collaboration. Features ship fast and iterate based on real usage.
+
 == Level 0: xxx
 
 // Coding.
