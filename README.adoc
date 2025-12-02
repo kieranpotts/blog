@@ -40,11 +40,11 @@ npm install
 
 The following run-scripts are available. Use `npm run [command]`, eg. `npm run dev:start`.
 
-* `dev:start` runs a clean development build, starts the development server, and sets up watchers, so subsequent changes to _some_ source files are automatically rebuilt and reloaded into the web server. The development server runs from `localhost:8080`. There's also an interface to BrowserSync, the dev server, from `localhost:8081`. Type `Ctrl`+`C` to stop the server.
+* `dev:start` runs a clean development build, starts the development server, and sets up watchers, so subsequent changes to _some_ source files are automatically rebuilt and reloaded into the web server. The development server runs from http://localhost:8080/. There's also an interface to BrowserSync, the dev server, from `localhost:8081`. Type `Ctrl`+`C` to stop the server.
 
 * `prod:build` produces a clean, production-ready build in the `dist` directory. The artifacts produced by this command are intended to be shipped to production.
 
-* `prod:serve` statically serves the contents of the built `dist` directory using a server that closely approximates the production environment, for example by enabling Netlify redirects and custom headers. Live reload is *not* enabled for this server, since this environment is intended to closely approximate the production environment. Use this to manually verify the output of `prod:build` before releasing the changes to production systems. The server runs on `localhost:8080`. Type `Ctrl`+`C` to stop the server.
+* `prod:serve` statically serves the contents of the built `dist` directory using a server that closely approximates the production environment, for example by enabling Netlify redirects and custom headers. Live reload is *not* enabled for this server, since this environment is intended to closely approximate the production environment. Use this to manually verify the output of `prod:build` before releasing the changes to production systems. The server runs on http://localhost:8080/. Type `Ctrl`+`C` to stop the server.
 
 === Git workflow
 
