@@ -18,6 +18,8 @@ TODO: Questions to identify Tactical versus strategic companies 
 TODO: Questions to uncover top-down management
 TODO: Questions to discover toxicity
 
+TODO: Do you contribute to open source? This tells you something about values - willing to give back to the community from which you derive value.
+
 TODO: Two different types of organizations:
 
 * Project-oriented. Tasks, estimations.
