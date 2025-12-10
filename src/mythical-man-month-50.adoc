@@ -1,16 +1,26 @@
 = The Mythical Man-Month at 50
-Kieran Potts, 30 November 2025
+Kieran Potts, 12 December 2025
 :description: Fred Brooks's classic book The Mythical Man-Month was published 50 years ago. It was hugely influential on the then-nascent discipline of software development. How does it stand up today?
 :docinfo: shared
 :nofooter:
 
 Fred Brooks's classic book _The Mythical Man-Month_ was published 50 years ago. It was hugely influential on the then-nascent discipline of software development. How does it stand up today?
 
-Frederick P Brooks Jr's classic book _The Mythical Man-Month: Essays on Software Engineering_ was published in 1975 – 50 years ago. The book was one of the first published analyses of the challenges of large-scale software development.
+https://en.wikipedia.org/wiki/Fred_Brooks[Frederick P Brooks Jr's] classic book _The Mythical Man-Month: Essays on Software Engineering_ was published in 1975 – 50 years ago. The book was one of the first published analyses of the challenges of large-scale software development.
 
 _The Mythical Man-Month_ introduced many ideas and principles that were hugely influential on early practitioners of our craft. But which ideas have withstood half a century of technological change, and which have not?
 
 I got myself a copy of the original 1975 edition and the extended 20th anniversary (1995) edition, which added four new chapters. Here are my thoughts.
+
+////
+
+== Key themes
+
+* Commercial software development is harder than solo hobby programming because of the *division of labor*.
+
+* The *conceptual integrity* of a system is critical to its success. This is especially difficult to maintain in large-scale software systems because of the division of labor. System architects are required to oversee the overall design strategy.
+
+////
 
 == The tar pit
 
@@ -22,7 +32,7 @@ But, Brooks acknowledges, the project was not "wholly successful". The initial r
 
 The opening chapter delivers Brooks's sharp post-mortem of the OS/360 project. He concludes that the fundamental reason for the project's difficulties was that the managers had seriously underestimated the overall costs of delivering such a large-scale software system. This happened because the estimates were based solely on the construction of the individual parts of the system. What the managers had not accounted for was: (a) the integration costs of all those components; and (b) the "productization" of the whole solution.
 
-Brooks estimates that the work of designing the interfaces between all the components of a system, coordinating their integration, and incrementally extending integration tests, has the potential to _triple_ the initial cost of coding all the components in isolation. Costs may triple again for all the work that goes into preparing a large-scale software system for distribution as shrink-wrapped software for general use by the public. For the OS/360 project, they had not fully accounted for how much extra rework and testing would be needed to make the system run reliably in "many operating environments, for many sets of data", and for time spent preparing user-facing documentation and other packaging.
+Brooks estimates that the work of designing the interfaces between all the components of a system, coordinating their integration, and incrementally extending integration tests, has the potential to triple the initial cost of coding all the components in isolation. Costs may triple again for all the work that goes into preparing a large-scale software system for distribution as shrink-wrapped software for general use by the public. For the OS/360 project, they had not fully accounted for how much extra rework and testing would be needed to make the system run reliably in "many operating environments, for many sets of data", and for time spent preparing user-facing documentation and other packaging.
 
 In total, building large, general-purpose, shrink-wrapped software products can cost up to nine times more than writing all the code as separate, non-integrated, private libraries. To put it another way, the writing of code is a very small amount of the overall cost of delivering a large-scale software system.
 
@@ -40,13 +50,13 @@ image::./_/media/images/the-mythical-man-month.jpg[]
 
 == The mythical man-month
 
-The eponymous second chapter deals with the perennial issue of software projects being reliably delivered much later than estimated. Brooks explores numerous reasons why estimating and scheduling of software projects is so hard. Are they still relevant today?
+The eponymous second chapter deals with the perennial issue of software projects being reliably delivered much later than estimated. Brooks explores numerous reasons why estimating and scheduling of software projects is so hard. Are these explanations still relevant today?
 
 === Optimism
 
 The first explanation the author gives for poor project estimation is a bias toward optimism.
 
-Brooks writes that "all programmers are optimists" and he hypothesizes that, because the age distribution of programmers in 1975 was skewed toward younger age groups, and because younger people tend to be more optimistic than the population at large, then software project estimates are particularly prone to being wildly optimistic.
+Brooks writes that "all programmers are optimists". He hypothesizes that, because the age distribution of programmers in 1975 was skewed toward younger age groups, and because younger people tend to be more optimistic than the population at large, then software project estimates are particularly prone to being wildly optimistic.
 
 Brooks adds that the very notion that the development of complex software systems can be accurately estimated is flawed. He writes that "the programmer builds from pure thought-stuff" and that, "for the human makers of things, the incompleteness and inconsistencies of our ideas become clear only during implementation. Thus it is that writing, experimentation, 'working out' are essential disciplines for the theoretician."
 
@@ -54,7 +64,7 @@ Brooks adds that the very notion that the development of complex software system
 
 The second explanation that Brooks provides for poor estimation is the assumption that delivery schedules can be shortened by adding more programmers. Famously, Brooks writes that "adding manpower to a late software project makes it later."
 
-Brooks's central argument for this is that adding people to a late project _increases total effort_. There's extra effort involved in reorganizing the project delivery plan and managing the larger team. Meanwhile, in-flight work streams are disrupted by the "repartitioning" of work. There follows a permanent increase in intercommunication, required to coordinate the development of dependencies and interfaces, and to coordinate integration testing. There's also more time spent training and onboarding new people.
+Brooks's central argument for this is that adding people to a late project increases total effort. There's extra effort involved in reorganizing the project delivery plan and managing the larger team. Meanwhile, in-flight work streams are disrupted by the "repartitioning" of work. There follows a permanent increase in intercommunication, required to coordinate the development of dependencies and interfaces, and to coordinate integration testing. There's also more time spent training and onboarding new people.
 
 And some programming tasks just cannot be parallelized. Some tasks can only be done sequentially, and so cannot be shared between more programmers. If programmers are already optimally allocated to these tasks, adding more programmers will not speed up their completion. To illustrate this point, Brooks offers the suitably colorful analogy of child bearing:
 
@@ -63,7 +73,7 @@ ____
 The bearing of a child takes nine months, no matter how many women are assigned.
 ____
 
-Brooks coins the term "man-month" to represent one unit of additional manpower (one person working for one month). Because adding resources to a project in the form of extra man-months increases overall effort, it does not necessarily correspond to an increase in the speed of progress. And yet, 50 years ago, Brooks says this was a widely held belief and a common practice – hence the mythical nature of extra man-month resources!
+Brooks coins the term "man-month" to represent one unit of additional manpower (one person working for one month). Because adding resources to a project in the form of extra man-months increases overall effort, it does not necessarily correspond to an increase in the speed of progress. And yet, 50 years ago, Brooks says this was a widely held belief and a common practice – hence the "`mythical`" nature of extra man-month resources!
 
 [quote, Fred Brooks]
 ____
@@ -72,10 +82,10 @@ ____
 
 Thus, once a schedule is proven to be unrealistic, there may not be anything that can be done to put the project back on track. Adding more people to a project _will_ decrease the productivity of individual team members, and there comes a tipping point where this decrease in productivity more than offsets the overall addition of resources – so delivery speed _slows_ despite the extra manpower.
 
-.Correlation between time and the number of workers for a project with complex interrelationships
+.Correlation between time and the number of workers
 image::./_/media/diagrams/men-versus-months.drawio.png["",468]
 
-Brooks observes that the more complex the interrelationships between the component parts of the system under construction, the greater this effect – hence the management of complexity is identified as the essential challenge of software development.
+Brooks observes that the more complex the interrelationships between the component parts of the system under construction, the greater this effect. Hence the management of complexity is identified as the essential challenge of software development.
 
 Today, we know this as Brooks's Law.
 
@@ -121,11 +131,11 @@ Our industry's immaturity in the science of project estimating and scheduling is
 
 Even today, managers routinely believe that adding more people to a late project can solve schedule slippage. I've seen this myself. It's especially commonplace in consultancies and outsourcing firms, where the software house bills its customers in man-hours and therefore has a commercial incentive to add as many people as possible to their projects. But I've seen it in software houses, too. They ought to know better.
 
-Brooks is most convincing in his argument that the very notion that the development of software can be accurately estimated is deeply flawed. Software development is an inherently complex and unpredictable activity. In every software project, even those with stable and known requirements, there will always be some requirements that are emergent. Requirements may emerge only through design and construction, or even later still, when working software is finally put into the hands of real users. This is the _nature_ of software development, which is more of a design problem than a construction task.
+Brooks is most convincing in his argument that the very notion that the development of software can be accurately estimated is deeply flawed. Software development is an inherently complex and unpredictable activity. In every software project, even those with stable and known requirements, there will always be some requirements that are emergent. Requirements may emerge only through design and construction, or even later still, when working software is finally put into the hands of real users. This is the nature of software development, which is more of a design problem than a construction task.
 
 The misplaced belief that the delivery of complex software can be planned in meticulous detail is still widely held in 2025.
 
-Of course, some things have improved. In the intervening years, our industry has universally adopted iterative and incremental development practices, in which small chunks of work are delivered at regular intervals with testing and debugging done in parallel to the design and construction. Thus, rather than testing being left until the system is complete, instead the correctness of the evolving system is continuously evaluated throughout its development life cycle. 
+Of course, some things have improved. In the intervening years, our industry has universally adopted iterative and incremental development practices, in which small chunks of work are delivered at regular intervals with testing and debugging done in parallel to the design and construction. Thus, rather than testing being left until the system is complete, instead the correctness of the evolving system is continuously evaluated throughout its development life cycle.
 
 Through continuous integration and testing, we've solved the problem of defects in the design and construction being discovered late. At least this is rarely a cause for project overruns anymore.
 
@@ -160,7 +170,7 @@ If we want to prioritize development efficiency and the quality of the final pro
 
 Brooks draws on a solution first proposed by Harlan Mills in a 1971 IBM paper.
 
-[quote, Fred Brooks]
+[quote]
 ____
 Mills proposes that each segment of a large job be tackled by a team, but that the team be organized like a surgical team rather than a hog-butchering team. That is, instead of each member cutting away on the problem, one does the cutting and the others give him every support that will enhance his effectiveness and productivity.
 ____
@@ -189,47 +199,45 @@ As for the idea of 10x engineers, the findings of the original Sackman paper hav
 
 == Conceptual integrity
 
-Brooks is perhaps most famous for his invention of the concept of conceptual integrity. It was mentioned in the previous chapter, but only in this fourth chapter is the concept fleshed out.
+Brooks is perhaps most famous for his invention of the concept of conceptual integrity – mentioned in the previous chapter, and fleshed out in this fourth chapter.
 
 The dominant theme throughout _The Mythical Man-Month_ is the question of how best to manage complexity in large-scale software systems. Maintaining conceptual integrity, Brooks argues, is the best way of containing complexity.
 
-Conceptual integrity is a quality of a system that emerges from its high-level design. A system design with high conceptual integrity is one where all the concepts and their relationships with each other are applied in a consistent way throughout. Anywhere you look in the codebase, you can tell it is part of the overall design. A consistent design philosophy flows through all subsystems.
+Conceptual integrity is a quality of a system that emerges from its high-level design. A system with high conceptual integrity is one where all its concepts, and their relationships with each other, are applied in a consistent way throughout. A consistent design philosophy flows through all subsystems. Anywhere you look in the codebase, you can tell it is part of the same system.
 
-A system with high conceptual integrity tends to be easy to maintain. We can more confidently change parts of such systems, because we can draw upon our mental map of the architecture and understand intuitively the full repercussions of making the changes.
+A system with high conceptual integrity tends to be easy to maintain. We can more confidently change parts of such systems, because we can draw upon our mental map of the architecture and understand intuitively the full repercussions of making our changes.
 
 [quote, Fred Brooks]
 ____
 Ease of use, then, dictates unity of design – conceptual integrity.
 ____
 
-In 2025, conceptual integrity remains part of our industry's lexicon, though today you are more likely to hear phrases like "cohesion" and "design consistency" instead. I think few architects would dispute Brooks's notion that conceptual integrity is one of the most important principles of software design.
+I think few modern architects would dispute Brooks's notion that conceptual integrity is one of the most important principles of software design, though today we are more likely to use alternative terms like "cohesion" and "consistency".
 
 [quote, Fred Brooks]
 ____
 I will contend that conceptual integrity is _the_ most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of ideas, than to have one that contains many good but independent and uncoordinated ideas.
 ____
 
-The difficult is in achieving it. For a system to have high conceptual integrity, Brooks says "the entire system... requires a system architect to design it all, from the top down". This is difficult to do in large-scale software projects because of the division of labour – the implementation is necessarily broken up into lots of small pieces, each designed and constructed independently by different programmers.
+The difficult is in achieving it. For a system to have high conceptual integrity, Brooks says "the entire system... requires a system architect to design it all, from the top down". This is difficult to do in large-scale software projects because of the division of labour. The implementation is necessarily broken up into lots of small pieces, each designed and constructed independently by different programmers.
 
+The solution offered by Brooks is to have one system architect who designs the whole system from top-to-bottom. Brooks says the system architect should stick with the design of the overall system, and not get involved with the implementation of individual parts. In Brooks's development model, design and implementation are two distinct phases. First, a system architect defines the design specifications, then the builders arrive and define the implementation specifications.
 
+Today, we know this development model as *top-down design*. In this design process, you start with a clear understanding of the overall architectural style that you want to achieve, and the architectural patterns that you want to use. Within that overall design framework, the solution is broken down into a hierarchy of smaller, more manageable subsystems, modules, and components – each initially designed as a black box (their interfaces specified but their internal workings left unspecified). Each component is then refined in a stepwise fashion, with internal details described in greater detail. Additional levels of dependencies and interactions are added incrementally, until the complete system is fully specified.
 
+Top-down design was promoted in the 1970s by IBM researchers Harlan Mills and Niklaus Wirth. Mills had implemented this method with success in a project for the New York Times, leading to the approach being adopted throughout IBM and then the wider IT industry. Wirth, the creator of the Pascal programming language, also advocated for top-down design in his work. He authored an https://dl.acm.org/doi/10.1145/362575.362577[influential paper] titled "Program Development by Stepwise Refinement," published in 1971, which outlined the principles of top-down design. Top-down design methods continued to be favored in software development until the late 1980s.
 
-// TODO: Bottom-up approach has become prevalent.
-// He argues this is probably the most important aspect of large system programming, but one that is often overlooked as programmers have a tendency to focus on the design of individual features rather than the design of the overall system. 
-// Conceptual integrity can be preserved, Brooks argues, by having one system architect who designs the whole system from top-to-bottom. Brooks argues that the system architect should stick with the design of the system, and not get involved with the implementation. Implementation and design should be treated as two separate phases. A system architect defines the design specifications, while the builders define the implementation specifications. System architecture should be based on user requirements.
+Top-down design contrasts with *bottom-up design*, which emphasizes building a system from small, primitive components, gradually integrating lots of small parts to compose the complete solution. Programmers have a tendency to take a bottom-up approach to software construction, as our day-to-day work demands we focus on the design of individual features rather than of the overall system. For this reason, maintaining conceptual integrity is often overlooked.
 
+I think it is fair to say that, in 2025, bottom-up design is more highly regarded than top-down design. Top-down design is associated with "big design up-front" and "waterfall" methodologies, which are considered old-fashioned and inflexible, while bottom-up design is associated with "lean" and "agile" methodologies, which are considered more modern and flexible.
 
+In practice, all software projects combine elements of both top-down and bottom-up design. Only the relative weighting of the two approaches varies from project to project. Mature software development practices do not view either approach as fundamentally superior but instead see them as mutually beneficial.
 
-// Key themes: One is that commercial software development is harder than solo programming because of the *division of labor*. The other main theme is that the *conceptual integrity* of a system is critical to its success.
+In 2025, the challenge remains maintaining conceptual integrity at scale. The larger the system, the greater the division of labor, and therefore the harder it is to maintain the conceptual integrity of the overall system design.
 
+Brooks draws a parallel with European cathedrals, most of which "show differences in plan or architectural style between parts built in different generations by different builders". In software, Brooks notes, conceptual disunity arises not from the passage of time – hundreds of years separating phases of functional extension – but from the decomposition of the design into "many tasks done by many men".
 
-// Unfortunately, maintaining conceptual integrity is notoriously difficult as a software system grows in size and scope. To explain why, Brooks draws a parallel with European cathedrals, most of which "show differences in plan or architectural style between parts built in different generations by different builders". In software, Brooks notes, conceptual disunity arises not from the passage of time – hundreds of years separating phases of functional extension – but from the decomposition of the design into "many tasks done by many men".
-
-// The necessity to have a *division of labour* in large-scale software projects makes it hard to maintain the conceptual integrity of the overall system design.
-
-// == Conceptual integrity
-
-// // TODO
+// The main benefit of bottom-up design is [reusability] of existing code. The main downside of bottom-up design is that is can be overly organic, leading to a tangle of elements and subsystems with no overall structure and limited consistency. Development of large-scale systems especially requires some degree of top-down design to maintain [conceptual integrity]. In practice, most modern software design practices combine elements of both top-down and bottom-up design.
 
 // // The _ratio_ of function to conceptual complexity is the ultimate test of system design. This ratio is a measure of ease of use.
 
@@ -263,19 +271,24 @@ The difficult is in achieving it. For a system to have high conceptual integrity
 
 // ----------------
 
-// Bottom-up design is an approach to *link:./system-design.adoc[system design]* that emphasizes building systems from small, primitive components, gradually integrating lots of small parts to compose the complete solution. It is sometimes used as a synonym for [evolutionary design], which is a similar concept.
-
-// Bottom-up design contrasts with *link:./top-down-design.adoc[top-down design]*, which instead emphasizes up-front planning and design through [decomposition] of the problem space into lots of subsystems.
-
-// Bottom-up design is often desirable in situations where there are limited resources (such as time or people) or where the requirements are unclear or unstable. The emphasis is on reusing generic components to compose custom solutions with minimal bespoke code. The base components are linked together to form larger subsystems, which are in turn connected to form the complete system.
-
-// The main benefit of bottom-up design is [reusability] of existing code. The main downside of bottom-up design is that is can be overly organic, leading to a tangle of elements and subsystems with no overall structure and limited consistency. Development of large-scale systems especially requires some degree of top-down design to maintain [conceptual integrity]. In practice, most modern software design practices combine elements of both top-down and bottom-up design.
 
 '''''
 
 // "Yet the specialization of function of the remainder of the team is the key to its efficiency, for it permits a radically simpler communication pattern among the members." This is perhaps something we have lost. We've tended toward generalization rather than specialization. And yet, any economist would tell you that the path to productivity is via specialization.
 
 // ////
+
+
+
+
+
+
+
+
+
+
+
+
 
 == The second-system effect
 
