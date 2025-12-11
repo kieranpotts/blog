@@ -12,37 +12,41 @@ _The Mythical Man-Month_ introduced many ideas and principles that were hugely i
 
 I got myself a copy of the original 1975 edition and the extended 20th anniversary (1995) edition, which added four new chapters. Here are my thoughts.
 
-////
+== TL;DR
 
-== Key themes
+The main themes of _The Mythical Man-Month_ are:
+
+* The core challenge of software development is the *management of complexity*.
 
 * Commercial software development is harder than solo hobby programming because of the *division of labor*.
 
-* The *conceptual integrity* of a system is critical to its success. This is especially difficult to maintain in large-scale software systems because of the division of labor. System architects are required to oversee the overall design strategy.
+* *Conceptual integrity* is the most important consideration in system design.
 
-////
+* Conceptual integrity is especially difficult to maintain in large-scale software systems because of the division of labor. The solution is for system architects to design the whole system from top-to-bottom (*top-down design*).
+
+* There are many reasons why software projects are notorious for taking longer to complete than expected. Optimism in estimates, ineffective monitoring of progress during construction, and the emergence of bugs late in the process, are all common causes of cost overruns. But perhaps the most convincing reason is that we have a habit of trying to accommodate our customers' deadlines rather than negotiating realistic schedules based on data-driven projections.
+
+* Adding manpower to a late software project makes it later – Brooks's Law. More people means more overhead in terms of communication and training. In addition, some programming tasks must be done sequentially and cannot be parallelized. All software projects have an optimal division of labour and delivery cannot be further optimized beyond this point.
 
 == The tar pit
 
-_The Mythical Man-Month_ is more of an anthology of standalone essays rather than a cohesive thesis. Nevertheless, there are some key themes that run throughout. The most prominent theme is the one introduced in this opening chapter: that the essential challenge of software development is the management of complexity.
+_The Mythical Man-Month_ is more of an anthology of standalone essays rather than a cohesive thesis. Nevertheless, there are some key themes that run throughout. The most prominent theme is the one introduced in this opening chapter: that the core challenge of software development is the management of complexity.
 
 Throughout the book, Brooks draws on his own experiences, notably as the manager who oversaw the initial design of IBM's OS/360 operating system. At the time, OS/360 was one of the biggest, most ambitious, most complex software projects ever attempted. At the peak of the project, more than 1,000 people worked on it.
 
 But, Brooks acknowledges, the project was not "wholly successful". The initial release of OS/360, in 1966, was delivered "late, it [used] more memory than planned, the costs were several times the estimate, and [the first version] did not perform very well".
 
-The opening chapter delivers Brooks's sharp post-mortem of the OS/360 project. He concludes that the fundamental reason for the project's difficulties was that the managers had seriously underestimated the overall costs of delivering such a large-scale software system. This happened because the estimates were based solely on the construction of the individual parts of the system. What the managers had not accounted for was: (a) the integration costs of all those components; and (b) the "productization" of the whole solution.
+The opening chapter delivers Brooks's sharp post-mortem of the OS/360 project. He concludes that the fundamental reason for the project's difficulties was that the overall costs of delivering such a large-scale software system were seriously underestimated. This happened because the estimates were based solely on the construction of the individual parts of the system. What they had not accounted for was: (a) the integration costs of all those components; and (b) the "productization" of the whole solution.
 
-Brooks estimates that the work of designing the interfaces between all the components of a system, coordinating their integration, and incrementally extending integration tests, has the potential to triple the initial cost of coding all the components in isolation. Costs may triple again for all the work that goes into preparing a large-scale software system for distribution as shrink-wrapped software for general use by the public. For the OS/360 project, they had not fully accounted for how much extra rework and testing would be needed to make the system run reliably in "many operating environments, for many sets of data", and for time spent preparing user-facing documentation and other packaging.
-
-In total, building large, general-purpose, shrink-wrapped software products can cost up to nine times more than writing all the code as separate, non-integrated, private libraries. To put it another way, the writing of code is a very small amount of the overall cost of delivering a large-scale software system.
+Brooks estimates that the work of designing the interfaces between all the components of a system, coordinating their integration, and incrementally extending integration tests, has the potential to triple the initial cost of coding all the components in isolation. Costs may triple again for all the work that goes into preparing a large-scale software system for distribution as shrink-wrapped software for general use by the public. For the OS/360 project, they had not fully accounted for how much extra rework and testing would be needed to make the system run reliably in "many operating environments, for many sets of data", and for time spent preparing user-facing documentation and other packaging. In total, building large, general-purpose, shrink-wrapped software products can cost up to nine times (3x3) more than writing all the code as separate, non-integrated, private libraries.
 
 Brooks reflects that large-scale software development, like OS/360, is inherently hard. The reality of developing commercial software for a living, Brooks writes, is that there are many "dreary hours of tedious, painstaking labor", often involving analysis of code written by other people who have moved on to other projects already."
 
 50 years later, this all sounds depressingly familiar.
 
-Despite the immense technological advances of the last half-century – in computer hardware, in programming languages and runtime environments, and in tools and automation that support every aspect of software delivery – the core challenges of large-scale software development remain much the same. Cost overruns, and other modes of project failure, are still all-too common.
+Despite the immense technological advances of the last half-century – in computer hardware, in programming languages and runtime environments, and in tools and automation that support every aspect of software delivery – the core challenges of large-scale software development remain much the same. Cost overruns, and other modes of project failure, are still common.
 
-The essential challenge of software development remains the management of complexity. Brooks draws the colorful analogy that large-scale software development is like "the mortal struggles of great beasts in the tar pits". This is represented by the book's cover image, a sketch of Charles Knight's 1925 painting that depicts the great mammoths of the Pleistocene struggling to free themselves from the tar pits of Southern California.
+The core challenge of software development remains the management of complexity. Brooks draws the colorful analogy that large-scale software development is like "the mortal struggles of great beasts in the tar pits". This is represented by the book's cover image, a sketch of Charles Knight's 1925 painting that depicts the great mammoths of the Pleistocene struggling to free themselves from the tar pits of Southern California.
 
 image::./_/media/images/the-mythical-man-month.jpg[]
 
@@ -50,7 +54,7 @@ image::./_/media/images/the-mythical-man-month.jpg[]
 
 == The mythical man-month
 
-The eponymous second chapter deals with the perennial issue of software projects being reliably delivered much later than estimated. Brooks explores numerous reasons why estimating and scheduling of software projects is so hard. Are these explanations still relevant today?
+The eponymous second chapter deals with the perennial issue of software projects being delivered much later than estimated. Brooks explores numerous reasons why estimating and scheduling of software projects is so hard. Are these explanations still relevant today?
 
 === Optimism
 
@@ -58,7 +62,7 @@ The first explanation the author gives for poor project estimation is a bias tow
 
 Brooks writes that "all programmers are optimists". He hypothesizes that, because the age distribution of programmers in 1975 was skewed toward younger age groups, and because younger people tend to be more optimistic than the population at large, then software project estimates are particularly prone to being wildly optimistic.
 
-Brooks adds that the very notion that the development of complex software systems can be accurately estimated is flawed. He writes that "the programmer builds from pure thought-stuff" and that, "for the human makers of things, the incompleteness and inconsistencies of our ideas become clear only during implementation. Thus it is that writing, experimentation, 'working out' are essential disciplines for the theoretician."
+Brooks adds that the very notion that the development of complex software systems can be accurately estimated is flawed. He writes that "the programmer builds from pure thought-stuff" and that "for the human makers of things, the incompleteness and inconsistencies of our ideas become clear only during implementation. Thus it is that writing, experimentation, 'working out' are essential disciplines for the theoretician."
 
 === Progress is not always correlated with effort
 
@@ -85,7 +89,7 @@ Thus, once a schedule is proven to be unrealistic, there may not be anything tha
 .Correlation between time and the number of workers
 image::./_/media/diagrams/men-versus-months.drawio.png["",468]
 
-Brooks observes that the more complex the interrelationships between the component parts of the system under construction, the greater this effect. Hence the management of complexity is identified as the essential challenge of software development.
+This graph shows that software projects have an optimal division of labour – where delivery is maximized by efficient allocation of resources – and delivery cannot be further optimized beyond this point. Brooks observes that the more complex the interrelationships between the component parts of the system under construction, the greater this effect. Hence the management of complexity is identified as the core challenge of software development. The simpler the design, the more opportunities you will have to build faster if you need to.
 
 Today, we know this as Brooks's Law.
 
@@ -119,7 +123,7 @@ ____
 Good cooking takes time. If you are made to wait, it is to serve you better, and to please you.
 ____
 
-In the delivery of commercial software, we have a tendency to take the third option: to turn up the heat and try to deliver products within the schedules desired by the customers. "False scheduling to match the patron's desired date is much more common in our discipline than elsewhere in engineering," Brooks observes.
+In the delivery of commercial software, we have a tendency to take the third option: to turn up the heat and try to deliver products within the schedules desired by our customers. "False scheduling to match the patron's desired date is much more common in our discipline than elsewhere in engineering," Brooks observes.
 
 Brooks contends we should instead have the "courteous stubbornness" of a chef who refuses to serve a dish until it is ready. Construction of good software, like cooking, takes time. Some tasks just cannot be hurried without spoiling the result.
 
