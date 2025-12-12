@@ -260,41 +260,39 @@ Brooks proposes that architects should assign a value to "`each little function`
 
 == Passing the word
 
-// Chapter six is titled "Passing the word". Brooks argues that the most important thing in software development is communication.
+Brooks asks: "`How does one keep the architects from drifting off into the blue with unimplementable or costly specifications?`" And: "`How does one ensure that every trifling detail of an architectural specification gets communicated to the implementer, properly understood by him, and accurately incorporated into the product?`"
 
-// // How can we resolve this? Brooks asks: "How does on keep the architects from drifting off into the blue with unimplementable or costly specifications?" And: "How does one ensure that every trifling detail of an architectural specification gets communicated to the implementer, properly understood by him, and accurately incorporated into the product?" These questions are as pertinent in 2025 as they were in 1975.
+These questions are as pertinent in 2025 as they were in 1975.
 
-// "How can a group of 10 architects maintain the conceptual integrity of a system which 1000 men are building?" To answer this question, Brooks draws on a communication system worked out for the System/360 design effort – this was a hardware project, but he argues the techniques are equally applicable to software projects.
+Building on his thesis from the previous chapter, in "Passing the word" Brooks argues that the most important thing in software development is communication.
 
-// There are multiple communication artifacts that need to be created an maintained:
+He draws on a communication system worked out for the System/360 design effort. This was a hardware project, but Brooks says the techniques are equally applicable to software projects.
 
-// * *The manual*: This is a written _external_ specification for the system under construction, ie. a user manual. This is the most important artifact products by software architects. "It describes and prescribes every detail of what the user sees" and omit everything that the user does not see – ie. implementation details are excluded and are left to the builders to decide. Feedback from users and implementers helps to refine the design. Changes to the manual are recorded using dated versioning. User manuals might make dull reading, but precision is preferred to liveliness. Manuals should define what is _not_ prescribed as carefully as what _is_ – this is how precision is achieved.
+Brooks says multiple communication artifacts needs to be maintained:
 
-// * *Formal definitions*: Since English, or any other human language, is not naturally _precise_, formal notations should be preferred to define a system's interfaces. Formal notations tend to be both precise and complete. But they lack comprehensibility. Therefore, ultimately you probably want specifications to be formed from a mix of formal notations and descriptions in prose.
+* *The manual*: A external specification for the system, ie. a user manual. This is the most important artifact produced by the architects. "`It describes and prescribes every detail of what the user sees`" and omits all the implementation details that the user does not see and which are left to the builders to decide. Feedback from users and implementers helps to refine the user interface design. Changes to the manual are recorded using dated versioning. User manuals might make dull reading, but precision is preferred to liveliness.
 
-// // Once needs both a formal definition of a design, for precision, and a prose definition, for comprehensibility. One of the formal and prose definitions must be standard, and the other derivative; either definition can serve in either role.
+* *Formal definitions*: Since English, or any other human language, is not naturally _precise_, formal notations should be preferred to define a system's interfaces. Formal notations tend to be both precise and complete. But they lack comprehensibility. Therefore, ultimately you probably want specifications to be formed from a mix of formal notations and descriptions in prose.
 
-// Brooks notes that there are many tools available for formal definitions: the Backus-Naur Form (BNF) for language definition, for example.
+One needs both a formal definition of a design, for precision, and a prose definition, for comprehensibility. Either the formal or prose definition must be the standard or source-of-truth, and the other derivative; either definition can serve in either role.
 
-// "… an implementation can serve as a formal definition. When the first compatible computers were built, this was exactly the technique used. The new machine was to match an existing machine. The manual was vague on some point? 'Ask the machine!' … A programmed simulator… can serve in precisely the same way." Using an implementation as a definition has some advantages, not least all questions can be unambiguously answered by running tests or experiments to determine the behavior. It also answers lots of questions we might have about how the implementation will need to work to meet the required behavior.
+Brooks notes that there are many tools available for formal definitions: the Backus-Naur Form (BNF) for language definition, for example. An "`implementation can serve as a formal definition. When the first compatible computers were built, this was exactly the technique used. The new machine was to match an existing machine. The manual was vague on some point? 'Ask the machine!' … A programmed simulator… can serve in precisely the same way.`" Using an implementation as a definition has some advantages, not least all questions can be unambiguously answered by running tests or experiments to determine the behavior. It also answers lots of questions we might have about how the implementation will need to work to meet the required behavior.
 
-// Proofs of concept / prototypes / mocks.
+Today, we might develop prototypes and proofs-of-concepts to serve as the reference implementation.
 
-// But the trade-off is that there can be some confusions as to which is the source-of-truth for the behavior: the reference implementation or the manual? It is particularly important that simulated implementations be carefully maintained for as long as they act as a standard.
+An implementation, including a simulation, can serve as an architectural definition - but has formidable disadvantages.
 
-// // An implementation, including a simulation, can serve as an architectural definition - but has formidable disadvantages.
+* *Direct incorporation*: "`A lovely technique for disseminating and enforcing definitions is available for the software system architect… This technique is to design the declaration of the passed parameters or shared storage, and to require the implementations to include that declaration via a compile-time operation`". We use interfaces, available in most modern programming languages, for this purpose. For distributed systems…
 
-// * *Direct incorporation*: "A lovely technique for disseminating and enforcing definitions is available for the software system architect… This technique is to design the declaration of the passed parameters or shared storage, and to require the implementations to include that declaration via a compile-time operation". We uses interfaces, available in most modern programming languages, for this purpose. For distributed systems…
+* *Meetings*: Meetings are necessary. Brooks suggests two levels are useful: a weekly half-day conference of all the architects (decisions from which give quick results and allow work to proceed); and annual supreme court sessions, lasting typically two weeks (in which a built-up backlog of open issues and appeals against prior design decisions are resolved).
 
-// * *Meetings*: Meetings are necessary. Brooks suggests two levels are useful: a weekly half-day conference of all the architects (decisions from which give quick results and allow work to proceed); and annual supreme court sessions, lasting typically two weeks (in which a built-up backlog of open issues and appeals against prior design decisions are resolved).
+* *Multiple implementations*: If the manual and the system disagree, one can be changed (it is usually easier to change the manual). However, if there is divergence in behavior between multiple implementations, this is harder to resolve. Today, we have the concept of a single source-of-truth, usually a reference code repository from which all implementation instances are compiled.
 
-// * *Multiple implementations*: If the manual and the system disagree, one can be changed (it is usually easier to change the manual). However, if there is divergence in behavior between multiple implementations, this is harder to resolve. Today, we have the concept of a single source-of-truth, usually a reference code repository from which all implementation instances are compiled.
+* The *telephone log*: This is maintained by the architects and it records every question and every answer between implementers and the architects. No matter how precise the specification, there will always be clarifications needed, and these must be communicated with everyone. Such mechanisms can be quite informal…
 
-// * The *telephone log*: This is maintained by the architects and it records every question and every answer between implementers and the architects. No matter how precise the specification, there will always be clarifications needed, and these must be communicated with everyone. Such mechanisms can be quite informal…
+* *Product test*: An independent product testing organization checks the system against specifications, and serves as a devil's advocate, pinpointing every conceivable defect and discrepancy. "`Every development organization needs such an independent technical auditing group to keep it honest.`" … "`In the last analysis the customer is the independent auditor. In the merciless light of real use, every flaw will show. The product-testing group then is the surrogate customer, specialized for finding flaws.`" (Brooks calls the product-testing organization the "`daily adversary`", but also the "`best friend`", of the project manager.
 
-// * *Product test*: An independent product testing organization checks the system against specifications, and serves as a devil's advocate, pinpointing every conceivable defect and discrepancy. "Every development organization needs such an independent technical auditing group to keep it honest." … "In the last analysis the customer is the independent auditor. In the merciless light of real use, every flaw will show. The product-testing group then is the surrogate customer, specialized for finding flaws." (Brooks calls the product-testing organization the "daily adversary", but also the "best friend", of the project manager.
-
-// Testing, then, is a critical piece of "passing the word" between architect and implementer. The role of the tester, ultimately, is to find "where the design decisions were not properly understood or accurately implemented". This link must operate "early and simultaneously" with design.
+Testing, then, is a critical piece of "`passing the word`" between architect and implementer. The role of the tester, ultimately, is to find "`where the design decisions were not properly understood or accurately implemented`". This link must operate "`early and simultaneously`" with design.
 
 == The Tower of Babel
 
