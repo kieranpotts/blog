@@ -296,61 +296,55 @@ Testing, then, is a critical piece of "`passing the word`" between architect and
 
 == The Tower of Babel
 
-// // Chapter seven, titled "Why did the Tower of Babel fail?" is another important chapter in the book. Brooks uses the biblical story of the Tower of Babel as a metaphor for the communication breakdowns that can occur in large software projects. Originally, the people of Babel spoke the same language and they were all united. Babel fell when the people started speaking different languages and could no longer communicate with each other. The Tower of Babel failed not because of technological limitations or a lack of resources, but because of communication problems and the disorganization that resulted from them.
+Chapter seven, titled "Why did the Tower of Babel fail?" is another important chapter in the book. It is all about the importance of communication in large-scale software projects.
 
-// // The same thing is the cause of many failures in the delivery of large computer systems, Brooks argues. To improve communication within a large project, Brook suggests keeping a *workbook* for the project. The workbook contains all the documentation relevant to the project, from high-level missions and objectives, via external specifications (what we would now call user acceptance criteria), to internal specifications and design documents. Critically, the workbook must also record the changes made to the project over time. Changes to the contents of the workbook should also be recorded.
+Brooks uses the biblical story of the Tower of Babel as a metaphor for the communication breakdowns that can occur in large software projects. The Tower of Babel is a myth from the Book of Genesis that is meant to explain the existence of different languages and cultures around the world. According to the story, a united human race with a common language agree to build a great city with a mighty tower. Noticing humanity's power in unity and through common language, God confounds their speech so that the people can no longer communicate effectively with one another. The people fail to complete the engineering work, and scatter around the Earth, leaving Babel unfinished.
 
-// // As the workbook increases in size, it become more important to impose a strict structure to its contents. Indexing and numbering systems may be used to help people find the information they're looking for.
+Brooks calls the tower of Babel "`the first engineering fiasco`". But it was not to be the last. The project failed, not because of lack of manpower, materials, time, or knowledge, but because the collaborators failed to communicate effectively with one another, and therefore they could not efficiently coordinate their individual efforts.
 
-// The seventh chapter is titled "Why did the Tower of Babel fall?". Brooks uses the biblical story of the Tower of Babel to illustrate the problems that arise when a large number of people are working on a project without a common language.
+The same thing is the cause of many failures in the delivery of large computer systems, Brooks argues.
 
-// This chapter is all about the importance of communication.
+[quote, Fred Brooks]
+____
+Communication and its consequent, organization, are critical for success. The techniques of communication and organization demand from the manager much thought and as much experienced competence as the software technology itself.
+____
 
-// The Tower of Babel is a myth from the Book of Genesis that is meant to explain the existence of different languages and cultures around the world. According to the story, a united human race with a common language agree to build a great city with a mighty tower. Noticing humanity's power in unity and through common language, God confounds their speech so that the people can no longer communicate effectively with one another. The people fail to complete the engineering work, and scatter around the Earth, leaving Babel unfinished.
+Teams should communicate with one another in as many ways as possible. Brooks proposes three techniques for large-scale team communication:
 
-// Brooks calls the tower of Babel "the first engineering fiasco" – but not the last. The project failed, not because of lack of manpower, materials, time, or knowledge, but because the collaborators failed to communicate effectively with one another, and therefore they could not efficiently coordinate their individual efforts.
+* *Informal communication*: eg. a clear definition of intergroup dependencies will help to clarify the lines of communication (in those days, by phone).
 
-// [quote, Fred Brooks]
-// ____
-// Communication and its consequent, organization, are critical for success. The techniques of communication and organization demand from the manager much thought and as much experienced competence as the software technology itself.
-// ____
+* Regular project *meetings*, "`with one team after another giving technical briefings, are invaluable. Hundreds of minor misunderstandings get smoked out this way.`"
 
-// // Teams should communicate with one another in as many ways as possible.
+* A project *workbook*, which is a "`centralized, up-to-date, and universally accessible repository of all of the project's documentation, including objectives, interface specifications, technical/internal specifications, technical standards, and administrative memoranda.
 
-// Brooks proposed three techniques for large-scale team communication:
+Of these artifacts, the workbook is the most important. The workbook contains all the documentation relevant to the project, from high-level missions and objectives, via external specifications (what we would now call user acceptance criteria), to internal specifications and design documents. Critically, the workbook must also record the changes made to the project over time. Changes to the contents of the workbook should also be recorded.
 
-// * *Informal communication*: eg. a clear definition of intergroup dependencies will help to clarify the lines of communication (in those days, by phone).
+Brooks goes into some length about how the OS/360 project soon ended up with a printed workbook _five inches thick_, with hundreds of pages being reprinted and replaced in a typical day. The project switched to using microfiche, which reduced the costs of maintaining (and constantly reprinting large numbers of copies of) the workbook. Today we'd typically use a wiki system like Confluence at a cost of a few dollars per month per user.
 
-// * Regular project *meetings*, "with one team after another giving technical briefings, are invaluable. Hundreds of minor misunderstandings get smoked out this way."
+As the workbook increases in size, it become more important to impose a strict structure to its contents. Indexing and numbering systems may be used to help people find the information they're looking for.
 
-// * A project *workbook*, which is a "centralized, up-to-date, and universally accessible repository of all of the project's documentation, including objectives, interface specifications, technical/internal specifications, technical standards, and administrative memoranda. Brooks goes into some length about how the OS/360 project soon ended up with a printed workbook _five inches thick_, with hundreds of pages being reprinted and replaced in a typical day. The project switched to using microfiche, which reduced the costs of maintaining (and constantly reprinting large numbers of copies of) the workbook. Today we'd typically use a wiki system like Confluence at a cost of a few dollars per month per user.
+Even in 1975, Brooks noted that a "shared electronic notebook" is a much more effective, cheaper, and simpler mechanism.
 
-// // Even in 1975, Brooks noted that a "shared electronic notebook" is a much more effective, cheaper, and simpler mechanism.
+Communication between teams must be organized. This is achieved through a hierarchical structure of people and teams. The purpose of organization is to reduce the amount of communication and coordination necessary. Organization embodies _division of labor_ and _specialization of function_ is order to obviate communication.
 
-// *Organization*:
+The conventional organization tree reflects the _authority_ structure principle that no one person can serve two masters. But the _communication_ structure in an organization is actually a network, not a tree-like structure, so all kinds of special organization mechanisms ("dotted lines") have to be devised to overcome the communication deficiencies of the tree-structured organization – staff groups, task forces, committees, etc.
 
-// The purpose of organization is to reduce the amount of communication and coordination necessary.
+Within a tree-like hierarchy, each subtree must have the following components to be effective:
 
-// Organization embodies _division of labor_ and _specialization of function_ is order to obviate communication.
+* A mission
+* A producer
+* An architect or technical director
+* A schedule
+* A division of labor
+* Interface definitions among the parts
 
-// The conventional organization tree reflects the _authority_ structure principle that no one person can serve two masters. But the _communication_ structure in an organization is actually a network, not a tree-like structure, so all kinds of special organization mechanisms ("dotted lines") have to be devised to overcome the communication deficiencies of the tree-structured organization – staff groups, task forces, committees, etc.
+There are two key leadership roles:
 
-// Within a tree-like hierarchy, each subtree must have the following components to be effective:
+* The *producer* (this role would be called the project manager or perhaps product manager today) is responsible for the overall project and its success. The producer is responsible for the schedule, assembling the team, acquiring resources. Communicates upwards and outwards.
 
-// * A mission
-// * A producer
-// * An architect or technical director
-// * A schedule
-// * A division of labor
-// * Interface definitions among the parts
+* *The *architect* or *technical director*. Conceives the design of the product, and specifies how it will look from the outside, and also sketches its internal structure. He provides unity and conceptual integrity to the whole design; thus he serves as a limit on system complexity. His communication is chiefly within the teams and is almost completely technical. (Domain knowledge also important - this is not something Brooks covers.)
 
-// There are two key leadership roles:
-
-// * The *producer* (this role would be called the "project manager" or perhaps "product manager" today) is responsible for the overall project and its success. The producer is responsible for the schedule, assembling the team, acquiring resources. Communicates upwards and outwards.
-
-// * *The *architect* or *technical director*. Conceives the design of the product, and specifies how it will look from the outside, and also sketches its internal structure. He provides unity and conceptual integrity to the whole design; thus he serves as a limit on system complexity. His communication is chiefly within the teams and is almost completely technical. (Domain knowledge also important - this is not something Brooks covers.)
-
-// The functions of the two roles are quite distinct and require different talents. However, depending on the talents of the people involved, these two roles could be fulfilled by one person, or one might be the boss and the other the boss's right-hand man (copilot).
+The functions of the two roles are quite distinct and require different talents. However, depending on the talents of the people involved, these two roles could be fulfilled by one person, or one might be the boss and the other the boss's right-hand man (copilot).
 
 == Calling the shot
 
