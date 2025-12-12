@@ -240,25 +240,23 @@ Today, it is widely recognized that successful delivery of software requires arc
 
 == The second-system effect
 
-// The fifth chapter is titled "The second-system effect". Brooks argues that the first system that a programmer designs and builds is often the best, because it is simple and elegant. The second system, however, tends to be over-engineered and bloated with features. Brooks calls this the "second-system effect".
+Continuing the theme of the previous chapter, Brooks calls for "`thoroughgoing, careful, and sympathetic communication between architect and builder`". Brooks calls architecture an "`interactive discipline`". While he has argued for a clear separation between the roles of architect and builder, he does not mean that the two groups should work in isolation.
 
-// "The architect has two possible answers when confronted with an estimate that is too high: cut the design or challenge the estimate by suggesting cheaper implementations."
+The division of work between architecture and implementation must be treated as a two-way conversation, Brooks writes. Early and continuous communication can give the architect good readings on cost, and open a dialog with the programmers on alternative (cheaper) implementations. Early and continuous communication also instills confidence in the design in the builders.
 
-// Brooks calls for "thoroughgoing, careful, and sympathetic communication between architect and builder". The architects should _suggest_, not _dictate_ cheaper implementation strategies. The builder, ultimately, has responsibility for the implementation. This is a two-way conversation. The builder, too, might suggest changes to the architecture – perhaps "some minor feature may have unexpectedly large costs when the implementation is worked out".
+Architects should _suggest_, not _dictate_, implementation strategies, he writes. The builder, ultimately, has responsibility for the implementation, but might also suggest changes to the architecture. The architect must deal "`quietly and privately`" with ideas put forward by the builder – perhaps "`some minor feature may have unexpectedly large costs when the implementation is worked out`".
 
-// // Deal quietly and privately in ideas put forward by a builder. Be ready to forgo credit for suggested improvements. - This all comes under the banner of emotional intelligence and psychological safety...
+This collaborative approach requires what we would today label emotional intelligence and psychological safety. Soft skills, such as empathy and communication, are today widely recognized as essential for high-performing teams, much more so than hard technical expertise.
 
-// // Early and continuous communication can give the architect good cost readings, and the builder confidence in the design, without blurring the clear division of responsibilities.
+Brooks then moves on to the topic of this fifth chapter, which he calls the *second-system effect*. This is the idea that "version 1" of a new software system of often the best, because it is simple and elegant. But the "second system" (ie. a later major version) tends to be over-engineered and bloated with features.
 
-// Brooks calls architecture an "interactive discipline".
+"`The general tendency is to over-design the second system, using all the ideas and frills that were cautiously sidetracked on the first one.`" The result is a "`big pile`". Brooks gives the example of the IBM 709, an upgrade to the IBM 704. While the 704 was "`very successful and clean`", the 709's "`operation set [was] so rich and profuse that only about half of it was regularly used`".
 
-// Brooks then talks about the second-system effect. What he is talking about here is the tendency for post-MVP (minimum viable product) systems to be increasingly over-engineered and bloated with features. "The general tendency is to over-design the second system [ie. version 2 of a product], using all the ideas and frills that were cautiously sidetracked on the first one." The result is a "big pile". Brooks gives the example of the IBM 709, an upgrade to the IBM 704. While the 704 was "very successful and clean", the 709's "operation set [was] so rich and profuse that only about half of it was regularly used".
+To counteract the second-system effect, Brooks writes that architects must practice self-discipline "`to avoid functional ornamentation and to avoid extrapolation of functions that are obviated by changes in assumptions and purposes`".
 
-// "The second-system effect has another manifestation… a tendency to refine techniques whose very existence has been made obsolete…" Brooks gives examples from the OS/360 project, in which some of the innovations had become obsolete by the time they were finessed in OS/360.
+The second-system effect is alive and well. All continuously-developed software systems suffer from entropy. The worst ones eventually collapse under their own weight of complexity and ambition.
 
-// Brooks suggests that self-discipline is a particularly critical trait for an architect to have in designing the second version of a software product. The architect must "exert extra self-discipline to avoid functional ornamentation and to avoid extrapolation of functions that are obviated by changes in assumptions and purposes".
-
-// Brooks suggests that "each little function" be assigned a value: "capability _x_ is worth not more than _m_ bytes of memory and _n_ microseconds per invocation". Translating such benchmarks from system programming to application programming requires different metrics, but the principle is a good one, and we don't _cost_ our features like this enough.
+Brooks proposes that architects should assign a value to "`each little function`": "`capability _x_ is worth not more than _m_ bytes of memory and _n_ microseconds per invocation`", for example. Translating such benchmarks from system programming to modern application programming will require use of different metrics. But the principle remains a good one. We don't cost feature like this often enough. If we did, our software products might remain leaner, and more focused, for longer.
 
 == Passing the word
 
