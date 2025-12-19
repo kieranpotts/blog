@@ -18,7 +18,7 @@ Brooks draws the colorful analogy that large-scale software development is like 
 
 image::./_/media/images/the-mythical-man-month.jpg[]
 
-"`Large and small, massive and wiry, team after team has become entangled in the tar,`"Brooks writes. His thesis is that it is never one problem, but rather a combination of intractable problems, some unexpected, that make it difficult to move complex projects forward. "`No one thing seems to cause the difficulty – any particular paw can be pulled away. But the accumulation of simultaneous and interacting factors brings slower and slower motion.`"
+"`Large and small, massive and wiry, team after team has become entangled in the tar,`" Brooks writes. His thesis is that it is never one problem, but rather a combination of intractable problems, some unexpected, that make it difficult to move complex projects forward. "`No one thing seems to cause the difficulty – any particular paw can be pulled away. But the accumulation of simultaneous and interacting factors brings slower and slower motion.`"
 
 Despite the immense technological advances of the last half-century – in computer hardware, in programming languages and runtime environments, and in tools and automation that support every aspect of software delivery – the core challenge of software development remains the management of complexity.
 
@@ -32,9 +32,15 @@ Brooks estimates that the work of designing the interfaces between all the compo
 
 Brooks estimates that, in total, building large, general-purpose, shrink-wrapped software products can cost up to nine times (3x3) more than writing all the code as separate, non-integrated, private libraries.
 
-In other words, programming effort is a small proportion of the overall cost of a large-scale software project. Brooks suggests that the costs of large-scale software development break down into approximately 1/3 for design, 1/6 for coding, 1/4 for component testing (ie. unit and integration testing), and 1/4 for system testing.
+In other words, programming effort is a small proportion of the overall cost of a large-scale software project. This analysis stands up well today. It is widely understood in academic circles that the production of computer program code and configuration is a small proportion of the overall cost of building large-scale commercial software systems.
 
-This analysis stands up well today. It is widely understood in academic circles that the production of computer program code and configuration is a small proportion of the overall cost of building large-scale commercial software systems. And, in my experience at least, we still have a tendency to estimate development costs based primarily on the coding of individual modules, rather than considering the integration of those modules into a cohesive system and the productization of that system for distribution to end users.
+Brooks suggests that the costs of a large-scale software project typically break down into approximately 1/3 for design, 1/6 for coding, 1/4 for component testing (ie. unit and integration testing), and 1/4 for system (end-to-end) testing. In a later chapter, Brooks says that, unfortunately, you cannot estimate the cost of a software project simply by working at the coding effort and then multiplying for other cost factors. "`The coding is only one-sixth or so of the problem, and errors in its estimate or in the ratios could lead to ridiculous results.`"
+
+In my experience, we still have a tendency to estimate development costs based primarily on the coding of individual modules, rather than considering the integration of those modules into a cohesive system, and the subsequent productization of that system for distribution to end users.
+
+// Programming effort increases as a power of program size. Brooks says that some published studies from the time show the exponent to be about 1.5. For example, one study showed that effort to code a program half the size of another took only one-fourth of the effort to code the other program. Studies also show that productivity varies significantly by category of software, eg. between operating systems and compilers.
+
+// Programming productivity can be increased by as much as five time when a suitable high-level programming language is used – something that was not available at the time of the OS/360 project.
 
 == The mythical man-month
 
@@ -107,7 +113,7 @@ Through continuous integration and testing, we've solved the problem of defects 
 
 === Gutless estimating
 
-The fifth and final explanation that Brooks gives for poor estimation of software projects is the tendency we have to work to schedules dictated by our customers, rather than being brave and attempting to make a reasonable guess about the real effort required to deliver a satisfactory product.
+The fifth and final explanation that Brooks gives for poor estimation of software projects is the tendency we have to work to schedules dictated by our customers. WHat we ought to do, Brooks writes, is be brave and attempt to make a reasonable guess about the real effort required to deliver a satisfactory product.
 
 Brooks uses the analogy of cooking an omelette. It typically takes a couple of minutes to cook an omelette. But if, after two minutes, the omelette is not set, the customer has two choices: wait, or eat the omelette raw. The chef has a third choice: turn up the heat. But the effect would be to serve a poor quality product – burnt on the outside, and perhaps still raw in the centre.
 
@@ -124,7 +130,7 @@ Brooks suggests that the underlying reason for such widespread "`gutless estimat
 
 50 years later, there remains a lack of maturity in the methods and tools we use for estimation. Overuse of proxy measures, such as T-shirt sizes and story points, which do not directly correspond to real-world effort, rather than more quantitative data-driven estimation techniques, is commonplace today.
 
-Estimations tend to be done very early in the development lifecycle, too. We tend to make estimates base on high-level requirements – even vague and incomplete ones – rather than based on comprehensive, high-fidelity solution designs. If you want good estimates, you need the solution to be sufficiently flesh-out with enough detail to reveal the true scope and complexity of the problem. Good estimations are done bottom-up from low-level technical designs, rather than top-down from high-level business requirements. This is true of every engineering discipline.
+// Estimations tend to be done very early in the development lifecycle, too. We tend to make estimates base on high-level requirements – even vague and incomplete ones – rather than based on comprehensive, high-fidelity solution designs. If you want good estimates, you need the solution to be sufficiently flesh-out with enough detail to reveal the true scope and complexity of the problem. Good estimations are done bottom-up from low-level technical designs, rather than top-down from high-level business requirements. This is true of every engineering discipline.
 
 == The surgical team
 
@@ -139,13 +145,13 @@ ____
 These studies revealed large individual differences between high and low performers, often by an order of magnitude. It is apparent from the spread of data that very substantial savings can be effected by successfully detecting low performers.
 ____
 
-This is the origin of the myth of the 10x programmer. The findings of the Sackman paper have been debunked by subsequent research. The 1968 study tested programmers on tasks that did not represent real-world programming problems. Neither did it account for the impact of collaboration, which we now know to be more important than individual capability. But at the time, the qualitative analysis provided by this paper reinforced qualitative observations made by Brooks and other project managers that small "`sharp`" teams are better than large blunt ones. Better for software development teams to be composed of a small number of "`first-class`" programmers rather than many mediocre ones.
+This is the origin of the idea of the 10x programmer. However, the findings of the Sackman paper were debunked by subsequent research. The 1968 study tested programmers on tasks that did not represent real-world programming problems. Neither did it account for the impact of collaboration, which we now know to be more important than individual capability. But at the time, the qualitative analysis provided by this paper reinforced qualitative observations made by Brooks and other project managers that small "`sharp`" teams are better than large blunt ones. Better for software development teams to be composed of a small number of "`first-class`" programmers rather than many mediocre ones.
 
-It is why, Brooks concludes, there are many accounts of two programmers working in a garage to build "`an important program that surpasses the best efforts of large teams`". The cliche of the garage startup has deeper roots than I realized!
+It is why, Brooks concludes, there are many accounts of two programmers working in a garage to build "`an important program that surpasses the best efforts of large teams`". The cliché of the garage startup has deeper roots than I realized!
 
 Brooks expands on his earlier point that throwing lots of man-months at a project can actually slow down delivery. He writes, "`the brute-force approach is costly, slow, inefficient, and produces systems that are not conceptually integrated.`"
 
-But the problem with small teams is they are too small for really big problems. Brooks notes there were over 1,000 people working on OS/360 at the peak of that project, and a smaller 200-man team would have taken 25 years to achieve the same result. For large-scale software, the delivery timescales achievable by small teams are just not commercially viable.
+But the problem with small teams is they are too small for really big problems. Brooks notes there were over 1,000 people working on OS/360 at the peak of that project, and a smaller 200-man team would have taken 25 years to deliver the same product. For large-scale software projects, the delivery timescales achievable by small teams are just not commercially viable.
 
 If we want to prioritize development efficiency and the quality of the final product, we should have small teams of highly skilled, experienced practitioners doing the design and construction. But to deliver large systems in a timely manner, we need very large teams. How can we reconcile these two constraints?
 
@@ -156,7 +162,7 @@ ____
 Mills proposes that each segment of a large job be tackled by a team, but that the team be organized like a surgical team rather than a hog-butchering team. That is, instead of each member cutting away on the problem, one does the cutting and the others give him every support that will enhance his effectiveness and productivity.
 ____
 
-The idea is there would be, not one giant team, but multiple smaller and independent teams. The overall solution is designed as a series of small subsystems, with each system designed and built by one of the teams.
+The idea is there would be, not one giant team, but multiple smaller and independent teams. The overall solution is designed as a series of small subsystems, with each subsystem designed and built by one of the teams.
 
 Each team operates similarly to a surgical team in a hospital. Each team has a chief programmer, the surgeon, who is in charge of the whole thing. The rest of the team members try to help him complete the project (the surgery).
 
@@ -172,9 +178,9 @@ Harlan Mills' work, later popularized by Brooks in _The Mythical Man-Month_, lai
 
 Of source, some of the details of the original surgical team design are no longer relevant. Besides the chief programmer and copilot, the original surgical teams also had an administrator to "`handle money, people, space, and machines`"; a technical editor responsible for maintaining documentation; a "`program clerk`" responsible for "`maintaining all the technical records of the team in a programming-product library`"; a "`toolsmith`" who implements any special tools needed by the team, such as for "`file-editing, text-editing, and interactive debugging`"; a "`language lawyer`", someone who is an expert in the programming language and operating system, and who provides consultancy to the team in how best to use them; and a tester, responsible for preparing suitable test cases from the functional specifications, and devising dummy data for day-to-day debugging. Oh, and the administrator and editor would each have their own personal secretaries. Different world!
 
-Today, most roles of the surgical team have been automated away or absorbed into the broad responsibilities of programmers and testers. Every team member now works at the coalface, with no supporting roles. In the old surgical team model, only the chief programmer – or their deputy – actually wrote code, while two or three others handled support duties. But that setup wasn't about improving communication so much as dealing with the practical limits of the time, when costly storage and disk access couldn't be shared by everyone at once. Today there are no such constraints.
+Today, most roles of the surgical team have been automated away or absorbed into the broad responsibilities of programmers and testers. Every team member now works at the coalface, with no supporting roles. In the old surgical team model, only the chief programmer – or their deputy – actually wrote code, while two or three others handled support duties. But that setup wasn't about improving communication so much as about dealing with the practical constraints of the era, when costly storage and disk access couldn't be shared by everyone at once. Today there are no such constraints.
 
-As for the myth of the 10x programmer, this is a regrettable legacy of ideas that emerged in the 1960s and 1970s. Today, the software industry still has an unfortunate habit of glorifying "`rockstar`" developers and undervaluing teamwork and soft skills.
+As for the myth of the 10x programmer, this remains a regrettable legacy of ideas that emerged in the 1960s and 1970s. Today, the software industry still has an unfortunate habit of glorifying "`rockstar`" developers and undervaluing teamwork and soft skills.
 
 == Conceptual integrity
 
@@ -195,29 +201,35 @@ I think few modern architects would dispute Brooks's notion that conceptual inte
 
 The difficult is in achieving it. For a system to have high conceptual integrity, Brooks says "`the entire system... requires a system architect to design it all, from the top down`". This is difficult to do in large-scale software projects because of the division of labour. In large-scale software projects, the implementation is necessarily broken up into lots of small pieces, each designed and constructed independently by different programmers, who each make different choices and trade-offs.
 
-Brooks draws a parallel with European cathedrals, most of which "`show differences in plan or architectural style between parts built in different generations by different builders`". In software, Brooks notes, conceptual disunity arises not from the passage of time – hundreds of years separating phases of functional extension – but from the decomposition of the design into "`many tasks done by many men`".
+Brooks draws a parallel with European cathedrals, most of which "`show differences in plan or architectural style between parts built in different generations by different builders`". In software, Brooks notes, such conceptual disunity arises not from the passage of time – hundreds of years separating phases of functional extension – but from the decomposition of the design into "`many tasks done by many men`".
 
-The solution offered by Brooks is to have one system architect who designs the whole system from top-to-bottom. Surgical teams overseen by a chief architect is Brooks's proposed model for delivery of large-scale software projects. The "`design must proceed from one mind, or from a very small number of agreeing resonated minds`", to maintain conceptual integrity.
+The solution offered by Brooks is to have one system architect who designs the whole system from top-to-bottom. Multiple surgical teams are overseen by a chief architect, so that the "`design ... proceed[s] from one mind, or from a very small number of agreeing resonated minds`", to maintain conceptual integrity.
 
-In Brooks's development model, design and implementation are two distinct phases. First, a system architect defines the interface of the system, then the builders arrive and define the internal implementation. "`The separation of architectural effort from implementation is a very powerful way of getting conceptual integrity on very large projects.`"
+In Brooks's development model, design and implementation are two distinct phases. First, a system architect defines the interface of the system, then the builders arrive and define the internal implementation. "`The separation of architectural effort from implementation is a very powerful way of getting conceptual integrity on very large projects. `"
 
 Besides maintaining conceptual integrity, the horizontal division of labour between architecture and implementation also has the happy side-effect of simplifying communication flows within teams.
 
-Today, we know this development model as *top-down design*. You start with a clear understanding of the overall architectural style that you want to achieve, and the architectural patterns that you want to use. Within that overall design framework, the solution is broken down into a hierarchy of smaller, more manageable subsystems, modules, and components – each initially designed as a black box (only their interfaces are specified, not their internal workings). Each component is then refined in a stepwise fashion, with internal details described in greater detail. Additional levels of dependencies and interactions are added incrementally, until the complete system is fully specified.
+Today, we know this development model as top-down design. You start with a clear understanding of the user interface, the overall architectural style that you want to achieve, and the architectural patterns that you want to use. Within that overall design framework, the solution is broken down into a hierarchy of smaller, more manageable subsystems, modules, and components – each initially designed as a black box (only their interfaces are specified, not their internal workings). Each component is then refined in a stepwise fashion, with internal details described in greater detail. Additional levels of dependencies and interactions are added incrementally, until the complete system is fully specified.
 
 Top-down design was promoted in the 1970s by IBM researchers Harlan Mills and Niklaus Wirth. Mills had implemented this method with success in a project for the New York Times, leading to the approach being adopted throughout IBM and then the wider IT industry. Wirth, the creator of the Pascal programming language, also advocated for top-down design in his work. He authored an https://dl.acm.org/doi/10.1145/362575.362577[influential paper] titled "`Program Development by Stepwise Refinement,`" published in 1971, which outlined the principles of top-down design.
 
-Top-down design contrasts with *bottom-up design*, which emphasizes building a system from small, primitive components, gradually integrating lots of small parts to compose the complete solution. Programmers have a tendency to take a bottom-up approach to software construction, as our day-to-day work demands we focus on the design of individual features rather than of the overall system. For this reason, maintaining conceptual integrity is often overlooked by programmers working at the coalface.
+Top-down design contrasts with bottom-up design, which emphasizes building a system from small, primitive components, gradually integrating lots of small parts to compose the complete solution. 
 
-Top-down design methods were favored in software development until the late 1980s. Ever since, bottom-up design has been more highly regarded. Top-down design has come to be associated with big design up-front and waterfall methodologies, which are considered old-fashioned and inflexible, while bottom-up design is associated with lean and agile methodologies, which are considered more modern and flexible. In practice, all software projects combine elements of both top-down and bottom-up design. Only the relative weighting of the two approaches varies from project to project. Mature software development practices do not view either approach as fundamentally superior but instead see them as mutually beneficial – good software design is about finding a reasonable balance of the two approaches.
+Top-down design methods were favored in software development until the late 1980s. Ever since, bottom-up design has been more highly regarded. Top-down design has come to be associated with big design up-front and waterfall methodologies, which are considered old-fashioned and inflexible, while bottom-up design is associated with lean and agile methodologies, which are considered more modern and flexible.
 
-In _The Mythical Man-Month_, Brooks draw parallels in the trade-offs between top-down and bottom-up design in terms of the trade-offs between autocracy and democracy. He acknowledges that his proposed top-down approach to architecture means that the architects become something of an aristocracy within the technical domain, and that the demographic ideals that help to form cohesive, engaged teams are sacrificed. "`Are not the architects a new aristocracy, an intellectual elite, set up to tell the poor dumb implementers what to do?`" Brooks asks himself. "`Won't one get a better product by getting the good ideas from all the team, following a demographic philosophy…?`"
+In practice, all software projects combine elements of both top-down and bottom-up design. Only the relative weighting of the two approaches varies from project to project. Mature software development practices do not view either approach as fundamentally superior but instead see them as mutually beneficial – good software design is about finding a reasonable balance of the two approaches.
 
-Brooks's argument is that a reasonable balance must be found between demographic and autocratic approaches to the solution's design. Everyone should be able to contribute ideas, but ultimately there must be a single authority who makes the final decisions. Brooks also makes the point that implementation – the raw coding – is also a form of creative work, just one that operates at a different level of abstraction to the architecture. "`The opportunity to be creative and inventive in implementation is not significantly diminished by working within a given external specification.`"
+In _The Mythical Man-Month_, Brooks draw parallels in the trade-offs between autocracy and democracy. He acknowledges that his proposed top-down approach to architecture means that the architects become something of an aristocracy within the technical domain, and that the demographic ideals that help to form cohesive, engaged teams are sacrificed. "`Are not the architects a new aristocracy, an intellectual elite, set up to tell the poor dumb implementers what to do?`" Brooks asks himself. "`Won't one get a better product by getting the good ideas from all the team, following a demographic philosophy…?`"
+
+Brooks concludes that a reasonable balance must be found between demographic and autocratic approaches to solution design. Everyone should be able to contribute ideas, but ultimately there must be a single authority who makes the final decisions.
 
 Both architects and implementers have important roles to play in system design, Brooks argues. Architects, which design the external specification (ie. the user interface), will have a disproportionate influence over the ease of use of the product. On the other hand, the compound effect of all the many low-level design choices made by the implementors will determine the eventual real-world performance of the product.
 
-Today, it is widely recognized that successful delivery of software requires architects and programmers to work closely together. Ivory tower architecture has been resoundingly rejected. But I don't think this is what Brooks was advocating. He is clear that, in software development, the pace is quicker between design and construction, compared to other engineering disciplines. The tasks of specification and construction overlap. Builders can even start their work before the requirements are finalized, as code is easier to change than bricks and mortar.
+Brooks also makes the point that implementation – the raw coding – is also a form of creative work, just one that operates at a different level of abstraction to the architecture. "`The opportunity to be creative and inventive in implementation is not significantly diminished by working within a given external specification.`"
+
+Brooks observes that, unlike other engineering disciplines, in software design and construction can overlap. He writes that the pace is quicker between design and construction, compared to other engineering disciplines. The tasks of specification and construction can therefore blend together. Builders can even start their work before the requirements are finalized, as code is easier to change than bricks and mortar.
+
+Today, it is widely recognized that successful delivery of software requires architects and programmers to work closely together. While ivory tower architecture has been resoundingly rejected, there remains a need for some degree of architectural oversight. Programmers have a tendency to take a bottom-up approach to software construction, as our day-to-day work demands we focus on the design of individual features rather than of the overall system. For this reason, maintaining conceptual integrity is often overlooked by programmers working at the coalface. We still need architects, taking a more top-down approach to design, to fight entropy and maintain conceptual integrity in our systems.
 
 == The second-system effect
 
@@ -229,7 +241,7 @@ Architects should _suggest_, not _dictate_, implementation strategies, he writes
 
 This collaborative approach requires what we would today label emotional intelligence and psychological safety. Soft skills, such as empathy and communication, are today widely recognized as essential for high-performing teams, even more so than hard technical expertise.
 
-Brooks then moves on to the topic of this fifth chapter, which he calls the *second-system effect*. This is the idea that "version 1" of a new software system is often the best version, because it is simple and elegant. But the "second system" (ie. a later major version) tends to be over-engineered and bloated with features.
+Brooks then moves on to the topic of this fifth chapter, which he calls the second-system effect. This is the idea that "version 1" of a new software system is often the best version, because it is simple and elegant. But the "second system" (ie. a later major version) tends to be over-engineered and bloated with features.
 
 "`The general tendency is to over-design the second system, using all the ideas and frills that were cautiously sidetracked on the first one.`" The result is a "`big pile`". Brooks gives the example of the IBM 709, an upgrade to the IBM 704. While the 704 was "`very successful and clean`", the 709's "`operation set [was] so rich and profuse that only about half of it was regularly used`".
 
@@ -237,11 +249,100 @@ To counteract the second-system effect, Brooks writes that architects must pract
 
 The second-system effect is alive and well. All continuously-developed software systems suffer from entropy. The worst ones eventually collapse under their own weight of complexity and ambition.
 
-As a way to counteract the second-system effect, Brooks proposes that architects should assign a value to "`each little function`": "`capability _x_ is worth not more than _m_ bytes of memory and _n_ microseconds per invocation`", for example. Translating such benchmarks from system programming to modern application programming will require use of different metrics, but the principle remains a good one. We don't cost feature like this often enough. If we did, our software products might remain leaner, and more focused, for longer.
+As a way to counteract the second-system effect, Brooks proposes that architects should assign a value to "`each little function`": "`capability _x_ is worth not more than _m_ bytes of memory and _n_ microseconds per invocation`", for example. Translating such benchmarks from system programming to modern application programming will require use of different metrics, but the principle remains a good one. We don't cost features in this way often enough. If we did, our software products might remain leaner, and more focused, for longer.
+
+== Pilot systems
+
+In chapter 11, titled "Plan to Throw One Away", Brooks proposes building pilot models or pilot systems as an intermediate step between the initial system design and the construction of the final system. The pilot system, which is intended to be thrown away and not given to customers as "version 1", helps to identify potential problems with the design before the final solution is built.
+
+The idea is taken from chemical engineering, where a new production process is rarely taken straight from the lab to the factory in a single step. More typically, a pilot plant is built to give experience in scaling up production of the final product.
+
+// "`Project after project designs a set of algorithms and then plunges into construction of customer-deliverable software on a schedule that demands delivery of the first thing built.`"
+
+This intermediate step is equally necessary for programming products, but software engineers do not yet routinely field-test a pilot system before undertaking to deliver the real product. By 1995, this had become common practice, with "beta" versions. Brooks also advocates the use of "alpha" versions, which are prototypes with limited functionality.
+
+Somewhat contradicting his observations in the earlier chapter on the second-system effect, Brooks writes that version 1 of a new software product is often too slow, too big, too hard to use, or some combination of all three. The idea of building version 1 as a disposable prototype is to reveal the flaws in the design before the final system is constructed.
+
+// The first version of a large-scale software system may be too slow, too big, difficult to use, etc. You then have to solve these problems – hopefully yuu can do this piece-by-piece, but the worst case scenario is you will have to start over if the design proves to be fundamentally flawed...
+
+[quote, Fred Brooks]
+____
+Plan to throw one away; you will, anyhow.
+____
+
+Brooks uses the analogy of letter writing, suggesting that successful software development depends a great deal on trial and error. The pilot system allows the process of trial-and-error to be played out in a throw-away "draft" system, which he argues is preferable to incrementally changing the production system mid-flight. (The idea is that you "`fail faster`" with the draft pilot system.)
+
+This point-of-view has not stood up well. In a retrospective chapter in the 20th anniversary edition of _The Mythical Man-Month_, Brooks admits that the industry has instead embraced iterative and incremental development practices... The focus shifted instead on composing software from lots of reusable, ready-made modules of common behaviors, ... instead of relying on big, detailed up-front planning and design. Seasoned developers understand that our task is to write as little code as possible!
+
+Nevertheless, what Brooks did get right was the need to plan for systems to change.
+
+[quote, Fred Brooks]
+____
+The only constant is change itself.
+____
+
+Brooks observes that the role of computer programmers is to satisfy a need rather than to deliver a tangible product, and that "`both the actual need and the user's perception of that need will change as programs are built, tested, and used.`"
+
+// Brooks writes that, for hardware products like cars and computers, the existence of a tangible object "serves to contain and quantize user demand for changes". But "both the tractability and the invisibility of the software product expose its builders to perceptual changes in requirements."
+
+Embracing change is, of course, fundamental to genuinely-agile development practices such as Extreme Programming. In 1975 this was quite a novel way of looking at software delivery.
+
+Brooks is advocating the agile principle of embracing change, 25+ years before the manifesto for agile software development is written. It is inevitable, he writes, that objectives and requirements will change, and changes in development strategies and techniques are also inevitable.
+
+[quote, Fred Brooks]
+____
+The throw-one-away concept is itself just an acceptance of the fact that as one learns, he changes the design.
+____
+
+There are two things we need to do to embrace change, Brooks writes. We must prepare the system for change. And we must prepare the organization itself for change.
+
+Brooks suggests that designing the software system for change is the easy part. Brooks suggests that using high-level programming languages, structured programming techniques, compile-time operations, and self-documenting techniques can reduce the risk of errors being introduced through incremental change. (Automated testing is not mentioned.) ... This is done through modularization, extreme subroutining (which today we would call abstraction), careful definition of module interfaces – and complete documentation of these. ... "Most important is the use of a high-level language and self-documenting techniques so as to reduce errors induced by changes." ... "Quantizaion of change is an essential technique. Every product should have numbered versions, and each version must have its own schedule and a freeze date, after which changes go into the next version."
+
+=== Organizational change
+
+Planning for organizational change is harder. The project boss must work at keeping the managers and the technical people as interchangeable as their talents allow; in particular, one wants to be able to move people easily between technical and managerial roles. ...
+
+Plans, milestones, and schedules need to be treated as _tentative_, to facilitate change. But this is anathema to many organizations - where slippage of delivery plans is treated as a "failure of project management".
+
+Agile - this is perhaps what we've got wrong. We have not explained _how_ organizations should implement the cultural change needed.
+
+"Management structures also need to change as the system changes."
+
+Brooks writes about how flat organizational structures can really help facilitate this. He gives the example of Bells Labs that abolished job titles and hierarchies to everyone was an equal "member of the technical staff".
+
+Brooks says this fits well with his model of *surgical teams* as "it has the effect of making a senior man feel that he does not demean himself when he builds programs, and [it] removes the social obstacles that deprive him of that creative joy."
+
+Brooks says that the surgical team is "the long-run answer to the problem of the flexible organization." He explains: "it becomes relatively easy to reassign a whole surgical team to a different programming task when the organizational changes are necessary."
+
+=== Maintenance
+
+Once a program is shipped to customers, afterward further delivery is called *maintenance* rather than *development* – the work now consists chiefly of repairing design defects. This may include adding features that are visible to the user.
+
+Maintenance can cost 40% of the total cost of developing a software product. We tend to think of software development not as projects but as long-lived programs (products). ... Program maintenance consists chiefly of changes that repair design defects, add incremental function, or adapt to changes in the use environment or configuration.
+
+More users = more bugs found = more maintenance. Maintenance cost is strongly related to the number of users, because the more users there are, the more bugs will be found. There's a drop-and-climb curve in bugs discovered per month over a product's life. Fixing a defect has a substantial (20% - 50%) chance of introducing another. After each fix, one must run the entire bank of test cases previously run against a system to ensure that it has not been damaged in some obscure way (what we now call _regression_).
+
+image::./_/media/diagrams/bug-discovery-over-time.drawio.png[]
+
+Methods of designing programs so as to eliminate, or at least illuminate, side effects can have an immense payoff in maintenance costs. So can methods of implementing designs with fewer people, fewer interfaces, and fewer bugs.
+
+System entropy rises over time. All repairs tend to destroy structure, to increase the entropy and disorder of a system. Even the most skillful program maintenance only delays the program's subsidence into unfixable chaos, from which there has to be a ground-up redesign.
+
+The bug rate drops off after the initial release, but then starts to gradually climb again -- this may be due to users fully exercising the new capabilities of the software, ie. they start to become really familiar with it, and so edge case bugs start to get shaken out.
+
+Brooks discusses the far-reaching, often overlooked, impacts of doing lots of piecemeal repairs on a system. He sites studies by Lehman and Belady that "all repairs tend to destroy structure to increase the entropy and disorder of the system. ... As time passes, the system becomes less and less well-ordered. Sooner or later, the fixing ceases to gain any ground. Each forward step is matched by a backward one. Although in principle usable forever, the system has worn out as a base for progress."
+
+Eventually, a "brand-new, from-the-ground-up redesign is necessary."
+
+Brooks quotes CS Lewis: "Terrific energy is expanded – civilizations are built up – excellent institutions devised; but each time something goes wrong. Some fatal flaw always brings the selfish and cruel people to the top, and then it all slides back into misery and ruin."
+
+Brooks concludes: "Systems program building is an entropy-decreasing process, hence inherently metastable. Program maintenance is an entropy-increasing process, and even ifs most skillful execution only delays the subsidence of the system into unfixable obsolescence."
+
+Intriguingly, Brookes writes that "methods of designing programs so as to eliminate or at least illuminate side effects can have an immense payoff in maintenance costs." He suggests that having fewer people do the design and build, and having fewer interfaces, produces systems with fewer bugs – and such systems suffer less from entropy and therefore have longer useful lives.
 
 == Communication
 
-Building on the themes from the previous two chapters, in the next two chapters Brooks makes the argument that the most important skill in software development is communication.
+Building on the themes from the previous chapters, Brooks makes the argument that the most important skill in software development is communication.
 
 Brooks asks: "`How does one keep the architects from drifting off into the blue with unimplementable or costly specifications?`" And: "`How does one ensure that every trifling detail of an architectural specification gets communicated to the implementer, properly understood by him, and accurately incorporated into the product?`"
 
@@ -252,6 +353,8 @@ In chapter six, titled "Passing the word", Brooks draws on a communication syste
 * *Formal definitions*: Formal interface definitions should be used to specify a system's internal interfaces. Formal notations are precise and complete, but lack comprehensibility, therefore good system documentation will consist of a mix of formal notations (for precision) and prose (for extra definition and comprehensibility).
 
 Brooks notes that reference implementations – which may be just a "`simulation`" of the target system – can serve as a formal definitions of a system's design. An "`implementation can serve as a formal definition. When the first compatible computers were built, this was exactly the technique used. The new machine was to match an existing machine. The manual was vague on some point? 'Ask the machine!' … A programmed simulator… can serve in precisely the same way.`" Today, we might develop prototypes and proofs-of-concepts to serve as reference implementations. This has a number of advantages, not least prototypes can help to answer a lot of questions that can only be answered through implementation, such as performance trade-offs and resource requirements in the design.
+
+// In chapter 10, Brooks says that "`a small number of documents become the critical pivots around which every project's management revolves`". For a computer development project, the critical documents are: the objectives, the specifications (including performance specifications), space allocations (memory), the schedule and budget, the organization chart and floor plan, and the estimate, forecast, and prices of the machine itself. Even on a small project, the manager should formalize such a set of documents. Preparing each document focuses thought and crystallizes discussion. The act of writing requires hundreds of mini-decisions – resulting in clear, exact policies, rather than fuzzy ones. The project manager's job, fundamentally, is to keep everyone going in the same direction.
 
 Other important methods of communication, Brooks writes, include telephone logs, meeting minutes, and annual "supreme court sessions", typically lasting a couple of weeks, in which major architectural decisions are resolved, and prior decisions reviewed.
 
@@ -274,337 +377,50 @@ Teams should communicate with one another in as many ways as possible. Brooks pr
 
 Brooks goes into some length about how the OS/360 project soon ended up with a printed workbook _five inches thick_, with hundreds of pages being reprinted and replaced in a typical day. The project switched to using microfiche, which reduced the costs of maintaining by the workbook, by eliminating the cost of reprinting large numbers of copies of the whole workbook at regular intervals. But even in 1975, Brooks noted that a "shared electronic notebook" would be a much more effective, cheaper, and simpler mechanism, and might be the future!
 
-// ========== UP TO HERE ===========================================================================
+== Performance
 
-== Calling the shot
+The ninth chapter, obscurely titled "Ten pounds in a five-pound sack", is all about using hardware resources efficiently. Much of this is no longer relevant to most types of software system developed today. Indeed, in a retrospective chapter in the 20th anniversary edition of _The Mythical Man-Month_, Brooks acknowledges that memory consumption limits had already been obsoleted, first by virtual memory and then by cheap real memory. By 1995, most computer users could buy enough real memory to hold all the code for all the major applications they run on their system. We take this for granted today – that we can run as many applications, or load as many browser tabs, as we like.
 
-Chapter 8 is all about estimating effort. The essence of this chapter is that "the linear extrapolation of such sprint figures is meaningless". Brooks gives the analogy that "extrapolation of the times for the hundred-yard dash shows that a man can run a mile in under three minutes".
+Nevertheless, there is much that we can learn from Brooks's 1975 analysis if we are serious about optimizing our software for performance. For example, Brooks says that size budgets should be tied to functions, such that each operation of a system must operate withing well-defined constraints – not only memory size, but also disk accesses, storage space, and so on.
 
-In an earlier chapter, Brooks suggests that the cost of a large-scale software project breaks down into about: 1/3 of the schedule is for design, 1/6 for coding, 1/4 for component testing, and 1/4 for system testing. One cannot accurately estimate the total effort or schedule of a programming project by simply estimating the coding time and multiplying by factors for the other parts of the task. "`The coding is only one-sixth or so of the problem, and errors in its estimate or in the ratios could lead to ridiculous results.`"
+Brooks also writes that, on large-scale software projects, individuals teams tend to optimize for the performance targets on their own module, rather than think about the total effect on the user. He writes this is a major hazard for achieving good performance in large-scale systems. It may no longer be true of monoliths, but it is certainly true of modern distributed systems like microservice architectures.
 
-Data for building small isolated systems are not applicable to programming systems projects -- ie. to large-scale software projects.
+But perhaps most usefully of all, Brooks writes that high-performing systems – those that aee genuinely lean and fast – are the result of strategic innovations, such as well-designed algorithms, rather than tactical cleverness.
 
-"For a program averaging about 3200 words, for example, Sackman, Erikson, and Grant report an average code-plus debug time of about 178 hours for a single programmers, a figure which would extrapolate to give an annual productivity of 35,800 statements per year. A program half that size took less than one-fourth as long, and extrapolated productivity is almost 80,000 statements per year."
+And the greatest performance optimizations can usually be found in the representation of data. Redoing the representation of data, or its storage tables, will often yield bigger performance improvements than optimizing the business logic, Brooks observes.
 
-Programming increases goes as a power of program size. Some published studies show the exponent to be about 1.5.
-
-Brooks summarizes data from a variety of sources available at the time: Charles Portman, manager of ICL's software division; Joel Aron, manager of Systems Technology at IBM; John Harr, manager of programming for the Bell Telephone Laboratories' Electronic Switching System; OS/360 data; and others. Various research suggests:
-
-* Programmers spend only half their time programming and debugging. The other half is on overhead-type tasks.
-
-* Productivity can vary from 1.5 to 10 KLOC (thousand lines of code) per programmer per year. The more interactions between programmers and system parts, the lower the productivity.
-
-* Productivity – as measured in lines of code written – also varies significantly by category of software system, eg. between operating systems and compilers.
-
-* Productivity seems constant in terms of elementary statements, a conclusion that is reasonable in terms of the thought a statement requires and the errors it may include.
-
-* Programming productivity can be increased as much as five times when a suitable high-level programming language is used.
-
-== Ten pounds in a five-pound sack
-
-The ninth chapter is all about using hardware resources efficiently.
-
-Much of this is no longer relevant, due to advances in hardware and the reduced constraints under which we must design software to operate. For example, Brooks says that memory consumption limits is a crucial decision, because performance is so closely related to the transient area. But even 20 years later, Brooks acknowledges that this decision has been obsoleted, first by virtual memory and then by cheap real memory. Users now buy enough real memory to hold all the code for all of the major applications they run on their system.
-
-Aside from the running time, the _memory space_ occupied by a program is a principal cost. This is especially true of operating systems, where much is resident (in memory) all the time.
-
-The software builder should set size targets, control size, and devise size-reduction techniques (just as a hardware builder does for components). Size budgets must be explicit not only about resident size but also about the disk accesses occasioned by program fetches.
-
-Size budgets must be tied to function assignments; define exactly what a module must do when you specify how big it is allowed to be.
-
-On large teams, subteams tend to suboptimize to meet their own targets rather than think about the total effect on the user. This is a major hazard for achieving good performance in large-scale systems.
-
-All during implementation, the system architects must maintain constant vigilance to ensure continued system integrity.
-
-Fostering a total-system, user-oriented attitude may well be the most important function of the programming manager.
-
-To make good space-time trade-offs, a team needs to be trained in the programming techniques peculiar to a particular language or machine.
-
-Every project needs a standard library of components.
-
-Finally, on technical innovation, Brooks observes that genuinely lean and fast programs are the result of _strategic breakthroughs_, such as a new algorithm, rather than tactical cleverness. And, since *representation is the essence of programming* (ie. how data is stored), redoing the representation of the data or its storage tables will often yield bigger performance improvements than optimizing the business logic.
-
-TODO: Size is still important in many contexts, eg. client-side web applications, embedded software, and operating systems still.
-
-*"Representation is the essence of programming."*
-
-"Beyond craftsmanship lies invention, and it is here that lean, spare, fast programs are born. Almost always these are the result of strategic breakthrough rather than tactical cleverness. ... [eg. a new algorithm]
-
-"Much more often, strategic breakthrough will come from redoing the representation of the data or tables. This is where the heart of a program lies. Show me your flowcharts and conceal your tables, and I shall continue to be mystified. Show me your tables, and I won't usually need your flowcharts; they'll be obvious."
-
-"The programmer at wit's end for lack of space can often do best by disentangling himself from his code, rearing back, and contemplating his data. Representation _is_ tg=he essence of programming."
-
-== The documentary hypothesis
-
-"The hypothesis: Amid a wash of paper, a small number of documents become the critical pivots around which every project's management revolves. These are the manager's chief personal tools."
-
-The hypothesis states that, amid a wash of paper, a small number of documents will become the critical pivots around which every project's management revolves.
-
-For a computer development project, the critical documents are: the objectives, the specifications (including performance specifications), space allocations (memory), the schedule and budget, the organization chart and floor plan, and the estimate, forecast, and prices of the machine itself.
-
-For a software project, the needs are the same, except for the hardware costs.
-
-Even on a small project, the manager should formalize such a set of documents. Preparing each document focuses thought and crystallizes discussion. The act of writing requires hundreds of mini-decisions – resulting in clear, exact policies, rather than fuzzy ones.
-
-Maintaining each critical document provides a status surveillance and warning mechanism. Each document itself serves as a checklist and a database.
-
-The project manager's job, fundamentally, is to keep everyone going in the same direction.
-
-The project manager's chief daily task is communication (hearing, reporting, teaching, exhorting, counseling, encouraging), not decision-making. The documents communicate the plans and decisions to the whole team.
-
-"The task of the manager is to develop a plan and then to realize it. But only the written plan is precise and communicable. Such a plan consists of documents on what, when, how much, where, and who. This small set of critical documents encapsulates much of the manager's work."
-
-== Plan to throw one away
-
-In chapter 11, titled "Plan to Throw One Away", Brooks proposes building *pilot models* or *pilot systems* as an intermediate step between the initial system design and the construction of the final system. The pilot system helps to identify potential problems with the design before the final solution is built. The pilot system should be thrown away and not given to the customer. This is because the pilot model often has bugs in it, which would reduce the customer's confidence in the producer.
-
-Today: prototypes and proofs-of-concepts (POCs).
-
-Chemical engineers have learned not to take a process from the lab bench to the factory in one step, but to build a _pilot plant_ to give experience in scaling quantities up and operating in non-protective environments.
-
-This intermediate step is equally necessary for programming products, but software engineers do not yet routinely field-test a pilot system before undertaking to deliver the real product. – By 1995, this had become common practice, with "beta" versions. Brooks also advocates the use of "alpha" versions, which are prototypes with limited functionality.
-
-Brooks says that, for most projects, the first system built is barely usable: too slow, too big, too hard to use, or all three.
-
-The discard-and-redesign can be done in a big bang, or incrementally… but _it is inevitable_.
-
-Delivering the first system, the throwaway, to users will buy time – but perhaps at the cost of agony for the user, distraction for the builders who now have to support the production v1 while doing the redesign for v2, and potentially earn the product a bad reputation that will be hard to live down.
-
-Both the actual need, and the user's perceptions of their needs, will change as the solutions are built, tested, and used. The tractability and the invisibility of the software product expose its builders (exceptionally) to perpetual changes in requirements. But anyway, some valid changes in objectives (and in development strategies) are inevitable, so it is better to be prepared for them, than to assume changes will not come.
-
-The techniques for planning a software product for change – especially structured programming with careful module interface documentation – were well known but not widely practiced in 1975. But by 1995, this principle was much more widely embedded in software development practice.
-
-Brooks suggests using high-level languages, compile-time operations, and self-documenting techniques, to reduce errors introduced by change. (Automated testing is not mentioned.)
-
-Quantify changes into well-defined numbered versions – by 1995 this was standard practice, and today version control are standard tools.
-
-// TODO: Proofs-of-concept (POCs) meet this principle.
-
-Brooks writes:
-
-[quote]
+[quote, Fred Brooks]
 ____
-Plan to throw one away; you will, anyhow.
+Representation is the essence of programming.
 ____
-
-Brooks was using the metaphor of letter writing, suggesting that successful software development depends a great deal on trial and error.
-
-But it is an economic reality that we must instead rely on careful planning and design.
-
-Brooks's advice has not stood up well. It might have been state-of-the-art in 1975, but just a decade or two later major software systems cost as much as some downtown office buildings. We have not treated program code like _drafts_ of text for many, many years.
-
-The focus instead has been on reusing as much existing code as possible, we we have less code to write for each new program.
-
-Today, I think everyone in the industry agrees that it is better to plan to build a system incrementally, and to keep the system as you build it. This is the essence of iterative and incremental development, which is the basis for agile ways of working.
-
-Indeed, in 1987, Fred Brooks admitted that incremental development had emerged as a far better approach than trial and error, and that incremental development had changed his own approach to software development.
-
-I think today everyone agrees that, for the vast majority of software projects, the principle of "fail fast" is a bad one.
-
-We SHOULD avoid trial and error in software development. Don't just start coding without having a plan. Make sure you have all the prerequisites (eg. the definition of ready) in place – which may include designs – before construction begins.
-
-Code is expensive. It only take experience working on a few large programs to learn that you can
-void a lot of stress by planning ahead. Seasoned devs understand this – that our task is to do as little coding as possible!
-
-Preparation lays the groundwork for success or failure. If you start coding and you realize preparation has not been adequate – eg. you spot gaps in requirements – back up and pause progress until you have more info.
-
-=== Organizational change
-
-Planning for software change is one thing. Planning for organizational change is another.
-
-Structuring an organization for change is much harder than designing a system for change.
-
-The project boss must work at keeping the managers and the technical people as interchangeable as their talents allow; in particular, one wants to be able to move people easily between technical and managerial roles.
-
-Organizing as a surgical team... is the long-run answer to the problem of flexible organization.
-
-=== Program maintenance
-
-Program maintenance consists chiefly of changes that repair design defects, add incremental function, or adapt to changes in the use environment or configuration.
-
-The total lifetime cost of maintaining a widely-used program is typically 40% or more of the cost of developing it.
-
-Maintenance cost is strongly related to the number of users, because the more users there are, the more bugs will be found.
-
-There's a drop-and-climb curve in bugs discovered per month over a product's life.
-
-Fixing a defect has a substantial (20% - 50%) chance of introducing another. After each fix, one must run the entire bank of test cases previously run against a system to ensure that it has not been damaged in some obscure way (what we now call _regression_).
-
-Methods of designing programs so as to eliminate, or at least illuminate, side effects can have an immense payoff in maintenance costs. So can methods of implementing designs with fewer people, fewer interfaces, and fewer bugs.
-
-=== System entropy rises over lifetime
-
-Brooks quotes research by Lehman and Belady in which they find that the total number of modules increases linearly with the release number of a large operating system, but that the number of modules affected increases exponentially with the release number.
-
-All repairs tend to destroy structure, to increase the entropy and disorder of a system. Even the most skillful program maintenance only delays the program's subsidence into unfixable chaos, from which there has to be a ground-up redesign.
-
-////
-
-"Project after project designs a set of algorithms and then plunges into construction of customer-deliverable software on a schedule that demands delivery of the first thing built."
-
-The first version of a large-scale software system may be too slow, too big, difficult to use, etc. You then have to solve these problems – hopefully yuu can do this piece-by-piece, but the worst case scenario is you will have to start over if the design proves to be fundamentally flawed... "for even the best planning is not so omniscient as to get it right the first time."
-
-Hence: "plann to throw one away; you will, anyhow".
-
-''''
-
-"The only constant is change itself."
-
-"The first step is to accept the fact of change as a way of life, rather than an untoward and annoying exception. Cosgrave [TODO: add reference] has perceptively pointed out that the programmer delivers satisfaction of a user need rather than any tangible product. And both the actual need and the user's perception of that need will change as programs are built, tested, and used."
-
-Brooks writes that, for hardware products like cars and computers, the existence of a tangible object "serves to contain and quantize user demand for changes". But "both the tractability and the invisibility of the software product expose its builders to perceptual changes in requirements."
-
-Brooks is advocating the agile principle of *embracing change*, 25+ years before the manifesto for agile software development is written. It is inevitable, he writes, that objectives and requirements will change, and changes in development strategies and techniques are also inevitable.
-
-"The throw-one-away concept is itself just an acceptance of the fact that as one learns, he changes the design."
-
-*Plan the system for change*
-
-This is done through modularization, extreme subroutining (which today we would call abstraction), careful definition of module interfaces – and complete documentation of these.
-
-"Most important is the use of a high-level language and self-documenting techniques so as to reduce errors induced by changes."
-
-"Quantizaion of change is an essential technique. Every product should have numbered versions, and each version must have its own schedule and a freeze date, after which changes go into the next version."
-
-*Plan the organization for change*
-
-
-"Structuring an organization for change is much harder than designing a system for change."
-
-Plans, milestones, and schedules need to be treated as _tentative_, to facilitate change. But this is anathema to many organizations - where slippage of delivery plans is treated as a "failure of project management".
-
-Agile - this is perhaps what we've got wrong. We have not explained _how_ organizations should implement the cultural change needed.
-
-"Management structures also need to change as the system changes."
-
-"This means... [keeping] managers and technical people as interchangeable as their talents allow."
-
-Brooks writes about how flat organizational structures can really help facilitate this. He gives the example of Bells Labs that abolished job titles and hierarchies to everyone was an equal "member of the technical staff".
-
-Brooks says this fits well with his model of *surgical teams* as "it has the effect of making a senior man feel that he does not demean himself when he builds programs, and [it] removes the social obstacles that deprive him of that creative joy."
-
-Brooks says that tthe surgical team is "the long-run answer to the problem of the flexible organization." He explains: "it becomes relatively easy to reassign a whole surgical team to a different programming task when the organizational changes are necessary."
-
-*Two steps forward and one step back*
-
-Once a program is shipped to customers, afterward further delivery is called *maintenance* rather than *development* – the work now consists chiefly of repairing design defects. This may include adding features that are visible to the user.
-
-Maintenance can cost 40% of the total cost of developing a software product. We tend to think of software development not as projects but as long-lived programs (products).
-
-More users = more bugs found = more maintenance
-
-image::./_/media/diagrams/bug-discovery-over-time.drawio.png[]
-
-The bug rate drops off after the initial release, but then starts to gradually climb again -- this may be due to users fully exercising the new capabilities of the software, ie. they start to become really familiar with it, and so edge case bugs start to get shaken out.
-
-Brooks discusses the far-reaching, often overlooked, impacts of doing lots of piecemeal repairs on a system. He sites studies by Lehman and Belady that "all repairs tend to destroy structure to increase the entropy and disorder of the system. ... As time passes, the system becomes less and less well-ordered. Sooner or later, the fixing ceases to gain any ground. Each forward step is matched by a backward one. Although in principle usable forever, the system has worn out as a base for progress."
-
-Eventually, a "brand-new, from-the-ground-up redesign is necessary."
-
-Brooks quotes CS Lewis: "Terrific energy is expanded – civilizations are built up – excellent institutions devised; but each time something goes wrong. Some fatal flaw always brings the selfish and cruel people to the top, and then it all slides back into misery and ruin."
-
-Brooks concludes: "Systems program building is an entropy-decreasing process, hence inherently metastable. Program maintenance is an entropy-increasing process, and even ifs most skillful execution only delays the subsidence of the system into unfixable obsolescence."
-
-Intriguingly, Brookes writes that "methods of designing programs so as to eliminate or at least illuminate side effects can have an immense payoff in maintenance costs." He suggests that having fewer people do the design and build, and having fewer interfaces, produces systems with fewer bugs – and such systems suffer less from entropy and therefore have longer useful lives.
-
-////
 
 == Sharp tools
 
-// Chapter 12
+"`A good workman is known by his tools`" Brooks writes in chapter 12. "`Each master mechanic has his own personal set [of tools], collected over a lifetime and carefully locked and guarded – the visible evidence of personal skills.`" These tools would be "`little editors, sorts, binary dumps, disk space utilities, etc.`"
 
-The manager of a project needs to establish a philosophy and set aside resources for the building of common tools, and at the same time recognize the need for personalized tools.
+But Brooks says that this is undesirable. In computer programming projects, where "`the essential problem is communication, [...] individualized tools hamper rather than aid communication.`" Brooks continues, "`it is obviously much more efficient to have common development and maintenance of general-purpose programming tools.`"
 
-The debugging machine, or its software, also needs to be instrumented, so that counts and measurements of all kinds of program parameters can be automatically made.
+He advocates there be "`one toolmaker per team... [who] masters all the common tools and is able to instruct... in their use. He also builds the specialized tools his boss needs.`"
 
-The requirement for target machine use has a peculiar growth curve: low activity followed by explosive growth, then a levelling off.
-
-Brooks writes about methods for scheduling teams' access to limited testing machines… this is not relevant any more.
-
-System debugging, like astronomy, has always been done chiefly at night.
-
-The tool that saves the most labor in a programming project is probably a text-editing system.
-
-Voluminosity in system documentation introduces a new kind of incomprehensibility, but is preferable to severe under-documentation – which, in my experience, still exists. Rather, documentation tends to be chaotic – think unstructured, poorly maintained Confluence spaces, for example.
-
-Brooks encourages the adoption of high-level programming languages, which are now ubiquitous. They improve productivity, introduce fewer bugs, and make debugging easier.
-
-Brooks notes, as early as 1975, that the classical objections of function, object-code space, and object-code speed have been made obsolete by the advance of language and compiler technology.
-
-Interactive systems will never displace batch systems for some applications. This is still true in 2025, and it probably always will be. Interactive programs and batch processes are two entirely different use cases.
-
-////
-
-"A good workman is known by his tools."
-
-"Each master mechanic has his own personal set [of tools], collected over a lifetime adn carefully locked and guarded – the visible evidence of personal skills."
-
-"the programmer keeps little editors, sorts, binary dumps, disk space utilities, etc., stashed away in his file."
-
-Brooks says that is undesirable for programming projects where "the essential problem is communication, and individualized tools hamper rather than aid communication."
-
-"it is obviously much more efficient to have common development and maintenance of general-purpose programming tools."
-
-Brooks says that you need a mix of specialized and personalized tools.
-
-He advocates "one toolmaker per team... [who] masters all the common tools and is able to instruct... in their use. He also builds the specialized tools his boss needs."
-
-"What are the tools about which the manager must philosophize, plan, and organize? First, a _computer facility_. This requires machines, and a scheduling philosophy must be adopted. It requires an _operating system_, and service philosophies must be established. It requires _language_, and a language policy must be laid down. Then there are _utilities_, _debugging aids_, _test-case generators_, and a _text processing system_ to handle documentation."
-
-The rest of the chapter looks at each of these in turn. Today, we need not spend nearly so much time and effort thinking about our tooling. And we don't care so much about our systems being idle for long periods of time.
+The rest of the chapter looks at the tools that Brooks recommends be standardized across a team. Today, we need not spend nearly so much time and effort thinking about our tooling. And we don't care so much about our systems being idle for long periods of time. For example, Brooks writes about methods for scheduling teams' access to limited testing machines… this is not relevant any more.
 
 The chapter provides an interesting step back in time to when every aspect of software delivery had to be carefully considered – so much is now just readily available, often free or as a low-cost subscription.
 
-"The most important tools for system programming today are two that were not used in OS/360 development almost a decade ago. They are still not widely used [in 1975], but all evidence points to their power and applicability. They are (1) high-level language and (2) interactive programming. I am convinced that only inertia and sloth prevent the universal adoption of these tools; the technical difficulties are no longer valid excuses."
+"`The most important tools for system programming today are two that were not used in OS/360 development almost a decade ago. They are still not widely used [in 1975], but all evidence points to their power and applicability. They are (1) high-level language and (2) interactive programming. I am convinced that only inertia and sloth prevent the universal adoption of these tools; the technical difficulties are no longer valid excuses.`"
 
 Brooks explains why the adoption of high-level languages (by which we mean higher than assembly) were still subject to push-back in 1975.
 
-high-level + interactive => "a pair of sharp tools indeed"
-
-I like the idea of _precision_ in tooling, especially in debugging.
-
-////
+The combination of high-level language plus interactive programming makes for "`a pair of sharp tools indeed`", Brooks concludes.
 
 == The whole and the parts
 
-// Chapter 13
+Chapter 13 is about "`how does one integrate a tested set of component programs into a tested and dependable system?`" It's about that last step of integrating and testing a complete, whole system from its pre-fabricated, pre-tested component parts. Of course today we do this incrementally – it's not all done in one step at the end.
 
-Detailed architectural effort (discussed in earlier chapters) not only improves the *ease of use* of a software product, but also makes it easier to build, and reduces the number of defects.
+This process is really about "`designing the bugs out`".
 
-Many defects concern aspects that were never quite fully specified.
+// === TODO ========================================================================================
 
-Brooks suggests that, before any code itself is written, the specification should be handed to an outside testing group to be scrutinized for completeness and clarity. The developers themselves cannot do this.
-
-"Wirth's top-down design [by stepwise refinement] is the most important new programming formalization of the [1965-1975] decade." Wirth advocates using as high-level a notation as possible on each step.
-
-A good top-down design avoids bugs in four ways:
-
-1. xxx
-2. xxx
-3. xxx
-4. xxx
-
-Sometimes one has to go back, scrap a high level, and start over.
-
-*Structured programming* (designing programs whose control structures consist only of a specified set that govern blocks of code, versus miscellaneous branching) is a sound way to avoid bugs and is the right way to think.
-
-System debugging is far harder than component debugging. It helps to plan system debugging sessions before starting – ie. have a strategy, a systematic and planned approach.
-
-System debugging should begin only after all the components are proven to work. Do not use system testing to try to smoke out interface bugs.
-
-Add one component at a time during system debugging.
-
-It is worthwhile to build lots of debugging scaffolding and test code – this might account for as much as 50% as much of the product being debugged.
-
-One must control and document changes and versions, with team members working on *playpen* copied.
-
-////
-
-This chapter is about "how does one integrate a tested set of component programs into a tested and dependable system?"
-
-It's about that last step of integrating and testing a complete, whole system from its pre-fabricated, pre-tested component parts. Of course today we do this incrementally – it's not all done in one step at the end.
-
-This process is really about "designing the bugs out". Techniques that help include:
+Techniques that help include:
 
 * *Conceptual integrity* makes a program easier to build, easier to use, and less subject to bugs.
 
@@ -675,7 +491,36 @@ Forms of scaffolding:
 * Miniature file
 * Auxiliary programs: generators for test data, etc.
 
-////
+''''
+
+Detailed architectural effort (discussed in earlier chapters) not only improves the *ease of use* of a software product, but also makes it easier to build, and reduces the number of defects.
+
+Many defects concern aspects that were never quite fully specified.
+
+Brooks suggests that, before any code itself is written, the specification should be handed to an outside testing group to be scrutinized for completeness and clarity. The developers themselves cannot do this.
+
+"Wirth's top-down design [by stepwise refinement] is the most important new programming formalization of the [1965-1975] decade." Wirth advocates using as high-level a notation as possible on each step.
+
+A good top-down design avoids bugs in four ways:
+
+1. xxx
+2. xxx
+3. xxx
+4. xxx
+
+Sometimes one has to go back, scrap a high level, and start over.
+
+*Structured programming* (designing programs whose control structures consist only of a specified set that govern blocks of code, versus miscellaneous branching) is a sound way to avoid bugs and is the right way to think.
+
+System debugging is far harder than component debugging. It helps to plan system debugging sessions before starting – ie. have a strategy, a systematic and planned approach.
+
+System debugging should begin only after all the components are proven to work. Do not use system testing to try to smoke out interface bugs.
+
+Add one component at a time during system debugging.
+
+It is worthwhile to build lots of debugging scaffolding and test code – this might account for as much as 50% as much of the product being debugged.
+
+One must control and document changes and versions, with team members working on *playpen* copied.
 
 == Hatching a catastrophe
 
@@ -858,6 +703,10 @@ Chapter 17
 _The Mythical Man-Month_ is the book that everyone claims to have read, but few have. But I would encourage everyone to do so. It's a wonderfully imaginative book, rich in metaphor and analogy, and filled with pearls of wisdom. It's a must-read for anyone working in the software industry. The 20th anniversary edition is recommended for its extended content.
 
 What I learnt from _The Mythical Man-Month_ is that modern best practices in software development are deeply rooted. The seeds for our current ways of working were sown here, in the 1960s and 1970s, when we started to push the boundaries of what software could do. Almost all of the ideas put forward by Fred Brooks in this book are just as relevant in 2025 as they were in 1975.
+
+// Much of this is no longer relevant, due to advances in hardware and the reduced constraints under which we must design software to operate. For example, Brooks says that memory consumption limits is a crucial decision, because performance is so closely related to the transient area. But even 20 years later, Brooks acknowledges that this decision has been obsoleted, first by virtual memory and then by cheap real memory. Users now buy enough real memory to hold all the code for all of the major applications they run on their system.
+
+// Aside from the running time, the _memory space_ occupied by a program is a principal cost. This is especially true of operating systems, where much is resident (in memory) all the time.
 
 Of course, some of the challenges today are different from what they were in the time of OS/360. We are no longer physically constrained by computing resources. Hardware is abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software – real-time systems, embedded systems, and systems with strict performance requirements, for example.
 
