@@ -10,7 +10,7 @@ link:https://mailchi.mp/2c60bdf9f429/91h5vui7v9[email], link:/feeds/rss.xml[RSS]
 link:/feeds/atom.xml[Atom], or link:/feeds/feed.json[JSON Feed], or follow me on https://bsky.app/profile/kieranpotts.com[Bluesky] or https://www.linkedin.com/in/kieranpotts/[LinkedIn].
 
 * link:./mythical-man-month-50[The Mythical Man-Month at 50] +
-  [.small]#19 December 2025#
+  [.small]#28 December 2025#
 
 * link:./the-quality-without-a-name[The (software) quality without a name] +
   [.small]#5 October 2025#
