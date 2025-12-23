@@ -133,6 +133,8 @@ Of course, in the intervening years, our industry has universally adopted iterat
 
 Rather than testing being left until a final deliverable system is complete, the correctness of the evolving system is continuously evaluated throughout its development life cycle. Through this process of continuous integration and testing, we've solved the problem of defects in design and construction being discovered late.
 
+// In _No Silver Bullet_, published in 1986, Brooks advocates "growing" software organically through incremental development. He suggests devising and implementing the main and subprograms right at the beginning, filling in the working sub-sections later. He believes that computer programming this way excites the engineers and provides a working system at every stage of development.
+
 === Gutless estimating
 
 The fifth and final explanation that Brooks gives for poor estimation of software projects is the tendency we have to work to schedules dictated by our customers. What we ought to do, Brooks proposes, is to be braver and attempt to make a reasonable guess about the real effort required to deliver a satisfactory product.
@@ -279,6 +281,8 @@ Brooks also makes the point that implementation – the raw coding – is also a
 Brooks observes that, unlike other engineering disciplines, in software engineering the phases of design and construction can overlap. The pace is quicker between design and construction in software, compared to other engineering disciplines. The tasks of specification and construction can therefore blend together. Builders can even start their work before the requirements are finalized, as code is easier to change than bricks and mortar.
 
 Today, it is widely recognized that successful delivery of software requires architects and programmers to work closely together. While ivory tower architecture has been resoundingly rejected, there remains a need for some degree of architectural oversight. Programmers have a tendency to take a bottom-up approach to software construction, as our day-to-day work demands we focus on the design of individual features rather than of the overall system. For this reason, maintaining conceptual integrity is often overlooked by programmers working at the coalface. We still need architects, taking a more top-down view, to fight complexity by "`the disciplined exercise of frills of function, and flights of technique`", and to maintain conceptual integrity in the evolving system design by counteracting the natural force of entropy.
+
+// In _No Silver Bullet_, published in 1986, Brooks goes on to argue that there is a difference between "good" designers and "great" designers. He postulates that as programming is a creative process, some designers are inherently better than others. He suggests that there is as much as a tenfold difference between an ordinary designer and a great one. He then advocates treating star designers equally well as star managers, providing them not just with equal remuneration, but also all the perks of higher status: large office, staff, travel funds, etc.
 
 == The second-system effect
 
@@ -487,25 +491,39 @@ Still true.
 
 The 20th anniversary edition of _The Mythical Man-Month_ adds a republication of Brooks's classic 1986 paper https://www.cs.unc.edu/techreports/86-020.pdf["No Silver Bullet – Essence and Accidents of Software Engineering"], plus a retrospective chapter.
 
-The concept of a silver bullet comes from European folklore, where silver was believed to be the only material capable of killing supernatural creatures like werewolves, vampires, and witches. Over time, it evolved into a metaphor for a simple, miraculous solution to a complex problem.
+The concept of the silver bullet comes from European folklore, where silver was believed to be the only material capable of killing supernatural creatures like werewolves, vampires, and witches. Over time, it evolved into a metaphor for a simple, miraculous solution to a complex problem.
 
-The central argument in Brooks's paper is that there are no silver bullets in software development – and there never can be any.
+The central argument in Brooks's paper is that there will never be any more silver bullets to fight the core challenge of software development: the management of complexity.
 
-He writes, "`there is no single development, in either technology or management technique, which by itself promises even one order of magnitude [tenfold] improvement within a decade in productivity, in reliability, in simplicity.`" He continues, "`we cannot expect ever to see two-fold gains every two years`" in software development, as there is in hardware development – ie. there will never be an equivalent in software development of https://en.wikipedia.org/wiki/Moore%27s_law[Moore's Law].
+He writes, "`there is no single development, in either technology or management technique, which by itself promises even one order of magnitude [tenfold] improvement within a decade in productivity, in reliability, in simplicity.`" He continues, "`we cannot expect ever to see two-fold gains every two years`" in software development, as there is in hardware development. In other words, there will never be an equivalent in software development of https://en.wikipedia.org/wiki/Moore%27s_law[Moore's Law].
 
-// Programming productivity can be increased by as much as five times when a suitable high-level programming language is used – something that was not available at the time of the OS/360 project.
+Brooks distinguishes between two different types of complexity in software: accidental complexity and essential complexity. This is, perhaps, Brooks's most famous and enduring idea. But it was borrowed from Aristotle.
 
-////
+In Aristotelian philosophy, essential properties are the properties that make something what it fundamentally is – its essence. Remove them and the thing ceases to be that thing. Accidental properties are qualities that a thing happens to have, as if by accident. These properties can be removed without fundamentally changing the nature of the thing.
 
-Brooks distinguishes between two different types of complexity: accidental complexity and essential complexity. This is related to Aristotle's classification. Accidental complexity relates to problems that engineers create and can fix. For example, modern programming languages have abstracted away the details of writing and optimizing assembly language source code and eliminated the delays caused by batch processing, though other sources of accidental complexity remain. Essential complexity is caused by the problem to be solved, and nothing can remove it; if users want a program to do 30 different things, then those 30 things are essential and the program must do those 30 different things.
+Applied to software, essential complexity is in the aspects of a system design that are essential to solving the problem that the system is intended to solve. Essential complexity is derived from the problem domain: the concepts, relationships, and logic that must be expressed in order to fulfil the requirements of the user, and the business rules and real-world constraints. Nothing can be done to eliminate this form of complexity.
 
-Brooks claims that accidental complexity has decreased substantially, and today's programmers spend most of their time addressing essential complexity. Brooks argues that this means shrinking all the accidental activities to zero will not give the same order-of-magnitude improvement as attempting to decrease essential complexity. While Brooks insists that there is no one silver bullet, he believes that a series of innovations attacking essential complexity could lead to significant improvements. One technology that had made significant improvement in the area of accidental complexity was the invention of high-level programming languages, such as Ada.[1]
+Accidental complexity, on the other hand, arises from our choices of tools, languages, syntax, data structures, and processes to solve the problem. Accidental complexity cannot be eliminated entirely, but it can be minimized by making good trade-offs in our software designs.
 
-Brooks advocates "growing" software organically through incremental development. He suggests devising and implementing the main and subprograms right at the beginning, filling in the working sub-sections later. He believes that computer programming this way excites the engineers and provides a working system at every stage of development.
+Brooks's central argument was that, by 1986, most forms of accidental complexity could already be reduced as much as it ever could be. Advances such as the advent of high-level programming languages – which Brooks suggested increased programming productivity as much as five-fold – had already all-but eliminated accidental complexity from software designs.
 
-Brooks goes on to argue that there is a difference between "good" designers and "great" designers. He postulates that as programming is a creative process, some designers are inherently better than others. He suggests that there is as much as a tenfold difference between an ordinary designer and a great one. He then advocates treating star designers equally well as star managers, providing them not just with equal remuneration, but also all the perks of higher status: large office, staff, travel funds, etc.
+The only remaining challenge in software development is the management of essential complexity.
 
-////
+Since we, as engineers, can't do anything about the essential complexity of the software we make, there can be no further order-of-magnitude improvements in our productivity.
+
+Thus, there are no more silver bullets to be found. All the big breakthroughs in software development productivity happened before the 1980s, and Brooks did not expect there to ever be any more.
+
+Was Brooks right?
+
+We're now firmly in the realm of subjectivity, but my own honest opinion is that, in the decades since, developer productivity has more likely regressed rather than progressed as a direct consequence of innovations – both technical and organizational.
+
+// TODO... AI-augmented programming, ...
+
+// TODO... On the organizational side, Scrum...
+
+Brooks wrote that he believed a series of innovations attacking essential complexity could lead to significant further improvements in developer productivity. Certainly, there have been some innovations in this area. The Unix philosophy, and the idea of composing complex functionality from independent programs and modules, I would argue is one such innovation.
+
+// TODO...
 
 == Concluding thoughts
 
@@ -515,9 +533,9 @@ What I learnt from _The Mythical Man-Month_ is that modern best practices in sof
 
 Of course, some of the challenges today are different from what they were in the time of OS/360. We are no longer physically constrained by computing resources. Hardware is abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software – real-time systems, embedded systems, safety-critical systems, and many systems operating in domains that have strict performance requirements.
 
-The management of complexity remains the core challenge of software development.
+The management of complexity remains the core challenge of software development. While technological advances have significantly reduced accidental complexity in software design, we are attempting to build systems that have more essential complexity than ever before.
 
-Throughout the history of computing, advances in technology have helped to make us more productive. But the same advances have also created opportunities for ever more ambitious software. Today, the resources and tools at our disposal are as powerful as they have ever been – think cloud computing, virtualization and containerization, continuous integration and automated deployment pipelines, and AI-assisted coding environments. But the productivity gains afforded by these tools are offset by corresponding increases in the essential complexity of the software that we make.
+Throughout the history of computing, advances in technology have helped to make us more productive. But the same advances have also created opportunities for ever more ambitious software. Today, the resources and tools at our disposal are as powerful as they have ever been – think cloud computing, virtualization and containerization, continuous integration and automated deployment pipelines, and AI-assisted coding environments. But the productivity gains afforded by these tools are offset by corresponding increases in the essential complexity of the software that we are commissioned to make on behalf of our customers.
 
 The book closes with this epilogue:
 
