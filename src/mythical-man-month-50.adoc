@@ -14,7 +14,7 @@ I got myself a copy of the original 1975 edition and the extended 20th anniversa
 
 _The Mythical Man-Month_ is more of an anthology of standalone essays rather than a cohesive thesis. Nevertheless, there are some key themes that run throughout. The most prominent theme is the one introduced in the opening chapter: that the core challenge of software development is the management of complexity.
 
-Brooks draws the colorful analogy that large-scale software development is like "`the mortal struggles of great beasts in the tar pits`". This is represented by the book's cover image, a sketch of Charles Knight's 1925 painting that depicts the great mammoths of the Pleistocene struggling to free themselves from the tar pits of Southern California.
+Brooks draws the colorful analogy that large-scale software development is like "`the mortal struggles of great beasts in the tar pits`". This is represented by the book's cover image, a sketch of Charles Knight's 1925 painting that depicts the great mammoths of the Pleistocene struggling to free themselves from https://en.wikipedia.org/wiki/La_Brea_Tar_Pits[the tar pits of Southern California].
 
 image::./_/media/images/the-mythical-man-month.jpg[]
 
