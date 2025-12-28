@@ -534,3 +534,7 @@ The tar pit of software engineering will continue to be sticky for a long time t
 ____
 
 Amen.
+
+.Fred Brooks (photo by David Monniaux - own work, CC BY-SA 3.0)
+[#img-fred-brooks,link=https://commons.wikimedia.org/w/index.php?curid=20028915]
+image::./_/media/images/fred-brooks.jpg[]
