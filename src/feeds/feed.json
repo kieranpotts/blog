@@ -11,6 +11,13 @@
   },
   "items": [
     {
+      "id": "https://kieranpotts.com/mythical-man-month-50",
+      "url": "https://kieranpotts.com/mythical-man-month-50",
+      "title": "The Mythical Man-Month at 50",
+      "content_text": "Fred Brooks's classic book The Mythical Man-Month was published 50 years ago. It was hugely influential on the then-nascent discipline of software development. How does it stand up today?",
+      "date_published": "2025-12-28T00:00:00Z"
+    },
+    {
       "id": "https://kieranpotts.com/the-quality-without-a-name",
       "url": "https://kieranpotts.com/the-quality-without-a-name",
       "title": "The (software) quality without a name",
