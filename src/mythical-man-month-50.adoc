@@ -104,7 +104,7 @@ image::./_/media/diagrams/men-versus-months.svg[]
 
 Brooks observes that the more complex the interrelationships between the component parts of the system under construction, the greater this effect. Hence the management of complexity is identified as the core challenge of software development. The simpler the design, the more opportunities you will have to build out the solution faster.
 
-Even today, managers routinely believe that adding more people to a late project can solve schedule slippage. I've seen this myself. It's especially commonplace in consultancies and outsourcing firms, where the software house bills its customers in man-hours and therefore has a commercial incentive to add as many people as possible to their billable workstreams. But I've seen it in software houses, too. They ought to know better.
+Even today, managers routinely believe that adding more people to a late project can solve schedule slippage. I've seen this myself. It's especially commonplace in consultancies and outsourcing firms, where the supplier bills its customers in man-hours and therefore has a commercial incentive to add as many people as possible to their billable workstreams. But I've seen it in software houses, too. They ought to know better.
 
 === Regenerative schedule disaster
 
@@ -133,7 +133,7 @@ Of course, in the intervening years, our industry has universally adopted iterat
 
 Rather than testing being left until a final deliverable system is complete, the correctness of the evolving system is continuously evaluated throughout its development life cycle. Through this process of continuous integration and testing, we've solved the problem of defects in design and construction being discovered late.
 
-Brooks acknowledges this himself. In a retrospective chapter in the 20th anniversary edition of _The Mythical Man-Month_, Brooks accepts that iterative and incremental development methodologies had, in the intervening years, proven to be more effective than traditional stepwise approaches. Indeed, in his other famous work, _No Silver Bullet_, a paper published in 1986, a decade after _The Mythical Man-Month_, Brooks advocates "`growing`" software organically through incremental development.
+Brooks acknowledges this himself. In a retrospective chapter in the 20th anniversary edition of _The Mythical Man-Month_, Brooks accepts that iterative and incremental development methodologies had, in the intervening years, proven to be more effective than traditional stepwise approaches. Indeed, in his other famous work, _No Silver Bullet_, a paper published in 1986, just a decade after _The Mythical Man-Month_, Brooks advocates "`growing`" software organically through incremental development.
 
 === Gutless estimating
 
@@ -513,7 +513,7 @@ Brooks looked ahead to recent advances in high-level programming languages such 
 
 Was Brooks right?
 
-In the intervening decades, there have certainly been many further important innovations attacking both the essential and accidental complexity of our software systems. For essential complexity I would argue that techniques in domain modeling and domain-driven design patterns have been very helpful. As for sources of accidental complexity, the success of open source, free and low-cost tools and languages, version control systems, virtualization/containerization and cloud computing, continuous integration and automated deployment pipelines, and – most recently – AI-augmented programming have all incrementally transformed how we build software.
+In the intervening decades, there have certainly been many further important innovations attacking both the essential and accidental complexity of our software systems. For essential complexity I would argue that techniques in domain modeling and domain-driven design patterns have been very helpful. As for sources of accidental complexity, the success of open source, free and low-cost tools and languages, version control systems, virtualization/containerization and cloud computing, continuous integration and automated deployment pipelines, and – most recently – AI-augmented programming, have all incrementally transformed how we build software.
 
 But there is an ironic consequence of these innovations: the productivity gains from them have been offset by corresponding increases in demand for what software is required to do.
 
@@ -534,13 +534,13 @@ _The Mythical Man-Month_ is the book that everyone claims to have read, but few 
 
 What I learnt from _The Mythical Man-Month_ is that modern best practices in software development are deeply rooted. The seeds for our current ways of working were sown here, in the 1960s and 1970s, when we started to push the boundaries of what software could do. Almost all of the ideas put forward by Fred Brooks in this book are just as relevant in 2025 as they were in 1975.
 
-Of course, some of the challenges today are different from what they were in the time of OS/360. Notably, we are no longer physically constrained by computing resources. Hardware is abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software – real-time systems, embedded systems, safety-critical systems, and many systems operating in domains that have strict performance requirements.
+Of course, some of the challenges today are different from what they were in the time of OS/360. Notably, we are no longer physically constrained by computing resources. Hardware is abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software – real-time systems, embedded systems, safety-critical systems, and many other systems operating in domains that have strict performance requirements.
 
-And yet, for all our advanced in technology and working practices, in 2025 the core challenge of software development remains the same as it ever has been: the management of complexity.
+Yet, for all our advances in technology and working practices, in 2025 the core challenge of software development remains the same as it ever has been: the management of complexity.
 
-And perhaps it always will be.
+And perhaps this will always be the challenge.
 
-In a closing retrospective chapter printed in the 20th anniversary edition of _The Mythical Man-Month_, Brooks reflects on reasons for the book's success and popularity. Among numerous explanations that Brooks offers, one I find to have the greatest truth. It is that "`The Mythical Man-Month`" is only incidentally about software but primarily about how people in teams make things.`"
+In a closing retrospective chapter printed in the 20th anniversary edition of _The Mythical Man-Month_, Brooks reflects on reasons for the book's success and popularity. Among numerous explanations that Brooks offers, one I find to have the greatest truth. It is that "`_The Mythical Man-Month_ is only incidentally about software but primarily about how people in teams make things.`"
 
 _The Mythical Man-Month_ will never become obsolete. Superficially, the book is about software development, which is ever-changing. But more fundamentally the book is about how people collaborate to solve complex problems. And that is a challenge for humanity that will endure across time, cultures, and technologies.
 
