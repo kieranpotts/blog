@@ -478,13 +478,13 @@ Still true.
 
 == No silver bullet
 
-The 20th anniversary edition of _The Mythical Man-Month_ adds a reprint of Brooks's classic 1986 paper https://www.cs.unc.edu/techreports/86-020.pdf["No Silver Bullet – Essence and Accidents of Software Engineering"], plus a retrospective chapter.
+The 20th anniversary edition of _The Mythical Man-Month_ adds a reprint of Brooks's classic 1986 paper https://www.cs.unc.edu/techreports/86-020.pdf["`No Silver Bullet – Essence and Accidents of Software Engineering`"], plus a retrospective chapter.
 
 The concept of the silver bullet comes from European folklore, where silver was believed to be the only material capable of killing supernatural creatures like werewolves, vampires, and witches. Over time, it evolved into a metaphor for a simple, miraculous solution to a complex problem.
 
 The central argument in Brooks's paper is that there will never be any more silver bullets to fight the core challenge of software development: the management of complexity. And therefore there will never be any more orders-of-magnitude increases in the productivity of software development.
 
-"`There is no single development, in either technology or management technique, which by itself promises even one order of magnitude [tenfold] improvement within a decade in productivity, in reliability, in simplicity.`" Brooks continues, "`we cannot expect ever to see two-fold gains every two years`" in software development, as there is in hardware development. In other words, there will never be an equivalent in software development of https://en.wikipedia.org/wiki/Moore%27s_law[Moore's Law].
+"`There is no single development, in either technology or management technique, which by itself promises even one order of magnitude [tenfold] improvement within a decade in productivity, in reliability, in simplicity.`" Brooks continues: "`we cannot expect ever to see two-fold gains every two years`" in software development, as there is in hardware development. In other words, there will never be an equivalent in software development of https://en.wikipedia.org/wiki/Moore%27s_law[Moore's Law].
 
 To explain why, Brooks distinguishes between two different types of complexity in software: accidental complexity and essential complexity. This is, perhaps, Brooks's most famous and enduring idea.
 
@@ -501,25 +501,25 @@ ____
 Many of the classical problems of developing software products derive from this essential complexity and its nonlinear increases with size. From the complexity comes the difficulty of communications among team members, which leads to product flaws, cost overruns, schedule delays. From the complexity comes the difficulty of enumerating, much less understanding, all the possible states of the program, and from that comes the unreliability. From the complexity of the functions comes the difficulty of invoking those functions, which makes programs hard to use. From complexity of structure comes the difficulty of extending programs to new functions without creating side effects. From complexity of structure comes the unvisualized states that constitute security trapdoors.
 ____
 
-All the difficulties in the management of software projects arise from these inherent characteristics. Thus "`the complexity of software is an essential property, not an accidental one.`"
+All the difficulties in the management of software projects arise from the inherent characteristics of software itself. Thus "`the complexity of software is an essential property, not an accidental one.`"
 
 "`If this is true,`" Brooks concludes, then "`building software will always be hard. There is inherently no silver bullet.`"
 
-Brooks wrote that he believed a series of innovations attacking essential complexity could lead to significant further improvements in developer productivity. Brooks considered innovations such as incremental development practices, techniques for rapid prototyping, and the emergence of a mass market for software components (allowing us to buy, rather than build, the software we need) – all of which had attacked the essential complexity of software development, leading to worthwhile improvements in productivity, but none of which proved to be silver bullets.
+Brooks believed that a series of innovations attacking essential complexity could lead to significant further improvements in developer productivity. Brooks considered innovations such as incremental development practices, techniques for rapid prototyping, and the emergence of a mass market for software components (allowing us to buy, rather than build, the software we need). All of this innovation had attacked the essential complexity of software development, leading to worthwhile improvements in productivity. But, Brooks concluded, none of them proved to be silver bullets.
 
-At least we can work to improve the accidental complexity of our software systems. But Brooks believed that there had already been sufficient technological advances to reduce most forms of accidental complexity as much as it ever could be. By 1986, the advent of high-level programming languages – which Brooks suggested had increased programming productivity as much as five-fold – had already all-but eliminated accidental complexity from computer program code. Meanwhile time-sharing and integrated programming environments had greatly simplified the software development process itself.
+At least we can work to improve the accidental complexity of our software systems. Alas, Brooks also believed there had already been sufficient technological advances to reduce most forms of accidental complexity as much as it ever could be. By 1986, the advent of high-level programming languages – which Brooks suggested had increased programming productivity as much as five-fold – had already all-but eliminated accidental complexity from computer program code. Meanwhile time-sharing and integrated programming environments had greatly simplified the software development process itself.
 
 Brooks looked ahead to recent advances in high-level programming languages such as Ada, to improvements in programming environments and tools, to the hope for object-oriented programming and tools for program verification at compilation time, and indeed to the promises of artificial intelligence and other forms of "`automatic programming`". In all cases, Brooks argued that the productivity gains from each of these advances would be merely marginal.
 
 Was Brooks right?
 
-I believe that, in 2025, the core challenge of software remains the same as it ever has been: the management of complexity.
+In the intervening decades, there have certainly been many further important innovations attacking both the essential and accidental complexity of our software systems. For essential complexity I would argue that techniques in domain modeling and domain-driven design patterns have been very helpful. As for sources of accidental complexity, the success of open source, free and low-cost tools and languages, version control systems, virtualization/containerization and cloud computing, continuous integration and automated deployment pipelines, and – most recently – AI-augmented programming have all incrementally transformed how we build software.
 
-There have been many important innovations, attacking both the essential and accidental complexity of our software systems, in the intervening decades. For essential complexity I would argue that techniques in domain modeling and domain-driven design patterns have been very helpful. As for sources of accidental complexity, the success of open source, free and low-cost tools and languages, version control systems, virtualization/containerization and cloud computing, continuous integration and automated deployment pipelines, and – most recently – AI-augmented programming have all incrementally transformed how we build software.
+But there is an ironic consequence of these innovations: the productivity gains from them have been offset by corresponding increases in demand for what software is required to do.
 
-But there is an ironic consequence of these innovations: the productivity gains from them have been offset by corresponding increases in demand for what software should be capable of.
+Throughout the history of computing, advances in technology have helped to make us more productive. We can build software faster, to a higher quality, and at far larger scale, than ever before. But the same advances have also created opportunities for ever more ambitious software.
 
-Throughout the history of computing, advances in technology have helped to make us more productive. But the same advances have also created opportunities for ever more ambitious software. Today, the resources and tools at our disposal are as powerful as they have ever been. But the productivity gains afforded by these tools are offset by corresponding increases in the essential complexity of the software that we are commissioned to make on behalf of our customers.
+Today, the resources and tools at our disposal are as powerful as they have ever been. But the productivity gains afforded by these tools are offset by corresponding increases in the essential complexity of the software that we are commissioned to make on behalf of our customers.
 
 Brooks eludes to this in the original 1975 epilogue to _The Mythical Man-Month_:
 
@@ -536,9 +536,13 @@ What I learnt from _The Mythical Man-Month_ is that modern best practices in sof
 
 Of course, some of the challenges today are different from what they were in the time of OS/360. Notably, we are no longer physically constrained by computing resources. Hardware is abundant, easily sourced, and cheap. Yet physical constraints remain for many categories of software – real-time systems, embedded systems, safety-critical systems, and many systems operating in domains that have strict performance requirements.
 
-But the management of complexity remains the core challenge of software development.
+And yet, for all our advanced in technology and working practices, in 2025 the core challenge of software development remains the same as it ever has been: the management of complexity.
 
-// TODO: Ultimately, it is about managing people, and this will never change.
+And perhaps it always will be.
+
+In a closing retrospective chapter printed in the 20th anniversary edition of _The Mythical Man-Month_, Brooks reflects on reasons for the book's success and popularity. Among numerous explanations that Brooks offers, one I find to have the greatest truth. It is that "`The Mythical Man-Month`" is only incidentally about software but primarily about how people in teams make things.`"
+
+_The Mythical Man-Month_ will never become obsolete. Superficially, the book is about software development, which is ever-changing. But more fundamentally the book is about how people collaborate to solve complex problems. And that is a challenge for humanity that will endure across time, cultures, and technologies.
 
 .Frederick Phillips Brooks Jr., 1931-2022
 [#img-fred-brooks,link=https://commons.wikimedia.org/w/index.php?curid=20028915]
