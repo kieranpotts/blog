@@ -540,7 +540,7 @@ Yet, for all our advances in technology and working practices, in 2025 the core 
 
 And perhaps this will always be the challenge.
 
-In a closing retrospective chapter printed in the 20th anniversary edition of _The Mythical Man-Month_, Brooks reflects on reasons for the book's success and popularity. Among numerous explanations that Brooks offers, one I find to have the greatest truth. It is that "`_The Mythical Man-Month_ is only incidentally about software but primarily about how people in teams make things.`"
+In a closing retrospective chapter printed in the 20th anniversary edition of _The Mythical Man-Month_, Brooks reflects on reasons for the book's success and popularity. Among numerous explanations that Brooks offers, one I find to have the greatest truth. It is that "`The Mythical Man-Month is only incidentally about software but primarily about how people in teams make things.`"
 
 _The Mythical Man-Month_ will never become obsolete. Superficially, the book is about software development, which is ever-changing. But more fundamentally the book is about how people collaborate to solve complex problems. And that is a challenge for humanity that will endure across time, cultures, and technologies.
 
