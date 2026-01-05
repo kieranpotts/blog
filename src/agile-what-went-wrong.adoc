@@ -95,4 +95,4 @@ Thoughts:
 
 * Most importantly, both need to acknowledge that real agility isn't about following a methodology; it's about creating an environment where adaptation and learning are valued over rigid adherence to plans.
 
-* When what flows down the organisational hierarchy is orders rather than intent, this divide will never truly heal. Until leaders share the 'why' and trust teams with the 'how', we're just playing agile theatre.
+* When what flows down the organizational hierarchy is orders rather than intent, this divide will never truly heal. Until leaders share the 'why' and trust teams with the 'how', we're just playing agile theatre.
