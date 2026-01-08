@@ -422,6 +422,8 @@ TODO: AI is great for yak shaving! ... In computer science, to shave a yak means
 
 == Emerging AI anti-patterns
 
+TODO: A bigger problem might be AI killing whole open source ecosystems - https://github.com/tailwindlabs/tailwindcss.com/pull/2388
+
 ''''
 
 ## Related links
