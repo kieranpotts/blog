@@ -1,0 +1,92 @@
+= PHP is 30
+Kieran Potts, 8 June 2025
+:description: PHP version 1.0 was announced on 8 June 1995. It quickly became a popular server-side scripting language for websites. Here's why.
+:docinfo: shared
+:nofooter:
+
+Personal Home Page Tools (PHP Tools) version 1.0 was released publicly 30 years ago today. Very quickly PHP became a popular choice for building websites. It was easy to learn, easy to use, and it was free. It inspired a generation of young hackers – myself included – to pursue careers in IT.
+
+https://www.php.net/[PHP] version 1.0 was announced on 8 June 1995, in https://groups.google.com/g/comp.infosystems.www.authoring.cgi/c/PyJ25gZ6z7A/m/M9FkTUVDfcwJ?pli=1[a post by Rasmus Lerdorf] to the `comp.infosystems.www.authoring.cgi` Usenet group.
+
+In his talk reminiscing about https://www.youtube.com/watch?v=nmD1Q4FsXCc[25 years of PHP], Rasmus Lerdorf explained how PHP came about. It started with the launch of the https://web.archive.org/web/19980223154120/ncsa.uiuc.edu/SDG/Software/Mosaic/[Mosaic web browser] in 1993. When Lerdorf saw this, he realized that "the world was going to change" and the web would become a major software platform. So he diverted his programming efforts to writing applications for the web.
+
+The scripting language that would become PHP started as a set of Common Gateway Interface (CGI) scripts written in C. Lerdorf found that, for each new web application he developed, he would need to replicate lots of the same boilerplate code to do things like send cookies, parse form data, and communicate with the Apache web server. So he started abstracting that common code into a set of C functions that he could reuse across all his web applications. These libraries he called his "personal home page (PHP) tools".
+
+Lerdorf wanted to make it as easy as possible to dynamically generate HTML content from C code. His initial approach was to nest HTML in string values in C. But he found this to be a poor user experience. What he wanted was to keep his HTML code looking like HTML.
+
+To meet that design constraint, Lerdorf's solution was to create "a C API for the web". His idea was to write an extension for the Apache web server that allowed him to execute C functions from HTML documents.
+
+An early iteration of the solution allowed you to write HTML with dynamically-generated content embedded, something like this:
+
+.Example PHP code circa 1994-1995
+[source,phtml]
+----
+<html><head><title>Form Example</title></head>
+<body><h1>Form Example</h1>
+<form action="form.phtml" method="POST">
+Name: <input type="text" name="name" >
+Age: <input type="text" name="age" >
+<br><input type="submit">
+</form>
+<?if($name):?>
+Hi <?echo $name?>, you are <?echo $age?> years old
+<?endif?>
+</body></html>
+----
+
+This design made for a better separation of business logic from user interface concerns. The HTML code, which declares instructions for the browser to render the user interface, is interspersed with C APIs that handle the dynamic content generation and other business logic on the server-side.
+
+PHP started, not as a programming language, but as a templating system for web pages served by the Apache HTTP server.
+
+Lerdorf imagined that, like him, people would want to write their business logic in a strictly typed, compiled language like C or C++, and then surface that logic within their HTML. Lerdorf's tools allowed web developers to write C functions like this…
+
+[source,c]
+----
+void Cos(void) {
+    Stack *s;
+    char temp(64);
+
+    s = Pop();
+    if(!s) {
+        Error("Stack error in cos");
+        return;
+    }
+    sprintf(temp, "%f", cos(s->douval));
+    Push(temp,DNUMBER);
+}
+----
+
+… and then call those functions when the server reads the HTML, like this…
+
+[source,html]
+----
+<html>
+  <head><title>Cos</title></head>
+  <body><h1>Cos example</h1>
+    <?echo Cos($input)?>
+  </body>
+</html>
+----
+
+But it turned out nobody wanted to write their web applications in C code. What people wanted was to use Lerdorf's templating system to do _everything_.
+
+Lerdorf hadn't imagined that people would actually try to write their business logic _in_ PHP, alongside their HTML code. But that's exactly what the early adopters of PHP did.
+
+This was also a matter of economics. At the time, the web was growing very fast and there simply were not enough C developers in the world to meet demand. Inadvertently, Lerdorf had offered a solution: an easy way to write simple server-side logic in a lightweight scripting language that could be embedded directly in HTML.
+
+As well as being convenient, PHP was efficient, too. It was tightly integrated with the Apache web server (via the mod_php module), and tightly coupled to the HTTP request-response cycle. PHP also made it incredibly easy to "plug in" snippets of custom logic to _existing_ web pages, providing an easy upgrade path for existing websites to become dynamic and interactive.
+
+PHP has https://eev.ee/blog/2012/04/09/php-a-fractal-of-bad-design/[received a lot of criticism] over the years, but in fairness it was never designed to be a general-purpose programming language. Hell, it wasn't even intended to be a _scripting_ language. It was just a template library for web pages.
+
+And in that regard, early PHP was amazing. For many people – myself included – PHP was their first experience of computer programming. I have fond memories of my early experiments making websites, and I can clearly remember the elation of successfully implementing some PHP scripts – I _think_ for a visitor counter – some time around 1996/1997. It was easy and valuable. I was hooked.
+
+It is probably fair to claim that PHP was the first major technology that made web design and development accessible to the general public. WordPress, which arrived in 2003, had a similar effect. These tools made it easy for anyone to build websites, and in turn they inspired many people to pursue careers in computer programming.
+
+The impact of PHP has been immense. It has powered much of the web for 30 years. And the ecosystem is still going strong today, with mature tools like https://laravel.com/[Laravel] that compete with the very best of modern application frameworks.
+
+Happy birthday, PHP.
+
+.Related links
+****
+* https://www.reddit.com/r/PHP/comments/1l6ewx0/php_is_30/[Reddit thread]
+****
