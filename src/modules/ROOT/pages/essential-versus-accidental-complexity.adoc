@@ -24,7 +24,7 @@ Next, consider a complex, large-scale, distributed system. It has much greater r
 
 I like to think of the relative balance between essential and accidental complexity as being like a set of scales, or a seesaw. On one side is essential complexity, and on the other side is accidental complexity. In most systems, you will find that one of the two types of complexity will weigh more than the other.
 
-image::./_/media/diagrams/accidental-essential-complexity-seesaw.svg[]
+image::diagrams/accidental-essential-complexity-seesaw.svg[]
 
 In an essentially complex system, the focus should be on managing the accidental complexity, because the developers will have more control over this. Conversely, in essentially simple systems – in which the domain suggests that scope will not substantially increase over time – you can afford to let some accidental complexity creep in. If the requirements are relatively stable, the system will not change much, and therefore refactoring work yields little value.
 
@@ -32,4 +32,4 @@ Another visual metaphor is to think of a system's complete bundle of complexity 
 
 The top diagram is what you want to aim for. The bottom diagram is what you can sometimes get away with.
 
-image::./_/media/diagrams/relative-essential-and-accidental-complexity.svg[]
+image::diagrams/relative-essential-and-accidental-complexity.svg[]

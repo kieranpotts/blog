@@ -27,7 +27,7 @@ The central premise of the book is that this elusive architectural characteristi
 
 The quality-without-a-name comes about, not from adherence to any particular architectural style or trend, but from a deep understanding of human needs and the rhythms of life. Buildings and urban spaces feel alive when they are thoughtfully shaped to support universal patterns of human experience, rather than being designed for the sake of aesthetic fashion or architectural exhibition.
 
-image::./_/media/images/the-timeless-way-of-building.jpg[]
+image::photos/the-timeless-way-of-building.jpg[]
 
 This is the "`timeless way of building`" referenced in the book's title. It is a natural, organic process that has shaped architecture across cultures for centuries. It is a methodology that draws on universal patterns that have emerged independently around the world and passed down through generations of builders and architects.
 
@@ -38,7 +38,7 @@ Alexander contrasts the timeless way of building with modern global architectura
 I was reading this wonderful book while holidaying in Dubai, a city characterized by its showpiece mega-projects, the effect of which is a rather soulless, rootless urban landscape. Yet even here I found a few quiet corners, hidden among the glass and steel towers, some https://www.hilton.com/en/hotels/dxbasqq-al-seef-heritage-hotel-dubai/[heritage buildings] and sanctuaries like https://alserkal.online/[Alserkal Avenue], that exist on a human-scale and have something of the quality-without-a-name within them.
 
 .Archaeological site in Jumeirah, Downtown Dubai in the distance
-image::./_/media/images/jumeirah-archaeological-site.jpg[]
+image::photos/jumeirah-archaeological-site.jpg[]
 
 Alexander's work has been influential in fields beyond architecture.  His design philosophy found popularity in the field of software design in the 1980s and 1990s, during the rise of object-oriented programming and its associated design patterns.
 

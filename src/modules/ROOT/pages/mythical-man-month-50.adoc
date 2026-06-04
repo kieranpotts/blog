@@ -16,7 +16,7 @@ _The Mythical Man-Month_ is more of an anthology of standalone essays rather tha
 
 Brooks draws the colorful analogy that large-scale software development is like "`the mortal struggles of great beasts in the tar pits`". This is represented by the book's cover image, a sketch of Charles Knight's 1925 painting that depicts the great mammoths of the Pleistocene struggling to free themselves from https://en.wikipedia.org/wiki/La_Brea_Tar_Pits[the tar pits of Southern California].
 
-image::./_/media/images/the-mythical-man-month.jpg[]
+image::photos/the-mythical-man-month.jpg[]
 
 "`Large and small, massive and wiry, team after team has become entangled in the tar,`" Brooks writes. His thesis is that it is never one problem, but rather a combination of intractable problems, some unexpected, that make it difficult to move complex projects forward. "`No one thing seems to cause the difficulty – any particular paw can be pulled away. But the accumulation of simultaneous and interacting factors brings slower and slower motion.`"
 
@@ -100,7 +100,7 @@ The consequence of this for project management is that, once a schedule is prove
 The graph below, adapted from the book, shows that software projects have an optimal division of labour, where delivery speed is maximized by optimal allocation of resources. Up to a point, you can reduce your delivery schedule by adding more people to your project. But because adding more people will decrease the productivity of individual team members, there comes a tipping point where this decrease in productivity more than offsets the overall addition of resources – so delivery speed slows despite the extra manpower.
 
 .Correlation between time and the number of workers
-image::./_/media/diagrams/men-versus-months.svg[]
+image::diagrams/men-versus-months.svg[]
 
 Brooks observes that the more complex the interrelationships between the component parts of the system under construction, the greater this effect. Hence the management of complexity is identified as the core challenge of software development. The simpler the design, the more opportunities you will have to build out the solution faster.
 
@@ -364,7 +364,7 @@ Maintenance may account for as much as 40% of the overall cost of a shrink-wrapp
 
 Citing research, Brooks shows there's a drop-and-climb curve in bugs discovered over a product's life. The bug rate drops off after the initial release, but then starts to gradually climb again. Brooks hypothesizes that this may be due to users fully exercising the new capabilities of the software. As users become more familiar with the software, they become more confident to try different things, and so edge case bugs start to be shaken out.
 
-image::./_/media/diagrams/bug-discovery-over-time.svg[]
+image::diagrams/bug-discovery-over-time.svg[]
 
 Furthermore, fixing a defect has a substantial chance – 20% to 50% – of introducing another defect. To counteract this, Brooks says that after each fix the entire bank of test cases must be re-run against the system. Today we call this regression testing and we automate it.
 
@@ -546,4 +546,4 @@ _The Mythical Man-Month_ will never become obsolete. Superficially, the book is 
 
 .Frederick Phillips Brooks Jr., 1931-2022
 [#img-fred-brooks,link=https://commons.wikimedia.org/w/index.php?curid=20028915]
-image::./_/media/images/fred-brooks.jpg["Photo by David Monniaux, own work, CC BY-SA 3.0"]
+image::photos/fred-brooks.jpg["Photo by David Monniaux, own work, CC BY-SA 3.0"]

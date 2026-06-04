@@ -1,0 +1,46 @@
+= Thoughts on making software
+Kieran Potts
+:description: Commentary on methods and tools for developing and maintaining \
+  software systems.
+:docinfo: shared
+:nofooter:
+
+I'm a UK-based software developer and former technology journalist. I occasionally write about methods and tools for developing and maintaining software systems. You can subscribe to updates via
+https://mailchi.mp/2c60bdf9f429/91h5vui7v9[email], link:/blog/feeds/rss.xml[RSS],
+link:/blog/feeds/atom.xml[Atom], or link:/blog/feeds/feed.json[JSON Feed], or follow me on https://bsky.app/profile/kieranpotts.com[Bluesky] or https://www.linkedin.com/in/kieranpotts/[LinkedIn].
+
+* xref:mythical-man-month-50.adoc[The Mythical Man-Month at 50] +
+  [.small]#28 December 2025#
+
+* xref:the-quality-without-a-name.adoc[The (software) quality without a name] +
+  [.small]#5 October 2025#
+
+* xref:php-is-30.adoc[PHP is 30] +
+  [.small]#8 June 2025#
+
+* xref:essential-versus-accidental-complexity.adoc[Mental models: essential versus accidental complexity] +
+  [.small]#7 December 2024#
+
+* xref:30-years-of-cybercafes.adoc[30 years of cybercafés] +
+  [.small]#1 September 2024#
+
+* xref:rfcs.adoc[Requests for comments] +
+  [.small]#10 April 2024#
+
+* xref:gmail-is-20.adoc[Gmail is 20] +
+  [.small]#1 April 2024#
+
+* xref:software-attributes.adoc[Mental models: software attributes] +
+  [.small]#4 January 2024#
+
+* xref:rethinking-rest.adoc[Rethinking REST] +
+  [.small]#24 May 2021#
+
+* xref:rebranding-javascript.adoc[Should we rebrand JavaScript?] +
+  [.small]#14 October 2019#
+
+* xref:centos-vs-ubuntu.adoc[CentOS vs Ubuntu] +
+  [.small]#9 September 2017 (republished)#
+
+* xref:hello-world.adoc[Hello, world] +
+  [.small]#5 August 2019#

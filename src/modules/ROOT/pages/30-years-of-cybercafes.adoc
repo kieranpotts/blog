@@ -16,7 +16,7 @@ Kieran Potts, 1 September 2024
 Cyberia, thought to be the world's first commercially successful internet café, opened in London on 1 September 1994 – 30 years ago today.
 
 .Photo of Cyberia, London, 1994 (source: Wikimedia Commons)
-image::./_/media/images/cyberia.png["",600]
+image::photos/cyberia.png["",600]
 
 Cyberia was the idea of Eva Pascoe, a Polish immigrant who had moved to London to study, and later worked as a cognitive psychologist and computer programmer at City University. She told the BBC's {link-history-hour}[History Hour] programme: "We always had in mind this concept of a café where people could learn [about] computers from each other. That was a time when people thought computer people were geeks and [should] not be allowed out from the university basements."
 
@@ -37,7 +37,7 @@ Through word-of-mouth, the café became _the_ place to go in London to experienc
 Located around the corner from a music recording studio, Cyberia was visited by the likes of Mick Jagger, David Bowie, and Kylie Minogue – propelling the café's popularity further. Within a few years, Cyberia had been franchised in Manchester, Edinburgh, Dublin, Rotterdam, Bangkok, Manila, Tokyo, and Paris. By 1996 there were about 200 cybercafés overall worldwide, copying the Cyberia model. Within 10 years there were estimated to be 20,000 cybercafés globally.
 
 .The earliest capture of cyberiacafe.net on the Internet Archive, 14 April 1997
-image::./_/media/images/cyberia-website-1997.png[]
+image::photos/cyberia-website-1997.png[]
 
 The idea was of its time. Cyberia was not _quite_ the first internet café in the world. At least a couple of others just pipped it to that post. The term cybercafé had been coined by Ivan Pope, a technologist, a few months prior for an event at London's Institute of Contemporary Arts. At about the same time, in Toronto, a place called "https://scribble.com/jon/bincaf/[The Binary Cafe and Hexadecimal Emporium]", which sold cyberpunk-related books and magazines alongside food and drink, had started renting out a couple of x86 computers, connected to the internet through a shared connection. I find it hard to imagine that there were not others doing similar things in other cities in the world, but their digital footprints have been lost to history.
 
