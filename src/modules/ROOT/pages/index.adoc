@@ -6,8 +6,8 @@ Kieran Potts
 :nofooter:
 
 I'm a UK-based software developer and former technology journalist. I occasionally write about methods and tools for developing and maintaining software systems. You can subscribe to updates via
-https://mailchi.mp/2c60bdf9f429/91h5vui7v9[email], link:/blog/feeds/rss.xml[RSS],
-link:/blog/feeds/atom.xml[Atom], or link:/blog/feeds/feed.json[JSON Feed], or follow me on https://bsky.app/profile/kieranpotts.com[Bluesky] or https://www.linkedin.com/in/kieranpotts/[LinkedIn].
+https://mailchi.mp/2c60bdf9f429/91h5vui7v9[email], link:/feeds/rss.xml[RSS],
+link:/feeds/atom.xml[Atom], or link:/feeds/feed.json[JSON Feed], or follow me on https://bsky.app/profile/kieranpotts.com[Bluesky] or https://www.linkedin.com/in/kieranpotts/[LinkedIn].
 
 * xref:mythical-man-month-50.adoc[The Mythical Man-Month at 50] +
   [.small]#28 December 2025#
