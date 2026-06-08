@@ -1,0 +1,89 @@
+= Engineering or craft?
+Kieran Potts
+:description: Is software development an engineering discipline or a craft? The honest answer is both — craft for the internal quality of the code, engineering for the rigour of taking requirements from specification to production.
+:docinfo: shared
+:nofooter:
+
+:link-nato: https://homepages.cs.ncl.ac.uk/brian.randell/NATO/index.html
+:link-c2-craft: https://wiki.c2.com/?SoftwareDevelopmentAsCraft
+:link-farley-video: https://www.youtube.com/watch?v=12tDtvC55QM
+
+In the early days of computing, software was secondary to hardware, which was considered the far harder problem. It was. Software systems then were small and simple. But through the 1960s, software grew rapidly in importance and complexity.
+
+In the late 1960s, Margaret Hamilton led a team at MIT to develop the flight-control systems for the Apollo missions — a genuinely difficult software problem, especially given the hardware constraints of the era. NASA was focused on the hardware. To get the organization to take software seriously, Hamilton coined the term "`software engineering`". In a sense, she was the first software engineer.
+
+Her team was building what they called man-rated systems: the lives of the astronauts depended on the software working perfectly to specification. Hamilton and her colleagues consciously took an engineering approach to the problem — they became, among other things, obsessed with how things could go wrong.
+
+Dave Farley describes software engineering as "`applying a practical form of scientific rationalism to solving problems in software`". In the late 1960s this was still a provocative idea. In 1968 and 1969, NATO held {link-nato}[the first conferences dedicated to software engineering], and it was those events that popularized the term.
+
+The phrase was chosen for the conference titles deliberately, to provoke. It was not in common usage at the time, and was coined to imply "`the need for software manufacture to be based on the types of theoretical foundations and practical disciplines that are traditional in the established branches of engineering`". The motivation was that the industry was having enormous trouble producing large, complex systems — the "`software crisis`", as it was then called. That crisis arose because both hardware and software had grown rapidly more complex, while the _human_ processes for managing that complexity had not kept pace.
+
+The move from mere programming to engineering was a step change in effectiveness and capability, enabling systems that simply had not been possible before.
+
+== The lost decades
+
+Those early steps were not enough on their own to resolve the crisis, and the problems were compounded by some bad ideas. Hamilton put it like this:
+
+[quote, Margaret Hamilton]
+____
+We evolved our software engineering rules with each new relevant discovery, while top management rules from NASA went from "`complete freedom`" to "`bureaucratic overkill`".
+____
+
+In many circles the idea of software engineering became discredited — a reaction to the heavyweight, bureaucratic approaches that dominated the 1980s and 1990s. (The agile movement of the early 2000s, seeded in the 1990s, can be read as a counter-reaction. Shortly after the Agile Manifesto came the software craft manifesto.) Software engineering still carries a bad reputation in some circles today, but that is down to its mis-association with bloated, bureaucratic processes that got in the way of good development rather than helping it. I think of these as the lost decades of software development.
+
+== Both, not either
+
+My own view is that the day-to-day reality of writing a program is more like a _craft_. But building large, complex systems — assembled by dozens, maybe hundreds, of coders at once — requires a wrap-around process framework that brings engineering rigour to the craft of programming. You need an element of both.
+
+Here is the mental model. The underlying _quality attributes_ of a system — its conceptual coherence and integrity, its maintainability, debuggability, extensibility, testability — are the outcome of a craft process. What level of quality is appropriate for a given scale and complexity is quite subjective, and ultimately must be the collective decision of the engineers on the project. But on top of that baseline we implement functional and non-functional requirements, and these are best managed with a more regimented engineering approach.
+
+So, crudely: if development divides into _incremental build_ (of external functional and non-functional requirements) and _iterative design_ (of the internal quality attributes of the system), then we apply engineering to the former and craft to the latter.
+
+A more rigorous engineering approach also serves the business — the customer who owns the software. Following an engineering life cycle is a way of applying order and predictability to a process that is, at heart, chaotic and unpredictable: computer programming.
+
+We need both kinds of people, too. The effective teams I have worked on in enterprise application development have been a mix of craftspeople — who enjoy refining the software more than building features — and engineers — who enjoy the rigour of taking a requirement from specification through design and implementation to testing and integration. The skill sets are different. I have known very good developers who consistently meet the spec but whose code is not especially clean, and others who consistently produce clean, well-structured code but struggle to decompose complex problems. For what it is worth, I think I am somewhere in the middle: reasonably good at both, exceptional at neither. I have worked with many people like me.
+
+== What is well-crafted software?
+
+What do we mean by "`well-crafted software`", as the craft manifesto puts it? I read it as source code with good design, adhering to principles such as modularity, separation of concerns, cohesion, abstraction (information hiding), and loose coupling. But even these are subjective. The real craft, in my view, is not blindly implementing every best practice, but finding a good, practical balance between them and other constraints such as time and budget — balancing essential against accidental complexity, relative to the scale and complexity of the system.
+
+I think of the engineering _process_ as separate from the _craft_ of writing programs. Engineering is a set of guide rails that give us direction — and these guide rails are not rigid; they evolve and improve over time. Dave Farley offers this analogy:
+
+[quote, Dave Farley]
+____
+The first aeroplanes were death traps. Many of the pioneers of aviation lost their lives in accidents. In 2017, commercial aviation flew the equivalent of two-thirds of the population of the planet, and no one was killed in an aircraft accident that year. That is the direct result of engineering progress over a hundred years. Bit by bit, they tried out new ideas; some worked, some didn't. Bit by bit, they improved aeroplanes until, today, you are safer in an aeroplane than sitting at home watching this video.
+____
+
+Engineering is the most effective way we know to build better systems over time. In other disciplines, engineering is largely a matter of using the things already known to work.
+
+== Software is all design
+
+One common criticism of the "`engineering`" label is that software systems are, by definition, unique. We do not mass-produce them; each program is a one-off. This is unlike the manufacture of physical things, which tend to be mass-produced, where the engineering challenge is to repeat the build reliably, over and over. Even civil engineering works that way, to a degree.
+
+But software is _all about design_. Coding is design. Architecture is design. UI is design. Even requirements specification is design. Production-line thinking — which we associate with heavy engineering processes — is largely irrelevant. A better analogy is high-level, one-off _design engineering_.
+
+How do design engineers proceed when they don't yet have the answers? They iterate. They experiment and simulate, and make progress in small steps. Think of a car designer, an iPhone designer, a spaceship designer: what they do is much closer to what software developers do. Designing is all about learning — feedback loops, asking questions and answering them. What do our users need? How secure must the system be? How resilient? How scalable? A mix of technical, quantifiable questions and more subjective, qualitative ones.
+
+Engineered products are made within constraints. That is what distinguishes them from purely crafted products, where creativity has no bounds. So, predominantly, software systems _should_ be engineered. The approach is more like designing an airbag system for a car: the design is done with maths and modelling, then thoroughly tested, so that it works the same way, reliably, every time it is deployed.
+
+== The single metric
+
+So what _is_ well-crafted software? There is a single metric we can use: *is it easy to change?*
+
+*Well-crafted software is easy to change.*
+
+[quote, Dave Farley]
+____
+If engineering in general, and software engineering specifically, is an approach to iteratively solving problems, then maintaining our ability to change our system is essential to that process. So, once our software works, the defining characteristic of quality in software is our ability to easily and safely change it.
+____
+
+Performance, security, and much else matter. But these external quality attributes are built on the foundation of good internal ones. If we can change our software easily and safely, then we can enhance all of those things as we learn more about what is required.
+
+And how do we keep an evolving system easy to change? By *managing complexity*. That is the essence of software development — and both the craft and the engineering serve the same end: keeping a system's growing complexity under control.
+
+.Related links
+****
+* {link-c2-craft}[Software development as craft] on WikiWikiWeb (archived)
+* {link-nato}[The NATO Software Engineering Conferences] — Robert M. McClure has republished the reports from the 1968 and 1969 NATO conferences that first popularized the term "`software engineering`". They are an invaluable snapshot of the state of the art in the late 1960s.
+* {link-farley-video}[Software craftsmanship vs software engineering] — Dave Farley's take
+****
