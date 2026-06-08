@@ -1,0 +1,233 @@
+= The perpetual software crisis
+Kieran Potts
+:description: The "software crisis" was named at the first NATO conference in 1968. More than half a century later, it has never gone away. Why software projects still fail — and why making software remains so hard.
+:docinfo: shared
+:nofooter:
+
+:link-economist-recalcitrant: https://www.economist.com/business/2020/07/18/why-companies-struggle-with-recalcitrant-it
+:link-strassmann: https://www.strassmann.com/
+:link-mit-why-bad: https://www.technologyreview.com/2002/07/01/40875/why-software-is-so-bad/
+:link-digital-woes: https://www.goodreads.com/book/show/3186400-digital-woes
+:link-brennan: https://medium.com/@kateruthbrennan/go-slow-to-go-fast-why-process-matters-5dd1beaf3190
+:link-sorenson: https://medium.com/hubspot-product/why-our-engineering-leaders-focus-on-product-over-process-26224aa4b36b
+:link-schwartz: https://psyche.co/ideas/why-efficiency-is-dangerous-and-slowing-down-makes-life-better
+:link-no-silver-bullet: http://web.archive.org/web/20221209212653/http://www.cs.unc.edu/techreports/86-020.pdf
+:link-out-of-crisis: https://softwarecrisis.baldurbjarnason.com/
+:link-tar-pit: https://moss.cs.iit.edu/cs100/papers/out-of-the-tar-pit.pdf
+:link-standups: https://codethrasher.com/post/2019-10-06-the-pointlessness-of-daily-standups/
+:link-hate-agile: https://www.objectstyle.com/agile/why-developers-hate-agile
+:link-pop-culture: https://www.baldurbjarnason.com/2022/programming-is-a-pop-culture/
+:link-microservices: https://renegadeotter.com/2023/09/10/death-by-a-thousand-microservices.html
+
+Software development is perpetually teetering on a knife-edge between success and failure. Small things are enough to tip the balance.
+
+Software projects still fail. Public-sector IT failures in the liberal democracies are well documented; major private-sector ones — TSB, Boeing — have been studied closely too. But there are many, many more commercial projects that fail and are never publicized, and more still that "`succeed`" but are rapidly replaced, or never really deliver good value even though they "`work`".
+
+[quote, The Standish Group — Chaos Report (1994)]
+____
+Software development, for all the contributions it has made to society in terms of information availability and improved efficiency, is a high-risk venture. Reportedly, 70% of software projects either fail to achieve their full purpose or fail entirely. The reasons for this high failure rate are varied and numerous; however, they are rarely associated with the technical challenge of its development, but rather failures of the process in which they were created.
+____
+
+== The software crisis
+
+The idea of the "`software crisis`" originated in the earliest days of software development. It was really about the struggle of scaling _up_ — of building large, complex systems. The solution proposed at the time was to take a more rigorous engineering approach, and that is how the term "`software engineering`" came about.
+
+We _do_ know how to develop large, complex systems; we have done so successfully for many decades. And yet there are still many, many failures. The crisis has never fully gone away.
+
+A little history. In June 1944, the ENIAC — widely considered the world's first general-purpose computer — was first put into operation. It consisted of some 17,500 vacuum tubes, 70,000 resistors, 10,000 capacitors, 1,500 relays, 6,000 manual switches; it weighed 30 tons, spanned 1,800 square feet, and required dozens of technicians to operate. Yet for all that footprint it could perform only a limited range of simple calculations. In those early days, although it took weeks to program such machines, their extremely limited capabilities meant little thought was given to _how_ to approach the development of programs. Software engineering as a discipline did not yet exist.
+
+Over the two decades that followed, computers improved enormously, and the desire to tackle ever more complex problems grew with them. But while the field focused on improving the machines, very little effort went into how to develop the programs that would exploit them. A subtle but disturbing trend emerged: increasingly, software projects ran over schedule and over budget, producing programs of decreasing quality that were ever harder to maintain.
+
+Edsger Dijkstra reflected on this in his famous lecture, _The Humble Programmer_:
+
+[quote, Edsger W. Dijkstra — The Humble Programmer (1972)]
+____
+[The major problem is] that the machines have become several orders of magnitude more powerful! To put it quite bluntly: as long as there were no machines, programming was no problem at all; when we had a few weak computers, programming became a mild problem, and now we have gigantic computers, programming has become an equally gigantic problem.
+____
+
+In 1967, the NATO Science Committee established a study group, led by Friedrich Ludwig Bauer, to assess the field of computer science. The group chose to focus on the problems of software development and recommended a conference on the subject. In 1968, the first NATO Software Engineering Conference was held in Garmisch, Germany, where two terms were coined: _software engineering_ and _the software crisis_. "`Software engineering`" was deliberately provocative, reinforcing the conclusion that software development should rest on the theoretical foundations and practical disciplines of the established branches of engineering. "`The software crisis`" described the state of affairs in which writing complex programs was proving harder than building the machines to run them — a trend the group attributed to the absence of a field dedicated to the principles and methodology of managing software development.
+
+Engineering, in every discipline, is about providing solutions to problems. If it is cold, a mechanical engineer builds a heater; if a river needs crossing, a structural engineer builds a bridge; if a business process can be automated, a software engineer is called. But software engineering differs from the traditional disciplines in one crucial respect: the hard part is not _implementing_ the solution, but _understanding the problem_ it is meant to solve.
+
+In _Wicked Problems, Righteous Solutions_, Peter DeGrace and Leslie Stahl described gathering requirements and developing designs as a _wicked problem_ — a problem whose requirements are incomplete, contradictory, or changing, such that solutions are hard to determine because of complex interdependencies. Since requirements gathering is fundamental to every project, mitigating the risk of its being a wicked problem is of the utmost importance.
+
+== Software fiascos
+
+There are many examples of failed software projects — and these are only the ones we know about; many more failures are never publicly disclosed.
+
+* TSB's IT upgrade left many customers unable to make or receive payments for days.
+* Boeing's 737 MAX aircraft were grounded in 2019 after two fatal crashes caused partly by a software flaw.
+
+[quote]
+____
+No one makes bad software on purpose. No benevolent programmer has ever sat down, planning out weeks of work, with the intention of frustrating people enough to make them cry. Bad software, or bad anything, happens because making things is hard, making good things doubly so.
+____
+
+== Why do software projects fail?
+
+There has been much academic research into this question, and the answer is that there is no _one_ reason. Software projects usually fail for multiple reasons at once.
+
+What we are talking about here is the delivery of large, complex, bespoke systems. Such systems are _inherently_ complex — they have high essential complexity — and the research consistently finds complexity to be a common cause of failure.
+
+== No silver bullets
+
+It is a perfectly normal human trait to look for silver bullets. So we reach for off-the-shelf process frameworks like Scrum, or ready-made application frameworks, or we outsource our IT to reputable consultancies.
+
+But there are no silver bullets in software development. Rather, a great many ingredients have to come together, all at once, for a large-scale project to succeed. Software development requires technical skill combined with engineering rigour in managing change in the evolving software. But people skills matter just as much, because software development is a team sport: a single bad actor can throw out a team's dynamic and spin a project off course. In this respect it is more like a creative endeavour, requiring a team of people who "`fit`" — who share common values and culture.
+
+Software is really not like anything else. Even the "`iron triangle`" does not apply: because software is developed continuously throughout its lifetime, and never truly finished, you cannot cut quality to speed up delivery. The opposite is true.
+
+== The importance of process
+
+In the agile world, not enough attention is given to _process_.
+
+Successful software projects are not, ultimately, about technology — nor even about people. They are about process. You get the right people through good recruitment and retention processes. Architecture is itself the _outcome_ of process: iterate the design, start by solving the simplest problems, then extend functionality in layers.
+
+[quote]
+____
+Engineering leadership usually has three things in scope: process, people and product (eg technology and architecture). Most leaders can fully focus on only one or two of these; it's nearly impossible to do all three of them well.
+____
+
+Different companies focus on different areas. I have worked in plenty of places with no clearly defined workflows or change-management procedures; others do not invest in training and peg wages to the industry average, so they never compete for the best people. Some argue that companies which focus heavily on process do so only because they have rigid expectations and looming deadlines. I disagree. I think "`agile`" methodologies have much to answer for here: anything more than the lightest process is dismissed as bureaucracy, when in fact good processes help produce great products and attract and retain great staff.
+
+== A people-oriented discipline
+
+Burnout and high developer churn are serious problems. Modern developers are overloaded with responsibilities — a likely consequence of the emphasis on "`cross-functional`" teams. A single developer is now expected to:
+
+* analyze requirements (business analyst);
+* produce estimates (BA or project manager);
+* design solutions (architect);
+* implement them (developer);
+* test them (tester);
+* release and deploy them (DevOps).
+
+This is one of the problems with so-called cross-functional agile teams: a small number of developers must constantly context-switch between unrelated tasks, rather than a larger number of specialists collaborating. The move to DevOps has made it worse still, piling on work once done by systems administrators.
+
+=== Churn
+
+Our industry has notoriously high employee churn. One analysis puts the average turnover rate at 13.2% — higher than any other industry — meaning one or two of every ten employees can be expected to leave in a given year. Others put the average tenure of a software engineer at between 1.5 and 3 years. The trend is consistent across firms big and small, incumbents and startups, throughout the western economies.
+
+This matters because _domain knowledge_ is one of the most important things an engineer can have. As we grow, we tend to focus on improving our coding skills, but there is another side to development that is just as important: gaining domain knowledge and forming a long-term vision for the product and the company. The most valuable engineers are often not the most technically skilled, but the ones who understand the business — who hold the most context.
+
+Domain knowledge and long-term vision mean understanding the status quo, the history behind it, and the future you are moving towards: the projects your team owns, the technical debt it carries, the fragile parts of the system. It means knowing the ins and outs of the domain — payment routes and protocols if you build a payment service; basic accounting if you build accounting software. This has nothing to do with computer science, but the engineer's ultimate job is to translate that knowledge into code, modelling the domain in software. The better you understand the domain, the more correct the software will be.
+
+*Domain knowledge and long-term vision are the context that surrounds your day-to-day work, and they are at least as important as technical skill.* They give your work meaning — "`write this code to remove a limitation that brings us closer to handling large volumes of traffic`" beats "`write this code to finish a three-point story`". And they are your compass for decisions and prioritization, because engineering is about trade-offs; there is never a single objectively best solution, only a good-enough one that works best for the context. The longer you work with a codebase, the more domain knowledge you accumulate — which is why the longest-serving person on a team usually knows the most. So always pay attention to the surrounding context, not just the piece of code in front of you.
+
+=== Scrum and burnout
+
+Timeboxed methodologies such as Scrum can feel like a hamster wheel — and that is true day-to-day, too, if all you ever do is code. You need variety: moments of intense focus, moments of administrative work, and moments when nothing much is going on at all.
+
+[quote]
+____
+The development cycle alternates between exploration and consolidation, quickly and messily progressing on new ideas, then focusing and simplifying to keep the complexity manageable. Building good software involves alternating cycles of expanding and reducing complexity. As new features are developed, disorder naturally accumulates in the system. When this messiness starts to cause problems, progress is suspended to spend time cleaning up. […] Software should be treated not as a static product, but as a living manifestation of the development team's collective understanding. […] In truth, modern software is so complicated and changes so rapidly that no amount of planning will eliminate all shortcomings. Like writing a good paper, awkward early drafts are necessary to get a feel of what the final paper should be. To build good software, you need to first build bad software, then actively seek out problems to improve on your solution.
+____
+
+== Pop culture and amateurization
+
+I am surprised how amateurish the software industry is. There are no real professional bodies with teeth, in the way that other professions have. Today, most firms are, to some degree, software houses — which is, in a sense, the amateurization of the discipline.
+
+[quote]
+____
+The inherent difficulty of programming is made worse by the shortcomings of software engineering as a profession. […] Many coders are at least partly self-taught. This leads to bad habits, which software engineering courses fail to correct. There is too little communication between academia and industry, and no real agreement on what to teach or what habits to instil. The result is a field in which folklore and fads too often take the place of professional standards. […] To illustrate the field's shaky foundations, [Adam Barr] points to the practice, popular with technology firms like Google or Apple, of giving job candidates a programming problem to solve on a whiteboard. Few other fields behave this way, because they assume that, by dint of having graduated, applicants have already achieved a basic level of competence. Doctors do not expect anatomy quizzes before being hired.
+____
+
+Developing software requires a broad range of skills, far beyond programming. There are three distinct challenges: possessing the diverse skills needed to make something good; understanding what you are making the thing _for_; and orchestrating the skills, egos, and constraints over the time required to make it.
+
+=== Error rate
+
+[quote]
+____
+Programming requires a mix of hyper-literalness and creativity. Tiny errors, like a misplaced punctuation mark, can completely change how a system behaves. An industry rule of thumb is that, depending on how carefully they work, programmers make between 0.5 and 50 errors in every 1,000 lines of code they write. Because cars and aircraft contain tens of millions of lines, the chances of an error-free system are in effect zero. […] A survey commissioned by Stripe suggested the average developer spends 21 hours a week fixing old or bad code.
+____
+
+Even dedicated senior programmers have a typical rate of 2–4 bugs per 1,000 lines, so a million-line program is typically developed with 2,000–4,000 defects. Testing can catch only so many — perhaps 95% at a good company — so you are still left with many defects in a complex program.
+
+=== Rate of change
+
+[quote]
+____
+All these problems are compounded by software engineering's breathless rate of change. Even when a system works, it rapidly becomes obsolete. The woes of British banks are largely the result of trying to maintain such "`legacy`" systems, written by long-departed programmers (often outsourced) in half-forgotten computer languages to satisfy criteria no one can quite remember. Coders under pressure to add nifty new features often cut corners, shoring up problems for the (ever less distant) future.
+____
+
+Maintenance requirements outweigh the initial cost of development.
+
+[quote]
+____
+The result is that shiny new IT systems can rapidly devolve into rickety, half-understood contraptions held together with (virtual) gaffer tape. Eventually the costs become too great to ignore, and a company must upgrade. But that is the moment of maximum danger, for the new software must do everything the half-understood old one does, and more. It is, to repeat a common but apposite analogy, like rebuilding an aircraft in flight. One great advantage possessed by startups like Tesla or Monzo is that their programmers are handed a blank sheet of paper. […] But the startup's advantages will prove temporary. Bugs will creep in. Bodge jobs will go unfixed. Developers will leave, taking knowledge with them. Today's feisty usurpers will become tomorrow's clumsy incumbents.
+____
+
+=== Software rot
+
+Google reportedly has a policy of rebuilding its apps from scratch every three years. We try to build software too fast and don't spend enough on maintaining it — and so it rots.
+
+== Design versus construction
+
+We don't put enough time into the _design_ of software, and agile has much to answer for here.
+
+[quote]
+____
+Good architects, the people who make good buildings, are taught the difference between construction and design. Design is a process that explores different perspectives on the work — business, engineering, aesthetics, customers, the environment — and integrates them into a plan. Design starts with broad brush strokes: sketches and prototypes that take on the big questions. What's it for? Who's it for? How might it work? […] Construction is the act of building things with technology. […] A design-centric mindset starts by figuring out the experience and, once it has some shape, uses available technologies to make that experience real. A construction-centric mindset starts with the technologies and figures out the desired experience later.
+____
+
+In software, design and construction are often done in parallel, and often by the same person. The danger is that this emphasizes the personal immediacy of construction over the poise and wisdom needed to make good things. Computer science is largely taught with a construction mentality; even the theory tends to support construction, not higher-level design.
+
+Programmers tend to obsess over low-level details — coding standards, naming conventions — but the beauty of the source code matters only to the people who read it, not to the users of the compiled software. In fairness, programmers spend perhaps five times as long reading code as writing it, so readability genuinely matters; the point is that it is not the _only_ thing that matters.
+
+== Engineering versus craft
+
+[quote]
+____
+We need software as a commodity. But creating software is an art. Therein lies the problem. Programming is an intensely creative process — not only the software design, I mean the code itself. There's frequently no clear proper way to do something. Finding the right way involves creativity. Until we figure out how to make programming a non-creative task — make it like brick-laying or prefab construction — we'll be stuck with bad software.
+____
+
+== Focus on technology, over process
+
+When there is a problem, we tend to reach for the latest fad — or worse, invent a new technology, or an abstraction layer over the technologies we already use. Sometimes it would be better to look at our _process_ instead.
+
+[quote]
+____
+Fred Brooks' influential 1986 paper "`No Silver Bullet`" explains why software production is inherently difficult. His main argument is that problems have an "`essential complexity`" and an "`accidental complexity`". Accidental complexity is due to the imperfect nature of our tools, our representation methods, our programming languages. Essential complexity is part of the (business) problem, and we can't do much about that.
+____
+
+== High-integrity systems
+
+Some sectors demand very high standards: automotive and transport, aeronautics, defence and naval, space, energy, finance, life sciences. This is known as *high-integrity software*.
+
+[quote]
+____
+We are entering an age of digital dependency, where more and more aspects of our everyday lives will rely on the correct function of software-intensive electronic systems. The need for trustworthy software — software that does exactly what it is intended to do — is well established in certain sectors such as defence, aerospace and transportation. […] In the space of a few decades, software has become critical to almost every aspect of modern life. From bank vaults to city stoplights, from telephone networks to DVD players, from automobile airbags to air-traffic control systems, the world around us is regulated by code. Yet much software simply doesn't work reliably.
+____
+
+== The perpetual fight against complexity
+
+I have come to think of software development as a perpetual struggle against complexity — not only the complexity of our software systems, but of our processes and our tools as well. Cognitive load and complexity kill productivity.
+
+Complexity is everywhere: in our code, our processes, our tools, our organizations. And the tendency is always toward _more_ of it, not less. I don't just mean more features and more tools; I mean even the desire for higher levels of abstraction. Cloud computing versus bare-metal provisioning, for example, creates an _illusion_ of simplicity by hiding complexity, when in many ways higher abstractions make the system as a whole _harder_ to understand. The march of everything toward microservices is a case in point.
+
+There are two kinds of complexity, essential and accidental, and we must balance them: the more essential complexity a system has, the lower its accidental complexity needs to be.
+
+== Conclusion
+
+I believe we are living through something of a golden age of software. The experience of _using_ software, for consumers and businesses, is better than ever. But the experience of _making_ software still, often, really sucks.
+
+Ultimately, the reason the software crisis has endured for over half a century is simple: making software is hard. It is an incredibly nuanced activity. We are forever balancing things — too much versus too little documentation, automated versus manual tests, testing at different levels of abstraction, DRY versus system complexity. For this reason experience counts for a great deal. We keep trying to make software development a repeatable process, but it does not really work like that: apply a process that succeeded on one project to a different team, and it can fail.
+
+I tend to think of every software project as perpetually teetering on the brink of disaster. Just one or two ill-judged decisions can throw it off course and into a death spiral.
+
+.Related links
+****
+* {link-economist-recalcitrant}[Why companies struggle with recalcitrant IT], The Economist (July 2020)
+* {link-strassmann}[Paul A. Strassmann] — extensive writing on the economics of IT expenditure and productivity
+* {link-mit-why-bad}[Why software is so bad], MIT Technology Review (2002)
+* {link-digital-woes}[Digital Woes: Why We Should Not Depend on Software], Lauren Ruth Weiner (1993)
+* {link-brennan}[Go slow to go fast: why process matters], Kate Brennan (2020)
+* {link-sorenson}[Why our engineering leaders focus on product over process], Whitney Sorenson (2018)
+* {link-schwartz}[Why efficiency is dangerous and slowing down makes life better], Barry Schwartz (2020)
+* {link-no-silver-bullet}[No Silver Bullet] (PDF), Fred Brooks (1986) — argues that no single innovation will bring an order-of-magnitude improvement in productivity, reliability, or simplicity
+* {link-out-of-crisis}[Out of the Software Crisis], Baldur Bjarnason
+* {link-tar-pit}[Out of the Tar Pit] (PDF), Moseley and Marks (2006) — makes the case that managing complexity is the greatest difficulty in large-scale software development
+* {link-standups}[The pointlessness of daily standups]
+* {link-hate-agile}[Why developers hate agile]
+* {link-pop-culture}[Programming is a pop culture], Baldur Bjarnason
+* {link-microservices}[Death by a Thousand Microservices]
+****
