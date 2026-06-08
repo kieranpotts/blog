@@ -1,0 +1,228 @@
+= Where did all the jobs go?
+Kieran Potts
+:description: The history of software is a story of rising abstraction, and AI is the latest step — not the last. Why I think generative AI will not replace developers, but will change the shape of our teams and usher in a new golden age.
+:docinfo: shared
+:nofooter:
+
+:link-bear-case: https://www.lesswrong.com/posts/oKAFFvaouKKEhbBPm/a-bear-case-my-predictions-regarding-ai-progress
+:link-csail: https://web.archive.org/web/20240122174055/https://futuretech-site.s3.us-east-2.amazonaws.com/2024-01-18+Beyond_AI_Exposure.pdf
+:link-citizen-dev: https://www.economist.com/business/2022/01/29/what-if-all-workers-wrote-software-not-just-the-geek-elite
+:link-nielsen: https://www.nngroup.com/articles/ai-paradigm/
+:link-goldman: https://www.bbc.co.uk/news/technology-65102150
+:link-bret-victor: https://vimeo.com/71278954
+:link-literacy: https://news.ycombinator.com/item?id=21357921
+:link-economist-globalisation: https://www.economist.com/business/2024/09/29/ai-and-globalisation-are-shaking-up-software-developers-world
+:link-cio: https://www.cio.com/article/3540579/devs-gaining-little-if-anything-from-ai-coding-assistants.html
+:link-economist-coding: https://www.economist.com/science-and-technology/2021/07/07/ai-is-transforming-the-coding-of-computer-programs
+:link-xu: https://interconnect.substack.com/p/ai-will-create-more-developers-not
+:link-nocodelist: https://nocodelist.co/
+:link-nocodetech: https://www.nocode.tech/
+:link-design-by-wire: https://matthewstrom.com/writing/design-by-wire/
+:link-farley-lcnc: https://www.youtube.com/watch?v=uxBZFju0Mjs
+:link-tailwind-pr: https://github.com/tailwindlabs/tailwindcss.com/pull/2388
+
+The entire history of software development is a story of rising levels of abstraction.
+
+Some would have you believe that the computer-programmer's job will soon be obsolete, going the way of the gaslighter, the wheelwright, the scrivener, and the switchboard operator. Right now, you still need to know how to code to use AI tools effectively. Maybe in a few years that won't be the case.
+
+(This post assumes only incremental advances in current AI technology, not a sudden leap to AGI — which is probably still a long way off.)
+
+A recent paper from MIT's Computer Science and Artificial Intelligence Laboratory found that automating human jobs may take longer than thought. Studying computer vision, it concluded that only about 23% of the wages of current jobs in that field could realistically be automated away with AI, even allowing for further maturity of the technology.
+
+The better analogy, I think, is to the trades on a construction site, or to manufacturing:
+
+[quote]
+____
+ICs won't be able to rely on being "`technically excellent`" and will need to be good communicators, problem solvers and relationship builders. The issue in building software that is fit for purpose doesn't go away; the speed at which we can make things is and will continue to improve, but the skills required in understanding the environment, designing maintainable and scalable solutions and delivering that software will remain in demand. […] We saw the same with manufacturing — a big shift from multiple heads on a factory line to fewer but higher-paying automation-engineering roles.
+____
+
+"`It's like the construction industry. We still need the architects — senior devs — to make sure what AI spits out is scalable and secure. But we need fewer bricklayers: the juniors.`"
+
+The bootcamp wave of 2020–2023 flooded the market with junior developers, and back then the demand was there, so many landed roles. Now bootcamps are struggling, some dying, because hardly anyone is hiring juniors any more. AI has taken much of the junior-dev market.
+
+But at roughly the same moment AI arrived, the tech market was slowing anyway. We were coming out of a pandemic-era boom, and higher interest rates were cooling the startup scene that had driven so much hiring. AI gets the blame for the changing landscape, but my view is that there are multiple factors at play, and some of the economic ones are probably more important than AI.
+
+So no, I don't think AI will replace developers entirely. But the typical team structure is changing.
+
+We are very good at inventing technologies that save us some _typing_. Coding is just one thin slice of the software development life cycle, and we have invented languages, tools, frameworks, and libraries to write code faster. But we are not very good at inventing ways to speed up the _thinking_. We have invented very few things to help us think faster.
+
+So software development remains a painful, messy process. We spend a lot of time on the other activities in the life cycle, and on coordinating changes between them. We spend a lot of time waiting — for other people, for the software to compile, run, deploy, be tested, be accepted — and a lot of time fixing bugs.
+
+Generative AI does genuinely speed up coding. I have trialled Cursor for several months; it is expensive but a massive productivity boost. It changes the dynamics of programming from writing code to managing a system that handles the typing. It is particularly good with popular statically-typed languages like TypeScript and Java, less so with dynamic ones like Python or unpopular ones like Objective-C. But the point is: I am still _designing_ the solution, and I still need to audit the generated code, because mistakes are common.
+
+Generative AI is not ground-breaking. It is just the latest in a long line of attempts to automate software development — the latest abstraction.
+
+[quote]
+____
+Contrary to popular belief, [AI replacing programmers] isn't going to happen anytime soon. Thomas Dohmke, GitHub's CEO, believes that not only will AI not take over developers' jobs, it will actually help them learn in augmented environments, such as Copilot, and assist in coding faster with fewer bugs.
+____
+
+One of the clearest trends in our field is that programming languages operate at ever higher levels of abstraction. There is a reason software engineers are _engineers_: the job demands out-of-the-box thinking and problem-solving, which is exactly what more abstract languages free us up to do. And the role is varied — you do not spend 100% of your time coding; you also design, debug, and test.
+
+There would be a wonderful irony if we, the automators, unwittingly automated away our own jobs. We would be the butt of jokes for centuries — the engineers made extinct by their own reckless behaviour. But I don't think it will happen, because this will prove to be just another incremental step in our enduring effort to automate work. That is what we do, after all: software is the emulation of real-world processes in a computer system.
+
+Let me explain.
+
+[quote]
+____
+Software, as Marc Andreessen says, is eating the world. Everything we do is mediated through someone's code — running on a smart thermostat, a smartphone, the old familiar PC, or as a microservice in an ever-expanding cloud. We're finally delivering on the decades-old promise of a ubiquitous computing world. […] We're also seeing monolithic applications break apart into services and platforms, ready to become part of your applications.
+____
+
+== Declarative programming
+
+Ideally, you could just tell the computer what you want, and it would fabricate it. If you could do that, there would be no need for programmers. (HTML is an example of the declarative approach.)
+
+== No-code / low-code
+
+"`Citizen developers`" — letting anyone build simple apps for themselves. It has always been thus; there have always been hobbyist programmers hacking away at simple programs and websites. The difference now is that these amateur applications can be quite powerful, because they piggyback on existing systems.
+
+The Economist reports that in 2018 a field technician at Telstra, the Australian telecoms firm, built an app that unified 70 messaging systems for reporting phone-line problems — despite having no coding experience. The interface looks cluttered (the landing page jams in 150 buttons and a local-news ticker, "`the app equivalent of an airplane cockpit`", quips Microsoft's Charles Lamanna), but it was a hit: some 1,300 other Telstra technicians use it, saving the firm $12m a year.
+
+In 2017, GitHub co-founder Chris Wanstrath declared that "`the future of coding is no coding at all`". Low-code/no-code platforms have since burgeoned, letting anyone build powerful systems via drag-and-drop (no-code) or with a little code creeping in (low-code). The number of organizations using Microsoft's Power Apps more than doubled in 2021. There will surely be more innovation here — Unqork, a no-code startup backed by Goldman Sachs, is valued at over \$2bn.
+
+None of this is new. Visual programming is an old paradigm; it has simply reached a level of maturity.
+
+[quote]
+____
+The dream of codelessness is not new. Tony Wasserman dates it back to the concept of "`automatic programming`" in the 1960s. Since then successive waves of simplification and abstraction have made life easier for programmers by distancing coding languages further from the machine code understood by computer hardware. In the early 1990s Microsoft tried to simplify things further by launching Visual Basic, an early stab at lc/nc. In the next decade firms like Appian, Caspio, Mendix and Salesforce began offering products aimed expressly at line-of-business types.
+____
+
+Low-code/no-code began as a way to make professional developers more efficient. What has changed is that recent advances have opened software development up to more and more people, so that domain experts can build systems that automate parts of their own business without calling in technicians. Firms in a hurry to digitize appreciate that, when line-of-business people design the software they need, it speeds things up — and the feedback loop is faster, too, so projects can "`fail fast`". (Spreadsheet macros have long allowed this kind of customization.)
+
+== AI-powered software development
+
+Low-code/no-code is now being augmented by machine learning.
+
+[quote]
+____
+lc/nc is fast becoming the secret sauce in modern software development, notably in machine learning. The mastery of Python or Java required for this type of AI software is daunting even for pro devs. […] [Tools like SageMaker Canvas] could increase the number of AI specialists available to businesses by an order of magnitude.
+____
+
+[quote]
+____
+Several firms are already using GPT-3 and its predecessor GPT-2 to add AI to the software that their programmers use to write code. Much of what these programmers type out has already been written elsewhere at some point in the past. […] As a programmer types, potential "`code completions`" of one or a few lines pop up on the screen.
+____
+
+Generative AI will also create a whole new _category_ of software. Jakob Nielsen identified it as the first new human–computer interface in 60 years, and only the third in all of computing history: a paradigm shift in which users tell the computer what they want, not how to do it, reversing the locus of control.
+
+Other models are being trained to spot bugs and security vulnerabilities. I suspect these specialist tools will prove the most useful, because they solve problems humans are bad at — human reviewers typically struggle to spot deliberately injected vulnerabilities.
+
+[quote]
+____
+The purpose of all this, of course, is to save time. Kite claims its AI-completion products cut the number of keystrokes required for some tasks by nearly half. Overall efficiency gains, however, are lower. Vitaly Khudobakhshov of JetBrains sees time savings of 10% to 20%. […] The technology also reduces "`cognitive overhead`". Selecting from multiple choices is less taxing than devising solutions from scratch.
+____
+
+My view is that productivity gains will initially be minimal, and that a real paradigm shift may come only when AI-like systems can build and iterate the design of _entire applications_, not just individual modules.
+
+== Other innovations
+
+*Cloud.* All of this has been unlocked by cloud computing — data sharing, networking of disparate services, and the idea of IT operations providing "`self-service`" infrastructure for developers while retaining control over architecture, integration, and security.
+
+[quote]
+____
+There's no longer any good reason to run your own software. Everything you need to run your business is available as a service. Even core software components like databases and queues are now available through IaaS like Amazon's RDS and Google's pub/sub. When you buy something as a service, it will be more regularly updated and more secure than anything you can build or run yourself.
+____
+
+*Software as a service.* SaaS means there is no single point of failure, and customers can insist on services that meet their needs rather than buy licensed software that may not. Regulations such as EU data privacy rules may actually _help_ SaaS adoption, by making data exportable and so reducing fears of vendor lock-in.
+
+*Open source.* Even the build-versus-buy choice is breaking down, thanks to the proliferation of open-source software.
+
+[quote]
+____
+Open source has democratized access to powerful tools and platforms […]. The size of your IT operation no longer matters: developers everywhere can call up on their laptops the same tools that once were available only to web-scale unicorns.
+____
+
+Every improvement in IT capability since the 1950s can be traced to this drive to lower the cost of developing and owning software, and the entry costs for new developers. One consequence: employees increasingly expect the same fast, intuitive experience at work that they enjoy at home. As the always-connected generation comes to dominate the workforce, "`just good enough`" enterprise software will no longer do — and excellent user experience is expensive to build, which only sharpens the incentive to buy rather than build. Enterprise software will come to look a lot like consumer software.
+
+== Conclusion
+
+Should we worry? No.
+
+A Goldman Sachs report predicts hundreds of thousands of jobs affected — but also new jobs, entirely new categories of activity, and productivity gains across many industries. Demand for software engineers remains strong: there are around 25 million people worldwide fluent in a standard programming language, and demand has long exceeded supply. IDC has projected a global shortfall of four million developers.
+
+Further automation of software development will do two things. It will ease the supply-side pressure by enlarging the pool of available developers — no-code/low-code platforms already provide some people an entry point. But it will also _increase_ demand, by expanding what is possible with software and making bespoke development accessible to more organizations.
+
+I think there will be a "`flight to quality`", and some of the least skilled programmers will struggle in a more automated industry. We may see a professionalization of software development, in which the underlying skills require more technical know-how than ever.
+
+Ultimately, these are just _tools_. There will always be specialist demand for the design, construction, and maintenance of bespoke systems. Low-code/no-code will find its niche, helping us create _more_ software — a whole new category of cheaper systems built by non-professional "`citizen developers`".
+
+[quote]
+____
+Some scepticism is warranted. Just because non-programmers are able to build an application with lc/nc tools does not mean it will be any good […]. No-code platforms make the first 90% of delivering a useful application easy, and the last 5% often impossible. […] lc/nc will not displace "`full`" coding altogether. Pro devs will continue writing their firms' core products and mission-critical enterprise systems. But they will increasingly be complemented by legions of enterprising line-of-business workers with a software-development string to their bow.
+____
+
+What low-code/no-code will really do is lower the barriers to entry. In the not-too-distant future there will be a new generation of developers who entered the industry by configuring these platforms on behalf of organizations. There have always been such low entry points — the web platform of a decade or more ago was another, and it happens to have been mine. But many self-taught developers lack the critical-thinking ability to progress further into software engineering and computer science. Proper programming of complex or large-scale systems is notoriously difficult. It always has been, and probably always will be.
+
+One of my favourite tech talks is Bret Victor's 2013 conference talk on the future of programming, delivered as though from 1973: he says it would be a shame if, in the future, we were still coding from text files, and postulates that the future of coding will be graphical. Perhaps that time is, finally, upon us.
+
+I believe the recent advances in automating software delivery will not be the beginning of the end of software development, but the start of a new golden age for the industry.
+
+== The return of the professional software house
+
+The amateurization of software — more businesses, in more domains, having to do a bit of software — accelerated with the web. But higher levels of abstraction, and greater diversity of ready-made software, mean fewer companies need to make their own. You don't need a developer to build a marketing website; CRMs can be heavily customized without code; you can wire disparate web services together through GUI abstractions over APIs. And there is more reuse: `gov.uk` means local authorities can piggyback on software already built by central government rather than building from scratch.
+
+I have perhaps 25 years of career left, and in that time I expect the industry to consolidate again around a smaller number of large, professional software houses, with fewer software teams embedded in businesses that operate in non-IT domains. That may be no bad thing: many of us in enterprise software have to deal with bosses and clients whose expertise is not software — which means technical debt, and stress. Regulation plays a part too: it is no longer socially acceptable for a tech startup to be founded in a garage; we expect higher barriers to entry around security and data privacy.
+
+=== Computer illiteracy
+
+My father's generation are great at fixing cars, because when they were young cars were expensive and unreliable, so people learned to maintain them. As cars became cheaper and more reliable, that knowledge waned. The same is happening with software. Today's children, used to touch interfaces rather than a terminal, have _less_ computer literacy than their parents — which will surely have consequences as that generation enters the workplace. It may become _necessary_ to develop software at a much higher level of abstraction than we do today.
+
+== Generative AI, in practice
+
+Generative AI is great for boilerplate and simple pure functions. It cannot yet produce whole applications, but eventually it will — I can imagine frameworks with built-in AI tools designed for exactly that, a halfway point between custom applications and no-code/low-code.
+
+The really interesting use cases come when AI is combined with other maturing innovations, particularly speech recognition. Rather than typing all day, I would love to dictate to my IDE: "`Move to line 265. Rewrite this function to use a map instead of a for-loop.`" Today's models are great at producing functions with well-defined inputs and outputs — the algorithmic, data-processing part — but the overall composition of functionality, and the division of boundaries, still has to be designed by humans, and probably always will.
+
+_A poor workman blames his tools._
+
+The speed of coding may increase significantly. That frees up time to _think_ about problems and how best to solve them — but it does not speed up the thinking itself.
+
+In a corporate chat channel, someone said:
+
+[quote]
+____
+I would add that I use AI to help me think through solutions that I may not otherwise have imagined. For example, I would explain to the AI an approach I would take, but what other ideas would it suggest? I receive either new approaches I actually end up using, or it confirms my original approach.
+____
+
+This is a little sad — using AI as a substitute for human collaboration and pair programming.
+
+Generative AI can be a very useful tool, saving time and trouble if used well. But it does not lower labour costs, or total cost over the whole life cycle, and so it does not substantially improve delivery times while maintaining quality and performance. It has only a small effect on the development and testing parts of a project, and it will not change overall life-cycle speed if other factors — big-bang releases, say — are the bottleneck.
+
+Coding agents will clearly make it easier to churn out low-level code; auto-complete will keep getting better. What is less clear is how generative AI will help us _design_ software. I think it unlikely that existing models can replace the higher-level design tasks, because design is a creative process requiring a deep understanding of the problem domain and the ability to think abstractly — and LLMs do not solve those problems.
+
+What we will be doing, more and more, is _design_. Our jobs will shift toward the higher-level concerns. And if design becomes more important, perhaps we need to upgrade our education accordingly: even now, design and architecture are only a minor part of a typical computer-science degree, most of which is spent on coding, algorithms, and data structures.
+
+Producing code is not the same as developing production-quality software; it is just one part of a much broader process. All code is trade-offs. Do we really want to delegate those trade-off decisions to automated systems? That has financial and regulatory implications we have not yet fully considered.
+
+[quote, Shipley]
+____
+The fundamental nature of coding is that our task, as programmers, is to recognize that every decision we make is a trade-off. To be a master programmer is to understand the nature of these trade-offs, and be conscious of them in everything we write.
+____
+
+Not all of the nuance in those decisions can be pattern-matched. Vibes won't cut it in large-scale, complex, distributed systems.
+
+The annual State of DevOps report refocused on AI-assisted development in 2025. It found adoption nearly universal: 90% of respondents use AI in their work, and 80% believe it has increased their productivity — yet 30% have little or no trust in the code AI produces. This suggests that critical _validation_ skills may now matter more than the ability to structure code.
+
+[quote, State of AI-Assisted Software Development 2025]
+____
+AI's primary role in software development is that of an amplifier. It magnifies the strengths of high-performing organizations and the dysfunctions of struggling ones. The greatest returns on AI investment come not from the tools themselves, but from a strategic focus on the underlying organizational system: the quality of the internal platform, the clarity of workflows, and the alignment of teams. Without this foundation, AI creates localized pockets of productivity that are often lost to downstream chaos.
+____
+
+DORA research suggests AI tools can help teams move faster, increasing throughput — but at the cost of stability, as measured by change-failure rate. The same trade-off has appeared in previous years, which suggests we are still learning how to use these tools. Their value is unlocked by the surrounding technical and cultural environment.
+
+.Related links
+****
+* {link-economist-globalisation}[AI and globalisation are shaking up software developers' world], The Economist (2024)
+* {link-cio}[Devs gaining little (if anything) from AI coding assistants], CIO (2024)
+* {link-citizen-dev}[What if all workers wrote software, not just the geek elite?], The Economist (2022)
+* {link-economist-coding}[AI is transforming the coding of computer programs], The Economist (2021)
+* {link-xu}[AI will create more developers, not less], Kevin Xu (2023)
+* {link-csail}[Beyond AI Exposure] (PDF), MIT CSAIL (2024)
+* {link-bear-case}[A bear case: my predictions regarding AI progress]
+* {link-nielsen}[AI: first new UI paradigm in 60 years], Jakob Nielsen
+* {link-bret-victor}[The future of programming], Bret Victor (2013)
+* {link-nocodelist}[NoCodeList] — directory of no-code apps
+* {link-nocodetech}[NoCode.Tech] — tools and knowledge for the no-code movement
+* {link-design-by-wire}[Design by wire], Matthew Ström (2023) — why AI will shape designers, not replace them
+* {link-farley-lcnc}[Will low-code/no-code kill programming jobs?], Dave Farley (2022)
+****
