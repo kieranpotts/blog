@@ -1,0 +1,37 @@
+= How to do estimates
+Kieran Potts
+:description: Estimating software effort is a specialist skill we are never trained for. Here are the preconditions that make estimation possible at all — and why I always apply a generous multiplier.
+:docinfo: shared
+:nofooter:
+
+Estimating the cost of software is genuinely hard, because software is such an intangible thing.
+
+And yet it is the nature of our work to be asked to estimate the effort, complexity, and — probably — the time required to complete a task. This is not something we are ever really trained to do. Estimation is a specialist discipline in its own right.
+
+Truly agile ways of working push back against estimation altogether. In my view, that is not realistic for many organizations. Businesses need to plan resources, and to work out how best to deploy them on the basis of cost against value.
+
+That said, there are preconditions for being able to estimate at all:
+
+* The change request must be small enough that you can, with reasonable accuracy, understand all the code and configuration changes it will require.
+* The architecture must be of sufficient quality that you can confidently change one part of the system without introducing regressions elsewhere.
+* You must have deep familiarity with the system.
+* The system must be well supported by tests and other artifacts, such as documentation.
+* The workflow must allow changes to be introduced in isolation from other work happening on the same system at the same time.
+* You must know what resources will be available to you — especially business-analysis, development, and test support.
+* You must have an established working relationship with your collaborators.
+* The change request must be stable, with no feature creep.
+
+It is simply not possible to estimate all kinds of changes to all kinds of systems.
+
+And even where estimation _is_ possible, you must still allow for the unknowns:
+
+* Dependencies.
+* Merge conflicts.
+* Sickness and holidays.
+* Unknown unknowns.
+
+This is why T-shirt sizes and story points are useful: they are _deliberately_ vague. Time estimates imply a precision they cannot possibly possess. If I say something will take "`about two weeks`" — even qualified as a high-level, ballpark figure — and I deliver in three, business stakeholders will often treat that as late delivery. In my view, that _is_ on-time delivery: the estimate was in the right ballpark.
+
+So when I am asked for a time estimate, I always apply a multiplier — at least 50%. If I think something will take about two weeks, I will say about three. The multiplier goes higher — sometimes by an order of magnitude, 100%, 200% — when there are more unknowns.
+
+The deeper truth, though, is that the real problem is not estimating delivery; it is _delivering high-quality software that works_. Software failures are far more often caused by poor-quality software than by poor estimates.
