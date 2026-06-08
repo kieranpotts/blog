@@ -1,0 +1,13 @@
+= My agentic workflow
+Kieran Potts
+:description: The three layers I use to work with AI coding agents — portable workflow skills, and the Realize and Orchestrate custom prompts in Pi.
+:docinfo: shared
+:nofooter:
+
+My way of working with AI coding agents comes down to three layers.
+
+The first is a set of *workflow skills* — harness-agnostic agent customizations that encode the steps of my development process so they can be reused regardless of which tool is running them. The important word is _harness-agnostic_: these skills describe how I want the work done, not which product is doing it, so the same workflow carries from one agent to another without being rewritten.
+
+The second is *Realize*, a custom Pi prompt that takes a design that has already been agreed and turns it into implemented work — the bridge between deciding _what_ to build and actually building it.
+
+The third is *Orchestrate*, a custom Pi prompt for coordinating *sub-agents*: rather than asking one agent to hold an entire complex task in its head, it breaks the work into well-scoped pieces and directs several agents through them.
