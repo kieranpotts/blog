@@ -1,0 +1,299 @@
+= A Scrum survival guide
+Kieran Potts
+:description: I don't like Scrum — at best a benign business wrapper for real agile delivery, at worst a straightjacket that turns software craft into a feature factory. But you can't always escape it, so here is how to survive it.
+:docinfo: shared
+:nofooter:
+
+:link-semantic-diffusion: https://martinfowler.com/bliki/SemanticDiffusion.html
+:link-bigtech-pm: https://blog.pragmaticengineer.com/project-management-at-big-tech/
+:link-hubbard: https://www.cio.com/article/274975/it-organization-the-it-measurement-inversion.html
+
+I don't like Scrum. I have tried to be open-minded, and I have given it a chance, but I just can't get on with it. At best it is a benign business wrapper for _true_ agile delivery — a necessary bureaucratic overhead to soothe the nerves of the business. At worst it is a straightjacket that stifles creativity and innovation, turning the lovely craft of software engineering into a soulless production line of mediocre products. For me, Scrum has become a red flag in companies.
+
+But we cannot get away from it. Our industry is divided in two: centralized, bureaucratic, top-down structures obsessed with predictability and control; and decentralized, self-organizing, autonomous teams focused on delivering high-quality or innovative software, productively. There is a great deal of work in the first category, especially in contracting. So a pragmatic approach is to develop coping mechanisms.
+
+== "Agile" has suffered identity theft
+
+The word "`agile`" no longer means, colloquially, what the manifesto's authors intended. Scrum — and other so-called agile frameworks like SAFe — have, through {link-semantic-diffusion}[semantic diffusion], genuinely harmed the movement's reputation.
+
+Words carry both a formal meaning and an emotional undertone accrued over years. The formal meaning shifts faster than the emotional resonance, so people use a word to borrow its resonance even after its meaning has drifted — think of "`literally`", which used to mean "`exactly, with no exaggeration`" and now routinely means its opposite. The same corruption has happened to "`agile`" over two decades.
+
+In fairness, "`Scrum`" has suffered too. Ken Schwaber foresaw this and created The Scrum Guide to preserve a definitive definition — but it hasn't worked. Today "`Scrum`" has come to mean "`lots of little waterfalls`", in which developers commit to a near-term deadline to deliver an agreed specification. That is not part of the official methodology (whatever isn't completed in a sprint just returns to the backlog).
+
+[quote]
+____
+We are being told better ways of developing software by non-technical managers and coaches. We are no longer discovering our own improved ways of working.
+____
+
+It is all about project management now, with tools like Jira front and centre for tracking progress against commitments. The focus is predictability, not engineering quality. Working software is no longer the main measure of progress; that has shifted to story points and velocity, pixel-perfect mocks, and metrics. Developers are treated as shop-floor workers in feature factories, kept out of the process until the acceptance criteria are finalized or the high-res mockups are delivered (the "`definition of ready`" — a checklist that functions as a contract with the customer rather than a collaboration). What happened to developers working directly with customers?
+
+Scrum has become a checklist of tools and processes rather than a set of values or a way of _thinking_ about software delivery — worse, a religion. Jeff Sutherland's book title _Twice the Work in Half the Time_ rather screwed up the definition of agile forever, leaving "`agile`" to mean getting things done as fast as possible. "`Agile`" has become an excuse for self-imposed chaos, too — commit to functional delivery, provide ad hoc support, fix bugs on the fly, operate in production, _and_ plan the next sprint, "`but it's okay, we're agile`". And it has become a product: frameworks, coaching, certifications. The productization of agile has hurt the movement, making it something you apply to a team rather than something grounded in real expertise and experience.
+
+What we need is to get back to agile being about developers being given a problem to solve and then being left alone to solve it — a human-centric system, not a process-oriented, tool-driven one. So should we coin a new word, centred on the original meaning? We have probably lost the brand. I try to avoid "`agile`" altogether, preferring "`iteratively and incrementally`". Agile, in its original meaning, is almost an ethical code — and our industry is desperately short of ethical and professional standards.
+
+[quote]
+____
+Scrum characterizes what agile development has become: an overly bureaucratic, ritualistic, formalized, hierarchical approach, one that doesn't really help us to build better software faster at all.
+____
+
+SAFe — the Scaled Agile Framework, or "`shitty agile for enterprises`" in Martin Fowler's words — is another framework that claims to be agile but does not adhere to the manifesto. It is popular in large organizations; Scrum is more common in smaller ones. I have more experience with Scrum, so it is my focus here, but SAFe is similarly unpopular among the people who started the agile movement. Tellingly, Scrum is rarely used in genuine software houses; it is popular in consultancies and non-IT businesses that do a bit of bespoke IT. In my view, Scrum is the result of the ways of working of _other_ business domains seeping into software development.
+
+== Scrum is not (very) agile
+
+I need to define both terms, and in doing so show that the two are not well aligned. _Agile_ is not really a methodology but a fairly fluffy set of principles about the culture and values typically found in successful software houses. _Scrum_ was originally designed as a business wrapper for XP — a genuine agile delivery framework — to make XP more palatable to non-technical businesses.
+
+I accept that Scrum supports an iterative and incremental process, but that is not synonymous with agile (though the two are complementary). And agility is a spectrum — some teams are more agile than others. So I won't say Scrum is not agile; I will say Scrum is not _very_ agile, because it is process-oriented, horribly inefficient, and rigid. Too often it is used to bring a production-line system to software development and to fill the line with cheap labour.
+
+[quote, Steve McConnell, Code Complete]
+____
+In software, people tell you to buy into certain software-development methods to the exclusion of other methods. That's unfortunate, because if you buy into any single methodology 100 percent, you'll see the whole world in terms of that methodology. In some instances, you'll miss opportunities to use other methods better suited to your current problem.
+____
+
+Scrum itself is not necessarily a major problem if followed correctly, as per the guide. But the _dogma_ around it is. The only universal truism ever said about software development is that there are no silver bullets (Fred Brooks), and Scrum is no exception: it needs to be augmented with other practices — test-driven development, pair programming — that are not part of Scrum. It is a good way to get a team to work together, but not a good way to get a team to deliver high-quality software. Think of it as a project-management wrapper around development, not a development methodology in itself.
+
+We should treat methods and tools as a craftsperson would: know the right tool for the job, and how to use it. Scrum is optimized for non-technical project managers and Scrum Masters, not for developers, and like everything it makes trade-offs — you trade some efficiency for an illusion of predictability. Done well, it can give a gentle rhythm to work, with ebbs and flows; but there is a fine line between that and a perpetual hamster wheel. Two-week increments are probably too short; three to four weeks strikes a better balance. The worst thing about it is the context-switching — having to refine work for the next sprint before finishing the current one.
+
+== What Scrum gets right
+
+* *Regular customer feedback* (the sprint review/demo) is genuinely valuable, as long as the right stakeholders are in the room — though you don't need Scrum specifically to do it.
+* *Story pointing* can help you talk about complexity and break work into manageable units — but you don't need an arbitrary scale, and you can waste a lot of time arguing whether something is a 3 or a 5. The negatives outweigh the benefits: points create a false sense of predictability and become a metric for measuring teams and individuals. Putting a 10-minute limit on refinement is among the daftest ideas — not enough time to understand requirements, let alone design solutions, so it becomes a poker game of gaming the system.
+* *Retrospectives* formalize built-in learning.
+* *Breaking deliverables into one-to-four-week chunks* is good — but any release train is good, and you should still aim for continuous integration and delivery.
+* *The daily stand-up* I rather like, although it is often pointless (just relaying status that is already in the issue tracker). It works best when attendance is optional and it is _not_ rigidly structured — a free-flowing, informal get-together where everyone gets a chance to contribute.
+
+It is worth noting, too, that at least Scrum has given us something close to an industry-standard process. Software has been distinct from hardware since the 1960s, yet professional standards have never emerged; move between companies and the process can be wildly different, which is not true of other knowledge professions. A journalist moving publishing houses feels right at home. Scrum, for all its faults, offers a common baseline.
+
+== What Scrum gets wrong
+
+Even where it fits, Scrum must be augmented to succeed — and it creates conditions that make those other requisites harder to achieve. At its worst, it is a feature factory.
+
+=== Process-oriented rather than people-oriented
+
+An agile principle is to trust people over processes and tools. Scrum is process-oriented, big on ceremonies (meetings) and prescribed rules and roles. You want high-performing teams that trust each other and collaborate to solve problems, not teams bogged down in red tape. When something goes wrong, the organizational instinct is to add more process to prevent a recurrence — but that is a false economy. Better to facilitate communication and trust people to do their jobs.
+
+=== Sprints
+
+Sprints emphasize short-term delivery over long-term sustainability. "`Sprints`" is an unfortunate term — it reinforces the idea that Scrum is about throughput (it isn't; it's about an illusion of predictability).
+
+[quote]
+____
+Sprints are problematic for the simple fact that they never let up. They are not simply shorter deadlines encountered sporadically; they are forever-repeating, back-to-back deadlines. Waterfall was structured around genuine deadlines and real-world events that demanded focused attention — high pressure followed by low pressure. Sprints are fake deadlines, invented for the sake of a process; being contrived, they have no natural breaks. While Waterfall causes higher spikes in stress, sprints impose a more constant, medium-level stress. Our bodies are better equipped to handle short-term stress; long-term stress is more insidious.
+____
+
+The worst excesses of velocity culture lead to burnout — and you lose the best, most experienced people first.
+
+Sprints are also arguably obsolete. With modern CI/CD we can release far more often than every two weeks. Older Scrum Guides discussed release planning, but the sprint has since detached from release cadence:
+
+[quote, The Scrum Guide]
+____
+Multiple increments may be delivered within a sprint.
+____
+
+So you can release as often as you like during a sprint, and the sprint review is not meant to be a demo for sign-off but a collaborative working session to decide what to prioritize next:
+
+[quote, The Scrum Guide]
+____
+Avoid limiting it to a presentation. Attendees collaborate on what to do next.
+____
+
+=== Estimates
+
+Business people want certainty, and XP does not give it to them — for non-technical people, XP is scary. Scrum doesn't give certainty either, and never will, because of the economics of software: you can guarantee a time _or_ a scope, never both. The response when things slip is to push the team to "`get better at estimation`", but that is not possible — by definition you are doing something new, and no amount of skill lets anyone perfectly predict how a genuinely new problem will unfold. Software development is a learning experience: you try something, get feedback, adjust, and repeat until you have a well-balanced solution — never a perfect one, because all design involves trade-offs.
+
+Agile _literally_ means agile. A team expected to deliver predictably, to a fixed scope and budget, is by definition not working in an agile way (unless it builds in so much contingency that you have to ask why bother estimating at all). The manifesto values customer collaboration over contract negotiation, which requires a time-and-materials basis rather than fixed-price. If you are not working closely with the customer on time-and-materials, you _are not_ agile — you might not be waterfall either, but you are not agile.
+
+As a developer, I do not even _want_ things to be predictable. If I can predict exactly when a story will be done, then by definition I am not experimenting, innovating, or learning.
+
+[quote, Dave Thomas]
+____
+Agile is a verb, not a noun.
+____
+
+You don't _do_ agile; you are _being_ agile if you can change your mind about a solution as you learn through fast feedback, and the organization is being agile if it can respond to changing conditions quickly — which means investing in IT systems _designed_ to be changed. The ability to change what a system does, or how it works, is the ultimate quality of a system. That is what we should optimize for, not the speed of the MVP.
+
+=== Built-in quality
+
+People perceive agile as cutting corners to go fast, but that was never the intent. The intent was to deliver high-quality software at a _sustainable_ pace over the long term — which means investing in the quality of the product as much as the quantity of features. Scrum has nothing to say about built-in quality; it is all about delivering features quickly. Without built-in quality you end up with a system that is hard to maintain and evolve — a false economy that slows you down. Lean engineering and XP have much to say about built-in quality; Scrum does not. And continuous refactoring, which delivers no immediate customer value, has to compete with feature work for time.
+
+=== Meetings
+
+Even a few meetings scattered through the week drain productivity — a 30-minute meeting mid-day breaks your flow and kills any chance of a flow state. In fairness, Scrum prescribes only four events (daily scrum, sprint planning, sprint review, sprint retrospective) and, done well, should _reduce_ meetings. The extra ones — backlog refinement, epic sync, three amigos, architecture review boards, prep meetings for meetings — are not prescribed by Scrum. But I think they are a _necessary_ extension, precisely because Scrum is an incomplete model: it is a project-management framework, not a development methodology, so all those extra meetings are filling its gaps. Backlog refinement is among the worst, treated as an ongoing activity so you are perpetually preparing for the next sprint while meant to focus on the current one.
+
+=== Agile theatre
+
+Scrum is often accused of creating the _appearance_ of agility — what Fowler calls "`ceremonial garb`". The word "`ceremony`" does not actually appear in The Scrum Guide; its "`events`" are meant to be working sessions, not rituals of little utility. The daily scrum becomes a ritual when people just follow a script ("`done, doing, blockers`") rather than communicating. Newer guides have removed the three questions entirely; the morning scrum is now just for developers to adjust the upcoming work — a quick huddle to plan the day.
+
+=== Scrum Masters
+
+Scrum Masters are often treated as process police, or at best facilitators — but that comes from poor implementations. It was never meant to be a job title, just a role one or more developers would take on; the 2020 guide even removed the word "`role`". People accountable for the process should _also_ be doing other things, like contributing to development.
+
+[quote, The Scrum Guide 2020]
+____
+The Scrum Master is a true leader accountable for the team's effectiveness.
+____
+
+=== Definition of Ready
+
+A checklist of things that must be in place before development begins. But Scrum has _no_ Definition of Ready — it has been blamed for the cascade of mini-waterfalls, but that was never part of the framework. The only thing Scrum says about readiness is that a backlog item is "`ready`" when it can be completed within a single sprint. All the extra pre-planning we add is an attempt to reduce in-sprint discovery, but Scrum is built on empiricism — inspection and adaptation — and expects discovery to happen _during_ the sprint.
+
+=== Product Owner
+
+The industry has bent "`Product Owner`" to mean what used to be a "`Business Analyst`" — a requirements person — with a Product Manager above for strategy. But in the guide, the Product _Owner_ is literally the owner of the product, or their representative, and there is meant to be no hierarchy on the product side. The Product Owner is not even necessarily the person who writes the user stories; that can be delegated to the team.
+
+[quote]
+____
+In Scrum, Product Owners have sole authority over the Product Backlog; they control what to build and when to build it. Engineers are merely ticket-takers, implementing one instruction after another. In a dynamic, fast-paced world, successful teams make decisions in real time… It is inefficient for them to look to "`experts`" or "`leaders`" for their next step. It leaves them powerless while competitors race by.
+____
+
+The guide implies there are only two questions worth asking a Product Owner — "`what should I build?`" and "`in what order?`" — which reveals a dysfunction. In reality engineers should be asking: who are our customers? What problems do they have? Who are our competitors? When can I meet some users? The real question is "`what information can you give me to make an informed decision?`", not "`what should I do next?`"
+
+=== Velocity culture
+
+[quote]
+____
+"`Working software is the primary measure of progress.`" […] It doesn't claim that measuring progress involves estimating backlog items, nor that it is about assigning story points. […] Sadly, Agile (in name only) practitioners have returned to estimates and projections — product backlogs, velocities, burn-down charts, cycle times. We've dressed up old, waterfall processes in shiny new jackets with the word "`Agile`" written across the back.
+____
+
+In fairness, story points and velocity are _not_ part of The Scrum Guide; they are supplemental practices bolted on by project managers. (Older guides did talk about "`summing`" work, which probably drove the behaviour, but the newer guide has dropped it.)
+
+[quote, The Scrum Guide]
+____
+Various practices exist to forecast progress, like burn-downs, burn-ups, or cumulative flows. While proven useful, these do not replace the importance of empiricism.
+____
+
+[quote, The Scrum Guide]
+____
+Teams are structured and empowered by the organization to manage their own work.
+____
+
+So in Scrum, teams are meant to be self-managing, not micro-managed. The trouble is that Scrum creates a convenient _framework_ into which project managers can shoehorn story points and refinement and turn it into a feature factory. It does not directly promote hustle culture, but it creates fertile ground for it. A _sustainable_ pace matters more than a fast one.
+
+[quote]
+____
+By now, we all should know that agile is not about being faster. It's about delivering value sooner and in a constant manner, and being able to react and change course earlier.
+____
+
+=== High-performing teams
+
+Scrum has nothing to say about high-performing teams — the good habits that help people work together effectively toward long-term goals. Its incentives are short-term, and developers, like everyone, follow incentives: incentivize fast feature delivery and that is what you get. Communication and problem-solving are seen as overheads and distractions from churning out code, yet they are exactly what makes teams high-performing over the long run. Software engineering is fundamentally a _social_ activity, and forming high-performing teams is all about teamwork and soft skills — about which Scrum is silent.
+
+=== Overhead
+
+Scrum is horribly inefficient: it offers the business higher predictability, but the trade-off is reduced efficiency from all the planning, estimation, and meetings. _Lean_ processes — distinct from agile, but complementary — are about reducing waste and increasing efficiency, which requires some budget for automation. Agile is not anarchy: it is fine to have a plan, as long as it is _lightweight_, _flexible_, and continuously evolving. Agile means accepting changes to your plans, not abandoning planning altogether.
+
+== Tactical versus strategic
+
+Tactical processes focus on the short term — getting things done day to day, hitting the sprint goal. Strategic processes set direction and long-term goals. The shape of a system is determined by the relative emphasis on the two: a system can be technically excellent yet, with poor strategic design, end up expensive to maintain. Scrum is a _tactical_ process — short sprints have that explicit goal — and is probably adequate for tactical work, but sub-optimal for strategic work.
+
+== A summary of criticisms
+
+* *Hamster wheel*: back-to-back sprints feel relentless. A sustainable pace comes from natural ebbs and flows in the work, which sprints don't provide.
+* *Daily stand-ups* make you justify progress _every day_, but you don't always make forward progress; they are meant to facilitate communication, not to be the status reports they become.
+* *Software estimation* adds unnecessary overhead and does not help you deliver working software; for many tasks you can't estimate the full life cycle until you are well into the design.
+* *Predictability over productivity*: burn-down charts purport to measure productivity but really measure predictability.
+* *Product Owners take full control*, so developers are not treated as professionals or equal stakeholders, and it is hard to get approval for work that doesn't look like progress — planning, design, refactoring, research, training.
+* *Refinement happens at the wrong time*, while you are still working on other tasks, leaving you unprepared for the next.
+* *It doesn't scale, and it doesn't support innovation*, which happens spontaneously, outside any schedule. Dividing every task into small, anyone-can-do-it items discourages ownership and pride.
+
+[quote, The Scrum Guide]
+____
+Scrum's roles, artifacts, events, and rules are immutable, and although implementing only parts of Scrum is possible, the result is not Scrum. Scrum exists only in its entirety.
+____
+
+Scrum is highly intolerant of modification, and its proponents tend to take an all-or-nothing attitude; tools like Jira lock in the rigidity further. It rests on false assumptions: that you can plan every facet of a task by talking about it in planning; that all engineers are interchangeable; that they cannot be trusted to direct their own work, align with the organization's interests without tight supervision, or run a meeting without a facilitator. In short, it is the opposite of much of the manifesto — and "`Scrum is designed to manage the weakest engineers, and consequently dis-empowers the better ones.`"
+
+And there is *Scrumfall*:
+
+[quote]
+____
+Most Scrum implementations are a hybrid of Waterfall and Scrum. As a result, there's always a Waterfall-like, big-bang deadline quietly lurking in the background… and when that deadline inevitably arrives, the work from previous sprints is rarely enough to deliver what was promised. The pressure mounts, Scrum gets suspended, and you're left with your very own Agile-flavored death march. You get the worst of both worlds.
+____
+
+Scrum, then, is a symptom rather than the underlying problem. It is naturally appealing to bureaucratic, centralized, top-down structures — but it lets you call yourself "`agile`" and attract talent. Win-win.
+
+== Why are we like this?
+
+I don't know why our industry is so obsessed with process optimization, and I would love to see proper research on it. Perhaps it is because software is so expensive; perhaps because software is itself about creating reliable processes, so we try to apply the same to our human processes; perhaps our love of shiny things makes us susceptible to the snake-oil of coaching and certification; perhaps it is our own fault for putting "`engineering`" in the title.
+
+But I think the real reason is that software development is a _wicked problem_, and we are looking for a silver bullet to make it easy. There is none. Software delivery is notoriously hard to predict, control, and manage, and the cost of failure is high. Scrum is an attempt to make it _seem_ easy, predictable, and controllable — and if developers cannot be trusted to deliver consistently (and historically we have not proven that we can), that is an understandable response.
+
+But that is the crux. Software is widely treated as a _project_ rather than a _product_ — a one-off cost rather than a permanent overhead. By comparison, an editorial team is a permanent overhead: it exists as long as the magazine does, continuously reinventing it. The RUP approach — do all the design up front, down to the classes and algorithms — gives you accurate cost predictions but a false sense of certainty, because requirements are rarely fixed; the response to things going wrong is always _more_ planning. Perhaps the deeper issue is that the industry has grown so fast that there are not enough project managers with real technical experience. Successful delivery needs oversight by people who understand software's inherent complexity — and the best project managers tend to be those who worked their way up from development or operations, with the battle scars to prove it.
+
+== Pure Scrum versus Faux Scrum
+
+There is nothing inherently wrong with _Pure_ Scrum — exactly as specified in the guide — as long as it wraps solid agile tools and methods, such as Kent Beck's XP. Almost everything wrong with "`Scrum`" is really wrong with _Faux_ Scrum, which is what many organizations actually practice. Pure Scrum is also a reasonable starting point for inexperienced organizations and newly-formed teams, providing useful guide rails for working with non-technical stakeholders — as long as you then adapt the process to your context.
+
+[quote]
+____
+The irony of Scrum is that a truly agile process will itself be agile — continuously evolving and adapting to the needs of the team and the organization.
+____
+
+[quote, Martin Fowler]
+____
+It isn't methodologies that succeed or fail, it's teams that succeed or fail. Taking on a process can help a team raise its game, but in the end it's the team that matters and carries the responsibility to do what works for them.
+____
+
+There are no silver bullets. A team has to be good at a lot of things to deliver solutions to complex problems, but I have come to believe there are universal foundations beneath every successful system: strong technical capability, teamwork, and a relentless focus on quality. Scrum provides none of these, nor does it shore them up. It will persist for as long as businesses misunderstand the economics of software — because it offers "`higher predictability`", which is a false promise. The only way to deliver predictably is to deliver _slowly_ and _with high quality_, and that is not what Scrum is about.
+
+The iterative, incremental approach — which predates agile by decades and underpins it — offers a better path, but it requires a different mindset from the business: a willingness to accept uncertainty and to trust the team. It is supported by practices Scrum does not provide:
+
+* continuous integration, to verify that things work together as they are built;
+* designing for changeability — modularity, cohesion, separation of concerns, abstraction, decoupling — maintained through continuous refactoring;
+* automated testing, and designing for testability;
+* small, autonomous, mission-focused teams, as in _Team Topologies_, each able to progress independently.
+
+"`Agile adoption`" is not about specifying a solution but about defining the goals you want to reach and working towards them iteratively, changing your approach as you learn. The heart of agility is the ability to change course, make mistakes safely, learn, and adapt — the scientific method. You _can_ be agile without following any documented process at all.
+
+In summary, I don't rate Scrum highly, but I accept it is probably the least-worst option for developing software in organizations that don't understand software development. A glimmer of hope: perhaps Scrum's ubiquity was a product of the move-fast-and-break-things hustle culture of the low-interest-rate startup era. As we move into a world of higher borrowing costs and more focus on genuine efficiency, perhaps the culture will change, and those of us who actually care about the craft will have our time. This _ought_ to be an incredible industry to work in. This is the IT century — the challenge of reimagining the world through automation, and the joy of co-creation with other people.
+
+== Survival guide
+
+For now, though, we can't escape it. There is plenty of work in centralized, bureaucratic organizations, especially in contracting. So here are some coping mechanisms — each tied, where I can, to one of the twelve principles behind the manifesto.
+
+=== Prioritize strategic design
+
+Scrum-like workflows favour tactical over strategic design, because everything is broken into tiny increments — but some complexity (a data model, the subdomain boundaries) can't be built incrementally and needs a strategic plan from the start. We do need some big-design-up-front from time to time; otherwise we end up with a messy system. This kind of design work should _not_ be iterative, because it is expensive to change later.
+
+=== Don't compromise on quality
+
+> Principle 9: Continuous attention to technical excellence and good design enhances agility.
+
+And keep it simple:
+
+> Principle 10: Simplicity — the art of maximizing the amount of work not done — is essential.
+
+=== Build proofs of concept; deliver working software
+
+> Principle 1: Our highest priority is to satisfy the customer through early and continuous delivery of valuable software.
+
+> Principle 3: Deliver working software frequently, with a preference to the shorter timescale.
+
+=== Collaborate with the customer
+
+> Principle 4: Business people and developers must work together daily throughout the project.
+
+Research by Douglas Hubbard found that the up-front cost of developing a product has very little impact on its eventual return — and that one of the biggest factors in ROI is simply whether the target users will _use_ it, which is exactly what we rarely find out at the start. So focus on _value_, not cost: gather information to justify the value rather than estimate the cost, create feedback loops to validate assumptions, and enable an experimental approach. Requirements are really _hypotheses_ — "`we hypothesize that a user will want to do X to achieve Y`" — and the team's job is to validate or discard them, using A/B tests, beta channels, and proofs of concept rather than always building the whole feature (and risking the sunk-cost fallacy). Impact Mapping, working backwards from a desired outcome, helps here.
+
+=== Prioritize interactions with your coworkers
+
+For example, pair programming.
+
+> Principle 5: Build projects around motivated individuals. Give them the environment and support they need, and trust them to get the job done.
+
+> Principle 6: The most efficient and effective method of conveying information to and within a development team is face-to-face conversation.
+
+=== Be realistic
+
+Be clear when estimates are just guesses with a high margin of error.
+
+> Principle 2: Welcome changing requirements, even late in development.
+
+=== Build your own feedback loops
+
+Be wary of the water-Scrum-fall trap. The key is many tight feedback loops — from other developers, from the product manager and business stakeholders, and, critically, from customers — which means getting working software into users' hands as soon as possible.
+
+=== Look after yourself
+
+> Principle 8: Agile processes promote sustainable development. The sponsors, developers, and users should be able to maintain a constant pace indefinitely.
+
+Don't overwork. Aim for around 50% of your maximum, full-throttle capacity as your expected velocity. Something like 70% is the maximum _sustainable_ pace, so aiming for 50% leaves you a buffer.
