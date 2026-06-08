@@ -1,0 +1,17 @@
+= Digital nomadism
+Kieran Potts
+:description: Software developers change jobs often and increasingly work from anywhere. The freedom our work affords has quietly made the digital nomad one of the defining figures of the profession.
+:docinfo: shared
+:nofooter:
+
+:link-terminal-report: https://terminal.io/state-of-remote-engineering
+
+Software developers change jobs more often than most professionals. The conventional wisdom — borne out in practice — is that we tend to move every two or three years, and the incentives line up neatly behind that habit. Staying put usually means modest pay rises and the same skills exercised on the same kind of work, whereas moving between projects, domains, and company types tends to advance both a developer's experience and their earnings more quickly.
+
+For employers, this restlessness is worth understanding rather than resenting. If developers leave in search of more challenging work and better pay, then the obvious responses are to offer more challenging work and to review pay against responsibility — not to treat retention as a loyalty problem.
+
+The deeper reason our profession churns, though, is freedom. Few jobs can be done as completely from a laptop as ours can. That has made remote work the norm rather than the exception: the majority of developers now work fully remotely, and survey after survey — such as Terminal's {link-terminal-report}[State of Remote Engineering] report — shows the preference still trending upward.
+
+It follows naturally that software engineers are unusually well suited to becoming digital nomads. The work travels with you. And so a handful of places — Portugal, Thailand, Bali, Mexico, Croatia, Estonia — have grown into recognized hubs for location-independent developers, building infrastructure and visa regimes specifically to attract them.
+
+The lesson for organizations is straightforward: the developers who most value this freedom are often the ones most worth keeping. Building genuinely remote-first teams is not a concession to a passing trend. It is how you give skilled people the autonomy they increasingly expect — and a reason to stay a little longer.
