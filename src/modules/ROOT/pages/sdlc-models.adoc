@@ -1,0 +1,57 @@
+= The waterfall that never was
+Kieran Potts
+:description: The "waterfall" model has never really existed. It was never documented, never advocated, never in fashion — and the paper it is named after actually argues against it. A short history of how we deliver software.
+:docinfo: shared
+:nofooter:
+
+:link-royce: http://www-scf.usc.edu/~csci201/lectures/Lecture11/royce1970.pdf
+:link-benington: https://dl.acm.org/doi/10.1109/MAHC.1983.10102
+:link-olson: http://www.bawiki.com/wiki/Waterfall.html
+:link-habr: https://habr.com/en/articles/546406/
+
+== Incremental versus iterative
+
+The idea that we should prioritize the things that add the most value comes from the Agile Manifesto. But perhaps we focus too much on "`adding quality`" and not enough on _maintaining_ it. Our real job is to balance the short and the long term — incremental _build_ against iterative _design_.
+
+== Waterfall
+
+What we now call "`waterfall`" has never been a formally documented SDLC process model. The name is believed to have originated from {link-royce}[a 1970 paper] by Winston W. Royce, "`Managing the development of large software systems`". The paper never uses the word "`waterfall`"; the term probably arose from a description of one of its figures, variations of which feature prominently in the text.
+
+The model goes by other names too — the cascade model, phased development, specification-driven development. Its basic premise is that development progresses through a rigid sequence of steps — the classic software development life cycle — culminating in the release of a product expected to meet the customer's needs as defined in the specification from the very start.
+
+The model's strength is its simplicity, and the fact that it matches how other engineering disciplines, such as civil engineering, build things. Its disadvantages are well understood. They include, but are not limited to:
+
+* the need for a "`big specification`", which is unrealistic in complex problem domains;
+* inefficient use of resources;
+* no results until the very end — a punishingly long feedback loop;
+* progressively rising costs, and the risk of cascading bugs;
+* inflexibility — no accommodation for changing requirements.
+
+And yet the truth is that this model has never really existed — not since the earliest years of software development.
+
+A 1956 presentation by Herbert D. Benington — {link-benington}[republished in 1983] in the _IEEE Annals of the History of Computing_ — is one of the earliest recorded descriptions of a process used to develop a large, complex software system. Benington describes the techniques used to build the computer programs for the Semi-Automatic Ground Environment (SAGE) air-defense system, constructed in successive stages: operational plan, operational specifications, coding specifications, coding, parameter testing, assembly testing, shakedown, and system evaluation.
+
+It is clear from the text that this rigid sequence was a _necessary constraint_ of the technology of the era, not an ideal. When both hardware and software were in their infancy, it was expensive to change code once written; slow code–compile–debug cycles made progress glacial. So the process emphasized fixing the specification as best you could, from the start. Even then, Benington recognized the need to change programs iteratively during development, and his paper concludes with this aspiration:
+
+[quote, Herbert D. Benington (1956)]
+____
+If the newest very-high-speed, large-memory computers are to be fully utilized, we must develop automatic programming procedures so that they allow cheap production of highly reliable, *easily revised*, well-documented system programs.
+____
+
+Even Royce's 1970 paper describes the pure waterfall model as "`risky`" and an invitation to failure. The whole paper is in fact an argument for _iterations_ of waterfalls, in which each pass adapts the outcomes of the one before.
+
+So the "`waterfall`" process model has never really been a thing. It was never advocated by software developers, and it has never been in fashion. Ironically, the model is more viable today, with our modern tooling, than it has ever been — but it is widely misunderstood, and "`waterfall`" has become a convenient straw man for promoting agile agendas.
+
+"`Iterative and incremental`" and "`waterfall`" are best understood as opposite ends of a single spectrum of delivery approaches. Iterative and incremental development might be bookended by "`big up-front design`" at one end and a "`big bang`" release at the other. But in reality all projects are iterative and incremental to some degree. That is the natural state of software engineering.
+
+And some of the ideas we file under "`waterfall`" are not bad at all. It can be hugely beneficial to have a high-level feature roadmap, to do _some_ degree of big design up front, even to prototype early — and most self-described agile practitioners will intuitively do these things on big, complex projects. Elements of waterfall remain in widespread use today, modified and augmented with modern practices such as continuous integration.
+
+The waterfall model is not the problem. It is a perfectly good methodology for developing certain categories of software. It becomes a problem only when you expect the initial plan to be 100% correct and assume you will never need to correct course. You can do waterfall — but if you do, you must still build agility into your architecture, so that the plan can change as you go.
+
+.Reference resources
+****
+* {link-benington}[Production of large computer programs], Herbert D. Benington — published in the _IEEE Annals of the History of Computing_ in 1983, adapted from a 1956 presentation describing the process used to build the SAGE system.
+* {link-royce}[Managing the development of large software systems], Winston W. Royce — the paper from which the "`waterfall`" label is believed to derive, although the text never uses the word and the paper argues against the model.
+* {link-olson}[The myth of the 'waterfall' SDLC], David Olson — a thorough review of the original source materials, including the Benington and Royce papers.
+* {link-habr}[A history of software development models] (Habr) — see the links at the foot of the article.
+****
