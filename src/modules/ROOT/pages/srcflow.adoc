@@ -1,0 +1,90 @@
+= Srcflow: how I do version control
+Kieran Potts
+:description: Git is wonderfully unopinionated, which means the workflow is ours to design. This is the branching-and-merging strategy I have refined over several years, and the design constraints that shaped it.
+:docinfo: shared
+:nofooter:
+
+:link-gitflow: https://nvie.com/posts/a-successful-git-branching-model/
+:link-gitlab-flow: https://about.gitlab.com/topics/version-control/what-is-gitlab-flow/
+:link-github-flow: https://scottchacon.com/2011/08/31/github-flow.html
+:link-atlassian: https://www.atlassian.com/git/articles/simple-git-workflow-is-simple
+:link-conventional-commits: https://www.conventionalcommits.org/
+:link-angular-commits: https://github.com/angular/angular/blob/22b96b9/CONTRIBUTING.md#-commit-message-guidelines
+
+Git is the _de facto_ industry standard for version control. As a decentralized source-code management system with a lightweight branching-and-merging model, Git is wonderfully unopinionated about how it is used. There are endless ways to organize repositories, manage branches, handle merges, and log revisions. The responsibility falls on us, as developers, to choose strategies for all of these things — to tailor the version-control workflow to the requirements and constraints of each project.
+
+There are many ways to manage the flow of changes through source control. {link-gitflow}[GitFlow], {link-gitlab-flow}[GitLab Flow], {link-github-flow}[GitHub Flow], and Atlassian's {link-atlassian}[Simple Git Workflow] are just a few of the possibilities for the core branching-and-merging strategy. On top of that, you have to think about commit-message conventions, versioning standards, release strategies, and how automation — perhaps running on continuous-integration servers — plugs into source-control events.
+
+My own preferred strategy has been iterated over several years, tested and refined across a variety of projects. This is how I do source control. I call it _Srcflow_.
+
+== Design constraints
+
+My Git workflow has changed shape over time, but it began to settle into something consistent once I applied a set of constraints to it. Here is what I wanted to achieve.
+
+Parallel development::
+Supporting multiple parallel work streams on the same codebase is one of the primary reasons we use version control at all. The workflow must accommodate a high degree of it — but not _unbounded_ parallelism. A well-designed workflow introduces just enough friction to avoid some of the risks of parallel development, such as the cost of merge conflicts.
+
+Low risk::
+Merge conflicts are time-consuming to resolve, and they increase the likelihood of bugs and regressions reaching production. Git's distributed nature — the freedom to check out and change the same files at the same time — places the responsibility on the team to reduce their occurrence, through careful sequencing of changes and their integration.
+
+Keep it simple::
+Projects are more likely to succeed when the development process is robust, and robustness comes from keeping the process simple and intuitive. A good workflow can be repeated over and over with little chance of error. Contributors should need to know only a small subset of `git` commands, and to perform only a small number of manual operations.
+
+Support continuous integration::
+The workflow should support integrating all work-in-progress into shared mainline tracks at regular intervals — perhaps several times a day per developer. That means side branches should be short-lived, or not exist at all. Among its many benefits, continuous integration further reduces time-sucking merge conflicts between parallel streams.
+
+Support continuous delivery::
+There should be a single mainline track that is always stable and _immediately_ deployable to production or production-like environments — staging, canary channels, and so on — without even waiting for builds to complete or tests to pass. This lets production services be rebuilt as fast as possible, so that you can, for example, quickly roll back a release in response to an incident.
+
+Support continuous deployment::
+Shipping small, incremental updates rather than "`big bang`" releases makes deployments easier and reduces the risk of regressions reaching production. And when incidents do (inevitably) occur, the cause is easier to find because the last release's diff is always small. Continuous deployment is not right for every product, but a good workflow should scale to handle it where required.
+
+Fast rollback::
+Continuous deployment also requires fast reproducibility of _prior_ versions. After an incident, you want to roll back to the last known-good version as quickly as possible, with high confidence that the rollback will work. So there must be guarantees that prior versions stay stable and can be rebuilt with identical dependencies. A goal of the workflow is to be able to recreate the system, or any prior version of it, at any time.
+
+Fast feedback::
+Beyond CI, CD, and deployment, the workflow should support a high degree of automation across development and operations, the objective being fast feedback on the quality of the evolving software. Static and runtime tests, for example, can run on every commit rather than being delayed until integration.
+
+Quality gates::
+Out of the box, the workflow should be lightweight and as frictionless as possible. But the trick to optimizing velocity is to build in _just enough_ friction to keep the software stable — because velocity falls as quality is allowed to deteriorate. So another objective is to maximize the utility of Git's lightweight branching and merging, while allowing quality gates to be added as appropriate for each project.
+
+Automate all the things::
+It should be easy to automate recurring tasks: generating release notes and changelogs, bumping version numbers, managing secrets and feature flags. Automation is a key enabler of delivering software quickly and safely. It reduces human error and frees us to focus on the creative, problem-solving parts of the work. To make the most of it, sufficient metadata must be embedded in commit objects, branches, and tags.
+
+Provenance::
+This one matters a great deal to me. I want to trace every feature in production back to the business requirement, bug report, or incident that initiated the change — achieved by coupling source control to the issue tracker, with a strict two-way binding between tasks and code changes. I want to query Git for all changes related to an issue, and the issue tracker for all requirements related to particular changes in Git.
+
+Clean history::
+`git log` must produce a clean, meaningful changelog with clearly signposted release points. The output should be both human-readable and machine-parsable, so changelogs can be generated in other formats such as web pages. A changelog is an important artifact in its own right: clean code shows the current state of a system, but only as a snapshot, whereas a clean commit log gives a deep understanding of how the system got here, and the context in which the current code exists.
+
+Scalable::
+Finally, I wanted a workflow that scales from personal hobby projects to large enterprise applications — a baseline workflow that needs just a single branch, extended incrementally with opt-in features and procedures as a project grows.
+
+Not all of these objectives can be met through the design of the source-control workflow alone. Continuous integration, delivery, and especially deployment have implications for the design of the software system itself. It will certainly be necessary to build in some kind of feature-flag system, for example.
+
+== Git configuration
+
+[NOTE]
+====
+TODO — this section was a stub in the source note.
+====
+
+== Issue tracking
+
+[NOTE]
+====
+TODO — this section was a stub in the source note.
+====
+
+== Task categories
+
+[NOTE]
+====
+TODO — this section was a stub in the source note.
+====
+
+.Related links
+****
+* {link-conventional-commits}[Conventional Commits] — a widely adopted standard for writing commit messages, from which changelogs can be auto-generated.
+* {link-angular-commits}[Angular's commit message guidelines] — the basis for Conventional Commits.
+****
