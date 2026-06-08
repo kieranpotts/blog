@@ -18,4 +18,4 @@ A quick class diagram or sequence diagram can settle a design argument in minute
 
 So I ❤️ UML. Not the bureaucracy that grew up around it, but the simple, durable idea underneath: that a common visual language for software design is worth having, and worth keeping sharp.
 
-image::diagrams/informal-uml-notation.png[]
+image::images/diagrams/informal-uml-notation.png[]
