@@ -1,0 +1,19 @@
+= My local agent infrastructure
+Kieran Potts
+:description: No matter how capable models become, they cannot be trusted the way a deterministic program can. That is why my local agent setup wraps every request in deterministic controls — an allowlist, spend limits, injection screening, PII redaction.
+:docinfo: shared
+:nofooter:
+
+No matter how good models become, they cannot be trusted — not in the sense we mean when we trust a traditional program. They are inherently non-deterministic. Their guardrails are learned from training data rather than enforced by hard-coded logical conditions, which means those guardrails hold _most_ of the time, not _all_ of the time. For a great many uses, "`most of the time`" is not good enough.
+
+This shapes how I run agents locally. An agent harness — the software that gives a model access to the outside world: tools, files, networks — cannot rely on the model to police itself. It needs deterministic wrappers around it: ordinary programs, built from logic, that constrain what the model is actually permitted to do.
+
+So the reliable part of the system is the part that _isn't_ the model. The objective is centralized security and governance for every request routed through my workspace:
+
+* Lock traffic to an allowlist of approved models and providers.
+* Set per-key spend limits, so a runaway loop cannot run up an unbounded bill.
+* Enforce zero data retention with the providers I use.
+* Block prompt injection, screening against 30+ OWASP-derived attack patterns.
+* Redact personally identifiable information before it ever reaches a provider.
+
+None of these is an AI capability. Every one is a deterministic control wrapped around a non-deterministic core. That, to me, is the real shape of building responsibly with AI: not trusting the model more, but architecting so you need to trust it less.
