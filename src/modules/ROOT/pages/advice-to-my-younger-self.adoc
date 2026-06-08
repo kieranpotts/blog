@@ -1,0 +1,176 @@
+= What advice would you give your younger self?
+Kieran Potts
+:description: If I could travel back to the start of my career, what would I tell my younger self? Seven things I wish I had understood about professional software development from the beginning.
+:docinfo: shared
+:nofooter:
+
+:link-bjss: https://www.bjss.com/
+:link-bjss-academy: https://www.bjss.com/academy
+:link-systems-thinking: https://en.wikipedia.org/wiki/Systems_thinking
+:link-kravcenko: https://vadimkravcenko.com/shorts/things-they-didnt-teach-you/
+:link-etheredge: https://www.simplethread.com/20-things-ive-learned-in-my-20-years-as-a-software-engineer/
+:link-wirzenius: https://liw.fi/40/
+:link-farley-50yrs: https://youtu.be/cOcd9UN6w7U
+:link-farley-juniors: https://www.youtube.com/watch?v=5g3dK2DgW-k
+:link-farley-newdevs: https://www.youtube.com/watch?v=hjIlTaAMsbI
+:link-honeypot: https://cult.honeypot.io/reads/uncomfortable-truths-about-software-engineering/
+
+_If you could travel back in time to the start of your career in software development, what advice would you give your younger self?_
+
+My previous employer, {link-bjss}[BJSS], runs a wonderful {link-bjss-academy}[academy scheme] for graduates, career-switchers, and anyone else looking for a way into a new area of IT. I did some of the technical interviews. At the end, I would invite candidates to ask me anything they liked. Late one year, an especially impressive young person asked me:
+
+[quote]
+____
+What advice would you give me, at this point in my career?
+____
+
+The question took me by surprise. I had never been asked it before, and I admit I rather fumbled my answer. For days afterwards I kept turning it over. If I could go back to the beginning of _my_ career, what would I tell my younger self?
+
+After more thought, here is my answer. These are not a definitive list, but the ideas that have most shaped my thinking about professional software development.
+
+== 1. Grow to be a T-shaped developer
+
+To get your first job, some level of education or non-commercial experience in _computer programming_ is required. Every employer expects you to be able to write a program that correctly implements some functional requirements, with minimal guidance. That is the essence of programming: translating a problem into a solution in code.
+
+_Software development_ is a much broader activity. Programming sits at the centre of the life cycle — the core activity — but it is not the only thing that happens. I would define software development as a formal process for managing and coordinating change in a software system as requirements and understanding evolve over time. It involves gathering and analyzing requirements, understanding the constraints the system must operate under, managing the risks of delivery and operation, designing solutions and weighing trade-offs, evaluating appropriateness through user feedback, verifying correctness through testing — and much else besides.
+
+Universities and bootcamps teach you to be a computer programmer. In the real economy you need to learn to be a software developer. On large projects you will be supported by specialists — business analysts, QA engineers, project managers — but the commercial reality is that developers are often expected to take on at least some of those roles themselves.
+
+The traditional roles are blurring. The trend has been towards cross-disciplinary teams where everyone "`shifts left`" and "`shifts right`", working across all phases of the life cycle and collectively owning each change from requirements to release. In modern DevOps practice, the "`dev`" teams are also responsible for operating ("`ops`") what they build once it reaches production.
+
+It is tempting, early on, to focus on the technical core — particularly programming. I did. I spent a lot of time up-skilling technically: more languages, more platforms, more frameworks, more tools. I aspired to be an "`I-shaped`" developer, deep in programming and specialized in one stack. But I added the most value by honing my skills in the _other_ areas — especially analysis, architecture, and testing. (Increasingly, cloud operations is a highly desirable area too.)
+
+The more flexibly you can work across the whole life cycle of a change, the more employable you are. Organizations tend to _hire_ specialists, but in practice they most value generalists — people who can do a bit of everything, fill temporary gaps, and switch between projects and teams as needs change. So grow into a "`T-shaped`" developer: deep working knowledge of one primary stack, balanced with broad general knowledge of other technologies _and_ of all the other disciplines required to deliver commercial software.
+
+This will not apply to every job. But it is certainly true of consultancies, many startups, and large swathes of the rest of the industry.
+
+== 2. Most things with the word "agile" in the title are bollocks
+
+The quality of a software system is shaped by the process followed to make it. Process is everything.
+
+Unless you are lucky enough to work in the IT sector itself, you will most likely be building software for non-IT organizations — other business domains — and working with stakeholders who do not understand the software domain. This is a major source of conflict. Business people tend to want results, results, results: task-driven, not quality-driven, focused on speed of delivery. But building bespoke software is more like a craft. This is the source of the enduring software crisis.
+
+Broadly, there are two kinds of work we do:
+
+* We write code that is "`correct`" against a specification of functional and non-functional requirements.
+* We design systems that are easy to change — to maintain, extend, debug, and diagnose.
+
+The second is primarily a design concern. What is surprising is the degree to which the quality of that design is determined by the _process_ by which the system is built. You will rarely get complete freedom — all the time and resources you would like — to design well. You will be constrained by the business context, the people, the process, time, budget, parallel work, and changing requirements. So the process — the culture, the ways of working, how the life cycle is managed — is a critical factor in the quality of what you produce. Process matters.
+
+This is probably the most troublesome aspect of software development, and we cannot even agree on the terminology. "`Agile`", notoriously, means different things to different people. Scrum is widely considered an agile framework, yet it has little in common with the manifesto.
+
+The sad reality is that much of modern practice actively _impedes_ good design. The clearest example is the obsession with "`velocity`", "`productivity`", and "`efficiency`". These are good things — but they are not the _most_ important thing, which is the quality of the system produced. And unless you work on high-integrity software, the process is usually designed to optimize developers' time toward functional delivery rather than toward building solutions that last.
+
+This is unfortunate, and it is surprising how few organizations are genuinely good at making software, at managing software projects, at managing change in systems. Almost every modern organization is, in reality, an IT company of some kind — retail, banking, manufacturing, healthcare, government, all of them have an IT function. That is great for employment, but it means you will often work in organizations that are not _specialists_ in software. The true software houses — the ones genuinely good at managing change in software — are those whose own products _are_ software, and they make up only a fraction of the job market. So for much of your career you will likely work in corporate environments not optimized for software development. That is the reality of the early twenty-first century.
+
+Some projects succeed and many fail, and you would expect technical expertise to be among the most critical factors. It isn't. Whether a system meets its users' needs has very little to do with the technical capabilities of the team, and almost everything to do with the process followed to build it. Programs are destined to take on the shape and characteristics of the organizations that make them.
+
+Look for a good fit in terms of _process_, not just tech stack.
+
+== 3. Your technical expertise is surprisingly unimportant
+
+After your first break, you progress through the levels of seniority with time and experience. But to reach the higher-paying roles, on larger or more critical systems, you will need to polish your _soft_ skills.
+
+Software development is fundamentally a social process — highly collaborative. At a minimum, delivering commercial software requires the technicians to collaborate closely with the customer, or their representative. Usually you will collaborate with many other stakeholders besides.
+
+Soft skills are what let you work effectively with other people: to negotiate and compromise, to manage expectations and judge risk, to empathize and to see a problem from several perspectives. Some of the best people I have worked with were not the best programmers. But they were great communicators — listeners as well as broadcasters. They could distil complex ideas to their essence and explain technical concepts to non-technical people in the language of the business, or through metaphor and visualization, translating ideas bidirectionally between the two worlds. And they were just _nice_ people: good at their job, proud of their work, but humble about it.
+
+The best _teams_, likewise, were the most skilled in soft skills — the most collaborative, the most open to new ideas, the most willing to compromise, to admit mistakes and learn from them, to share knowledge and help each other out. The technically brilliant teams were often the most difficult: competitive, argumentative, defensive, resistant to change. (Avoid brilliant jerks.)
+
+Hard skills matter less as your career progresses; soft skills matter more. Even if you are blessed with natural emotional intelligence and critical-thinking ability, it is worth investing in good books and courses to ground yourself in the subject. Soft skills can be learned — though natural emotional intelligence is a big help.
+
+== 4. Very little, if anything, is new
+
+The industry moves fast. New languages, platforms, frameworks, and tools are invented all the time. Some are genuinely useful, significantly improving on what came before. Most are not. The truth is that technology changes only incrementally.
+
+Consider the hype around generative AI — a new category of tool that promises to help us develop software faster, generating code from natural-language descriptions. Much of the hype is, I think, justified: this is a legitimate step up in capability. But it is just the latest in a long line of innovations that have automated _aspects_ of development, and like all of them it will have only an incremental effect on productivity. Why? Because it helps us write code a bit faster, and that is all. It saves a little time stitching together snippets from documentation and Stack Overflow. It does nothing for all the _other_ parts of our work and the other stages of the life cycle. And it does not help me _think_ faster.
+
+The previous hype cycle was no-code/low-code — which was not new at all. It is what classic Visual Basic did in the 1990s, itself preceded by visual languages like Pygmalion and GRaIL back in the 1960s and 1970s. The idea was repackaged to sell a new generation of frameworks and platforms to a new generation of developers. Useful stuff — but it serves a niche, and will not change how most of the industry makes software.
+
+[quote, Fred Brooks, The Mythical Man-Month]
+____
+There is no single development, in either technology or management technique, which by itself promises even one order of magnitude [tenfold] improvement within a decade in productivity, in reliability, in simplicity.
+____
+
+If you are new to the industry, spend time learning the history of your current stack. Working with TypeScript and React? Learn why they were invented, what problems they were solving, and whether those problems are still relevant. Then go deeper — the history of JavaScript, the history of the web platform. Only when you understand the trade-offs baked into the underlying platform can you properly weigh the costs and benefits of what is built on top of it. This is how you break free of the hype cycle: how you tell the imitations from the innovations and make critical judgements about what is worth investing in.
+
+Explore old languages too — Lisp, Fortran. You needn't be able to write them, but understand their high-level design by reading some of the old books. If your education skipped the history of the computer itself, explore that as well.
+
+You will be surprised how little has really changed. The day-to-day work of a developer today is not so different from that of a developer in the 1960s. The problems and the constraints are much as they ever were. Hardware has advanced enormously, but that has only allowed software to grow more sophisticated and more complex, so resource constraints persist. Rather than constantly chasing new technologies, develop the skill of _evaluating_ whether a new technology is worth investing in — which requires an appreciation of the history of your particular niche.
+
+== 5. Your job is to write as little code as possible
+
+The languages and tools have changed over the decades, but the fundamentals of the craft have not. Software development is, and always has been, a _design_ discipline.
+
+The classical view is that development is a two-stage process: first you design, then you implement the design in code. That is the waterfall model, and it is a myth — not how software is made in the real world. Our languages and tools are now sophisticated enough that we iterate rapidly between design and implementation.
+
+Writing code is a design activity. First, code must be correct — it must do what it is supposed to. But it must also be easy to understand, easy to change, and easy to test. Those are all design concerns, and whether code meets them depends on _your_ decisions: how you structure it, name things, organize modules, separate concerns, manage dependencies, state, complexity, and change.
+
+Complexity kills. Design is about managing complexity — and design starts at the analysis stage.
+
+[NOTE]
+====
+TODO — include the example of the large-scale replatforming project where we replicated, almost verbatim, the UI and behaviours of a legacy system on a modern web stack. The consequence was that a great deal of _accidental_ complexity in the legacy system got reclassified by the business as _essential_ complexity, and carried over into the new system.
+====
+
+The technology did not solve the problem. If the underlying problem is complex, the solution will be complex. The only way to reduce complexity is to reduce the scope of the problem — which is why analysis is so important. Get that first step right and you can design a simple solution. Simplify the business domain and you reduce the essential complexity of the system, and you are halfway there. For this reason, analysis and design are, I would argue, the most important phases of the life cycle: ultimately, their quality determines the quality of the solution. The developers who can "`shift left`" into them are the best developers.
+
+Higher-level design matters more than lower-level design. Programmers tend to be picky about low-level concerns — syntax, style — but those matter far less than architecture, user experience, modularity, layering, and the overall cohesiveness of the design.
+
+The fundamental principles of good design are:
+
+* modularity;
+* cohesion;
+* separation of concerns;
+* abstraction (information hiding);
+* loose coupling.
+
+To which I would add _conceptual integrity_.
+
+These let us manage complexity by organizing our ideas and our code so they are easy to understand and change. But they are _principles_, not rules. There are no rules in software development — only trade-offs, and the trade-offs are always contextual. A good decision in one context is a bad one in another. The ultimate goal is to keep the software easy to change.
+
+These principles matter more than any particular paradigm or pattern. You can apply them to functional, object-oriented, even imperative code, and to almost any architectural style — monolith, microservices, serverless, reactive. Design patterns help you _implement_ the principles; they are not a substitute for them. Good ones include: tell, don't ask; layering; dependency injection; immutability; pure functions; don't repeat yourself. This is more than syntax. It is design.
+
+Abstraction is especially important to get right. Pitch it high enough to hide the low-level detail so you can concentrate on the business problem — but low enough that it does not impose so many constraints that you cannot scale or change the solution later. Working at an appropriate level of abstraction is a skill that comes only with experience; you cannot learn it from a book.
+
+The fundamentals of software design are timeless. Languages, platforms, frameworks, and tools come and go — they are transient, fads, fashion, hype, marketing. They are not the essence of software development. The principles are. They have not changed in decades and will not change in the foreseeable future. Good design endures.
+
+So, in fact, you do _not_ need to continuously learn new languages and tools. You need to learn how to _learn_, and how to apply what you know to new problems — to demonstrate a talent for {link-systems-thinking}[systems thinking] and critical thinking.
+
+One last piece of advice for my younger self: your job is, actually, to write as little code as possible. Code is a business asset. Code is a business liability.
+
+== 6. Imposter syndrome is real
+
+Oscar Wilde wrote of the "`continent of the unknown`". It applies to IT too, and even to specialist sub-domains within it. Take just the web platform: it is impossible to keep up with everything happening there. This is why imposter syndrome is so real in our industry — the more you learn, the more you realize how much you do not know.
+
+But there comes a point in your career when you notice you are hearing the same old ideas over and over, repackaged and reformulated and applied in a new context. Very little in IT is genuinely new. That is exactly why it is worth studying the history of the field — to understand the context in which ideas were developed and the motivations behind them. It is why it is worth reading books, not just blogs and tweets. Go back in time and read about the history of software development.
+
+== 7. Yours is a career of lifelong learning
+
+Find a mentor. There is a big gap between what you learn at university or bootcamp and what you need to do the job. You don't need to recite the SOLID principles, but you do need a basic working knowledge of Git.
+
+The ecosystem is huge — overwhelming. Even specializing in one stack, say Java, it is virtually impossible to know everything in your sub-domain; you cannot have commercial experience with every framework or every tool. Beyond your core expertise you will also need some knowledge of infrastructure (especially virtualization and containerization), soft skills, testing, analysis, architecture. And there is always the risk that once you have mastered a stack, it becomes obsolete. (Case study: Windows Mobile.)
+
+So develop some ground rules to steer your learning. There is almost zero practical value in learning the entire Git command set, except as an academic exercise — you need only a handful of commands to be productive, and can look up the rest as needed. Be a reduced-instruction-set programmer. Likewise, you will probably use only a handful of design patterns regularly; just know how to look up the rest for the edge cases that turn up now and then.
+
+Some things _do_ fundamentally change. The move from physical to cloud and virtual infrastructure is a major one. But the fundamentals of good application design — stateless design, for instance — remain relevant. Your job is to solve problems, and you get better at it with experience: you learn to spot patterns and to _research_ the optimal solution. You don't need to have all the answers.
+
+== Recommended reading
+
+* _Accelerate_, Nicole Forsgren, Jez Humble, Gene Kim — the definitive guide to DevOps, so influential it is simply known as the "`DevOps book`".
+* _Extreme Programming Explained_, Kent Beck — the definitive guide to doing agile properly.
+* _The Pragmatic Programmer_, Dave Thomas and Andrew Hunt — the definitive guide to being a professional developer, packed with practical advice.
+* _Design Patterns_, Erich Gamma, Richard Helm, Ralph Johnson, John Vlissides — a classic, so influential it is known as the "`Gang of Four`" book.
+* _Refactoring_, Martin Fowler — the definitive guide to refactoring.
+* _Domain-Driven Design_, Eric Evans — the "`Blue Book`". Not an easy read, but full of great ideas; in my opinion the gold standard for the architecture of any program.
+
+.Related links
+****
+* {link-kravcenko}[Things they didn't teach you about software engineering], Vadim Kravcenko (2023)
+* {link-etheredge}[20 things I've learned in my 20 years as a software engineer], Justin Etheredge (2021)
+* {link-wirzenius}[40 years of programming], Lars Wirzenius (2024)
+* {link-farley-50yrs}[50 years of software engineering experience in 19 minutes], Dave Farley (2024)
+* {link-farley-juniors}[Avoid these common mistakes junior developers make], Dave Farley (2021)
+* {link-farley-newdevs}[What all new software developers need to know], Dave Farley (2020)
+* {link-honeypot}[6 uncomfortable truths about software engineering], .cult (2022)
+****
