@@ -1,0 +1,148 @@
+= Tech debt is not one thing
+Kieran Potts
+:description: "Technical debt" is a catch-all term for several different kinds of work. Separating design debt from the rest makes it easier to reason about, prioritize, and explain.
+:docinfo: shared
+:nofooter:
+
+:link-cunningham-debt: https://www.youtube.com/watch?v=pqeJFYwnkjE
+:link-fowler-debt: https://martinfowler.com/bliki/TechnicalDebt.html
+:link-fowler-quadrant: https://martinfowler.com/bliki/TechnicalDebtQuadrant.html
+:link-jeffries-tweet: https://twitter.com/RonJeffries/status/1111995557973757963
+:link-nvie: https://nvie.com/posts/why-you-should-consider-technical-debt-to-be-real-debt/
+:link-verraes-wall: https://verraes.net/2020/01/wall-of-technical-debt/
+:link-voytko: https://www.bitlog.com/2020/02/12/why-are-we-so-bad-at-software-engineering/
+:link-mansoor: https://codeahoy.com/2020/01/25/technical-debt/
+:link-carlo: https://understandlegacycode.com/blog/5-arguments-to-make-managers-care-about-technical-debt/
+:link-cutler: https://cutle.fish/blog/12-signs-youre-working-in-a-feature-factory
+:link-crispin: https://lisacrispin.blogspot.com/2008/08/alternative-metaphors-for-technical.html
+
+"`Technical debt`" is not a single thing. It is a catch-all term for a variety of different kinds of work that need to be done to improve the quality of a software system.
+
+Like many of the stickiest ideas in our field, the concept has mutated over time, and it seems to mean different things in different contexts. Ask a room full of engineers what technical debt is, and the answers vary enormously. Technical debt gets described as:
+
+* a log of deficiencies in a system's code and configuration that make it hard to change, debug, extend, reuse, and test, or that otherwise have a significant negative impact on the developer experience;
+* work that will improve non-functional quality attributes such as performance, resilience, and usability;
+* gaps in the artifacts and infrastructure that support development and maintenance, such as developer documentation, test coverage, and life-cycle automation;
+* design and architectural decisions that have been deferred due to project resource constraints — time, budget, expertise;
+* defects: undiagnosed incidents, or logs of known bugs;
+* any work that is more costly to do later than to do properly in the first place — known shortcuts taken to get the quickest implementation, which will hinder future work.
+
+It is hard to describe technical debt succinctly, precisely because it is overused as a catch-all for "`stuff we need to do something about`". Often, technical debt is defined by what it is _not_: there are features, and there are bugs, and everything else is technical debt. Even recurring maintenance work, such as dependency upgrades, gets bundled into the category. Software rot — stale dependencies, for instance — is frequently filed under technical debt, when really it is a maintenance concern.
+
+Which of these is correct?
+
+== Back to Cunningham
+
+The authority on this is Ward Cunningham. After all, he coined the term.
+
+There is an {link-cunningham-debt}[excellent short video] in which Cunningham explains the origins of the debt metaphor and what he meant by it. It is well worth a few minutes of your time.
+
+In summary, Cunningham used the metaphor of debt to justify, to a financial-services business, the necessity of iterating the design of their software systems over time.
+
+*Technical debt was conceived as a metaphor for refactoring.*
+
+In this view, all software projects — even the best-resourced ones — should accrue technical debt. It is a perfectly normal outcome of any well-functioning iterative and incremental software delivery model.
+
+Sometimes it is possible to gather all the requirements and design a complete solution up front, minimizing the need to change things during development. In large-scale systems this requires a great deal of big design up front; we commonly understand this as the waterfall model. Agile delivery models emphasize a more incremental approach: without a complete blueprint, more effort goes into iterating the design as the team gradually learns more about the requirements and constraints.
+
+Waterfall or agile, software has always been developed in an iterative and incremental fashion. What varies from one project to the next is the relative effort between _incremental build_ — work on functional and non-functional requirements — and _iterative design_ — work on the quality of the code.
+
+== Design debt versus technical debt
+
+For this reason, I prefer the term *design debt* to technical debt. I think of design debt as the truer reading of Cunningham's metaphor. "`Technical debt`" I have accepted for its colloquial meaning: all the cruft and shortcuts that accumulate when a system is delivered with too-limited resources.
+
+So:
+
+* *Design debt* is normal, even in healthy projects, because the need to refactor is normal in any project.
+* *Technical debt* — in the colloquial sense — is bad, and can be measured in different ways depending on the particular shortcomings of each project.
+
+I find it useful to distinguish between the two. I plan "`refactoring`" work separately from wider "`cruft`", even though the line between them can be blurry. Broadly, the two categories have different priorities.
+
+Technical debt, or cruft, is the more immediate concern. It is costing the business money _right now_, and will continue to do so until the debt is repaid.
+
+Refactoring, by contrast, is often best delayed until the last responsible moment, so that you gather as much information as possible before committing. Redesigning an implementation — especially in a live system — is costly and risky, and those costs and risks increase if the redesign proves to be wrong, which happens when assumptions go unverified.
+
+The trouble is that refactoring work is rarely prioritized, because it has no immediate benefit to the business and its impact is hard to quantify. The immediate beneficiaries of refactoring are the developers, the people who live in the code.
+
+Wider technical debt tends to be easier to justify the cost of resolving, because you can frame the payoff:
+
+[example]
+====
+One week of effort improving onboarding documentation is expected to reduce average onboarding time from two weeks to one.
+====
+
+The preference of development teams should therefore be to undertake refactoring within the context of feature delivery. But this is not always possible. Sometimes you cannot appreciate how a solution can be improved until after the fact — after several increments of the build, or after some time has passed and fresh eyes have rested on it. There may be delivery constraints: it is often undesirable to make substantive design changes to a module while functional work is ongoing on that same module, perhaps via parallel work streams. So it is often desirable, and sometimes necessary, to defer refactoring until later.
+
+== Categories of work
+
+The categories I find useful to distinguish:
+
+features:: functional requirements — things the program _does_.
+constraints:: non-functional requirements that determine _how well_ the system works.
+bugs:: failures to meet the functional or non-functional requirements of the system.
+incidents:: events reported, through user feedback or through logs and other automated systems, typically in production, that warrant investigation.
+refactoring:: changes to the internal design of the code that do not change its observable behavior.
+maintenance:: keeping the system healthy over time — including anything that makes development easier, such as investment in developer tooling and life-cycle automation.
+
+The need to spend time on design work throughout development is the trade-off that product owners accept in exchange for requirements flexibility.
+
+Even so, it can be useful to have a catch-all term for "`everything that is not features or bugs`", because compartmentalizing every facet of non-functional work for clients is often difficult. The strength of the debt metaphor is that, if the debt is not repaid, it accumulates interest, making changes harder and harder over time. Martin Fowler's {link-fowler-quadrant}[technical debt quadrant] helps with prioritization, and emphasizes that the reasons debt exists are not all equal.
+
+Correctly speaking, then, technical debt refers to _considered decisions to push final solution-design choices to a later date_ — and we distinguish that from the separate processes of maintenance and refactoring.
+
+== Technical debt is not always bad
+
+Used intelligently, technical debt improves engineering agility. It lets us settle for a second-rate design in the short term to get something to market sooner, clear an obstacle standing in the way of a business goal, or simply focus on getting things done — favoring creative, shipped solutions over the elusive goal of perfection.
+
+Adding technical debt as part of a considered approach means being conscious of what it will take to tidy things up later. Above all, technical debt must be *logged* and carefully *monitored*. Knowing _what_ debt needs fixing, and _when_, is essential if debt is to be a useful tool rather than a liability.
+
+In general, the debt backlog deserves more attention in these scenarios:
+
+* When systems are scaling rapidly — there is more at stake in a failure when growth is high.
+* When more developer hours go into firefighting than into product development.
+* When new tech stacks are added, especially where interfaces must be built between old and new systems.
+
+Perhaps we should worry less about the current _stock_ of debt and more about the systemic problems causing it to accumulate. That happens when there is a disconnect between the business's quality requirements — stability, security, maintainability — and the resources allocated to meeting them.
+
+== The trouble with the metaphor
+
+The phrase "`technical debt`" gives the impression that sacrificing internal quality has only _future_ costs. In fact, the costs are immediate. Debt creates a drag on the parts of the system currently under development, not just on future maintenance and extension.
+
+[quote, Ron Jeffries]
+____
+Technical debt is like a bank loan, except that you don't get the money, but you do have to pay the interest.
+____
+
+With accumulating debt, each additional unit of functionality becomes more expensive than the last. Development costs should grow only in proportion to the size of the existing codebase. They grow exponentially with essential complexity — and there is nothing you can do about that. But you _can_ do something about accidental complexity, to keep the growth of costs to a minimum.
+
+Technical debt also reduces the predictability of change management. You cannot make reasonable estimates of the effort to introduce a change if the system is not built well enough for you to map its structure and understand the full consequences of a change.
+
+There is a deeper problem with the word itself. "`Tech debt`" has become a dirty term — shorthand for a past mistake that must be atoned for with refactoring. Yet _financial_ debt is not reviled in the same way. You take out a mortgage and your friends congratulate you. Bonds finance infrastructure and public works. Businesses use all kinds of debt, and the markets reward confidence with higher valuations. Managers are promoted for bringing projects in on time and on budget; the corners they cut to get there are hard to quantify, surface only later, and are usually intangible.
+
+Used wisely, debt helps projects succeed. The model can help a business avoid spending foolishly and paying, in maintenance, for a system it cannot afford. Good technical debt is intentional. A lot of _bad_ technical debt comes from building too much and getting stuck spending more time on bug fixes and maintenance than expected — like buying too big a house and ending up underwater on the mortgage.
+
+The key is to be intentional about what you invest in, and aware of the costs you are taking on. Err on the side of building too little; you can always build more later.
+
+But we still need a metaphor for all this that non-technical managers can understand.
+
+== A mental model
+
+Here is a way to think about the cost of owning a software program, measured against its size and complexity.
+
+_Size_ is the volume of code, represented as blobs: classes, functions, packages. The cost of developing a unit of code is roughly proportional to its size.
+
+_Complexity_ is the relationships — the flow of dependencies — between those units, represented as lines between the blobs. The cost of adding new units increases exponentially with complexity, as measured by this map of interdependencies.
+
+This is why an overrated and misunderstood principle is _don't repeat yourself_. Taken to extremes, no logic is ever duplicated anywhere in a system — but the result is a web of tangled dependencies. It is often better to have more code, with some duplication, than to have more relationships, because that keeps complexity down and the cost curve flatter.
+
+== Further reading
+
+* {link-cunningham-debt}[Ward Cunningham explains the debt metaphor] (video)
+* {link-fowler-debt}[Technical Debt], Martin Fowler (May 2019)
+* {link-verraes-wall}[The Wall of Technical Debt], Mathias Verraes (January 2020)
+* {link-voytko}[Why are we so bad at software engineering?], Jake Voytko (February 2020)
+* {link-mansoor}[Technical debt is soul-crushing], Umer Mansoor (January 2020)
+* {link-carlo}[5 arguments to make managers care about technical debt], Nicolas Carlo (2020)
+* {link-cutler}[12 signs you're working in a feature factory], John Cutler (November 2016)
+* {link-nvie}[Why you should consider technical debt to be real debt]
+* {link-crispin}[Alternative metaphors for technical debt], Lisa Crispin
