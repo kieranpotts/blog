@@ -1,0 +1,252 @@
+= Hypermedia APIs
+Kieran Potts
+:description: HATEOAS made the web scale. Could we bring the same hypermedia-driven design to web-service APIs, so that generic clients discover and navigate any service at runtime? An exploration of the idea, the media types, and why it remains niche.
+:docinfo: shared
+:nofooter:
+
+:link-fielding-thesis: https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm
+:link-semantic-web: https://www.scientificamerican.com/article/the-semantic-web/
+:link-fielding-hypertext: https://roy.gbiv.com/untangled/2008/rest-apis-must-be-hypertext-driven
+:link-semantic-diffusion: https://martinfowler.com/bliki/SemanticDiffusion.html
+:link-rethinking-rest: https://kieranpotts.com/rethinking-rest
+:link-hal-spec: https://stateless.group/hal_specification.html
+:link-hal-draft: https://datatracker.ietf.org/doc/html/draft-kelly-json-hal-08
+:link-curie: https://www.w3.org/TR/2007/WD-curie-20070307/
+:link-rfc5988: https://tools.ietf.org/html/rfc5988
+:link-collection-json: http://amundsen.com/media-types/collection/
+:link-siren: https://github.com/kevinswiber/siren
+:link-json-hyper-schema: http://json-schema.org/draft/2019-09/json-schema-hypermedia.html
+:link-json-schema: https://json-schema.org
+:link-uri-templates: https://tools.ietf.org/html/rfc6570
+:link-rdf: http://www.w3.org/RDF/
+:link-json-ld: https://json-ld.org/
+:link-schema-org: https://schema.org/
+:link-hydra: http://www.hydra-cg.com/
+:link-hydra-core: http://www.hydra-cg.com/spec/latest/core/
+:link-lanthaler-hydra: http://www.markus-lanthaler.com/hydra/
+:link-hydra-cg: https://www.hydra-cg.com/
+:link-aws-apigw: https://docs.aws.amazon.com/apigateway/api-reference/
+
+When you visit a website you have never been to before, you can intuitively find your way around and discover everything it offers, by interacting with the hyperlinks and forms embedded in its pages. We take "`surfing the web`" for granted now, but the idea of resources being discoverable by following hypermedia controls embedded directly in the content was one of the great innovations of the World Wide Web.
+
+In his {link-fielding-thesis}[distinguished PhD thesis] (2000), Roy Fielding wrote that "`hypermedia as the engine of application state`" (HATEOAS) was central to the design of the web. When a browser requests a resource, the server responds not only with that resource — updating the client's state — but also with information about the operations now available given that new state, encoded as hypermedia: links and forms embedded in the HTML. The user chooses their next action from the controls presented to them.
+
+By using hypermedia as the primary means to drive application state, client applications can be kept simple and generic. A web browser is the quintessential dumb client: to render pages it needs no hard-coded knowledge of any particular server's resources, only an understanding of general-purpose media types and protocols — HTTP, URI, HTML.
+
+So the contracts between clients and servers come in the form of _media types_. For the web, that media type is HTML, which defines generic hypermedia controls that let clients discover the resources and operations a server offers. An HTML `<form>` is one such control: through it, the server specifies the location of a resource and the fields required to submit data to it, and the client needs no prior information beyond the semantics of `<form>` itself.
+
+This design was pivotal to the web's runaway success. That extraordinary decoupling between clients and servers is what let the web scale like no distributed information system before it: browsers needed to know nothing about any particular server's resources, and servers needed to maintain no state about their clients.
+
+== Bringing hypermedia to web-service APIs
+
+Beyond the GUIs of websites, could we apply HATEOAS to web-service _APIs_ too — designing hypermedia-driven APIs such that generic clients could discover and interact with the resources and operations of _multiple_ services with no hard-coded knowledge of them?
+
+In such an API, client and server would share only a common media format, which the server uses to encode hypermedia controls in its responses and the client uses to discover and navigate the available resources and operations.
+
+This is very different from how almost all web-service APIs are designed today. To interact with an API, client programs typically need lots of hard-coded logic about endpoints, authentication, and the data schema of the exposed resources — so clients become tightly coupled to the interfaces that back them. The consequences are high maintenance costs, clients that must be updated whenever a server makes a breaking change, and services that must evolve slowly to preserve backwards compatibility. Tightly coupled client–server systems are rigid and brittle.
+
+A hypermedia-driven API would instead aim to let general-purpose clients interact with _any_ service supporting the same hypermedia types. A service could change its API without breaking clients, which would discover the new interface and adapt automatically — just as a browser has no trouble rendering a website that has redesigned itself.
+
+This is not a new idea. In a {link-semantic-web}[2001 Scientific American article], Tim Berners-Lee and colleagues set out a vision of semantic-web technologies that would let "`intelligent agents`" autonomously discover information and perform tasks, driven by rich semantic descriptions of resources. The question I want to explore here is narrower:
+
+[.lead]
+Could we apply the HATEOAS principle to the design of web-service APIs, enough to reduce the degree to which clients are programmed against rigid server interfaces?
+
+Consider that modern single-page web apps are typically built with deep knowledge of their business domain: domain entities, their relationships, and the operations on each are encoded as much in client code as on the server. And in service-oriented systems like microservices, knowledge of subdomains tends to leak out of the very services meant to encapsulate it. Services are never truly discoverable in a fully automated way. Can we improve this by taking HATEOAS from web GUIs (human interfaces) to web APIs (machine interfaces)?
+
+== Hypermedia types
+
+First, we need a media type with semantics rich enough to _drive_ client behaviour. At minimum, server responses must encode all the resources and operations available to explore. A provider could invent a proprietary schema for this. A simple example:
+
+[source,http]
+----
+GET /
+Accept: application/vnd.api.example.com+json
+----
+
+[source,http]
+----
+200 OK
+Content-Type: application/vnd.api.example.com+json
+{
+  "links": [
+    { "href": "/user", "rel": "list",   "method": "GET" },
+    { "href": "/user", "rel": "create", "method": "POST" }
+  ]
+}
+----
+
+A client could use this to render an interface offering the available actions. Choosing "`list users`" leads to a new request, whose response embeds, for each user, the controls for viewing, editing, and deleting that resource:
+
+[source,http]
+----
+GET /user
+Accept: application/vnd.api.example.com+json
+----
+
+[source,http]
+----
+200 OK
+Content-Type: application/vnd.api.example.com+json
+{
+  "users": [
+    {
+      "id": 1, "name": "Emil", "country": "Sweden",
+      "links": [
+        { "href": "/user/1", "rel": "self",   "method": "GET" },
+        { "href": "/user/1", "rel": "edit",   "method": "PUT" },
+        { "href": "/user/1", "rel": "delete", "method": "DELETE" }
+      ]
+    }
+  ]
+}
+----
+
+The aim is a schema that lets the server give machine-parsable descriptions of all its resources and operations. Clients need hard-coded knowledge of the _schema_, but not of the resources and operations themselves. Here the controls are a URI plus an HTTP method, with the `rel` attribute drawing on a common vocabulary — `self`, `edit`, `delete` — to give each control meaning.
+
+A true hypermedia API would need a richer schema still. For create and edit operations, for instance, the server would have to define every field, with its acceptable types and ranges, that the client must submit — because for the client to be truly server-_driven_, there must be no out-of-band information guiding its behaviour. Ideally we would have a _standard_ hypermedia format for machine interfaces, just as HTML is the standard for human ones, so that generic clients could consume any API adopting the same media types. The example above is proprietary, shared by a single client–server pair; the real power comes when generic, dumb clients can consume it.
+
+[quote, Mike Amundsen (2010)]
+____
+Hypermedia Types are MIME types that contain native hyper-linking semantics that induce application flow.
+____
+
+HTML is a hypermedia type. There are thousands of IANA-registered media types, but very few support hypermedia controls. General-purpose interchange formats like JSON and XML do not, on their own, cut it: they offer no convention for embedding linked data or defining hypermedia controls. We need a media type that does — and some standardization is on its way.
+
+== Hypermedia APIs versus "REST APIs"
+
+A network API that adhered to HATEOAS would be a _true_ REST API. As Fielding described it, REST is an architectural style that uses hypermedia as the engine of application state — so, as he put it in {link-fielding-hypertext}[a 2008 blog post], a REST API "`must be hypertext-driven`":
+
+[quote, Roy Fielding]
+____
+A REST API should spend almost all of its descriptive effort in defining the media type(s) used for representing resources and driving application state, or in defining extended relation names and/or hypertext-enabled markup for existing standard media types.
+____
+
+Unfortunately the term "`REST API`" has suffered {link-semantic-diffusion}[semantic diffusion] over the decades, and is now widely used as a synonym for any resource-oriented HTTP API. I {link-rethinking-rest}[wrote about this in 2021], suggesting we adopt a new term — _hypermedia API_ — for any API that adheres to HATEOAS (and which may or may not use HTTP).
+
+A hypermedia client hits an initial "`root`" endpoint and uses the server-provided links to discover available actions at runtime. It needs no prior knowledge of the service or the steps in a workflow, and it need not hard-code URI structures — so the server is free to change URIs as the API evolves without breaking clients, and version numbering becomes less of a concern.
+
+As far as I can see, as of 2021 there are no real-world web-service APIs that are _truly_ RESTful — fully state-driven by hypermedia controls in server responses. Many are marketed as "`REST APIs`", but none are true hypermedia APIs. In a single-page app, the client knows the business domain — the entity types, their relationships, the operations on each. In a truly RESTful API, the client would know only a _media type_: a standard for describing linked data and hypermedia controls. It would never know whether a resource represented a person, an organization, a location, or a device.
+
+The tell-tale sign is the documentation. If a service provides static documentation of its resources, types, endpoints, and operations, its API cannot be RESTful. A REST API should have no "`typed`" resources significant to the client; those things should be self-documenting in the server's responses. The only out-of-band documentation a truly RESTful API needs is a description of the media types it uses and a standard markup for link relations — generic concerns, not specific to any business domain.
+
+[quote, Roy Fielding]
+____
+A REST API should be entered with no prior knowledge beyond the initial URI (bookmark) and set of standardized media types that are appropriate for the intended audience… From that point on, all application state transitions must be driven by client selection of server-provided choices that are present in the received representations.
+____
+
+Think of the web. How many browsers know the difference between an online-banking resource and a wiki resource? None. They need not be aware of resource _types_; they need only be aware of the potential state transitions — the links and forms — and the semantics implied by traversing them, which the browser renders as distinct UI controls. Typed relations, specific media types, and action-specific elements provide the guidance automated agents need. As with human communication, we always need a common vocabulary to make sense of things; exposing that vocabulary in the representation makes it easy to adopt. Some of it will be standardized, some domain-specific, but agents must be adaptable to new vocabulary.
+
+People have made valiant attempts to bring this to web-service APIs. The most promising standards are JSON-LD and Hydra.
+
+== HAL
+
+One of the simplest conventions for embedding linked relations in JSON is the Hypertext Application Language, HAL. It began as a {link-hal-spec}[personal project], and its JSON variant is now on a {link-hal-draft}[standardization track]. Development seems to have stalled since around 2016, but HAL has achieved good real-world adoption — both Amazon and Netflix have used it, there is an impressive choice of client libraries, and it is supported out of the box by Java's Spring framework.
+
+Its simplicity is surely key to its popularity, as is the ease of retrofitting it to existing APIs. Take a plain JSON resource:
+
+[source,json]
+----
+{
+  "id": "cc8d644b-62d9-45a1-8b60-ea2a6173e0d1",
+  "isbn": "9780091906818",
+  "title": "How to Win Friends and Influence People",
+  "author": "Dale Carnegie"
+}
+----
+
+To make it HAL, you add two reserved properties — `_links` and (optionally) `_embedded` — and change the media type to `application/hal+json`. The minimal HAL response carries an empty resource and a reference to itself:
+
+[source,json]
+----
+{
+  "_links": {
+    "self": { "href": "/path/to/resource" }
+  }
+}
+----
+
+The names of the properties of `_links` are link relations (`rel`), indicating the semantics of each link; any standard relation is supported. `_embedded` holds resources from which the current resource is composed, which is handy for collections. HAL also supports {link-curie}[CURIE] notation for compacting repeated URIs.
+
+Crucially, in HAL the linked resources are usually not API resources at all, but links to _human-readable documentation_ about them. It is not required, but the intention is to define the links using an industry standard such as {link-rfc5988}[RFC 5988]. {link-collection-json}[Collection+JSON] and {link-siren}[Siren] are similar, with a little more functionality. All of them offer the same basic ingredient for discoverable APIs: a single entry point that reveals documentation on the available endpoints.
+
+But although HAL claims to let "`automated actors`" move through an API, it does not live up to that. It works perfectly well as _in-band documentation_ for the developers of client applications — an alternative to OpenAPI and other static conventions — but it offers nowhere near the semantic information required for an API to be understood by machines.
+
+== JSON Hyper-Schema
+
+{link-json-hyper-schema}[JSON Hyper-Schema] is another lightweight option, extending {link-json-schema}[JSON Schema] with {link-uri-templates}[IETF URI templates]. JSON Schema is a well-designed standard that has become the de facto means of defining and validating JSON, used in Google's API Discovery Service and (as an extended subset) in the OpenAPI Specification. Hyper-Schema is less informal and more capable than HAL, and like HAL it is intended as an optional progressive enhancement to clients that expect plain JSON. But it, too, is limited.
+
+== Linked data: RDF and JSON-LD
+
+The {link-rdf}[Resource Description Framework (RDF)] is the cornerstone of the "`semantic web`", a family of W3C specifications dating back to 1996 (RDF 1.0 finalized in 2004, RDF 1.1 in 2014). It is mature and stable, and — best of all — versatile: it is not tied to any particular syntax or serialization, so its semantics can be embedded in all sorts of media. There is no reason it cannot be ported to web-service APIs; it is explicitly intended for exchanging machine-readable information over the web.
+
+The RDF data model is built on making statements about resources in the form _subject–predicate–object_. These statements are _triples_, and they are the building block of any RDF model. A triple can express a property of a resource or a relationship (link) between resources, yielding a graph in which resources are nodes and links are edges. RDF components are usually identified by URIs which, although they look like web addresses, need not point at an actual page.
+
+RDF has several serialization formats — Turtle, N-Triples, N-Quads, Notation3, RDF/XML, RDF/JSON — but the one most interesting here is *JSON-LD*. {link-json-ld}[JSON-LD], a W3C standard, represents linked data in JSON, built around the concept of a "`context`" that maps to an RDF model. Where it trumps HAL and Hyper-Schema is that it can be extended with vocabularies (ontologies) such as `schema.org` to say what _kind_ of data is being linked to, giving the data more semantics. For this reason it is emerging as the conventional media type for hypermedia APIs, used for example in Gmail's API.
+
+Clients that know the JSON-LD schema can discover and follow links with no other out-of-band documentation — a concept known as "`following your nose`". One of the big ideas behind RDF is that serializations map values to standardized types from a common vocabulary such as {link-schema-org}[schema.org], rather than to arbitrary keys, so that a client familiar with the vocabulary can derive meaning without external documentation.
+
+But note: both HAL and JSON-LD are solutions for _linked data_ — embedding links to related resources and operations. On their own they are not enough for full client automation. For that, hypermedia controls must be the _primary_ mechanism driving the client's state.
+
+== Vocabularies: schema.org, Hydra, and ontologies
+
+A key component of any hypermedia API is a *shared, well-defined vocabulary* that both providers and consumers understand. If they speak the same language, they can understand one another. In hypermedia APIs the choice of vocabulary matters far more than traditional concerns like URL structure: the consumer is king, and good URL structures, while they aid the provider's maintainability, make little difference to how consumers use an API.
+
+`schema.org` is a go-to vocabulary — a collaboration between Google, Yahoo, Microsoft, and Yandex representing common data structures and their relations, exposable as JSON-LD, microdata, or RDFa. Its models cover a broad spectrum: creative works, e-commerce, events, medicine, social networking, people, addresses, organizations, places, reviews. In `schema.org`, the names of things are URIs rather than plain strings; in simple terms, it is a big collection of URIs. So, for example, a client wanting to place an order with a webshop can scan the links in the responses, find one described with `http://schema.org/OrderAction`, and — knowing the vocabulary — understand that activating that link will send the order.
+
+JSON-LD does not itself provide a vocabulary for describing the _purpose_ of every link, but it can be extended with *Hydra*, which does. {link-hydra}[Hydra] is a {link-hydra-core}[vocabulary] that extends JSON-LD to describe what you can do with individual hypermedia links, and provides machine-readable documentation — specifying an API's entry point and its possible response statuses, for example. Its goal is to finally realize true hypermedia-driven APIs, in which smart clients discover and _understand_ resources at runtime with minimal hard-coded knowledge:
+
+[source,json]
+----
+{
+  "@context": [
+    { "@vocab": "http://schema.org/" },
+    "http://www.w3.org/ns/hydra/core"
+  ],
+  "@id": "http://schema.org/attendees",
+  "supportedOperation": {
+    "@type": "AddAction",
+    "method": "POST",
+    "expects": {
+      "@id": "Person",
+      "supportedProperty": { "property": "name", "required": true }
+    }
+  }
+}
+----
+
+Above RDF sit further schema languages. *RDF Schema (RDFS)* extends RDF with constructs such as `rdfs:subClassOf` for modelling more complex relations, and the *Web Ontology Language (OWL)* extends RDFS further still, supporting class hierarchies, taxonomies, and conceptual models — the basis for ontologies like the BBC's. *SKOS* brings legacy schemes — thesauri, classification schemes, taxonomies — into semantic-web applications. RDF, RDFS, and OWL are complementary, a means of expressing increasingly complex knowledge.
+
+== Why web apps don't work this way
+
+All server-rendered websites follow the hypermedia model, but modern single-page web apps do not. They are built with a _model-driven_ architecture: application state lives in the client, whose interface responds to changes in a local data model, optionally persisted upstream via an API. The server may push updates to the local model, but it does not drive state transitions; instead, the available server-side resources and operations are hard-coded into the client.
+
+This brings real advantages. Interfaces can be highly responsive, because round trips to the server are eliminated for many operations, and many apps can work offline for extended periods. It follows that most web-service APIs are designed around a conventional resource-based architecture with CRUD-like operations — a natural fit for the model-driven clients they back.
+
+== Pie in the sky?
+
+Realizing true hypermedia APIs remains niche, and nowhere near mainstream. It is a hard problem, and the REST constraints of HATEOAS and code-on-demand fit awkwardly with modern web APIs. UX designers prefer specialist interfaces for different resources and operations — which suits model-driven single-page clients — and shipping code-on-demand is a well-known security risk. You also cannot easily build offline-first apps if every state transition needs a connection.
+
+So I do not think hypermedia APIs will _replace_ existing protocols — plain HTTP, SOAP, OData, GraphQL. Rather, they will open up entirely new use cases. If you are the only consumer of your API — building a single-page app, or an internal-only service — you almost certainly do not need a hypermedia-driven service, because you have only one client. Hypermedia APIs come into their own when:
+
+. you have lots of clients, owned by third parties;
+. those clients are predominantly other programs, rather than humans;
+. the end users don't want to do much work — integrating SDKs, writing boilerplate — to consume your API;
+. arguably, the API is fully public (no authentication) rather than private.
+
+So if you want an API that can be used across the web, as general and as easy to consume as possible, and as stable and enduring as it can be, then invest more in its design and seriously consider — if not full-blown hypermedia — at least some aspects of it.
+
+== Conclusions
+
+By this definition, "`hypermedia API`" is a pretty niche concept. I have seen production APIs that integrate linked data — the "`REST API`" to {link-aws-apigw}[Amazon's API Gateway] embeds HAL — but I have yet to see a real-world API that _also_ adopts a standardized vocabulary such as Hydra Core to describe its linked data. Without both components — a linked-data model defined using a standard vocabulary — an API cannot be fully RESTful. Linked data alone is not enough, because the client would still need knowledge of the API's data model to navigate the resources.
+
+As of 2021, authentic hypermedia APIs have yet to be realized. This remains a largely theoretical endeavour at the leading edge of the web's development. (I am working on a follow-on post going deeper into JSON-LD, Hydra, and OWL, where I reach a similar conclusion: hypermedia will not replace HTTP APIs or other existing conventions, and would bring little value to proprietary client apps, where model-driven architectures fit perfectly well.)
+
+But what hypermedia APIs _will_ do is make possible entirely new categories of data service that simply do not exist today. The use cases will be niche — I can imagine real benefit to governments' "`open data`" initiatives, and other big-data scenarios.
+
+.Further reading
+****
+* Markus Lanthaler is a leading authority on next-generation hypermedia-driven APIs with JSON-LD and Hydra: {link-lanthaler-hydra}[markus-lanthaler.com/hydra]
+* {link-hydra-cg}[The W3C Hydra community group] — free to join
+* {link-schema-org}[schema.org] · {link-json-ld}[JSON-LD] · {link-hydra-core}[Hydra Core vocabulary]
+****
