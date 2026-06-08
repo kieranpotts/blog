@@ -1,0 +1,84 @@
+= Accidental languages
+Kieran Potts
+:description: Why do badly designed languages and formats become so popular? Often because their very looseness lets users bend them to ends their creators never imagined. PHP is the classic case.
+:docinfo: shared
+:nofooter:
+
+:link-php-25: https://www.youtube.com/watch?v=nmD1Q4FsXCc
+
+Why do badly designed languages become so popular?
+
+Part of the answer is that bad design _works_, in the sense that it gives users more flexibility to bend the technology to their own use cases. Some of the most widely used languages and formats in computing were never designed to be what they became:
+
+* PHP was supposed to be just a templating language.
+* JavaScript was designed in ten days.
+* Markdown began as an informal spec.
+* JSON was a minimal, informal spec — later standardized, and never really intended as a configuration-file format.
+* INI files have no standard at all.
+* CSV has a recent RFC, but almost nothing follows it.
+
+The most instructive case is PHP.
+
+== How PHP happened
+
+In his talk reminiscing about {link-php-25}[25 years of PHP], Rasmus Lerdorf explains how the language came about. It began with the launch of the Mosaic web browser. When Lerdorf saw Mosaic, he realized the world was about to change, and he started writing web applications.
+
+His initial approach was to generate HTML from C — CGI scripts written in C with HTML embedded inside the C program. This was not a pleasant developer experience. What Lerdorf wanted was for his HTML to look like HTML, with the business logic separated from the front-end templating.
+
+So he wrote a "`C API for the web`": essentially an HTML templating engine in C, which let you write HTML with dynamic content like this:
+
+.PHP circa 1994–1995
+[source,html]
+----
+<html><head><title>Form Example</title></head>
+<body><h1>Form Example</h1>
+<form action="form.phtml" method="POST">
+Name: <input type="text" name="name" >
+Age: <input type="text" name="age" >
+<br><input type="submit">
+</form>
+<?if($name):?>
+Hi <?echo $name?>, you are <?echo $age?> years old
+<?endif?>
+</body></html>
+----
+
+Lerdorf found that every new web application repeated a load of the same boilerplate — parsing cookies, parsing POST data, sending cookies, communicating with the Apache web server — so he abstracted all of that into a simple, stack-based C API for the web.
+
+If you wanted to add a new tag to the templating system, you wrote it in C:
+
+.A cosine function, in C
+[source,c]
+----
+void Cos(void) {
+    Stack *s;
+    char temp(64);
+    s = Pop();
+    if(!s) {
+        Error("Stack error in cos");
+        return;
+    }
+    sprintf(temp, "%f", cos(s->douval));
+    Push(temp,DNUMBER);
+}
+----
+
+…and then used it from your HTML templates:
+
+[source,html]
+----
+<html><head><title>Cos Example</title></head>
+<body><h1>Cos Example</h1>
+<?echo Cos($input)?>
+</body></html>
+----
+
+Lerdorf imagined that people would write their business logic in a strictly typed, compiled language like C or C++, and then surface that logic within his templating system.
+
+== That is not what happened
+
+Nobody wanted to write C. People just wanted to use the templating system — and then they complained about the things they could not do within it. PHP began life as a templating system, and a very restricted one at that. You were supposed to write your business logic separately and "`expose`" it to the templates. Lerdorf had not imagined that people would try to write their logic _in_ PHP, alongside their HTML.
+
+This was partly economics. The web was growing very fast, and there were not enough C developers in the world to meet demand. PHP inadvertently offered a solution: an easy way to write simple server-side logic, executed by the Apache server via the `mod_php` module — efficient, and tightly integrated with the HTTP request–response cycle.
+
+PHP has taken a lot of criticism over the years, but in fairness most of it stems from those early design constraints. It was never intended to become the full-blown, multi-paradigm programming language it is today. And for all its faults, PHP played no small part in making web design and development accessible to the general public, opening up the web platform far beyond the IT realm.
