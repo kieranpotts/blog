@@ -1,0 +1,34 @@
+= Trend-driven development
+Kieran Potts
+:description: For all our self-image as rational engineers, software is a wildly fashion-driven industry. Development ought to be problem-driven, not led by whatever the big names are doing this year.
+:docinfo: shared
+:nofooter:
+
+:link-pop-culture: https://softwarecrisis.dev/letters/tech-is-a-pop-culture/
+:link-bbc-sparkly: https://www.bbc.co.uk/sounds/play/w3ct5q2b
+
+One of the great things about our industry is how generously everyone lifts each other up — through open source, the sharing of ideas, the willingness to learn from one another. But that same openness has a downside: it makes us prone to a superficial, fashion-driven approach to building software.
+
+Time and again we see the thoughtless adoption of new technologies and processes. New languages, new frameworks, new methodologies, new tools. Microservices, serverless, containers. Agile, Scrum, DevOps. Each arrives on a wave of enthusiasm, and a great many teams adopt it not because it fits their problem, but because it is what everyone is talking about.
+
+It can feel like working in the fashion industry. Perhaps this is a perfectly human thing to do — a way of signalling that we are current, relevant, smart, capable. But it is also a way of avoiding the harder work: of thinking for ourselves, understanding the problem in front of us, and arriving at a solution that actually suits it.
+
+Software has always been like this, but the modern era of social media — where ideas spread faster than ever — seems to have made it more acute.
+
+Development ought to be _problem_-driven, not fashion-driven. We should start from the problem we are trying to solve, and the constraints we are working under, and then design something appropriate to both. Not every organization has the need, or the resources, to build distributed systems capable of scaling like Netflix.
+
+IT folk like to think of ourselves as supremely rational, seeing the world in terms of logic and abstraction. But we are just as susceptible to fashion as anyone else. The reality is that software is a wildly fashion-driven field.
+
+There is a cognitive dissonance at work here, too: when something becomes popular, its definition gets diluted and it turns into a buzzword. Martin Fowler called this _semantic diffusion_.
+
+I think most of us genuinely want to do the right thing and work to the latest standards. The way we often go about that is by looking to whoever we perceive to be setting those standards — Netflix and microservices, say. And because we all have too much to do, too much cognitive load, and perhaps because we are a little lazy or a little unsure of our own judgement, we copy what others do rather than reasoning from first principles.
+
+== Why we are dazzled by shiny new things
+
+The psychology behind our magpie tendencies is fascinating. One theory holds that our love of shiny new technology is connected to one of our deepest evolutionary drives: the instinct to seek out clean, fresh, sparkling water.
+
+.Related links
+****
+* {link-pop-culture}[Tech companies are irrational pop cultures], Baldur Bjarnason, _Out of the Software Crisis_, 2023
+* {link-bbc-sparkly}[Unexpected Elements: Why we are dazzled by new sparkly things], BBC Sounds, 2024
+****
