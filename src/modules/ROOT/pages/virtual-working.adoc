@@ -1,0 +1,35 @@
+= Virtual working
+Kieran Potts
+:description: We already work virtually, even when we share an office. The next step is not hybrid or remote but virtual reality — and the real question is who gets to define how a team works.
+:docinfo: shared
+:nofooter:
+
+Welcome to the age of virtual working.
+
+In truth, the age is already here. Software-as-a-service tools — Slack, Zoom, Jira, GitHub — mediate the way teams communicate whether or not they share a building. Even sitting in the office, you are still working through these tools. The pandemic accelerated the trend, and many organizations now treat remote work as a permanent option.
+
+I suspect the future of work is not hybrid or remote, but virtual reality.
+
+''''
+
+It helps to separate two activities that we tend to conflate. _Computer programming_ is something that can be done off-site. _Software development_ — the broader, collaborative endeavour — wants to be on-site, because so much of it is about communication, and you lose signals such as body language when you are not in the same room.
+
+But what it means to be "`on-site`" is changing. It no longer has to mean being in the same building, and increasingly it won't. With virtual reality, you can be in the same room as someone on the other side of the world: you can read their body language, and they can read yours, and you can collaborate in real time as though you were sitting together.
+
+This is likely to be one of the big shifts of the next decade. As VR headsets become widely available and affordable, many applications will compete for our attention through them, and with broadband capacity ever-increasing it is easy to imagine headsets replacing today's headphones, microphone, and webcam — not just in gaming and the consumer space, but in corporate environments too.
+
+What we now call remote working will become virtual-reality working, and it will be the norm.
+
+There is plenty of evidence that organizations are trying to entice — or bully — their staff back into the office after the pandemic. I believe this will prove a temporary reversal. The long-term trend is towards virtual working, and the barriers to it will keep falling.
+
+''''
+
+Modern open-plan offices are wonderful for software development. They are lousy for computer programming, which is a deeply individual activity that demands quiet and concentration. The two need different environments, and pretending otherwise serves neither.
+
+''''
+
+There are still dinosaur managers who insist, on principle, that everyone come to the office. There are also work-from-home zealots convinced that remote is 100% of the answer for 100% of people. Both are wrong, and the cost of getting it wrong is the same: losing your best people.
+
+The real question is who decides. Should the company dictate the working culture? Or should the team define its needs, and the company accommodate them?
+
+Hybrid working is not "`two days in, three days out`", or any other fixed formula imposed from above. It is the team working out what it needs, and the organization making that possible.
