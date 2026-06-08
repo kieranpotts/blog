@@ -1,0 +1,52 @@
+= The case for regulating the software industry
+Kieran Potts
+:description: Software is now critical infrastructure, yet it is regulated like almost nothing else of comparable importance. The XZ Utils backdoor is a reminder of how exposed we are.
+:docinfo: shared
+:nofooter:
+
+:link-economist-xz: https://www.economist.com/science-and-technology/2024/04/02/a-stealth-attack-came-close-to-compromising-the-worlds-computers
+
+== Critical infrastructure
+
+IT systems are now critical infrastructure. So much of our economic and social life depends on them. Yet the software industry is not regulated in the way other critical-infrastructure industries are — energy, transport, water. That is a problem.
+
+== Professional standards
+
+It is regrettable that software development has never developed, as a discipline, the kind of ubiquitous shared practices you find in professions such as medicine and law. Different jobs in our field have entirely different ways of working, with their own standards and conventions, and there is little that unites them.
+
+Software remains unregulated in most domains. Perhaps it is precisely this lack of regulation that has allowed such a plethora of practices to flourish — for better and for worse.
+
+== Social responsibility
+
+The technology industry should take more responsibility for the impact it has on people's lives.
+
+So many social problems have arisen from the widespread adoption of new technologies. But technology evangelists tend to downplay the harms and focus on the benefits. It would be better, in my view, to take a more proactive approach to mitigating the negative consequences of what we build. We should talk less about "`disrupting`" the status quo, and more about how technology can be used to genuinely improve our lives — but only if we are careful about how we use it.
+
+== Open-source risks
+
+On 29 March 2024, Andres Freund, a software developer at Microsoft, published a blog post about a security vulnerability he had discovered in the open-source software that powers the majority of the world's web servers.
+
+He had noticed that SSH — the system for logging into another computer over a network — was running about 500 milliseconds slower than normal. On closer inspection, Freund found that malicious code had been added to SSH via a dependent library called XZ Utils, used for data compression. The malicious code appeared to be designed as a master key, allowing an attacker to steal encrypted data or to plant further, more dangerous code.
+
+XZ Utils is open-source software, widely installed on Linux systems — in this case as a dependency of SSH. Since almost all web servers run Linux, this was a major security scare. It was a stroke of luck that Freund noticed the slowdown at all, raised the alarm, and got the malware removed before it caused widespread damage.
+
+How did the malware get there?
+
+[quote, The Economist (2 April 2024)]
+____
+xz Utils is open-source software, meaning that its code is public and can be inspected or modified by anyone. In 2022 Lasse Collin, the developer who maintained it, found that his "`unpaid hobby project`" was becoming more onerous amid long-term mental-health issues. A developer called Jia Tan, who had created an account the previous year, offered to help. For more than two years he, she or they contributed helpful code on hundreds of occasions, building up trust. In February they smuggled in the malware.
+____
+
+The changes were made cleverly enough that they were not immediately recognizable as a backdoor. This was a sophisticated, patient, well-planned attack.
+
+[quote, The Economist (2 April 2024)]
+____
+The attack is perhaps the most ambitious "`supply-chain`" attack — one that exploits not a particular computer or device, but a piece of back-end software or hardware — in recent memory.
+____
+
+Defenders of open source argue that because the code is public, anyone can inspect it, and so it is more secure. But in practice very few people actually do inspect it — and even when they do, a well-hidden backdoor is extremely hard to spot.
+
+.Related links
+****
+* {link-economist-xz}[A stealth attack came close to compromising the world's computers], The Economist (2 April 2024)
+****
