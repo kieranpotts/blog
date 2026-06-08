@@ -1,0 +1,21 @@
+= I ❤️ UML
+Kieran Potts
+:description: UML fell out of fashion in the agile era, dismissed as heavyweight and bureaucratic. But used informally — as a sketching notation rather than a specification language — it remains one of the best tools we have for thinking about design.
+:docinfo: shared
+:nofooter:
+
+:link-hn-uml: https://news.ycombinator.com/item?id=21564990
+
+UML is deeply unfashionable, and has been for years.
+
+In the agile era it came to be seen as overly bureaucratic — the calling card of a heavyweight, document-driven process: thick specifications, model-driven tooling, diagrams maintained for their own sake long after they had stopped describing anything real. When the industry recoiled from big up-front design, it recoiled from UML along with it. (You can find the familiar arguments rehearsed in {link-hn-uml}[any number of online threads].)
+
+I think we threw out something valuable.
+
+The mistake was to conflate _formal_ UML — the full, rigorous, tool-enforced specification language — with UML as a _notation_. The two are not the same thing. The notation is just a shared visual vocabulary for talking about software: boxes for the things in a system, lines for the relationships between them, a handful of conventions for showing sequence, state, and structure. Used that way — informally, on a whiteboard or the back of an envelope, drawn to think rather than to document — it is one of the best tools we have.
+
+A quick class diagram or sequence diagram can settle a design argument in minutes that prose would labour over for pages. It externalizes a model that would otherwise live only in someone's head, and makes it something a group of people can point at, disagree about, and refine together. None of that requires a modelling tool, a methodology, or a commitment to keep the diagram in sync with the code forever. It just requires that everyone reads the boxes and lines the same way — which is exactly what a shared notation gives you.
+
+So I ❤️ UML. Not the bureaucracy that grew up around it, but the simple, durable idea underneath: that a common visual language for software design is worth having, and worth keeping sharp.
+
+image::diagrams/informal-uml-notation.png[]
