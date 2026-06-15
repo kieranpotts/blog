@@ -1,4 +1,4 @@
-* xref:index.adoc[Blog]
+* xref:index.adoc[Thoughts]
 ** xref:mythical-man-month-50.adoc[The Mythical Man-Month at 50]
 ** xref:the-quality-without-a-name.adoc[The (software) quality without a name]
 ** xref:php-is-30.adoc[PHP is 30]
