@@ -44,7 +44,7 @@ Based on his experience on OS/360, Brooks suggests that the costs of large-scale
 
 The consequence of basing costs and schedules on programming effort alone is that, if schedules are not subsequently adjusted to accommodate all the other necessary work, then quality is necessarily compromised to meet the original schedule. Most lamentably of all, such plans leave no room for product refinement based on real-world product testing.
 
-[quote]
+[quote, Fred Brooks]
 ____
 Project after project designs a set of algorithms and then plunges into construction of customer-deliverable software on a schedule that demands delivery of the first thing built.
 ____
@@ -81,14 +81,14 @@ Brooks's central argument for this is that adding people to a late project incre
 
 And some programming tasks just cannot be parallelized, but must be done sequentially. If programmers are already optimally allocated to these tasks, adding more programmers will not speed up their completion. To illustrate this point, Brooks offers the suitably colorful analogy of child bearing:
 
-[quote]
+[quote, Fred Brooks]
 ____
 The bearing of a child takes nine months, no matter how many women are assigned.
 ____
 
 Brooks coins the term "`man-month`" to represent one unit of additional manpower (one person working for one month). Because adding resources to a project in the form of extra man-months increases overall effort, it does not necessarily correspond to an increase in the speed of progress. And yet, 50 years ago, Brooks says this was a widely held belief and a common practice – hence the "`mythical`" nature of extra man-month resources.
 
-[quote]
+[quote, Fred Brooks]
 ____
 Men and months are interchangeable commodities only when a task can be partitioned among many workers _with no communication among them_. This is true of reaping wheat or picking cotton; it is not even approximately true of systems programming.
 ____
@@ -116,7 +116,7 @@ Better to increase the number of months than the number of men – although, of 
 
 Brooks expands on this subject in chapter 14, titled "`Hatching a Catastrophe`", in which he argues for the use of tools like https://asana.com/resources/pert-chart[PERT charts], and scheduling techniques like delivery milestones, to keep track of progress. Without good tools and techniques to monitor progress, day-to-day schedule slippage is hard to recognize, hard to prevent, and hard to make up for – leading, imperceptibly, to catastrophically late delivery.
 
-[quote]
+[quote, Fred Brooks]
 ____
 How does a project get to be a year late?… One day at a time.
 ____
@@ -179,7 +179,7 @@ If we want to prioritize development efficiency and the quality of the final pro
 
 Brooks draws on a solution first proposed by Harlan Mills in a 1971 IBM paper.
 
-[quote]
+[quote, Fred Brooks]
 ____
 Mills proposes that each segment of a large job be tackled by a team, but that the team be organized like a surgical team rather than a hog-butchering team. That is, instead of each member cutting away on the problem, one does the cutting and the others give him every support that will enhance his effectiveness and productivity.
 ____
@@ -230,7 +230,7 @@ Conceptual integrity is a quality of a system that emerges from its high-level d
 
 A conceptually well-integrated system tends to be faster to build and test, easier to maintain, and it is less susceptible to bugs and other types of defect. We can also more confidently change parts of such systems, because we can draw upon our mental map of the architecture and understand intuitively the full repercussions of making our changes.
 
-[quote]
+[quote, Fred Brooks]
 ____
 I will contend that conceptual integrity is _the_ most important consideration in system design. It is better to have a system omit certain anomalous features and improvements, but to reflect one set of ideas, than to have one that contains many good but independent and uncoordinated ideas.
 ____
@@ -255,7 +255,7 @@ Top-down design was promoted in the 1970s by IBM researchers Harlan Mills and Ni
 
 The work of Mills and Wirth was influential on Brooks's own approach to software design. He concluded:
 
-[quote]
+[quote, Fred Brooks]
 ____
 I am persuaded that top-down design is the most important new programming formulation of the decade.
 ____
@@ -312,7 +312,7 @@ The idea is taken from chemical engineering, where a new production process is r
 
 Brooks uses the analogy of letter writing, suggesting that successful software development depends a great deal on trial and error. The pilot system allows the process of trial and error to be played out in a throw-away "`draft`" system, which he argues is preferable to incrementally changing the production system mid-flight.
 
-[quote]
+[quote, Fred Brooks]
 ____
 Plan to throw one away; you will, anyhow.
 ____
@@ -329,7 +329,7 @@ Brooks writes that, for hardware products like cars and computers, the existence
 
 Thus it is the very nature of software, as an inherently soft and malleable product category, that requirements continually change – not only during the initial construction of the product, but also throughout its subsequent lifespan.
 
-[quote]
+[quote, Fred Brooks]
 ____
 The only constant is change itself.
 ____
@@ -366,7 +366,7 @@ image::diagrams/bug-discovery-over-time.svg[]
 
 Furthermore, fixing a defect has a substantial chance – 20% to 50% – of introducing another defect. To counteract this, Brooks says that after each fix the entire bank of test cases must be re-run against the system. Today we call this regression testing and we automate it.
 
-[quote]
+[quote, Fred Brooks]
 ____
 Methods of designing programs so as to eliminate, or at least illuminate, side effects can have an immense payoff in maintenance costs.
 ____
@@ -392,7 +392,7 @@ In chapter seven, titled "`Why did the Tower of Babel fail?`", Brooks uses the b
 
 Brooks calls the Tower of Babel "`the first engineering fiasco`". But it was not to be the last. The Tower of Babel failed, like many subsequent engineering projects, not for lack of manpower, materials, time, or knowledge, but because the collaborators failed to communicate effectively with one another, and therefore they could not efficiently coordinate their individual efforts.
 
-[quote]
+[quote, Fred Brooks]
 ____
 Communication and its consequent, organization, are critical for success. The techniques of communication and organization demand from the manager much thought and as much experienced competence as the software technology itself.
 ____
@@ -425,7 +425,7 @@ Intriguingly, Brooks suggests that testing ought to be done "`early and simultan
 
 Brooks also advocates that product testing is best delegated to an external body, rather than being done internally by the same organization that built the product. This independent product testing organization is responsible for checking the system against its requirements specifications, and serving as a devil's advocate, pinpointing every conceivable defect and discrepancy in the final delivered product. "`Every development organization needs such an independent technical auditing group to keep it honest.`"
 
-[quote]
+[quote, Fred Brooks]
 ____
 In the last analysis the customer is the independent auditor. In the merciless light of real use, every flaw will show. The product-testing group then is the surrogate customer, specialized for finding flaws.
 ____
@@ -442,7 +442,7 @@ He advocates there be "`one toolmaker per team... [who] masters all the common t
 
 The rest of the chapter looks at the categories of tools that Brooks recommends be standardized in all teams. Brooks is particularly strong in his advocacy for greater use of high-level programming languages and interactive debugging – tools that were in their infancy in 1975 and had not been available for the OS/350 development effort just a decade earlier.
 
-[quote]
+[quote, Fred Brooks]
 ____
 The most important tools for system programming today are two that were not used in OS/360 development almost a decade ago. They are still not widely used [in 1975], but all evidence points to their power and applicability. They are (1) high-level language and (2) interactive programming. I am convinced that only inertia and sloth prevent the universal adoption of these tools; the technical difficulties are no longer valid excuses.
 ____
@@ -467,7 +467,7 @@ Brooks also writes that, on large-scale software projects, individual teams tend
 
 And Brooks writes that the best-performing systems – those that are genuinely lean and fast – peform well because of strategic innovations, such as well-designed algorithms, rather than tactical cleverness. And the greatest performance optimizations can usually be found in the strategic design of data. Redoing the representation of data will often yield bigger performance improvements than optimizing the business logic, Brooks observes.
 
-[quote]
+[quote, Fred Brooks]
 ____
 Representation is the essence of programming.
 ____
@@ -494,7 +494,7 @@ Accidental complexity, on the other hand, arises from our choices of tools, lang
 
 Brooks's argument is that most of the challenges in software development arise from software's essential complexity, not its accidental complexity. It is the nature of software systems that they are "`more complex than most things people build`". Software systems have a large number of possible states, which makes conceiving, describing, and testing them very hard to do. And, unlike physical products, scaling up is not a matter of producing more of the same thing, but it concerns designing, constructing, and testing entirely new and original components and having them interact seamlessly with existing components. Software, uniquely, "`is constantly subject to pressures for change`". Most software is continuously iterated, rather than updated versions being entirely new.
 
-[quote]
+[quote, Fred Brooks]
 ____
 Many of the classical problems of developing software products derive from this essential complexity and its nonlinear increases with size. From the complexity comes the difficulty of communications among team members, which leads to product flaws, cost overruns, schedule delays. From the complexity comes the difficulty of enumerating, much less understanding, all the possible states of the program, and from that comes the unreliability. From the complexity of the functions comes the difficulty of invoking those functions, which makes programs hard to use. From complexity of structure comes the difficulty of extending programs to new functions without creating side effects. From complexity of structure comes the unvisualized states that constitute security trapdoors.
 ____
@@ -521,7 +521,7 @@ Today, the resources and tools at our disposal are as powerful as they have ever
 
 Brooks eludes to this in the original 1975 epilogue to _The Mythical Man-Month_:
 
-[quote]
+[quote, Fred Brooks]
 ____
 The tar pit of software engineering will continue to be sticky for a long time to come. One can expect the human race to continue attempting systems just within or just beyond our reach; and software systems are perhaps the most intricate and complex of man's handiworks. The management of this complex craft will demand our best use of new languages and systems, our best adaptation of proven engineering management methods, liberal doses of common sense, and a God-given humility to recognize our fallibility and limitations.
 ____
