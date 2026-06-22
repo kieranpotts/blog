@@ -8,9 +8,9 @@ Kieran Potts, 5 October 2025
 :link-patterns-of-software: https://dreamsongs.com/Files/PatternsOfSoftware.pdf
 :link-wikipedia: https://en.wikipedia.org/wiki/The_Timeless_Way_of_Building
 
-Christopher Alexander's _The Timeless Way of Building_ is a classic text in architectural theory. It is widely admired in its industry for its provocative views on urban design. Beyond architecture of the built environment, it found popularity in the object-oriented programming community in the 1980s and 1990s. Decades later, it continues to offer lessons in how to approach software design, reminding us that the habitability of a codebase is just as important as its structural integrity.
+My holiday reading this year was {link-wikipedia}[_The Timeless Way of Building_] by Christopher Alexander. Published in 1979, the book is now regarded as a classic text in the field of urban design. The book is a philosophical and practical exploration of the patterns that make some buildings and places feel alive, harmonious, and emotionally resonant.
 
-My holiday reading this year was {link-wikipedia}[_The Timeless Way of Building_] by Christopher Alexander. Published in 1979 and now regarded as a classic text in the field of built environment architecture, the book is a philosophical and practical exploration of the patterns that make some buildings and places feel alive, harmonious, and emotionally resonant.
+Beyond architecture of the built environment, the book found popularity in the object-oriented programming community in the 1980s and 1990s. Decades later, it continues to offer lessons in how to approach software design, reminding us that the habitability of a codebase is just as important as its structural integrity.
 
 Alexander calls this the quality-without-a-name. It's that _je ne sais quoi_ that some buildings and urban spaces have, that can't be easily expressed in words – but we know it when we see it.
 

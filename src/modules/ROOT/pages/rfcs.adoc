@@ -26,7 +26,7 @@ Kieran Potts, 10 April 2024
 :link-clements:         https://resources.sei.cmu.edu/library/asset-view.cfm?assetID=30386
 :link-rfc-editor:       https://www.rfc-editor.org/rfc-index.html
 
-Requests for Comments (RFCs) are a strikingly underrated method. They are somewhat popular in free and open source software projects, but much less so in commercial, closed source ones. Yet they are equally valuable in both. RFCs have many, _many_ benefits, and practically no costs. Here's how to encourage your team to take up this mighty tool.
+Requests for Comments (RFCs) are a strikingly underrated method. They are somewhat popular in free and open source software projects, but much less so in commercial, closed source ones. Yet they are equally valuable in both. RFCs have many, _many_ benefits, and practically no costs.
 
 The RFC format {link-nytimes}[originated in 1969] in the ARPANET project, the forerunner of the Internet. RFCs remain in use to this day, primarily at the {link-ietf-rfcs}[Internet Engineering Task Force] and other IT standardization organizations. In this domain RFCs are used principally to facilitate technical standardization efforts and to document industry best practices.
 

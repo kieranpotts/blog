@@ -4,8 +4,6 @@ Kieran Potts, 28 December 2025
 :docinfo: shared
 :nofooter:
 
-Fred Brooks's classic book _The Mythical Man-Month_ was published 50 years ago. It was hugely influential on the then-nascent discipline of software development. How does it stand up today?
-
 https://en.wikipedia.org/wiki/Fred_Brooks[Frederick P Brooks Jr's] classic book _The Mythical Man-Month: Essays on Software Engineering_ was published in 1975 – 50 years ago. The book introduced many ideas and principles that were hugely influential on early practitioners of our craft. But which ideas have withstood half a century of technological change, and which have not?
 
 I got myself a copy of the original 1975 edition and the extended 20th anniversary edition, which added four new chapters. Here are my thoughts, organized by the main themes of the book and roughly aligning with the order of the chapters.

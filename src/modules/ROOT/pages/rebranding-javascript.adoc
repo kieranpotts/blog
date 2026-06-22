@@ -15,8 +15,6 @@ Kieran Potts, 14 October 2019
 
 :desc-logo: A yellow square with the letters JS in black in the bottom-right corner
 
-There are several problems with the JavaScript name. Is it time to rebrand JavaScript? If so, what should we call it?
-
 An interesting question was asked recently in LinkedIn's JavaScript group:
 
 [quote]
