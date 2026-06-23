@@ -83,7 +83,7 @@ Ask, too: _How are pay reviews handled? How is pay adjusted for inflation? How a
 * _How do you promote learning?_ Look not just for budgets and time for conferences and courses, but a culture where learning on the job is valued. Are they hiring for what you already know, or for your potential to learn? Will you have a coach or mentor?
 * _What is the average tenure of a developer here?_ A low figure is a red flag. Average tenure in tech is around 18 months (yes, really), but some teams buck the trend, and they will happily explain why.
 
-Look for a mix of individual and team evaluation, with a slight emphasis on the team; for _value added_, not "`doing whatever it takes to meet deadlines`". Listen for rewarding firefighting and long hours — long hours as a badge of honour is a red flag. If the interviewer's answers about success are vague, politely ask for clarification.
+Look for a mix of individual and team evaluation, with a slight emphasis on the team; for _value added_, not "`doing whatever it takes to meet deadlines`". Listen for rewarding firefighting and long hours — long hours as a badge of honor is a red flag. If the interviewer's answers about success are vague, politely ask for clarification.
 
 == Product
 
@@ -98,7 +98,7 @@ Finally, ask directly: _Do you plan to sell the company?_ A company built to be 
 
 == Requirements
 
-This next group interrogates how the organization manages changes through their life-cycle phases.
+This next group interrogates how the organization manages changes through their lifecycle phases.
 
 * _Where do functional requirements come from? How are they specified? How are cross-functional requirements, like performance and security, specified? How do you verify requirements?_
 * _How do you define requirements?_ They should be written from a user's perspective. If they are just task descriptions, suspect a feature factory.
@@ -138,7 +138,7 @@ The only guaranteed way to deliver predictably is to do _less_. That means prior
 * _How do you ensure delivery is sustainable and keeps costs low?_
 * _How do you manage change in software?_ Open-ended questions like this reveal what the organization thinks matters most.
 
-You are interested in how they balance the immediate needs of the business against the long-term health of the software and the team — strategic, long-term thinking over tactical, short-term fixes. Look for a product backlog kept separate from the sprint backlog, and a balance between delivering value and maintaining the software's health. We do two kinds of work: developing and operating the functional and non-functional requirements, and investing in the quality of the software and our ways of working. Product owners should _not_ have full control over prioritization. You are trying to learn whether they see engineering as a cost centre — a higher chance you'll be miserable. Micromanaged teams and fixed deadlines are red flags.
+You are interested in how they balance the immediate needs of the business against the long-term health of the software and the team — strategic, long-term thinking over tactical, short-term fixes. Look for a product backlog kept separate from the sprint backlog, and a balance between delivering value and maintaining the software's health. We do two kinds of work: developing and operating the functional and non-functional requirements, and investing in the quality of the software and our ways of working. Product owners should _not_ have full control over prioritization. You are trying to learn whether they see engineering as a cost center — a higher chance you'll be miserable. Micromanaged teams and fixed deadlines are red flags.
 
 == Construction
 
