@@ -141,6 +141,19 @@ The gap between management expectations and engineering realities grows steadily
 
 Breaking this cycle takes courage from both sides. Leadership must genuinely embrace uncertainty, accept that software development is _design_ and not _construction_, and empower teams to solve problems. But engineering must also communicate challenges early and often — and we are not very good at that. Most importantly, both sides must accept that real agility is not about following a methodology; it is about creating an environment where adaptation and learning are valued over rigid adherence to plans.
 
+Fred Brooks saw this clearly, decades before the manifesto, in _The Mythical Man-Month_:
+
+[quote, Fred Brooks, The Mythical Man-Month]
+____
+Structuring an organization for change is much harder than designing a system for change.
+____
+
+We talk endlessly about designing systems for change — loose coupling, modularity, evolutionary architecture — but say almost nothing about how to design the *organization* for change. This, I think, is what agile got wrong, or at least left unfinished: the manifesto and its offshoots are full of advice for restructuring how software gets built, but largely silent on how to restructure the organizations that build it.
+
+Plans, milestones, and schedules need to be treated as tentative, provisional, open to revision as you learn more — that is the whole point of iterating. But in most organizations, slippage against a plan is treated as a failure of project management, not as useful information. You cannot have it both ways: a plan that must be hit and a plan that is allowed to flex are incompatible demands, and no amount of process maturity resolves that contradiction. Until organizations stop punishing change to the plan, they will keep producing theatre — the rituals of agile bolted onto the incentives of waterfall.
+
+Brooks also points out that management structures must change as the system changes, which means keeping managers and technical people as interchangeable as their talents allow, rather than locking people into a rigid hierarchy of "`management track`" and "`technical track`". He gives the example of Bell Labs, which abolished job titles and hierarchy so that everyone was simply a "`member of the technical staff`" — a flat structure that let authority and responsibility flow to whoever the problem actually required, rather than to whoever held the title.
+
 == The human side of enterprise
 
 For me, the biggest drawback of Scrum is that it comes from the command-and-control school of project management. Software development thrives under self-organized teams. Douglas McGregor's _The Human Side of Enterprise_ (1960), a classic of organizational management, describes two management styles: Theory X, the traditional command-and-control style, and Theory Y, the more modern, self-organized one.
