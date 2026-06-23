@@ -127,6 +127,10 @@ The first kind destroys the very essence of software development — solving pro
 
 Perhaps, then, it was a mistake for "`the manifesto for agile software development`" to go no deeper than the fluffy stuff of culture and values. With no concrete rules, the "`Agile`" brand could be co-opted by anyone. The manifesto tells you what to _value_, not what to _do_. Perhaps it should have been more like Beck's XP book, with clearly defined methods and tools.
 
+Dave Thomas himself, talking with Sarah Taraporewalla on the GOTO Conferences podcast, calls this a "`mistake`" — the manifesto set out values but never specified how to implement them. The problem is that most people do not want to think for themselves; they want to be told what to do. So agile, meant to be a way of _thinking_ about software development, got converted into a product you can buy off the shelf — SAFe being the most extreme example. The thinking was hard, so the industry replaced it with a process you could purchase instead.
+
+This is also why Jeff Sutherland reportedly walked out of Thomas's 2015 "`Agile is Dead`" talk at GOTO. The talk struck at the commercial heart of the Scrum-industrial complex, not just at a methodology.
+
 == What should we do?
 
 I prefer not to use the word "`agile`" any more. It would be enormously useful if the industry simply stopped using it.
@@ -153,6 +157,12 @@ We talk endlessly about designing systems for change — loose coupling, modular
 Plans, milestones, and schedules need to be treated as tentative, provisional, open to revision as you learn more — that is the whole point of iterating. But in most organizations, slippage against a plan is treated as a failure of project management, not as useful information. You cannot have it both ways: a plan that must be hit and a plan that is allowed to flex are incompatible demands, and no amount of process maturity resolves that contradiction. Until organizations stop punishing change to the plan, they will keep producing theatre — the rituals of agile bolted onto the incentives of waterfall.
 
 Brooks also points out that management structures must change as the system changes, which means keeping managers and technical people as interchangeable as their talents allow, rather than locking people into a rigid hierarchy of "`management track`" and "`technical track`". He gives the example of Bell Labs, which abolished job titles and hierarchy so that everyone was simply a "`member of the technical staff`" — a flat structure that let authority and responsibility flow to whoever the problem actually required, rather than to whoever held the title.
+
+But here I have to admit a harder possibility, one Dave Thomas puts more bluntly than I have so far: that the failure of agile was built in from the start, because it cannot work unless the *whole* environment goes along with it. Agile delivery teams operating inside a top-down, bureaucratic organization are not bending that organization toward agility; they are absorbing an impedance mismatch that the rest of the business never has to feel. The team adapts; the organization does not; and the gap is paid for, every sprint, by the engineers.
+
+And most organizations, in practice, are not agile and show little sign of becoming so. They are what Thomas calls _self-healing bureaucracies_ — systems that, by their nature, resist exactly the kind of change that real agility requires. Push on one part of a bureaucracy and it does not bend; it closes back around the disturbance, the way a body closes around a splinter. Org charts get redrawn, new ceremonies get bolted on, the language of agility gets adopted — and the underlying distribution of power and risk-aversion is exactly what it was before.
+
+If that is right, then the courage I asked for above, from both sides, runs into a structural wall: individual leaders and individual teams can behave more like Theory Y, more like Starrett, for as long as they are personally willing to — but the organization around them will keep exerting pressure back toward the bureaucratic mean, because that is what bureaucracies are *for*. It may be that there is, in the end, very little that we as software developers can do to fix this from where we sit. We do not own the org chart, the budgeting cycle, or the incentives of the people above us. We can refuse to call it "`agile`" — that much is in our gift — and we can build pockets of genuine agility where the organization permits it. Whether those pockets can ever grow large enough to change the organism around them is a much harder question, and one the manifesto, for all its merits, never had an answer to.
 
 == The human side of enterprise
 
