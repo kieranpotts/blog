@@ -1,7 +1,7 @@
 = Thoughts
 Kieran Potts
-:description: Commentary on methods and tools for developing and maintaining \
-  software systems.
+:description: Commentary on methods and tools for developing and \
+  maintaining software systems.
 :docinfo: shared
 :nofooter:
 
