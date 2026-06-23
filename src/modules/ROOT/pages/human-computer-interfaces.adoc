@@ -1,3 +1,9 @@
 = Human-computer interfaces
 
 // TODO: The past, present, and future of human-computer interfaces.
+
+''''
+
+== References
+
+* https://aresluna.org/the-day-return-became-enter/
