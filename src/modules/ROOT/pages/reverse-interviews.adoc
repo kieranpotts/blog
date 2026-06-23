@@ -208,7 +208,7 @@ Also watch for a highly siloed organization. You want teams making their own cho
 
 * "`Can you tell me about the team I'll be working with?`"
 
-* "``"
+* Questions that explore the boundaries of responsibilities between product and developers.
 
 * "``"
 
