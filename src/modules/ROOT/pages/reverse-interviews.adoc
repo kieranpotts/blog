@@ -13,11 +13,13 @@ Kieran Potts
 :link-edwards-redflags: https://www.youtube.com/watch?v=cNbWmjGNZD8
 :link-cmm: https://ieeexplore.ieee.org/document/219617
 
-Let's be honest. Working in software is a somewhat _variable_ experience. Working at a small startup feels very different from working at a large global firm. Working at a software house feels very different from working at a consultancy practice that serves non-IT customers. Even within those sub-sectors, the culture and ways of working vary enormously.
+Let's be honest. Working in software is a somewhat _variable_ experience. Working at a small startup feels very different from working at a large global firm, and working at a software house feels very different from working at a consultancy practice that serves non-IT customers. Even within those sub-sectors, the culture and ways of working vary enormously.
 
-Unless you already have inside knowledge of the organization you're applying to, you'll need to do background research and ask questions throughout the recruitment process to discover if the role is really right for you.
+When you're applying for a new role, unless you already have inside knowledge of the organization you're applying to, you'll need to do background research and ask questions throughout the recruitment process to discover if the role is really right for you.
 
-This is the "`reverse interview`" — questions the _candidate_ asks of their prospective employer before accepting a job offer. Some recruiters will include an explicit reverse interview step in the recruitment process, otherwise you can ask for one at the end, after receiving an offer but before accepting.
+This is the "`reverse interview`" — questions the _candidate_ asks of their prospective employer before accepting a job offer.
+
+Some recruiters will include an explicit reverse interview step in the recruitment process, otherwise you can ask for one at the end, after receiving an offer but before accepting.
 
 The trick is to design a series of questions — not too many — that will surface both red and green flags.
 
@@ -31,9 +33,9 @@ For the rest of us, we should be brave and ask straight questions. Good employer
 
 You can do a lot of filtering before you even apply.
 
-Glassdoor is a good barometer, but look for _patterns_ throughout the comments, rather than treat individual reviews as factual. Be wary of companies with lots of 5-star and lots of 1-star reviews, but not much in the middle. Most companies are, by definition, average, so honest ratings should follow a https://en.wikipedia.org/wiki/Normal_distribution[normal distribution].
+https://www.glassdoor.co.uk/[Glassdoor] is a good barometer, but look for _patterns_ throughout the comments, rather than treat individual reviews as factual. Be wary of companies with lots of 5-star and 1-star reviews, but not much in the middle. Most companies are, by definition, average, so honest ratings should follow a https://en.wikipedia.org/wiki/Normal_distribution[normal distribution].
 
-Look for code quality signals. Does the organization have any public code repositories, or contributions to open source projects? Does it publish an engineering blog or technical standards?
+Look for code quality signals. Does the organization have any public code repositories, or does it make contributions to open source projects? Does it publish an engineering blog or its in-house technical standards?
 
 Other sources of valuable information can include historical job postings, public accounts filings (eg. via Companies House in the UK), and press releases.
 
@@ -55,27 +57,27 @@ You'll start to get a feel for an organization's culture and values through the 
 
 * Negative or toxic vibes from the interviewers.
 
-* Weird power dynamics. A disrespectful interview that tries to throw you off or intimidate you is a glimpse of the culture to come.
+* Weird power dynamics. A disrespectful interviewer that tries to throw you off or intimidate you is a glimpse of the culture to come.
 
 * An interviewer who gets offended or defensive at a legitimate question. Your career affects your life. You have the right to ask hard questions.
 
-* Interviewers who sound exhausted and fed up.
+* Interviewers who sound exhausted and fed up. They might only have things going on in their lives outside of work. Or work itself might be the problem.
 
 * Disengaged interviewers who check their phones or don't remember your answers. You deserve their full attention.
 
 * Lots of buzzwords. Worse, buzzwords used incorrectly.
 
-* An interview that follows a checklist of questions, with no deviation or follow-up based on your answers — the whole thing's just a box-ticking exercise.
+* An interview that follows a checklist of questions, with no deviation or follow-up based on your answers — the whole thing's just a box-ticking exercise. A good interviewer listens to your answers and asks follow-ups that probe what you actually know. One who doesn't is not really evaluating you as a person or an engineer, just running you through a process. That's usually a sign of how you'll be managed once you're hired too.
 
-* Technical questions that are at an inappropriate level of abstraction for the job role. For example, "`explain how you'd protect against SQL injection`" may be appropriate if you'll be expected to write lots of custom low-level library code, but is less useful to judge if someone will be able to solve problems at the levels of applications and systems.
+* Technical questions that are at an inappropriate level of abstraction for the job role. For example, "`explain how you'd protect against SQL injection`" may be appropriate if you'll be expected to write lots of custom low-level library code, but such knowledge is much less useful to hold in working memory if you chiefly work at the levels of applications and systems.
 
-* A suspiciously high salary for the title, or unusual benefits like unlimited holiday. This is a sure sign that the organization will justify stress, and perhaps toxicity, with above-market remuneration. Don't tell yourself "`it's just a stepping stone`".
+* A suspiciously high salary for the title, or unusual benefits like unlimited holiday. These can be signs that the organization will justify stress, and perhaps toxicity, with above-market remuneration. Don't tell yourself "`it's just a stepping stone`".
 
-* Or the opposite — below-average pay — and promises of a higher salary "`later`". An organization that can't pay market rates now probably never will.
+* Or the opposite — below-average pay — and promises of a higher salary later. An organization that can't pay market rates now probably never will.
 
 * "`We're a family.`" Sometimes this is a genuine attempt to create effective, collaborative cultures, but too often it's a way of getting you to work longer hours, or for less pay, so as not to "`let the family down`".
 
-* Questions like "`do you work well under pressure?`" or "`tell me about a time you had to meet a tight deadline`". These are good questions to turn around. Reply by asking a clarifying question like "`what does high pressure look like in this role?`", or "`where does that pressure come from?`" Pressure usually comes from one of two sources. Either it is fabricated through artificial deadlines, the result of poor management and the psychological danger of replying "`no`". Or it comes from constant production incidents and firefighting, which means the organization is not investing in automation and non-functional qualities.
+If you get asked questions like "`do you work well under pressure?`" or "`tell me about a time you had to meet a tight deadline`", these are good ones to turn around and reply with clarifying questions like "`what does high pressure look like in this role?`", or "`where does that pressure come from?`" Pressure usually comes from one of two sources. Either it is fabricated through artificial deadlines, the result of poor management and the psychological danger of replying "`no`". Or it comes from constant production incidents and firefighting, which means the organization is not investing in automation and non-functional qualities.
 
 Right through to the point of an offer being made, keep looking out for those red flags. Be alert to pressure to accept an offer quickly — it's a sure sign they're desperate, which means they're either under-staffed or projects have gone wildly off course.
 
@@ -104,19 +106,21 @@ So far, so checkboxy. But from this baseline of understanding you want to drill 
 
 If the answers about success are vague, politely ask for clarification. Listen for a mix of individual and team evaluation, with a slight emphasis on the team, and for _value added_ rather than "`doing whatever it takes`".
 
-Drill into working hours. "`What's your policy on working hours? How many hours are you contracted for, and how many do people work in practice? What time do people sign off Slack? Are evenings and weekends ever expected?`" Beware answers like "`we don't really have fixed hours, you just work as you need to to get the job done`". Walk away if there's any hint that long hours are worn as a badge of honor. That's the biggest red flag there is.
+Drill into working hours. "`What's your policy on working hours?`" is your lead-in, but you want to get to the bottom of what the reality is on the shop floor, not what it will specify in your contract. Follow up with questions like "`what time do people sign off Slack?`" and "`are evenings and weekends ever expected?`" Beware answers like "`we don't really have fixed hours, you just work as you need to to get the job done`".
 
-You're not applying for a job for the next 12 months. You're applying to build a long, fruitful, rewarding career. Look ahead. Ask questions like: "`When do performance and pay reviews come around? How are they done? Is pay adjusted for inflation? How does the company support professional growth and development? What is the policy on internal hiring and promotions? How are promotions handled?`" These sorts of questions reveal how much an organization _really_ values its people. Fair and transparent systems of pay review and promotion are good. Secretive or vague processes are a warning sign.
+Walk away if there's any hint that long hours are worn as a badge of honor. That's the biggest red flag there is.
 
-If you're really brave, ask: "`What is the average tenure of a developer here?`" Incredibly, the average tenure for a permanent tech worker is only about two years. But some organizations buck the trend, and they'll happily tell you why.
+Look to the future, too. You're not applying for a job for the next 12 months. You're applying to build a long, fruitful, rewarding career. Ask questions like: "`When do performance and pay reviews come around? How are they done? Is pay adjusted for inflation? How does the company support professional growth and development? What is the policy on internal hiring and promotions? How are promotions handled?`" These sorts of questions reveal how much an organization _really_ values its people. Fair and transparent systems of pay review and promotion are good. Secretive or vague processes are a warning sign.
 
-If you'll be on-site, consider the physical environment. Is the office a nice place to work? Are there secluded spaces where you can go to think? Will the space be hot in summer, cold in winter? These things are more important than tea and biscuits and ping-pong tables.
+If you're really brave, ask: "`What is the average tenure of a developer here?`" Incredibly, the average tenure for a permanent tech worker is only about two years. But some organizations buck this dismal trend, and they'll happily tell you why.
+
+If you'll be on-site, consider the physical environment. Is the office a nice place to work? Are there secluded spaces where you can go to think? Will the space be hot in summer, or cold in winter? These things are more important than tea and biscuits and ping-pong tables.
 
 == Topics
 
 If it's possible to treat the screening and interview rounds as a two-way conversation, weave your questions into that flow. If there is no time in the main interview cycle, request a "`reverse interview`" once you have an offer on the table (but before you've accepted, even verbally). Don't be afraid to ask for this extra step — it shows you're taking due diligence.
 
-Structure your reverse interview around three to five core topics that you want to explore. The focus will vary depending on the nature of your role and your level of seniority. The aim throughout is to get past the extrinsic factors and read the _intrinsic_ ones — the autonomy, mastery, and purpose that determine how long you'll stay in the end.
+Structure your reverse interview around three to five core topics that you want to explore. The focus will vary depending on the nature of your role and your level of seniority. The aim throughout is to get past the extrinsic factors and read the intrinsic ones — the autonomy, mastery, and purpose that determine how long you'll stay in the end.
 
 Below, I've listed example questions under thirteen possible topics:
 
@@ -254,7 +258,7 @@ Flexibility and async working are not just perks. They support the sustainable p
 
 * "`How do you set objectives and targets?`" Look for team-level measures, not individual ones.
 
-* "`If a feature turns out to need the code reshaped, who decides whether that happens?`" If it's the product owner rather than the engineers, suspect top-down, remote-control programming.
+* "`Who is responsible for the design, test, and quality of code? If a feature needs the code reshaped, who decides?`" If it's the product owner or architects, suspect top-down, remote-control programming.
 
 === Testing
 
