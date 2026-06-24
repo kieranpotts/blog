@@ -79,10 +79,6 @@ You'll start to get a feel for an organization's culture and values through the 
 
 If you get asked questions like "`do you work well under pressure?`" or "`tell me about a time you had to meet a tight deadline`", these are good ones to turn around and reply with clarifying questions like _"`what does high pressure look like in this role?`"_, or _"`where does that pressure come from?`"_ Pressure usually comes from one of two sources. Either it is fabricated through artificial deadlines, the result of poor management and the psychological danger of replying "`no`". Or it comes from constant production incidents and firefighting, which means the organization is not investing in automation and non-functional qualities.
 
-Right through to the point of an offer being made, keep looking out for those red flags. Be alert to pressure to accept an offer quickly — it's a sure sign they're desperate, which means they're either under-staffed or projects have gone wildly off course.
-
-Watch out, too, for the bait-and-switch. This is where you apply for a specific role at a specific salary, but the role is switched at the last minute for something lower — or you are sold a dream and end up on something else entirely (commonly a horrible legacy system). A good test is to ask: _"`If I started tomorrow, what would I be working on?`"_ It is not always answerable — you may be hired into a talent pool — but you should expect honesty, even if that's "`we don't know yet`".
-
 == The basics
 
 The reverse interview is a chance to nail down the basics of the job, things like:
@@ -360,6 +356,10 @@ The green flags are just as important as the red ones. You're looking for:
 Red flags turn up in green companies and vice versa, so weigh the whole picture.
 
 Supplement your own findings with all the third-party data you can get your hands on — Glassdoor, Trustpilot, Companies House. Then go with your gut. The few times in my career I have ignored my gut, it has been a disaster. If you don't get a good vibe from the people interviewing you, ask whether you really want to work with them. Organizations attract and retain similar types of people, so the interviewer is probably representative. Do you think you can learn from them, work with them, and have fun doing so?
+
+Right through to the point of an offer being made, keep looking out for those red flags. Be alert to pressure to accept an offer quickly — it's a sure sign they're desperate, which means they're either under-staffed or projects have gone wildly off course.
+
+Watch out, too, for the bait-and-switch. This is where you apply for a specific role at a specific salary, but the role is switched at the last minute for something lower — or you are sold a dream and end up on something else entirely (commonly a horrible legacy system). A good test is to ask: _"`If I started tomorrow, what would I be working on?`"_ It is not always answerable — you may be hired into a talent pool — but you should expect honesty, even if that's "`we don't know yet`".
 
 Cool off. Wait at least 24 hours before accepting (or rejecting or negotiating) an offer.
 
