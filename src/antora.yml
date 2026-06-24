@@ -2,5 +2,3 @@ name: thoughts
 title: Thoughts
 version: ~
 start_page: index.adoc
-nav:
-- modules/ROOT/nav.adoc
