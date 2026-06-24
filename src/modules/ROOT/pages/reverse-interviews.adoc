@@ -1,5 +1,5 @@
 = Reverse interviews
-Kieran Potts
+Kieran Potts, 24 June 2026
 :description: An interview is a two-way process. Here is the set of "reverse interview" questions I use to assess the real quality of a software job — the red and green flags that reveal what a place is actually like to work at.
 :docinfo: shared
 :nofooter:
