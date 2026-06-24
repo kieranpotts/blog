@@ -4,8 +4,8 @@
 /**
  * Validate that every post is both dated and listed on the index page.
  *
- * Every page under src/modules/ROOT/pages/ is a post, except index.adoc and
- * 404.adoc. Each post MUST:
+ * Every page under src/modules/ROOT/pages/ is a post, except index.adoc.
+ * Each post MUST:
  *
  *   - Have a parseable `D Month YYYY` date in its author line. The website
  *     repo's feed builder (src/lib/feeds/posts.js) parses the date from this
@@ -20,7 +20,7 @@ const path = require('path')
 
 const PAGES_DIR = path.join(__dirname, '..', '..', 'src', 'modules', 'ROOT', 'pages')
 const INDEX_FILE = path.join(PAGES_DIR, 'index.adoc')
-const EXCLUDED_PAGES = new Set(['index.adoc', '404.adoc'])
+const EXCLUDED_PAGES = new Set(['index.adoc'])
 
 /* Keep DATE_RX in sync with the website repo's src/lib/feeds/posts.js. */
 const DATE_RX = /\b(\d{1,2})\s+([A-Za-z]+)\s+(\d{4})\b/
