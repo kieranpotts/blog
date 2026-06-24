@@ -39,7 +39,7 @@ Look for code quality signals. Does the organization have any public code reposi
 
 Other sources of valuable information can include historical job postings, public accounts filings (eg. via Companies House in the UK), and press releases.
 
-Do some background checks on the organization's employees, too. Pay special attention to the people you will work with directly. Find them on LinkedIn, GitHub, and the socials. What's the typical tenure? What's the senior-junior split? Do any of the technical staff keep a blog or speak at conferences?
+Do some background checks on the organization's employees, too. Pay special attention to the people you will work with directly. Find them on LinkedIn, GitHub, and the socials. What's the senior-junior split? Do any of them keep a blog or speak at conferences?
 
 Don't be afraid to reach out to former employees on LinkedIn and ask why they left, and what they liked and disliked. (Don't do this with _current_ employees. It is risky for them, and their responses can't be trusted anyway. Pride gets in the way of honesty.)
 
@@ -61,19 +61,19 @@ You'll start to get a feel for an organization's culture and values through the 
 
 * An interviewer who gets offended or defensive at a legitimate question. Your career affects your life. You have the right to ask hard questions.
 
-* Interviewers who sound exhausted and fed up. They might only have things going on in their lives outside of work. Or work itself might be the problem.
+* Interviewers who sound exhausted and fed up. They might have things going on in their lives outside of work. Or work itself might be the problem. Don't be afraid to ask.
 
 * Disengaged interviewers who check their phones or don't remember your answers. You deserve their full attention.
 
 * Lots of buzzwords. Worse, buzzwords used incorrectly.
 
-* An interview that follows a checklist of questions, with no deviation or follow-up based on your answers — the whole thing's just a box-ticking exercise. A good interviewer listens to your answers and asks follow-ups that probe what you actually know. One who doesn't is not really evaluating you as a person or an engineer, just running you through a process. That's usually a sign of how you'll be managed once you're hired too.
+* An interview that follows a checklist of questions, with no deviation or follow-up based on your answers. A good interviewer listens to your answers and asks follow-ups that probe what you actually know. One who doesn't is not really evaluating you as a person or an engineer, just running you through a box-ticking process. That's usually a sign of how you'll be managed once you're hired, too.
 
 * Technical questions that are at an inappropriate level of abstraction for the job role. For example, _"`explain how you'd protect against SQL injection`"_ may be appropriate if you'll be expected to write lots of custom low-level library code, but such knowledge is much less useful to hold in working memory if you chiefly work at the levels of applications and systems.
 
-* A suspiciously high salary for the title, or unusual benefits like unlimited holiday. These can be signs that the organization will justify stress, and perhaps toxicity, with above-market remuneration. Don't tell yourself "`it's just a stepping stone`".
+* A suspiciously high salary for the title, or unusual benefits like unlimited holiday. These can be signs that the organization will justify stress, and perhaps toxicity, with above-market remuneration.
 
-* Or the opposite — below-average pay — and promises of a higher salary later. An organization that can't pay market rates now probably never will.
+* Or the opposite — below-average pay — and promises of a higher salary later. An organization that can't pay market rates now probably never will be able to.
 
 * Talk of being "`a family`". Sometimes this is a genuine attempt to create effective, collaborative cultures, but too often it's a way of getting you to work longer hours, or for less pay, so as not to "`let the family down`".
 
@@ -346,7 +346,7 @@ Ours is a discipline primarily focused on _learning_. Whatever the sector, devel
 
 The hard part is not asking all your questions. It's weighing them up. No single answer should make or break your decision. What matters is discovering the overall pattern.
 
-You are looking for a _combination_ of red flags, not any single one. One red flag on its own is rarely a problem. A cluster of red flags is a sign of some fundamental structural problems. Red flags turn up in green companies and vice versa, so weigh the whole picture.
+You are looking for a _combination_ of red flags, not any single one. One red flag on its own is rarely a problem. A cluster of red flags is a sign of some fundamental structural problems.
 
 The green flags are just as important as the red ones. You're looking for:
 
@@ -357,11 +357,15 @@ The green flags are just as important as the red ones. You're looking for:
 * Room for mentoring and personal growth.
 * A real commitment to work-life balance.
 
+Red flags turn up in green companies and vice versa, so weigh the whole picture.
+
 Supplement your own findings with all the third-party data you can get your hands on — Glassdoor, Trustpilot, Companies House. Then go with your gut. The few times in my career I have ignored my gut, it has been a disaster. If you don't get a good vibe from the people interviewing you, ask whether you really want to work with them. Organizations attract and retain similar types of people, so the interviewer is probably representative. Do you think you can learn from them, work with them, and have fun doing so?
+
+Cool off. Wait at least 24 hours before accepting (or rejecting or negotiating) an offer.
 
 If you have reservations but are willing to roll the dice, be honest and share that with them.
 
-Cool off. Wait at least 24 hours before accepting (or rejecting or negotiating) an offer.
+And, ultimately, don't be afraid to walk away. Don't tell yourself "`it's just a stepping stone`".
 
 .Related links
 ****
