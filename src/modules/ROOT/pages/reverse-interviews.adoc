@@ -15,17 +15,19 @@ Kieran Potts
 
 Let's be honest. Working in software is a somewhat _variable_ experience. Working at a small startup feels very different from working at a large global firm, and working at a software house feels very different from working at a consultancy practice that serves non-IT customers. Even within those sub-sectors, the culture and ways of working vary enormously.
 
-When you're applying for a new role, unless you already have inside knowledge of the organization you're applying to, you'll need to do background research and ask questions throughout the recruitment process to discover if the role is really right for you.
+When you're applying for a new role, unless you already have inside knowledge of the organization you're applying to, you'll need to do background research and ask questions throughout the recruitment process to discover if the organization is really the right place for you.
 
 This is the "`reverse interview`" — questions the _candidate_ asks of their prospective employer before accepting a job offer.
 
-Some recruiters will include an explicit reverse interview step in the recruitment process, otherwise you can ask for one at the end, after receiving an offer but before accepting.
+Some recruiters will include an explicit reverse interview step in the recruitment process. Otherwise you can ask for one at the end, after receiving an offer but before accepting.
 
 The trick is to design a series of questions — not too many — that will surface both red and green flags.
 
-_Extrinsic_ factors — things like salary and benefits, the tech stack, the problem space, the office and the work environment — will be the early filters for your job funnel. But what will matter more in the long term is the organization's culture and values — what it is actually like to work there day-to-day. _Intrinsic_ factors — purpose, autonomy, mastery — will determine how long you stay. These should be the focus of the reverse interview.
+_Extrinsic_ factors — things like salary and benefits, the tech stack, the problem space, the office and the work environment — will be the early filters for your job funnel. But what will matter more in the long term is the organization's culture and values. These will determine what it is actually like to work there day-to-day. _Intrinsic_ factors — purpose, autonomy, mastery — will determine how long you stay in the end.
 
-Juniors shouldn't be overly picky. All experience is good at the start of a career. Even if you land in a sweaty dev shop, you will at least learn how _not_ to make software! But as you progress through your career, those intrinsic factors — and the _quality_ of the work — will matter more to you.
+These intrinsic factors should be the focus of the reverse interview.
+
+Juniors shouldn't be overly picky. All experience is good at the start of a career. Even if you land in a sweaty dev shop, at least you will learn how _not_ to make software! But as you progress through your career, those intrinsic factors — and the _quality_ of the work — will matter more to you.
 
 For the rest of us, we should be brave and ask straight questions. Good employers will respond well to this, while bad employers will get defensive, even offended — your first red flag.
 
@@ -33,7 +35,7 @@ For the rest of us, we should be brave and ask straight questions. Good employer
 
 You can do a lot of filtering before you even apply.
 
-https://www.glassdoor.co.uk/[Glassdoor] is a good barometer, but look for _patterns_ throughout the comments, rather than treat individual reviews as factual. Be wary of companies with lots of 5-star and 1-star reviews, but not much in the middle. Most companies are, by definition, average, so honest ratings should follow a https://en.wikipedia.org/wiki/Normal_distribution[normal distribution].
+https://www.glassdoor.co.uk/[Glassdoor] is a good barometer. Look for _patterns_ throughout the comments, rather than treat individual reviews as factual. Be wary of companies with lots of 5-star and 1-star reviews, but not much in the middle. Most companies are, by definition, average, so honest ratings should follow a https://en.wikipedia.org/wiki/Normal_distribution[normal distribution].
 
 Look for code quality signals. Does the organization have any public code repositories, or does it make contributions to open source projects? Does it publish an engineering blog or its in-house technical standards?
 
@@ -45,7 +47,7 @@ Don't be afraid to reach out to former employees on LinkedIn and ask why they le
 
 Red flags can emerge from the job spec itself. Consider its wording, emphasis, and tone. "`Fast-paced`" and "`no two days the same`" may be code for "`chaotic`" and "`no time to do things properly`". "`Quality-focused`" and "`learning-oriented`" are strong hints that the culture and values are aligned in the opposite direction.
 
-Be wary of a spec that checks off a laundry list of commercial experience with specific languages and libraries. That suggests a tactical, not strategic, approach to recruitment. Such short-termism tends to lead to high churn.
+Be wary of a spec that checks off a laundry list of commercial experience with specific languages and libraries. That suggests a tactical, not strategic, approach to technical recruitment. Such short-termism tends to lead to high churn.
 
 Be wary of multi-stage processes. Two or three stages is fine. Four or five is _probably_ a red flag, unless the role is strategically important for the organization.
 
@@ -61,15 +63,15 @@ You'll start to get a feel for an organization's culture and values through the 
 
 * An interviewer who gets offended or defensive at a legitimate question. Your career affects your life. You have the right to ask hard questions.
 
-* Interviewers who sound exhausted and fed up. They might have things going on in their lives outside of work. Or work itself might be the problem. Don't be afraid to ask.
+* Interviewers who sound exhausted and fed up. They might have things going on in their lives outside of work. Or work itself might be the problem. Don't be afraid to ask which is it.
 
 * Disengaged interviewers who check their phones or don't remember your answers. You deserve their full attention.
 
 * Lots of buzzwords. Worse, buzzwords used incorrectly.
 
-* An interview that follows a checklist of questions, with no deviation or follow-up based on your answers. A good interviewer listens to your answers and asks follow-ups that probe what you actually know. One who doesn't is not really evaluating you as a person or an engineer, just running you through a box-ticking process. That's usually a sign of how you'll be managed once you're hired, too.
+* An interview that follows a checklist of questions, with no deviation based on your answers. A good interviewer listens to your answers and asks follow-ups that probe what you actually know. One who doesn't is not really evaluating you as a person or an engineer, just running you through a box-ticking process. That's usually a sign of how you'll be managed once you're hired, too.
 
-* Technical questions that are at an inappropriate level of abstraction for the job role. For example, "`explain how you'd protect against SQL injection`" may be appropriate if you'll be expected to write lots of custom low-level library code, but such knowledge is much less useful to hold in working memory if you chiefly work at the levels of applications and systems.
+* Technical questions that are at an inappropriate level of abstraction for the job role. For example, "`explain how you'd protect against SQL injection`" may be appropriate if you'll be expected to write lots of custom low-level library code, but such knowledge is much less useful to hold in working memory if you chiefly work at the levels of applications and systems. The same rule applies to technical tests – it's perfectly reasonable to expect those to be relevant to the role and your level of expertise and experience.
 
 * A suspiciously high salary for the title, or unusual benefits like unlimited holiday. These can be signs that the organization will justify stress, and perhaps toxicity, with above-market remuneration.
 
@@ -77,7 +79,7 @@ You'll start to get a feel for an organization's culture and values through the 
 
 * Talk of being "`a family`". Sometimes this is a genuine attempt to create effective, collaborative cultures, but too often it's a way of getting you to work longer hours, or for less pay, so as not to "`let the family down`".
 
-If you get asked questions like "`do you work well under pressure?`" or "`tell me about a time you had to meet a tight deadline`", these are good ones to turn around and reply with clarifying questions like "`what does high pressure look like in this role?`", or "`where does that pressure come from?`" Pressure usually comes from one of two sources. Either it is fabricated through artificial deadlines, the result of poor management and the psychological danger of replying "`no`". Or it comes from constant production incidents and firefighting, which means the organization is not investing in automation and non-functional qualities.
+If you get asked questions like "`do you work well under pressure?`" or "`tell me about a time you had to meet a tight deadline`", these are good ones to turn around and reply with clarifying questions like "`what does high pressure look like in this role?`", or "`where does that pressure come from?`" Pressure usually comes from one of two sources. Either it is fabricated through artificial deadlines, the result of poor management and the psychological danger of replying "`no`". Or it comes from constant production incidents and firefighting, which means the organization is not investing in automation and non-functional qualities. Whatever the cause, something's gone wrong with the organization's software delivery if you'll be expected to work under pressure.
 
 == The basics
 
@@ -95,7 +97,9 @@ The reverse interview is a chance to nail down the basics of the job, things lik
 
 On remote and hybrid policy: limited opportunities for remote and async working are a red flag in the post-Covid era, often a sign of low trust. There can be legitimate reasons for on-site work, such as the nature of the work or high security. But most "`collaboration`" can be done very effectively remotely with modern technology, so if that's their reasoning, you should interrogate it.
 
-So far, so checkboxy. But from this baseline of understanding you want to drill down into exactly what _success looks like_ in the role. Here are some questions to help interrogate this:
+If you'll be on-site, consider the physical environment. Is the office a nice place to work? Are there secluded spaces where you can go to think? Will the space be hot in summer, or cold in winter? These things are more important than tea and biscuits and ping-pong tables.
+
+So far, so checkboxy. But from this baseline of understanding you want to drill down into exactly what _success looks like_ in the role. Here are some questions to help you uncover this this:
 
 * "`Give me an example of someone in a role like mine who did really well here. What did they do to succeed?`"
 * "`What are the biggest challenges currently facing the team?`"
@@ -105,15 +109,13 @@ So far, so checkboxy. But from this baseline of understanding you want to drill 
 
 If the answers about success are vague, politely ask for clarification. Listen for a mix of individual and team evaluation, with a slight emphasis on the team, and for _value added_ rather than "`doing whatever it takes`". The last question is not always answerable — you may be hired into a talent pool — but you should expect honesty, even if that's "`we don't know yet`".
 
-Drill into working hours. "`What's your policy on working hours?`" is your lead-in, but you want to get to the bottom of what the reality is on the shop floor, not what will be specified in your contract. Follow up with questions like "`what time do people sign off Slack?`" and "`are evenings and weekends ever expected?`" Beware answers like "`we don't really have fixed hours, you just work as you need to to get the job done`".
+Drill into working hours. "`What's your policy on working hours?`" is your lead-in, but you want to get to the bottom of what the reality is on the shop floor, not what will be specified in your contract. Follow up with questions like "`what time do people sign off from Slack?`" and "`are evenings and weekends ever expected?`" Beware answers like "`we don't really have fixed hours, you just work as you need to to get the job done`".
 
 Walk away if there's any hint that long hours are worn as a badge of honor. That's the biggest red flag there is.
 
-Look to the future, too. You're not applying for a job for the next 12 months. You're applying to build a long, fruitful, rewarding career. Ask questions like: "`When do performance and pay reviews come around? How are they done? Is pay adjusted for inflation? How does the company support professional growth and development? What is the policy on internal hiring and promotions? How are promotions handled?`" These sorts of questions reveal how much an organization _really_ values its people. Fair and transparent systems of pay review and promotion are good. Secretive or vague processes are a warning sign.
+Look to the future, too. You're not applying to do job for 12 months. You're applying to have an opportunity build a long, fruitful, rewarding career. Ask questions like: "`When do performance and pay reviews come around? How are they done? Is pay adjusted for inflation? How does the company support professional growth and development? What is the policy on internal hiring and promotions? How are promotions handled?`" These sorts of questions reveal how much an organization _really_ values its people. Fair and transparent systems of pay review and promotion are good. Secretive or vague processes are a warning sign.
 
 If you're really brave, ask: "`What is the average tenure of a developer here?`" Incredibly, the average tenure for a permanent tech worker is only about two years. But some organizations buck this dismal trend, and they'll happily tell you why.
-
-If you'll be on-site, consider the physical environment. Is the office a nice place to work? Are there secluded spaces where you can go to think? Will the space be hot in summer, or cold in winter? These things are more important than tea and biscuits and ping-pong tables.
 
 == Topics
 
@@ -137,17 +139,17 @@ Below, I've listed example questions under thirteen possible topics:
 
 Treat all of these as _leading_ questions. Use the questions to guide your approach and prompt you to explore tangents. Avoid reading through them like a checklist.
 
-If it's possible to treat the screening and interview rounds as a two-way conversation, weave your questions into that flow. If there is no time in the main interview cycle, request a "`reverse interview`" once you have an offer on the table (but before you've accepted, even verbally). Don't be afraid to ask for this extra step — it shows you're taking due diligence.
+If it's possible to treat the screening and interview rounds as a two-way conversation, weave your questions into that flow. If there is no time in the main interview cycle, request a reverse interview once you have an offer on the table (but before you've accepted, even verbally). Don't be afraid to ask for this extra step — it shows you're taking due diligence.
 
 === The product
 
-These questions probe whether the business itself is healthy and worth betting your career on. No amount of good engineering culture survives a failing product.
+This first group of questions probe whether the business itself is healthy and worth betting your career on. After all, no amount of good engineering culture will survive a failing product.
 
 * "`How are your products differentiated from competitors'?`" A confident, specific answer suggests real product strategy. A vague one suggests the organization is competing on price or headcount rather than value.
 
 * For startups: "`What problem are you solving? Have you achieved product/market fit, or are you still pivoting? How do you measure the value new features give users?`" Avoid solutions looking for a problem. Those startups never succeed.
 
-* "`How is the business funded? What's the turnover and profit generated from the product? What's the growth trajectory?`" Even private companies should disclose at least a ballpark turnover figure. If the company will not disclose this, ask why not. There may be legitimate reasons for not sharing sensitive financials, but employees deserve some transparency into their employer's financial health. If there's no revenue yet (eg. it's a startup), ask: "`How much runway do you have?`"
+* "`How is the business funded? What's the turnover and profit generated from the product? What's the growth trajectory?`" Even private companies should disclose at least a ballpark turnover figure. If the company will not disclose this, ask why not. There may be legitimate reasons for not sharing sensitive financials, but employees deserve some transparency into their employer's financial health. If there's no revenue yet, ask "`how much runway do you have?`"
 
 * "`What are the goals for long-term product development?`" And follow-up: "`If you achieve those goals, what will the reward look like for the staff?`" An organization that has thought about the second question has genuinely connected staff incentives to company success. One that hasn't is probably treating engineering as a cost center rather than a driver of product differentiation and growth.
 
