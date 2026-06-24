@@ -1,0 +1,32 @@
+#
+# Validate that every post is both dated and listed on the index page.
+#
+# A post that is listed on index.adoc but has no parseable 'D Month YYYY'
+# date in its author line silently never reaches the website's feeds (RSS,
+# Atom, JSON) — the feed builder in the `website` repo treats "no parseable
+# date" as "not a post" and just skips it.
+#
+# See .github/scripts/validate-post-dates.js for the check itself.
+#
+
+name: Validate Post Dates
+
+on:
+  pull_request:
+    branches:
+      - latest/dev
+  push:
+    branches:
+      - latest/dev
+
+jobs:
+  validate-post-dates:
+    name: Validate post dates and index listing
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Validate post dates
+        run: node .github/scripts/validate-post-dates.js

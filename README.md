@@ -17,7 +17,7 @@ To publish a new post:
    Kieran Potts, 28 December 2025
    ```
 
-   The feed builder in the `website` repository parses the date out of this author line. A post without a recognizable date in this format will not appear in any feeds (RSS, Atom, etc.).
+   The feed builder in the `website` repository parses the date out of this author line. A post without a recognizable date in this format will not appear in any feeds (RSS, Atom, etc.). The `Validate Post Dates` CI check (`.github/workflows/validate-post-dates.yaml`) catches this — and the inverse, a dated post missing from the index — on every PR and push to `latest/dev`.
 
 3. Add `:description:` and `:docinfo: shared` / `:nofooter:` attributes, matching the existing posts — `:description:` becomes the feed entry's description.
 
