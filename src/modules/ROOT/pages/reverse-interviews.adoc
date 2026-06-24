@@ -63,7 +63,7 @@ You'll start to get a feel for an organization's culture and values through the 
 
 * An interviewer who gets offended or defensive at a legitimate question. Your career affects your life. You have the right to ask hard questions.
 
-* Interviewers who sound exhausted and fed up. They might have things going on in their lives outside of work. Or work itself might be the problem. Don't be afraid to ask which is it.
+* Interviewers who sound exhausted and fed up. They might have things going on in their lives outside of work. Or work itself might be the problem. Don't be afraid to ask which it is.
 
 * Disengaged interviewers who check their phones or don't remember your answers. You deserve their full attention.
 
@@ -99,7 +99,11 @@ On remote and hybrid policy: limited opportunities for remote and async working 
 
 If you'll be on-site, consider the physical environment. Is the office a nice place to work? Are there secluded spaces where you can go to think? Will the space be hot in summer, or cold in winter? These things are more important than tea and biscuits and ping-pong tables.
 
-So far, so checkboxy. But from this baseline of understanding you want to drill down into exactly what _success looks like_ in the role. Here are some questions to help you uncover this this:
+Drill into working hours. **"`What's your policy on working hours?`"** is your lead-in, but you want to get to the bottom of what the reality is on the shop floor, not what will be specified in your contract. Follow up with questions like **"`what time do people sign off from Slack?`"** and **"`are evenings and weekends ever expected?`"** Beware answers like "`we don't really have fixed hours, you just work as you need to to get the job done`".
+
+Walk away if there's any hint that long hours are worn as a badge of honor. That's the biggest red flag there is.
+
+So far, so checkboxy. But from this baseline of understanding of the role you want to drill down into exactly what _success looks like_ in the role. Here are some questions to help you uncover this:
 
 * **"`Give me an example of someone in a role like mine who did really well here. What did they do to succeed?`"**
 * **"`What are the biggest challenges currently facing the team?`"**
@@ -109,11 +113,7 @@ So far, so checkboxy. But from this baseline of understanding you want to drill 
 
 If the answers about success are vague, politely ask for clarification. Listen for a mix of individual and team evaluation, with a slight emphasis on the team, and for _value added_ rather than "`doing whatever it takes`". The last question is not always answerable — you may be hired into a talent pool — but you should expect honesty, even if that's "`we don't know yet`".
 
-Drill into working hours. **"`What's your policy on working hours?`"** is your lead-in, but you want to get to the bottom of what the reality is on the shop floor, not what will be specified in your contract. Follow up with questions like **"`what time do people sign off from Slack?`"** and **"`are evenings and weekends ever expected?`"** Beware answers like "`we don't really have fixed hours, you just work as you need to to get the job done`".
-
-Walk away if there's any hint that long hours are worn as a badge of honor. That's the biggest red flag there is.
-
-Look to the future, too. You're not applying to do job for 12 months. You're applying to have an opportunity build a long, fruitful, rewarding career. Ask questions like: **"`When do performance and pay reviews come around? How are they done? Is pay adjusted for inflation? How does the company support professional growth and development? What is the policy on internal hiring and promotions? How are promotions handled?`"** These sorts of questions reveal how much an organization _really_ values its people. Fair and transparent systems of pay review and promotion are good. Secretive or vague processes are a warning sign.
+Look to the future, too. You're not applying to do a job for 12 months. You're applying to have an opportunity to build a long, fruitful, rewarding career. Ask questions like: **"`When do performance and pay reviews come around? How are they done? Is pay adjusted for inflation? How does the company support professional growth and development? What is the policy on internal hiring and promotions? How are promotions handled?`"** These sorts of questions reveal how much an organization _really_ values its people. Fair and transparent systems of pay review and promotion are good. Secretive or vague processes are a warning sign.
 
 If you're really brave, ask: **"`What is the average tenure of a developer here?`"** Incredibly, the average tenure for a permanent tech worker is only about two years. But some organizations buck this dismal trend, and they'll happily tell you why.
 
@@ -139,11 +139,11 @@ Below, I've listed example questions under thirteen possible topics:
 
 Treat all of these as _leading_ questions. Use the questions to guide your approach and prompt you to explore tangents. Avoid reading through them like a checklist.
 
-If it's possible to treat the screening and interview rounds as a two-way conversation, weave your questions into that flow. If there is no time in the main interview cycle, request a reverse interview once you have an offer on the table (but before you've accepted, even verbally). Don't be afraid to ask for this extra step — it shows you're taking due diligence.
+If it's possible to treat the screening and interview rounds as a two-way conversation, weave your questions into that flow. If there is no time in the main interview cycle, request a reverse interview once you have an offer on the table (but before you've accepted, even verbally). Don't be afraid to ask for this extra step — it shows you're doing proper due diligence.
 
 === The product
 
-This first group of questions probe whether the business itself is healthy and worth betting your career on. After all, no amount of good engineering culture will survive a failing product.
+This first group of questions probes whether the business itself is healthy and worth betting your career on. After all, no amount of good engineering culture will survive a failing product.
 
 * **"`How are your products differentiated from competitors'?`"** A confident, specific answer suggests real product strategy. A vague one suggests the organization is competing on price or headcount rather than value.
 
@@ -171,7 +171,7 @@ These questions probe who decides what gets built and in what order, and whether
 
 * **"`How do you plan and prioritize work? Who decides the sequencing, and who works on what?`"** If the answer names a single role or a layer of management above the team, that's a sign of top-down, command-and-control management that doesn't trust its engineering teams to plan their own work.
 
-* **"`Are your requirements stable or volatile? How do you manage change requests (scope creep)?`"** Volatility in requirements (ie. scope creep) is a perfectly natural phenomenon in almost all software projects. A mature software organization will account this in is delivery planning.
+* **"`Are your requirements stable or volatile? How do you manage change requests (scope creep)?`"** Volatility in requirements (ie. scope creep) is a perfectly natural phenomenon in almost all software projects. A mature software organization will account for this in its delivery planning.
 
 * **"`How is technical debt and refactoring prioritized against feature delivery? How is time for it factored into the process?`"** If technical debt is "`dealt with when we have time`", you can assume it never gets dealt with. That's a red flag for the long-term health of the codebase, and your day-to-day experience working in it.
 
@@ -179,11 +179,11 @@ These questions probe who decides what gets built and in what order, and whether
 
 === Estimation
 
-These questions probe how the organization treats uncertainty — whether estimates are used as honest planning input or weaponized into commitments.
+These questions probe how the organization handles uncertainty, and whether estimates are used as honest planning input or weaponized into commitments.
 
 * **"`How do you estimate work? When do you do different types of estimate — eg. T-shirt sizes from requirements, timeboxes after a working prototype?`"** What you want to figure out is whether the organization errs on the side of _predictability_ or _efficiency_. You can't have both. Predictable software delivery requires a heavyweight process with lots of up-front design and resource planning. This is inherently inefficient. Efficient software delivery requires a lighter-weight process that focuses on the technical aspects of delivery with minimal project-management overhead. Companies tend to fall cleanly into one of these two groups. You'll know which of the two suits you best.
 
-* **"`Is an estimate the same thing as a commitment here?`"** Look for organizations that understand the distinction between an _estimate_, a _target_, and a _commitment_. A target is simply what the business wants. It is a date, scope, or budget decided independently of the work. An estimate is a forecast of effort based on what's currently understood. It gets more accurate the further into the development life cycle you are. A commitment comes only once the design is understood, and after available resources are planned to deliver that design. It can't be made accurately from requirements alone.
+* **"`Is an estimate the same thing as a commitment here?`"** Look for organizations that understand the distinction between an _estimate_, a _target_, and a _commitment_. A target is simply what the business wants. It is a date, scope, or budget decided independently of the work. An estimate is a forecast of effort based on what's currently understood. It gets more accurate the further into the development life cycle you are. A commitment comes only once the design is understood, and after available resources are planned to deliver that design. It can't be made accurately from requirements alone. And it may not align with the target.
 
 * **"`What do you do if the estimates don't align with the organization's targets? What happens if something is delivered later than estimated?`"** What you want to know is how they would handle a developer who gave a high-level estimate, then found the optimal solution was twice as complex as anticipated. There are only two ways an organization can effectively respond to this situation: cut scope to meet the existing delivery target, or extend the deadline. Red flags here include answers about adding more people or spending time justifying the original estimate, rather than adjusting to reality.
 
@@ -211,7 +211,7 @@ These questions get the interviewer talking candidly about day-to-day reality, a
 
 * **"`What does a typical workday look like? Describe your development methodology. How much autonomy do you have?`"** A rehearsed answer about being "`agile`" with no concrete detail of an actual day is a sign the methodology is cargo-culted rather than practiced.
 
-* **"`What is your onboarding process?`"** No formal process is a red flag, while an overly long one – which suggests heavy bureaucracy – in another one. Onboarding is a critical but often overlooked aspect of software delivery. An efficient, well thought-through onboarding process is a green flag.
+* **"`What is your onboarding process?`"** No formal process is a red flag, while an overly long one – which suggests heavy bureaucracy – is another one. Onboarding is a critical but often overlooked aspect of software delivery. An efficient, well thought-through onboarding process is a green flag.
 
 * **"`How long does it take to get a working dev environment up and running?`"** Days rather than minutes points to brittle, undocumented tooling — and to all the other small frictions that will erode your time and patience once you're onboarded.
 
@@ -219,7 +219,7 @@ These questions get the interviewer talking candidly about day-to-day reality, a
 
 === Process and ceremonies
 
-These questions probe how work actually flows from idea to done, day to day. Look for an iterative, incremental process driven by real users' needs, not a rigid sequence of hand-offs between specialists.
+These questions probe how work actually flows from idea to done, day-to-day. Look for an iterative, incremental process driven by real users' needs, not a rigid sequence of hand-offs between specialists.
 
 * **"`What ceremonies do you do — stand-ups, retrospectives?`"** Look for ceremonies that genuinely inform the work, not just rituals performed out of habit.
 
@@ -231,7 +231,7 @@ These questions probe how work actually flows from idea to done, day to day. Loo
 
 * **"`How do you ensure a sustainable pace?`"** A vague or surprised reaction to this question is itself the answer – sustainable pace isn't something they actively manage.
 
-* **"`How can I contribute ideas to improve the ways of working?`"** If there's no answer, retrospectives and process improvement are probably theater rather than genuine feedback loops.
+* **"`How can I contribute ideas to improve the ways of working?`"** You'll want to prove this. You'll likely get an answer along the line of "`monthly retrospectives`" – but those are only worthwhile if the team has the autonomy to actively changes its ways of working. Get beyond the ceremonies and try to uncover concrete examples of how your prospective teammates have improved their delivery process.
 
 === Engineering practices
 
@@ -273,7 +273,7 @@ How a team tests reveals how much it really cares about quality. Look for testin
 
 * **"`What levels of automated testing do you have — unit, integration, system — and which matter most for this solution?`"** An organization with no answer beyond "`unit tests`" likely has weak confidence in releases and relies on manual checking to catch what automation should. System tests are more valuable than unit tests.
 
-* **"`What do your acceptance tests look like, and how are they linked to the requirements specification?`"** If there's no traceable link, requirements and tests may drift apart, perhaps to the extent that nobody can say with confidence what the software still does what it's supposed to do. Ideally, requirements are specified in an executable test format.
+* **"`What do your acceptance tests look like, and how are they linked to the requirements specification?`"** If there's no traceable link, requirements and tests may drift apart, perhaps to the extent that nobody can say with confidence that the software still does what it's supposed to do. Ideally, requirements are specified in an executable test format.
 
 * **"`What other testing do you do — penetration, load, usability?`"** The other types of tests verify cross-functional, non-functional requirements, and in most systems they deserve the same level of automation as functional tests – but this is often a noticeable gap in coverage.
 
@@ -343,9 +343,9 @@ Look for continuous learning, a blameless culture (psychological safety), invest
 
 == Making a decision
 
-The hard part is not asking all your questions. It's weighing them up. No single answer should make or break your decision. What matters is discovering the overall pattern.
+The hard part is not asking all your questions. It's weighing up the answers. No single answer should make or break your decision. What matters is discovering the overall pattern.
 
-You are looking for a _combination_ of red flags, not any single one. One red flag on its own is rarely a problem. But a cluster of red flags is likely a symptom of some deep-rooted structural problems.
+You are looking for a _combination_ of red flags, not any single one. One red flag on its own is rarely a problem. But a cluster of red flags is likely a symptom of deep-rooted structural problems.
 
 The green flags are just as important as the red ones. You're looking for:
 
@@ -368,7 +368,7 @@ Right through to the point of an offer being made, keep looking out for those re
 
 Watch out, too, for the bait-and-switch. This is where you apply for a specific role at a specific salary, but the role is switched at the last minute for something else. This, unfortunately, is a common recruitment strategy for maintenance of legacy systems.
 
-If you get an offer, give yourself a cooling off period. Wait at least 24 hours before accepting, rejecting, or negotiating. Don't be afraid to reply with follow-up questions.
+If you get an offer, give yourself a cooling-off period. Wait at least 24 hours before accepting, rejecting, or negotiating. Don't be afraid to reply with follow-up questions.
 
 If you have reservations but are willing to roll the dice, be honest and share that with them. But have the confidence to walk away, too. If there's any uncertainty, if the data is telling you one thing but your gut something else – go with your gut. Trust that you'll figure out why that was the right call later.
 
