@@ -1,6 +1,6 @@
 = Reverse interviews
 Kieran Potts
-:description: An interview is a two-way process. Here is the set of "reverse interview" questions I use to assess the real quality of a software job — the red and green flags that reveal what a place is actually like to work.
+:description: An interview is a two-way process. Here is the set of "reverse interview" questions I use to assess the real quality of a software job — the red and green flags that reveal what a place is actually like to work at.
 :docinfo: shared
 :nofooter:
 
@@ -13,29 +13,37 @@ Kieran Potts
 :link-edwards-redflags: https://www.youtube.com/watch?v=cNbWmjGNZD8
 :link-cmm: https://ieeexplore.ieee.org/document/219617
 
-Let's be honest: working in software is a _variable_ experience. Working at a software house as part of an in-house team feels very different from working at a consultancy serving a non-IT domain. A small startup feels very different from a large global firm. And even within each of those sub-sectors, the culture and ways of working vary enormously.
+Let's be honest, working in software is a somewhat _variable_ experience. Working at a small startup feels very different from a large global firm, and working at a software house feels very different from a consultancy practice serving non-IT customers. Even within those sub-sectors, the culture and ways of working vary enormously.
 
-When you're applying for work in software, _extrinsic_ factors — things like salary and benefits, the tech stack, the problem space, the office and the work environment — will be the early filters for your job funnel. But what will matter more in the long term is the organization's culture and values — what it is actually like to work there day-to-day. _Intrinsic_ factors — purpose, autonomy, mastery — will determine how long you stay.
+Unless you already have inside knowledge of the organization you're applying to, you'll need to do background research and ask questions throughout the recruitment process to discover if the role is really right for you.
 
-How do you discover these factors before you take up new employment? Unless you have inside knowledge of the organization you're applying to, you'll need to ask questions in your interviews to dig into this.
+This is the "`reverse interview`" — questions the _candidate_ asks of their prospective employer before accepting a job offer. Some recruiters will include an explicit reverse interview step in the recruitment process, otherwise you can ask for one at the end, after receiving an offer but before accepting.
 
-This is the "`reverse interview`" – questions the _candidate_ asks of their prospective employer before accepting a job offer. The trick is to design a series of questions – not too many – that will surface both red and green flags.
+The trick is to design a series of questions — not too many — that will surface both red and green flags.
 
-Juniors shouldn't be overly picky. All experience is good at the start of a career. Even if you land in a sweaty dev shop, you will at least learn how _not_ to make software! But as you progress through your career, those intrinsic factors — and the _quality_ of the work — will matter more and more to you.
+_Extrinsic_ factors — things like salary and benefits, the tech stack, the problem space, the office and the work environment — will be the early filters for your job funnel. But what will matter more in the long term is the organization's culture and values — what it is actually like to work there day-to-day. _Intrinsic_ factors — purpose, autonomy, mastery — will determine how long you stay. These should be the focus of the reverse interview.
 
-For the rest of us, we should be brave and ask straight questions. Good employers will respond well to it, while bad employers will get defensive, even offended — your first red flag.
+Juniors shouldn't be overly picky. All experience is good at the start of a career. Even if you land in a sweaty dev shop, you will at least learn how _not_ to make software! But as you progress through your career, those intrinsic factors — and the _quality_ of the work — will matter more to you.
+
+For the rest of us, we should be brave and ask straight questions. Good employers will respond well to this, while bad employers will get defensive, even offended — your first red flag.
 
 == Pre-filtering
 
-You can do a lot of filtering before you even apply. Use websites like Glassdoor and your own network. Don't be afraid to reach out to _former_ employees on LinkedIn and ask why they left, and what they liked and disliked. (Don't do this with _current_ employees — it is risky for them, and pride gets in the way of honesty.)
+You can do a lot of filtering before you even apply.
 
-// Do your own background checks, too. The tech industry is a small world; use your network. Glassdoor is a good barometer, but look for _patterns_ rather than individual reviews — be wary of companies with lots of 5-star and lots of 1-star reviews; most companies are, by definition, average, and the most honest picture tends to be lots of 3- and 4-star reviews.
+Glassdoor is a good barometer, but look for _patterns_ throughout the comments, rather than treat individual reviews as factual. Be wary of companies with lots of 5-star and lots of 1-star reviews, but not much in the middle. Most companies are, by definition, average, so honest ratings should follow a https://en.wikipedia.org/wiki/Normal_distribution[normal distribution].
 
-Do some background checks on the organization's existing software developers, without connecting to them directly. Find them on LinkedIn, GitHub, and the socials. Do any speak at conferences or keep a blog? Does the organization itself have an engineering blog, contribute to open source projects, or publish technical standards, etc.?
+Look for code quality signals. Does the organization have any public code repositories, or contributions ot open source projects, or does it publish an engineering blog or technical standards?
 
-Red flags can emerge from the job spec itself, before you have any contact. Consider its wording, emphasis, and tone. "`Fast-paced`" and "`no two days the same`" may be code for "`chaotic`" and "`no time to do things properly`". "`Quality-focused`" and "`learning-oriented`" are strong hints that the culture and values are aligned in the opposite direction.
+Other sources of valuable information can include historical job postings, public accounts filings (eg. via Companies House in the UK), and press releases.
 
-Be wary of a spec that checks off a laundry list of commercial experience with specific languages and libraries. That suggests a tactical, not strategic, approach to recruitment. Such short-termism leads to high churn.
+Do some background checks on the organization's employees, too – especially the people you will work with directly. Find them on LinkedIn, GitHub, and the socials. What's the typical tenure? What's the senior-junior split? Do any of the technical staff keep a blog or speak at conferences?
+
+Don't be afraid to reach out to former employees on LinkedIn and ask why they left, and what they liked and disliked. (Don't do this with _current_ employees. It is risky for them, and their responses can't be trusted anyway. Pride gets in the way of honesty.)
+
+Red flags can emerge from the job spec itself. Consider its wording, emphasis, and tone. "`Fast-paced`" and "`no two days the same`" may be code for "`chaotic`" and "`no time to do things properly`". "`Quality-focused`" and "`learning-oriented`" are strong hints that the culture and values are aligned in the opposite direction.
+
+Be wary of a spec that checks off a laundry list of commercial experience with specific languages and libraries. That suggests a tactical, not strategic, approach to recruitment. Such short-termism tends to lead to high churn.
 
 Be wary of multi-stage processes. Two or three stages is fine; four or five is _probably_ a red flag — unless the role is strategically important for the organization.
 
@@ -49,35 +57,33 @@ You'll start to get a feel for an organization's culture and values through the 
 
 * Weird power dynamics. A disrespectful interview that tries to throw you off or intimidate you is a glimpse of the culture to come.
 
-* An interviewer who gets offended or defensive at a legitimate question. Your career affects your life; you have the right to ask hard questions.
+* An interviewer who gets offended or defensive at a legitimate question. Your career affects your life. You have the right to ask hard questions.
 
 * Interviewers who sound exhausted and fed up.
 
 * Disengaged interviewers who check their phones or don't remember your answers. You deserve their full attention.
 
-* Lots of buzzwords, sometimes used incorrectly.
+* Lots of buzzwords. Worse: buzzwords used incorrectly.
 
-* An interview that follows a checklist of questions, with no deviation or follow-up based on your answers – the whole thing's just ticking boxes.
+* An interview that follows a checklist of questions, with no deviation or follow-up based on your answers — the whole thing's just a box-ticking exercise.
 
 * Technical questions that are at an inappropriate level of abstraction for the job role. For example, "`explain how you'd protect against SQL injection`" may be appropriate if you'll be expected to write lots of custom low-level library code, but is less useful to judge if someone will be able to solve problems at the levels of applications and systems.
 
 * A suspiciously high salary for the title, or unusual benefits like unlimited holiday. This is a sure sign that the organization will justify stress, and perhaps toxicity, with above-market remuneration. Don't tell yourself "`it's just a stepping stone`".
 
-* Or the opposite — below average pay — and promises of a higher salary "`later`". And organization that can't pay market rates now probably never will be able to.
+* Or the opposite — below-average pay — and promises of a higher salary "`later`". An organization that can't pay market rates now probably never will.
 
-* "`We're a family.`" Sometimes this is a genuine attempt to create effective, collaborate cultures, but too often it's a way of getting you to work longer hours, or for less pay, so as not to "`let the family down`".
+* "`We're a family.`" Sometimes this is a genuine attempt to create effective, collaborative cultures, but too often it's a way of getting you to work longer hours, or for less pay, so as not to "`let the family down`".
 
 * Questions like "`do you work well under pressure?`" or "`tell me about a time you had to meet a tight deadline`". These are good questions to turn around — reply by asking a clarifying question like "`what does high pressure look like in this role?`", and "`where does that pressure come from?`" Pressure usually comes from one or two sources: (a) the pressure is fabricated through artificial agency, the result of poor management and the psychological danger of replying "`no`"; (b) constant production incidents and firefighting, which means the organization is not investing in automation and non-functional qualities.
 
-Right through to the point of an offer being made, keep looking out for those red flags. Be alert to pressure to accept an offer quickly — it's a sure sign they're desperate, which means they're either under-staffed or projects have gone wildly off course. And watch out for the bait-and-switch, where you apply for a specific role at a specific salary, but the role is switched at the last minute for something lower.
+Right through to the point of an offer being made, keep looking out for those red flags. Be alert to pressure to accept an offer quickly — it's a sure sign they're desperate, which means they're either under-staffed or projects have gone wildly off course.
 
-// * _If I started tomorrow, what would I be working on?_ Beware the bait-and-switch where you are sold a dream and end up on something else (usually: legacy). It is not always answerable — you may be hired into a "`talent pool`" — but you should expect honesty, even "`we don't know yet`".
-
-// If the interviewers are hazy about the tech stack, the role, or progression, you may be looking at snap hiring — a panic to fill a vacancy after someone left. That suggests under-resourcing and poor resource planning.
+Watch out, too, for the bait-and-switch. This is where you apply for a specific role at a specific salary, but the role is switched at the last minute for something lower — or you are sold a dream and end up on something else entirely (commonly a horrible legacy system). A good test is to ask: "`If I started tomorrow, what would I be working on?`" It is not always answerable — you may be hired into a talent pool — but you should expect honesty, even if that's "`we don't know yet`".
 
 == The basics
 
-The reverse interview itself — which you should request, if no time is given in the formal interview rounds — is a chance to nail down the basics of the job, things like:
+The reverse interview is a chance to nail down the basics of the job, things like:
 
 * IT provision (computer, monitors, ergonomics).
 * Core/flexible/office hours.
@@ -89,8 +95,6 @@ The reverse interview itself — which you should request, if no time is given i
 * Pension contributions.
 * Learning budgets/time.
 
-// What's your policy on working hours? What time do people sign off Slack — are evenings and weekends ever expected?
-
 So far, so checkboxy. But from this baseline of understanding you want to drill down into exactly what _success looks like_ in the role. Here are some questions to help interrogate this:
 
 * "`Give me an example of someone in a role like mine who did really well here. What did they do to succeed?`"
@@ -98,229 +102,207 @@ So far, so checkboxy. But from this baseline of understanding you want to drill 
 * "`How do you monitor and measure individual performance?`"
 * "`How do you evaluate individuals versus the whole team?`"
 
-On hours: "`How many hours are you contracted for, and how many do people work in practice?`" Beware answers like "`we don't really have fixed hours, you just work as you need to to get the job done`" — that usually means long hours, no overtime, and deadlines set by the business rather than the team.
+If the answers about success are vague, politely ask for clarification. Listen for a mix of individual and team evaluation, with a slight emphasis on the team, and for _value added_ rather than "`doing whatever it takes`".
 
-You're applying not for a job for the next 12 months, but (hopefully) for a long and fruitful career. Look ahead. Ask questions like: "`When do performance and pay reviews come around? How are they done? Is pay adjusted for inflation? How does the company support professional growth and development? What is the policy on internal hiring and promotions? How are promotions handled?`" These sorts of questions reveal how much the organization _really_ values its people. Fair and transparent systems of pay review and promotion are a good sign; secretive processes are a massive red flag.
+Drill into working hours. "`What's your policy on working hours? How many hours are you contracted for, and how many do people work in practice? What time do people sign off Slack? Are evenings and weekends ever expected?`" Beware answers like "`we don't really have fixed hours, you just work as you need to to get the job done`". Walk away if there's any hint that long hours are worn as a badge of honor – that's the biggest red flag there is.
 
-// Look for a mix of individual and team evaluation, with a slight emphasis on the team; for _value added_, not "`doing whatever it takes to meet deadlines`". Listen for rewarding firefighting and long hours — long hours as a badge of honor is a red flag. If the interviewer's answers about success are vague, politely ask for clarification.
+You're not applying for a job for the next 12 months, you're applying to build a long, fruitful, rewarding career. Look ahead. Ask questions like: "`When do performance and pay reviews come around? How are they done? Is pay adjusted for inflation? How does the company support professional growth and development? What is the policy on internal hiring and promotions? How are promotions handled?`" These sorts of questions reveal how much an organization _really_ values its people. Fair and transparent systems of pay review and promotion are good. Secretive or vague processes are a warning sign.
 
 If you're really brave, ask: "`What is the average tenure of a developer here?`" Incredibly, the average tenure for a permanent tech worker is only about two years. But some organizations buck the trend, and they'll happily tell you why.
 
-If you'll be on-site, consider the physical environment. Is the office a nice place to work? Are there secluded spaces where you can go to _think_? Will the space be hot in summer, cold in winter? These things are more important that free tea and biscuits.
+If you'll be on-site, consider the physical environment. Is the office a nice place to work? Are there secluded spaces where you can go to think? Will the space be hot in summer, cold in winter? These things are more important than tea and biscuits and ping-pong tables.
 
 == Topics
 
-Structure your reverse interview around three to five core topics that you want to explore. The focus will vary depending on the nature of your role and your level of seniority.
+If it's possible to treat the screening and interview rounds as a two-way conversation, weave your questions into that flow. If there is no time in the main interview cycle, request a "`reverse interview`" once you have an offer on the table (but before you've accepted, even verbally). Don't be afraid to ask for this extra step — it shows you're taking due diligence.
 
-Below, I've listed example questions under seven possible topics:
+Structure your reverse interview around three to five core topics that you want to explore. The focus will vary depending on the nature of your role and your level of seniority. The aim throughout is to get past the extrinsic factors and read the _intrinsic_ ones — the autonomy, mastery, and purpose that determine how long you'll stay in the end.
+
+Below, I've listed example questions under thirteen possible topics:
 
 * The product
 * Requirements specification
-* Planning (including prioritization and estimation)
-* Architecture and quality
-* The software development lifecycle
-* Ways of working
+* Planning and prioritization
+* Estimation
+* Architecture
+* Team and onboarding
+* Process and ceremonies
+* Engineering practices
+* Communication and autonomy
+* Testing
+* Delivery automation
+* Operations and maintenance
+* Culture and values
+
+Treat all of these as _leading_ questions. Use the questions to guide your approach and prompt you to explore tangents. Avoid reading through them like a checklist.
 
 === The product
 
-* "`How are your products differentiated from competitors'?`"
+These questions probe whether the business itself is healthy and worth betting your career on. No amount of good engineering culture survives a failing product.
 
-* For startups: "`What problem are you solving? Have you achieved product/market fit, or are you still pivoting? How do you measure the value new features give users?`" Avoid solutions looking for a problem.
+* "`How are your products differentiated from competitors'?`" A confident, specific answer suggests real product strategy. A vague one suggests the organization is competing on price or headcount rather than value.
+
+* For startups: "`What problem are you solving? Have you achieved product/market fit, or are you still pivoting? How do you measure the value new features give users?`" Avoid solutions looking for a problem – those startups never succeed.
 
 * "`How is the business funded? What's the turnover and profit generated from the product? What's the growth trajectory?`" Even private companies should disclose at least a ballpark turnover figure. If the company will not disclose this, ask why not. There may be legitimate reasons for not sharing sensitive financials, but employees deserve some transparency into their employer's financial health. If there's no revenue yet (eg. it's a startup), ask: "`How much runway do you have?`"
 
-* "`What are the goals for long-term product development?`" And follow-up: "`If you achieve those goals, what will the reward look like for the staff?`"
+* "`What are the goals for long-term product development?`" And follow-up: "`If you achieve those goals, what will the reward look like for the staff?`" An organization that has thought about the second question has genuinely connected staff incentives to company success; one that hasn't is probably treating engineering as a cost to be minimized rather than a partner in growth.
 
 * Ask directly: "`Do you plan to sell the company?`" A company built to be sold has a very different culture from one built to last — more short-term and tactical, with fewer opportunities for progression or investment in the long-term health of the software.
 
 === Requirements specification
 
-* "`Where do functional requirements come from?`" Look for the business to define high-level acceptance criteria, not to design the solution through user stories.
+How an organization handles requirements tells you whether it builds for users or just churns out features.
 
-* "`How are requirements specified?`" They should be written from a user's perspective. If they are just task descriptions, suspect a feature factory.
+* "`Where do functional requirements come from? How are requirements specified?`" Look for the business to define high-level acceptance criteria from the perspective of the software's users. Product owners or other non-technical staff should not be remote-programming the solution through user stories or (worse) task lists. Look for a clear division of labor between product and engineering, else suspect a https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2[feature] factory.
 
-* "`How are cross-functional requirements, like performance and security, specified?`"
+* "`How are cross-functional requirements, like performance and security, specified?`" If the answer is "`we deal with it when it becomes a problem`", non-functional quality is an afterthought, not a design input — a recipe for late, expensive rework and blown delivery schedules. Cross-functional requirements are best specified up-front, not iteratively.
 
-* "`How do you validate requirements?`" This question isn't about testing that the built software meets its requirements. It's about validating that the requirements are genuine — they represent real problems that real users need solutions to. Requirements should be driven by users' needs.
+* "`How do you validate requirements?`" This question isn't about testing that the built software meets its requirements. It's about validating that the requirements are genuine — that they represent real problems that real users need solutions to. Requirements should be driven by users' needs.
 
-* "``"
+=== Planning and prioritization
 
-=== Planning
+These questions probe who decides what gets built and in what order, and whether the organization successfully balances the software's long-term health with short-term delivery targets — which requires strategic, long-term thinking over tactical, short-term fixes.
 
-* "`How do you plan and prioritize work? Who decides the sequencing, and who works on what?`"
+* "`How do you plan and prioritize work? Who decides the sequencing, and who works on what?`" If the answer names a single role or a layer of management above the team, that's a sign of top-down, command-and-control management that doesn't trust its engineering teams to plan their own work.
 
-* "`Are your requirements stable or volatile, and how do you manage that volatility? How do you manage change requests (scope creep)?`"
+* "`Are your requirements stable or volatile, and how do you manage that volatility? How do you manage change requests (scope creep)?`" An organization with no answer to scope creep is either lying about how stable its requirements are, or has no real planning process at all.
 
-* "`How is technical debt and refactoring prioritized against feature delivery? How is time for it factored into the process?`"
+* "`How is technical debt and refactoring prioritized against feature delivery? How is time for it factored into the process?`" If technical debt is "`dealt with when we have time`", you can assume it never gets dealt with. That's a red flag for the long-term health of the codebase, and your day-to-day experience working in it.
 
-* "`How do you ensure delivery is sustainable and keeps costs low?`"
+* "`How do you ensure delivery is sustainable and keeps costs low?`" Listen for an answer about ruthless prioritization and saying no to low-value work, not one about working harder or adding headcount.
 
-* "``"
+=== Estimation
 
-* "`How do you estimate work? When do you estimate — T-shirt sizes from requirements, time estimates after a prototype or some initial implementation?`"
+These questions probe how the organization treats uncertainty — whether estimates are used as honest planning input or weaponized into commitments.
 
-* "`What do you do if the estimates don't align with the organization's targets? What happens if something is delivered later than estimated?`" For example: how would they handle a developer who gave a high-level estimate but then found the optimal solution was twice as complex as anticipated?
+* "`How do you estimate work? When do you do different types of estimate — eg. T-shirt sizes from requirements, timeboxes after a working prototype?`" What you want to figure out is whether the organization errs on the side _predictability_ or _efficiency_. You can't have both. Predictable software delivery requires a heavyweight process with lots of up-front design and resource planning – which is inherently inefficient. Efficient software delivery requires a lighter-weight process that focuses on the technical aspects of delivery with minimal project-management overhead. Companies tend to fall cleanly into one of these two groups – and you'll know which of the two suits you best.
 
-What you are listening for is whether the organization prefers _predictability_ or _efficiency_. Predictability ("`it gets done when we said it would`") requires a heavyweight process with lots of up-front design and resource planning. Optimizing for efficiency allows a more lightweight process and good modern practices. If they front-load design, probe why: big design up front can succeed, but it can also signal command-and-control and a lack of trust.
+* "`Is an estimate the same thing as a commitment here?`" Look for organizations that understand the distinction between an _estimate_, a _target_, and a _commitment_. A target is simply what the business wants — a date, scope, or budget decided independently of the work. An estimate is a forecast of effort based on what's currently understood. It gets more accurate the further into the development life cycle you are. A commitment comes only once the design is understood, and after available resources are planned to deliver that design — it can't be made accurately from requirements alone.
 
-The only guaranteed way to deliver predictably is to do _less_. That means prioritizing ruthlessly and delivering the most valuable features first. Red flags include answers about adding more people or spending more time justifying the estimates. Look for organizations that understand the distinction between an _estimate_, a _target_, and a _commitment_ — and that estimates get more accurate the further into the life cycle you are, so a commitment comes only once the _design_ is understood, not just the requirements.
+* "`What do you do if the estimates don't align with the organization's targets? What happens if something is delivered later than estimated?`" What you want to know is how would they handle a developer who gave a high-level estimate but then found the optimal solution was twice as complex as anticipated. What you're looking for is an understanding that the only two ways to respond to such situations are: (a) cut scope to meet the existing delivery target, or (b) extend the deadline. Red flags here include answers about adding more people or spending time justifying the original estimate, rather than adjusting to reality.
 
-You are interested in how they balance the immediate needs of the business against the long-term health of the software and the team — strategic, long-term thinking over tactical, short-term fixes. Look for a product backlog kept separate from the sprint backlog, and a balance between delivering value and maintaining the software's health. We do two kinds of work: developing and operating the functional and non-functional requirements, and investing in the quality of the software and our ways of working. Product owners should _not_ have full control over prioritization. You are trying to learn whether they see engineering as a cost center — a higher chance you'll be miserable. Micromanaged teams and fixed deadlines are red flags.
+* "`Have you ever had a project take two to four times longer than planned? What happened, and what did you learn?`" Every organization has had this happen. What matters is whether they learned something about their planning process, or just blamed the team and moved on.
 
-* "`Have you ever had a project take two to four times longer than planned? What happened, and what did you learn?`"
+=== Architecture
 
-* "``"
+Architecture questions probe the soundness of the technical design, and how well the team understands and can talk about the system they're building.
 
-* "``"
+* "`Could you describe the high-level architecture of the system, conceptually?`" The answer can be revealing. Systems mirror the organizations that build them, so a tightly-coupled distributed monolith suggests a highly centralized, top-down organization.
 
-* "``"
+* "`Has the system maintained good conceptual integrity over time, even as the architecture has evolved?`" If the architecture has good conceptual integrity, the team should be able to describe it without discussing implementation details — no mention of the technology stack or infrastructure.
 
-* "``"
+* "`If there was one thing about how the software is designed and made that you could change, what would it be?`" An honest, specific answer suggests self-awareness about the architecture's weaknesses. "`Nothing, it's great`" suggests a very young system (fine), an interviewer who isn't close enough to the code to know (also fine), or a misplaced belief that no trade-offs have been made in the system design (not fine).
 
-=== Architecture and quality
+* "`How do you communicate design ideas?`" Look for lightweight, written artifacts — RFCs, design docs, diagrams — that outlast the meeting they were discussed in. If design only ever happens verbally, knowledge is trapped in people's heads and decisions are hard to revisit or learn from.
 
-* "`Could you describe the high-level architecture of the system, conceptually?`" The answer is revealing. Systems mirror the organizations that build them, so a tightly-coupled distributed monolith suggests a highly centralized, top-down organization.
+* "`Who makes design decisions? How do you choose between options?`" If one person or a small architecture group decides unilaterally, expect low autonomy for the team that has to live with the consequences day to day.
 
-* "`Has the system maintained good conceptual integrity over time, even as the architecture has evolved?`" If the architecture has good conceptual integrity, the team should be able to describe it without discussing implementation details — no mention of the technology stack or infrastructure. Something like:
+=== Team and onboarding
 
-[quote]
-----
-An API gateway serves web and mobile clients. The gateway routes requests to a small number of large domain services. Each domain service manages its own data persistence, and services share data primarily using asynchronous messages. The domain services are supported by a large number of stateless microservices, which they communicate with synchronously via RPC-like calls.
-----
+These questions get the interviewer talking candidly about day-to-day reality, and surface how much friction you'll face just getting set up to do the job.
 
-* "`If there was one thing about how the software is designed and made that you could change, what would it be?`"
+* Opening question: "`Can you tell me about the team I'll be working with?`" This is a low-pressure way to get the interviewer talking candidly, and their enthusiasm (or lack of it) about their own team is itself a signal. Probe team dynamics and their preferred working style.
 
-* "`How do you communicate design ideas?`"
+* "`What does a typical workday look like? Describe your development methodology. How much autonomy do you have?`" A rehearsed answer about "`agile`" with no concrete detail of an actual day is a sign the methodology is cargo-culted rather than practiced.
 
-* "`Who makes design decisions? How do you choose between options?`"
+* "`What is your onboarding process?`" No formal process is a red flag, while an overly long one suggests heavy bureaucracy.
 
-* "``"
+* "`How long does it take to get a working dev environment up and running?`" Days rather than minutes points to brittle, undocumented tooling — and to all the other small frictions that will erode your time and patience once you're onboarded.
 
-* "``"
+=== Process and ceremonies
 
-=== Ways of working
+Look for an iterative, incremental process driven by users' needs. Limited opportunities for remote and async working are a red flag in the post-Covid era — often a sign of low trust. There can be legitimate reasons for on-site work, such as the nature of the work or high security, but if they cite "`collaboration`", drill into what you would actually do on office days.
 
-Look for an iterative, incremental process driven by users' needs, a mix of synchronous and asynchronous communication, and good use of documentation and RFCs to reduce communication overhead. Limited opportunities for remote and async working is a red flag in the post-Covid era — often a sign of low trust. There can be legitimate reasons for on-site work, but if they cite "`collaboration`", drill into what you would actually do on office days; if it is all meetings, those can usually be done remotely.
+* "`What ceremonies do you do — stand-ups, retrospectives? What happens if you don't complete the work you committed to in a sprint?`" Punitive answers to the second question — blame, "`make it up next sprint`" — point to a culture of pressure rather than learning.
 
-Also watch for a highly siloed organization. You want teams making their own choices _and_ collaborating across teams — cross-functional but not siloed, with everyone shifting left so that testers help define acceptance criteria and developers help define the scope of stories.
+* "`When is a task "ready" for development?`" No clear answer suggests work arrives half-specified, pushing the burden of filling gaps in the requirements onto developers under time pressure.
 
-// Flexibility and work-life balance are not just perks; they are essential for sustained satisfaction and productivity. Ultimately we are assessing the _quality_ of the software systems, because that has the greatest impact on the developer experience — on avoiding burnout, working sustainably, and being able to build a long-term career.
+* "`How do you ensure a sustainable pace?`" A vague or surprised reaction to this question is itself the answer – sustainable pace isn't something they actively manage.
 
-* "`Can you tell me about the team I'll be working with?`"
+* "`How can I contribute ideas to improve the ways of working?`" If there's no answer, retrospectives and process improvement are probably theater rather than genuine feedback loops.
 
-* Questions that explore the boundaries of responsibilities between product and developers.
+=== Engineering practices
 
-* "``"
-
-* "``"
+Watch for a highly siloed organization. You want teams making their own choices _and_ collaborating across teams — cross-functional but not siloed, with everyone shifting left so that testers help define acceptance criteria and developers help define the scope of stories.
 
 * "`How do you manage change in software?`" Open-ended questions like this reveal what the organization thinks matters most.
 
-* "`How long does it take to get a working dev environment up and running?`"
-
-* "`When is a task "ready" for development?`"
-
-* "`Do you refactor as you go along?`"
+* "`Do you refactor as you go along?`" "`We don't have time`" signals that technical debt is accruing unchecked, regardless of what the planning and prioritization answers claimed.
 
 * "`What's your approach to code review?`" Look for collective code ownership.
 
-* "`Do you pair or mob? Under what circumstances?`"
+* "`Do you pair or mob? Under what circumstances?`" It's not necessarily a red flag if they don't, but dismissing it out of hand suggests a feature factory. Reasonable reasons why it didn't work for them are neither a red nor a green flag.
 
-// _Do you do pair programming?_ It's not necessarily a red flag if they don't, but dismissing it out of hand suggests a feature factory. Reasonable reasons why it didn't work for them are neither a red nor a green flag.
+* "`How long do feature branches stay open? Is anyone allowed to commit directly to the trunk?`" Branches open for weeks suggest infrequent integration and a higher risk of painful merges — the opposite of the fast feedback loops good delivery practice depends on.
 
-// _How do you support asynchronous working?_ Investment here supports work-life balance and sustainable working; its absence can signal command-and-control and low autonomy.
+=== Communication and autonomy
 
-* "`How long do feature branches stay open? Is anyone allowed to commit directly to the mainline?`"
+Flexibility and async working are not just perks, they support the sustainable pace and work-life balance on which a long-term career depends. For autonomy, look for signals that teams make their own choices.
 
-* Opening question: "`What is the team's dynamic and work style?`"
-
-* "`What is your onboarding process?`" No formal process is a red flag; an overly long one suggests heavy bureaucracy.
-
-* "`What does a typical workday look like? Describe your development methodology. What's the level of autonomy?`"
-
-* "`What ceremonies do you do — stand-ups, retrospectives? What happens if you don't complete the work you committed to in a sprint?`"
-
-* "`How do you ensure a sustainable pace?`"
-
-* "`How do you communicate?`"
-
-* "`How can I contribute ideas to improve the ways of working?`"
+* "`How do you communicate? How do you support asynchronous working?`" Investment in async working supports work-life balance and a sustainable pace; its absence can signal command-and-control and low autonomy.
 
 * "`How do you balance collaboration with the need for deep focus?`" Distinguish genuine teamwork (extended focus solving a problem together) from "`collaboration`" that just means being on hand to answer queries at a moment's notice.
 
-For autonomy, look for signals that teams make their own choices:
+* Questions that explore the boundaries of responsibilities between product and developers. Where that line is fuzzy or contested, expect friction over who actually owns decisions about scope and design.
 
-* "`Is your culture one of individual or collective responsibility?`"
+* "`Is your culture one of individual or collective responsibility?`" Individual blame for failures is a sign of low psychological safety; collective ownership of outcomes is a sign of a healthy team.
 
 * "`How do you set objectives and targets?`" Look for team-level measures, not individual ones.
 
 * "`Who is responsible for the design, test, and quality of code? If a feature needs the code reshaped, who decides?`" If it's the product owner or architects, suspect top-down, remote-control programming.
 
-* "``"
-
-* "``"
-
-* "``"
-
 === Testing
 
-* "`What's your test coverage? Do the tests evolve at the same time as the code?`"
+How a team tests reveals how much it really cares about quality. Look for testing pushed as far left as possible, woven into development rather than bolted on at the end.
 
-* "`What levels of automated testing do you have — unit, integration, system — and which matter most for this solution?`"
+* "`What's your test coverage? Do the tests evolve at the same time as the code?`" Tests that lag behind the code, or get skipped under deadline pressure, are a leading indicator of accumulating technical debt.
 
-* "`What do your acceptance tests look like, and how are they linked to the requirements specification?`"
+* "`What levels of automated testing do you have — unit, integration, system — and which matter most for this solution?`" An organization with no answer beyond "`unit tests`" likely has weak confidence in releases and relies on manual checking to catch what automation should.
 
-* "`What other testing do you do — penetration, load, usability? How much manual testing before each release?`"
+* "`What do your acceptance tests look like, and how are they linked to the requirements specification?`" If there's no traceable link, requirements and tests are drifting apart, and nobody can say with confidence the software still does what it's supposed to.
+
+* "`What other testing do you do — penetration, load, usability? How much manual testing before each release?`" Heavy reliance on manual testing before every release is a sign the automated suite isn't trusted, which slows delivery and increases risk at the same time.
 
 * "`Do you do test-driven development? How do you define "good" and "done"? When do you test?`" (Shift left as much as possible.)
 
-* "``"
-
-* "``"
-
 === Delivery automation
 
-High-level of automation are a green flag.
+A high level of automation is a green flag.
 
 _Deployment_ is installing and enabling the software in an environment; _release_ is making it available to users. Deployment is technical and can happen frequently (in CI/CD); releases are business-oriented and usually less frequent.
 
-* "`What's your release cadence? What's the cycle time between a change being "done" and reaching production?`"
+* "`What's your release cadence? What's the cycle time between a change being "done" and reaching production?`" Long cycle times point to manual gates, heavyweight release processes, or a lack of confidence in the pipeline — all of which slow feedback and increase the cost of every change.
 
-* "`Do you ship incomplete features behind feature flags?`"
+* "`Do you ship incomplete features behind feature flags?`" An organization with no answer here is probably batching up large, risky releases rather than shipping small, safe increments continuously.
 
-* "`What steps prepare a release? What determines releasability? How often do you release?`"
+* "`What steps prepare a release? What determines releasability? How often do you release?`" Lots of manual sign-off steps suggest low trust in the automated pipeline and a slower, higher-friction path to production.
 
-* "`How many bugs do you have? If you find a problem in production, what steps are taken?`"
+* "`How many bugs do you have? If you find a problem in production, what steps are taken?`" A defensive or evasive answer suggests bugs are a sore subject — usually because there are a lot of them, or because fixing them is deprioritized in favor of new features.
 
-* "`What are your branching-and-merging strategies?`"
+* "`What are your branching-and-merging strategies?`" Complex, long-lived branching strategies are usually a symptom of infrequent integration rather than a deliberate choice.
 
-* "`How often do you ship to production? How often does a release cause problems in production?`" DORA metrics!
+* "`How often do you ship to production? How often does a release cause problems in production?`" These are core DORA metrics — deployment frequency and change failure rate — and high-performing teams ship often with few failures. An organization that can't answer either question isn't measuring its own delivery performance.
 
-* "`What are your pain points? What's the biggest challenge facing delivery right now? What needs improving most?`"
+* "`What are your pain points? What's the biggest challenge facing delivery right now? What needs improving most?`" A specific, self-critical answer is a good sign; "`everything's pretty smooth`" from anyone beyond a brand-new team is implausible and worth probing further.
 
-* "`How is progress reported to the business?`"
+* "`How is progress reported to the business?`" Reporting framed entirely around velocity or story points, with no mention of value delivered, suggests the organization optimizes for the appearance of productivity over outcomes.
 
-* "`What was the last big software failure, and how did you deal with it?`"
+* "`What was the last big software failure, and how did you deal with it?`" Listen for a blameless post-mortem focused on systemic causes, not a story about which individual got in trouble.
 
 === Operations and maintenance
 
-* "`How are production services operated? First-line support? Out-of-hours support?`"
+These questions probe what happens after software ships — how much of the on-call and firefighting burden falls on developers, and how well the organization supports them when things go wrong.
 
-* "`How quickly do you recover from production incidents? What's your monitoring and observability like? How are incidents managed?`"
+* "`How are production services operated? First-line support? Out-of-hours support?`" If developers are also on the out-of-hours rota with no compensation or time off in lieu, expect interrupted evenings and weekends as a normal part of the job.
 
-* "`What keeps you up at night?`"
+* "`How quickly do you recover from production incidents? What's your monitoring and observability like? How are incidents managed?`" Slow recovery and poor observability mean every incident becomes a stressful, drawn-out firefight rather than a routine, well-supported response.
+
+* "`What keeps you up at night?`" An honest, specific worry is a good sign of self-awareness; "`nothing really`" from anyone running a non-trivial system is either complacent or not telling you the truth.
 
 * "`What do your development environments look like?`" Poor development environments — lots of interdependencies, not isolated, not containerized — are a red flag.
 
-* "`What happens if a bug ships to production? How do you approach post-mortems?`"
-
-* "``"
-
-* "``"
-
-* "``"
-
-* "``"
+* "`What happens if a bug ships to production? How do you approach post-mortems?`" Listen again for blameless language; a post-mortem culture that names individuals rather than systemic causes will eventually make you the scapegoat too.
 
 === Culture and values
 
@@ -334,45 +316,32 @@ What you are looking for is an organization — or at least an IT division — t
 
 Ours is a discipline primarily focused on _learning_. Whatever the sector, developing software is a process of continuous learning — not only that individuals grow, but that we make software to solve problems, and finding those solutions is a process of discovery, experimentation, and adjustment based on feedback. On a greenfield project you may start building without even knowing exactly what it is you are building. These are the real skills — not deep knowledge of any one technology, but the skills that let us learn new things.
 
-* "`How would you describe the leadership style here?`" The reverse equivalent of "`What do you look for in a boss?`"
+* "`How would you describe the leadership style here?`" The reverse equivalent of "`What do you look for in a boss?`" Listen for evidence of trust and delegation rather than close oversight and approval gates.
 
-* "`What are the organization values? What does the organization value most from software delivery?`" "`Of your organization values, which do you and your team live by, and how?`" Many organizations publish values that are not embedded in their decisions. Real values frame every decision at every level; "`great place to work`" is easy to claim.
+* "`What are the organization's values? What does the organization value most from software delivery? Of those values, which do you and your team live by, and how?`" Many organizations publish values that are not embedded in their decisions. Real values frame every decision at every level; "`great place to work`" is easy to claim.
 
-* "`How do you benefit from ensuring a good work-life balance? How do you ensure a low-stress, low-noise, low-friction environment?`"
+* "`How do you benefit from ensuring a good work-life balance? How do you ensure a low-stress, low-noise, low-friction environment?`" Vague answers about work-life balance are a bad sign — an organization that has actually thought about this can point to concrete practices, not just platitudes.
 
-* "`In the last 12 months, how many IT people left, as a percentage of the total at the start of the year?`"
-
-* "``"
-
-* "``"
-
-* "``"
-
-* "``"
-
-
-// Green flags in an organization:
-// * a strong culture of quality, with tech debt actively managed;
-// * pair programming, or robust QA, is valued;
-// * self-organizing, cross-functional teams;
-// * Extreme Programming practices on by default;
-// * room for mentoring and personal growth;
-// * flexible working hours and a real commitment to work-life balance;
-// * shift-left as much as possible.
+* "`In the last 12 months, how many IT people left, as a percentage of the total at the start of the year?`" The average tenure for a permanent tech worker is only about two years; an organization with high turnover usually knows why, even if they're reluctant to say.
 
 == Making a decision
 
-Gather all the data — Glassdoor, Trustpilot, Companies House — and then go with your gut. The few times in my career I have ignored my gut, it has been a disaster. If you don't get a good vibe from the people interviewing you, ask whether you really want to work with them: organizations attract and retain similar types of people, so the interviewer is probably representative. Do you think you can learn from them, work with them, and have fun doing so?
+You are looking for a _combination_ of red flags, not any single one. One on its own is rarely a problem. A cluster of red flags is a sign of some fundamental structural problems. Red flags turn up in green companies and vice versa, so weigh the whole picture.
 
-Remote and flexible working are not always possible — there can be legitimate reasons, such as the nature of the work or high security. If you have reservations but are willing to roll the dice, be honest and share them. And wait at least 24 hours before accepting an offer; pressure to accept quickly is a red flag.
+The green flags are just as important as the red ones. You're looking for:
 
-////
+* A strong culture of quality, with tech debt actively managed.
+* Pair programming, or robust QA, that is genuinely valued.
+* Self-organizing, cross-functional teams.
+* Room for mentoring and personal growth.
+* Flexible working hours and a real commitment to work-life balance.
+* Shifting left as much as possible.
 
-Treat the interview as a two-way process. If there is no time in the main cycle, request a "`reverse interview`" once you have an offer — it shows diligence. Treat all of these as _leading_ questions that guide your approach and prompt you to explore tangents.
+Supplement your own findings with all the third-party data you can get your hands on — Glassdoor, Trustpilot, Companies House. Then go with your gut. The few times in my career I have ignored my gut, it has been a disaster. If you don't get a good vibe from the people interviewing you, ask whether you really want to work with them. Organizations attract and retain similar types of people, so the interviewer is probably representative. Do you think you can learn from them, work with them, and have fun doing so?
 
-A note on red flags: you are really looking for a _combination_ of them. One on its own is not necessarily a problem, but a cluster is a sign the place is not a good one to work. Red flags turn up in green companies and vice versa, so consider the whole picture.
+If you have reservations but are willing to roll the dice, be honest and share that with them.
 
-////
+Cool off. Wait at least 24 hours before accepting (or rejecting or negotiating) an offer.
 
 .Related links
 ****
