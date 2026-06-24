@@ -5,6 +5,9 @@ Kieran Potts
 :docinfo: shared
 :nofooter:
 
+* xref:reverse-interviews.adoc[Reverse interviews] +
+  [.small]#24 June 2026#
+
 * xref:mythical-man-month-50.adoc[The Mythical Man-Month at 50] +
   [.small]#28 December 2025#
 
