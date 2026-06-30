@@ -1,0 +1,22 @@
+// This nav file declares the page hierarchy for the "thoughts"
+// component. Antora uses it to compute each page's ancestry
+// (`page.breadcrumbs`), which drives the breadcrumb trail rendered
+// by `website/default/src/ui/partials/breadcrumbs.hbs`.
+//
+// Without this file, every page in this component has no ancestors
+// and no breadcrumb trail is shown.
+
+* xref:index.adoc[Thoughts]
+** xref:reverse-interviews.adoc[Reverse interviews]
+** xref:mythical-man-month-50.adoc[The Mythical Man-Month at 50]
+** xref:the-quality-without-a-name.adoc[The (software) quality without a name]
+** xref:php-is-30.adoc[PHP is 30]
+** xref:essential-versus-accidental-complexity.adoc[Mental models: essential versus accidental complexity]
+** xref:30-years-of-cybercafes.adoc[30 years of cybercafés]
+** xref:rfcs.adoc[Requests for comments]
+** xref:gmail-is-20.adoc[Gmail is 20]
+** xref:software-attributes.adoc[Mental models: software attributes]
+** xref:rethinking-rest.adoc[Rethinking REST]
+** xref:rebranding-javascript.adoc[Should we rebrand JavaScript?]
+** xref:centos-vs-ubuntu.adoc[CentOS vs Ubuntu]
+** xref:hello-world.adoc[Hello, world]
