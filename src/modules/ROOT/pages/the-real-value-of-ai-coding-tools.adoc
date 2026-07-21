@@ -1,0 +1,53 @@
+= The real value of AI coding tools
+Kieran Potts, DD MMM YYYY
+:description: xxxxxxxxx
+:docinfo: shared
+:nofooter:
+
+We tend to think about AI coding tools as increasing the throughput of coding tasks.
+
+I don't believe this is where their real value lies.
+
+It is certainly true we can generate computer program code faster. But this
+just produces new bottlenecks elsewhere in the software development life cycle.
+
+We're still all essentially working under Scrum-like incremental waterfall
+processes. Few of us, in enterprise contexts anyway, practice genuine agile
+software development.
+
+For this reason, the speed of production of code has not
+been a bottleneck for a long time - probably not since the dawn of high-level
+programming languages. The bottlenecks are already elsewhere.
+
+The real value is improving the quality of our output: the robustness, reliability,
+security, and performance of the software systems we make.
+
+In the before-AI times, the only quality checks we could automated where those
+that could be reduced to deterministic rules: static code analysis, type checking,
+and execution of runtime behavioral tests.
+
+But there is another aspect to quality controls that is far more subjective and
+can't be automated using traditional computation. These are the quality checks
+that require judgment, opinion, ...
+
+These are the inferential checks. And until now they could only be done by
+humans - which is expensive.
+
+But, it turns out, frontier models, with good guides, are really great at doing
+a lot of this work.
+
+We can configure agents to:
+
+* Review code.
+
+* Run threat modeling workshops on a far more regular cadence.
+
+* Immediately catch drift between evolving architecture and design docs, and
+  keep the architectural artifacts synchronized with reality.
+
+* Generate proposed architectures from requirements specifications.
+
+* Decompose designs into small, incremental units of delivery, feeding backlogs
+  and supporting continuous integration.
+
+* xxxxx
