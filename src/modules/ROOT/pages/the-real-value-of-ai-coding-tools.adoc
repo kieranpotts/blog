@@ -1,6 +1,6 @@
 = The real value of AI coding tools
-Kieran Potts, DD MMM YYYY
-:description: xxxxxxxxx
+Kieran Potts, 21 July 2026
+:description: We tend to measure AI coding tools by how much code they emit per hour. I think that misses the point. Their real value is that they can perform the quality checks that, until now, only humans could perform — and which we could therefore never afford to do often enough.
 :docinfo: shared
 :nofooter:
 
@@ -8,46 +8,64 @@ We tend to think about AI coding tools as increasing the throughput of coding ta
 
 I don't believe this is where their real value lies.
 
-It is certainly true we can generate computer program code faster. But this
-just produces new bottlenecks elsewhere in the software development life cycle.
+It is certainly true that we can generate computer program code faster than before. But raising the output of one station on a production line does not raise the output of the line. It relocates the bottleneck, and it grows a pile of work-in-progress in front of whatever the new constraint turns out to be.
 
-We're still all essentially working under Scrum-like incremental waterfall
-processes. Few of us, in enterprise contexts anyway, practice genuine agile
-software development.
+In software development, the constraint has not been the typing for a very long time — probably not since the arrival of high-level programming languages. The constraint is everything that surrounds the typing: agreeing what to build, deciding how to build it, reviewing it, testing it, getting it approved, and getting it released.
 
-For this reason, the speed of production of code has not
-been a bottleneck for a long time - probably not since the dawn of high-level
-programming languages. The bottlenecks are already elsewhere.
+And most of us are still working under Scrum-like processes that are, in truth, incremental waterfall. Few teams, in enterprise contexts anyway, practice genuine agile software development. Code that appears instantly still waits for the next refinement session, the next review, the next regression cycle, the next change advisory board, the next release window.
 
-The real value is improving the quality of our output: the robustness, reliability,
-security, and performance of the software systems we make.
+Generate that code ten times faster and you do not get working software ten times sooner. You get a longer queue.
 
-In the before-AI times, the only quality checks we could automated where those
-that could be reduced to deterministic rules: static code analysis, type checking,
-and execution of runtime behavioral tests.
+The real value lies elsewhere. It is in the quality of what we produce: the robustness, reliability, security, and performance of the systems we make.
 
-But there is another aspect to quality controls that is far more subjective and
-can't be automated using traditional computation. These are the quality checks
-that require judgment, opinion, ...
+To see why, it helps to look at what we have historically been able to automate.
 
-These are the inferential checks. And until now they could only be done by
-humans - which is expensive.
+In the before-AI times, the only quality checks we could automate were those that could be reduced to deterministic rules. Static code analysis. Type checking. Schema validation. The execution of runtime behavioral tests. These are enormously valuable, and most projects would benefit from more of them, but they share a limitation. They can only answer questions that somebody has already worked out how to express as a rule.
 
-But, it turns out, frontier models, with good guides, are really great at doing
-a lot of this work.
+The checks that matter most are not like that.
 
-We can configure agents to:
+Does this abstraction earn its keep? Does this design document still describe the system it claims to describe? Has this change widened the attack surface? Is this the third time we have solved the same problem, slightly differently, in three different places? Does this specification actually describe what the customer needs?
 
-* Review code.
+These are questions of judgment, opinion, taste, and context. There is no rule to encode. They can be answered only by inference — by somebody reading the thing and forming a view.
 
-* Run threat modeling workshops on a far more regular cadence.
+Until now, that somebody had to be a human being. Which made these checks expensive. And because they were expensive, we rationed them. We did them at a design review, at a pre-release threat modeling workshop, at an annual architecture audit. They were occasions, not habits. When a deadline loomed, they were the first thing cut. Every methodology we have ever adopted has included them on paper, and hardly any team has sustained them in practice.
 
-* Immediately catch drift between evolving architecture and design docs, and
-  keep the architectural artifacts synchronized with reality.
+It turns out that frontier models, given good guides, are rather good at this kind of work.
 
-* Generate proposed architectures from requirements specifications.
+That is the development worth paying attention to. Not that the cheap part of software development has become cheaper, but that the expensive part has become affordable.
 
-* Decompose designs into small, incremental units of delivery, feeding backlogs
-  and supporting continuous integration.
+We can now configure agents to:
 
-* xxxxx
+* Review code changes against the project's standards, conventions, and architectural intent — not merely against its linting rules.
+
+* Run threat modeling workshops on a far more regular cadence than a human-only team can sustain.
+
+* Catch drift between the evolving implementation and the architecture and design documents, keeping the architectural artifacts synchronized with reality.
+
+* Interrogate requirements for ambiguity, unstated assumptions, and missing acceptance criteria, before any code is written.
+
+* Generate proposed architectures from requirements specifications, with the options considered and the trade-offs between them made explicit.
+
+* Decompose designs into small, incremental units of delivery, feeding backlogs and supporting continuous integration.
+
+* Audit a codebase for structural drift — shallow abstractions, tangled dependencies, repeated patterns — and report back a prioritized set of remedies.
+
+* Triage incoming issues, reproducing reported defects and classifying them ahead of human review.
+
+* Validate delivered software against what users actually need, rather than only against the acceptance criteria that were agreed up front.
+
+Not one of these is a new idea. Every one of them is something we already knew we ought to be doing. What has changed is that they no longer need to be rationed. They can run on every change, rather than at whatever cadence a team can afford to staff.
+
+A caveat, and an important one. An inferential check produces findings, not decisions. It hands you a set of candidate problems to accept, reject, or defer. And its judgment is itself probabilistic: run it twice over the same input and it may not tell you the same thing twice. So it must not become a gate that passes or fails a change on its own, and it must not displace the deterministic checks. Anything that can be expressed as a rule should still be expressed as a rule, and enforced mechanically. Inference is for widening the net, not for replacing the mesh.
+
+Nor does any of this take the human out of the loop. It moves them. The work is no longer performing every check; it is deciding which of the findings matter. That is a far better use of an experienced engineer than reading a diff line by line. It is also work that models remain conspicuously bad at, because it depends on precisely the things they lack: knowledge of why the system came to be the way it is, of how much change the organization can absorb, and of which risks are worth carrying.
+
+''''
+
+So if you are measuring these tools by how much code they emit per hour, you are measuring the wrong station on the line. Throughput was never our problem – not since the 1980s or thereabouts.
+
+The interesting question is not NOT much faster we can write our software.
+
+It is how much better we can now afford to make it.
+
+And that's a joyous position to be in.
