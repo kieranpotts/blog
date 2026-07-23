@@ -1,0 +1,14 @@
+= My AI journey
+
+[quote,Ethan Mollick,Co-Intelligence]
+----
+Users who intimately understand the nuances, limitations, and abilities of AI tools are uniquely positioned to unlock AI's full innovative potential. [...] Workers who figure out how to make AI useful for their jobs will have a large impact.
+----
+
+AI works best as a *thinking companion*, critiquing and refining our own choices and our own work, rather than fully delegating responsibility for decisions and outputs to AI…
+
+AI *augments* human decision-making dskills - a useful "alien" mind that does not share the same biases and prejudices as we do.
+
+We're still in an era of experimentation and evolution. Harness engineering and loop engineering, for example, are still in their infancy - and this is critical infrastructue to get right to run models reliably and securely…
+
+Currently, there's no "user manual" for LLMs. Best practices are still emerging. And for each breakthrough model we have to learn over again what AI's new capabilities can do for us.
