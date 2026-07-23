@@ -27,9 +27,11 @@ The release of ChatGPT in November 2022 was a genuine leap forward in AI capabil
 
 In a wonderful twist of irony, we may have engineered ourselves out of our own jobs.
 
-Capabilities measured on leaderboards and benchmarks are purely technical analyses. They don't take into account how these new tools will be integrated into the cultural fabric of our industry, the regulatory landscape, and the social norms that define our work environment.
-
 (This post assumes only incremental advances in current AI technology, not a sudden leap to AGI — which is probably still a long way off.)
+
+One of the restrictions on the continued growth of LLMs will be access to more and better training data. We are already running low, and legislative changes around copyright may make things tighter still for the AI labs. The quality of an LLM is determined by the quality and quantity of its training data, so the search for more, better, and more diverse sources has become a hot topic.
+
+Capabilities measured on leaderboards and benchmarks are purely technical analyses. They don't take into account how these new tools will be integrated into the cultural fabric of our industry, the regulatory landscape, and the social norms that define our work environment.
 
 A 2024 paper from MIT's Computer Science and Artificial Intelligence Laboratory found that automating human jobs may take longer than thought. Studying computer vision, it concluded that only about 23% of the wages of current jobs in that field could realistically be automated away with AI, even allowing for further maturity of the technology.
 
