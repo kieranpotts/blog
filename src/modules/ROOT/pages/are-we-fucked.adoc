@@ -124,6 +124,8 @@ My view is that productivity gains will initially be minimal, and that a real pa
 
 == Where AI is genuinely good
 
+AIs are proving good not only at generating code, but also at design and architecture — at least at sketching and reviewing them — at code review, and, perhaps surprisingly, at the more creative forms of software testing, like penetration testing.
+
 There is one area where AI already outperforms most humans, and it is not the boilerplate generation that gets the headlines. It is the adversarial work: code review, vulnerability hunting, penetration testing. Until very recently these could only be done by experienced humans — they demand judgment, pattern recognition, and a measure of creativity. And they are, paradoxically, the tasks humans are in practice not very good at.
 
 The qualities that make a good reviewer or pen-tester — patient attention to detail, suspicion, the ability to hold a large system in your head and ask "`what if?`" — are exactly the qualities that erode after the fourth hour of a sprint review. AI does not get tired, does not get bored, and has read every CVE advisory ever published. A tool that flags a subtle concurrency bug, or catches a deliberately injected vulnerability, is already more reliable than a senior engineer skimming a pull request on a Friday afternoon.
