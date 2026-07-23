@@ -107,7 +107,7 @@ ____
 
 Generative AI will also create a whole new _category_ of software. Jakob Nielsen identified it as the first new human–computer interface in 60 years, and only the third in all of computing history: a paradigm shift in which users tell the computer what they want, not how to do it, reversing the locus of control.
 
-Other models are being trained to spot bugs and security vulnerabilities. I suspect these specialist tools will prove the most useful, because they solve problems humans are bad at — human reviewers typically struggle to spot deliberately injected vulnerabilities.
+Other models are being trained to spot bugs and security vulnerabilities. I suspect these specialist tools will prove the most useful of all — and the reason is worth pausing on.
 
 [quote]
 ____
@@ -115,6 +115,12 @@ The purpose of all this, of course, is to save time. Kite claims its AI-completi
 ____
 
 My view is that productivity gains will initially be minimal, and that a real paradigm shift may come only when AI-like systems can build and iterate the design of _entire applications_, not just individual modules.
+
+== Where AI is genuinely good
+
+There is one area where AI already outperforms most humans, and it is not the boilerplate generation that gets the headlines. It is the adversarial work: code review, vulnerability hunting, penetration testing. Until very recently these could only be done by experienced humans — they demand judgment, pattern recognition, and a measure of creativity. And they are, paradoxically, the tasks humans are in practice not very good at.
+
+The qualities that make a good reviewer or pen-tester — patient attention to detail, suspicion, the ability to hold a large system in your head and ask "`what if?`" — are exactly the qualities that erode after the fourth hour of a sprint review. AI does not get tired, does not get bored, and has read every CVE advisory ever published. A tool that flags a subtle concurrency bug, or catches a deliberately injected vulnerability, is already more reliable than a senior engineer skimming a pull request on a Friday afternoon.
 
 == Other innovations
 
