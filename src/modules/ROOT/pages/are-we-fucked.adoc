@@ -1,4 +1,4 @@
-= Where did all the jobs go?
+= Are we fucked?
 Kieran Potts
 :description: The history of software is a story of rising abstraction, and AI is the latest step — not the last. Why I think generative AI will not replace developers, but will change the shape of our teams and usher in a new golden age.
 :docinfo: shared
@@ -24,6 +24,13 @@ Kieran Potts
 The entire history of software development is a story of rising levels of abstraction.
 
 Some would have you believe that the computer-programmer's job will soon be obsolete, going the way of the gaslighter, the wheelwright, the scrivener, and the switchboard operator. Right now, you still need to know how to code to use AI tools effectively. Maybe in a few years that won't be the case.
+
+In a wonderful ... of irony, we may have engineered ourselves out of
+our own jobs.
+
+TODO: Capabilities measured on leaderboards / benchmarks. But these
+are purely technical analyses. They don't take into account how
+these new tools will be integrated into the cultural fabric of our industry, the regulatory landscape, and the social norms that define our work environment.
 
 (This post assumes only incremental advances in current AI technology, not a sudden leap to AGI — which is probably still a long way off.)
 
