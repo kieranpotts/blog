@@ -192,7 +192,13 @@ ____
 I would add that I use AI to help me think through solutions that I may not otherwise have imagined. For example, I would explain to the AI an approach I would take, but what other ideas would it suggest? I receive either new approaches I actually end up using, or it confirms my original approach.
 ____
 
-This is a little sad — using AI as a substitute for human collaboration and pair programming.
+There is something a little sad about it — using AI as a substitute for human collaboration and pair programming. But the alternative is worse: letting AI make the decisions for us. LLMs are more like people than computers. They are good at:
+
+* Creative tasks, like idea generation.
+* Seeing patterns in input data.
+* Innovation, because they will implement plans through trial and error.
+
+For these reasons, AI _augments_ human decision-making rather than replacing it. A model is a useful "`alien`" mind — it does not share our biases, our assumptions, or our blind spots. It is a "`thinking companion`" that reflects on, and sometimes challenges, our own ideas. The strengths and weaknesses of an agent will not match your own — and that is an asset.
 
 Generative AI can be a very useful tool, saving time and trouble if used well. But it does not lower labour costs, or total cost over the whole life cycle, and so it does not substantially improve delivery times while maintaining quality and performance. It has only a small effect on the development and testing parts of a project, and it will not change overall life-cycle speed if other factors — big-bang releases, say — are the bottleneck.
 
