@@ -10,7 +10,6 @@ Kieran Potts
 :link-nielsen: https://www.nngroup.com/articles/ai-paradigm/
 :link-goldman: https://www.bbc.co.uk/news/technology-65102150
 :link-bret-victor: https://vimeo.com/71278954
-:link-literacy: https://news.ycombinator.com/item?id=21357921
 :link-economist-globalisation: https://www.economist.com/business/2024/09/29/ai-and-globalisation-are-shaking-up-software-developers-world
 :link-cio: https://www.cio.com/article/3540579/devs-gaining-little-if-anything-from-ai-coding-assistants.html
 :link-economist-coding: https://www.economist.com/science-and-technology/2021/07/07/ai-is-transforming-the-coding-of-computer-programs
@@ -19,22 +18,18 @@ Kieran Potts
 :link-nocodetech: https://www.nocode.tech/
 :link-design-by-wire: https://matthewstrom.com/writing/design-by-wire/
 :link-farley-lcnc: https://www.youtube.com/watch?v=uxBZFju0Mjs
-:link-tailwind-pr: https://github.com/tailwindlabs/tailwindcss.com/pull/2388
 
 The entire history of software development is a story of rising levels of abstraction.
 
 Some would have you believe that the computer-programmer's job will soon be obsolete, going the way of the gaslighter, the wheelwright, the scrivener, and the switchboard operator. Right now, you still need to know how to code to use AI tools effectively. Maybe in a few years that won't be the case.
 
-In a wonderful ... of irony, we may have engineered ourselves out of
-our own jobs.
+In a wonderful twist of irony, we may have engineered ourselves out of our own jobs.
 
-TODO: Capabilities measured on leaderboards / benchmarks. But these
-are purely technical analyses. They don't take into account how
-these new tools will be integrated into the cultural fabric of our industry, the regulatory landscape, and the social norms that define our work environment.
+Capabilities measured on leaderboards and benchmarks are purely technical analyses. They don't take into account how these new tools will be integrated into the cultural fabric of our industry, the regulatory landscape, and the social norms that define our work environment.
 
 (This post assumes only incremental advances in current AI technology, not a sudden leap to AGI — which is probably still a long way off.)
 
-A recent paper from MIT's Computer Science and Artificial Intelligence Laboratory found that automating human jobs may take longer than thought. Studying computer vision, it concluded that only about 23% of the wages of current jobs in that field could realistically be automated away with AI, even allowing for further maturity of the technology.
+A 2024 paper from MIT's Computer Science and Artificial Intelligence Laboratory found that automating human jobs may take longer than thought. Studying computer vision, it concluded that only about 23% of the wages of current jobs in that field could realistically be automated away with AI, even allowing for further maturity of the technology.
 
 The better analogy, I think, is to the trades on a construction site, or to manufacturing:
 
@@ -47,7 +42,7 @@ ____
 
 The bootcamp wave of 2020–2023 flooded the market with junior developers, and back then the demand was there, so many landed roles. Now bootcamps are struggling, some dying, because hardly anyone is hiring juniors any more. AI has taken much of the junior-dev market.
 
-But at roughly the same moment AI arrived, the tech market was slowing anyway. We were coming out of a pandemic-era boom, and higher interest rates were cooling the startup scene that had driven so much hiring. AI gets the blame for the changing landscape, but my view is that there are multiple factors at play, and some of the economic ones are probably more important than AI.
+But at roughly the same moment AI arrived, the tech market was slowing anyway. We were coming out of a pandemic-era boom, and higher interest rates cooled the startup scene that had driven so much hiring. AI gets the blame for the changing landscape, but my view is that there are multiple factors at play, and some of the economic ones are probably more important than AI.
 
 So no, I don't think AI will replace developers entirely. But the typical team structure is changing.
 
@@ -141,11 +136,11 @@ ____
 
 Every improvement in IT capability since the 1950s can be traced to this drive to lower the cost of developing and owning software, and the entry costs for new developers. One consequence: employees increasingly expect the same fast, intuitive experience at work that they enjoy at home. As the always-connected generation comes to dominate the workforce, "`just good enough`" enterprise software will no longer do — and excellent user experience is expensive to build, which only sharpens the incentive to buy rather than build. Enterprise software will come to look a lot like consumer software.
 
-== Conclusion
+== The bigger picture
 
 Should we worry? No.
 
-A Goldman Sachs report predicts hundreds of thousands of jobs affected — but also new jobs, entirely new categories of activity, and productivity gains across many industries. Demand for software engineers remains strong: there are around 25 million people worldwide fluent in a standard programming language, and demand has long exceeded supply. IDC has projected a global shortfall of four million developers.
+A {link-goldman}[Goldman Sachs report] predicts hundreds of thousands of jobs affected — but also new jobs, entirely new categories of activity, and productivity gains across many industries. Demand for software engineers remains strong: there are around 25 million people worldwide fluent in a standard programming language, and demand has long exceeded supply. IDC has projected a global shortfall of four million developers.
 
 Further automation of software development will do two things. It will ease the supply-side pressure by enlarging the pool of available developers — no-code/low-code platforms already provide some people an entry point. But it will also _increase_ demand, by expanding what is possible with software and making bespoke development accessible to more organizations.
 
@@ -166,11 +161,11 @@ I believe the recent advances in automating software delivery will not be the be
 
 == The return of the professional software house
 
-The amateurization of software — more businesses, in more domains, having to do a bit of software — accelerated with the web. But higher levels of abstraction, and greater diversity of ready-made software, mean fewer companies need to make their own. You don't need a developer to build a marketing website; CRMs can be heavily customized without code; you can wire disparate web services together through GUI abstractions over APIs. And there is more reuse: `gov.uk` means local authorities can piggyback on software already built by central government rather than building from scratch.
+The amateurization of software — more businesses, in more domains, having to do a bit of software — accelerated with the web. But higher levels of abstraction, and greater diversity of ready-made software, mean fewer companies need to make their own. You don't need a developer to build a marketing website; CRMs can be heavily customized without code; you can wire disparate web services together through GUI abstractions over APIs. And there is more reuse: https://www.gov.uk[GOV.UK] means local authorities can piggyback on software already built by central government rather than building from scratch.
 
 I have perhaps 25 years of career left, and in that time I expect the industry to consolidate again around a smaller number of large, professional software houses, with fewer software teams embedded in businesses that operate in non-IT domains. That may be no bad thing: many of us in enterprise software have to deal with bosses and clients whose expertise is not software — which means technical debt, and stress. Regulation plays a part too: it is no longer socially acceptable for a tech startup to be founded in a garage; we expect higher barriers to entry around security and data privacy.
 
-=== Computer illiteracy
+== Computer illiteracy
 
 My father's generation are great at fixing cars, because when they were young cars were expensive and unreliable, so people learned to maintain them. As cars became cheaper and more reliable, that knowledge waned. The same is happening with software. Today's children, used to touch interfaces rather than a terminal, have _less_ computer literacy than their parents — which will surely have consequences as that generation enters the workplace. It may become _necessary_ to develop software at a much higher level of abstraction than we do today.
 
@@ -216,6 +211,14 @@ AI's primary role in software development is that of an amplifier. It magnifies 
 ____
 
 DORA research suggests AI tools can help teams move faster, increasing throughput — but at the cost of stability, as measured by change-failure rate. The same trade-off has appeared in previous years, which suggests we are still learning how to use these tools. Their value is unlocked by the surrounding technical and cultural environment.
+
+== Conclusion
+
+So, are we fucked? No.
+
+Generative AI is not the end of software development — it is the latest in a long line of abstractions, and like the ones before it, it will change the shape of the work without doing away with the work itself. The typing gets faster; the thinking does not. What shifts is where the thinking happens: upward, toward design, toward the trade-offs no model can make for us, and toward the validation of output a model can produce but cannot guarantee.
+
+The teams will get smaller and more senior, the professional software house will return, and a new generation of citizen developers will build the long tail of simple systems that never needed a professional in the first place. The question was never whether we would still be needed — it is whether we will move our attention up the stack fast enough to keep being useful. I think we will.
 
 .Related links
 ****
