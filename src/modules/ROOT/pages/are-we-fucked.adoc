@@ -55,7 +55,9 @@ But at roughly the same moment AI arrived, the tech market was slowing anyway. W
 
 So no, I don't think AI will replace developers entirely. But the typical team structure is changing.
 
-We are very good at inventing technologies that save us some _typing_. Coding is just one thin slice of the software development life cycle, and we have invented languages, tools, frameworks, and libraries to write code faster. But we are not very good at inventing ways to speed up the _thinking_. We have invented very few things to help us think faster.
+The important thing that most AI commentary misses is that _programming has not been the bottleneck in software development for a long time_. Coding is just one thin slice of the software development life cycle. We have already invented languages, tools, frameworks, libraries, and now AI assistants to write code faster. But the hard parts of software delivery are understanding the problem, designing a solution that fits the organization, negotiating requirements, integrating with existing systems, testing, deploying, operating, and maintaining what gets built. Churning out code faster does little for the overall process if the slowdowns are elsewhere — waiting for feedback, coordinating teams, fighting legacy systems, or clarifying what we should build in the first place.
+
+We are very good at inventing technologies that save us some _typing_. But we are not very good at inventing ways to speed up the _thinking_. We have invented very few things to help us think faster.
 
 So software development remains a painful, messy process. We spend a lot of time on the other activities in the life cycle, and on coordinating changes between them. We spend a lot of time waiting — for other people, for the software to compile, run, deploy, be tested, be accepted — and a lot of time fixing bugs.
 
@@ -202,7 +204,9 @@ The really interesting use cases come when AI is combined with other maturing in
 
 _A poor workman blames his tools._
 
-The speed of coding may increase significantly. That frees up time to _think_ about problems and how best to solve them — but it does not speed up the thinking itself.
+The speed of coding may increase significantly. But coding speed stopped being the limiting factor in most software projects long ago. If a team is already constrained by unclear requirements, slow feedback loops, brittle integration, heavy process, or the time it takes to understand a domain, then writing code twice as fast only compresses the smallest part of the schedule. The bottleneck moves elsewhere — and often to places AI does not yet help much.
+
+That frees up time to _think_ about problems and how best to solve them — but it does not speed up the thinking itself.
 
 In a corporate chat channel, someone said:
 
@@ -219,7 +223,7 @@ There is something a little sad about it — using AI as a substitute for human 
 
 For these reasons, AI _augments_ human decision-making rather than replacing it. A model is a useful "`alien`" mind — it does not share our biases, our assumptions, or our blind spots. It is a "`thinking companion`" that reflects on, and sometimes challenges, our own ideas. The strengths and weaknesses of an agent will not match your own — and that is an asset.
 
-Generative AI can be a very useful tool, saving time and trouble if used well. But it does not lower labour costs, or total cost over the whole life cycle, and so it does not substantially improve delivery times while maintaining quality and performance. It has only a small effect on the development and testing parts of a project, and it will not change overall life-cycle speed if other factors — big-bang releases, say — are the bottleneck.
+Generative AI can be a very useful tool, saving time and trouble if used well. But it does not lower labour costs, or total cost over the whole life cycle, and so it does not substantially improve delivery times while maintaining quality and performance. It has only a small effect on the development and testing parts of a project, and it will not change overall life-cycle speed if other factors — big-bang releases, unclear requirements, slow feedback, organisational friction — are the bottleneck. In most projects those other factors, not typing speed, are exactly the bottleneck.
 
 Coding agents will clearly make it easier to churn out low-level code; auto-complete will keep getting better. By mid-2026, corporate "token leaderboards" were reportedly driving trillions of tokens of "agentic use" — AI agents performing tasks automatically — though soaring costs led many firms to ration the most advanced models. That suggests automation may be limited not by capability but by economics: virtual workers can be more expensive than human ones for some tasks.
 
