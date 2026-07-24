@@ -18,6 +18,7 @@ Kieran Potts
 :link-nocodetech: https://www.nocode.tech/
 :link-design-by-wire: https://matthewstrom.com/writing/design-by-wire/
 :link-farley-lcnc: https://www.youtube.com/watch?v=uxBZFju0Mjs
+:link-bbc-jobs: https://www.bbc.co.uk/news/articles/cn7nllr4vd6o
 
 The entire history of software development is a story of rising levels of abstraction.
 
@@ -33,6 +34,8 @@ One of the restrictions on the continued growth of LLMs will be access to more a
 
 Yet the leap from GPT-3.5 to GPT-4 showed what is still possible. GPT-4 outperformed its predecessor by a significant margin, and it was trained on a very diverse range of data — suggesting that better curation, licensing deals, and multimodal sources may keep the curve going for a while yet.
 
+The benchmark trend is clear: a few years ago LLMs could reliably complete only tasks that took humans seconds or minutes; now they are handling work that takes an hour or more, and some models can find problems in cryptocurrency contracts or even refine the model itself — tasks that would take a human several hours.
+
 Capabilities measured on leaderboards and benchmarks are purely technical analyses. They don't take into account how these new tools will be integrated into the cultural fabric of our industry, the regulatory landscape, and the social norms that define our work environment.
 
 A 2024 paper from MIT's Computer Science and Artificial Intelligence Laboratory found that automating human jobs may take longer than thought. Studying computer vision, it concluded that only about 23% of the wages of current jobs in that field could realistically be automated away with AI, even allowing for further maturity of the technology.
@@ -46,7 +49,7 @@ ____
 
 "`It's like the construction industry. We still need the architects — senior devs — to make sure what AI spits out is scalable and secure. But we need fewer bricklayers: the juniors.`"
 
-The bootcamp wave of 2020–2023 flooded the market with junior developers, and back then the demand was there, so many landed roles. Now bootcamps are struggling, some dying, because hardly anyone is hiring juniors any more. AI has taken much of the junior-dev market.
+The bootcamp wave of 2020–2023 flooded the market with junior developers, and back then the demand was there, so many landed roles. Now bootcamps are struggling, some dying, because hardly anyone is hiring juniors any more. AI has taken much of the junior-dev market. That pattern is visible in the data: a Stanford analysis of US wage and jobs data found that, since ChatGPT became widespread, employment for 22 to 25-year-olds has fallen by 2.7%, rising to 12.8% in the most AI-exposed sectors such as finance, software, and creative industries. Not all economists agree on the cause — interest-rate rises and other factors are alternative explanations — but the correlation is striking.
 
 But at roughly the same moment AI arrived, the tech market was slowing anyway. We were coming out of a pandemic-era boom, and higher interest rates cooled the startup scene that had driven so much hiring. AI gets the blame for the changing landscape, but my view is that there are multiple factors at play, and some of the economic ones are probably more important than AI.
 
@@ -218,7 +221,9 @@ For these reasons, AI _augments_ human decision-making rather than replacing it.
 
 Generative AI can be a very useful tool, saving time and trouble if used well. But it does not lower labour costs, or total cost over the whole life cycle, and so it does not substantially improve delivery times while maintaining quality and performance. It has only a small effect on the development and testing parts of a project, and it will not change overall life-cycle speed if other factors — big-bang releases, say — are the bottleneck.
 
-Coding agents will clearly make it easier to churn out low-level code; auto-complete will keep getting better. What is less clear is how generative AI will help us _design_ software. I think it unlikely that existing models can replace the higher-level design tasks, because design is a creative process requiring a deep understanding of the problem domain and the ability to think abstractly — and LLMs do not solve those problems.
+Coding agents will clearly make it easier to churn out low-level code; auto-complete will keep getting better. By mid-2026, corporate "token leaderboards" were reportedly driving trillions of tokens of "agentic use" — AI agents performing tasks automatically — though soaring costs led many firms to ration the most advanced models. That suggests automation may be limited not by capability but by economics: virtual workers can be more expensive than human ones for some tasks.
+
+What is less clear is how generative AI will help us _design_ software. I think it unlikely that existing models can replace the higher-level design tasks, because design is a creative process requiring a deep understanding of the problem domain and the ability to think abstractly — and LLMs do not solve those problems.
 
 What we will be doing, more and more, is _design_. Our jobs will shift toward the higher-level concerns. And if design becomes more important, perhaps we need to upgrade our education accordingly: even now, design and architecture are only a minor part of a typical computer-science degree, most of which is spent on coding, algorithms, and data structures.
 
@@ -263,4 +268,5 @@ The teams will get smaller and more senior, the professional software house will
 * {link-nocodetech}[NoCode.Tech] — tools and knowledge for the no-code movement
 * {link-design-by-wire}[Design by wire], Matthew Ström (2023) — why AI will shape designers, not replace them
 * {link-farley-lcnc}[Will low-code/no-code kill programming jobs?], Dave Farley (2022)
+* {link-bbc-jobs}[Will your job be replaced by AI? Here are the roles most affected], BBC News (2026)
 ****
