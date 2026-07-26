@@ -1,6 +1,6 @@
 = Are we fucked?
 Kieran Potts
-:description: Why I think generative AI will not replace sofwtare developers, but will change the shape of our teams and usher in a new golden age of software engineering.
+:description: Why I think generative AI will not replace sofwtare developers, but it will reshape the IT industry.
 :docinfo: shared
 :nofooter:
 
@@ -20,13 +20,26 @@ Kieran Potts
 :link-farley-lcnc: https://www.youtube.com/watch?v=uxBZFju0Mjs
 :link-bbc-jobs: https://www.bbc.co.uk/news/articles/cn7nllr4vd6o
 
+A popular pastime of journalists in 2026 has been https://www.bbc.co.uk/programmes/m002xp3x[predicting the end of software developers]. It's a great story, isn't it? In a wonderful twist of irony, the very people who unleashed AI on the world would be the first to be replaced by it, their jobs going the way of the gaslighter, the wheelwright, the scrivener, and the switchboard operator.
+
+Right now, you still need to know how to write computer program code in order to use AI tools effectively. But as the capabilities of AI tools become ever closer to something like artificial general intelligence (AGI), maybe this will soon no longer be the case.
+
+Are we engineering ourselves out of our own jobs?
+
+I've spent the summer deep diving into the current state of the art in AI tools to support the software development. My conclusion is that AI will not replace our jobs, but it will incrementally change the IT industry over the coming years — just as cloud computing, the world-wide web, object-oriented programming, and other prior paradigm shifts have before.
+
+I might even go as far as predicting that AI will usher in a new golden age of software engineering…
+
+Let me explain.
+
+==========================
+
+change the shape of our teams and usher in a new golden age of software engineering.
+
+
 The entire history of software development is a story of rising levels of abstraction.
 
-Some would have you believe that the computer-programmer's job will soon be obsolete, going the way of the gaslighter, the wheelwright, the scrivener, and the switchboard operator. Right now, you still need to know how to code to use AI tools effectively. Maybe in a few years that won't be the case.
-
 The release of ChatGPT, built on GPT-3.5, in late 2022 was a genuine leap forward in AI capabilities — and, just as importantly, in accessibility. It is what touched off the current wave of anxiety.
-
-In a wonderful twist of irony, we may have engineered ourselves out of our own jobs.
 
 (This post assumes only incremental advances in current AI technology, not a sudden leap to AGI — which is probably still a long way off.)
 
