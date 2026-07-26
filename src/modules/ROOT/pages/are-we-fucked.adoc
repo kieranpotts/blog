@@ -1,6 +1,6 @@
 = Are we fucked?
 Kieran Potts
-:description: The history of software is a story of rising abstraction, and AI is the latest step — not the last. Why I think generative AI will not replace developers, but will change the shape of our teams and usher in a new golden age.
+:description: Why I think generative AI will not replace sofwtare developers, but will change the shape of our teams and usher in a new golden age of software engineering.
 :docinfo: shared
 :nofooter:
 
@@ -256,6 +256,36 @@ So, are we fucked? No.
 Generative AI is not the end of software development — it is the latest in a long line of abstractions, and like the ones before it, it will change the shape of the work without doing away with the work itself. The typing gets faster; the thinking does not. What shifts is where the thinking happens: upward, toward design, toward the trade-offs no model can make for us, and toward the validation of output a model can produce but cannot guarantee.
 
 The teams will get smaller and more senior, the professional software house will return, and a new generation of citizen developers will build the long tail of simple systems that never needed a professional in the first place. The question was never whether we would still be needed — it is whether we will move our attention up the stack fast enough to keep being useful. I think we will.
+
+////
+
+Nobody knows what future IT jobs look like. We only know that AI (and
+robotics) will change ours and many other professions. All jobs will
+probably change in some way, if not disappear entirely. Even those jobs
+that do disappear, yet new ones will emerge.
+
+Fears of mass unemployment triggered by automation go back centuries,
+but they have not (so far) materialized…
+
+Today many jobs exist, created by innovations in IT, that did not exist
+when I started my career over 20 years ago.
+
+The real problem is the turmoil of adapting to new jobs and conditions.
+
+****
+
+I don't think it will be as simple as "no more programmers". We'll
+probably create _more_ software as the costs of production, and the
+barriers to entry, decline further.
+
+When cost decreases, and barriers to entry decrease... More software is produced.
+
+The real change will be how we *support* the development, maintenance, and operation of software, eg. new focus on security - which will be
+a very good thing.
+
+Software will be a more heavily regulated industry, too.
+
+////
 
 .Related links
 ****
