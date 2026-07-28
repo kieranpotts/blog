@@ -1,6 +1,6 @@
 = Are we fucked?
 Kieran Potts
-:description: Why I think generative AI will not replace sofwtare developers, but it will reshape the IT industry.
+:description: Why I think generative AI will NOT replace software developers. In fact, I think it might reshape our industry for the better.
 :docinfo: shared
 :nofooter:
 
