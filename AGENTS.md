@@ -1,0 +1,57 @@
+# Blog
+
+A blog built as an [Antora](https://antora.org/) documentation-site
+component. Posts are AsciiDoc pages under `src/modules/ROOT/pages/`,
+with RSS, Atom, and JSON feeds generated alongside the site.
+
+The blog is published at https://kieranpotts.com/thoughts/. The
+[website](https://github.com/kieranpotts/website) repository is
+responsible for the build and deployment.
+
+In this project, the capitalized words REQUIRED, MUST, MUST NOT,
+RECOMMENDED, SHOULD, SHOULD NOT, OPTIONAL, and MAY are to be
+interpreted as described in
+[IETF RFC 2119](https://www.ietf.org/rfc/rfc2119.txt).
+
+## Tech stack
+
+- AsciiDoc, built with [Antora](https://antora.org/) (see `src/antora.yml`).
+- Python (`.hooks/validate_commit_message.py`) for commit-message validation,
+  wired in via the `commit-msg` git hook.
+- GitHub Actions, for commit-message validation and label sync.
+
+## Project structure
+
+- **[src/antora.yml](./src/antora.yml)** \
+  Antora component descriptor (`name: blog`, start page, nav).
+
+- **[src/modules/ROOT/pages/](./src/modules/ROOT/pages)** \
+  Blog posts, one `.adoc` file per post, plus `index.adoc` and `404.adoc`.
+
+- **[src/modules/ROOT/nav.adoc](./src/modules/ROOT/nav.adoc)** \
+  Site navigation, referenced from `antora.yml`.
+
+- **[src/feeds/](./src/feeds)** \
+  Generated `rss.xml`, `atom.xml`, and `feed.json` syndication feeds.
+
+- **[src/docinfo.html](./src/docinfo.html)**, **[src/docinfo-footer.html](./src/docinfo-footer.html)** \
+  Injected HTML head/footer content for the built site.
+
+- **[.hooks/validate_commit_message.py](./.hooks/validate_commit_message.py)** \
+  Commit-message format validator (run as a `commit-msg` git hook).
+
+## Rules
+
+- New posts MUST be added as `.adoc` files under
+  `src/modules/ROOT/pages/` and linked from `src/modules/ROOT/nav.adoc`.
+
+- Commit messages MUST follow the `<type>: <description>` format
+  enforced by `.hooks/validate_commit_message.py` and CI.
+
+## References
+
+The following technical standards apply.
+
+- **[TS-28: AsciiDoc](https://raw.githubusercontent.com/kieranpotts/standards/refs/heads/latest/dev/src/028/AGENTS.md)**
+- **[TS-9: Version Control](https://raw.githubusercontent.com/kieranpotts/standards/refs/heads/latest/dev/src/009/AGENTS.md)**
+- **[TS-19: Search Engine Optimization (SEO)](https://raw.githubusercontent.com/kieranpotts/standards/refs/heads/latest/dev/src/019/AGENTS.md)**
