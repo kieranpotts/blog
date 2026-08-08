@@ -16,8 +16,8 @@ interpreted as described in
 ## Tech stack
 
 - AsciiDoc, built with [Antora](https://antora.org/) (see `src/antora.yml`).
-- Python (`.hooks/validate_commit_message.py`) for commit-message validation,
-  wired in via the `commit-msg` git hook.
+- The shared [`kieranpotts/pre-commit-hooks`](https://github.com/kieranpotts/pre-commit-hooks)
+  `validate-commit-message` hook, wired in via the `commit-msg` git hook.
 - GitHub Actions, for commit-message validation and label sync.
 
 ## Project structure
@@ -37,8 +37,9 @@ interpreted as described in
 - **[src/docinfo.html](./src/docinfo.html)**, **[src/docinfo-footer.html](./src/docinfo-footer.html)** \
   Injected HTML head/footer content for the built site.
 
-- **[.hooks/validate_commit_message.py](./.hooks/validate_commit_message.py)** \
-  Commit-message format validator (run as a `commit-msg` git hook).
+- **[.pre-commit-config.yaml](./.pre-commit-config.yaml)** \
+  Pre-commit hooks configuration, consuming the shared
+  `kieranpotts/pre-commit-hooks` `validate-commit-message` hook.
 
 ## Rules
 
@@ -46,7 +47,7 @@ interpreted as described in
   `src/modules/ROOT/pages/` and linked from `src/modules/ROOT/nav.adoc`.
 
 - Commit messages MUST follow the `<type>: <description>` format
-  enforced by `.hooks/validate_commit_message.py` and CI.
+  enforced by the shared `validate-commit-message` pre-commit hook and CI.
 
 ## References
 
