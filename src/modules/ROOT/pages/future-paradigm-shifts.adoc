@@ -1,0 +1,23 @@
+= Future paradigm shifts
+
+////
+
+Historical paradigm shifts:
+
+- High-level programming languages
+- Interactive debugging
+- Integrated development environments
+- Object-oriented programming
+- The web platform (a ubiquitous, platform-agnostic, open software runtime)
+- Mass-market free and open source components (promoting large-scale code reuse)
+- Virtualization and containerization (isolation)
+- Cloud computing (reducing capital expenditure)
+- Mobile devices and always-on connectivity
+- AI
+
+Future:
+
+- Neurotech (and human-computer interfaces more generally)
+- Virtual and augmented reality (Teams in 3D, headset replaces headphones)
+
+////
