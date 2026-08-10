@@ -1,0 +1,29 @@
+= Semantic diffusion
+Kieran Potts
+:description: Our most useful terms — agile, REST, OOP, unit test — tend to lose their meaning the moment they become popular. Martin Fowler called this semantic diffusion, and our industry is unusually prone to it.
+:docinfo: shared
+:nofooter:
+
+Martin Fowler coined the term _semantic diffusion_ to describe the way a useful word gradually loses its precise meaning as it spreads through a community. Each retelling waters it down a little, until eventually the word means something much broader, and much vaguer, than its originators intended.
+
+Our field is riddled with examples:
+
+* *Continuous integration* has come to mean little more than "`running a build in the cloud`", rather than the discipline of integrating everyone's work frequently into a shared mainline.
+* *DevOps* gets reduced to Docker and Kubernetes, rather than a culture of shared ownership across development and operations.
+* *Unit test* is now used as a synonym for any automated test, including integration and system tests that make no attempt to isolate a unit under test or to deliver fast feedback.
+* *TDD* is taken to mean "`writing automated tests`", rather than letting tests drive the design.
+* *Refactoring* is taken to mean "`rewriting bits of code`", rather than the disciplined process of evolving a system's design over time without changing its behavior.
+* *REST* and *RESTful* have been diluted to the point that they describe any HTTP-based API, including those that follow none of the principles of REST. (I've written about this elsewhere.)
+* *MVC* is applied to any tiered application architecture.
+* *OOP* is taken to mean "`using classes and objects`". But public get/set accessors over private fields are _not_ encapsulation; public methods should express behavior, not the data structure beneath it. There are exceptions — data transfer objects, value objects, simple domain models that really are mostly data — but OOP is fundamentally about object-oriented _thinking_ and _design_, not syntax.
+* *FP* is taken to mean "`using map, filter, and reduce`".
+* And perhaps worst of all, *agile* has been diluted until it means almost nothing — and it is certainly not the same thing as Scrum.
+* *Software engineering* is treated as a synonym for software development. The term originated at the 1968 NATO Software Engineering Conference, a response to the software crisis of the day, and it encompasses a far broader set of practices and principles than "`writing software`".
+
+Perhaps _AI_ will go the same way.
+
+Happily, _domain-driven design_ seems to have escaped semantic diffusion so far — perhaps precisely because it has not been so widely adopted.
+
+The practical consequence is that we keep having to invent new terms to describe the original concepts, because the old ones have been worn smooth.
+
+Semantic diffusion happens in every domain — medicine, electronics, astronomy. But something about our field makes it especially acute. Unlike most professions, you don't need a formal qualification to land your first entry-level job in software. Around half the people in our industry — myself included — are self-taught. That means our first exposure to the industry's vocabulary tends to come not from textbooks or accredited courses, but from blog posts, conference talks, and YouTube videos: informal sources, where the diffusion has often already happened.
