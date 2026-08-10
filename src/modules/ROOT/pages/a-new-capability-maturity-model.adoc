@@ -1,0 +1,73 @@
+= A new capability maturity model
+Kieran Potts
+:description: A tongue-in-cheek but pointed maturity model for software organizations — from the sweatshop and the feature factory, through the process palace, up to the genuine delivery machine and the elite value stream.
+:docinfo: shared
+:nofooter:
+
+:link-farley: https://www.youtube.com/watch?v=fcjBfSiyI0k
+
+Here is a maturity model for software organizations — part serious, part tongue-in-cheek — running from the genuinely toxic up to the genuinely elite.
+
+== Level -1: Toxic waste
+
+We are not really concerned here with entirely dysfunctional organizations. That is a management and leadership problem, one that recurs across every industry and is not specific to software. Our interest is the software development _process_, and how it can be improved through better practices.
+
+== Level 0: Sweatshop
+
+The model starts proper at level zero — the sweatshop.
+
+== Level 1: Chaos circus
+
+The chaos model, in which the latest requirement is always the most urgent.
+
+Delivery is unsustainable, and these organizations are marked by high stress, burnout, and staff churn.
+
+== Level 2: Feature factory
+
+Also known as the ticket treadmill, or the sprint hamster wheel.
+
+Here, developers are treated as mere computer programmers — "`code monkeys`" who follow orders and write code without understanding the bigger picture. They are not empowered to make decisions or to adapt their processes. Their job, as the organization sees it, is to translate _detailed descriptions_ of business rules into code, and the primary skill is the ability to "`speak`" a particular programming language.
+
+The solution is decided before the tickets ever land on the developers' desks; they are expected only to implement it as specified. They are not expected to understand the business domain, the requirements, or the context. And so, in turn, programmers in this environment learn that the problem space is not their problem.
+
+The most dysfunctional organizations of this type require every design decision — even adding a new library — to be approved by a manager or architect. Deployments crawl through multiple sequential, manual quality gates. These processes never produce innovative products, nor systems that are pleasant to work on and cheap to maintain and extend.
+
+There is a high degree of "`Taylorism`" here: work is decomposed into areas of speciality, and the SDLC is run like a production line, each step performed by a specialist. This does not scale to very large, very complex systems, and it does not support innovative product design through experimentation. Nor does it allow for agility — it is much harder to turn the ship around when your process demands a long sequence of steps and approvals. There are many contracts between phases, and therefore a great deal of coordination and hand-off overhead between teams and specialists.
+
+The term comes from the early twentieth century, when Frederick Winslow Taylor developed a "`scientific`" approach to management focused on efficiency and productivity. In software, this approach leads to a rigid process that stifles creativity. You can see the appeal, though: in principle, each of us becomes very good at our own speciality, and we combine our expertise to produce high-quality, high-value products. In practice, coders working this way do not build better systems more quickly. Decomposing development into project-managed coding tasks produces poor software, inefficiently.
+
+These companies value only the "`tactical tornadoes`" — John Ousterhout's term for people who write code quickly but not necessarily well. They do not value the strategic thinkers who design and architect systems and consider the long-term consequences of their decisions. And the tactical tornadoes leave behind a mess that slows everyone down in the long run.
+
+== Level 3: Process palace
+
+Organizations that have implemented comprehensive processes and governance, but are overly rigid — heavy on ceremonies, documentation requirements, and approval gates. They are stable, but not yet optimized for speed. Very bureaucratic. The natural habitat of the December code freeze and the no-release Friday.
+
+Both levels 2 and 3 are dominated by top-down management and low trust, and therefore minimal autonomy. But at level 3 there is at least _some_ concerted effort to improve things. The trouble is that they are optimizing the wrong things.
+
+== Level 4: Sophisticated — the delivery machine
+
+Teams that have streamlined their processes, automated effectively, and can consistently ship quality software. They are productive and reliable — though still working somewhat independently of their customers, rather than in true partnership.
+
+The team is empowered to make the decisions that best suit the project, with the autonomy to adapt their processes and practices as needed. This is proper engineering discipline:
+
+* *Teams are optimized for learning.* They work iteratively, delivering value fast in response to high-quality feedback. They treat every change as an experiment, applying a scientific, rational approach to problem-solving. They can therefore assess the releasability of the evolving system after _every_ small change, and maintain high confidence in its stability throughout.
+* *Teams are cross-functional and collaborative.* They contain all the necessary skills and expertise. They foster a culture of shared ownership and accountability, open communication, and knowledge sharing, and they emphasize collective problem-solving and decision-making.
+
+These are the true 10x engineers — the people who arrive at really clean designs that can be implemented in very little code. They might write fewer lines per day than others, but the functionality, stability, and evolvability they deliver is far higher.
+
+== Level 5: Elite — the value stream
+
+Product engineers. Not merely a sophisticated delivery process, but one deeply embedded in the problem space of their users.
+
+This is the elite level, where engineering and customers are tightly coupled: daily deployments, continuous feedback loops, data-driven decisions, and direct customer collaboration. Features ship fast and iterate on real usage. Engineers interact directly with users — supporting them and fixing things in real time.
+
+The delivery model is tailored to the needs of the customer and the context of the project: the skills and experience of the team, the business domain, the complexity or ambiguity of the requirements, the risk profile, the budget, the timeline. There is nothing cookie-cutter about it. It is finely tuned to the project and continues to evolve as the project does. When new team members join, the team adapts to accommodate their skills and experience. When the scope changes or new risks emerge, the team adjusts its ways of working dynamically.
+
+Developers here are involved across the whole life cycle — requirements, design, testing, the lot. They are expected to understand the business domain and the project context, and they have the autonomy to adapt their practices. The solution is _not_ predetermined; developers contribute to its design and implementation, and are empowered to make the decisions that best suit the project.
+
+You always get a better solution when you treat software development as more than a translation engine from requirements to code. Technical people make technical decisions, and so make better decisions about the inherent trade-offs in a design. You get innovation, productivity, and quality when you treat development as a creative process rather than a production line — when you empower people to experiment, to make mistakes and learn from them, and to change designs in ways that could never have been foreseen at the outset. In a creative, unpredictable endeavour like software development, this is far more effective.
+
+.Related links
+****
+* {link-farley}[Coder vs Developer vs Engineer], Dave Farley (2025)
+****
