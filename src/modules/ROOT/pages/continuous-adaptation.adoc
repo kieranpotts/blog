@@ -1,0 +1,17 @@
+= Continuous adaptation
+Kieran Potts
+:description: We talk about continuous improvement, but the truer goal is continuous adaptation — constantly adjusting our processes and tools to circumstances that never stop changing.
+:docinfo: shared
+:nofooter:
+
+Software development is really two activities woven together.
+
+The first is the obvious one: implementing functional and non-functional requirements in software — building the thing.
+
+The second is quieter but no less important: getting better at how we do the first. Improving the way we work.
+
+We usually talk about that second activity as _continuous improvement_, and the phrase is fine as far as it goes. But I think it points us at the wrong target. "`Improvement`" implies a fixed standard we are climbing towards, as if there were some best practice waiting at the top of the hill that, once reached, we could settle into.
+
+There isn't. The ground keeps moving. The needs of the business shift. Requirements change. Technologies advance and decay. Teams form, grow, and disperse. A practice that was exactly right for last year's project, last year's team, and last year's toolchain can be quietly wrong for this year's.
+
+So the goal is not really improvement in the abstract. It is _adaptation_ — constantly adjusting our processes and our tools to fit the circumstances we actually find ourselves in. Less a climb towards a summit, more a continuous course correction. The teams that thrive over the long run are not the ones that found the "`best`" way of working and locked it in. They are the ones that never stopped adapting.
