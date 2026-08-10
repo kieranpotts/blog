@@ -1,0 +1,81 @@
+= How to learn software development
+Kieran Potts
+:description: Programming is only one part of software development, and it is the part schools teach. The rest — reading code, soft skills, the history of the field, and using AI judiciously — you mostly have to learn for yourself.
+:docinfo: shared
+:nofooter:
+
+:link-acm-ai-education: https://cacm.acm.org/news/the-impact-of-ai-on-computer-science-education/
+:link-best-books: https://sizovs.net/2019/03/17/the-best-books-all-software-developers-must-read/
+:link-olteanu-books: https://mihaiolteanu.me/books.html
+:link-durakovic: https://www.mensurdurakovic.com/hard-to-swallow-truths-they-wont-tell-you-about-software-engineer-job/
+
+What is the best way to learn software development?
+
+The options are many: university, bootcamps, workshops, conferences, online courses, books, pair programming, apprenticeships, certifications.
+
+The first thing to say is that you do not need a university degree to start a career in software development. With more and more alternative paths into the field, a computer-science degree is not necessary to succeed. Whether you take a coding course, teach yourself, or start an apprenticeship, there are many ways onto the ladder.
+
+== Programming is only part of it
+
+At university, and in bootcamps and online courses, you learn _computer programming_. But programming is only one aspect of _software development_ — the application of programming to produce software systems for use in the real world. Much of what matters most is not taught on any course.
+
+* *Contribute to open source.* This teaches you about managing change in large-scale systems, which is something universities and most bootcamps never cover. It is far better than working on pet projects, which only give you experience of greenfield work. Most real jobs involve maintaining existing systems — solving problems in codebases of thousands of lines, not a few hundred, while many other people are changing the same system at the same time.
+* *Learn the soft skills.* In the real world these matter more than technical skills, though few people admit it. Technical skills are relatively easy to improve with experience. Soft skills are much harder to refine, because we are constrained by our own wiring. The relevant ones include teamwork, a learning mindset, organization and time management, emotional intelligence and empathy, approachability, persistence and patience, and confidence.
+
+Everyone in this industry has worked with someone technically brilliant but hard to work with — a "`brilliant jerk`". There is a place for everyone in software, even them: they can make excellent contractors and consultants. But they are toxic in collaborative environments, and building any large-scale system requires exactly that — close-knit, cross-functional, highly collaborative teams.
+
+== Apprenticeship and pairing
+
+Apprenticeships may be the best route of all. The apprentice assists a more senior developer and learns by doing. The benefit runs both ways: the senior developer learns by teaching, forced to explain every detail of what they do and why. Mentoring sharpens both people.
+
+Pair programming is good for the same reason. It is the environment closest to the commercial world we will eventually work in.
+
+== Books are your best mentor
+
+If you read one good programming book a month — roughly ten pages a day — you will soon have a firm grasp of the field, and distinguish yourself from nearly every developer around you.
+
+== Should we still learn the basics?
+
+Should we still be learning things like decimal-to-hex conversion? We hardly ever need to do it by hand; we work at levels of abstraction whose APIs do it for us. Algorithms, data structures, memory allocation — all worth understanding conceptually, but rarely needed outside specialist, low-level work. And over time we will work at ever higher levels of abstraction. That is the natural evolution of software.
+
+But is it still useful to understand the fundamentals of computer science? Graduates are often ignorant of this material — and the problem is industry-wide. There seems to be a horizon of perhaps a dozen years, beyond which developers simply do not look back. So every so often we reinvent solutions to problems that were solved long ago.
+
+Imagine we were literature majors. We would not spend most of our time writing books. We would spend most of it _reading_ — learning and analyzing what previous generations of writers had done, and placing it in the cultural context in which it was written. Why should software be any different? Why, when we learn to develop software, do we spend all our time _writing_ programs, and almost none _reading_ them?
+
+This matters more than it sounds. A large part of our job is reading other people's code, yet we are never taught how. "`Here are a hundred thousand lines of code; find the bug.`" That is easy if you have learned to read and analyze code, but few people receive any formal training in it.
+
+It would also help enormously if more of us understood the history of our field, and appreciated its cyclical nature. Rarely is anything truly new. Much of the "`innovation`" of the web platform over the last two decades is a repeat of what happened in personal computing before it — a different platform, but the same cycle.
+
+== Beware the robots
+
+As reported in the {link-acm-ai-education}[_Communications of the ACM_], in the autumn of 2023 Eric Klopfer ran an experiment in his undergraduate computer-science class at MIT. He split the class into three groups and gave each the same programming challenge in Fortran — a language none of them knew. One group could use ChatGPT, one could use Meta's Llama, and one was banned from generative AI but allowed to use Google.
+
+The result? The ChatGPT group solved the problem fastest, and the Google group slowest. But when the students were later tested on how well they remembered their solution, the ChatGPT group "`remembered nothing`", while everyone in the Google group could explain their solution in detail.
+
+What does this tell us? Software development is a process of learning through cycles of experimentation: you break a task into small increments, each one a step closer to the solution, evaluating and adjusting as you go. Struggling is part of learning. When you are handed the answer, you are not struggling — and so you are not learning.
+
+The same is true of courses and tutorials. Look for the good ones, which set challenges and give you a reference solution to compare against your own. Avoid step-by-step tutorials that merely walk you through incremental edits; those teach you the API of some tool or framework, but they do not refine your development capability.
+
+So my recommendation is to be judicious about how you use LLMs while learning. Use them to help you write code _once you already know_ what code you want to write. That is a very different thing from using an LLM to solve the problem on your behalf.
+
+Contrary to popular belief, generative AI is not going to make computer-science jobs obsolete. But the nature of those jobs will change — as it always has — as we continuously invent new tools to help us write and verify code. You _do_ need to become proficient with code-generation tools, just as you must be proficient with testing, debugging, and version control. They will become part of the everyday workflow. And as with every tool, it is up to us as an industry to work out when and how best to use them. For generative AI, the best practices have not yet emerged.
+
+It may well be that AI makes it less necessary to understand the details of coding, in the same way that successive generations of compilers made it less necessary to understand assembly. But you still need to understand how to code — just as you still need to understand arithmetic even if you reach for a calculator.
+
+In the short term: take a course on prompt engineering.
+
+In the longer term, our work may increasingly become a matter of designing programs that _specify requirements_, which are then compiled directly into code — focusing us more on requirements, specification, and the validation and verification of auto-generated code than on writing the code ourselves.
+
+== Miscellaneous
+
+* There are seminal papers and books people should read, seminal pieces of code people should study, and seminal languages that were influential on much that came after.
+* Nothing we do today is really new. Functional programming is more than fifty years old; object-orientation more than forty.
+* We tend to over-focus on learning the low-level details and APIs of some new language, library, framework, or tool. That is a different thing from genuinely contemplating the process, and looking at entirely different ways of working and designing solutions.
+* We should also look at the research done in the past — at Xerox PARC and elsewhere — and the work happening now in academic circles.
+
+.Related links
+****
+* {link-best-books}[The best books all software developers must read]
+* {link-olteanu-books}[Books] — Mihai Olteanu's reading list
+* {link-durakovic}[Hard-to-swallow truths they won't tell you about the software engineer job], Mensur Durakovic
+****
