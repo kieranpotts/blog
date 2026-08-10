@@ -1,0 +1,209 @@
+= Agile has failed
+Kieran Potts
+:description: "Agile" is dead as a useful word. The values of the manifesto are as sound as ever, but the movement calcified into the very bureaucracy it was meant to replace. How it happened, why, and what we should do instead.
+:docinfo: shared
+:nofooter:
+
+:link-agile-is-dead-video: https://www.youtube.com/watch?v=a-BOSpxYJ9M
+:link-agile-is-dead-post: https://pragdave.me/thoughts/active/2014-03-04-time-to-kill-agile.html
+:link-jeffries-beyond: https://ronjeffries.com/xprog/articles/beyond-agile-new-principles/
+:link-jeffries-points: https://ronjeffries.com/articles/019-01ff/story-points/Index.html
+:link-jeffries-dark-scrum: https://ronjeffries.com/articles/016-09ff/defense/
+:link-flaccid-scrum: https://martinfowler.com/bliki/FlaccidScrum.html
+:link-fowler-state-2018: https://martinfowler.com/articles/agile-aus-2018.html
+:link-cutler-feature-factory: https://medium.com/@johnpcutler/12-signs-youre-working-in-a-feature-factory-44a5b938d6a2
+:link-corry: https://www.youtube.com/watch?v=bdSzvnccLQk
+:link-holub: https://www.youtube.com/watch?v=hxXmTnb3mFU
+:link-witek: https://www.youtube.com/watch?v=KJ5u_Kui1sU
+:link-thorp: https://www.youtube.com/watch?v=Oy_WeaiAvkg
+:link-humble-scaling: https://www.youtube.com/watch?v=2zYxWEZ0gYg
+:link-farley-safe: https://www.youtube.com/watch?v=X4-Y9oUlpkE
+:link-theil: https://david-theil.medium.com/good-scrum-master-bad-scrum-master-215f2e985a95
+:link-null-labs: https://www.youtube.com/watch?v=fTaOdbUbFmI
+:link-rethinking: https://rethinkingsoftware.substack.com/
+:link-ard-medium: https://medium.com/@ard_adam/why-scrum-is-the-wrong-way-to-build-software-99d8994409e5
+
+"`Agile`" is dead as a useful concept. It has suffered terminal semantic diffusion: it means different things to different stakeholders, and even to different technicians on the same team.
+
+So why did agile fail?
+
+== A brief history of "agile"
+
+By the 1990s, software development had grown increasingly complex — larger teams, more stakeholders, faster-changing requirements. Traditional waterfall methodologies struggled to keep up, leading to delays, cost overruns, and dissatisfied customers. UML and heavy documentation became the norm; the Rational Unified Process (RUP) was widely adopted, emphasizing detailed planning, extensive documentation, and rigorous process adherence.
+
+A counter-movement arose. Around the world, independently, people were experimenting with alternatives. Kent Beck, Ward Cunningham, and Ron Jeffries were developing what became Beck's Extreme Programming (XP) — the idea of identifying the most effective practices and dialling them up to the maximum. James Highsmith was promoting Adaptive Software Development. Andrew Hunt and Dave Thomas were advocating lightweight practices in _The Pragmatic Programmer_ — not a methodology so much as a set of common-sense tips. Alistair Cockburn was promoting Crystal Clear. And Scrum, developed by Jeff Sutherland and Ken Schwaber, had been around since the mid-1980s but was being used more and more.
+
+These methods shared common themes — iterative approaches, high customer involvement, close collaboration — and were all reactions against the heavy, process-driven methodologies of the day. They were all trying to cut unnecessary overhead and focus on what matters: delivering value to customers through working software.
+
+Most of these people attended OOPSLA in Minneapolis in 2000, where the idea arose that they should all get together and bemoan the state of the industry. In February 2001, seventeen of them met at a ski resort in Snowbird, Utah, to discuss lightweight development methods. They drafted the Agile Manifesto: four core values and twelve principles. The values are:
+
+. *Individuals and interactions* over processes and tools.
+. *Working software* over comprehensive documentation.
+. *Customer collaboration* over contract negotiation.
+. *Responding to change* over following a plan.
+
+The manifesto was not new — it merged a host of existing ideas into a cohesive philosophy. It was not a methodology or a process, but a set of principles and values to help you _design_ one. Ward Cunningham and Dave Thomas went home, put up the website, and then they all rather forgot about it.
+
+== What happened next
+
+What happened next was that "`agile software development`" hit the zeitgeist.
+
+"`Agile`" got a capital "`A`" and started being used as a noun rather than an adjective. We "`do`" Agile, rather than build agility into our processes. A whole industry — conferences, certifications — grew up around the word, with a new lexicon of abstract concepts: velocity, story points, and the rest.
+
+Scrum became the _de facto_ standard agile process. Scrum itself is actually pretty decent — a very lightweight project-management wrapper. But it is often used in a very heavy-handed way: in many contexts it becomes an unrelenting tool of micro-management that robs engineers of their productivity and self-esteem.
+
+[quote]
+____
+After the manifesto appeared, Scrum quickly declared itself to be "`agile`" in spite of its focus on mandating specific and immutable processes and tools. While agile intended for developers to direct their own meetings and rituals, Scrum installed non-technical "`certified`" Scrum Masters to run meetings and enforce the use of soul-shattering tools of bureaucracy (I am looking at you, Jira!). Where agile called for close and frequent customer relationships, Scrum placed a barrier between developers and customers — a non-technical "`certified`" Product Owner. A system more diametrically opposed to the Agile Manifesto would be hard to find.
+____
+
+XP applied agile principles to a set of technical _practices_. Scrum then wrapped that in a light project-management framework. Originally, Scrum was just a lightweight wrapper around XP — Scrum was the project-management side of agile, XP the technical side. Scrum has nothing to say about the technical practices that produce high-quality software. But over time the balance shifted: if you look at Google Trends, "`Scrum`" began trending more than "`Extreme Programming`" around 2008, and the Scrum aspects of agile have steadily eclipsed the XP ones.
+
+The result is what some call _water-Scrum-fall_: Scrum applied only to the construction phase, book-ended by lots of analysis up front and pre-release testing at the end, rather than applying agile ways of working to the whole life cycle. It is an iterative build process trapped inside a stepwise waterfall.
+
+Agile was meant to be a general set of values and principles, from which you derive the patterns and practices appropriate to your situation. In any situation where you don't know what will happen next, you take a small step forward, see where you are, and adjust your plan based on what you have learned. That is the fundamental principle of agile thinking.
+
+But "`Agile`" became a _process_ — largely unchanging from one team to the next, one organization to the next, one iteration to the next, enforced by opinionated tools like Jira. The rituals and ceremonies were all introduced to solve real problems in particular contexts; now they have become the goal rather than the enablers. It feels like a perpetual hamster wheel.
+
+People talk of "`Agile`" as the _right_ way to do software. That is very far from the spirit of the original manifesto. True agility means experimenting with tools and methods, and when something is shown not to work, trying something else — for the design of the system as much as for the ways of working. Daily stand-ups genuinely help trigger communication in some contexts; in others they become just another status meeting. This is how science works: experimenting is how we solve really hard problems.
+
+The authors of the manifesto do not think the movement turned out the way they hoped. The widely held view is that it became bureaucratic, process-heavy, and focused on project management rather than software development — the antithesis of agile thinking. At the GOTO conference in Amsterdam in 2015, "`pragmatic`" Dave Thomas gave a keynote titled {link-agile-is-dead-video}[Agile is Dead], based on an {link-agile-is-dead-post}[earlier 2014 blog post], arguing that Agile as a movement had failed and that the original values had been lost.
+
+[quote, Dave Thomas (2015)]
+____
+The values have been totally lost behind the implementation.
+____
+
+Signatories including Thomas and Ron Jeffries have criticized so-called agile frameworks like Scrum, and distanced themselves from the term as a result.
+
+[quote, Ron Jeffries]
+____
+As I look back on the decade since the Manifesto, I see more and more people wanting to fly the Agile banner without living the Agile values and principles.
+____
+
+By definition, then, any framework like Scrum that prescribes a fixed set of practices and rules is _not_ agile. The prevailing pattern is for teams to follow the conventions — stand-ups, sprints, retrospectives — without embracing the core values of collaboration and iteration. Cargo-culting. Many organizations proudly declare themselves "`Agile`" while in practice doing waterfall with extra meetings. And so agile methodologies become discredited — though it is not agile that is the problem, but the way it is being implemented.
+
+Worse, we have ended up with incompatible pieces of waterfall and of iterative, incremental processes bolted together: estimates and deadlines, but with no proper up-front planning or design — instead falling back on small increments. An inconsistency between the objectives and the implementation.
+
+.Half-arsed agile values
+****
+. Individuals and interactions over processes and tools… and we have mandatory processes and tools to control how those individuals (we prefer the term "`resources`") interact.
+. Working software over comprehensive documentation… as long as that software is comprehensively documented.
+. Customer collaboration over contract negotiation… within the boundaries of strict contracts, of course, and subject to rigorous change control.
+. Responding to change over following a plan… provided a detailed plan is in place to respond to the change, and it is followed precisely.
+****
+
+== Why did this happen?
+
+These practices appeal to business stakeholders because they give an illusion of predictability. And software development is mostly undertaken in contexts that do not understand software development — other business domains.
+
+There is also _semantic diffusion_ at work. When we meet new ideas, we frame them in terms of ideas we already understand; we see new propositions through old lenses. If we come from a waterfall background, we apply agile principles in that frame — which is exactly how we ended up with modern approaches being a recurring sequence of little waterfalls, "`sprints`", within which well-defined tasks pass through discrete steps, requirements kept distinct from coding and so on. To be truly agile, all those steps happen simultaneously and influence one another.
+
+Why? We carry our habits from one process to the next. People who have followed an explicit, certifiable PM methodology look for those same qualities in agile practices — but agile was never intended to have them. Perhaps this was inevitable: it is human nature to prefer following rules, to search for repeatable steps that lead to success. Particularly when you suffer imposter syndrome — common in our field — you would rather just be told what to do.
+
+Methods like Scrum, which are inherently simple — the Scrum Guide is only a few pages — are great for beginners and for mostly-junior teams, precisely because they tell you exactly what to do. The waterfall process, similarly, is not so much a methodology as a _natural_ way of organizing work: plan what you want, design how to implement it, estimate the time and cost, build, integrate, test, adjust, ship. And corporate budgeting reinforces it: you must do a cost-benefit analysis before you start, which means estimating cost and revenue, which in turn means speccing out a complete solution up front.
+
+XP was the first true implementation of an agile methodology. But what XP does not give you is the thing business people and project managers most want: certainty. Scrum added that. It was conceived as a lightweight business wrapper around XP — a way of giving certainty, or at least the illusion of it, to small increments of development. It is a noble attempt to bridge the gap between the agile development team and the waterfall business, and to find a middle ground that satisfies both.
+
+[quote, Martin Fowler]
+____
+Scrum is a process that's centered on project management techniques and deliberately omits any technical practices, in contrast to (for example) Extreme Programming.
+____
+
+That is perhaps a little unfair to Scrum. In truth Scrum is a project-management framework intended to _complement_ a software-development methodology, not to be one. Done properly — according to the Scrum Guide — it can certainly work. It gives business people what they want, at the cost of some efficiency, without getting in the way of the development process. Kept lightweight, it is relatively benign. The problem is that Scrum is rarely implemented properly, and is often used as a starting point onto which project managers bolt ever more bureaucratic process.
+
+Today, Scrum-like processes are synonymous with Agile-with-a-capital-A. But this is not what the manifesto's authors intended. "`Agile`" was never trademarked, so anyone can use it to describe anything they like — and the Scrum community did exactly that.
+
+== Context is everything
+
+Agile does not tend to work in highly bureaucratic, top-heavy, centralized organizations. The name was apt — it meant _agility_, the ability to move quickly, the very opposite of bureaucracy. _Lean thinking_ is a key plank here, and a central idea of lean is _taking work out_ — optimizing by focusing on what matters. If your stand-ups don't work, stop them and try something else. You _must_ embrace change. Organizations that cannot change struggle to implement true agility.
+
+Our industry is divided in two:
+
+* Centralized, bureaucratic, top-down management structures, obsessed with predictability and control.
+* Decentralized, self-organizing, autonomous teams, focused on delivering high-quality or innovative software, productively.
+
+The first kind destroys the very essence of software development — solving problems creatively and collaboratively. Arbitrary targets and proxy metrics proliferate endlessly. Engineers are stripped of autonomy and reduced to replaceable factory workers, responsible for nothing more than the next pre-approved, pre-prioritized, pre-designed ticket they pull off the top of the backlog.
+
+Perhaps, then, it was a mistake for "`the manifesto for agile software development`" to go no deeper than the fluffy stuff of culture and values. With no concrete rules, the "`Agile`" brand could be co-opted by anyone. The manifesto tells you what to _value_, not what to _do_. Perhaps it should have been more like Beck's XP book, with clearly defined methods and tools.
+
+Dave Thomas himself, talking with Sarah Taraporewalla on the GOTO Conferences podcast, calls this a "`mistake`" — the manifesto set out values but never specified how to implement them. The problem is that most people do not want to think for themselves; they want to be told what to do. So agile, meant to be a way of _thinking_ about software development, got converted into a product you can buy off the shelf — SAFe being the most extreme example. The thinking was hard, so the industry replaced it with a process you could purchase instead.
+
+This is also why Jeff Sutherland reportedly walked out of Thomas's 2015 "`Agile is Dead`" talk at GOTO. The talk struck at the commercial heart of the Scrum-industrial complex, not just at a methodology.
+
+== What should we do?
+
+I prefer not to use the word "`agile`" any more. It would be enormously useful if the industry simply stopped using it.
+
+The core values remain immensely valuable. The irony is that current "`Agile`" methodologies often contradict them. "`Individuals and interactions over processes and tools`", for instance, sits awkwardly beside heavily process-driven methodologies with strict rules for stand-ups, sprints, and retrospectives, and task sequencing that follows classic stepwise, waterfall patterns.
+
+The underlying issue is unresolved: the disconnect between software development as a primarily _creative_ process, and commercial needs that require it to be shaped into a predictable, construction-like one. As an industry, we need to solve the problem of reducing risk for the businesses we build software for. It is not enough to "`embrace uncertainty and change`" — businesses operate on budgets and timelines. We need ways to manage uncertainty that are acceptable to business stakeholders.
+
+How do we help organizations truly embrace agility, rather than going through the motions? They want the nice things — speed, innovation, adaptability — without the discomfort of uncertainty and change; they want to keep their detailed roadmaps and deadlines. Engineering teams begin with enthusiasm, only to find themselves executing predetermined plans with little room for iteration or learning.
+
+The gap between management expectations and engineering realities grows steadily. Management asks for commitment to specific features months ahead. Engineering agrees, hoping to keep some flexibility. When changes arise or estimates prove wrong, trust erodes on both sides: management sees a team that can't deliver on its promises; engineering sees leadership that doesn't understand the realities of software. Each side retreats to its comfort zone — management tightens control and demands more detailed plans and status reports; engineering becomes defensive, feeling reduced to order-takers. Resentment builds, even though both sides want the same thing: successful products delivered efficiently.
+
+Breaking this cycle takes courage from both sides. Leadership must genuinely embrace uncertainty, accept that software development is _design_ and not _construction_, and empower teams to solve problems. But engineering must also communicate challenges early and often — and we are not very good at that. Most importantly, both sides must accept that real agility is not about following a methodology; it is about creating an environment where adaptation and learning are valued over rigid adherence to plans.
+
+Fred Brooks saw this clearly, decades before the manifesto, in _The Mythical Man-Month_:
+
+[quote, Fred Brooks, The Mythical Man-Month]
+____
+Structuring an organization for change is much harder than designing a system for change.
+____
+
+We talk endlessly about designing systems for change — loose coupling, modularity, evolutionary architecture — but say almost nothing about how to design the *organization* for change. This, I think, is what agile got wrong, or at least left unfinished: the manifesto and its offshoots are full of advice for restructuring how software gets built, but largely silent on how to restructure the organizations that build it.
+
+Plans, milestones, and schedules need to be treated as tentative, provisional, open to revision as you learn more — that is the whole point of iterating. But in most organizations, slippage against a plan is treated as a failure of project management, not as useful information. You cannot have it both ways: a plan that must be hit and a plan that is allowed to flex are incompatible demands, and no amount of process maturity resolves that contradiction. Until organizations stop punishing change to the plan, they will keep producing theatre — the rituals of agile bolted onto the incentives of waterfall.
+
+Brooks also points out that management structures must change as the system changes, which means keeping managers and technical people as interchangeable as their talents allow, rather than locking people into a rigid hierarchy of "`management track`" and "`technical track`". He gives the example of Bell Labs, which abolished job titles and hierarchy so that everyone was simply a "`member of the technical staff`" — a flat structure that let authority and responsibility flow to whoever the problem actually required, rather than to whoever held the title.
+
+But here I have to admit a harder possibility, one Dave Thomas puts more bluntly than I have so far: that the failure of agile was built in from the start, because it cannot work unless the *whole* environment goes along with it. Agile delivery teams operating inside a top-down, bureaucratic organization are not bending that organization toward agility; they are absorbing an impedance mismatch that the rest of the business never has to feel. The team adapts; the organization does not; and the gap is paid for, every sprint, by the engineers.
+
+And most organizations, in practice, are not agile and show little sign of becoming so. They are what Thomas calls _self-healing bureaucracies_ — systems that, by their nature, resist exactly the kind of change that real agility requires. Push on one part of a bureaucracy and it does not bend; it closes back around the disturbance, the way a body closes around a splinter. Org charts get redrawn, new ceremonies get bolted on, the language of agility gets adopted — and the underlying distribution of power and risk-aversion is exactly what it was before.
+
+If that is right, then the courage I asked for above, from both sides, runs into a structural wall: individual leaders and individual teams can behave more like Theory Y, more like Starrett, for as long as they are personally willing to — but the organization around them will keep exerting pressure back toward the bureaucratic mean, because that is what bureaucracies are *for*. It may be that there is, in the end, very little that we as software developers can do to fix this from where we sit. We do not own the org chart, the budgeting cycle, or the incentives of the people above us. We can refuse to call it "`agile`" — that much is in our gift — and we can build pockets of genuine agility where the organization permits it. Whether those pockets can ever grow large enough to change the organism around them is a much harder question, and one the manifesto, for all its merits, never had an answer to.
+
+== The human side of enterprise
+
+For me, the biggest drawback of Scrum is that it comes from the command-and-control school of project management. Software development thrives under self-organized teams. Douglas McGregor's _The Human Side of Enterprise_ (1960), a classic of organizational management, describes two management styles: Theory X, the traditional command-and-control style, and Theory Y, the more modern, self-organized one.
+
+This division is not new — it has been around as long as industry itself. Consider one example.
+
+In the 1920s, US labour relations were rough: tens of thousands of strikes in the preceding decades, in oil, construction, steel, and coal. Some ended peacefully; many did not. Owners hired strike-breakers — often armed thugs — and there were violent confrontations, shootings, and mass arrests. The underlying issue was fairness.
+
+The Pullman strike was a nationwide railroad strike in the summer of 1894. Until then, George Pullman was revered for building The Pullman Company, which dominated the market for luxury railroad cars and made him one of the wealthiest men in America. He had also built an entire town for his employees on 4,000 acres south of Chicago. His publicists called it benevolence; in reality it was control. Pullman owned everything — houses, stores, churches, schools, parks, utilities. No one could buy property, only rent it, and there was one landlord. Food came only from Pullman stores, water and gas from his company, all at high markups. No newspapers, no public speeches. When he disliked the local church's theology, he had it closed.
+
+When the panic of 1893 spread, railway traffic fell and Pullman's sales suffered. Rather than cut profits, he cut wages by a third — but kept rents and food prices the same. The workers, not the owner, took the hit. Pullman did not need their goodwill, because he controlled every aspect of their lives. But this, finally, was a step too far. The workers struck; the nationwide Railway Union joined them; all rail traffic out of Chicago stopped; within days, over 100,000 rail workers nationwide had walked out. It was the largest strike the United States had ever seen, and in an era before lorries and aeroplanes, it nearly closed down the country's economy.
+
+A couple of decades later, Paul Starrett remembered the Pullman strike and the consequences of harsh labour practices. He founded his construction company with his brothers on the principle that workers would be treated fairly, not as slaves. In 1928, Starrett won the contract to build the Empire State Building — set to be the tallest building in the world. If all went to plan he had just thirteen months to deliver a project that would normally take three or four years, with big loans to repay and penalty clauses for late delivery.
+
+The steel, coal, and construction industries were still rough places to work, and the conventional solution was to crush unions and squeeze workers. Starrett did the opposite. He introduced what were called _efficiency wages_: pay more and treat people better, and you get better, more motivated staff and better outcomes. To deliver on time, he _needed_ motivated staff. There was a restaurant inside the structure from the start, with subsidized food stalls every few floors as it rose. He hired dedicated safety staff to keep the barriers up to date. When the wind was too strong, everyone took the day off — on full pay. And full pay was twice the going rate on other New York sites.
+
+On Starrett's site, it paid to put in an honest day's work, and reciprocity — the idea at the heart of efficiency wages — flourished. Everyone was with Starrett, not against him. The first result was simple efficiency: when foremen didn't fudge the numbers (hiring 90, claiming for 100, pocketing the difference), there were more workers on site; when inventory wasn't pilfered, no one waited around for tools and materials. Even better was the creativity. Where other sites pushed bricks along wobbly gangplanks in wheelbarrows, Starrett's workers proposed a miniature railway to feed bricks into the building, with smaller railways on the higher floors — speeding construction considerably. Building sites also tended to have high turnover and hefty retraining costs; not on Starrett's, not on those wages, and not with the respect the workers felt.
+
+At its peak the building rose four floors a week, with 500 trucks arriving daily. The Empire State Building was completed in thirteen months and became the tallest in the world, despite fierce competition from the Chrysler Building going up at the same time. The unprecedented speed came from the efficiency wages and the trust Starrett placed in his workers — something Pullman's resentful workforce would never have pushed to achieve. Good wages and conditions, mixed with sensible auditing and oversight, created a virtuous circle of energetic teams, less cheating, far greater innovation, and a real ability to adapt. (The story is told beautifully in David Bodanis's _The Art of Fairness: The Power of Decency in a World Turned Mean_.)
+
+The human side of enterprise matters more now than ever. The developed world's knowledge-driven, service-led economies depend increasingly on the creativity and innovation of their workforces, not the brute force of their manufacturing.
+
+Scrum, in my view, is Theory X — a command-and-control style designed to be implemented by managers and imposed on teams. It is not truly agile, because teams have no autonomy to deviate from the defined process. It is at odds with modern management thinking, and it appeals to old-school, command-and-control instincts. SAFe, RUP, and similar process models are alike in this respect.
+
+.Links
+****
+* {link-agile-is-dead-video}[Agile is Dead], Dave Thomas
+* {link-jeffries-beyond}[Beyond Agile: new principles?], Ron Jeffries (2010)
+* {link-jeffries-points}[Story points revisited], Ron Jeffries (2019)
+* {link-jeffries-dark-scrum}[Dark Scrum], Ron Jeffries (2016)
+* {link-flaccid-scrum}[Flaccid Scrum], Martin Fowler (2009)
+* {link-fowler-state-2018}[The state of agile software in 2018], Martin Fowler (2018)
+* {link-cutler-feature-factory}[12 signs you're working in a feature factory], John Cutler (2016)
+* {link-corry}[Scrum does not equal agile], Aino Corry (2023)
+* {link-holub}[Agile and Scrum don't work], Allen Holub with Dave Farley, _The Engineering Room_ (2022)
+* {link-witek}[How agile failed software developers and why Scrum is a bad idea], Gregory Witek (2021)
+* {link-thorp}[The pain of post-agile software development], Ben Thorp (2024)
+* {link-humble-scaling}[Why scaling agile doesn't work], Jez Humble (2015)
+* {link-farley-safe}[Is SAFe really safe?], Dave Farley (2023)
+* {link-theil}[Good Scrum Master, bad Scrum Master], David Theil (2021)
+* {link-null-labs}[Scrum: an honest ad], Null Labs (2024)
+* {link-rethinking}[Rethinking Software], Adam Ard — a blog on better ways of working, which began with the widely-cited 2016 article {link-ard-medium}[Why Scrum is the wrong way to build software]
+****
