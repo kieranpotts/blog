@@ -1,0 +1,5 @@
+= Application architecture
+
+// TODO: Based on TS-5.
+
+// TODO: Create a repository with a reference application in Java and/or TypeScript.
