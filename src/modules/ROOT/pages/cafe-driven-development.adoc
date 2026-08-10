@@ -1,0 +1,18 @@
+= Café-driven development
+Kieran Potts
+:description: Why does environment matter so much to the quality of the work we do? An exploration of place, atmosphere, and the conditions under which programmers do their best thinking.
+:docinfo: shared
+:nofooter:
+
+Why does _environment_ matter so much to software development?
+
+It is an oddly under-examined question for a profession that prides itself on rationality. We argue endlessly about languages, frameworks, and methodologies — the things we can put on a slide — and say almost nothing about the rooms we sit in, the noise around us, the coffee within reach, and how profoundly those things shape the work.
+
+And yet most programmers know, from experience, that place matters enormously. There are days when the code seems to write itself, and days, in a different setting, when nothing comes. The variable is rarely the problem; it is often the surroundings.
+
+Hence "`café-driven development`": the observation, only half in jest, that some of the best programming happens not in the open-plan office but in the corner of a café — a particular quality of ambient noise, a gentle anonymity, the absence of interruption, a change of scene that loosens something up.
+
+[NOTE]
+====
+This started as a research prompt to myself: _research why environment is so important to software development_. To turn it into a real post I want to dig into the evidence — the literature on ambient noise and creativity, flow states, the difference between programming and the more collaborative parts of software development, and what writers like Christopher Alexander (on habitable space) and Cal Newport (on deep work) have to say about the places we do our best thinking.
+====
