@@ -1,0 +1,21 @@
+= The joy of text
+Kieran Potts
+:description: Plain text outlasts every application that has ever tried to replace it. There is a quiet joy, and a great deal of practical wisdom, in keeping your notes, tasks, and writing in simple text files.
+:docinfo: shared
+:nofooter:
+
+:link-sivers: https://sive.rs/plaintext
+:link-hn-plaintext: https://news.ycombinator.com/item?id=30521545
+:link-todo-txt: https://www.al3rez.com/todo-txt-journey
+
+There is a particular kind of joy in plain text.
+
+It is not an obvious joy. Plain text is unglamorous — no formatting, no features, no syncing engine, no subscription. And that is precisely the point. A `.txt` file does almost nothing, and because it does almost nothing, it does the one thing that matters: it lasts.
+
+Think of every application that has held your notes, your tasks, your writing over the years. How many of them still open? How many were acquired, sunset, paywalled, or quietly abandoned, taking your data — or at least its convenient form — with them? Plain text has outlived all of them, and it will outlive whatever is fashionable now. A text file written in 1985 opens today, in any editor, on any operating system, with no migration and no loss.
+
+Derek Sivers makes the case as well as anyone in his short essay {link-sivers}[Write plain text files]: that the durability, portability, and sheer simplicity of plain text make it the only sane long-term home for the words you want to keep. The same instinct runs through the people who manage their entire task list in a single {link-todo-txt}[`todo.txt` file], and through the {link-hn-plaintext}[recurring enthusiasm] for plain text whenever the subject comes up among programmers.
+
+What unites these is a recognition that simplicity is a feature, and the most valuable one. Plain text is greppable, diffable, version-controllable, scriptable, and future-proof. It imposes no structure, so it accommodates any. It belongs to no vendor, so it can never be taken away. You can pipe it, search it, transform it, and read it with your own eyes without anything in between.
+
+We spend so much of our working lives reaching for the more capable tool. Now and then it is worth remembering that the least capable tool — a plain text file — is often the one that will still be working long after the others are gone. That is the joy of text.
