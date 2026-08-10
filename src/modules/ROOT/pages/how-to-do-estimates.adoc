@@ -1,0 +1,71 @@
+= How to do estimates
+Kieran Potts
+:description: Estimating software effort is a specialist skill we are never trained for. Here are the preconditions that make estimation possible at all — and why I always apply a generous multiplier.
+:docinfo: shared
+:nofooter:
+
+Estimating the cost of software is genuinely hard, because software is such an intangible thing.
+
+And yet it is the nature of our work to be asked to estimate the effort, complexity, and — probably — the time required to complete a task. This is not something we are ever really trained to do. Estimation is a specialist discipline in its own right.
+
+Truly agile ways of working push back against estimation altogether. In my view, that is not realistic for many organizations. Businesses need to plan resources, and to work out how best to deploy them on the basis of cost against value.
+
+== The preconditions for estimating at all
+
+That said, there are preconditions for being able to estimate at all:
+
+* The change request must be small enough that you can, with reasonable accuracy, understand all the code and configuration changes it will require.
+* The architecture must be of sufficient quality that you can confidently change one part of the system without introducing regressions elsewhere.
+* You must have deep familiarity with the system.
+* The system must be well supported by tests and other artifacts, such as documentation.
+* The workflow must allow changes to be introduced in isolation from other work happening on the same system at the same time.
+* You must know what resources will be available to you — especially business-analysis, development, and test support.
+* You must have an established working relationship with your collaborators.
+* The change request must be stable, with no feature creep.
+
+It is simply not possible to estimate all kinds of changes to all kinds of systems.
+
+== Estimate late, and from the bottom up
+
+There is also the question of _when_ we estimate. Estimates tend to be demanded very early in the development lifecycle — often the point at which we know least about the work. We make them against high-level requirements, frequently vague and incomplete ones, rather than against comprehensive, high-fidelity solution designs.
+
+If you want good estimates, the solution needs to be fleshed out in enough detail to reveal the true scope and complexity of the problem. Good estimates are built bottom-up, from low-level technical designs, not top-down from high-level business requirements. This is true of every engineering discipline: you would not ask a builder to quote for a house from a sketch on the back of a napkin, and then hold them to the figure once the architect's drawings revealed what the job actually involved.
+
+== Allow for the unknowns
+
+And even where estimation _is_ possible, you must still allow for the unknowns:
+
+* Dependencies.
+* Merge conflicts.
+* Sickness and holidays.
+* Unknown unknowns.
+
+== We are biased to underestimate
+
+Even with the solution well understood, our instincts work against us. We are systematically biased towards underestimation.
+
+The planning fallacy leads us to imagine the happy path — the version of events in which nothing goes wrong — and to estimate against it, even when experience tells us something always does. Anchoring means that the first number mentioned, however casual, quietly becomes the figure everyone reasons from. And on the delivery side, work expands to fill the time available (Parkinson's law), while the time we _are_ given tends to be frittered away before we start in earnest (student syndrome). The net effect is that estimates skew low and delivery skews late.
+
+Knowing this, the only safe assumption is that your first estimate is too low.
+
+== Techniques that help
+
+A few practices make estimates less unreliable.
+
+The most powerful is simply to break the work down. Decomposing a change into small pieces — each small enough to understand in full, per the first precondition above — forces the bottom-up thinking that good estimates depend on, and surfaces the work that vague requirements conceal.
+
+Beyond that, three-point estimates — an optimistic, a most-likely, and a pessimistic figure, combined into a weighted expectation — make the uncertainty explicit rather than hiding it behind a single number. Reference-class forecasting — asking how long similar work has _actually_ taken in the past, rather than how long you imagine this instance will take — is one of the few reliable defences against the planning fallacy. And relative-sizing techniques such as planning poker pool the knowledge of several people and blunt the anchoring effect, by having everyone estimate independently before they discuss.
+
+== Estimates are not commitments
+
+Much of the harm done by estimates comes from confusing them with commitments. An estimate is a forecast made under uncertainty; a commitment is a promise to deliver. The two are routinely conflated — an off-the-cuff `"about two weeks`" hardens into a deadline the team is then held to — and that is where trust breaks down.
+
+== Communicate the uncertainty
+
+This is why T-shirt sizes and story points are useful: they are _deliberately_ vague. Time estimates imply a precision they cannot possibly possess. If I say something will take "`about two weeks`" — even qualified as a high-level, ballpark figure — and I deliver in three, business stakeholders will often treat that as late delivery. In my view, that _is_ on-time delivery: the estimate was in the right ballpark.
+
+So when I am asked for a time estimate, I always apply a multiplier — at least 50%. If I think something will take about two weeks, I will say about three. The multiplier goes higher — sometimes by an order of magnitude, 100%, 200% — when there are more unknowns.
+
+== The deeper problem
+
+The deeper truth, though, is that the real problem is not estimating delivery; it is _delivering high-quality software that works_. Software failures are far more often caused by poor-quality software than by poor estimates.
