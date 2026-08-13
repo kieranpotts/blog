@@ -53,6 +53,6 @@ interpreted as described in
 
 The following technical standards apply.
 
-- **[TS-28: AsciiDoc](https://raw.githubusercontent.com/kieranpotts/standards/refs/heads/latest/dev/src/modules/ROOT/partials/028/AGENTS.md)**
-- **[TS-9: Version Control](https://raw.githubusercontent.com/kieranpotts/standards/refs/heads/latest/dev/src/modules/ROOT/partials/009/AGENTS.md)**
-- **[TS-19: Search Engine Optimization (SEO)](https://raw.githubusercontent.com/kieranpotts/standards/refs/heads/latest/dev/src/modules/ROOT/partials/019/AGENTS.md)**
+- **[TS-28: AsciiDoc](https://kieranpotts.com/standards/028)**
+- **[TS-9: Version Control](https://kieranpotts.com/standards/009)**
+- **[TS-19: Search Engine Optimization (SEO)](https://kieranpotts.com/standards/019)**
