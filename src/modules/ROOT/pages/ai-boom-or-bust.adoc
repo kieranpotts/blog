@@ -1,0 +1,104 @@
+= AI: boom or bust?
+
+////
+
+Past tech booms have ended in bust. Will the current AI boom follow the same
+path?
+
+Current mania is driven by a few massive IPOs — notably SpaceX. Anthropic and
+OpenAI are expected to follow.
+
+S&P 500 - new AI companies make up 40% share of total market capitalization,
+up from about 20% in late 2022 when ChatGPT launched. Much of the increase in
+market cap in 2026 has been down to a small number of companies with links
+to AI. So the underlying equity market is being redrawn by AI mania right now —
+it's not just the IPOs.
+
+Lots of tech companies now issuing large amount of debt to fund their
+investments. Very unusual — until recently, all tech companies famously
+hoarded cash and didn't invest in capital expenditure — ie. infrastructure
+(data centres and power supply).
+
+These companies, eg. Apple, don't have long histories of borrowing —
+issuing bonds not only in the US but lots of markets.
+
+Therefore, AI mania is now touching lots of parts of the market.
+
+The bet is that this technology will have a big impact on productivity.
+The technology may indeed be transformative — but that may not directly
+translate into productivity.
+
+eg. in the dot-com bubble the laying of fibre optic cable did not immediately
+change anything and become highly valuable — it took much, much longer than
+expected, too long for the initial investors.
+
+So it's not only about the transformative nature of the tech, it's also making
+sure its rollout is well-financed based on projections of cash flows over the
+short, medium, and long term horizons. That's very difficult to get right — and
+history shows we tend to be overly optimistic about how quickly new technologies
+will generate revenues.
+
+Railways are another example.
+
+The electronics boom in America in the 1960s, and in Japan in the 1980s,
+these were just busts — they didn't come right in the end. The tech just got
+out-of-date really quickly — we're not still using that tech today. Will this
+be true of the chips etc. we're making now? The data centres we'll probably
+still use — but the biggest capex is in the IT hardware, not the buildings.
+All those GPUs only have a short rack life.
+
+And: will the tech _genuinely_ be transformative? I'm not so sure. This is
+a topic I'll explore in another blog post. But the summary is: I don't think
+the current generation of large-language model technologies will scale to
+artificial general intelligence.
+
+Eventually the current financial market predictors will get tested in the
+real economy. Will AI realize the productivity boosts it promises?
+
+On the demand side, it's looking good. Subscription costs are high and there's
+no shortage of devs trying out various AI-as-a-service platforms. Usage is
+very strong — but this does not necessarily translate into increases in
+productivity.
+
+Some blocks to continuing expansion:
+
+* Planning permissions.
+* Electricians.
+* Hardware (compute $).
+
+*Computer programming* is the ONLY field that has been significantly disrupted
+already, and it's pretty questionable about how much impact it's had. Will it
+ultimately transform _all_ knowledge work?
+
+The economics means there is _not_ going to be massive economic growth. Much
+slower evolution.
+
+Jobs apocalypse? Most of the data is showing this is a big exaggeration.
+
+The _implementation_ of this stuff matters massively. Implementation lag in
+new tech tends to be much slower than we predict — especially scary new tech
+that we don't really understand.
+
+$ cost of computer — so real competition for human labour! AI is _not_ free.
+It's not a free replacement for humans.
+
+I don't think the open source (predominantly Chinese) versus proprietary
+models are a threat to the profits of the western AI firms — because you still
+have to pay for the compute (even if its your own hardware you're using).
+There's not actually that much difference in costs between proprietary and
+open source subscriptions. To run locally, you still have to buy, operate,
+and manage your hardware, which is expensive.
+
+The advantage of open-weight models is you don't get vendor lock-in — you
+get lots more cloud providers to choose from. And open-weight models are
+_malleable_ — you can fine-tune them to specialist tasks. But cost is not
+the main driver for adopting them.
+
+Regulation is desperately needed. The EU is getting ahead here. America has
+started, tentatively, to regulate AI model releases — Fable 5 was the first
+to get a (brief) ban. I think we will see longer evaluation periods and more
+staggered releases.
+
+
+
+////
