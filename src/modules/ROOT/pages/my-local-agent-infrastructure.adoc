@@ -36,8 +36,74 @@ None of these is an AI capability. Every one is a deterministic control wrapped 
 
 NOTES
 
+== Choice of agent harness ==
+
+We're still figuring out what a good agent harness looks like. At one
+end we've got minimal frameworks like Pi. At the other end we've gt
+harnesses that can orchestrate swarms of agents with high degrees of
+autonomy.
+
 Claude Code does a lot of stuff in the background that manipulates your
 context. This means you can't create stable workflows.
 
+I look at the following alternatives:
+
+* Pi
+* Codex CLI
+* AMP (itself a spin-off from Sourcecraft. AMP is commercial but
+  minimal)
+* Factory Droid (also good but not as experimental as AMP
+* OpenCode - fully open-source
+
+Pi and OpenCode are the main OSS options right now.
+
+OpenCode is an excellent choice if you want something that _just works_
+out-of-the-box. But I settled on Pi.
+
+Pi is built on the principle that we should be able to modify our own
+agentic workflows, and that means we need malleable agent harnesses.
+Right now, we want to experiment with ideas quickly. So Pi strips
+everything away, leaving a minimal, extensible core.
+
+Pi's motto: adapt the coding agent to your needs, not the other way
+around.
+
+There are just four core packagesL
+
+* Pi-AI. Simple abstraction of multiple LLM providers, plus tool
+  calling, cross-provider context handoff, etc.
+
+* Pi-Agent-Core: Agent loop, tool execution.
+
+* Pi-TUI: Terminal UI framework.
+
+* Pi-Coding-Agent: The CLI. Session management, themes, skills, etc.
+
+Pi has a very minimal system prompt ("You are an expert coding
+assistant...") which you can extend or replace entirely. Token
+budget for the system prompt is < 1,000 - compared to about 10,000
+for Claude Code.
+
+In most other coding agents, by default the user needs to approve an
+action the agent performs. But this is a false economy, because people
+just turn that off or keep blindly pressing "accept".
+
+Pi's philosophy is that containerization should be the basis for
+protecting your systems from malicious or compromised agents.
+
+Pi aims to be "fully extensible": tools, commands, shortcuts, events,
+TUI components, etc. Pi packages allow you to bundle all this and share
+it. Packages can be hot-reloaded, supporting iterative development.
+
+Out-of-the-box:
+
+* No MCP (only skills and tools).
+* No subagents (you can just use tmux to spawn multiple agents)
+* No plan mode (not very useful!)
+* No background bash (use tmux session)
+* No built-in to-dos (just write a TODO.md!)
+
+So things you will likely need to add would be a permissions gate,
+appropriate to your risk appetite.
 
 ////
