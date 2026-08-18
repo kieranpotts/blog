@@ -31,3 +31,13 @@ So the reliable part of the system is the part that _isn't_ the model. The objec
 * Redact personally identifiable information before it ever reaches a provider.
 
 None of these is an AI capability. Every one is a deterministic control wrapped around a non-deterministic core. That, to me, is the real shape of building responsibly with AI: not trusting the model more, but architecting so you need to trust it less.
+
+////
+
+NOTES
+
+Claude Code does a lot of stuff in the background that manipulates your
+context. This means you can't create stable workflows.
+
+
+////
