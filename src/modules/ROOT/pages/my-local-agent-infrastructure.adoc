@@ -1,0 +1,109 @@
+= My local agent infrastructure
+Kieran Potts
+:description: No matter how capable models become, they cannot be trusted the way a deterministic program can. That is why my local agent setup wraps every request in deterministic controls — an allowlist, spend limits, injection screening, PII redaction.
+:docinfo: shared
+:nofooter:
+
+How do we produce good software using agentic coding tools? This is a question I've spend some months researching and experimenting.
+
+The key question is: how do agents get feedback about their own work? The objective is to get agents to produce code the way _you_ want it to be produced – consistent with your team's policies and rules.
+
+One solution is to load agents with additional context. Agent harness support auto-discovery of such context using a system of skills/rules/instructions - essentially, plain text files that extend the context. This just saves you typing! And agents can ignore such guidelines - as they may do if their context window gets bloated with information.
+
+Skills/rules/instructions are just "prayers" rather than deterministic quality gates.
+
+Another option is to use specialist agents that act as reviewers or coordinators, double-checking the work of primary agents. This models the structure and workflows or human teams. This can certainly improve outcomes - because each agent can be more specialized, focused on a particular bit within the SDLC. But it doesn't solve the problem entirely - you're still relying exclusively on agents to produce good output. It adds another layer of complexity (agent orchestration) but doesn't produce stable outcomes.
+
+The right way to solve this is with even better deterministic automation (TODO: distinguish between automation and agentic).
+
+Offloading deterministic checks to separate services, completely isolated from the agentic workflows, also allows agents to get more work done.
+
+No matter how good models become, they cannot be trusted — not in the sense we mean when we trust a traditional program. They are inherently non-deterministic. Their guardrails are learned from training data rather than enforced by hard-coded logical conditions, which means those guardrails hold _most_ of the time, not _all_ of the time. For a great many uses, "`most of the time`" is not good enough.
+
+This shapes how I run agents locally. An agent harness — the software that gives a model access to the outside world: tools, files, networks — cannot rely on the model to police itself. It needs deterministic wrappers around it – ordinary programs, built from logic, that constrain what the model is actually permitted to do.
+
+So the reliable part of the system is the part that _isn't_ the model. The objective is centralized security and governance for every request routed through my workspace:
+
+* Lock traffic to an allowlist of approved models and providers.
+* Set per-key spend limits, so a runaway loop cannot run up an unbounded bill.
+* Enforce zero data retention with the providers I use.
+* Block prompt injection, screening against 30+ OWASP-derived attack patterns.
+* Redact personally identifiable information before it ever reaches a provider.
+
+None of these is an AI capability. Every one is a deterministic control wrapped around a non-deterministic core. That, to me, is the real shape of building responsibly with AI: not trusting the model more, but architecting so you need to trust it less.
+
+////
+
+NOTES
+
+== Choice of agent harness ==
+
+We're still figuring out what a good agent harness looks like. At one
+end we've got minimal frameworks like Pi. At the other end we've gt
+harnesses that can orchestrate swarms of agents with high degrees of
+autonomy.
+
+Claude Code does a lot of stuff in the background that manipulates your
+context. This means you can't create stable workflows.
+
+I look at the following alternatives:
+
+* Pi
+* Codex CLI
+* AMP (itself a spin-off from Sourcecraft. AMP is commercial but
+  minimal)
+* Factory Droid (also good but not as experimental as AMP
+* OpenCode - fully open-source
+
+Pi and OpenCode are the main OSS options right now.
+
+OpenCode is an excellent choice if you want something that _just works_
+out-of-the-box. But I settled on Pi.
+
+Pi is built on the principle that we should be able to modify our own
+agentic workflows, and that means we need malleable agent harnesses.
+Right now, we want to experiment with ideas quickly. So Pi strips
+everything away, leaving a minimal, extensible core.
+
+Pi's motto: adapt the coding agent to your needs, not the other way
+around.
+
+There are just four core packagesL
+
+* Pi-AI. Simple abstraction of multiple LLM providers, plus tool
+  calling, cross-provider context handoff, etc.
+
+* Pi-Agent-Core: Agent loop, tool execution.
+
+* Pi-TUI: Terminal UI framework.
+
+* Pi-Coding-Agent: The CLI. Session management, themes, skills, etc.
+
+Pi has a very minimal system prompt ("You are an expert coding
+assistant...") which you can extend or replace entirely. Token
+budget for the system prompt is < 1,000 - compared to about 10,000
+for Claude Code.
+
+In most other coding agents, by default the user needs to approve an
+action the agent performs. But this is a false economy, because people
+just turn that off or keep blindly pressing "accept".
+
+Pi's philosophy is that containerization should be the basis for
+protecting your systems from malicious or compromised agents.
+
+Pi aims to be "fully extensible": tools, commands, shortcuts, events,
+TUI components, etc. Pi packages allow you to bundle all this and share
+it. Packages can be hot-reloaded, supporting iterative development.
+
+Out-of-the-box:
+
+* No MCP (only skills and tools).
+* No subagents (you can just use tmux to spawn multiple agents)
+* No plan mode (not very useful!)
+* No background bash (use tmux session)
+* No built-in to-dos (just write a TODO.md!)
+
+So things you will likely need to add would be a permissions gate,
+appropriate to your risk appetite.
+
+////
