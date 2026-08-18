@@ -1,0 +1,17 @@
+= A bigger gulf
+Kieran Potts
+:description: Our industry is split between centralized, control-obsessed organizations and decentralized, self-organizing teams. That gulf is unusual — and I think it is about to widen.
+:docinfo: shared
+:nofooter:
+
+Our industry is divided in two.
+
+On one side are centralized, bureaucratic, top-down management structures, obsessed with predictability and control. On the other are decentralized, self-organizing, autonomous teams, focused on delivering high-quality — or genuinely innovative — software, and on working productively while they do it.
+
+What strikes me is how _stark_ this gulf is, and how peculiar to our field. You don't see anything quite like it in, say, publishing, where ways of working are broadly consistent from one organization to the next. In software, two companies nominally doing the same job can operate in almost opposite ways.
+
+I think the gulf is going to widen, not close.
+
+Truly agile organizations — the ones that have genuinely embraced autonomy and quality, rather than merely adopting the vocabulary — will keep getting faster and cheaper, compounding their advantage. The bureaucratic organizations, meanwhile, will see little of the productivity gains they keep being promised, because the structures that deliver those gains are exactly the ones their culture cannot accommodate.
+
+The result is a field pulling apart at the seams: a widening distance between how the best teams work and how the rest do.
