@@ -1,0 +1,37 @@
+# FLOW-MATIC
+
+Before even COBOL there was FLOW-MATIC.
+
+Flow-Matic was a business programming system invented by Grace Hopper while she
+was working at Univac. Her objective was to allow more people to write software.
+They were still programmers, having to understand what the machine was doing,
+but somewhat abstracted from the sequence of operations.
+
+Before Flow-Matic, writing programs on the UNIVAC meant writing a series of
+instructions like `B01880 H01881 J01882 C01883`. No need to put in the spaces
+either. Extra credit for putting all your program on one punch card.
+
+But in Flow-Matic you could write something like:
+
+[source]
+----
+(0)  INPUT INVENTORY FILE-A PRICE FILE-B
+(1)  COMPARE PRODUCT-NO (A) WITH PRODUCT-NO (B); IF GREATER GO TO OPERATION 10; IF EQUAL GO TO OPERATION 5; OTHERWISE GO TO OPERATION 2.
+----
+
+While that may seem strange and still filled with gotos, which would you want to
+write, a pair of letter and a four digit address, or Flow-Matic?
+
+Hopper et al made a lot of advancement from Flow-Matic after the US military
+requested someone provide a common language for all their 73 different computer
+models. They had to write, for example. 73 different inventory control systems.
+
+Imagine starting on your fiftieth system knowing you had twenty-three more to go!
+
+The result of their request was COBOL, developed quickly because of the work
+already done on Flow-Matic.
+
+Here's the link to the manual, preserved on my favorite archive website,
+BitSavers:
+
+https://bitsavers.org/pdf/univac/flow-matic/U1518_FLOW-MATIC_Programming_System_1958.pdf
