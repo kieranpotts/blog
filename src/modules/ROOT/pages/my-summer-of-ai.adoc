@@ -1,0 +1,98 @@
+= My summer of AI
+
+////
+
+AI has revitalized my love for programming.
+
+I've now got a small team of junior developers, testers, and technical
+proofreaders. Some of them are just rubber ducks, sometimes I delegate work
+to them - always with oversight - and sometimes they are planners, reviewers,
+or testers.
+
+They each have different personalities, but they're all equally over-confident
+in their abilities. Managing and understanding them is more like managing people
+than I expected.
+
+The point is I no longer work alone on my pet projects. Which is a joy.
+
+***
+
+Software devs are at the forefront of the AI paradigm shift.
+
+My main takeaway: software fundamentals matter more now than ever.
+
+AI refocuses us on the core of our discipline: learning about a problem and
+then creating software to address that problem. The core capability of our
+craft is no longer writing computer program code (actually, it hasn't been
+that for a long time).
+
+It is even more crucial now that we don't do big bang releases, and
+we develop in small increments. Because the code we're auditing may not
+even have been made by a human. So we need to be even less trusting of it.
+
+One of the criticisms I have of spec-driven development, or the specs-to-code
+movement more broadly, is that it's essentially proposing a waterfall-like
+delivery process. Just because you can get an AI to generate lots of code in
+a single prompt doesn't mean you should. We should use AI to aid fast, iterative
+cycles - but always disciplined, deliberate steps.
+
+spec-driven development = agentic waterfall
+
+One of the core principles of specs-to-code / spec-driven development is that
+if there is a problem with the code, you don't debug the code, rather you go
+back to the specs and fine-tune them. It is just vibe coding by a different
+name!
+
+The underlying principle is that _code is cheap_. But bad code is expensive!
+You may not be able to change it, and it may contain lots of business risk.
+
+I don't want a massive changeset to review, or a big bang deployment to manage.
+I still want a delivery pipeline of small increments toward a bigger goal.
+
+I like to have a team of *small, specialist agents*, each with clear boundaries
+and capabilities (single responsibility principle). Reduce the scope and
+boundaries of each agent to a limited amount of freedom. This also reduces
+the probability of hallucinations. Each agent has a persona - eg. software tester -
+and a role that it is expected to fulfil.
+
+What we want to achieve is *fine-grained, iterative spec-driven development*.
+
+*Big design up front* but with feedback loops! It is still iterative, if
+necessary.
+
+***
+
+Problem space discovery. This is the nature of the problem we're trying to
+solve. Requirement: "behavioral engineering", eg. communication with client.
+Agents can help - but this part of the process is still human-centric. No
+agent-to-agent handoff here. (eg. agents can review the language you're using
+for business terminology.)
+
+Likewise, architectural design still requires human signoff - this is all about
+_good taste_. Design decisions - we don't want to rely on agents' choices.
+Rather, we want them to give us a menu of design options with their trade-offs.
+
+***
+
+AI effect: no longer need to remember lots of syntax or APIs. No longer need to
+sweat over the low-level details. Instead, delegate low-level code to the
+agents - humans review it.
+
+Increasingly agents, esp. frontier models, can help with system design and make
+architecturally significant decisions, too.
+
+Expertise is now in _evaluating_ code and _orchestrating_ its construction.
+How reliable is the code? Is it secure? Will it scale?
+
+Skills to learn now: computation thinking, critical thinking, systems thinking,
+AI literacy, problem solving - and the ability to evaluate outputs, which
+requires a deep understanding of how systems work.
+
+The job is no longer to write lines of code. It's understanding the whole
+architecture and the trade-offs made in the design.
+
+Need to keep humans-in-the-loop for a really good design. Ultimately, we're
+designing products for ourselves. Only humans understand what humans need.
+
+
+////
