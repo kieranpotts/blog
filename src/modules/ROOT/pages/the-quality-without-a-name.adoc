@@ -51,7 +51,7 @@ thoughtfully shaped to support universal patterns of human experience, rather
 than being designed for the sake of aesthetic fashion or architectural
 exhibition.
 
-image::photos/the-timeless-way-of-building.jpg[]
+image::photos/the-timeless-way-of-building.jpg["Photo of a page from the book",533,306]
 
 This is the "`timeless way of building`" referenced in the book's title. It is a
 natural, organic process that has shaped architecture across cultures for
@@ -79,7 +79,7 @@ and sanctuaries like https://alserkal.online/[Alserkal Avenue], that exist on a
 human-scale and have something of the quality-without-a-name within them.
 
 .Archaeological site in Jumeirah, Downtown Dubai in the distance
-image::photos/jumeirah-archaeological-site.jpg[]
+image::photos/jumeirah-archaeological-site.jpg["",2000,1169]
 
 Alexander's work has been influential in fields beyond architecture. His design
 philosophy found popularity in the field of software design in the 1980s and

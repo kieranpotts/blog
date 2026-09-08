@@ -52,7 +52,7 @@ complexity, and on the other side is accidental complexity. In most systems, you
 will find that one of the two types of complexity will weigh more than the
 other.
 
-image::diagrams/accidental-essential-complexity-seesaw.svg[This diagram shows a seesaw with "accidental complexity" on one side and "essential complexity" on the other.,opts=inline]
+image::diagrams/accidental-essential-complexity-seesaw.svg["This diagram shows a seesaw with 'accidental complexity' on one side and 'essential complexity' on the other.",353,153,opts=inline]
 
 In an essentially complex system, the focus should be on managing the accidental
 complexity, because the developers will have more control over this. Conversely,
@@ -70,4 +70,4 @@ complexity that make up the whole.
 The top diagram is what you want to aim for. The bottom diagram is what you can
 sometimes get away with.
 
-image::diagrams/relative-essential-and-accidental-complexity.svg[This diagram has two boxes. One box is labelled "essential complexity" and it has a smaller box, labelled "accidental complexity", within it. The other box is labelled "accidental complexity" with a smaller box, labelled "essential complexity", inside it.,opts=inline]
+image::diagrams/relative-essential-and-accidental-complexity.svg["This diagram has two boxes. One box is labelled 'essential complexity' and it has a smaller box, labelled 'accidental complexity', within it. The other box is labelled 'accidental complexity' with a smaller box, labelled 'essential complexity', inside it.",239,262,opts=inline]
