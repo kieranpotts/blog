@@ -17,7 +17,7 @@ Cyberia, thought to be the world's first commercially successful internet café,
 opened in London on 1 September 1994 – 30 years ago today.
 
 .Photo of Cyberia, London, 1994 (source: Wikimedia Commons)
-image::photos/cyberia.png["",600]
+image::photos/cyberia.png["",450,270]
 
 Cyberia was the idea of Eva Pascoe, a Polish immigrant who had moved to London
 to study, and later worked as a cognitive psychologist and computer programmer
@@ -74,8 +74,8 @@ Manchester, Edinburgh, Dublin, Rotterdam, Bangkok, Manila, Tokyo, and Paris. By
 1996 there were about 200 cybercafés overall worldwide, copying the Cyberia
 model. Within 10 years there were estimated to be 20,000 cybercafés globally.
 
-.The earliest capture of cyberiacafe.net on the Internet Archive, 14 April 1997
-image::photos/cyberia-website-1997.png[]
+.The earliest capture of cyberiacafe.net on the Internet Archive, from 14 April 1997
+image::photos/cyberia-website-1997.png["",1048,660]
 
 The idea was of its time. Cyberia was not _quite_ the first internet café in the
 world. At least a couple of others just pipped it to that post. The term

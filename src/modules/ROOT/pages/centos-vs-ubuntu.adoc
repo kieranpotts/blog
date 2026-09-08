@@ -4,7 +4,7 @@ Kieran Potts, 9 September 2017, republished from Medium.com
 :docinfo: shared
 :nofooter:
 
-image::photos/centos-ubuntu.webp[CentOS and Ubuntu logos]
+image::photos/centos-ubuntu.webp["CentOS and Ubuntu logos",640,320]
 
 There are hundreds, maybe thousands, of flavors of Linux (“distributions”). But
 on servers only two dominate: CentOS and Ubuntu. So, which is better for serving
