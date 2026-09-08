@@ -8,6 +8,12 @@ This post describes a mental model for thinking about the relative weight that
 should be put on the management of essential and accidental complexity in
 software systems.
 
+****
+My mental model has evolved somewhat, since I published this post. See
+https://kieranpotts.com/standards/002#simplicity[TS-2: Software Design Philosophy > Simplicity]
+for the updated iteration.
+****
+
 Complexity in software systems can be divided into two categories: essential
 complexity and accidental complexity.
 
