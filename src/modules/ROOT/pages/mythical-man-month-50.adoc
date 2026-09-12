@@ -231,7 +231,7 @@ this decrease in productivity more than offsets the overall addition of
 resources – so delivery speed slows despite the extra manpower.
 
 .Correlation between time and the number of workers
-image::diagrams/men-versus-months.svg[This is a line chart with "men" on the x axis and "months" on the y axis. There are no units. THere's a single line, initially sloping downwards from left-to-right, then turning upwards.,opts=inline]
+image::diagrams/men-versus-months.svg[opts=inline]
 
 Brooks observes that the more complex the interrelationships between the
 component parts of the system under construction, the greater this effect. Hence
@@ -839,7 +839,7 @@ to users fully exercising the new capabilities of the software. As users become
 more familiar with the software, they become more confident to try different
 things, and so edge case bugs start to be shaken out.
 
-image::diagrams/bug-discovery-over-time.svg[This is a line chart with "bugs found per month" on the y axis and "months since installation" on the x axis. There is a single line, which initially trends sharply downwards from left-to-right, before hitting an inflection point and then trailing gently upwards.,opts=inline]
+image::diagrams/bug-discovery-over-time.svg[opts=inline]
 
 Furthermore, fixing a defect has a substantial chance – 20% to 50% – of
 introducing another defect. To counteract this, Brooks says that after each fix
