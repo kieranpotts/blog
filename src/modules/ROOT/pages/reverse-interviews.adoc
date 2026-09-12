@@ -753,23 +753,29 @@ uncertainty, if the data is telling you one thing but your gut something else â€
 go with your gut. Trust that you'll figure out why that was the right call
 later.
 
-.Related links
-****
+== Related links
+
 * {link-posthog}[The really important job interview questions engineers should
   ask (but don't)], James Hawkins, PostHog (2022)
+
 * {link-leaddev}[31 smart questions to ask in a software engineering interview],
   Harry Guinness, LeadDev (2024)
+
 * {link-farley-questions}[20 questions to ask your next employer], Dave Farley
   (2022)
+
 * {link-farley-advice}[Software developer interview advice], Dave Farley (2021)
+
 * {link-farley-places}[The best and worst places to work for developers], Dave
   Farley (2021)
+
 * {link-holub-hiring}[Your hiring policy doesn't work], Allen Holub and Dave
   Farley (2022)
+
 * {link-edwards-redflags}[Can you see the red flags of a toxic tech company?],
   Jayme Edwards (2024)
+
 * {link-cmm}[Capability Maturity Model v1.1] (1993) â€” the CMM was developed in
   1986 to assess the maturity of software houses' development processes. Many of
   the concepts behind process-maturity models are useful for evaluating
   potential employers too.
-****

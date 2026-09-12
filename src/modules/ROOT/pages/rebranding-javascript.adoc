@@ -124,13 +124,10 @@ APIs that are standardized as of the year 2020.
 
 What do you think? {link-reddit}[Discuss on Reddit.]
 
-.Related links
-****
+== Related links
 
 * The JS Party podcast devoted {link-jsparty}[episode 101] to exploring this
   idea.
 
 * Separately, a similar question posed on Twitter became a
   {link-runhappylife}[rather lively thread] in early July 2020.
-
-****

@@ -522,13 +522,10 @@ So, we should not abandon the term "REST" altogether, but as an adjective for
 ongoing efforts to realize truly RESTful APIs, "hypermedia" is a better, more
 expressive classification.
 
-.Related links
-****
+== Related links
 
 * {link-hacker-news}[Hacker News discussion.]
 
 * {link-blogcast}[Listen to a reading] of this article on Blog Cast.
 
 * InfoQ China {link-infoq-china}[republished this article in Chinese].
-
-****

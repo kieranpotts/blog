@@ -490,8 +490,7 @@ and bureaucratic, and not actually produce better outcomes.
 Like software systems themselves, the processes we use to develop and maintain
 them also require thoughtful design.
 
-.Related links
-****
+== Related links
 
 * {link-juans-and-zeroes}[A thorough team guide to RFCs] — Juan Pablo Buriticá
   (2023)
@@ -513,5 +512,3 @@ them also require thoughtful design.
   Clements _et al_ (2010)
 
 * {link-rfc-editor}[RFC Editor: RFC Index] — Every IETF RFC since 1969.
-
-****

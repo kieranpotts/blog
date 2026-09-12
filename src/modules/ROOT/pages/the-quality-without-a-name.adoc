@@ -330,8 +330,7 @@ freedom to shape their own working environment, by continuously refactoring the
 code and the data, by keeping their tools sharp, by choosing their teammates,
 and by working whatever ways suit them best.
 
-.Related links
-****
+== Related links
 
 * {link-pattern-language}[PatternLanguage.com], a member-supported website run
   by The Center for Environmental Structure, Christopher Alexander's
@@ -339,5 +338,3 @@ and by working whatever ways suit them best.
 
 * {link-patterns-of-software}[Patterns of Software: Tales from the Software
   Community], Richard P Gabriel, Oxford University Press, 1996
-
-****

@@ -151,7 +151,7 @@ since become the norm. This was perhaps the first large-scale
 software-as-a-service product: delivered over the network, accessible from
 anywhere, backed by flexible cloud storage, and available under an
 ad-supported"freemium" software licensing model.
- 
+
 Gmail encapsulated all the key concepts of cloud computing into a consumer
 product that ran in the web browser but behaved like a regular software
 application. Despite all the innovation in the web space since, at a fundamental
@@ -159,11 +159,14 @@ level we're still developing web applications like this today.
 
 This is the Gmail era.
 
-.Related links
-****
+== Related links
+
 * {link-the-verge}[20 years of Gmail], The Verge (2024)
+
 * {link-wired}[10 years on, Gmail has transformed the web...], Wired (2014)
+
 * {link-cnet}[Will Ajax help Google clean up?], CNET (2007)
+
 * {link-devcom}[AJAX: Asynchronous Java + XML?], Developer.com (2005)
+
 * {link-myownemail}[Ghost Sites of the Web: MyOwnEmail.com]
-****

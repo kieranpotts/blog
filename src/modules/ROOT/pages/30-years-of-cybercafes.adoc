@@ -100,16 +100,22 @@ public, and so begun transforming social life into what we know today. You can't
 put an exact date on when that transformation started, but the opening of
 Cyberia on 1 September 1994 certainly marks a watershed moment in that process.
 
-.Sources and related links
-****
+== Related links
+
 * {link-history-hour}[The History Hour: Internet cafes and Doomsday seeds], BBC
   Sounds (2024)
+
 * {link-retro-hour}[Cyberia: Revisiting The Cyber Cafe with Eva Pascoe], The
   Retro Hour (2023)
+
 * {link-archives-of-it}[Interview with Eva Pascoe], Archives of IT (2019)
+
 * {link-telegraph}[10 years of Cyberia], The Telegraph (2004)
+
 * {link-nytimes}[A decade of internet cafés], The New York Times (2004)
+
 * {link-guardian}[Girls' night out on the net], The Guardian (2000)
+
 * {link-wired}[All about Eva], Wired (1996)
+
 * {link-independent}[Cafe with a mission…], The Independent (1994)
-****
