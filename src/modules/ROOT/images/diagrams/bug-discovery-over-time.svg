@@ -1,11 +1,11 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="766px" height="486px" viewBox="-0.5 -0.5 766 486">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="500px" height="317px" viewBox="-0.5 -0.5 766 486">
     <title>A line chart of bugs found per month against months since installation, trending sharply downward before inflecting and trailing gently upward</title>
     <defs/>
     <g>
         <path d="M 200 406 L 200 6" fill="none" stroke="currentColor" stroke-width="4" stroke-miterlimit="10" pointer-events="stroke"/>
         <path d="M 760 406 L 200 406" fill="none" stroke="currentColor" stroke-width="4" stroke-miterlimit="10" pointer-events="stroke"/>
         <text x="480" y="456" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">months since installation</text>
-        <text x="90" y="206" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor">bugs found per month</text>
+        <text x="90" y="206" text-anchor="middle" dominant-baseline="central" font-size="14" font-family="inherit" font-weight="bold" fill="currentColor" transform="rotate(-90 90 206)">bugs found per month</text>
         <path d="M 220 6 Q 300 206 360 266 Q 420 326 500 326 Q 580 326 760 266" fill="none" stroke="currentColor" stroke-width="12" stroke-miterlimit="10" pointer-events="stroke"/>
     </g>
 </svg>
